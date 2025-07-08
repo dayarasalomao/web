@@ -64,12 +64,16 @@ export default function Hero() {
           {/* Content */}
           <div className="flex-1 text-center lg:text-left order-2 lg:order-1 max-w-2xl">
             <div className="animate-slide-up">
-              <h1
-                className="text-4xl lg:text-6xl font-serif font-bold mb-6 leading-tight"
-                style={{ color: 'var(--color-teal)' }}
-              >
-                Dra. Dayara Salomão
-              </h1>
+              <div className="mb-6">
+                <Image
+                  src="/core/lettering-blue.png"
+                  alt="Dra. Dayara Salomão"
+                  width={400}
+                  height={120}
+                  className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 h-auto"
+                  priority
+                />
+              </div>
               <div
                 className="w-20 h-1 mx-auto lg:mx-0 mb-6"
                 style={{

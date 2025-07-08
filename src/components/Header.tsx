@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
-import LogoSvgComponent from '@/svgr/logo'
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,23 +25,18 @@ export default function Header() {
     >
       <nav className="container py-4">
         <div className="flex justify-between items-center">
-          {/* Enhanced SVG Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative group">
-              <LogoSvgComponent
-                className="h-12 lg:h-14 w-auto transition-all duration-300 "
-                style={{
-                  filter: 'drop-shadow(0 2px 4px rgba(163, 84, 66, 0.1))',
-                  fill: 'var(--color-copper)',
-                }}
-                title="Dra. Dayara Salomão - Coloproctologista"
-              />
-
-              {/* Subtle background enhancement */}
-              <div
-                className="absolute inset-0 -z-10 rounded-lg opacity-0 group-hover:opacity-5 transition-opacity duration-300"
-                style={{ backgroundColor: 'var(--color-copper)' }}
-              ></div>
+          {/* Logo and Brand */}
+          <Link href="/" className="flex items-center gap-3">
+            <div>
+              <h1 className="text-lg sm:text-xl font-serif font-bold text-gray-800">
+                Dra. Dayara Salomão
+              </h1>
+              <p
+                className="text-xs sm:text-sm font-medium"
+                style={{ color: 'var(--color-copper)' }}
+              >
+                Coloproctologista
+              </p>
             </div>
           </Link>
 
