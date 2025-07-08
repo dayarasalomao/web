@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { WHATSAPP_URL } from '@/constants'
+import Link from 'next/link'
+import LogoSvgComponent from '@/svgr/logo'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,33 +25,31 @@ export default function Header() {
     >
       <nav className="container py-4">
         <div className="flex justify-between items-center">
-          {/* Logo/Brand */}
-          <div className="flex items-center space-x-3">
-            <Image
-              src="/core/logo.png"
-              alt="Dra. Dayara Salomão"
-              width={48}
-              height={48}
-              className="w-12 h-12 object-contain"
-            />
-            <div className="flex flex-col">
-              <span
-                className="text-lg font-serif font-semibold tracking-wide"
-                style={{ color: 'var(--color-copper)' }}
-              >
-                Dra. Dayara Salomão
-              </span>
-              <span className="text-xs text-gray-600 font-light">
-                Coloproctologia
-              </span>
+          {/* Enhanced SVG Logo */}
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="relative group">
+              <LogoSvgComponent
+                className="h-12 lg:h-14 w-auto transition-all duration-300 "
+                style={{
+                  filter: 'drop-shadow(0 2px 4px rgba(163, 84, 66, 0.1))',
+                  fill: 'var(--color-copper)',
+                }}
+                title="Dra. Dayara Salomão - Coloproctologista"
+              />
+
+              {/* Subtle background enhancement */}
+              <div
+                className="absolute inset-0 -z-10 rounded-lg opacity-0 group-hover:opacity-5 transition-opacity duration-300"
+                style={{ backgroundColor: 'var(--color-copper)' }}
+              ></div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
                   style={
@@ -70,7 +69,7 @@ export default function Header() {
                     className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
                     style={{ backgroundColor: 'var(--color-copper)' }}
                   ></span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -107,7 +106,7 @@ export default function Header() {
             <ul className="space-y-3 p-4">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="block text-sm text-gray-700 hover:opacity-80 transition-colors duration-200 font-medium py-2 px-3 rounded-lg hover:bg-gray-100"
                     style={
@@ -124,15 +123,17 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className="px-4 pb-4 pt-2 border-t border-gray-200">
               {/* CTA Button */}
               <li key="agendar-consulta">
-                <a
+                <Link
                   href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
                   style={
                     {
@@ -151,7 +152,7 @@ export default function Header() {
                     className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
                     style={{ backgroundColor: 'var(--color-copper)' }}
                   ></span>
-                </a>
+                </Link>
               </li>
             </div>
           </div>

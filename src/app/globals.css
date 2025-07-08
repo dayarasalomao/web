@@ -14,6 +14,7 @@
 /* Base Styles */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 48px; /* Offset for sticky header */
 }
 
 body {
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Buttons */
 .btn {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-200;
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium;
   box-shadow: 0 2px 15px -3px rgb(0 0 0 / 0.1);
 }
 
@@ -42,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
   background: color-mix(in srgb, var(--color-copper) 90%, black);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
   box-shadow: 0 4px 25px -4px rgb(163 84 66 / 0.15);
 }
 
@@ -53,19 +54,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary:hover {
   background: color-mix(in srgb, var(--color-teal) 90%, black);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
   box-shadow: 0 4px 25px -4px rgb(29 65 76 / 0.15);
 }
 
 /* Cards */
 .card {
-  @apply bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200;
+  @apply bg-white/90 rounded-2xl border border-gray-200;
   box-shadow: 0 2px 15px -3px rgb(0 0 0 / 0.1);
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  /* transform: translateY(-4px); */
   box-shadow: 0 4px 25px -4px rgb(0 0 0 / 0.15);
 }
 
@@ -93,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animations */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
@@ -109,4 +110,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-slide-up {
   animation: slideUp 0.6s ease-out;
-}
+} */

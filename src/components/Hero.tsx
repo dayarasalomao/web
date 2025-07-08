@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -40,7 +41,7 @@ export default function Hero() {
             <div className="relative">
               {/* Main image container */}
               <div
-                className="w-72 h-72 lg:w-96 lg:h-96 rounded-full p-3 shadow-2xl"
+                className="w-72 h-72 lg:w-96 lg:h-96 rounded-full p-3 shadow-lg"
                 style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
               >
                 <div
@@ -125,9 +126,19 @@ export default function Hero() {
                 <div
                   className="px-4 py-2 rounded-full border text-sm"
                   style={{
-                    backgroundColor: 'rgba(163, 84, 66, 0.1)',
-                    borderColor: 'var(--color-copper)',
-                    color: 'var(--color-copper)',
+                    backgroundColor: 'rgba(29, 65, 76, 0.1)',
+                    borderColor: 'var(--color-teal)',
+                    color: 'var(--color-teal)',
+                  }}
+                >
+                  Técnicas Minimamente Invasivas
+                </div>
+                <div
+                  className="px-4 py-2 rounded-full border text-sm"
+                  style={{
+                    backgroundColor: 'rgba(29, 65, 76, 0.1)',
+                    borderColor: 'var(--color-teal)',
+                    color: 'var(--color-teal)',
                   }}
                 >
                   CRM Ativo
@@ -142,20 +153,10 @@ export default function Hero() {
                 >
                   Especialista RQE
                 </div>
-                <div
-                  className="px-4 py-2 rounded-full border text-sm"
-                  style={{
-                    backgroundColor: 'rgba(209, 175, 139, 0.1)',
-                    borderColor: 'var(--color-straw)',
-                    color: 'var(--color-straw)',
-                  }}
-                >
-                  Técnicas Minimamente Invasivas
-                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a
+                <Link
                   href="#contato"
                   className="btn btn-secondary text-lg px-8 py-4"
                 >
@@ -173,7 +174,7 @@ export default function Hero() {
                     />
                   </svg>
                   Agendar Consulta
-                </a>
+                </Link>
               </div>
             </div>
           </div>

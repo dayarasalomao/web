@@ -1,4 +1,5 @@
 import { WHATSAPP_URL } from '@/constants'
+import Link from 'next/link'
 
 export default function Contact() {
   const contactInfo = [
@@ -7,7 +8,7 @@ export default function Contact() {
       value: 'Eco Medical Center',
       detail: '3º andar - setor de coloproctologia',
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
           <path
             fillRule="evenodd"
             d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
@@ -21,7 +22,7 @@ export default function Contact() {
       value: 'Rua Góias, 70 - Água Verde',
       detail: 'Curitiba, Paraná',
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
           <path
             fillRule="evenodd"
             d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z"
@@ -35,7 +36,7 @@ export default function Contact() {
       value: '(41) 3123-6550',
       detail: 'Agendamento de consultas',
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12.017 2.051C6.477 2.051 2.051 6.477 2.051 12.017c0 1.734.455 3.407 1.294 4.893L2 21l4.18-1.304c1.424.763 3.019 1.163 4.837 1.163 5.54 0 9.966-4.426 9.966-9.966S17.557 2.051 12.017 2.051z" />
         </svg>
       ),
@@ -45,7 +46,7 @@ export default function Contact() {
   return (
     <section
       id="contato"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="pb-12 pt-16 lg:pb-20 lg:pt-24 relative overflow-hidden"
       style={{
         background:
           'linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 100%)',
@@ -91,17 +92,11 @@ export default function Contact() {
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                  className="group bg-white/80 p-5 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                 >
-                  {/* Subtle accent line */}
-                  <div
-                    className="absolute top-0 left-0 w-full h-0.5 opacity-30"
-                    style={{ backgroundColor: 'var(--color-copper)' }}
-                  ></div>
-
                   <div className="flex items-center gap-4">
                     <div
-                      className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                      className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg  transition-transform duration-300"
                       style={{ backgroundColor: 'var(--color-copper)' }}
                     >
                       <div className="w-6 h-6">{info.icon}</div>
@@ -127,16 +122,10 @@ export default function Contact() {
               ))}
 
               {/* Email Contact */}
-              <div className="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
-                {/* Subtle accent line */}
-                <div
-                  className="absolute top-0 left-0 w-full h-0.5 opacity-30"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
-                ></div>
-
+              <div className="group bg-white/80  p-5 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300  relative overflow-hidden">
                 <div className="flex items-center gap-4">
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg  transition-transform duration-300"
                     style={{ backgroundColor: 'var(--color-copper)' }}
                   >
                     <svg
@@ -169,7 +158,7 @@ export default function Contact() {
             {/* CTA Section */}
             <div className="flex flex-col justify-center">
               <div
-                className="bg-white/90 backdrop-blur-sm p-10 rounded-3xl relative overflow-hidden shadow-2xl border"
+                className="bg-white/90  p-10 rounded-3xl relative overflow-hidden shadow-lg border"
                 style={{ borderColor: 'rgba(163, 84, 66, 0.2)' }}
               >
                 {/* Elegant background pattern */}
@@ -228,9 +217,11 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-4">
-                    <a
+                    <Link
                       href={WHATSAPP_URL}
-                      className="group block w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-center py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 relative overflow-hidden"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-center py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-lg  relative overflow-hidden"
                     >
                       {/* Subtle shimmer effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 group-hover:animate-pulse"></div>
@@ -247,11 +238,11 @@ export default function Contact() {
                         </div>
                         <span>WhatsApp</span>
                       </div>
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href="mailto:dradayarasalomao@gmail.com"
-                      className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-center border-2 relative overflow-hidden"
+                      className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg  text-center border-2 relative overflow-hidden"
                       style={{
                         backgroundColor: 'rgba(163, 84, 66, 0.1)',
                         borderColor: 'var(--color-copper)',
@@ -274,7 +265,7 @@ export default function Contact() {
                         </div>
                         <span>E-mail</span>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

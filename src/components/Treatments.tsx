@@ -1,5 +1,6 @@
 import { WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Treatments() {
   const treatments = [
@@ -213,7 +214,7 @@ export default function Treatments() {
   return (
     <section
       id="tratamentos"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="pb-12 pt-16 lg:pb-20 lg:pt-24 relative overflow-hidden"
       style={{ backgroundColor: 'var(--color-cream)' }}
     >
       {/* Subtle background texture */}
@@ -272,7 +273,7 @@ export default function Treatments() {
                   return (
                     <div
                       key={index}
-                      className="group card p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                      className="group card p-4 relative overflow-hidden"
                       style={{
                         backgroundColor: styles.bg,
                         borderColor: styles.border,
@@ -288,7 +289,7 @@ export default function Treatments() {
                       <div className="flex items-start gap-3">
                         <div className="flex-1">
                           <h3
-                            className="text-sm font-serif font-semibold mb-1 group-hover:opacity-80 transition-opacity duration-300"
+                            className="text-sm font-serif font-semibold mb-1"
                             style={{ color: 'var(--color-teal)' }}
                           >
                             {treatment.name}
@@ -298,7 +299,7 @@ export default function Treatments() {
                           </p>
                         </div>
                         <div
-                          className="w-10 h-10 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+                          className="w-10 h-10 rounded-xl flex items-center justify-center text-white flex-shrink-0"
                           style={{ backgroundColor: styles.iconBg }}
                         >
                           {treatment.icon}
@@ -316,9 +317,9 @@ export default function Treatments() {
                 {/* Main image container with clean design */}
                 <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
                   {/* Simple, elegant frame */}
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                     <Image
-                      src="/assets/operando-perto.jpg"
+                      src="/assets/operando-longe.jpg"
                       alt="Dra. Dayara realizando procedimento"
                       width={384}
                       height={500}
@@ -360,9 +361,14 @@ export default function Treatments() {
                 resultados clínicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href={WHATSAPP_URL} className="btn btn-secondary">
+                <Link
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
                   Gostaria de agendar uma consulta?
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function WhenToSeek() {
   const symptoms = [
@@ -6,125 +7,36 @@ export default function WhenToSeek() {
       title: 'Sangramento anal ou dor',
       description:
         'Presença de sangue nas fezes ou dor persistente na região anal',
-      icon: (
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 9v3m0 0v3m0-3h3m-3 0H9m-7 0a4 4 0 018 0v0a4 4 0 008 0v0a4 4 0 018 0v0M3 20h18"
-          />
-        </svg>
-      ),
       urgency: 'high',
     },
     {
       title: 'Histórico de doenças inflamatórias intestinais',
       description:
         'Se você tem Crohn, retocolite ulcerativa ou histórico familiar',
-      icon: (
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          />
-        </svg>
-      ),
       urgency: 'medium',
     },
     {
       title: 'Lesões, verrugas ou nódulos na região do ânus',
       description: 'Qualquer alteração visual ou palpável na área perianal',
-      icon: (
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
-      ),
+
       urgency: 'high',
     },
     {
       title: 'Dor ou desconforto durante evacuação',
       description:
         'Dificuldade, dor intensa ou desconforto persistente ao evacuar',
-      icon: (
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-          />
-        </svg>
-      ),
       urgency: 'medium',
     },
     {
       title: 'Alterações no padrão intestinal',
       description:
         'Mudanças significativas na frequência ou consistência das fezes',
-      icon: (
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-          />
-        </svg>
-      ),
       urgency: 'medium',
     },
     {
       title: 'Coceira ou irritação persistente',
       description:
         'Prurido anal que não melhora com cuidados básicos de higiene',
-      icon: (
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
       urgency: 'low',
     },
   ]
@@ -157,7 +69,7 @@ export default function WhenToSeek() {
   return (
     <section
       id="procurar"
-      className="py-20 lg:py-32 relative overflow-hidden bg-white"
+      className="pb-12 pt-16 lg:pb-20 lg:pt-24 relative overflow-hidden bg-white"
     >
       {/* Very subtle background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -204,7 +116,7 @@ export default function WhenToSeek() {
             <div className="order-2 lg:order-1 flex justify-center">
               <div className="relative">
                 <div
-                  className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-2xl"
+                  className="w-80 h-128 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-lg"
                   style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
@@ -213,7 +125,7 @@ export default function WhenToSeek() {
                       alt="Dra. Dayara em consulta médica"
                       width={384}
                       height={500}
-                      className="w-full h-full object-cover "
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                 </div>
@@ -227,7 +139,7 @@ export default function WhenToSeek() {
                 return (
                   <div
                     key={index}
-                    className="group card p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="group card px-6 py-4 lg:px-6 lg:py-6 hover:shadow-lg transition-all duration-300 "
                     style={{
                       backgroundColor: styles.bg,
                       borderColor: styles.border,
@@ -235,17 +147,6 @@ export default function WhenToSeek() {
                     }}
                   >
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0">
-                        <div
-                          className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
-                          style={{
-                            backgroundColor: 'rgba(163, 84, 66, 0.1)',
-                            color: 'var(--color-copper)',
-                          }}
-                        >
-                          <div className="w-5 h-5">{symptom.icon}</div>
-                        </div>
-                      </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
                           <h3
@@ -254,9 +155,6 @@ export default function WhenToSeek() {
                           >
                             {symptom.title}
                           </h3>
-                          <span className="flex items-center">
-                            {styles.accent}
-                          </span>
                         </div>
                         <p className="text-xs text-gray-600 leading-relaxed">
                           {symptom.description}
@@ -277,24 +175,6 @@ export default function WhenToSeek() {
             style={{ borderColor: 'var(--color-copper)' }}
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div
-                className="w-12 h-12 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: 'var(--color-copper)' }}
-              >
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
               <h3
                 className="text-2xl font-serif font-bold"
                 style={{ color: 'var(--color-teal)' }}
@@ -402,9 +282,12 @@ export default function WhenToSeek() {
             </div>
 
             <div className="mt-8">
-              <a href="#contato" className="btn btn-primary text-lg px-8 py-4">
+              <Link
+                href="#contato"
+                className="btn btn-primary text-lg px-8 py-4"
+              >
                 Agendar Consulta Agora
-              </a>
+              </Link>
             </div>
           </div>
         </div>

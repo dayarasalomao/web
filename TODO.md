@@ -1,8 +1,9 @@
 # TODOs
 
-- [ ] Use the logos properly
-- [ ] Improve the Local & Agendamento section
-- [ ] Improve icons
+- [ ] **Use the logo**
+- [ ] **Improve icons**
 - [ ] In mobile the carousel arrows should have bigger margin to the edge of the screen, its being cut off
 - [ ] Little issue on the carousel state
-- [ ] Check all links
+- [ ] noticed some other issue on Ui that some sections disappear somehow on scroll...
+- [ ] Also, on mobile we need to fix this bounce animation on hover or touch scroll...
+  - [ ] Mainly because that makes the text blury...

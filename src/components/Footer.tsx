@@ -1,5 +1,6 @@
 import { WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   const quickLinks = [
@@ -76,18 +77,12 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div
-                className="w-12 h-12 rounded-full p-2 border-2"
-                style={{
-                  borderColor: 'var(--color-copper)',
-                  backgroundColor: 'rgba(163, 84, 66, 0.1)',
-                }}
-              >
+              <div>
                 <Image
                   src="/core/logo.png"
                   alt="Dra. Dayara Salomão"
-                  width={32}
-                  height={32}
+                  width={64}
+                  height={64}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -96,7 +91,7 @@ export default function Footer() {
                   Dra. Dayara Salomão
                 </h3>
                 <p className="text-sm" style={{ color: 'var(--color-straw)' }}>
-                  Coloproctologia
+                  Coloproctologista
                 </p>
               </div>
             </div>
@@ -139,7 +134,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-3 group py-1"
                   >
@@ -150,7 +145,7 @@ export default function Footer() {
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
                       {link.label}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -163,7 +158,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li key={index} className="flex items-center gap-3">
                   <div
                     className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
                     style={{
@@ -182,8 +177,10 @@ export default function Footer() {
 
             {/* CTA */}
             <div className="mt-8">
-              <a
+              <Link
                 href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary text-sm inline-flex items-center gap-2"
               >
                 <svg
@@ -200,7 +197,7 @@ export default function Footer() {
                   />
                 </svg>
                 Agendar Consulta
-              </a>
+              </Link>
             </div>
           </div>
         </div>

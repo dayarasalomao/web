@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Diseases() {
   const diseases = [
     {
@@ -229,7 +231,7 @@ export default function Diseases() {
   return (
     <section
       id="doencas"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="pb-12 pt-16 lg:pb-20 lg:pt-24 relative overflow-hidden"
       style={{
         backgroundColor: 'var(--color-cream)',
       }}
@@ -278,11 +280,11 @@ export default function Diseases() {
           {diseases.map((disease, index) => (
             <div
               key={index}
-              className="group card p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group card p-6 hover:shadow-lg transition-all duration-300 "
             >
               <div className="flex items-start gap-4">
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center  transition-transform duration-300"
                   style={{
                     backgroundColor: 'rgba(163, 84, 66, 0.1)',
                     color: 'var(--color-copper)',
@@ -323,9 +325,9 @@ export default function Diseases() {
               Entre em contato para uma avaliação personalizada. Cada caso é
               único e merece atenção especializada.
             </p>
-            <a href="#contato" className="btn btn-primary">
+            <Link href="#contato" className="btn btn-primary">
               Falar com a Dra. Dayara
-            </a>
+            </Link>
           </div>
         </div>
       </div>

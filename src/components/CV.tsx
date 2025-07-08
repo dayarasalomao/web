@@ -10,7 +10,7 @@ export default function CV() {
         'Graduação em Medicina com formação sólida em ciências médicas',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ export default function CV() {
         'Especialização em procedimentos cirúrgicos com foco em técnicas avançadas',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ export default function CV() {
       description: 'Especialização completa em doenças do cólon, reto e ânus',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ export default function CV() {
         'Curso avançado em técnicas minimamente invasivas e cirurgia a laser',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -106,7 +106,7 @@ export default function CV() {
       description: 'Especialização avançada em tratamentos do assoalho pélvico',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ export default function CV() {
   return (
     <section
       id="curriculo"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="pb-12 pt-16 lg:pb-20 lg:pt-24 relative overflow-hidden"
       style={{ background: 'var(--color-cream)' }}
     >
       {/* Subtle background elements */}
@@ -215,7 +215,7 @@ export default function CV() {
             <div className="order-2 lg:order-1 flex justify-center h-full items-center">
               <div className="relative">
                 <div
-                  className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-2xl"
+                  className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-lg"
                   style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
@@ -237,16 +237,8 @@ export default function CV() {
                 const styles = getCategoryStyles(qualification.category)
                 return (
                   <div key={index} className="relative">
-                    {/* Timeline line */}
-                    {index < qualifications.length - 1 && (
-                      <div
-                        className="absolute left-5 top-12 w-0.5 h-8 opacity-20"
-                        style={{ backgroundColor: styles.accent }}
-                      ></div>
-                    )}
-
                     <div
-                      className="group card p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                      className="group card p-4 hover:shadow-lg transition-all duration-300  relative overflow-hidden"
                       style={{
                         backgroundColor: styles.bg,
                         borderColor: styles.border,
@@ -261,13 +253,13 @@ export default function CV() {
 
                       <div className="flex items-start gap-3">
                         <div
-                          className="w-10 h-10 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-md"
+                          className="w-12 h-12 rounded-lg flex items-center justify-center text-white flex-shrink-0  transition-transform duration-300 shadow-md"
                           style={{ backgroundColor: styles.iconBg }}
                         >
                           <div className="w-5 h-5">{qualification.icon}</div>
                         </div>
                         <div className="flex-1">
-                          <div className="flex items-center justify-between gap-2 mb-1">
+                          <div className="flex items-start justify-between gap-2 mb-1">
                             <h3
                               className="text-base font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
                               style={{ color: 'var(--color-teal)' }}
@@ -275,7 +267,7 @@ export default function CV() {
                               {qualification.title}
                             </h3>
                             <span
-                              className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap "
+                              className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
                               style={{
                                 color: styles.accent,
                                 backgroundColor: `color-mix(in srgb, ${styles.accent} 15%, transparent)`,

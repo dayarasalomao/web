@@ -91,7 +91,7 @@ export default function Testimonials() {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return
-    
+
     const distance = touchStart - touchEnd
     const isLeftSwipe = distance > 50
     const isRightSwipe = distance < -50
@@ -106,9 +106,10 @@ export default function Testimonials() {
   return (
     <section
       id="depoimentos"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="pb-12 pt-16 lg:pb-20 lg:pt-24 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, var(--color-cream) 0%, #ffffff 50%, var(--color-beige) 100%)',
+        background:
+          'linear-gradient(135deg, var(--color-cream) 0%, #ffffff 50%, var(--color-beige) 100%)',
       }}
     >
       {/* Background decorative elements */}
@@ -134,16 +135,23 @@ export default function Testimonials() {
           <div
             className="w-20 h-1 mx-auto mb-6"
             style={{
-              background: 'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
+              background:
+                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
             }}
           ></div>
           <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             O que nossos pacientes falam sobre o{' '}
-            <span className="font-semibold" style={{ color: 'var(--color-copper)' }}>
+            <span
+              className="font-semibold"
+              style={{ color: 'var(--color-copper)' }}
+            >
               cuidado humanizado
             </span>{' '}
             e{' '}
-            <span className="font-semibold" style={{ color: 'var(--color-teal)' }}>
+            <span
+              className="font-semibold"
+              style={{ color: 'var(--color-teal)' }}
+            >
               excelência técnica
             </span>{' '}
             que oferecemos
@@ -151,30 +159,50 @@ export default function Testimonials() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto lg:px-10">
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg -translate-x-6"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80  border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg -translate-x-3"
             style={{ color: 'var(--color-copper)' }}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg translate-x-6"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80  border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg translate-x-3"
             style={{ color: 'var(--color-copper)' }}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
 
           {/* Carousel Cards */}
-          <div 
+          <div
             className="overflow-hidden"
             ref={carouselRef}
             onTouchStart={handleTouchStart}
@@ -188,20 +216,24 @@ export default function Testimonials() {
               {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                 <div
                   key={slideIndex}
-                  className="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2"
+                  className="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 py-4"
                 >
                   {testimonials
-                    .slice(slideIndex * cardsPerView, (slideIndex + 1) * cardsPerView)
+                    .slice(
+                      slideIndex * cardsPerView,
+                      (slideIndex + 1) * cardsPerView
+                    )
                     .map((testimonial, cardIndex) => (
                       <div
                         key={slideIndex * cardsPerView + cardIndex}
-                        className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:bg-white/90 relative overflow-hidden"
+                        className="group max-w-md mx-auto flex flex-col justify-between bg-white/80  p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:bg-white/90 relative overflow-hidden"
                       >
                         {/* Decorative quote mark */}
                         <div
                           className="absolute -top-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center opacity-20"
                           style={{
-                            background: 'linear-gradient(135deg, var(--color-copper), var(--color-straw))',
+                            background:
+                              'linear-gradient(135deg, var(--color-copper), var(--color-straw))',
                           }}
                         >
                           <svg
@@ -237,7 +269,8 @@ export default function Testimonials() {
                           <div
                             className="w-10 h-10 rounded-full flex items-center justify-center"
                             style={{
-                              background: 'linear-gradient(135deg, var(--color-copper), var(--color-straw))',
+                              background:
+                                'linear-gradient(135deg, var(--color-copper), var(--color-straw))',
                             }}
                           >
                             <span className="text-white font-serif font-semibold text-sm">
@@ -245,7 +278,10 @@ export default function Testimonials() {
                             </span>
                           </div>
                           <div>
-                            <p className="font-semibold text-sm" style={{ color: 'var(--color-teal)' }}>
+                            <p
+                              className="font-semibold text-sm"
+                              style={{ color: 'var(--color-teal)' }}
+                            >
                               {testimonial.name}
                             </p>
                             <p className="text-xs text-gray-500">Paciente</p>
@@ -268,7 +304,10 @@ export default function Testimonials() {
                   index === currentIndex ? 'w-6' : 'w-2'
                 }`}
                 style={{
-                  backgroundColor: index === currentIndex ? 'var(--color-copper)' : 'var(--color-beige)',
+                  backgroundColor:
+                    index === currentIndex
+                      ? 'var(--color-copper)'
+                      : 'var(--color-beige)',
                 }}
               />
             ))}
@@ -277,8 +316,11 @@ export default function Testimonials() {
 
         {/* Trust section */}
         <div className="text-center mt-16">
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-serif font-bold mb-4" style={{ color: 'var(--color-teal)' }}>
+          <div className="bg-white/60  p-8 rounded-2xl border border-gray-200 max-w-3xl mx-auto">
+            <h3
+              className="text-2xl font-serif font-bold mb-4"
+              style={{ color: 'var(--color-teal)' }}
+            >
               Atendimento Extraordinário
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -286,7 +328,10 @@ export default function Testimonials() {
               pacientes. Quem dera se encontrássemos profissionais com o tato e
               a sensibilidade dessa médica em outras áreas.&quot;
             </p>
-            <div className="flex items-center justify-center gap-2" style={{ color: 'var(--color-straw)' }}>
+            <div
+              className="flex items-center justify-center gap-2"
+              style={{ color: 'var(--color-straw)' }}
+            >
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
