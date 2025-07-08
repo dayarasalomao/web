@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
