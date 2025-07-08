@@ -1,3 +1,4 @@
+import { WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 
 export default function Footer() {
@@ -182,7 +183,7 @@ export default function Footer() {
             {/* CTA */}
             <div className="mt-8">
               <a
-                href="#contato"
+                href={WHATSAPP_URL}
                 className="btn btn-primary text-sm inline-flex items-center gap-2"
               >
                 <svg

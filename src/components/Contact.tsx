@@ -1,3 +1,5 @@
+import { WHATSAPP_URL } from '@/constants'
+
 export default function Contact() {
   const contactInfo = [
     {
@@ -185,7 +187,7 @@ export default function Contact() {
 
                   <div className="space-y-4">
                     <a
-                      href="https://wa.me/554131236550"
+                      href={WHATSAPP_URL}
                       className="group block w-full bg-green-600 hover:bg-green-700 text-white text-center py-4 px-6 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                     >
                       <div className="flex items-center justify-center gap-3">

@@ -56,27 +56,6 @@ export default function About() {
                     com o mínimo de desconforto.&quot;
                   </p>
                 </div>
-
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <div className="flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <span className="text-sm font-medium text-primary-700">
-                      Formação PUC-PR
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-secondary-50 px-4 py-2 rounded-full">
-                    <div className="w-2 h-2 bg-secondary-500 rounded-full"></div>
-                    <span className="text-sm font-medium text-secondary-700">
-                      Especialista em Coloproctologia
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-brand-beige/40 px-4 py-2 rounded-full">
-                    <div className="w-2 h-2 bg-brand-straw rounded-full"></div>
-                    <span className="text-sm font-medium text-neutral-700">
-                      Tecnologia Avançada
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -84,14 +63,14 @@ export default function About() {
           {/* Professional Image */}
           <div className="flex-shrink-0">
             <div className="relative">
-              <div className="w-80 h-96 lg:w-96 lg:h-128 rounded-2xl bg-gradient-to-br from-brand-straw/10 to-primary-100/20 p-2 shadow-elegant">
+              <div className="w-80 h-128 lg:w-96 lg:h-128 rounded-2xl bg-gradient-to-br from-brand-straw/10 to-primary-100/20 p-2 shadow-elegant">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-soft">
                   <Image
                     src="/assets/dayara-profissional-escuro.JPG"
                     alt="Dra. Dayara Salomão em ambiente profissional"
-                    width={384}
-                    height={512}
-                    className="w-full h-full object-cover"
+                    width={400}
+                    height={600}
+                    className="w-full h-full object-"
                   />
                 </div>
               </div>

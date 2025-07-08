@@ -102,7 +102,7 @@ export default function CV() {
     {
       title: 'Pós-graduação em Disfunções do Assoalho Pélvico',
       institution: 'UNIFAL',
-      year: 'Em andamento',
+      year: 'Atual',
       description: 'Especialização avançada em tratamentos do assoalho pélvico',
       icon: (
         <svg
@@ -165,11 +165,11 @@ export default function CV() {
       {/* Subtle background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute top-1/3 -right-32 w-80 h-80 opacity-4 rounded-full blur-3xl"
+          className="absolute top-1/3 -right-32 w-80 h-80 opacity-25 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-copper)' }}
         ></div>
         <div
-          className="absolute bottom-1/3 -left-32 w-80 h-80 opacity-4 rounded-full blur-3xl"
+          className="absolute bottom-1/3 -left-32 w-80 h-80 opacity-25 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-teal)' }}
         ></div>
       </div>
@@ -212,7 +212,7 @@ export default function CV() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Professional Photo */}
-            <div className="order-2 lg:order-1 flex justify-center">
+            <div className="order-2 lg:order-1 flex justify-center h-full items-center">
               <div className="relative">
                 <div
                   className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-2xl"
@@ -228,48 +228,11 @@ export default function CV() {
                     />
                   </div>
                 </div>
-                {/* Elegant decorative elements */}
-                <div
-                  className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
-                  style={{ backgroundColor: 'var(--color-straw)' }}
-                >
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
-                >
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </div>
               </div>
             </div>
 
             {/* Qualifications Timeline */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-4">
               {qualifications.map((qualification, index) => {
                 const styles = getCategoryStyles(qualification.category)
                 return (
@@ -277,13 +240,13 @@ export default function CV() {
                     {/* Timeline line */}
                     {index < qualifications.length - 1 && (
                       <div
-                        className="absolute left-7 top-16 w-0.5 h-12 opacity-20"
+                        className="absolute left-5 top-12 w-0.5 h-8 opacity-20"
                         style={{ backgroundColor: styles.accent }}
                       ></div>
                     )}
 
                     <div
-                      className="group card p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                      className="group card p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                       style={{
                         backgroundColor: styles.bg,
                         borderColor: styles.border,
@@ -296,23 +259,23 @@ export default function CV() {
                         style={{ backgroundColor: styles.accent }}
                       ></div>
 
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-3">
                         <div
-                          className="w-14 h-14 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-lg"
+                          className="w-10 h-10 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-md"
                           style={{ backgroundColor: styles.iconBg }}
                         >
-                          {qualification.icon}
+                          <div className="w-5 h-5">{qualification.icon}</div>
                         </div>
                         <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-2">
+                          <div className="flex items-center justify-between gap-2 mb-1">
                             <h3
-                              className="text-lg font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
+                              className="text-base font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
                               style={{ color: 'var(--color-teal)' }}
                             >
                               {qualification.title}
                             </h3>
                             <span
-                              className="text-sm font-medium px-3 py-1 rounded-full"
+                              className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap "
                               style={{
                                 color: styles.accent,
                                 backgroundColor: `color-mix(in srgb, ${styles.accent} 15%, transparent)`,
@@ -322,12 +285,12 @@ export default function CV() {
                             </span>
                           </div>
                           <p
-                            className="font-medium mb-2"
+                            className="font-medium mb-1 text-sm"
                             style={{ color: 'var(--color-copper)' }}
                           >
                             {qualification.institution}
                           </p>
-                          <p className="text-sm text-gray-600 leading-relaxed">
+                          <p className="text-xs text-gray-600 leading-relaxed">
                             {qualification.description}
                           </p>
                         </div>
@@ -351,7 +314,6 @@ export default function CV() {
               <div
                 className="absolute top-0 left-0 w-full h-full"
                 style={{
-                  backgroundImage: `radial-gradient(circle at 50% 50%, var(--color-teal) 1px, transparent 1px)`,
                   backgroundSize: '40px 40px',
                 }}
               ></div>

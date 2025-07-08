@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { WHATSAPP_URL } from '@/constants'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -72,31 +73,6 @@ export default function Header() {
                 </a>
               </li>
             ))}
-
-            {/* CTA Button */}
-            {/* <li key="agendar-consulta">
-              <a
-                href="#contato"
-                className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
-                style={
-                  {
-                    '--hover-color': 'var(--color-copper)',
-                  } as React.CSSProperties
-                }
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = 'var(--color-copper)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = ''
-                }}
-              >
-                Agendar Consulta
-                <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
-                ></span>
-              </a>
-            </li> */}
           </ul>
 
           {/* Mobile Menu Button */}
@@ -105,20 +81,20 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-6 flex flex-col justify-center items-center">
+            <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
               <span
-                className={`bg-gray-700 block h-0.5 w-6 transition-all duration-300 ${
-                  isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'
+                className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 origin-center ${
+                  isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
                 }`}
               />
               <span
-                className={`bg-gray-700 block h-0.5 w-6 transition-all duration-300 ${
+                className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 ${
                   isMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`bg-gray-700 block h-0.5 w-6 transition-all duration-300 ${
-                  isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'
+                className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 origin-center ${
+                  isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
                 }`}
               />
             </div>
@@ -153,13 +129,30 @@ export default function Header() {
               ))}
             </ul>
             <div className="px-4 pb-4 pt-2 border-t border-gray-200">
-              <a
-                href="#contato"
-                className="btn btn-primary w-full text-center text-sm"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Agendar Consulta
-              </a>
+              {/* CTA Button */}
+              <li key="agendar-consulta">
+                <a
+                  href={WHATSAPP_URL}
+                  className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
+                  style={
+                    {
+                      '--hover-color': 'var(--color-copper)',
+                    } as React.CSSProperties
+                  }
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--color-copper)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = ''
+                  }}
+                >
+                  Agendar Consulta
+                  <span
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                    style={{ backgroundColor: 'var(--color-copper)' }}
+                  ></span>
+                </a>
+              </li>
             </div>
           </div>
         )}

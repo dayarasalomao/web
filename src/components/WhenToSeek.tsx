@@ -8,7 +8,7 @@ export default function WhenToSeek() {
         'Presença de sangue nas fezes ou dor persistente na região anal',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -29,7 +29,7 @@ export default function WhenToSeek() {
         'Se você tem Crohn, retocolite ulcerativa ou histórico familiar',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ export default function WhenToSeek() {
       description: 'Qualquer alteração visual ou palpável na área perianal',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -70,7 +70,7 @@ export default function WhenToSeek() {
         'Dificuldade, dor intensa ou desconforto persistente ao evacuar',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ export default function WhenToSeek() {
         'Mudanças significativas na frequência ou consistência das fezes',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -112,7 +112,7 @@ export default function WhenToSeek() {
         'Prurido anal que não melhora com cuidados básicos de higiene',
       icon: (
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -135,76 +135,21 @@ export default function WhenToSeek() {
         return {
           border: '#dc2626',
           bg: 'rgba(220, 38, 38, 0.05)',
-          accent: (
-            <svg
-              className="w-4 h-4 text-red-600"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ),
         }
       case 'medium':
         return {
           border: 'var(--color-copper)',
           bg: 'rgba(163, 84, 66, 0.05)',
-          accent: (
-            <svg
-              className="w-4 h-4"
-              style={{ color: 'var(--color-copper)' }}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ),
         }
       case 'low':
         return {
           border: 'var(--color-teal)',
           bg: 'rgba(29, 65, 76, 0.05)',
-          accent: (
-            <svg
-              className="w-4 h-4"
-              style={{ color: 'var(--color-teal)' }}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ),
         }
       default:
         return {
           border: 'var(--color-beige)',
           bg: 'rgba(215, 203, 191, 0.05)',
-          accent: (
-            <svg
-              className="w-4 h-4"
-              style={{ color: 'var(--color-beige)' }}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ),
         }
     }
   }
@@ -217,11 +162,11 @@ export default function WhenToSeek() {
       {/* Very subtle background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute top-1/4 -right-32 w-96 h-96 opacity-2 rounded-full blur-3xl"
+          className="absolute top-1/4 -right-32 w-96 h-96 opacity-20 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-copper)' }}
         ></div>
         <div
-          className="absolute bottom-1/4 -left-32 w-96 h-96 opacity-2 rounded-full blur-3xl"
+          className="absolute bottom-1/4 -left-32 w-96 h-96 opacity-50 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-teal)' }}
         ></div>
       </div>
@@ -232,7 +177,7 @@ export default function WhenToSeek() {
             className="text-3xl lg:text-5xl font-serif font-bold mb-6"
             style={{ color: 'var(--color-teal)' }}
           >
-            Quando procurar um coloproctologista?
+            Quando procurar um(a) coloproctologista?
           </h2>
           <div
             className="w-20 h-1 mx-auto mb-6"
@@ -272,76 +217,39 @@ export default function WhenToSeek() {
                     />
                   </div>
                 </div>
-                {/* Elegant decorative elements */}
-                <div
-                  className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
-                >
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div
-                  className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                  style={{ backgroundColor: 'var(--color-teal)' }}
-                >
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </div>
               </div>
             </div>
 
             {/* Symptoms List */}
-            <div className="order-1 lg:order-2 space-y-4">
+            <div className="order-1 lg:order-2 space-y-3">
               {symptoms.map((symptom, index) => {
                 const styles = getUrgencyStyles(symptom.urgency)
                 return (
                   <div
                     key={index}
-                    className="group card p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="group card p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                     style={{
                       backgroundColor: styles.bg,
                       borderColor: styles.border,
                       borderWidth: '1px',
                     }}
                   >
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-3">
                       <div className="flex-shrink-0">
                         <div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                          className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
                           style={{
                             backgroundColor: 'rgba(163, 84, 66, 0.1)',
                             color: 'var(--color-copper)',
                           }}
                         >
-                          {symptom.icon}
+                          <div className="w-5 h-5">{symptom.icon}</div>
                         </div>
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
+                        <div className="flex items-center gap-2 mb-1">
                           <h3
-                            className="text-lg font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
+                            className="text-base font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
                             style={{ color: 'var(--color-teal)' }}
                           >
                             {symptom.title}
@@ -350,7 +258,7 @@ export default function WhenToSeek() {
                             {styles.accent}
                           </span>
                         </div>
-                        <p className="text-sm text-gray-600 leading-relaxed">
+                        <p className="text-xs text-gray-600 leading-relaxed">
                           {symptom.description}
                         </p>
                       </div>
