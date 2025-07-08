@@ -1,37 +1,503 @@
+import Image from 'next/image'
+
 export default function WhenToSeek() {
-  const reasons = [
-    'Sangramento anal ou dor',
-    'Histórico de doenças inflamatórias intestinais',
-    'Lesões, verrugas ou nódulos na região do ânus',
-    'Dor ou desconforto durante evacuação',
+  const symptoms = [
+    {
+      title: 'Sangramento anal ou dor',
+      description:
+        'Presença de sangue nas fezes ou dor persistente na região anal',
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 9v3m0 0v3m0-3h3m-3 0H9m-7 0a4 4 0 018 0v0a4 4 0 008 0v0a4 4 0 018 0v0M3 20h18"
+          />
+        </svg>
+      ),
+      urgency: 'high',
+    },
+    {
+      title: 'Histórico de doenças inflamatórias intestinais',
+      description:
+        'Se você tem Crohn, retocolite ulcerativa ou histórico familiar',
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          />
+        </svg>
+      ),
+      urgency: 'medium',
+    },
+    {
+      title: 'Lesões, verrugas ou nódulos na região do ânus',
+      description: 'Qualquer alteração visual ou palpável na área perianal',
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      ),
+      urgency: 'high',
+    },
+    {
+      title: 'Dor ou desconforto durante evacuação',
+      description:
+        'Dificuldade, dor intensa ou desconforto persistente ao evacuar',
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+          />
+        </svg>
+      ),
+      urgency: 'medium',
+    },
+    {
+      title: 'Alterações no padrão intestinal',
+      description:
+        'Mudanças significativas na frequência ou consistência das fezes',
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+          />
+        </svg>
+      ),
+      urgency: 'medium',
+    },
+    {
+      title: 'Coceira ou irritação persistente',
+      description:
+        'Prurido anal que não melhora com cuidados básicos de higiene',
+      icon: (
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+      urgency: 'low',
+    },
   ]
 
-  return (
-    <section id="procurar" className="py-16 lg:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Image Placeholder */}
-          <div className="w-full lg:w-80 h-64 lg:h-80 rounded-lg border-2 border-gray-200 bg-gray-100 flex items-center justify-center flex-shrink-0">
-            <span className="text-gray-500 text-sm text-center">
-              Consulta médica
-              <br />
-              ou paciente
-            </span>
-          </div>
+  const getUrgencyStyles = (urgency: string) => {
+    switch (urgency) {
+      case 'high':
+        return {
+          border: '#dc2626',
+          bg: 'rgba(220, 38, 38, 0.05)',
+          accent: (
+            <svg
+              className="w-4 h-4 text-red-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clipRule="evenodd"
+              />
+            </svg>
+          ),
+        }
+      case 'medium':
+        return {
+          border: 'var(--color-copper)',
+          bg: 'rgba(163, 84, 66, 0.05)',
+          accent: (
+            <svg
+              className="w-4 h-4"
+              style={{ color: 'var(--color-copper)' }}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clipRule="evenodd"
+              />
+            </svg>
+          ),
+        }
+      case 'low':
+        return {
+          border: 'var(--color-teal)',
+          bg: 'rgba(29, 65, 76, 0.05)',
+          accent: (
+            <svg
+              className="w-4 h-4"
+              style={{ color: 'var(--color-teal)' }}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clipRule="evenodd"
+              />
+            </svg>
+          ),
+        }
+      default:
+        return {
+          border: 'var(--color-beige)',
+          bg: 'rgba(215, 203, 191, 0.05)',
+          accent: (
+            <svg
+              className="w-4 h-4"
+              style={{ color: 'var(--color-beige)' }}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clipRule="evenodd"
+              />
+            </svg>
+          ),
+        }
+    }
+  }
 
-          {/* Content */}
-          <div className="flex-1">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-              Quando procurar um proctologista?
-            </h2>
-            <ul className="space-y-4">
-              {reasons.map((reason, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-900 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-700">{reason}</span>
-                </li>
-              ))}
-            </ul>
+  return (
+    <section
+      id="procurar"
+      className="py-20 lg:py-32 relative overflow-hidden bg-white"
+    >
+      {/* Very subtle background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute top-1/4 -right-32 w-96 h-96 opacity-2 rounded-full blur-3xl"
+          style={{ backgroundColor: 'var(--color-copper)' }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 -left-32 w-96 h-96 opacity-2 rounded-full blur-3xl"
+          style={{ backgroundColor: 'var(--color-teal)' }}
+        ></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative">
+        <div className="text-center mb-16">
+          <h2
+            className="text-3xl lg:text-5xl font-serif font-bold mb-6"
+            style={{ color: 'var(--color-teal)' }}
+          >
+            Quando procurar um coloproctologista?
+          </h2>
+          <div
+            className="w-20 h-1 mx-auto mb-6"
+            style={{
+              background:
+                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
+            }}
+          ></div>
+          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <span
+              className="font-semibold"
+              style={{ color: 'var(--color-copper)' }}
+            >
+              Não ignore os sinais
+            </span>{' '}
+            do seu corpo. O diagnóstico precoce é fundamental para tratamentos
+            mais eficazes e menos invasivos.
+          </p>
+        </div>
+
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Professional Image */}
+            <div className="order-2 lg:order-1 flex justify-center">
+              <div className="relative">
+                <div
+                  className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-2xl"
+                  style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
+                >
+                  <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
+                    <Image
+                      src="/assets/dayara-profissional-pucpr.JPG"
+                      alt="Dra. Dayara em consulta médica"
+                      width={384}
+                      height={500}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                {/* Elegant decorative elements */}
+                <div
+                  className="absolute -top-4 -right-4 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                  style={{ backgroundColor: 'var(--color-copper)' }}
+                >
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
+                  style={{ backgroundColor: 'var(--color-teal)' }}
+                >
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Symptoms List */}
+            <div className="order-1 lg:order-2 space-y-4">
+              {symptoms.map((symptom, index) => {
+                const styles = getUrgencyStyles(symptom.urgency)
+                return (
+                  <div
+                    key={index}
+                    className="group card p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    style={{
+                      backgroundColor: styles.bg,
+                      borderColor: styles.border,
+                      borderWidth: '1px',
+                    }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div
+                          className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                          style={{
+                            backgroundColor: 'rgba(163, 84, 66, 0.1)',
+                            color: 'var(--color-copper)',
+                          }}
+                        >
+                          {symptom.icon}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3
+                            className="text-lg font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
+                            style={{ color: 'var(--color-teal)' }}
+                          >
+                            {symptom.title}
+                          </h3>
+                          <span className="flex items-center">
+                            {styles.accent}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                          {symptom.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Important Notice */}
+        <div className="mt-16 text-center">
+          <div
+            className="card p-8 max-w-4xl mx-auto border-2"
+            style={{ borderColor: 'var(--color-copper)' }}
+          >
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div
+                className="w-12 h-12 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: 'var(--color-copper)' }}
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                className="text-2xl font-serif font-bold"
+                style={{ color: 'var(--color-teal)' }}
+              >
+                Importante Lembrar
+              </h3>
+            </div>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              <span className="font-semibold text-red-600">
+                Não se automedique
+              </span>{' '}
+              nem ignore sintomas persistentes. O coloproctologista é o
+              especialista indicado para diagnosticar e tratar adequadamente as
+              condições da região anal e intestinal.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="text-center p-4 card">
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg"
+                  style={{ backgroundColor: 'var(--color-teal)' }}
+                >
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  className="font-semibold mb-1"
+                  style={{ color: 'var(--color-teal)' }}
+                >
+                  Diagnóstico Precoce
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Melhores resultados no tratamento
+                </p>
+              </div>
+              <div className="text-center p-4 card">
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg"
+                  style={{ backgroundColor: 'var(--color-copper)' }}
+                >
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  className="font-semibold mb-1"
+                  style={{ color: 'var(--color-teal)' }}
+                >
+                  Tratamento Preciso
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Abordagem especializada e eficaz
+                </p>
+              </div>
+              <div className="text-center p-4 card">
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg"
+                  style={{ backgroundColor: 'var(--color-straw)' }}
+                >
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4
+                  className="font-semibold mb-1"
+                  style={{ color: 'var(--color-teal)' }}
+                >
+                  Alívio dos Sintomas
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Retorno ao bem-estar e qualidade de vida
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <a href="#contato" className="btn btn-primary text-lg px-8 py-4">
+                Agendar Consulta Agora
+              </a>
+            </div>
           </div>
         </div>
       </div>
