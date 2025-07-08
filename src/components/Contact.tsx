@@ -85,33 +85,39 @@ export default function Contact() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Contact Information */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="card p-6 group hover:shadow-lg transition-all duration-300"
+                  className="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                 >
+                  {/* Subtle accent line */}
+                  <div
+                    className="absolute top-0 left-0 w-full h-0.5 opacity-30"
+                    style={{ backgroundColor: 'var(--color-copper)' }}
+                  ></div>
+
                   <div className="flex items-center gap-4">
                     <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center text-white transition-all duration-300"
+                      className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300"
                       style={{ backgroundColor: 'var(--color-copper)' }}
                     >
-                      {info.icon}
+                      <div className="w-6 h-6">{info.icon}</div>
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <span
-                        className="font-semibold text-sm uppercase tracking-wide block mb-1"
+                        className="font-bold text-xs uppercase tracking-wider block mb-1"
                         style={{ color: 'var(--color-teal)' }}
                       >
                         {info.label}
                       </span>
-                      <span className="text-lg font-medium text-gray-900">
+                      <span className="text-base font-semibold text-gray-900 block">
                         {info.value}
                       </span>
                       {info.detail && (
-                        <span className="text-sm text-gray-600 block mt-1">
+                        <span className="text-sm text-gray-600 block mt-0.5">
                           {info.detail}
                         </span>
                       )}
@@ -121,17 +127,20 @@ export default function Contact() {
               ))}
 
               {/* Email Contact */}
-              <div className="card p-6 group hover:shadow-lg transition-all duration-300">
-                <a
-                  href="mailto:dradayarasalomao@gmail.com"
-                  className="flex items-center gap-4"
-                >
+              <div className="group bg-white/80 backdrop-blur-sm p-5 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                {/* Subtle accent line */}
+                <div
+                  className="absolute top-0 left-0 w-full h-0.5 opacity-30"
+                  style={{ backgroundColor: 'var(--color-copper)' }}
+                ></div>
+
+                <div className="flex items-center gap-4">
                   <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white transition-all duration-300"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300"
                     style={{ backgroundColor: 'var(--color-copper)' }}
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -139,83 +148,131 @@ export default function Contact() {
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <span
-                      className="font-semibold text-sm uppercase tracking-wide block mb-1"
+                      className="font-bold text-xs uppercase tracking-wider block mb-1"
                       style={{ color: 'var(--color-teal)' }}
                     >
                       E-mail
                     </span>
-                    <span className="text-lg font-medium text-gray-900 group-hover:text-opacity-80 transition-all duration-300">
+                    <span className="text-base font-semibold text-gray-900 group-hover:opacity-80 transition-opacity duration-300 block">
                       dradayarasalomao@gmail.com
                     </span>
-                    <span className="text-sm text-gray-600 block mt-1">
+                    <span className="text-sm text-gray-600 block mt-0.5">
                       Contato profissional
                     </span>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
 
             {/* CTA Section */}
             <div className="flex flex-col justify-center">
               <div
-                className="card p-8 relative overflow-hidden border-2"
-                style={{ borderColor: 'var(--color-copper)' }}
+                className="bg-white/90 backdrop-blur-sm p-10 rounded-3xl relative overflow-hidden shadow-2xl border"
+                style={{ borderColor: 'rgba(163, 84, 66, 0.2)' }}
               >
-                {/* Decorative elements */}
-                <div
-                  className="absolute -top-4 -right-4 w-16 h-16 rounded-full opacity-10"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
-                ></div>
-                <div
-                  className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full opacity-10"
-                  style={{ backgroundColor: 'var(--color-teal)' }}
-                ></div>
+                {/* Elegant background pattern */}
+                <div className="absolute inset-0 opacity-3">
+                  <div
+                    className="absolute top-0 left-0 w-full h-full"
+                    style={{
+                      backgroundSize: '30px 30px',
+                    }}
+                  ></div>
+                </div>
 
                 <div className="relative">
-                  <h3
-                    className="text-2xl lg:text-3xl font-serif font-bold mb-6 text-center"
-                    style={{ color: 'var(--color-teal)' }}
-                  >
-                    Agende sua consulta
-                  </h3>
-                  <p className="text-gray-700 text-center mb-8 leading-relaxed">
-                    Cuide da sua saúde com quem entende do assunto. Tratamentos
-                    personalizados e tecnologia de ponta.
-                  </p>
+                  {/* Header with icon */}
+                  <div className="text-center mb-8">
+                    <div
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
+                      style={{ backgroundColor: 'var(--color-teal)' }}
+                    >
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <h3
+                      className="text-2xl lg:text-3xl font-serif font-bold mb-3"
+                      style={{ color: 'var(--color-teal)' }}
+                    >
+                      Agende sua consulta
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed max-w-sm mx-auto">
+                      Cuidado especializado com{' '}
+                      <span
+                        className="font-semibold"
+                        style={{ color: 'var(--color-copper)' }}
+                      >
+                        excelência técnica
+                      </span>{' '}
+                      e{' '}
+                      <span
+                        className="font-semibold"
+                        style={{ color: 'var(--color-teal)' }}
+                      >
+                        acolhimento humano
+                      </span>
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
                     <a
                       href={WHATSAPP_URL}
-                      className="group block w-full bg-green-600 hover:bg-green-700 text-white text-center py-4 px-6 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                      className="group block w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-center py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 relative overflow-hidden"
                     >
-                      <div className="flex items-center justify-center gap-3">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12.017 2.051C6.477 2.051 2.051 6.477 2.051 12.017c0 1.734.455 3.407 1.294 4.893L2 21l4.18-1.304c1.424.763 3.019 1.163 4.837 1.163 5.54 0 9.966-4.426 9.966-9.966S17.557 2.051 12.017 2.051z" />
-                        </svg>
-                        WhatsApp - (41) 3123-6550
+                      {/* Subtle shimmer effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 group-hover:animate-pulse"></div>
+
+                      <div className="flex items-center justify-center gap-3 relative">
+                        <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M12.017 2.051C6.477 2.051 2.051 6.477 2.051 12.017c0 1.734.455 3.407 1.294 4.893L2 21l4.18-1.304c1.424.763 3.019 1.163 4.837 1.163 5.54 0 9.966-4.426 9.966-9.966S17.557 2.051 12.017 2.051z" />
+                          </svg>
+                        </div>
+                        <span>WhatsApp</span>
                       </div>
                     </a>
 
                     <a
                       href="mailto:dradayarasalomao@gmail.com"
-                      className="btn btn-primary w-full justify-center"
+                      className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-center border-2 relative overflow-hidden"
+                      style={{
+                        backgroundColor: 'rgba(163, 84, 66, 0.1)',
+                        borderColor: 'var(--color-copper)',
+                        color: 'var(--color-copper)',
+                      }}
                     >
                       <div className="flex items-center justify-center gap-3">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
+                        <div
+                          className="w-6 h-6 rounded-lg flex items-center justify-center"
+                          style={{ backgroundColor: 'rgba(163, 84, 66, 0.2)' }}
                         >
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
-                        E-mail
+                          <svg
+                            className="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                          </svg>
+                        </div>
+                        <span>E-mail</span>
                       </div>
                     </a>
                   </div>

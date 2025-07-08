@@ -213,7 +213,7 @@ export default function WhenToSeek() {
                       alt="Dra. Dayara em consulta médica"
                       width={384}
                       height={500}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover "
                     />
                   </div>
                 </div>
