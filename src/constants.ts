@@ -8,5 +8,8 @@ export const CONTACT_SOCIAL_MEDIA = {
   twitter: 'https://www.twitter.com/dradayarasalomao',
 }
 
-export const WHATSAPP_NUMBER = '554131236550'
+export const WHATSAPP_NUMBER = '554135422095'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
+
+export const ECO_TELEPHONE_NUMBER = '(41) 3123-6550'
+export const TELEPHONE_URL = `tel:${ECO_TELEPHONE_NUMBER}`

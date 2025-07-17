@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from '@/constants'
+import { WHATSAPP_URL, ECO_TELEPHONE_NUMBER, CONTACT_EMAIL } from '@/constants'
 import Link from 'next/link'
 
 export default function Contact() {
@@ -33,7 +33,7 @@ export default function Contact() {
     },
     {
       label: 'WhatsApp',
-      value: '(41) 3123-6550',
+      value: ECO_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ export default function Contact() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Contact Information */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
@@ -145,7 +145,7 @@ export default function Contact() {
                       E-mail
                     </span>
                     <span className="text-base font-semibold text-gray-900 group-hover:opacity-80 transition-opacity duration-300 block">
-                      dradayarasalomao@gmail.com
+                      {CONTACT_EMAIL}
                     </span>
                     <span className="text-sm text-gray-600 block mt-0.5">
                       Contato profissional

@@ -1,3 +1,4 @@
+import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
 
 export default function Diseases() {
@@ -145,7 +146,12 @@ export default function Diseases() {
               Entre em contato para uma avaliação personalizada. Cada caso é
               único e merece atenção especializada.
             </p>
-            <Link href="#contato" className="btn btn-primary">
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
               Falar com a Dra. Dayara
             </Link>
           </div>

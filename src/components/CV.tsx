@@ -134,16 +134,18 @@ export default function CV() {
             <div className="order-2 lg:order-1 flex justify-center h-full items-center">
               <div className="relative">
                 <div
-                  className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-lg"
+                  className="w-80 h-96 lg:w-96 lg:h-[547px] rounded-2xl p-2 shadow-lg"
                   style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
+                    {/* FIXME: Width and Height are not correct */}
                     <Image
-                      src="/assets/dayara-profissional-vermelho.JPG"
+                      src="/assets/day-clinica-pe.JPG"
                       alt="Dra. Dayara Salomão - Formação Profissional"
-                      width={384}
-                      height={500}
+                      width={912}
+                      height={1368}
                       className="w-full h-full object-cover"
+                      quality={100}
                     />
                   </div>
                 </div>

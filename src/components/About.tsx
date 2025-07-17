@@ -39,7 +39,7 @@ export default function About() {
                 <p className="text-base lg:text-lg text-neutral-600 leading-relaxed">
                   Sua abordagem combina{' '}
                   <span className="font-medium text-secondary-600">
-                    excelência técnica
+                    excelência técnica{' '}
                   </span>
                   com{' '}
                   <span className="font-medium text-secondary-600">
@@ -70,7 +70,8 @@ export default function About() {
                     alt="Dra. Dayara Salomão em ambiente profissional"
                     width={400}
                     height={600}
-                    className="w-full h-full object-"
+                    className="w-full h-full object-cover"
+                    quality={100}
                   />
                 </div>
               </div>

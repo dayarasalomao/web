@@ -123,31 +123,33 @@ export default function Header() {
             </ul>
             <div className="px-4 pb-4 pt-2 border-t border-gray-200">
               {/* CTA Button */}
-              <li key="agendar-consulta">
-                <Link
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
-                  style={
-                    {
-                      '--hover-color': 'var(--color-copper)',
-                    } as React.CSSProperties
-                  }
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--color-copper)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = ''
-                  }}
-                >
-                  Agendar Consulta
-                  <span
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
-                    style={{ backgroundColor: 'var(--color-copper)' }}
-                  ></span>
-                </Link>
-              </li>
+              <ul className="py-2 px-3">
+                <li key="agendar-consulta ">
+                  <Link
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
+                    style={
+                      {
+                        '--hover-color': 'var(--color-copper)',
+                      } as React.CSSProperties
+                    }
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = 'var(--color-copper)'
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = ''
+                    }}
+                  >
+                    Agendar Consulta
+                    <span
+                      className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
+                      style={{ backgroundColor: 'var(--color-copper)' }}
+                    ></span>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         )}

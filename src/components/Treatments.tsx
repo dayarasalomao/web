@@ -25,7 +25,7 @@ export default function Treatments() {
       category: 'laser',
     },
     {
-      name: 'Cirurgia de cisto pilonidal a laser e videoassistida (VAAFT)',
+      name: 'Cirurgia de cisto pilonidal a laser e videoassistida (EPSiT)',
       description: 'Tratamento avançado com recuperação mais rápida',
       category: 'laser',
     },
@@ -117,7 +117,7 @@ export default function Treatments() {
               className="font-semibold"
               style={{ color: 'var(--color-copper)' }}
             >
-              Tecnologia de ponta
+              Tecnologia avançada
             </span>{' '}
             e{' '}
             <span
@@ -130,11 +130,57 @@ export default function Treatments() {
           </p>
         </div>
 
-        {/* Enhanced Layout */}
+        {/* First Image - operando-claro.jpg - Before treatments (mobile only) */}
+        <div className="lg:hidden max-w-4xl mx-auto mb-16">
+          <div className="flex justify-center">
+            <div className="relative w-80 h-[480px]">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+                <Image
+                  src="/assets/operando-claro.jpg"
+                  alt="Dra. Dayara em procedimento especializado"
+                  width={751}
+                  height={1126}
+                  className="w-full h-full object-cover"
+                  quality={100}
+                />
+              </div>
+
+              {/* Subtle accent elements */}
+              <div
+                className="absolute -top-3 -right-3 w-6 h-6 rounded-full opacity-30"
+                style={{ backgroundColor: 'var(--color-copper)' }}
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Enhanced Layout with Left and Right Images */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            {/* Left Image - operando-claro.jpg (desktop only) */}
+            <div className="hidden lg:flex lg:col-span-3 justify-center">
+              <div className="relative w-[240px] h-[360px]">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+                  <Image
+                    src="/assets/operando-claro.jpg"
+                    alt="Dra. Dayara em procedimento especializado"
+                    width={751}
+                    height={1126}
+                    className="w-full h-full object-cover"
+                    quality={100}
+                  />
+                </div>
+
+                {/* Subtle accent elements */}
+                <div
+                  className="absolute -top-3 -right-3 w-6 h-6 rounded-full opacity-30"
+                  style={{ backgroundColor: 'var(--color-copper)' }}
+                ></div>
+              </div>
+            </div>
+
             {/* Treatments List - 2 columns */}
-            <div className="lg:col-span-7 space-y-3">
+            <div className="lg:col-span-6 space-y-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {treatments.map((treatment, index) => {
                   const styles = getCategoryStyles(treatment.category)
@@ -173,33 +219,50 @@ export default function Treatments() {
               </div>
             </div>
 
-            {/* Professional Image Section */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Main image container with clean design */}
-                <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
-                  {/* Simple, elegant frame */}
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
-                    <Image
-                      src="/assets/operando-longe.jpg"
-                      alt="Dra. Dayara realizando procedimento"
-                      width={384}
-                      height={500}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            {/* Right Image - operando-longe.jpg (desktop only) */}
+            <div className="hidden lg:flex lg:col-span-3 justify-center">
+              <div className="relative w-[240px] h-[360px]">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+                  <Image
+                    src="/assets/operando-longe.jpg"
+                    alt="Dra. Dayara realizando procedimento"
+                    width={946}
+                    height={1419}
+                    className="w-full h-full object-cover"
+                    quality={100}
+                  />
                 </div>
 
                 {/* Subtle accent elements */}
-                <div
-                  className="absolute -top-3 -right-3 w-6 h-6 rounded-full opacity-30"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
-                ></div>
                 <div
                   className="absolute -bottom-3 -left-3 w-4 h-4 rounded-full opacity-40"
                   style={{ backgroundColor: 'var(--color-teal)' }}
                 ></div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Second Image - operando-longe.jpg - After treatments (mobile only) */}
+        <div className="lg:hidden max-w-4xl mx-auto mt-16">
+          <div className="flex justify-center">
+            <div className="relative w-80 h-[480px]">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+                <Image
+                  src="/assets/operando-longe.jpg"
+                  alt="Dra. Dayara realizando procedimento"
+                  width={946}
+                  height={1419}
+                  className="w-full h-full object-cover"
+                  quality={100}
+                />
+              </div>
+
+              {/* Subtle accent elements */}
+              <div
+                className="absolute -bottom-3 -left-3 w-4 h-4 rounded-full opacity-40"
+                style={{ backgroundColor: 'var(--color-teal)' }}
+              ></div>
             </div>
           </div>
         </div>
@@ -218,9 +281,9 @@ export default function Treatments() {
                 Tecnologia Avançada, Cuidado Humanizado
               </h3>
               <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-                Todos os tratamentos são realizados com equipamentos de última
-                geração, priorizando sua segurança, conforto e os melhores
-                resultados clínicos.
+                Todos os tratamentos são realizados com equipamentos modernos,
+                priorizando sua segurança, conforto e os melhores resultados
+                clínicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

@@ -1,3 +1,4 @@
+import { WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -5,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative py-20 lg:py-32 overflow-hidden"
+      className="relative py-14 lg:py-20 overflow-hidden"
       style={{
         background:
           'linear-gradient(135deg, #ffffff 0%, var(--color-cream) 100%)',
@@ -41,20 +42,21 @@ export default function Hero() {
             <div className="relative">
               {/* Main image container */}
               <div
-                className="w-72 h-72 lg:w-96 lg:h-96 rounded-full p-3 shadow-lg"
+                className="w-[344px] h-[432px] lg:w-[384px] lg:h-[576px] p-3 shadow-lg"
                 style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
               >
                 <div
-                  className="w-full h-full rounded-full overflow-hidden bg-white shadow-lg border-4"
+                  className="w-full h-full overflow-hidden bg-white shadow-lg border-4"
                   style={{ borderColor: 'var(--color-cream)' }}
                 >
                   <Image
-                    src="/assets/dayara-pessoal.jpg"
+                    src="/assets/dayara-profissional-vermelho.JPG"
                     alt="Dra. Dayara Salomão"
-                    width={400}
-                    height={400}
+                    width={912}
+                    height={1368}
                     className="w-full h-full object-contain scale-125"
                     priority
+                    quality={100}
                   />
                 </div>
               </div>
@@ -72,6 +74,7 @@ export default function Hero() {
                   height={120}
                   className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 h-auto"
                   priority
+                  quality={100}
                 />
               </div>
               <div
@@ -127,8 +130,8 @@ export default function Hero() {
 
               {/* Professional credentials */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-10">
-                <div
-                  className="px-4 py-2 rounded-full border text-sm"
+                {/* <div
+                  className="px-4 py-2 rounded-full border text-xs"
                   style={{
                     backgroundColor: 'rgba(29, 65, 76, 0.1)',
                     borderColor: 'var(--color-teal)',
@@ -136,32 +139,34 @@ export default function Hero() {
                   }}
                 >
                   Técnicas Minimamente Invasivas
-                </div>
+                </div> */}
                 <div
-                  className="px-4 py-2 rounded-full border text-sm"
+                  className="px-4 py-2 rounded-full border text-xs"
                   style={{
                     backgroundColor: 'rgba(29, 65, 76, 0.1)',
                     borderColor: 'var(--color-teal)',
                     color: 'var(--color-teal)',
                   }}
                 >
-                  CRM Ativo
+                  Membro da Sociedade Brasileira de Coloproctologia
                 </div>
                 <div
-                  className="px-4 py-2 rounded-full border text-sm"
+                  className="px-4 py-2 rounded-full border text-xs"
                   style={{
                     backgroundColor: 'rgba(29, 65, 76, 0.1)',
                     borderColor: 'var(--color-teal)',
                     color: 'var(--color-teal)',
                   }}
                 >
-                  Especialista RQE
+                  Membro da Sociedade Brasileira de Laser em Medicina e Cirurgia
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
-                  href="#contato"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-secondary text-lg px-8 py-4"
                 >
                   <svg

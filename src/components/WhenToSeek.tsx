@@ -1,3 +1,4 @@
+import { WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -89,7 +90,7 @@ export default function WhenToSeek() {
             className="text-3xl lg:text-5xl font-serif font-bold mb-6"
             style={{ color: 'var(--color-teal)' }}
           >
-            Quando procurar um(a) coloproctologista?
+            Quando procurar uma coloproctologista?
           </h2>
           <div
             className="w-20 h-1 mx-auto mb-6"
@@ -116,16 +117,17 @@ export default function WhenToSeek() {
             <div className="order-2 lg:order-1 flex justify-center">
               <div className="relative">
                 <div
-                  className="w-80 h-128 lg:w-96 lg:h-[500px] rounded-2xl p-2 shadow-lg"
+                  className="w-80 h-128 lg:w-96 lg:h-[547px] rounded-2xl p-2 shadow-lg"
                   style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
                     <Image
-                      src="/assets/dayara-profissional-pucpr.JPG"
+                      src="/assets/dayara-clinica.JPG"
                       alt="Dra. Dayara em consulta médica"
-                      width={384}
-                      height={500}
+                      width={912}
+                      height={1368}
                       className="w-full h-full object-cover object-top"
+                      quality={100}
                     />
                   </div>
                 </div>
@@ -283,7 +285,9 @@ export default function WhenToSeek() {
 
             <div className="mt-8">
               <Link
-                href="#contato"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary text-lg px-8 py-4"
               >
                 Agendar Consulta Agora

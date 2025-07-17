@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from '@/constants'
+import { CONTACT_EMAIL, ECO_TELEPHONE_NUMBER, WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -29,7 +29,7 @@ export default function Footer() {
           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
         </svg>
       ),
-      text: '(41) 3123-6550',
+      text: ECO_TELEPHONE_NUMBER,
     },
     {
       icon: (
@@ -38,7 +38,7 @@ export default function Footer() {
           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
         </svg>
       ),
-      text: 'dradayarasalomao@gmail.com',
+      text: CONTACT_EMAIL,
     },
   ]
 
@@ -84,6 +84,7 @@ export default function Footer() {
                   width={64}
                   height={64}
                   className="w-full h-full object-contain"
+                  quality={100}
                 />
               </div>
               <div>
@@ -111,7 +112,7 @@ export default function Footer() {
                   color: 'var(--color-straw)',
                 }}
               >
-                CRM Ativo
+                CRM-PR 42596
               </div>
               <div
                 className="px-4 py-2 rounded-full border text-sm"
@@ -121,7 +122,7 @@ export default function Footer() {
                   color: 'var(--color-straw)',
                 }}
               >
-                Especialista RQE
+                RQE 33908
               </div>
             </div>
           </div>
