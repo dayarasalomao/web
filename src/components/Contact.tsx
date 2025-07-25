@@ -6,7 +6,7 @@ export default function Contact() {
     {
       label: 'Local',
       value: 'Eco Medical Center',
-      detail: '3º andar - setor de coloproctologia',
+      detail: 'Setor de Coloproctologia',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -32,7 +32,7 @@ export default function Contact() {
       ),
     },
     {
-      label: 'WhatsApp',
+      label: 'Telefone',
       value: ECO_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
       icon: (
