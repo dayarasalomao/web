@@ -1,9 +1,5 @@
 # TODOs
 
-- [ ] **Use the logo**
-- [ ] **Improve icons**
-- [ ] In mobile the carousel arrows should have bigger margin to the edge of the screen, its being cut off
-- [ ] Little issue on the carousel state
-- [ ] noticed some other issue on Ui that some sections disappear somehow on scroll...
-- [ ] Also, on mobile we need to fix this bounce animation on hover or touch scroll...
-  - [ ] Mainly because that makes the text blury...
+- [ ] Cleanup unused assets in public
+- [ ] Check if there is code we can remove from the project, not being used
+- [ ] add Metadata using our own repo info, from the src/constants src/components/ (sections) and docs/website_content.md

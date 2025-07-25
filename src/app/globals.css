@@ -22,6 +22,7 @@ body {
   color: #374151;
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 h1, h2, h3, h4, h5, h6 {

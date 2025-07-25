@@ -60,7 +60,7 @@ Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cu
 - Cirurgia de fístula anal a laser e videoassistida (VAAFT)
 - Cirurgia de cisto pilonidal a laser e videoassistida (VAAFT)
 - Cirurgia de plicoma anal a laser de CO2
-- Botox anal para fissura e dores anais crônicas
+- Toxina botulínica para fissura e dores anais crônicas
 - Eletrocoagulação a laser de lesões por HPV
 
 ## Opinões de quem já passou por aqui

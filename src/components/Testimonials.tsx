@@ -1,11 +1,13 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
+  const [cardsPerView, setCardsPerView] = useState(1) // Start with mobile default
+  const [isClient, setIsClient] = useState(false)
   const carouselRef = useRef<HTMLDivElement>(null)
 
   const testimonials = [
@@ -64,7 +66,20 @@ export default function Testimonials() {
     return 1 // mobile
   }
 
-  const cardsPerView = getCardsPerView()
+  // Handle client-side hydration and window resize
+  useEffect(() => {
+    setIsClient(true)
+    setCardsPerView(getCardsPerView())
+
+    const handleResize = () => {
+      setCardsPerView(getCardsPerView())
+      setCurrentIndex(0) // Reset to first slide on resize
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const totalSlides = Math.ceil(testimonials.length / cardsPerView)
 
   const nextSlide = () => {
@@ -87,6 +102,8 @@ export default function Testimonials() {
 
   const handleTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX)
+    // Prevent horizontal page scroll during carousel touch interaction
+    e.preventDefault()
   }
 
   const handleTouchEnd = () => {
@@ -203,17 +220,18 @@ export default function Testimonials() {
 
           {/* Carousel Cards */}
           <div
-            className="overflow-hidden"
+            className="overflow-hidden touch-pan-y"
             ref={carouselRef}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            style={{ touchAction: 'pan-y pinch-zoom' }}
           >
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+              {isClient && Array.from({ length: totalSlides }).map((_, slideIndex) => (
                 <div
                   key={slideIndex}
                   className="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 py-4"
@@ -296,7 +314,7 @@ export default function Testimonials() {
 
           {/* Dots Navigation */}
           <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: totalSlides }).map((_, index) => (
+            {isClient && Array.from({ length: totalSlides }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}

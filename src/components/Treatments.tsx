@@ -35,7 +35,7 @@ export default function Treatments() {
       category: 'laser',
     },
     {
-      name: 'Botox anal para fissura e dores anais crônicas',
+      name: 'Toxina botulínica para fissura e dores anais crônicas',
       description: 'Tratamento inovador para alívio da dor',
       category: 'innovative',
     },

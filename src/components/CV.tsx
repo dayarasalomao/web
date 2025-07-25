@@ -42,37 +42,37 @@ export default function CV() {
     },
   ]
 
-  const getCategoryStyles = (category: string) => {
-    switch (category) {
-      case 'education':
-        return {
-          bg: 'rgba(29, 65, 76, 0.1)',
-          border: 'var(--color-teal)',
-          iconBg: 'var(--color-teal)',
-          accent: 'var(--color-teal)',
-        }
-      case 'residency':
-        return {
-          bg: 'rgba(163, 84, 66, 0.1)',
-          border: 'var(--color-copper)',
-          iconBg: 'var(--color-copper)',
-          accent: 'var(--color-copper)',
-        }
-      case 'specialization':
-        return {
-          bg: 'rgba(209, 175, 139, 0.1)',
-          border: 'var(--color-straw)',
-          iconBg: 'var(--color-straw)',
-          accent: 'var(--color-straw)',
-        }
-      default:
-        return {
-          bg: 'rgba(163, 84, 66, 0.1)',
-          border: 'var(--color-copper)',
-          iconBg: 'var(--color-copper)',
-          accent: 'var(--color-copper)',
-        }
-    }
+  const getCategoryStyles = (category: string, index: number) => {
+    // Elegant progression using our brand colors with subtle variations
+    const colors = [
+      { // 2019 - Deep teal (education)
+        bg: 'rgba(29, 65, 76, 0.1)',
+        border: 'var(--color-teal)',
+        accent: 'var(--color-teal)',
+      },
+      { // 2022 - Darker copper variant
+        bg: 'rgba(139, 69, 19, 0.1)',
+        border: '#8B4513',
+        accent: '#8B4513',
+      },
+      { // 2024 - Deep warm brown (sophisticated)
+        bg: 'rgba(101, 67, 33, 0.1)', 
+        border: '#654321',
+        accent: '#654321',
+      },
+      { // 2025 - Warm gold/bronze
+        bg: 'rgba(184, 134, 11, 0.1)',
+        border: '#B8860B', 
+        accent: '#B8860B',
+      },
+      { // Atual - Original copper (highlight current)
+        bg: 'rgba(163, 84, 66, 0.1)',
+        border: 'var(--color-copper)',
+        accent: 'var(--color-copper)',
+      },
+    ]
+    
+    return colors[index] || colors[0]
   }
 
   return (
@@ -155,7 +155,7 @@ export default function CV() {
             {/* Qualifications Timeline */}
             <div className="order-1 lg:order-2 space-y-4">
               {qualifications.map((qualification, index) => {
-                const styles = getCategoryStyles(qualification.category)
+                const styles = getCategoryStyles(qualification.category, index)
                 return (
                   <div key={index} className="relative">
                     <div
@@ -185,7 +185,7 @@ export default function CV() {
                               className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
                               style={{
                                 color: styles.accent,
-                                backgroundColor: `color-mix(in srgb, ${styles.accent} 15%, transparent)`,
+                                backgroundColor: `color-mix(in srgb, ${styles.accent} 20%, transparent)`,
                               }}
                             >
                               {qualification.year}
@@ -197,7 +197,7 @@ export default function CV() {
                           >
                             {qualification.institution}
                           </p>
-                          <p className="text-xs text-gray-600 leading-relaxed">
+                          <p className="text-xs text-gray-800 leading-relaxed">
                             {qualification.description}
                           </p>
                         </div>
