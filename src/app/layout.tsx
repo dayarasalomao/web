@@ -26,6 +26,8 @@ import {
   MEDICAL_PROCEDURES,
   BUSINESS_RATING,
 } from '@/constants'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -169,6 +171,8 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.variable} ${cinzel.variable} antialiased`}>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
