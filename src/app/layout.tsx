@@ -29,7 +29,7 @@ import {
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
-import { GA_ID, GOOGLE_TAG_ID, ANALYTICS_ENABLED, GOOGLE_SITE_VERIFICATION } from '@/constants'
+import { GA_ID, GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -85,9 +85,6 @@ export const metadata: Metadata = {
     description: SEO_TWITTER_DESCRIPTION,
     images: [SEO_IMAGE],
     creator: '@dradayarasalomao',
-  },
-  verification: {
-    google: GOOGLE_SITE_VERIFICATION,
   },
   other: {
     'contact:email': BUSINESS_EMAIL,

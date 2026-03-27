@@ -113,7 +113,6 @@ export const SITEMAP_IMAGES = [
 // =================================================================
 export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 export const GOOGLE_TAG_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || '';
-export const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '';
 
 // Analytics feature flags
 export const ANALYTICS_ENABLED = process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_ANALYTICS_DEBUG === 'true';
