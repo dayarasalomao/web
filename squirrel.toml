@@ -1,5 +1,5 @@
 [project]
-domains = []
+domains = ["https://dayarasalomao.com.br/"]
 name = "dayara-salomao"
 
 [crawler]
@@ -15,13 +15,13 @@ per_host_delay_ms = 200
 include = []
 exclude = []
 allow_query_params = []
-drop_query_prefixes = [ "utm_", "gclid", "fbclid" ]
+drop_query_prefixes = ["utm_", "gclid", "fbclid"]
 respect_robots = true
 breadth_first = true
 max_prefix_budget = 0.25
 
 [rules]
-enable = [ "*" ]
+enable = ["*"]
 disable = []
 
 [external_links]
