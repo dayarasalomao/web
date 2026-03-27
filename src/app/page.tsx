@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
       <Hero />
       <About />
@@ -22,6 +22,6 @@ export default function Home() {
       <CV />
       <Contact />
       <Footer />
-    </div>
+    </main>
   )
 }

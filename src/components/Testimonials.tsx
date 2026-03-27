@@ -180,6 +180,7 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
+            aria-label="Depoimento anterior"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80  border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg -translate-x-3"
             style={{ color: 'var(--color-copper)' }}
           >
@@ -200,6 +201,7 @@ export default function Testimonials() {
 
           <button
             onClick={nextSlide}
+            aria-label="Próximo depoimento"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80  border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg translate-x-3"
             style={{ color: 'var(--color-copper)' }}
           >
@@ -318,6 +320,8 @@ export default function Testimonials() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
+                aria-label={`Ir para depoimento ${index + 1}`}
+                aria-current={index === currentIndex ? 'true' : 'false'}
                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
                   index === currentIndex ? 'w-6' : 'w-2'
                 }`}

@@ -66,12 +66,12 @@ export default function About() {
               <div className="w-80 h-128 lg:w-96 lg:h-128 rounded-2xl bg-gradient-to-br from-brand-straw/10 to-primary-100/20 p-2 shadow-elegant">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-soft">
                   <Image
-                    src="/assets/dayara-profissional-escuro.JPG"
+                    src="/assets/dayara-profissional-escuro.webp"
                     alt="Dra. Dayara Salomão em ambiente profissional"
                     width={400}
                     height={600}
                     className="w-full h-full object-cover"
-                    quality={100}
+                    quality={85}
                   />
                 </div>
               </div>
