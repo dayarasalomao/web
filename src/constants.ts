@@ -2,7 +2,7 @@
 // SITE CONFIGURATION
 // =================================================================
 
-export const SITE_URL = "https://dayarasalomao.com.br/";
+export const SITE_URL = "https://www.dayarasalomao.com.br/";
 
 // =================================================================
 // CONTACT INFORMATION (Used in components)
