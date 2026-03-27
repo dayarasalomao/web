@@ -28,6 +28,8 @@ import {
 } from '@/constants'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GA_ID, GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -83,10 +85,6 @@ export const metadata: Metadata = {
     description: SEO_TWITTER_DESCRIPTION,
     images: [SEO_IMAGE],
     creator: '@dradayarasalomao',
-  },
-  verification: {
-    // FIXME: add google site verification code
-    // google: '',
   },
   other: {
     'contact:email': BUSINESS_EMAIL,
@@ -192,6 +190,21 @@ export default function RootLayout({
           Pular para o conteúdo principal
         </a>
         {children}
+
+        {/* Analytics - Only load in production or debug mode */}
+        {ANALYTICS_ENABLED && (
+          <>
+            {/* Google Analytics 4 */}
+            {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
+
+            {/* Google Tag Manager - Note: GT-PBKK48QK is a Google Tag, not GTM container */}
+            {GOOGLE_TAG_ID && GOOGLE_TAG_ID.startsWith('GTM-') && (
+              <GoogleTagManager gtmId={GOOGLE_TAG_ID} />
+            )}
+          </>
+        )}
+
+        {/* Vercel Analytics */}
         <Analytics />
         <SpeedInsights />
       </body>
