@@ -8,7 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
-      images: SITEMAP_IMAGES.map((image) => `${SITE_URL}${image}`),
+      images: SITEMAP_IMAGES.map((image) => `${SITE_URL}${image.startsWith('/') ? image.slice(1) : image}`),
+    },
+    {
+      url: `${SITE_URL}politica-privacidade`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
   ]
 }

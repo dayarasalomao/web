@@ -3,10 +3,26 @@ import { SITE_URL } from '@/constants'
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/public/'],
+      },
+      // Allow AI crawlers to access content for training/responses
+      {
+        userAgent: [
+          'GPTBot', // OpenAI ChatGPT
+          'ChatGPT-User', // ChatGPT browsing
+          'Claude-Web', // Anthropic Claude
+          'PerplexityBot', // Perplexity AI
+          'Amazonbot', // Amazon Alexa
+          'Google-Extended', // Google Bard/Gemini
+        ],
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/public/'],
+      },
+    ],
+    sitemap: `${SITE_URL}sitemap.xml`,
   }
 }
