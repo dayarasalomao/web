@@ -122,12 +122,12 @@ export default function WhenToSeek() {
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
                     <Image
-                      src="/assets/dayara-clinica.JPG"
+                      src="/assets/dayara-clinica.webp"
                       alt="Dra. Dayara em consulta médica"
                       width={912}
                       height={1368}
                       className="w-full h-full object-cover object-top"
-                      quality={100}
+                      quality={85}
                     />
                   </div>
                 </div>

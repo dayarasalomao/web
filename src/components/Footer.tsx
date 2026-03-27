@@ -217,6 +217,13 @@ export default function Footer() {
             {/* Additional Info */}
             <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-400">
               <span>Atendimento humanizado e tecnologia avançada</span>
+              <span className="hidden md:inline">•</span>
+              <Link
+                href="/politica-privacidade"
+                className="hover:text-copper transition-colors"
+              >
+                Política de Privacidade
+              </Link>
             </div>
           </div>
         </div>

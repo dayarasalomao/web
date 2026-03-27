@@ -50,13 +50,14 @@ export default function Hero() {
                   style={{ borderColor: 'var(--color-cream)' }}
                 >
                   <Image
-                    src="/assets/dayara-profissional-vermelho.JPG"
+                    src="/assets/dayara-profissional-vermelho.webp"
                     alt="Dra. Dayara Salomão"
                     width={912}
                     height={1368}
                     className="w-full h-full object-contain scale-125"
                     priority
-                    quality={100}
+                    fetchPriority="high"
+                    quality={85}
                   />
                 </div>
               </div>

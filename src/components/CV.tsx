@@ -140,12 +140,12 @@ export default function CV() {
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
                     {/* FIXME: Width and Height are not correct */}
                     <Image
-                      src="/assets/day-clinica-pe.JPG"
+                      src="/assets/day-clinica-pe.webp"
                       alt="Dra. Dayara Salomão - Formação Profissional"
                       width={912}
                       height={1368}
                       className="w-full h-full object-cover"
-                      quality={100}
+                      quality={85}
                     />
                   </div>
                 </div>

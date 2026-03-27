@@ -136,12 +136,12 @@ export default function Treatments() {
             <div className="relative w-80 h-[480px]">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                 <Image
-                  src="/assets/operando-claro.jpg"
+                  src="/assets/operando-claro.webp"
                   alt="Dra. Dayara em procedimento especializado"
                   width={751}
                   height={1126}
                   className="w-full h-full object-cover"
-                  quality={100}
+                  quality={85}
                 />
               </div>
 
@@ -162,12 +162,12 @@ export default function Treatments() {
               <div className="relative w-[240px] h-[360px]">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                   <Image
-                    src="/assets/operando-claro.jpg"
+                    src="/assets/operando-claro.webp"
                     alt="Dra. Dayara em procedimento especializado"
                     width={751}
                     height={1126}
                     className="w-full h-full object-cover"
-                    quality={100}
+                    quality={85}
                   />
                 </div>
 
@@ -224,12 +224,12 @@ export default function Treatments() {
               <div className="relative w-[240px] h-[360px]">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                   <Image
-                    src="/assets/operando-longe.jpg"
+                    src="/assets/operando-longe.webp"
                     alt="Dra. Dayara realizando procedimento"
                     width={946}
                     height={1419}
                     className="w-full h-full object-cover"
-                    quality={100}
+                    quality={85}
                   />
                 </div>
 
@@ -249,12 +249,12 @@ export default function Treatments() {
             <div className="relative w-80 h-[480px]">
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
                 <Image
-                  src="/assets/operando-longe.jpg"
+                  src="/assets/operando-longe.webp"
                   alt="Dra. Dayara realizando procedimento"
                   width={946}
                   height={1419}
                   className="w-full h-full object-cover"
-                  quality={100}
+                  quality={85}
                 />
               </div>
 

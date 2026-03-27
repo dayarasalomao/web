@@ -164,12 +164,33 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://va.vercel-scripts.com" />
+
+        {/* Preload LCP image */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/dayara-profissional-vermelho.webp"
+          type="image/webp"
+          // @ts-expect-error - fetchpriority is a valid HTML attribute
+          fetchpriority="high"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className={`${montserrat.variable} ${cinzel.variable} antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-copper focus:text-white focus:top-0 focus:left-0"
+        >
+          Pular para o conteúdo principal
+        </a>
         {children}
         <Analytics />
         <SpeedInsights />
