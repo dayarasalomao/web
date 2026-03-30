@@ -28,8 +28,8 @@ import {
 } from '@/constants'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
-import { GA_ID, GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
+import { GoogleTagManager } from '@next/third-parties/google'
+import { GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -164,18 +164,12 @@ export default function RootLayout({
       <head>
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://va.vercel-scripts.com" />
-
-        {/* Preload LCP image */}
         <link
-          rel="preload"
-          as="image"
-          href="/assets/dayara-profissional-vermelho.webp"
-          type="image/webp"
-          // @ts-expect-error - fetchpriority is a valid HTML attribute
-          fetchpriority="high"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://va.vercel-scripts.com" />
 
         <script
           type="application/ld+json"
@@ -192,17 +186,11 @@ export default function RootLayout({
         {children}
 
         {/* Analytics - Only load in production or debug mode */}
-        {ANALYTICS_ENABLED && (
-          <>
-            {/* Google Analytics 4 */}
-            {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
-
-            {/* Google Tag Manager - Note: GT-PBKK48QK is a Google Tag, not GTM container */}
-            {GOOGLE_TAG_ID && GOOGLE_TAG_ID.startsWith('GTM-') && (
-              <GoogleTagManager gtmId={GOOGLE_TAG_ID} />
-            )}
-          </>
-        )}
+        {ANALYTICS_ENABLED &&
+          GOOGLE_TAG_ID &&
+          GOOGLE_TAG_ID.startsWith('GTM-') && (
+            <GoogleTagManager gtmId={GOOGLE_TAG_ID} />
+          )}
 
         {/* Vercel Analytics */}
         <Analytics />

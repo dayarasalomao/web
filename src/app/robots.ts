@@ -6,8 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/public/'],
+        allow: ['/', '/_next/static/', '/_next/image/'],
+        disallow: ['/api/', '/_next/data/'],
       },
       // Allow AI crawlers to access content for training/responses
       {
@@ -19,8 +19,8 @@ export default function robots(): MetadataRoute.Robots {
           'Amazonbot', // Amazon Alexa
           'Google-Extended', // Google Bard/Gemini
         ],
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/public/'],
+        allow: ['/', '/_next/static/', '/_next/image/'],
+        disallow: ['/api/', '/_next/data/'],
       },
     ],
     sitemap: `${SITE_URL}sitemap.xml`,

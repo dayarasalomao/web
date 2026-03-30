@@ -56,7 +56,6 @@ export default function Hero() {
                     height={1368}
                     className="w-full h-full object-contain scale-125"
                     priority
-                    fetchPriority="high"
                     quality={85}
                   />
                 </div>
