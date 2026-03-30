@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import { Montserrat, Cinzel } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Montserrat, Cinzel } from "next/font/google";
+import "./globals.css";
 import {
   SITE_URL,
   SEO_TITLE,
@@ -25,21 +25,21 @@ import {
   PHYSICIAN_DATA,
   MEDICAL_PROCEDURES,
   BUSINESS_RATING,
-} from '@/constants'
-import { Analytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
-import { GA_ID, GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
+} from "@/constants";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GA_ID, GOOGLE_TAG_ID, ANALYTICS_ENABLED } from "@/constants";
 
 const montserrat = Montserrat({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
 const cinzel = Cinzel({
-  variable: '--font-cinzel',
-  subsets: ['latin'],
-})
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: SEO_TITLE,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   publisher: SEO_DOCTOR_NAME,
   metadataBase: new URL(SITE_URL),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   robots: {
     index: true,
@@ -58,14 +58,14 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
+    type: "website",
+    locale: "pt_BR",
     url: SITE_URL,
     siteName: BUSINESS_NAME,
     title: SEO_TITLE,
@@ -80,26 +80,26 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: SEO_TITLE,
     description: SEO_TWITTER_DESCRIPTION,
     images: [SEO_IMAGE],
-    creator: '@dradayarasalomao',
+    creator: "@dradayarasalomao",
   },
   other: {
-    'contact:email': BUSINESS_EMAIL,
-    'contact:phone_number': BUSINESS_PHONE,
-    'contact:postal_address': `${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, ${BUSINESS_ADDRESS.addressRegion}`,
-    'business:contact_data:locality': BUSINESS_ADDRESS.addressLocality,
-    'business:contact_data:region': BUSINESS_ADDRESS.addressRegion,
-    'business:contact_data:country_name': 'Brasil',
-    'article:author': SEO_DOCTOR_NAME,
+    "contact:email": BUSINESS_EMAIL,
+    "contact:phone_number": BUSINESS_PHONE,
+    "contact:postal_address": `${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, ${BUSINESS_ADDRESS.addressRegion}`,
+    "business:contact_data:locality": BUSINESS_ADDRESS.addressLocality,
+    "business:contact_data:region": BUSINESS_ADDRESS.addressRegion,
+    "business:contact_data:country_name": "Brasil",
+    "article:author": SEO_DOCTOR_NAME,
   },
-}
+};
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'MedicalOrganization',
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
   name: BUSINESS_NAME,
   alternateName: BUSINESS_ALTERNATE_NAME,
   description: BUSINESS_DESCRIPTION,
@@ -108,7 +108,7 @@ const jsonLd = {
   email: BUSINESS_EMAIL,
   medicalSpecialty: BUSINESS_SPECIALTY,
   address: {
-    '@type': 'PostalAddress',
+    "@type": "PostalAddress",
     streetAddress: BUSINESS_ADDRESS.streetAddress,
     addressLocality: BUSINESS_ADDRESS.addressLocality,
     addressRegion: BUSINESS_ADDRESS.addressRegion,
@@ -116,7 +116,7 @@ const jsonLd = {
     postalCode: BUSINESS_ADDRESS.postalCode,
   },
   geo: {
-    '@type': 'GeoCoordinates',
+    "@type": "GeoCoordinates",
     latitude: BUSINESS_GEO.latitude,
     longitude: BUSINESS_GEO.longitude,
   },
@@ -124,58 +124,52 @@ const jsonLd = {
   paymentAccepted: BUSINESS_PAYMENT,
   currenciesAccepted: BUSINESS_CURRENCY,
   physician: {
-    '@type': 'Physician',
+    "@type": "Physician",
     name: PHYSICIAN_DATA.name,
     medicalSpecialty: PHYSICIAN_DATA.medicalSpecialty,
     alumniOf: {
-      '@type': 'CollegeOrUniversity',
+      "@type": "CollegeOrUniversity",
       name: PHYSICIAN_DATA.university,
     },
     memberOf: {
-      '@type': 'MedicalOrganization',
+      "@type": "MedicalOrganization",
       name: PHYSICIAN_DATA.clinic,
     },
   },
   hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Tratamentos de Coloproctologia',
+    "@type": "OfferCatalog",
+    name: "Tratamentos de Coloproctologia",
     itemListElement: MEDICAL_PROCEDURES.map((procedure) => ({
-      '@type': 'Offer',
+      "@type": "Offer",
       itemOffered: {
-        '@type': 'MedicalProcedure',
+        "@type": "MedicalProcedure",
         name: procedure,
       },
     })),
   },
   aggregateRating: {
-    '@type': 'AggregateRating',
+    "@type": "AggregateRating",
     ratingValue: BUSINESS_RATING.ratingValue,
     reviewCount: BUSINESS_RATING.reviewCount,
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="pt-BR">
       <head>
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://va.vercel-scripts.com" />
-
-        {/* Preload LCP image */}
         <link
-          rel="preload"
-          as="image"
-          href="/assets/dayara-profissional-vermelho.webp"
-          type="image/webp"
-          // @ts-expect-error - fetchpriority is a valid HTML attribute
-          fetchpriority="high"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://va.vercel-scripts.com" />
 
         <script
           type="application/ld+json"
@@ -198,7 +192,7 @@ export default function RootLayout({
             {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
 
             {/* Google Tag Manager - Note: GT-PBKK48QK is a Google Tag, not GTM container */}
-            {GOOGLE_TAG_ID && GOOGLE_TAG_ID.startsWith('GTM-') && (
+            {GOOGLE_TAG_ID && GOOGLE_TAG_ID.startsWith("GTM-") && (
               <GoogleTagManager gtmId={GOOGLE_TAG_ID} />
             )}
           </>
@@ -209,5 +203,5 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
     </html>
-  )
+  );
 }
