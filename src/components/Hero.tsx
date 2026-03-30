@@ -1,6 +1,6 @@
-import { WHATSAPP_URL } from "@/constants";
-import Image from "next/image";
-import Link from "next/link";
+import { WHATSAPP_URL } from '@/constants'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -9,18 +9,18 @@ export default function Hero() {
       className="relative py-14 lg:py-20 overflow-hidden"
       style={{
         background:
-          "linear-gradient(135deg, #ffffff 0%, var(--color-cream) 100%)",
+          'linear-gradient(135deg, #ffffff 0%, var(--color-cream) 100%)',
       }}
     >
       {/* Elegant background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute -top-24 -right-24 w-96 h-96 opacity-70 rounded-full blur-3xl"
-          style={{ backgroundColor: "var(--color-straw)" }}
+          style={{ backgroundColor: 'var(--color-straw)' }}
         ></div>
         <div
           className="absolute -bottom-24 -left-24 w-96 h-96 opacity-10 rounded-full blur-3xl"
-          style={{ backgroundColor: "var(--color-copper)" }}
+          style={{ backgroundColor: 'var(--color-copper)' }}
         ></div>
 
         {/* Subtle decorative pattern */}
@@ -29,7 +29,7 @@ export default function Hero() {
             className="absolute top-0 left-0 w-full h-full"
             style={{
               backgroundImage: `radial-gradient(circle at 25% 75%, var(--color-beige) 1px, transparent 1px)`,
-              backgroundSize: "60px 60px",
+              backgroundSize: '60px 60px',
             }}
           ></div>
         </div>
@@ -43,11 +43,11 @@ export default function Hero() {
               {/* Main image container */}
               <div
                 className="w-[344px] h-[432px] lg:w-[384px] lg:h-[576px] p-3 shadow-lg"
-                style={{ backgroundColor: "rgba(163, 84, 66, 0.08)" }}
+                style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
               >
                 <div
                   className="w-full h-full overflow-hidden bg-white shadow-lg border-4"
-                  style={{ borderColor: "var(--color-cream)" }}
+                  style={{ borderColor: 'var(--color-cream)' }}
                 >
                   <Image
                     src="/assets/dayara-profissional-vermelho.webp"
@@ -81,50 +81,50 @@ export default function Hero() {
                 className="w-20 h-1 mx-auto lg:mx-0 mb-6"
                 style={{
                   background:
-                    "linear-gradient(90deg, var(--color-copper), var(--color-straw))",
+                    'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
                 }}
               ></div>
 
               <p className="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed font-light">
-                Especialista em{" "}
+                Especialista em{' '}
                 <span
                   className="font-semibold"
-                  style={{ color: "var(--color-copper)" }}
+                  style={{ color: 'var(--color-copper)' }}
                 >
                   coloproctologia
-                </span>{" "}
-                oferecendo tratamento minimamente invasivo com{" "}
+                </span>{' '}
+                oferecendo tratamento minimamente invasivo com{' '}
                 <span
                   className="font-semibold"
-                  style={{ color: "var(--color-copper)" }}
+                  style={{ color: 'var(--color-copper)' }}
                 >
                   laser e tecnologias avançadas
-                </span>{" "}
+                </span>{' '}
                 para doenças da região anal.
               </p>
 
               <p className="text-base lg:text-lg text-gray-600 mb-10 leading-relaxed">
-                Cuidado especializado com{" "}
+                Cuidado especializado com{' '}
                 <span
                   className="font-medium"
-                  style={{ color: "var(--color-teal)" }}
+                  style={{ color: 'var(--color-teal)' }}
                 >
                   excelência técnica
                 </span>
-                ,{" "}
+                ,{' '}
                 <span
                   className="font-medium"
-                  style={{ color: "var(--color-teal)" }}
+                  style={{ color: 'var(--color-teal)' }}
                 >
                   empatia
-                </span>{" "}
-                e{" "}
+                </span>{' '}
+                e{' '}
                 <span
                   className="font-medium"
-                  style={{ color: "var(--color-teal)" }}
+                  style={{ color: 'var(--color-teal)' }}
                 >
                   acolhimento
-                </span>{" "}
+                </span>{' '}
                 para seu bem-estar.
               </p>
 
@@ -143,9 +143,9 @@ export default function Hero() {
                 <div
                   className="px-4 py-2 rounded-full border text-xs"
                   style={{
-                    backgroundColor: "rgba(29, 65, 76, 0.1)",
-                    borderColor: "var(--color-teal)",
-                    color: "var(--color-teal)",
+                    backgroundColor: 'rgba(29, 65, 76, 0.1)',
+                    borderColor: 'var(--color-teal)',
+                    color: 'var(--color-teal)',
                   }}
                 >
                   Membro da Sociedade Brasileira de Coloproctologia
@@ -153,9 +153,9 @@ export default function Hero() {
                 <div
                   className="px-4 py-2 rounded-full border text-xs"
                   style={{
-                    backgroundColor: "rgba(29, 65, 76, 0.1)",
-                    borderColor: "var(--color-teal)",
-                    color: "var(--color-teal)",
+                    backgroundColor: 'rgba(29, 65, 76, 0.1)',
+                    borderColor: 'var(--color-teal)',
+                    color: 'var(--color-teal)',
                   }}
                 >
                   Membro da Sociedade Brasileira de Laser em Medicina e Cirurgia
@@ -190,5 +190,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }
