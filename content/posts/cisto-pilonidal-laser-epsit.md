@@ -2,8 +2,8 @@
 title: "Cisto Pilonidal: Tratamento Minimamente Invasivo com Laser e Vídeo (EPSiT)"
 metaDescription: Veja como o tratamento do cisto pilonidal com laser de diodo e técnica EPSiT pode reduzir dor, grandes incisões e tempo de recuperação.
 slug: cisto-pilonidal-laser-epsit
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-03-24
+lastModified: 2026-04-03
 primaryKeyword: cisto pilonidal laser EPSiT
 secondaryKeywords:
   - tratamento cisto pilonidal a laser

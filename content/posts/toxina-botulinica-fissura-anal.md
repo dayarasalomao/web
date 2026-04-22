@@ -2,8 +2,8 @@
 title: "Toxina Botulínica: Alívio da Dor e Cicatrização sem Cirurgia"
 metaDescription: Entenda como a toxina botulínica pode ajudar no tratamento da fissura anal e da hipertonia esfincteriana, com foco em alívio da dor e preservação funcional.
 slug: toxina-botulinica-fissura-anal
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-03-30
+lastModified: 2026-04-10
 primaryKeyword: toxina botulínica fissura anal
 secondaryKeywords:
   - fissura anal tratamento sem cirurgia

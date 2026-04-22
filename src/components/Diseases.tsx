@@ -122,11 +122,6 @@ export default function Diseases() {
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {disease.description}
                   </p>
-                  {href ? (
-                    <span className="mt-4 inline-flex text-sm font-medium text-copper">
-                      Ver tratamento relacionado
-                    </span>
-                  ) : null}
                 </div>
               </div>
             )

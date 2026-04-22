@@ -14,7 +14,10 @@
 /* Base Styles */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 48px; /* Offset for sticky header */
+}
+
+:is(#sobre, #procurar, #doencas, #tratamentos, #depoimentos, #curriculo, #contato) {
+  scroll-margin-top: 48px;
 }
 
 body {

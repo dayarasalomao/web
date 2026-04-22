@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
-import { BLOG_DEFAULT_OG_IMAGE, CONTACT_EMAIL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import { buildBreadcrumbGraph, serializeJsonLd } from '@/lib/structured-data'
-import { getAllTreatments, getRelatedPostsForTreatment } from '@/lib/treatments'
+import { getAllTreatments } from '@/lib/treatments'
 
 const TREATMENTS_TITLE = `Tratamentos — ${SEO_DOCTOR_NAME} | Coloproctologia em Curitiba`
 const TREATMENTS_DESCRIPTION =
@@ -68,53 +68,41 @@ export default function TreatmentsPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {treatments.map((treatment) => {
-            const relatedPosts = getRelatedPostsForTreatment(treatment)
+          {treatments.map((treatment) => (
+            <article
+              key={treatment.slug}
+              className="flex h-full flex-col rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1"
+            >
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                {treatment.shortTitle}
+              </p>
+              <h2 className="mb-3 text-2xl font-semibold leading-tight text-teal">
+                {treatment.title}
+              </h2>
+              <p className="mb-5 text-base leading-relaxed text-gray-700">
+                {treatment.summary}
+              </p>
 
-            return (
-              <article
-                key={treatment.slug}
-                className="flex h-full flex-col rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1"
-              >
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-                  {treatment.shortTitle}
+              {treatment.mappedDiseaseNames.length ? (
+                <p className="mb-5 text-sm text-gray-600">
+                  Indicado em casos selecionados de:{' '}
+                  <span className="font-medium text-teal">
+                    {treatment.mappedDiseaseNames.join(', ')}
+                  </span>
                 </p>
-                <h2 className="mb-3 text-2xl font-semibold leading-tight text-teal">
-                  {treatment.title}
-                </h2>
-                <p className="mb-5 text-base leading-relaxed text-gray-700">
-                  {treatment.summary}
+              ) : (
+                <p className="mb-5 text-sm text-gray-600">
+                  Conduta definida após exame clínico e avaliação individualizada.
                 </p>
+              )}
 
-                {treatment.mappedDiseaseNames.length ? (
-                  <p className="mb-5 text-sm text-gray-600">
-                    Indicado em casos selecionados de:{' '}
-                    <span className="font-medium text-teal">
-                      {treatment.mappedDiseaseNames.join(', ')}
-                    </span>
-                  </p>
-                ) : (
-                  <p className="mb-5 text-sm text-gray-600">
-                    Conduta definida após exame clínico e avaliação individualizada.
-                  </p>
-                )}
-
-                <div className="mt-auto flex flex-col gap-3">
-                  <Link href={`/tratamentos/${treatment.slug}`} className="btn btn-secondary text-center">
-                    Ver detalhes do tratamento
-                  </Link>
-                  {relatedPosts[0] ? (
-                    <Link
-                      href={`/blog/${relatedPosts[0].slug}`}
-                      className="text-sm font-medium text-copper transition-colors hover:text-teal"
-                    >
-                      Ler conteúdo complementar
-                    </Link>
-                  ) : null}
-                </div>
-              </article>
-            )
-          })}
+              <div className="mt-auto flex flex-col gap-3">
+                <Link href={`/tratamentos/${treatment.slug}`} className="btn btn-secondary text-center">
+                  Ver detalhes do tratamento
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
 
         <div className="mx-auto mt-16 max-w-4xl">
@@ -136,8 +124,8 @@ export default function TreatmentsPage() {
                 >
                   Agendar consulta
                 </Link>
-                <Link href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary">
-                  Enviar e-mail
+                <Link href="/blog" className="btn btn-primary">
+                  Ver artigos do blog
                 </Link>
               </>
             }

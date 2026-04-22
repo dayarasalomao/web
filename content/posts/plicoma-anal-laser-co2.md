@@ -2,8 +2,8 @@
 title: "Remoção de Plicomas com Laser de CO2: Estética e Precisão Cirúrgica"
 metaDescription: Veja como o laser de CO2 pode contribuir para remoção precisa de plicomas, com menos dano térmico lateral e melhores condições para cicatrização.
 slug: plicoma-anal-laser-co2
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-04-15
+lastModified: 2026-04-20
 primaryKeyword: plicoma anal laser CO2
 secondaryKeywords:
   - remoção de plicoma anal

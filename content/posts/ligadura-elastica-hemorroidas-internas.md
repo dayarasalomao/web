@@ -2,8 +2,8 @@
 title: "Ligadura Elástica: Praticidade e Eficácia no Tratamento de Hemorroidas Internas"
 metaDescription: Saiba como funciona a ligadura elástica para hemorroidas internas, em quais situações ela costuma ser indicada e quais vantagens oferece em ambiente ambulatorial.
 slug: ligadura-elastica-hemorroidas-internas
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-03-18
+lastModified: 2026-04-08
 primaryKeyword: ligadura elástica hemorroidas
 secondaryKeywords:
   - hemorroidas internas tratamento

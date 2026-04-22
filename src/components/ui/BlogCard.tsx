@@ -21,14 +21,25 @@ export function BlogCard({ post }: BlogCardProps) {
       <p className="mb-6 flex-1 text-base leading-relaxed text-gray-700">{post.excerpt}</p>
 
       <div className="flex flex-wrap gap-2">
-        <span className="rounded-full border border-copper/20 bg-copper/10 px-3 py-1 text-xs font-medium text-copper">
-          {post.primaryKeyword}
-        </span>
         <Link
           href={`/blog/${post.slug}`}
-          className="rounded-full border border-teal/20 bg-teal/10 px-3 py-1 text-xs font-medium text-teal transition-colors hover:bg-teal hover:text-white"
+          className="inline-flex items-center gap-2 rounded-xl border border-teal/15 bg-teal/5 px-4 py-2 text-sm font-semibold text-teal transition-all duration-300 hover:border-teal hover:bg-teal hover:text-white"
         >
-          Ler artigo
+          <span>Ler artigo</span>
+          <svg
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            aria-hidden="true"
+          >
+            <path
+              d="M7.5 5 12.5 10l-5 5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </Link>
       </div>
     </article>

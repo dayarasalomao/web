@@ -2,8 +2,8 @@
 title: "HPV Perianal: Vaporização a Laser de CO2"
 metaDescription: Entenda como a vaporização a laser de CO2 pode tratar lesões por HPV perianal com precisão, preservação da pele saudável e recuperação mais confortável.
 slug: hpv-perianal-laser-co2
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-04-22
+lastModified: 2026-04-22
 primaryKeyword: HPV perianal laser CO2
 secondaryKeywords:
   - tratamento HPV perianal

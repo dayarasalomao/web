@@ -3,11 +3,8 @@
 import { useState, useRef, useEffect } from 'react'
 
 function getCardsPerView() {
-  if (typeof window !== 'undefined') {
-    if (window.innerWidth >= 1024) return 3 // desktop
-    if (window.innerWidth >= 768) return 2 // tablet
-  }
-
+  if (window.innerWidth >= 1024) return 3 // desktop
+  if (window.innerWidth >= 768) return 2 // tablet
   return 1 // mobile
 }
 
@@ -15,7 +12,7 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
-  const [cardsPerView, setCardsPerView] = useState(getCardsPerView)
+  const [cardsPerView, setCardsPerView] = useState(1)
   const carouselRef = useRef<HTMLDivElement>(null)
 
   const testimonials = [
@@ -73,6 +70,7 @@ export default function Testimonials() {
       setCurrentIndex(0) // Reset to first slide on resize
     }
 
+    handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])

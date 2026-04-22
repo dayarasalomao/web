@@ -4,7 +4,11 @@ import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
-import { GLOBAL_HEADER_NAV_ITEMS, type NavItem } from '@/lib/navigation'
+import {
+  HOME_HEADER_NAV_ITEMS,
+  SUBPAGE_HEADER_NAV_ITEMS,
+  type NavItem,
+} from '@/lib/navigation'
 
 type HeaderMode = 'home' | 'subpage'
 
@@ -15,7 +19,7 @@ interface HeaderProps {
 export default function Header({ mode = 'home' }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
-  const navItems = GLOBAL_HEADER_NAV_ITEMS
+  const navItems = mode === 'subpage' ? SUBPAGE_HEADER_NAV_ITEMS : HOME_HEADER_NAV_ITEMS
 
   const isActiveItem = (item: NavItem) => {
     if (mode !== 'subpage' || !item.match) {
@@ -156,7 +160,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
             <div className="px-4 pb-4 pt-2 border-t border-gray-200">
               {/* CTA Button */}
               <ul className="py-2 px-3">
-                <li key="agendar-consulta ">
+                <li key="agendar-consulta">
                   <Link
                     href={WHATSAPP_URL}
                     target="_blank"

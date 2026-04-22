@@ -152,8 +152,8 @@ export default function Treatments() {
                         style={{ backgroundColor: styles.accent }}
                       ></div>
 
-                      <div className="flex items-start gap-3">
-                        <div className="flex-1">
+                      <div className="flex h-full items-start gap-3">
+                        <div className="flex flex-1 flex-col h-full">
                           <h3
                             className="text-sm font-serif font-semibold mb-1"
                             style={{ color: 'var(--color-teal)' }}
@@ -164,7 +164,7 @@ export default function Treatments() {
                             {treatment.homeCardDescription}
                           </p>
                           {href ? (
-                            <span className="mt-3 inline-flex text-xs font-medium text-copper">
+                            <span className="mt-auto pt-3 inline-flex text-xs font-medium text-copper">
                               Ver detalhes do tratamento
                             </span>
                           ) : null}
@@ -178,7 +178,7 @@ export default function Treatments() {
                       <Link
                         key={index}
                         href={href}
-                        className="group card p-4 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                        className="group card flex h-full p-4 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
                         style={{
                           backgroundColor: styles.bg,
                           borderColor: styles.border,
@@ -193,7 +193,7 @@ export default function Treatments() {
                   return (
                     <div
                       key={index}
-                      className="group card p-4 relative overflow-hidden"
+                      className="group card flex h-full p-4 relative overflow-hidden"
                       style={{
                         backgroundColor: styles.bg,
                         borderColor: styles.border,
@@ -204,6 +204,12 @@ export default function Treatments() {
                     </div>
                   )
                 })}
+              </div>
+
+              <div className="pt-4 text-center">
+                <Link href="/tratamentos" className="btn btn-primary">
+                  Ver todos os tratamentos
+                </Link>
               </div>
             </div>
 
