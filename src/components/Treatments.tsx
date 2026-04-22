@@ -1,50 +1,10 @@
 import { WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getAllTreatments, getTreatmentHrefByCardName } from '@/lib/treatments'
 
 export default function Treatments() {
-  const treatments = [
-    {
-      name: 'Cirurgias de hemorroidas com laser de CO2',
-      description: 'Tecnologia avançada para tratamento minimamente invasivo',
-      category: 'laser',
-    },
-    {
-      name: 'Cirurgia de hemorroidas sem corte',
-      description: 'Técnica moderna que preserva os tecidos',
-      category: 'conservative',
-    },
-    {
-      name: 'Ligadura elástica para doença hemorroidária',
-      description: 'Método eficaz e menos invasivo',
-      category: 'conservative',
-    },
-    {
-      name: 'Cirurgia de fístula anal a laser e videoassistida (VAAFT)',
-      description: 'Procedimento videoassistido de alta precisão',
-      category: 'laser',
-    },
-    {
-      name: 'Cirurgia de cisto pilonidal a laser e videoassistida (EPSiT)',
-      description: 'Tratamento avançado com recuperação mais rápida',
-      category: 'laser',
-    },
-    {
-      name: 'Cirurgia de plicoma anal a laser de CO2',
-      description: 'Remoção precisa com tecnologia laser',
-      category: 'laser',
-    },
-    {
-      name: 'Toxina botulínica para fissura e dores anais crônicas',
-      description: 'Tratamento inovador para alívio da dor',
-      category: 'innovative',
-    },
-    {
-      name: 'Eletrocoagulação a laser de lesões por HPV',
-      description: 'Remoção segura e eficaz de lesões',
-      category: 'laser',
-    },
-  ]
+  const treatments = getAllTreatments()
 
   const getCategoryStyles = (category: string) => {
     switch (category) {
@@ -184,17 +144,9 @@ export default function Treatments() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {treatments.map((treatment, index) => {
                   const styles = getCategoryStyles(treatment.category)
-                  return (
-                    <div
-                      key={index}
-                      className="group card p-4 relative overflow-hidden"
-                      style={{
-                        backgroundColor: styles.bg,
-                        borderColor: styles.border,
-                        borderWidth: '1px',
-                      }}
-                    >
-                      {/* Subtle accent line */}
+                  const href = getTreatmentHrefByCardName(treatment.homeCardTitle)
+                  const content = (
+                    <>
                       <div
                         className="absolute top-0 left-0 w-full h-0.5 opacity-30"
                         style={{ backgroundColor: styles.accent }}
@@ -206,13 +158,49 @@ export default function Treatments() {
                             className="text-sm font-serif font-semibold mb-1"
                             style={{ color: 'var(--color-teal)' }}
                           >
-                            {treatment.name}
+                            {treatment.homeCardTitle}
                           </h3>
                           <p className="text-xs text-gray-600 leading-relaxed">
-                            {treatment.description}
+                            {treatment.homeCardDescription}
                           </p>
+                          {href ? (
+                            <span className="mt-3 inline-flex text-xs font-medium text-copper">
+                              Ver detalhes do tratamento
+                            </span>
+                          ) : null}
                         </div>
                       </div>
+                    </>
+                  )
+
+                  if (href) {
+                    return (
+                      <Link
+                        key={index}
+                        href={href}
+                        className="group card p-4 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                        style={{
+                          backgroundColor: styles.bg,
+                          borderColor: styles.border,
+                          borderWidth: '1px',
+                        }}
+                      >
+                        {content}
+                      </Link>
+                    )
+                  }
+
+                  return (
+                    <div
+                      key={index}
+                      className="group card p-4 relative overflow-hidden"
+                      style={{
+                        backgroundColor: styles.bg,
+                        borderColor: styles.border,
+                        borderWidth: '1px',
+                      }}
+                    >
+                      {content}
                     </div>
                   )
                 })}

@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SEO_DOCTOR_NAME, BUSINESS_NAME, CONTACT_EMAIL, SITE_URL } from '@/constants'
+import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { buildCanonical } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: `Política de Privacidade | ${SEO_DOCTOR_NAME}`,
   description: 'Política de privacidade e proteção de dados do website da Dra. Dayara Salomão.',
+  alternates: {
+    canonical: buildCanonical('/politica-privacidade'),
+  },
   robots: {
     index: false,
     follow: true,
@@ -41,6 +46,12 @@ export default function PrivacyPolicy() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">
+        <Breadcrumb
+          items={[
+            { label: 'Início', href: '/' },
+            { label: 'Política de Privacidade' },
+          ]}
+        />
         <h1 className="font-serif text-4xl lg:text-5xl text-copper mb-4">
           Política de Privacidade
         </h1>

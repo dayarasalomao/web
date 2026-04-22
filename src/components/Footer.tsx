@@ -1,15 +1,17 @@
-import { CONTACT_EMAIL, ECO_TELEPHONE_NUMBER, WHATSAPP_URL } from '@/constants'
+import {
+  CFM_REGISTRY_URL,
+  CONTACT_EMAIL,
+  CRM_FULL,
+  DOCTORALIA_URL,
+  ECO_TELEPHONE_NUMBER,
+  RQE_FULL,
+  WHATSAPP_URL,
+} from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FOOTER_QUICK_LINKS } from '@/lib/navigation'
 
 export default function Footer() {
-  const quickLinks = [
-    { href: '#sobre', label: 'Sobre' },
-    { href: '#doencas', label: 'Doenças' },
-    { href: '#tratamentos', label: 'Tratamentos' },
-    { href: '#curriculo', label: 'Currículo' },
-  ]
-
   const contactInfo = [
     {
       icon: (
@@ -112,7 +114,7 @@ export default function Footer() {
                   color: 'var(--color-straw)',
                 }}
               >
-                CRM-PR 42596
+                {CRM_FULL}
               </div>
               <div
                 className="px-4 py-2 rounded-full border text-sm"
@@ -122,8 +124,29 @@ export default function Footer() {
                   color: 'var(--color-straw)',
                 }}
               >
-                RQE 33908
+                {RQE_FULL}
               </div>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-4 text-sm text-gray-300">
+              <Link
+                href={CFM_REGISTRY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
+                Registro no CFM
+              </Link>
+              {DOCTORALIA_URL ? (
+                <Link
+                  href={DOCTORALIA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  Perfil no Doctoralia
+                </Link>
+              ) : null}
             </div>
           </div>
 
@@ -133,7 +156,7 @@ export default function Footer() {
               Links Rápidos
             </h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
+              {FOOTER_QUICK_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

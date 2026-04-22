@@ -1,5 +1,6 @@
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
+import { getTreatmentHrefByDiseaseName } from '@/lib/treatments'
 
 export default function Diseases() {
   const diseases = [
@@ -107,11 +108,9 @@ export default function Diseases() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {diseases.map((disease, index) => (
-            <div
-              key={index}
-              className="group card p-6 hover:shadow-lg transition-all duration-300 "
-            >
+          {diseases.map((disease, index) => {
+            const href = getTreatmentHrefByDiseaseName(disease.name)
+            const content = (
               <div className="flex items-start gap-4">
                 <div className="flex-1">
                   <h3
@@ -123,10 +122,36 @@ export default function Diseases() {
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {disease.description}
                   </p>
+                  {href ? (
+                    <span className="mt-4 inline-flex text-sm font-medium text-copper">
+                      Ver tratamento relacionado
+                    </span>
+                  ) : null}
                 </div>
               </div>
-            </div>
-          ))}
+            )
+
+            if (href) {
+              return (
+                <Link
+                  key={index}
+                  href={href}
+                  className="group card p-6 hover:shadow-lg transition-all duration-300"
+                >
+                  {content}
+                </Link>
+              )
+            }
+
+            return (
+              <div
+                key={index}
+                className="group card p-6 hover:shadow-lg transition-all duration-300 "
+              >
+                {content}
+              </div>
+            )
+          })}
         </div>
 
         <div className="text-center mt-12">
