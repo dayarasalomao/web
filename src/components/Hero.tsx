@@ -51,7 +51,7 @@ export default function Hero() {
                 >
                   <Image
                     src="/assets/dayara-profissional-vermelho.webp"
-                    alt="Dra. Dayara Salomão"
+                    alt="Retrato profissional da Dra. Dayara Salomão"
                     width={912}
                     height={1368}
                     className="w-full h-full object-contain scale-125"
@@ -69,7 +69,7 @@ export default function Hero() {
               <div className="mb-6">
                 <Image
                   src="/core/lettering-blue.png"
-                  alt="Dra. Dayara Salomão"
+                  alt="Lettering com o nome Dra. Dayara Salomão"
                   width={400}
                   height={120}
                   className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 h-auto"
@@ -84,6 +84,10 @@ export default function Hero() {
                     'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
                 }}
               ></div>
+
+              <h1 className="mb-6 text-3xl font-semibold leading-tight text-teal lg:text-5xl">
+                Coloproctologista em Curitiba com foco em tratamentos minimamente invasivos
+              </h1>
 
               <p className="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed font-light">
                 Especialista em{' '}

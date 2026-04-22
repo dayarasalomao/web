@@ -37,6 +37,27 @@ export const SEO_TWITTER_DESCRIPTION = `Especialista em coloproctologia com trat
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
 export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
 
+export const TWITTER_HANDLE = '@dradayarasalomao'
+
+export const BLOG_DEFAULT_OG_IMAGE = SEO_IMAGE
+export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
+
+// =================================================================
+// PROFESSIONAL CREDENTIALS (Used in Physician JSON-LD + Footer)
+// =================================================================
+export const CRM_NUMBER = '42596'
+export const CRM_STATE = 'PR'
+export const CRM_FULL = `CRM-${CRM_STATE} ${CRM_NUMBER}`
+export const RQE_NUMBER = '33908'
+export const RQE_FULL = `RQE ${RQE_NUMBER}`
+export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
+
+// TODO: confirm with user before production — public Doctoralia profile URL
+export const DOCTORALIA_URL = ''
+
+// TODO: confirm with user before production — Google Maps place URL (Eco Medical Center listing)
+export const GOOGLE_MAPS_URL = ''
+
 // =================================================================
 // BUSINESS INFORMATION (Used in JSON-LD Schema)
 // =================================================================
@@ -81,9 +102,14 @@ export const PHYSICIAN_DATA = {
 // MEDICAL PROCEDURES (Used in JSON-LD Schema)
 // =================================================================
 export const MEDICAL_PROCEDURES = [
-  'Cirurgia de hemorroidas com laser de CO2',
-  'Cirurgia de fístula anal a laser',
-  'Tratamento de fissura anal',
+  'Hemorroidectomia com laser de CO2',
+  'Cirurgia de hemorroidas sem corte',
+  'Ligadura elástica para doença hemorroidária',
+  'Tratamento de fístula anal com laser e vídeo',
+  'Tratamento de cisto pilonidal com laser e EPSiT',
+  'Remoção de plicoma anal com laser de CO2',
+  'Toxina botulínica para fissura anal',
+  'Tratamento de HPV perianal com laser de CO2',
 ]
 
 // =================================================================

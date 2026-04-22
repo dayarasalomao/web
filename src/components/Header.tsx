@@ -1,21 +1,90 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
+import { GLOBAL_HEADER_NAV_ITEMS, type NavItem } from '@/lib/navigation'
 
-export default function Header() {
+type HeaderMode = 'home' | 'subpage'
+
+interface HeaderProps {
+  mode?: HeaderMode
+}
+
+export default function Header({ mode = 'home' }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const navItems = GLOBAL_HEADER_NAV_ITEMS
 
-  const navItems = [
-    { href: '#sobre', label: 'Sobre' },
-    { href: '#procurar', label: 'Quando Procurar?' },
-    { href: '#doencas', label: 'Doenças' },
-    { href: '#tratamentos', label: 'Tratamentos' },
-    { href: '#depoimentos', label: 'Depoimentos' },
-    { href: '#curriculo', label: 'Currículo' },
-    { href: '#contato', label: 'Contato' },
-  ]
+  const isActiveItem = (item: NavItem) => {
+    if (mode !== 'subpage' || !item.match) {
+      return false
+    }
+
+    if (item.match === '/') {
+      return pathname === '/'
+    }
+
+    return pathname === item.match || pathname.startsWith(`${item.match}/`)
+  }
+
+  const linkBaseClass =
+    'text-sm transition-all duration-300 font-medium relative group py-2 whitespace-nowrap'
+
+  const renderNavLink = (item: NavItem, mobile = false) => {
+    const isActive = isActiveItem(item)
+
+    if (mobile) {
+      return (
+        <Link
+          href={item.href}
+          {...(item.external
+            ? { target: '_blank', rel: 'noopener noreferrer' }
+            : {})}
+          className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 hover:bg-gray-100 ${
+            isActive ? 'text-copper' : 'text-gray-700'
+          }`}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = 'var(--color-copper)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = isActive ? 'var(--color-copper)' : ''
+          }}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item.label}
+        </Link>
+      )
+    }
+
+    return (
+      <Link
+        href={item.href}
+        {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        className={`${linkBaseClass} ${isActive ? 'text-copper' : 'text-gray-700 hover:opacity-80'}`}
+        style={
+          {
+            '--hover-color': 'var(--color-copper)',
+          } as React.CSSProperties
+        }
+        onMouseEnter={(e) => {
+          e.currentTarget.style.color = 'var(--color-copper)'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.color = isActive ? 'var(--color-copper)' : ''
+        }}
+      >
+        {item.label}
+        <span
+          className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
+            isActive ? 'w-full' : 'w-0 group-hover:w-full'
+          }`}
+          style={{ backgroundColor: 'var(--color-copper)' }}
+        ></span>
+      </Link>
+    )
+  }
 
   return (
     <header
@@ -27,9 +96,9 @@ export default function Header() {
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center gap-3">
             <div>
-              <h1 className="text-lg sm:text-xl font-serif font-bold text-gray-800">
+              <p className="text-lg sm:text-xl font-serif font-bold text-gray-800">
                 Dra. Dayara Salomão
-              </h1>
+              </p>
               <p
                 className="text-xs sm:text-sm font-medium"
                 style={{ color: 'var(--color-copper)' }}
@@ -43,27 +112,7 @@ export default function Header() {
           <ul className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-gray-700 hover:opacity-80 transition-all duration-300 font-medium relative group py-2 whitespace-nowrap"
-                  style={
-                    {
-                      '--hover-color': 'var(--color-copper)',
-                    } as React.CSSProperties
-                  }
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--color-copper)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = ''
-                  }}
-                >
-                  {item.label}
-                  <span
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"
-                    style={{ backgroundColor: 'var(--color-copper)' }}
-                  ></span>
-                </Link>
+                {renderNavLink(item)}
               </li>
             ))}
           </ul>
@@ -100,24 +149,7 @@ export default function Header() {
             <ul className="space-y-3 p-4">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block text-sm text-gray-700 hover:opacity-80 transition-colors duration-200 font-medium py-2 px-3 rounded-lg hover:bg-gray-100"
-                    style={
-                      {
-                        '--hover-color': 'var(--color-copper)',
-                      } as React.CSSProperties
-                    }
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = 'var(--color-copper)'
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = ''
-                    }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+                  {renderNavLink(item, true)}
                 </li>
               ))}
             </ul>

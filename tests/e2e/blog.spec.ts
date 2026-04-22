@@ -1,0 +1,118 @@
+import { expect, test } from '@playwright/test'
+
+const CANONICAL_WEBSITE_URL = 'https://www.dayarasalomao.com.br'
+const BLOG_POST_SLUG = 'hemorroidectomia-laser-co2'
+
+function getXmlValues(xml: string, tagName: string): string[] {
+  const pattern = new RegExp(`<${tagName}>(.*?)</${tagName}>`, 'g')
+  return Array.from(xml.matchAll(pattern), ([, value]) => value.trim())
+}
+
+test('homepage renders SEO hero heading and CTA', async ({ page }) => {
+  await page.goto('/')
+
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: /coloproctologista em curitiba/i,
+    }),
+  ).toBeVisible()
+
+  await expect(page.getByRole('link', { name: /agendar consulta/i }).first()).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^blog$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toBeVisible()
+})
+
+test('homepage treatment cards link into canonical treatment pages', async ({ page }) => {
+  await page.goto('/')
+
+  await page
+    .getByRole('link', {
+      name: /cirurgia de hemorroidas sem corte/i,
+    })
+    .click()
+
+  await expect(page).toHaveURL(/\/tratamentos\/hemorroidas-sem-corte-laser-diodo$/)
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(
+    /cirurgia de hemorroidas sem corte/i,
+  )
+})
+
+test('homepage disease cards route to mapped treatment pages', async ({ page }) => {
+  await page.goto('/')
+
+  await page.getByRole('link', { name: /fissura anal/i }).click()
+
+  await expect(page).toHaveURL(/\/tratamentos\/toxina-botulinica-fissura-anal$/)
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(
+    /toxina botulínica para fissura anal/i,
+  )
+})
+
+test('blog index renders article cards', async ({ page }) => {
+  await page.goto('/blog')
+
+  await expect(page.locator('header').getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^blog$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toBeVisible()
+  await expect(page.getByRole('heading', { level: 1, name: /blog da dra\. dayara salomão/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /hemorroidectomia de alta performance/i })).toBeVisible()
+  await expect(page.locator('footer').last().getByRole('link', { name: /página de tratamentos/i })).toBeVisible()
+})
+
+test('blog post renders body, faq, and CTA', async ({ page }) => {
+  await page.goto(`/blog/${BLOG_POST_SLUG}`)
+
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(
+    /hemorroidectomia de alta performance/i,
+  )
+  await expect(page.getByRole('heading', { level: 2, name: /perguntas frequentes/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /agendar consulta pelo whatsapp/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /ver página do tratamento/i })).toBeVisible()
+})
+
+test('treatments index renders canonical service cards', async ({ page }) => {
+  await page.goto('/tratamentos')
+
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: /tratamentos com foco em precisão e conforto/i,
+    }),
+  ).toBeVisible()
+  await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i }).first()).toBeVisible()
+})
+
+test('privacy page is crawlable for users but noindex for bots', async ({ page }) => {
+  await page.goto('/politica-privacidade')
+
+  await expect(page.getByRole('heading', { level: 1, name: /política de privacidade/i })).toBeVisible()
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+})
+
+test('sitemap and robots expose blog crawl signals', async ({ page }) => {
+  const sitemapResponse = await page.request.get('/sitemap.xml')
+  expect(sitemapResponse.ok()).toBeTruthy()
+
+  const sitemapXml = await sitemapResponse.text()
+  const locs = getXmlValues(sitemapXml, 'loc')
+  const blogPostLocs = locs.filter((loc) => loc.startsWith(`${CANONICAL_WEBSITE_URL}/blog/`))
+  const treatmentLocs = locs.filter((loc) =>
+    loc.startsWith(`${CANONICAL_WEBSITE_URL}/tratamentos/`),
+  )
+
+  expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
+  expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/tratamentos`)
+  expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
+  expect(treatmentLocs).toContain(
+    `${CANONICAL_WEBSITE_URL}/tratamentos/hemorroidectomia-laser-co2`,
+  )
+  expect(locs).not.toContain(`${CANONICAL_WEBSITE_URL}/politica-privacidade`)
+
+  const robotsResponse = await page.request.get('/robots.txt')
+  expect(robotsResponse.ok()).toBeTruthy()
+
+  const robotsTxt = await robotsResponse.text()
+  expect(robotsTxt).toContain(`Sitemap: ${CANONICAL_WEBSITE_URL}/sitemap.xml`)
+})

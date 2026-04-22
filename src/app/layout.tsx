@@ -12,24 +12,17 @@ import {
   SEO_IMAGE,
   SEO_IMAGE_ALT,
   BUSINESS_NAME,
-  BUSINESS_ALTERNATE_NAME,
-  BUSINESS_DESCRIPTION,
-  BUSINESS_SPECIALTY,
   BUSINESS_PHONE,
   BUSINESS_EMAIL,
   BUSINESS_ADDRESS,
-  BUSINESS_GEO,
-  BUSINESS_HOURS,
-  BUSINESS_PAYMENT,
-  BUSINESS_CURRENCY,
-  PHYSICIAN_DATA,
-  MEDICAL_PROCEDURES,
-  BUSINESS_RATING,
+  TWITTER_HANDLE,
 } from '@/constants'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleTagManager } from '@next/third-parties/google'
 import { GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
+import { buildGlobalGraph, serializeJsonLd } from '@/lib/structured-data'
+import { DEFAULT_ROBOTS } from '@/lib/seo'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -52,17 +45,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  robots: DEFAULT_ROBOTS,
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
@@ -84,7 +67,7 @@ export const metadata: Metadata = {
     title: SEO_TITLE,
     description: SEO_TWITTER_DESCRIPTION,
     images: [SEO_IMAGE],
-    creator: '@dradayarasalomao',
+    creator: TWITTER_HANDLE,
   },
   other: {
     'contact:email': BUSINESS_EMAIL,
@@ -97,62 +80,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'MedicalOrganization',
-  name: BUSINESS_NAME,
-  alternateName: BUSINESS_ALTERNATE_NAME,
-  description: BUSINESS_DESCRIPTION,
-  url: SITE_URL,
-  telephone: BUSINESS_PHONE,
-  email: BUSINESS_EMAIL,
-  medicalSpecialty: BUSINESS_SPECIALTY,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: BUSINESS_ADDRESS.streetAddress,
-    addressLocality: BUSINESS_ADDRESS.addressLocality,
-    addressRegion: BUSINESS_ADDRESS.addressRegion,
-    addressCountry: BUSINESS_ADDRESS.addressCountry,
-    postalCode: BUSINESS_ADDRESS.postalCode,
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: BUSINESS_GEO.latitude,
-    longitude: BUSINESS_GEO.longitude,
-  },
-  openingHours: BUSINESS_HOURS,
-  paymentAccepted: BUSINESS_PAYMENT,
-  currenciesAccepted: BUSINESS_CURRENCY,
-  physician: {
-    '@type': 'Physician',
-    name: PHYSICIAN_DATA.name,
-    medicalSpecialty: PHYSICIAN_DATA.medicalSpecialty,
-    alumniOf: {
-      '@type': 'CollegeOrUniversity',
-      name: PHYSICIAN_DATA.university,
-    },
-    memberOf: {
-      '@type': 'MedicalOrganization',
-      name: PHYSICIAN_DATA.clinic,
-    },
-  },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Tratamentos de Coloproctologia',
-    itemListElement: MEDICAL_PROCEDURES.map((procedure) => ({
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'MedicalProcedure',
-        name: procedure,
-      },
-    })),
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: BUSINESS_RATING.ratingValue,
-    reviewCount: BUSINESS_RATING.reviewCount,
-  },
-}
+const jsonLd = buildGlobalGraph()
 
 export default function RootLayout({
   children,
@@ -173,7 +101,7 @@ export default function RootLayout({
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
         />
       </head>
       <body className={`${montserrat.variable} ${cinzel.variable} antialiased`}>
