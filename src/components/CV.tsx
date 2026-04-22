@@ -36,7 +36,7 @@ export default function CV() {
     {
       title: 'Pós-graduação em Disfunções do Assoalho Pélvico',
       institution: 'UNIFAL',
-      year: 'Atual',
+      year: '2026',
       description: 'Especialização avançada em tratamentos do assoalho pélvico',
       category: 'specialization',
     },

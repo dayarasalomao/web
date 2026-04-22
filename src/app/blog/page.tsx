@@ -6,7 +6,7 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { getAllPosts } from '@/lib/blog'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import { buildBreadcrumbGraph, serializeJsonLd } from '@/lib/structured-data'
-import { BLOG_DEFAULT_OG_IMAGE, CONTACT_EMAIL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 
 const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia em Curitiba`
 const BLOG_DESCRIPTION =
@@ -103,8 +103,8 @@ export default function BlogPage() {
                 >
                   Agendar consulta
                 </Link>
-                <Link href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary">
-                  Enviar e-mail
+                <Link href="/tratamentos" className="btn btn-primary">
+                  Ver tratamentos
                 </Link>
               </>
             }

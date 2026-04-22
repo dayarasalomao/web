@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { SEO_DOCTOR_NAME, BUSINESS_NAME, CONTACT_EMAIL, SITE_URL } from '@/constants'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { buildCanonical } from '@/lib/seo'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: `Política de Privacidade | ${SEO_DOCTOR_NAME}`,
@@ -19,30 +21,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-cream">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <Link
-            href="/"
-            className="inline-flex items-center text-copper hover:text-teal transition-colors"
-          >
-            <svg
-              className="w-5 h-5 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            Voltar ao site
-          </Link>
-        </div>
-      </header>
+      <Header mode="subpage" />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">
@@ -332,6 +311,8 @@ export default function PrivacyPolicy() {
           </Link>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }

@@ -5,17 +5,23 @@ export interface NavItem {
   external?: boolean
 }
 
-export const GLOBAL_HEADER_NAV_ITEMS: NavItem[] = [
+export const HOME_HEADER_NAV_ITEMS: NavItem[] = [
   { href: '/tratamentos', label: 'Tratamentos', match: '/tratamentos' },
   { href: '/blog', label: 'Blog', match: '/blog' },
-  { href: 'https://wa.me/554135422095', label: 'Contato', external: true },
+  { href: '/#contato', label: 'Contato' },
+]
+
+export const SUBPAGE_HEADER_NAV_ITEMS: NavItem[] = [
+  { href: '/', label: 'Início', match: '/' },
+  { href: '/tratamentos', label: 'Tratamentos', match: '/tratamentos' },
+  { href: '/blog', label: 'Blog', match: '/blog' },
+  { href: '/#contato', label: 'Contato' },
 ]
 
 export const FOOTER_QUICK_LINKS: NavItem[] = [
   { href: '/#sobre', label: 'Sobre' },
   { href: '/#doencas', label: 'Doenças' },
-  { href: '/#tratamentos', label: 'Tratamentos na home' },
-  { href: '/tratamentos', label: 'Página de Tratamentos' },
-  { href: '/blog', label: 'Blog' },
   { href: '/#curriculo', label: 'Currículo' },
+  { href: '/tratamentos', label: 'Tratamentos' },
+  { href: '/blog', label: 'Blog' },
 ]

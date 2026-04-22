@@ -155,12 +155,22 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
                     <Link
                       key={post.slug}
                       href={`/blog/${post.slug}`}
-                      className="block rounded-[1.5rem] border border-beige/80 bg-cream/70 p-4 transition-colors hover:border-copper"
+                      className="group block rounded-[1.5rem] border border-copper/20 bg-gradient-to-br from-cream via-white to-beige/40 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-copper hover:shadow-md"
                     >
-                      <h3 className="text-lg font-semibold text-teal">{post.title}</h3>
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="rounded-full border border-copper/20 bg-copper/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                          Artigo do blog
+                        </span>
+                      </div>
+                      <h3 className="mt-4 text-lg font-semibold text-teal transition-colors group-hover:text-copper">
+                        {post.title}
+                      </h3>
                       <p className="mt-2 text-sm leading-relaxed text-gray-700">
                         {post.excerpt}
                       </p>
+                      <div className="mt-4 border-t border-beige/70 pt-4 text-sm font-medium text-teal">
+                        Ler artigo completo
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -182,7 +192,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
                   rel="noopener noreferrer"
                   className="btn btn-secondary"
                 >
-                  Agendar consulta pelo WhatsApp
+                  Agendar consulta
                 </Link>
               }
             />

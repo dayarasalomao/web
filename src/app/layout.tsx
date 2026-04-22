@@ -23,6 +23,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import { GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
 import { buildGlobalGraph, serializeJsonLd } from '@/lib/structured-data'
 import { DEFAULT_ROBOTS } from '@/lib/seo'
+import FloatingWhatsAppButton from '@/components/FloatingWhatsAppButton'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -88,7 +89,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" data-scroll-behavior="smooth">
       <head>
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -112,6 +113,7 @@ export default function RootLayout({
           Pular para o conteúdo principal
         </a>
         {children}
+        <FloatingWhatsAppButton />
 
         {/* Analytics - Only load in production or debug mode */}
         {ANALYTICS_ENABLED &&

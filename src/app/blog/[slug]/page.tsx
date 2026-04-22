@@ -123,12 +123,34 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {post.faqs.map((faq) => (
                 <details
                   key={faq.question}
-                  className="rounded-[1.5rem] border border-beige bg-white/95 p-5 shadow-sm"
+                  className="group overflow-hidden rounded-[1.5rem] border border-beige bg-white/95 shadow-sm transition-colors duration-300 open:border-copper/40"
                 >
-                  <summary className="cursor-pointer list-none text-lg font-semibold text-teal">
-                    {faq.question}
+                  <summary className="flex w-full cursor-pointer list-none items-start justify-between gap-4 px-5 py-5 text-left text-lg font-semibold text-teal [&::-webkit-details-marker]:hidden">
+                    <span className="flex-1">{faq.question}</span>
+                    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-beige/50 text-teal transition-all duration-300 group-open:rotate-180 group-open:bg-copper/10 group-open:text-copper">
+                      <svg
+                        className="h-4 w-4"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="m5 7.5 5 5 5-5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
                   </summary>
-                  <p className="mt-4 text-base leading-relaxed text-gray-700">{faq.answer}</p>
+                  <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 group-open:grid-rows-[1fr]">
+                    <div className="overflow-hidden">
+                      <p className="px-5 pb-5 text-base leading-relaxed text-gray-700">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
                 </details>
               ))}
             </div>
@@ -151,7 +173,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
               >
-                Agendar consulta pelo WhatsApp
+                Agendar consulta
               </Link>
             }
           />
@@ -172,7 +194,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               href={`/tratamentos/${relatedTreatment.slug}`}
               className="mt-5 inline-flex font-medium text-copper transition-colors hover:text-teal"
             >
-              Ver página do tratamento
+              Ver detalhes do tratamento
             </Link>
           </section>
         ) : null}

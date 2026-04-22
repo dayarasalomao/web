@@ -2,8 +2,8 @@
 title: "Fístula Anal: Precisão com Laser e Vídeo para a Preservação da Continência"
 metaDescription: Saiba como vídeo e laser podem ajudar no tratamento da fístula anal com preservação muscular, menor desconforto e recuperação mais ágil.
 slug: fistula-anal-laser-vaaft-filac
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-04-09
+lastModified: 2026-04-16
 primaryKeyword: fístula anal laser VAAFT FiLaC
 secondaryKeywords:
   - tratamento de fístula anal a laser

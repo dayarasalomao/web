@@ -2,8 +2,8 @@
 title: "Hemorroidectomia de Alta Performance: A Precisão do Laser de CO2"
 metaDescription: Entenda quando a hemorroidectomia com laser de CO2 é indicada, os diferenciais técnicos do método e por que o pós-operatório tende a ser mais confortável.
 slug: hemorroidectomia-laser-co2
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-03-12
+lastModified: 2026-04-22
 primaryKeyword: hemorroidectomia laser CO2
 secondaryKeywords:
   - cirurgia de hemorroidas a laser

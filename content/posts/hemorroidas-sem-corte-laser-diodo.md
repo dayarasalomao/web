@@ -2,8 +2,8 @@
 title: "Cirurgia de Hemorroidas sem Corte: Tecnologia e Rápida Recuperação"
 metaDescription: Conheça a cirurgia de hemorroidas sem corte com laser de diodo, como ela atua nos coxins hemorroidários e por que pode oferecer recuperação mais tranquila.
 slug: hemorroidas-sem-corte-laser-diodo
-publishDate: 2026-04-17
-lastModified: 2026-04-17
+publishDate: 2026-04-05
+lastModified: 2026-04-14
 primaryKeyword: hemorroidas sem corte laser
 secondaryKeywords:
   - laser de diodo hemorroidas

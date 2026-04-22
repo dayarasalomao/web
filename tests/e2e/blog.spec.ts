@@ -21,11 +21,17 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await expect(page.getByRole('link', { name: /agendar consulta/i }).first()).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^blog$/i })).toBeVisible()
-  await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toHaveAttribute(
+    'href',
+    '/#contato',
+  )
+  await expect(page.getByRole('link', { name: /agende no whatsapp/i })).toBeVisible()
 })
 
 test('homepage treatment cards link into canonical treatment pages', async ({ page }) => {
   await page.goto('/')
+
+  await expect(page.getByRole('link', { name: /ver todos os tratamentos/i })).toBeVisible()
 
   await page
     .getByRole('link', {
@@ -53,12 +59,17 @@ test('homepage disease cards route to mapped treatment pages', async ({ page }) 
 test('blog index renders article cards', async ({ page }) => {
   await page.goto('/blog')
 
+  await expect(page.locator('header').getByRole('link', { name: /^início$/i })).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^blog$/i })).toBeVisible()
-  await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toHaveAttribute(
+    'href',
+    '/#contato',
+  )
   await expect(page.getByRole('heading', { level: 1, name: /blog da dra\. dayara salomão/i })).toBeVisible()
   await expect(page.getByRole('link', { name: /hemorroidectomia de alta performance/i })).toBeVisible()
-  await expect(page.locator('footer').last().getByRole('link', { name: /página de tratamentos/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /ver tratamentos/i })).toBeVisible()
+  await expect(page.locator('footer').last().getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
 })
 
 test('blog post renders body, faq, and CTA', async ({ page }) => {
@@ -68,8 +79,8 @@ test('blog post renders body, faq, and CTA', async ({ page }) => {
     /hemorroidectomia de alta performance/i,
   )
   await expect(page.getByRole('heading', { level: 2, name: /perguntas frequentes/i })).toBeVisible()
-  await expect(page.getByRole('link', { name: /agendar consulta pelo whatsapp/i })).toBeVisible()
-  await expect(page.getByRole('link', { name: /ver página do tratamento/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /agendar consulta/i }).first()).toBeVisible()
+  await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i })).toBeVisible()
 })
 
 test('treatments index renders canonical service cards', async ({ page }) => {
@@ -82,13 +93,22 @@ test('treatments index renders canonical service cards', async ({ page }) => {
     }),
   ).toBeVisible()
   await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i }).first()).toBeVisible()
+  await expect(page.getByRole('link', { name: /ver artigos do blog/i })).toBeVisible()
 })
 
 test('privacy page is crawlable for users but noindex for bots', async ({ page }) => {
   await page.goto('/politica-privacidade')
 
   await expect(page.getByRole('heading', { level: 1, name: /política de privacidade/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^início$/i })).toBeVisible()
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/)
+})
+
+test('treatment detail highlights internal blog content card', async ({ page }) => {
+  await page.goto('/tratamentos/hemorroidectomia-laser-co2')
+
+  await expect(page.getByText(/artigo do blog/i).first()).toBeVisible()
+  await expect(page.getByRole('link', { name: /ler artigo completo/i })).toBeVisible()
 })
 
 test('sitemap and robots expose blog crawl signals', async ({ page }) => {

@@ -1,5 +1,6 @@
 import { WHATSAPP_URL, ECO_TELEPHONE_NUMBER, CONTACT_EMAIL } from '@/constants'
 import Link from 'next/link'
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 
 export default function Contact() {
   const contactInfo = [
@@ -36,8 +37,8 @@ export default function Contact() {
       value: ECO_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
       icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.017 2.051C6.477 2.051 2.051 6.477 2.051 12.017c0 1.734.455 3.407 1.294 4.893L2 21l4.18-1.304c1.424.763 3.019 1.163 4.837 1.163 5.54 0 9.966-4.426 9.966-9.966S17.557 2.051 12.017 2.051z" />
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.928 1.928A1.5 1.5 0 0 1 4.22 1.5h2.106c.42 0 .79.277.907.68l.58 2.03a1.5 1.5 0 0 1-.398 1.504L6.12 7.01a11.042 11.042 0 0 0 4.87 4.87l1.296-1.295a1.5 1.5 0 0 1 1.504-.399l2.03.58c.403.116.68.487.68.907v2.106a1.5 1.5 0 0 1-.428 1.293l-.97.97a2 2 0 0 1-1.815.546c-2.662-.532-5.345-2.095-7.616-4.365C3.401 10.132 1.837 7.45 1.305 4.786a2 2 0 0 1 .546-1.815l1.077-1.043Z" />
         </svg>
       ),
     },
@@ -228,13 +229,7 @@ export default function Contact() {
 
                       <div className="flex items-center justify-center gap-3 relative">
                         <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
-                          <svg
-                            className="w-4 h-4"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12.017 2.051C6.477 2.051 2.051 6.477 2.051 12.017c0 1.734.455 3.407 1.294 4.893L2 21l4.18-1.304c1.424.763 3.019 1.163 4.837 1.163 5.54 0 9.966-4.426 9.966-9.966S17.557 2.051 12.017 2.051z" />
-                          </svg>
+                          <WhatsAppIcon className="w-4 h-4" />
                         </div>
                         <span>WhatsApp</span>
                       </div>
