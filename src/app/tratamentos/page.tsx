@@ -33,10 +33,36 @@ export const metadata: Metadata = {
 
 export default function TreatmentsPage() {
   const treatments = getAllTreatments()
+  const mdLastRowCount = treatments.length % 2
+  const xlLastRowCount = treatments.length % 3
   const breadcrumbGraph = buildBreadcrumbGraph([
     { label: 'Início', href: '/' },
     { label: 'Tratamentos' },
   ])
+
+  const getTreatmentCardGridClass = (index: number) => {
+    const classes = ['md:col-span-2', 'xl:col-span-2']
+
+    if (mdLastRowCount === 1 && index === treatments.length - 1) {
+      classes.push('md:col-start-2')
+    }
+
+    if (xlLastRowCount === 1 && index === treatments.length - 1) {
+      classes.push('xl:col-start-3')
+    }
+
+    if (xlLastRowCount === 2) {
+      if (index === treatments.length - 2) {
+        classes.push('xl:col-start-2')
+      }
+
+      if (index === treatments.length - 1) {
+        classes.push('xl:col-start-4')
+      }
+    }
+
+    return classes.join(' ')
+  }
 
   return (
     <main id="main-content" className="min-h-screen bg-cream py-8 lg:py-12">
@@ -67,11 +93,11 @@ export default function TreatmentsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {treatments.map((treatment) => (
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4 xl:grid-cols-6">
+          {treatments.map((treatment, index) => (
             <article
               key={treatment.slug}
-              className="flex h-full flex-col rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1"
+              className={`flex h-full flex-col rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 ${getTreatmentCardGridClass(index)}`}
             >
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                 {treatment.shortTitle}
