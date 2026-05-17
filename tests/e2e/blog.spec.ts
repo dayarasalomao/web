@@ -48,7 +48,11 @@ test('homepage treatment cards link into canonical treatment pages', async ({ pa
 test('homepage disease cards route to mapped treatment pages', async ({ page }) => {
   await page.goto('/')
 
-  await page.getByRole('link', { name: /fissura anal/i }).click()
+  await page
+    .locator('#doencas article')
+    .filter({ hasText: /fissura anal/i })
+    .getByRole('link', { name: /saiba mais/i })
+    .click()
 
   await expect(page).toHaveURL(/\/tratamentos\/toxina-botulinica-fissura-anal$/)
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
@@ -125,8 +129,14 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/tratamentos`)
   expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
+  expect(blogPostLocs).toContain(
+    `${CANONICAL_WEBSITE_URL}/blog/constipacao-intestinal-quando-investigar`,
+  )
   expect(treatmentLocs).toContain(
     `${CANONICAL_WEBSITE_URL}/tratamentos/hemorroidectomia-laser-co2`,
+  )
+  expect(treatmentLocs).toContain(
+    `${CANONICAL_WEBSITE_URL}/tratamentos/tratamento-constipacao-intestino-preso`,
   )
   expect(locs).not.toContain(`${CANONICAL_WEBSITE_URL}/politica-privacidade`)
 

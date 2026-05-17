@@ -23,7 +23,7 @@ Most work in this repo falls into one of four categories:
 - **Analytics**: `@vercel/analytics`, `@vercel/speed-insights`, and Google Tag Manager via `@next/third-parties/google`
 - **Deployment target**: Vercel
 
-Do not assume older documentation in the repo is correct. The checked-in `README.md`, `CLAUDE.md`, `public/llm.txt`, and previous `AGENTS.md` content have drifted from the actual app setup.
+The checked-in `README.md`, `CLAUDE.md`, `AGENTS.md`, and `public/llms.txt` are intended to reflect the current app setup. If implementation details change, keep those files in sync.
 
 ## Development Commands
 
@@ -31,15 +31,10 @@ Do not assume older documentation in the repo is correct. The checked-in `README
 npm run dev    # next dev --turbopack
 npm run build  # production build
 npm run start  # production server
-npm run lint   # currently broken: script still points to `next lint`
+npm run lint   # eslint src tests playwright.config.ts next.config.ts eslint.config.mjs
 ```
 
-Linting is currently misconfigured for the checked-in dependency set:
-
-- `npm run lint` fails because `next lint` is no longer valid in the current setup.
-- Direct ESLint invocation also errors with the current `eslint.config.mjs` compat usage.
-
-If a task requires linting, expect to fix the lint command/config first instead of treating it as a healthy baseline.
+Linting uses direct ESLint invocation rather than `next lint`.
 
 ## Repository Layout
 
@@ -49,7 +44,7 @@ src/
     layout.tsx                 # global metadata, JSON-LD, fonts, analytics, skip link
     page.tsx                   # assembles the homepage sections
     politica-privacidade/      # privacy policy route
-    robots.ts                  # robots metadata route
+    sitemap.ts                 # sitemap metadata route
     sitemap.ts                 # sitemap metadata route
     globals.css                # CSS variables and shared utility classes
   components/
@@ -68,8 +63,7 @@ src/
 public/
   assets/                      # production photos used by the UI
   core/                        # logos and brand marks
-  backup/                      # original/backup image files
-  llm.txt                      # AI crawler guidance
+  llms.txt                     # AI crawler guidance
 
 docs/
   website_content.md           # editorial/reference copy, not imported by the app
@@ -101,14 +95,14 @@ Content is split across multiple places. This matters when editing.
 - [`src/constants.ts`](./src/constants.ts) contains shared business/contact data, SEO metadata, schema inputs, sitemap image list, and analytics flags.
 - Most on-page medical copy is hardcoded directly inside the section components.
 - [`docs/website_content.md`](./docs/website_content.md) is a reference document that mirrors much of the content, but the app does not import it at runtime.
-- [`public/llm.txt`](./public/llm.txt) is another manually maintained content surface for AI crawlers.
+- [`public/llms.txt`](./public/llms.txt) is another manually maintained content surface for AI crawlers.
 
 When updating copy, do not assume a single source of truth exists. If the change affects contact details, credentials, treatments, testimonials, or SEO messaging, check whether the same information also appears in:
 
 - [`src/constants.ts`](./src/constants.ts)
 - the relevant component file in [`src/components`](./src/components)
 - [`docs/website_content.md`](./docs/website_content.md)
-- [`public/llm.txt`](./public/llm.txt)
+- [`public/llms.txt`](./public/llms.txt)
 - [`src/app/politica-privacidade/page.tsx`](./src/app/politica-privacidade/page.tsx)
 
 Phone and WhatsApp data are currently not perfectly aligned across all files. Verify public-facing numbers before changing them.
@@ -148,7 +142,7 @@ SEO and machine-readable metadata are an important part of this repo.
 
 - [`src/app/layout.tsx`](./src/app/layout.tsx) defines the global `metadata` object and injects medical-business JSON-LD.
 - [`src/app/sitemap.ts`](./src/app/sitemap.ts) publishes entries for the homepage and privacy-policy page.
-- [`src/app/robots.ts`](./src/app/robots.ts) publishes crawler rules and a sitemap reference.
+- [`public/robots.txt`](./public/robots.txt) publishes crawler rules and a sitemap reference.
 - [`next.config.ts`](./next.config.ts) adds:
   - a canonical redirect from `dayarasalomao.vercel.app` to `https://www.dayarasalomao.com.br`
   - security headers including CSP, HSTS, `X-Frame-Options`, and related hardening
@@ -177,7 +171,7 @@ Google Tag Manager is only rendered when analytics are enabled and the tag start
 ## Practical Editing Notes
 
 - Many sections are static arrays embedded in component files. Simple content edits may require touching multiple files rather than a CMS-like data source.
-- Images are local and already optimized to `.webp` for production; originals/backups also exist under [`public/backup`](./public/backup).
+- Images are local and already optimized to `.webp` for production. Keep original source images outside `public` unless they are intentionally served.
 - If you update contact details, review CTA links in `Header`, `Hero`, `Diseases`, `Treatments`, `Contact`, and `Footer`.
 - If you update credentials or specialties, review both visible copy and schema data in [`src/constants.ts`](./src/constants.ts).
-- If you clean up docs, note that `README.md` and `CLAUDE.md` currently contain outdated stack information.
+- Keep `README.md`, `CLAUDE.md`, and `public/llms.txt` aligned when stack, content, or public asset conventions change.

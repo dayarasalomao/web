@@ -90,7 +90,7 @@ export default function Treatments() {
           </p>
         </div>
 
-        {/* First Image - operando-claro.jpg - Before treatments (mobile only) */}
+        {/* First Image - operando-claro.webp - Before treatments (mobile only) */}
         <div className="lg:hidden max-w-4xl mx-auto mb-16">
           <div className="flex justify-center">
             <div className="relative w-80 h-[480px]">
@@ -117,7 +117,7 @@ export default function Treatments() {
         {/* Enhanced Layout with Left and Right Images */}
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            {/* Left Image - operando-claro.jpg (desktop only) */}
+            {/* Left Image - operando-claro.webp (desktop only) */}
             <div className="hidden lg:flex lg:col-span-3 justify-center">
               <div className="relative w-[240px] h-[360px]">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
@@ -144,7 +144,9 @@ export default function Treatments() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {treatments.map((treatment, index) => {
                   const styles = getCategoryStyles(treatment.category)
-                  const href = getTreatmentHrefByCardName(treatment.homeCardTitle)
+                  const href = getTreatmentHrefByCardName(
+                    treatment.homeCardTitle,
+                  )
                   const content = (
                     <>
                       <div
@@ -165,7 +167,7 @@ export default function Treatments() {
                           </p>
                           {href ? (
                             <span className="mt-auto pt-3 inline-flex text-xs font-medium text-copper">
-                              Ver detalhes do tratamento
+                              Ver detalhes
                             </span>
                           ) : null}
                         </div>
@@ -213,7 +215,7 @@ export default function Treatments() {
               </div>
             </div>
 
-            {/* Right Image - operando-longe.jpg (desktop only) */}
+            {/* Right Image - operando-longe.webp (desktop only) */}
             <div className="hidden lg:flex lg:col-span-3 justify-center">
               <div className="relative w-[240px] h-[360px]">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
@@ -237,7 +239,7 @@ export default function Treatments() {
           </div>
         </div>
 
-        {/* Second Image - operando-longe.jpg - After treatments (mobile only) */}
+        {/* Second Image - operando-longe.webp - After treatments (mobile only) */}
         <div className="lg:hidden max-w-4xl mx-auto mt-16">
           <div className="flex justify-center">
             <div className="relative w-80 h-[480px]">

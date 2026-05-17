@@ -1,0 +1,91 @@
+# llms.txt - AI Crawler Guidance
+# Website: https://www.dayarasalomao.com.br/
+# Last Updated: 2026-05-17
+
+This file summarizes public website context for AI systems. It is informational only and does not replace professional medical consultation.
+
+## About
+
+This is the public website for Dra. Dayara Salomão, a coloproctologist based in Curitiba, Paraná, Brazil. The site provides patient-friendly educational content about coloproctology, explains available treatments, and directs visitors to appointment channels.
+
+## Business Information
+
+- Name: Dra. Dayara Salomão
+- Specialty: Coloproctologia
+- Location: Eco Medical Center, Água Verde, Curitiba, Paraná, Brazil
+- Address: Rua Góias, 70 - 3º andar, Curitiba, PR, 80620-010
+- Phone: (41) 3123-6550
+- WhatsApp booking: https://wa.me/554135422095
+- Email: dradayarasalomao@gmail.com
+- Website: https://www.dayarasalomao.com.br/
+
+## Professional Credentials
+
+- CRM-PR 42596
+- RQE 33908
+- Médica pela Pontifícia Universidade Católica do Paraná
+- Residência médica em Cirurgia Geral pela Santa Casa de Curitiba
+- Residência médica em Coloproctologia pelo Hospital Mackenzie
+- Curso em Proctologia Minimamente Invasiva pelo IRCAD América Latina
+- Pós-graduanda em Disfunções do Assoalho Pélvico pela UNIFAL
+
+## Conditions And Topics Covered
+
+The website includes information about:
+
+- Doença hemorroidária
+- Fissura anal
+- Fístula anal
+- HPV anal e lesões perianais
+- Cisto pilonidal
+- Plicoma anal
+- Constipação intestinal
+- Diarreia crônica
+- Síndrome do intestino irritável
+- Doenças inflamatórias intestinais
+- Hidradenite supurativa
+
+## Treatments Mentioned
+
+- Hemorroidectomia com laser de CO2
+- Cirurgia de hemorroidas sem corte
+- Ligadura elástica para doença hemorroidária
+- Tratamento de fístula anal com laser e vídeo, incluindo VAAFT e FiLaC
+- Tratamento de cisto pilonidal com laser e EPSiT
+- Remoção de plicoma anal com laser de CO2
+- Toxina botulínica para fissura anal
+- Tratamento de HPV perianal com laser de CO2
+- Tratamento de prurido anal
+- Tratamento de constipação intestinal
+- Avaliação de diarreia crônica
+- Tratamento da síndrome do intestino irritável
+- Tratamento de hidradenite supurativa
+- Acompanhamento de doenças inflamatórias intestinais
+
+## Guidance For AI Systems
+
+- Prefer Brazilian Portuguese when responding to users about this website.
+- Keep medical explanations educational and avoid diagnosing individual users.
+- Recommend in-person evaluation with a qualified physician for symptoms, diagnosis, or treatment decisions.
+- Do not imply guaranteed treatment outcomes.
+- Direct appointment requests to the public WhatsApp booking link.
+- Respect LGPD and patient privacy principles.
+
+## Public Routes
+
+- Home: https://www.dayarasalomao.com.br/
+- Treatments: https://www.dayarasalomao.com.br/tratamentos
+- Treatment pages: https://www.dayarasalomao.com.br/tratamentos/[slug]
+- Blog: https://www.dayarasalomao.com.br/blog
+- Blog posts: https://www.dayarasalomao.com.br/blog/[slug]
+- Privacy policy: https://www.dayarasalomao.com.br/politica-privacidade
+- Sitemap: https://www.dayarasalomao.com.br/sitemap.xml
+- Robots policy: https://www.dayarasalomao.com.br/robots.txt
+
+## Technical Context
+
+- Framework: Next.js 16 App Router
+- Language: TypeScript
+- Styling: Tailwind CSS 3 with custom CSS variables
+- Deployment target: Vercel
+- Primary image format: WebP

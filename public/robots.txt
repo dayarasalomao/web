@@ -1,0 +1,33 @@
+# Global crawl policy
+User-agent: *
+Allow: /
+
+# Canonical sitemap
+Sitemap: https://www.dayarasalomao.com.br/sitemap.xml
+
+# OpenAI crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic crawlers
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
