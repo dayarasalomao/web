@@ -7,9 +7,9 @@ import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata }
 import { buildBreadcrumbGraph, serializeJsonLd } from '@/lib/structured-data'
 import { getAllTreatments } from '@/lib/treatments'
 
-const TREATMENTS_TITLE = `Tratamentos — ${SEO_DOCTOR_NAME} | Coloproctologia em Curitiba`
+const TREATMENTS_TITLE = `Tratamentos — ${SEO_DOCTOR_NAME} | Coloproctologia`
 const TREATMENTS_DESCRIPTION =
-  'Conheça os principais tratamentos em coloproctologia com foco em precisão, conforto e técnicas minimamente invasivas em Curitiba.'
+  'Conheça os principais tratamentos em coloproctologia com foco em precisão, conforto e técnicas minimamente invasivas.'
 
 export const metadata: Metadata = {
   title: TREATMENTS_TITLE,
