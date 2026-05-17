@@ -33,7 +33,7 @@ export const TREATMENTS: Treatment[] = [
     category: 'laser',
     metaTitle: 'Hemorroidectomia com laser de CO2 | Dra. Dayara Salomão',
     metaDescription:
-      'Tratamento cirúrgico para hemorroidas com precisão, menor trauma tecidual e recuperação orientada em Curitiba com a Dra. Dayara Salomão.',
+      'Tratamento cirúrgico para hemorroidas com precisão, menor trauma tecidual e recuperação orientada com a Dra. Dayara Salomão.',
     summary:
       'Procedimento indicado para casos selecionados de doença hemorroidária com foco em precisão cirúrgica, controle do trauma local e recuperação mais confortável.',
     overview: [
@@ -56,7 +56,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['hemorroidectomia-laser-co2'],
     mappedDiseaseNames: ['Doença Hemorroidária'],
-    keywords: ['hemorroidectomia laser CO2', 'cirurgia hemorroidas curitiba', 'tratamento hemorroidas'],
+    keywords: ['hemorroidectomia laser CO2', 'cirurgia hemorroidas', 'tratamento hemorroidas'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -68,7 +68,7 @@ export const TREATMENTS: Treatment[] = [
     category: 'conservative',
     metaTitle: 'Cirurgia de hemorroidas sem corte | Dra. Dayara Salomão',
     metaDescription:
-      'Conheça a abordagem para hemorroidas sem corte, com foco em preservação tecidual, menor agressão local e avaliação especializada em Curitiba.',
+      'Conheça a abordagem para hemorroidas sem corte, com foco em preservação tecidual, menor agressão local e avaliação especializada.',
     summary:
       'Abordagem voltada a casos selecionados de doença hemorroidária, buscando tratar o problema com menor agressão local e recuperação planejada.',
     overview: [
@@ -91,7 +91,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['hemorroidas-sem-corte-laser-diodo'],
     mappedDiseaseNames: ['Doença Hemorroidária'],
-    keywords: ['hemorroidas sem corte laser', 'tratamento hemorroidas sem corte', 'hemorroidas curitiba'],
+    keywords: ['hemorroidas sem corte laser', 'tratamento hemorroidas sem corte', 'hemorroidas'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -103,7 +103,7 @@ export const TREATMENTS: Treatment[] = [
     category: 'conservative',
     metaTitle: 'Ligadura elástica para hemorroidas internas | Dra. Dayara Salomão',
     metaDescription:
-      'Tratamento ambulatorial para hemorroidas internas com praticidade, recuperação orientada e avaliação coloproctológica em Curitiba.',
+      'Tratamento ambulatorial para hemorroidas internas com praticidade, recuperação orientada e avaliação coloproctológica.',
     summary:
       'Tratamento ambulatorial indicado para hemorroidas internas em fases específicas, com boa relação entre praticidade, segurança e controle de sintomas.',
     overview: [
@@ -126,7 +126,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['ligadura-elastica-hemorroidas-internas'],
     mappedDiseaseNames: ['Doença Hemorroidária'],
-    keywords: ['ligadura elástica hemorroidas', 'hemorroidas internas tratamento', 'proctologista curitiba'],
+    keywords: ['ligadura elástica hemorroidas', 'hemorroidas internas tratamento', 'proctologista'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -138,7 +138,7 @@ export const TREATMENTS: Treatment[] = [
     category: 'laser',
     metaTitle: 'Fístula anal com laser e vídeo | Dra. Dayara Salomão',
     metaDescription:
-      'Tecnologias como VAAFT e FiLaC para tratamento de fístula anal com foco em precisão anatômica e preservação funcional em Curitiba.',
+      'Tecnologias como VAAFT e FiLaC para tratamento de fístula anal com foco em precisão anatômica e preservação funcional.',
     summary:
       'Abordagem minimamente invasiva para casos selecionados de fístula anal, com objetivo de tratar o trajeto fistuloso preservando ao máximo a continência.',
     overview: [
@@ -161,7 +161,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['fistula-anal-laser-vaaft-filac'],
     mappedDiseaseNames: ['Fístula Anal'],
-    keywords: ['fístula anal laser vaaft filac', 'tratamento fistula anal', 'fistula anal curitiba'],
+    keywords: ['fístula anal laser vaaft filac', 'tratamento fistula anal', 'fistula anal'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -196,7 +196,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['cisto-pilonidal-laser-epsit'],
     mappedDiseaseNames: ['Cisto Pilonidal'],
-    keywords: ['cisto pilonidal laser EPSiT', 'tratamento cisto pilonidal', 'cisto pilonidal curitiba'],
+    keywords: ['cisto pilonidal laser EPSiT', 'tratamento cisto pilonidal', 'cisto pilonidal'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -231,7 +231,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['plicoma-anal-laser-co2'],
     mappedDiseaseNames: [],
-    keywords: ['plicoma anal laser CO2', 'remoção plicoma anal', 'proctologista curitiba'],
+    keywords: ['plicoma anal laser CO2', 'remoção plicoma anal', 'proctologista'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -266,7 +266,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['toxina-botulinica-fissura-anal'],
     mappedDiseaseNames: ['Fissura Anal'],
-    keywords: ['toxina botulínica fissura anal', 'tratamento fissura anal', 'fissura anal curitiba'],
+    keywords: ['toxina botulínica fissura anal', 'tratamento fissura anal', 'fissura anal'],
     lastUpdated: '2026-04-17',
   },
   {
@@ -278,7 +278,7 @@ export const TREATMENTS: Treatment[] = [
     category: 'laser',
     metaTitle: 'HPV perianal com laser de CO2 | Dra. Dayara Salomão',
     metaDescription:
-      'Tratamento de lesões por HPV na região perianal com laser de CO2, avaliação especializada e seguimento cuidadoso em Curitiba.',
+      'Tratamento de lesões por HPV na região perianal com laser de CO2, avaliação especializada e seguimento cuidadoso.',
     summary:
       'Abordagem para lesões por HPV na região perianal com foco em precisão local, remoção adequada das lesões e acompanhamento próximo.',
     overview: [
@@ -301,7 +301,7 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: ['hpv-perianal-laser-co2'],
     mappedDiseaseNames: ['HPV Anal'],
-    keywords: ['HPV perianal laser CO2', 'tratamento HPV anal', 'HPV anal curitiba'],
+    keywords: ['HPV perianal laser CO2', 'tratamento HPV anal', 'HPV anal'],
     lastUpdated: '2026-04-17',
   },
 ]

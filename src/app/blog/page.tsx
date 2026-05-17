@@ -8,7 +8,7 @@ import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata }
 import { buildBreadcrumbGraph, serializeJsonLd } from '@/lib/structured-data'
 import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 
-const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia em Curitiba`
+const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia`
 const BLOG_DESCRIPTION =
   'Conteúdos sobre hemorroidas, fissura anal, fístula, HPV perianal, cisto pilonidal e tecnologias minimamente invasivas em coloproctologia.'
 

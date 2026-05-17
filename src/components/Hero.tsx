@@ -86,7 +86,7 @@ export default function Hero() {
               ></div>
 
               <h1 className="mb-6 text-3xl font-semibold leading-tight text-teal lg:text-5xl">
-                Coloproctologista em Curitiba com foco em tratamentos minimamente invasivos
+                Coloproctologista com foco em tratamentos minimamente invasivos
               </h1>
 
               <p className="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed font-light">

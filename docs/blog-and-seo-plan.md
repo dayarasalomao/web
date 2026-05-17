@@ -140,7 +140,7 @@ export function getContentIntentLabel(i: ContentIntent): string
 
 ```ts
 export const metadata: Metadata = {
-  title: 'Blog — Dra. Dayara Salomão | Coloproctologia em Curitiba',
+  title: 'Blog — Dra. Dayara Salomão | Coloproctologia',
   description: '...140–160 chars with primary keywords...',
   alternates: { canonical: `${SITE_URL}blog` },
   openGraph: { type: 'website', url: `${SITE_URL}blog`, siteName: BUSINESS_NAME, images: [...] },
