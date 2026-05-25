@@ -86,7 +86,7 @@ export default function Treatments() {
             >
               técnicas minimamente invasivas
             </span>{' '}
-            para garantir os melhores resultados com máximo conforto
+            com foco em precisão e conforto no cuidado
           </p>
         </div>
 
@@ -278,8 +278,7 @@ export default function Treatments() {
               </h3>
               <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
                 Todos os tratamentos são realizados com equipamentos modernos,
-                priorizando sua segurança, conforto e os melhores resultados
-                clínicos.
+                priorizando sua segurança e conforto.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

@@ -51,9 +51,9 @@ export default function About() {
                 <div className="bg-gradient-to-r from-cream to-beige/50 p-6 rounded-2xl border-l-4 border-copper">
                   <p className="text-gray-700 italic leading-relaxed">
                     &quot;Acredito que cada paciente merece um cuidado
-                    personalizado, com empatia e acolhimento, utilizando as mais
-                    modernas tecnologias para garantir os melhores resultados
-                    com o mínimo de desconforto.&quot;
+                    personalizado, com empatia e acolhimento, utilizando
+                    tecnologias modernas sempre com foco no cuidado e no
+                    conforto.&quot;
                   </p>
                 </div>
               </div>

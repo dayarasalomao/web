@@ -1,5 +1,5 @@
-import type { BlogPost } from '@/lib/blog'
-import { getPostBySlug } from '@/lib/blog'
+import type { BlogPost } from './blog.ts'
+import { getPostBySlug } from './blog.ts'
 
 export type TreatmentCategory = 'laser' | 'conservative' | 'innovative'
 
