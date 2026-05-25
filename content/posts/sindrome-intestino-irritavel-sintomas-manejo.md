@@ -1,9 +1,11 @@
 ---
-title: "Síndrome do Intestino Irritável: Sintomas e Manejo"
-metaDescription: "Entenda sintomas da síndrome do intestino irritável, por que o diagnóstico exige excluir sinais de alerta e como o manejo é individualizado."
+title: 'Síndrome do Intestino Irritável: Sintomas e Manejo'
+metaDescription: >-
+  Entenda sintomas da síndrome do intestino irritável, por que o diagnóstico
+  exige excluir sinais de alerta e como o manejo é individualizado.
 slug: sindrome-intestino-irritavel-sintomas-manejo
-publishDate: 2026-05-09
-lastModified: 2026-05-17
+publishDate: 2026-05-09T00:00:00.000Z
+lastModified: 2026-05-17T00:00:00.000Z
 primaryKeyword: síndrome do intestino irritável
 secondaryKeywords:
   - intestino irritável sintomas
@@ -13,12 +15,25 @@ targetAudience: patients
 intent: consideration
 order: 12
 faqs:
-  - question: Síndrome do intestino irritável é a mesma coisa que doença inflamatória intestinal?
-    answer: Não. A síndrome do intestino irritável é uma condição funcional. Doença de Crohn e retocolite ulcerativa envolvem inflamação intestinal e exigem investigação e acompanhamento específicos.
+  - question: >-
+      Síndrome do intestino irritável é a mesma coisa que doença inflamatória
+      intestinal?
+    answer: >-
+      Não. A síndrome do intestino irritável é uma condição funcional. Doença de
+      Crohn e retocolite ulcerativa envolvem inflamação intestinal e exigem
+      investigação e acompanhamento específicos.
   - question: O diagnóstico é feito só pelos sintomas?
-    answer: Os sintomas são fundamentais, mas a avaliação também procura sinais de alerta e pode indicar exames para excluir outras causas.
+    answer: >-
+      Os sintomas são fundamentais, mas a avaliação também procura sinais de
+      alerta e pode indicar exames para excluir outras causas.
   - question: Existe um único tratamento para todos os casos?
-    answer: Não. O manejo depende do padrão predominante, como constipação, diarreia, dor, distensão, gatilhos alimentares e impacto na rotina.
+    answer: >-
+      Não. O manejo depende do padrão predominante, como constipação, diarreia,
+      dor, distensão, gatilhos alimentares e impacto na rotina.
+disclaimer: >-
+  Este artigo não substitui consulta médica. Se você tem dor abdominal
+  recorrente, alteração intestinal persistente, sangramento, perda de peso ou
+  sintomas que atrapalham sua rotina, procure avaliação presencial.
 ---
 
 *Dor abdominal recorrente com alteração do hábito intestinal pode sugerir síndrome do intestino irritável, mas o primeiro passo é diferenciar esse quadro de doenças que precisam de outra conduta.*
@@ -59,9 +74,3 @@ Em alguns casos, acompanhar o padrão dos sintomas em um diário ajuda a identif
 A avaliação coloproctológica ajuda quando há alteração do hábito intestinal, dor, urgência, sangramento, sintomas anais associados ou dúvida entre SII e outras doenças intestinais.
 
 O objetivo é dar segurança diagnóstica e construir um plano de cuidado que faça sentido para o padrão de sintomas do paciente.
-
-## Assinatura médica
-
-Conteúdo elaborado com finalidade educativa pela Dra. Dayara Salomão, coloproctologista.
-
-Este artigo não substitui consulta médica. Se você tem dor abdominal recorrente, alteração intestinal persistente, sangramento, perda de peso ou sintomas que atrapalham sua rotina, procure avaliação presencial.

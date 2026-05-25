@@ -66,7 +66,7 @@ export default function About() {
               <div className="w-80 h-96 lg:w-96 lg:h-[547px] rounded-2xl bg-gradient-to-br from-straw/10 to-teal/10 p-2 shadow-lg">
                 <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-sm">
                   <Image
-                    src="/assets/dayara-profissional-escuro.webp"
+                    src="/assets/dayara-trabalhando.webp"
                     alt="Dra. Dayara Salomão em ambiente profissional"
                     width={400}
                     height={600}

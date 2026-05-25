@@ -5,6 +5,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { MedicalSignature } from '@/components/ui/MedicalSignature'
 import { MdxImage } from '@/components/ui/MdxImage'
 import { getAllPostSlugs, getPostBySlug } from '@/lib/blog'
 import { buildPostMetadata } from '@/lib/seo'
@@ -157,7 +158,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </section>
         ) : null}
 
-        <div className="mx-auto mt-16 max-w-4xl">
+        {relatedTreatment ? (
+          <section className="mx-auto mt-16 max-w-4xl rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+              Tratamento relacionado
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold text-teal">
+              {relatedTreatment.title}
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-gray-700">
+              {relatedTreatment.summary}
+            </p>
+            <Link
+              href={`/tratamentos/${relatedTreatment.slug}`}
+              className="mt-5 inline-flex font-medium text-copper transition-colors hover:text-teal"
+            >
+              Ver detalhes do tratamento
+            </Link>
+          </section>
+        ) : null}
+
+        <div className="mx-auto mt-8 max-w-4xl">
           <CallToActionCard
             title="Precisa de avaliação especializada?"
             body={
@@ -176,28 +197,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 Agendar consulta
               </Link>
             }
+            footer={<MedicalSignature disclaimer={post.disclaimer} />}
           />
         </div>
-
-        {relatedTreatment ? (
-          <section className="mx-auto mt-8 max-w-4xl rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
-              Tratamento relacionado
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-teal">
-              {relatedTreatment.title}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-gray-700">
-              {relatedTreatment.summary}
-            </p>
-            <Link
-              href={`/tratamentos/${relatedTreatment.slug}`}
-              className="mt-5 inline-flex font-medium text-copper transition-colors hover:text-teal"
-            >
-              Ver detalhes do tratamento
-            </Link>
-          </section>
-        ) : null}
 
         <footer className="mx-auto mt-8 flex max-w-4xl flex-col gap-4 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <Link href="/blog" className="font-medium text-copper transition-colors hover:text-teal">

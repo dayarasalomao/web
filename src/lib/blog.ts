@@ -57,6 +57,7 @@ export interface BlogPostMeta {
   featured?: boolean
   order?: number
   faqs?: FAQItem[]
+  disclaimer?: string
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -211,6 +212,11 @@ export function getAllPosts(): BlogPost[] {
     if (b.order !== undefined) return 1
     return a.slug.localeCompare(b.slug)
   })
+}
+
+export function getPostHref(slug?: string | null): string | null {
+  if (!slug) return null
+  return getPostBySlug(slug) ? `/blog/${slug}` : null
 }
 
 export function getAllPostSlugs(): string[] {

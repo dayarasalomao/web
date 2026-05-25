@@ -1,9 +1,11 @@
 ---
-title: "Prurido Anal: Principais Causas e Cuidados"
-metaDescription: "Entenda causas comuns de coceira anal, quando o sintoma merece avaliação e por que o tratamento depende de identificar o fator irritante."
+title: 'Prurido Anal: Principais Causas e Cuidados'
+metaDescription: >-
+  Entenda causas comuns de coceira anal, quando o sintoma merece avaliação e por
+  que o tratamento depende de identificar o fator irritante.
 slug: prurido-anal-causas-cuidados
-publishDate: 2026-04-29
-lastModified: 2026-05-17
+publishDate: 2026-04-29T00:00:00.000Z
+lastModified: 2026-05-17T00:00:00.000Z
 primaryKeyword: prurido anal
 secondaryKeywords:
   - coceira anal persistente
@@ -14,11 +16,23 @@ intent: awareness
 order: 9
 faqs:
   - question: Coceira anal persistente é sempre hemorroida?
-    answer: Não. Hemorroidas podem causar irritação, mas dermatites, fissuras, umidade, infecções, produtos locais e outras condições também podem estar envolvidas.
+    answer: >-
+      Não. Hemorroidas podem causar irritação, mas dermatites, fissuras,
+      umidade, infecções, produtos locais e outras condições também podem estar
+      envolvidas.
   - question: Posso usar pomada por conta própria?
-    answer: O ideal é evitar uso repetido de pomadas sem avaliação, porque alguns produtos podem irritar ainda mais a pele ou mascarar a causa do sintoma.
+    answer: >-
+      O ideal é evitar uso repetido de pomadas sem avaliação, porque alguns
+      produtos podem irritar ainda mais a pele ou mascarar a causa do sintoma.
   - question: Quando devo procurar avaliação?
-    answer: Procure avaliação se a coceira é persistente, recorrente, intensa, piora à noite ou vem junto de dor, sangramento, feridas, secreção, verrugas ou alteração da pele.
+    answer: >-
+      Procure avaliação se a coceira é persistente, recorrente, intensa, piora à
+      noite ou vem junto de dor, sangramento, feridas, secreção, verrugas ou
+      alteração da pele.
+disclaimer: >-
+  Este artigo não substitui consulta médica. Em caso de sintomas persistentes,
+  sangramento, dor, secreção ou lesões na região anal, procure avaliação
+  presencial.
 ---
 
 *Coceira anal é um sintoma comum, mas nem sempre simples: o tratamento correto depende de identificar o que está irritando a pele ou mantendo a inflamação local.*
@@ -59,9 +73,3 @@ Em muitos casos, pequenas mudanças fazem diferença: reduzir produtos irritante
 Evite aplicar múltiplas pomadas por conta própria, usar produtos perfumados na região, esfregar a pele com força ou tentar "higienizar demais". A pele perianal é sensível e pode piorar com excesso de manipulação.
 
 Cada caso precisa ser individualizado. O que ajuda uma pessoa pode irritar outra, especialmente quando há dermatite, fissura ou lesões associadas.
-
-## Assinatura médica
-
-Conteúdo elaborado com finalidade educativa pela Dra. Dayara Salomão, coloproctologista.
-
-Este artigo não substitui consulta médica. Em caso de sintomas persistentes, sangramento, dor, secreção ou lesões na região anal, procure avaliação presencial.

@@ -1,9 +1,11 @@
 ---
-title: "Diarreia Crônica: Causas e Sinais de Alerta"
-metaDescription: "Saiba quando a diarreia persistente precisa ser investigada, quais sintomas exigem atenção e como a avaliação médica orienta o tratamento."
+title: 'Diarreia Crônica: Causas e Sinais de Alerta'
+metaDescription: >-
+  Saiba quando a diarreia persistente precisa ser investigada, quais sintomas
+  exigem atenção e como a avaliação médica orienta o tratamento.
 slug: diarreia-cronica-causas-sinais-alerta
-publishDate: 2026-05-06
-lastModified: 2026-05-17
+publishDate: 2026-05-06T00:00:00.000Z
+lastModified: 2026-05-17T00:00:00.000Z
 primaryKeyword: diarreia crônica
 secondaryKeywords:
   - diarreia persistente
@@ -14,11 +16,23 @@ intent: awareness
 order: 11
 faqs:
   - question: Toda diarreia prolongada é infecção?
-    answer: Não. Infecções são uma possibilidade, mas intolerâncias, medicamentos, síndrome do intestino irritável, doença inflamatória intestinal e outras causas também podem estar envolvidas.
+    answer: >-
+      Não. Infecções são uma possibilidade, mas intolerâncias, medicamentos,
+      síndrome do intestino irritável, doença inflamatória intestinal e outras
+      causas também podem estar envolvidas.
   - question: Diarreia com sangue precisa de avaliação?
-    answer: Sim. Sangue, muco, febre, perda de peso, anemia, dor importante ou sintomas noturnos são sinais que merecem investigação.
+    answer: >-
+      Sim. Sangue, muco, febre, perda de peso, anemia, dor importante ou
+      sintomas noturnos são sinais que merecem investigação.
   - question: Devo cortar vários alimentos antes da consulta?
-    answer: Evite restrições amplas sem orientação. Anotar sintomas e relação com alimentos pode ajudar, mas dietas muito restritivas podem atrapalhar a avaliação.
+    answer: >-
+      Evite restrições amplas sem orientação. Anotar sintomas e relação com
+      alimentos pode ajudar, mas dietas muito restritivas podem atrapalhar a
+      avaliação.
+disclaimer: >-
+  Este artigo não substitui consulta médica. Procure atendimento se a diarreia é
+  persistente, recorrente ou associada a sangue, febre, perda de peso, anemia,
+  dor importante ou sinais de desidratação.
 ---
 
 *Diarreia que persiste ou volta com frequência não deve ser tratada apenas como "algo que comi": ela pode ter várias causas e precisa ser analisada junto com o contexto clínico.*
@@ -62,9 +76,3 @@ Dependendo do caso, o plano pode envolver hidratação, ajustes alimentares, exa
 Anote há quanto tempo a diarreia começou, quantas vezes ocorre por dia, se há sangue ou muco, se acorda à noite, quais alimentos parecem piorar, medicamentos em uso e se houve viagem, infecção ou antibióticos recentes.
 
 Essas informações ajudam a conduzir a investigação de forma mais objetiva.
-
-## Assinatura médica
-
-Conteúdo elaborado com finalidade educativa pela Dra. Dayara Salomão, coloproctologista.
-
-Este artigo não substitui consulta médica. Procure atendimento se a diarreia é persistente, recorrente ou associada a sangue, febre, perda de peso, anemia, dor importante ou sinais de desidratação.

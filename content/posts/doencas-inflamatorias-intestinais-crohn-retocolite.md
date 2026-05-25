@@ -1,9 +1,11 @@
 ---
-title: "Doenças Inflamatórias Intestinais: Quando Suspeitar de Crohn ou Retocolite"
-metaDescription: "Conheça sinais que podem sugerir doença de Crohn ou retocolite ulcerativa e entenda quando o acompanhamento coloproctológico é importante."
+title: 'Doenças Inflamatórias Intestinais: Quando Suspeitar de Crohn ou Retocolite'
+metaDescription: >-
+  Conheça sinais que podem sugerir doença de Crohn ou retocolite ulcerativa e
+  entenda quando o acompanhamento coloproctológico é importante.
 slug: doencas-inflamatorias-intestinais-crohn-retocolite
-publishDate: 2026-05-16
-lastModified: 2026-05-17
+publishDate: 2026-05-16T00:00:00.000Z
+lastModified: 2026-05-17T00:00:00.000Z
 primaryKeyword: doenças inflamatórias intestinais
 secondaryKeywords:
   - doença de Crohn
@@ -14,11 +16,21 @@ intent: awareness
 order: 14
 faqs:
   - question: Crohn e retocolite são a mesma doença?
-    answer: Não. Ambas fazem parte das doenças inflamatórias intestinais, mas podem afetar regiões diferentes e ter padrões distintos de inflamação.
+    answer: >-
+      Não. Ambas fazem parte das doenças inflamatórias intestinais, mas podem
+      afetar regiões diferentes e ter padrões distintos de inflamação.
   - question: Sangue nas fezes sempre significa doença inflamatória intestinal?
-    answer: Não. Hemorroidas, fissuras e outras causas também podem sangrar. Mesmo assim, sangramento deve ser avaliado para definir a origem.
+    answer: >-
+      Não. Hemorroidas, fissuras e outras causas também podem sangrar. Mesmo
+      assim, sangramento deve ser avaliado para definir a origem.
   - question: Quem tem doença inflamatória intestinal pode ter sintomas anais?
-    answer: Sim. Dor, fissuras, abscessos, fístulas e secreção perianal podem ocorrer, especialmente em alguns pacientes com doença de Crohn.
+    answer: >-
+      Sim. Dor, fissuras, abscessos, fístulas e secreção perianal podem ocorrer,
+      especialmente em alguns pacientes com doença de Crohn.
+disclaimer: >-
+  Este artigo não substitui consulta médica. Procure avaliação se você tem
+  diarreia persistente, sangue nas fezes, perda de peso, anemia, dor abdominal
+  recorrente ou sintomas anais como secreção, abscesso ou fístula.
 ---
 
 *Diarreia persistente, sangue nas fezes, dor abdominal e perda de peso são sintomas que merecem atenção, especialmente quando há suspeita de doença de Crohn ou retocolite ulcerativa.*
@@ -61,9 +73,3 @@ Na retocolite, sintomas retais como urgência, sangramento e muco também podem 
 O acompanhamento pode envolver coloproctologia, gastroenterologia, exames laboratoriais, avaliação das fezes, colonoscopia com biópsias e exames de imagem quando necessário.
 
 O objetivo é confirmar o diagnóstico, avaliar atividade inflamatória, tratar sintomas, prevenir complicações e acompanhar a evolução com segurança.
-
-## Assinatura médica
-
-Conteúdo elaborado com finalidade educativa pela Dra. Dayara Salomão, coloproctologista.
-
-Este artigo não substitui consulta médica. Procure avaliação se você tem diarreia persistente, sangue nas fezes, perda de peso, anemia, dor abdominal recorrente ou sintomas anais como secreção, abscesso ou fístula.
