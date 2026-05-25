@@ -59,6 +59,33 @@ export default function Diseases() {
     },
   ]
 
+  const mdLastRowCount = diseases.length % 2
+  const lgLastRowCount = diseases.length % 3
+
+  const getDiseaseCardGridClass = (index: number) => {
+    const classes = ['md:col-span-2', 'lg:col-span-2']
+
+    if (mdLastRowCount === 1 && index === diseases.length - 1) {
+      classes.push('md:col-start-2')
+    }
+
+    if (lgLastRowCount === 1 && index === diseases.length - 1) {
+      classes.push('lg:col-start-3')
+    }
+
+    if (lgLastRowCount === 2) {
+      if (index === diseases.length - 2) {
+        classes.push('lg:col-start-2')
+      }
+
+      if (index === diseases.length - 1) {
+        classes.push('lg:col-start-4')
+      }
+    }
+
+    return classes.join(' ')
+  }
+
   return (
     <section
       id="doencas"
@@ -107,44 +134,39 @@ export default function Diseases() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-6">
           {diseases.map((disease, index) => {
             const href = getTreatmentHrefByDiseaseName(disease.name)
-            const content = (
-              <div className="flex items-start gap-4">
-                <div className="flex-1">
-                  <h3
-                    className="text-lg font-serif font-semibold mb-2 group-hover:opacity-80 transition-opacity duration-300"
-                    style={{ color: 'var(--color-teal)' }}
-                  >
-                    {disease.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {disease.description}
-                  </p>
-                </div>
-              </div>
-            )
-
-            if (href) {
-              return (
-                <Link
-                  key={index}
-                  href={href}
-                  className="group card p-6 hover:shadow-lg transition-all duration-300"
-                >
-                  {content}
-                </Link>
-              )
-            }
+            const cardGridClass = getDiseaseCardGridClass(index)
 
             return (
-              <div
+              <article
                 key={index}
-                className="group card p-6 hover:shadow-lg transition-all duration-300 "
+                className={`group card flex h-full flex-col p-6 hover:shadow-lg transition-all duration-300 ${cardGridClass}`}
               >
-                {content}
-              </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex-1">
+                    <h3
+                      className="text-lg font-serif font-semibold mb-2 group-hover:opacity-80 transition-opacity duration-300"
+                      style={{ color: 'var(--color-teal)' }}
+                    >
+                      {disease.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {disease.description}
+                    </p>
+                  </div>
+                </div>
+
+                {href ? (
+                  <Link
+                    href={href}
+                    className="mt-auto pt-4 text-sm font-medium text-copper transition-colors hover:text-teal"
+                  >
+                    Saiba mais
+                  </Link>
+                ) : null}
+              </article>
             )
           })}
         </div>

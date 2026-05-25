@@ -45,33 +45,38 @@ export default function CV() {
   const getCategoryStyles = (category: string, index: number) => {
     // Elegant progression using our brand colors with subtle variations
     const colors = [
-      { // 2019 - Deep teal (education)
+      {
+        // 2019 - Deep teal (education)
         bg: 'rgba(29, 65, 76, 0.1)',
         border: 'var(--color-teal)',
         accent: 'var(--color-teal)',
       },
-      { // 2022 - Darker copper variant
+      {
+        // 2022 - Darker copper variant
         bg: 'rgba(139, 69, 19, 0.1)',
         border: '#8B4513',
         accent: '#8B4513',
       },
-      { // 2024 - Deep warm brown (sophisticated)
-        bg: 'rgba(101, 67, 33, 0.1)', 
+      {
+        // 2024 - Deep warm brown (sophisticated)
+        bg: 'rgba(101, 67, 33, 0.1)',
         border: '#654321',
         accent: '#654321',
       },
-      { // 2025 - Warm gold/bronze
+      {
+        // 2025 - Warm gold/bronze
         bg: 'rgba(184, 134, 11, 0.1)',
-        border: '#B8860B', 
+        border: '#B8860B',
         accent: '#B8860B',
       },
-      { // Atual - Original copper (highlight current)
+      {
+        // Atual - Original copper (highlight current)
         bg: 'rgba(163, 84, 66, 0.1)',
         border: 'var(--color-copper)',
         accent: 'var(--color-copper)',
       },
     ]
-    
+
     return colors[index] || colors[0]
   }
 
@@ -140,7 +145,8 @@ export default function CV() {
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
                     {/* FIXME: Width and Height are not correct */}
                     <Image
-                      src="/assets/day-clinica-pe.webp"
+                      src="/assets/dayara-sorrindo.webp"
+                      // src="/assets/day-clinica-pe.webp"
                       alt="Dra. Dayara Salomão - Formação Profissional"
                       width={912}
                       height={1368}

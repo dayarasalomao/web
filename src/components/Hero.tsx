@@ -50,7 +50,8 @@ export default function Hero() {
                   style={{ borderColor: 'var(--color-cream)' }}
                 >
                   <Image
-                    src="/assets/dayara-profissional-vermelho.webp"
+                    src="/assets/dayara-frente-pose.webp"
+                    // src="/assets/dayara-profissional-vermelho.webp"
                     alt="Retrato profissional da Dra. Dayara Salomão"
                     width={912}
                     height={1368}

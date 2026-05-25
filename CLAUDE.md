@@ -1,107 +1,86 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-This is a professional medical website for Dr. Dayara Salomão, a coloproctologist (specialist in diseases of the colon, rectum, and anus) based in Curitiba, Brazil. The website showcases her medical practice, treatments, and provides appointment booking information.
+This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Curitiba, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
 
-## Technology Stack
+## Stack
 
-- **Framework**: Next.js 15.3.4 with App Router
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS 4
-- **Fonts**: Google Fonts (Montserrat for sans-serif, Cinzel for serif)
-- **Deployment**: Designed for Vercel
+- Framework: Next.js 16 with App Router
+- React: 19
+- Language: TypeScript
+- Styling: Tailwind CSS 3.4 plus `src/app/globals.css`
+- Content: static TSX sections, structured treatment data, and Markdown blog posts
+- Deployment: Vercel
 
-## Development Commands
+## Commands
 
 ```bash
-# Start development server with Turbopack
 npm run dev
-
-# Build for production
 npm run build
-
-# Start production server
-npm start
-
-# Run ESLint
 npm run lint
+npm run test:unit
+npm run e2e
 ```
 
-## Brand Design System
+## Important Paths
 
-The website uses a sophisticated medical brand palette:
-
-- **Primary Colors**:
-  - Copper: `#A35442` (main brand color)
-  - Teal: `#1D414C` (professional accent)
-  - Beige: `#D7CBBF` (warm neutral)
-  - Cream: `#F4F3F2` (light background)
-  - Straw: `#D1AF8B` (warm accent)
-
-- **Typography**:
-  - Headlines: Cinzel (serif) - `font-serif`
-  - Body text: Montserrat (sans-serif) - `font-sans`
-  - Font variables: `--font-geist-sans` and `--font-cinzel`
-
-## Architecture
-
-### Component Structure
-
-The website follows a single-page application structure with sections as components:
-
-- **Header.tsx**: Navigation with logo, menu items, and mobile hamburger
-- **Hero.tsx**: Main landing section with doctor's photo and introduction
-- **About.tsx**: Personal introduction and credentials
-- **WhenToSeek.tsx**: Symptoms that require specialist consultation
-- **Diseases.tsx**: Conditions treated by the doctor
-- **Treatments.tsx**: Available procedures and technologies
-- **Testimonials.tsx**: Patient reviews and ratings
-- **CV.tsx**: Educational background and qualifications
-- **Contact.tsx**: Location details and appointment booking
-- **Footer.tsx**: Site-wide footer with contact info and links
-
-### Content Source
-
-All medical content, contact information, and testimonials are sourced from `docs/website_content.md`. This file contains the authoritative content including:
-
-- Medical conditions and descriptions
-- Treatment procedures
-- Patient testimonials
-- Professional qualifications
-- Contact details (Eco Medical Center, Curitiba)
-
-### Assets Organization
-
-```bash
-public/
-├── assets/           # Professional photos of Dr. Dayara
-├── core/            # Logo and branding elements
-└── temp/            # Temporary design assets
+```text
+content/posts/                  Blog source markdown
+docs/website_content.md         Editorial reference copy
+public/assets/                  WebP production photos
+public/core/                    Logo and lettering assets
+public/llms.txt                 AI crawler guidance
+public/robots.txt               Static robots policy
+src/app/layout.tsx              Global metadata, fonts, analytics, JSON-LD
+src/app/sitemap.ts              Sitemap route
+src/components/                 Homepage sections and shared components
+src/constants.ts                Shared contact, SEO, schema, sitemap, analytics data
+src/lib/blog.ts                 Blog parsing and metadata helpers
+src/lib/treatments.ts           Treatment page data and mapping helpers
+src/lib/structured-data.ts      Schema.org JSON-LD builders
 ```
 
-### Key Design Principles
+## Content Rules
 
-1. **Medical Professionalism**: Clean, trustworthy design appropriate for healthcare
-2. **Warm Approachability**: Color palette and imagery convey empathy and care
-3. **Accessibility**: High contrast ratios, semantic HTML, proper focus states
-4. **Mobile-First**: Responsive design optimized for all devices
-5. **Performance**: Optimized images, efficient CSS, fast loading
+- Keep user-facing copy in Brazilian Portuguese.
+- Medical copy should stay accurate, patient-friendly, and non-sensational.
+- Avoid diagnosis, guaranteed outcomes, or aggressive marketing language.
+- Preserve accessibility basics: semantic headings, meaningful alt text, keyboard access, focus states, and readable contrast.
+- Contact details, credentials, treatments, testimonials, and SEO language can appear in more than one place. Check `src/constants.ts`, the relevant component, `docs/website_content.md`, and `public/llms.txt` before changing them.
 
-### Font Configuration
+## Styling Notes
 
-Fonts are loaded via Next.js font optimization in `layout.tsx`:
+Brand tokens are defined in `src/app/globals.css` and exposed through `tailwind.config.ts`:
 
-- Montserrat mapped to `--font-geist-sans` variable
-- Cinzel mapped to `--font-cinzel` variable
-- Used in Tailwind config as `font-sans` and `font-serif`
+- `copper`: `#A35442`
+- `teal`: `#1D414C`
+- `beige`: `#D7CBBF`
+- `cream`: `#F4F3F2`
+- `straw`: `#D1AF8B`
 
-### Important Notes
+Fonts are loaded in `src/app/layout.tsx`:
 
-- All content should be in Portuguese (Brazilian)
-- Medical terminology should be accurate and patient-friendly
-- Contact information must match the practice location in Curitiba
-- Maintain WCAG accessibility standards for medical websites
-- The `@tailwindcss/typography` plugin is referenced in config but not currently needed
+- Montserrat as `--font-geist-sans`
+- Cinzel as `--font-cinzel`
+
+Use the existing tokens and utility classes instead of introducing new visual systems.
+
+## SEO And Metadata
+
+Global metadata is in `src/app/layout.tsx`; shared values live in `src/constants.ts`. Blog and treatment routes generate route-specific metadata and JSON-LD from `src/lib/seo.ts` and `src/lib/structured-data.ts`.
+
+If domain, image, doctor credentials, contact information, or treatment content changes, review:
+
+- `src/constants.ts`
+- `src/app/layout.tsx`
+- `src/app/sitemap.ts`
+- `src/lib/structured-data.ts`
+- `public/llms.txt`
+- `public/robots.txt`
+
+## Asset Policy
+
+Production UI images should use optimized WebP files in `public/assets`. Keep only assets that are referenced by the app or needed for public SEO/social metadata. Original backups should live outside `public` if they are needed for design work.

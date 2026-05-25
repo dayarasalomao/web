@@ -23,16 +23,15 @@ export const ECO_TELEPHONE_NUMBER = '(41) 3123-6550'
 // SEO & METADATA CONSTANTS
 // =================================================================
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
-export const SEO_BUSINESS_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
 export const SEO_LOCATION = 'Curitiba'
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
-export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Tratamentos minimamente invasivos com laser para hemorroidas, fissura e fístula anal. Agende sua consulta.`
-export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, eco medical center, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável`
+export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} com atendimento no Eco Medical Center. Tratamentos para hemorroidas, fissura anal, fístula anal, HPV perianal, cisto pilonidal e outras doenças anorretais.`
+export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, Eco Medical Center, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
 
-export const SEO_OG_DESCRIPTION = `Especialista em coloproctologia em ${SEO_LOCATION} com tratamentos minimamente invasivos usando laser e outras tecnologias modernas. Atendimento no Eco Medical Center - Água Verde.`
-export const SEO_TWITTER_DESCRIPTION = `Especialista em coloproctologia com tratamentos minimamente invasivos usando laser. Atendimento em ${SEO_LOCATION} no Eco Medical Center.`
+export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no Eco Medical Center.`
+export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no Eco Medical Center para doenças anorretais e tratamentos minimamente invasivos.`
 
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
 export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
@@ -110,6 +109,12 @@ export const MEDICAL_PROCEDURES = [
   'Remoção de plicoma anal com laser de CO2',
   'Toxina botulínica para fissura anal',
   'Tratamento de HPV perianal com laser de CO2',
+  'Tratamento de prurido anal',
+  'Tratamento de constipação intestinal',
+  'Avaliação de diarreia crônica',
+  'Tratamento da síndrome do intestino irritável',
+  'Tratamento de hidradenite supurativa',
+  'Acompanhamento de doenças inflamatórias intestinais',
 ]
 
 // =================================================================

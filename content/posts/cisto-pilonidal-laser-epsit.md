@@ -36,8 +36,8 @@ Diferente das técnicas convencionais, que muitas vezes exigem a remoção de gr
 ## Principais benefícios para o paciente
 
 * Cicatrizes mínimas: o procedimento é realizado através de pequenos orifícios preexistentes.  
-* Recuperação acelerada: o tempo de cicatrização costuma ser significativamente menor do que nas técnicas abertas.  
-* Pós-operatório mais confortável: há menos dor e desconforto, permitindo retorno mais rápido à rotina.  
-* Eficácia e segurança: a combinação de vídeo e laser oferece tratamento mais completo e assertivo.
+* Recuperação: o tempo de cicatrização costuma ser menor do que nas técnicas abertas, variando conforme o caso.  
+* Pós-operatório mais confortável: tende a haver menos dor e desconforto, favorecendo o retorno à rotina.  
+* Tratamento direcionado: a combinação de vídeo e laser auxilia no tratamento do trajeto do cisto.
 
-Nosso compromisso é oferecer uma abordagem moderna e eficaz para que você supere o cisto pilonidal com máximo conforto e mínima interrupção da sua rotina.
+Quando bem indicada, essa abordagem busca tratar o cisto pilonidal com conforto e com menor impacto na rotina, sempre conforme a avaliação de cada caso.

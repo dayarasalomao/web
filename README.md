@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dra. Dayara Salomão Website
 
-## Getting Started
+Public website for Dra. Dayara Salomão, a coloproctologist in Curitiba, Brazil. The site is a Next.js App Router project focused on medical positioning, patient education, SEO, and appointment conversion.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 with App Router
+- React 19
+- TypeScript
+- Tailwind CSS 3 plus shared styles in `src/app/globals.css`
+- Vercel Analytics, Speed Insights, and optional Google Tag Manager
+- Markdown/MDX-powered blog content under `content/posts`
+
+## Common Commands
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run lint
+npm run test:unit
+npm run e2e
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Layout
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+content/posts/                  Blog article source files
+docs/                           Editorial and SEO reference docs
+public/assets/                  Production WebP photos used by the UI
+public/core/                    Logo and lettering assets used by the UI
+public/llms.txt                 AI crawler guidance
+public/robots.txt               Static crawler policy
+src/app/                        App Router routes, metadata, sitemap, layout
+src/components/                 Homepage sections and shared UI
+src/constants.ts                Contact, SEO, schema, sitemap, and analytics constants
+src/lib/                        Blog parsing, treatment data, SEO, structured data
+tests/                          Unit and Playwright tests
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content Notes
 
-## Learn More
+Most homepage copy lives directly in section components. Shared contact details, SEO strings, credentials, schema inputs, sitemap images, and analytics flags live in `src/constants.ts`. Blog articles live in `content/posts`, while treatment landing pages are backed by structured data in `src/lib/treatments.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+When changing contact details, credentials, treatments, or SEO positioning, check the relevant component, `src/constants.ts`, `docs/website_content.md`, and `public/llms.txt`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Analytics-related flags:
 
-## Deploy on Vercel
+```bash
+NEXT_PUBLIC_GOOGLE_TAG_ID=
+NEXT_PUBLIC_ANALYTICS_DEBUG=
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Google Tag Manager renders only when analytics are enabled and the tag starts with `GTM-`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+The deployment target is Vercel. `next.config.ts` includes a canonical redirect from `dayarasalomao.vercel.app` to `https://www.dayarasalomao.com.br` plus security headers.

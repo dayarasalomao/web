@@ -27,13 +27,13 @@ faqs:
 
 O Laser de CO2 atua através do princípio da fototermólise seletiva. A energia do laser é absorvida pela água presente nas células infectadas pelo vírus, promovendo sua vaporização instantânea.
 
-## Por que esta técnica é superior?
+## Possíveis diferenciais da técnica
 
 * Precisão micrométrica: o laser permite remover a lesão camada por camada, com controle de profundidade, preservando melhor a pele saudável ao redor.  
 * Efeito térmico controlado: além de remover a lesão visível, o calor ajuda a tratar as margens, o que pode contribuir para reduzir recidivas.  
 * Hemostasia instantânea: os pequenos vasos são selados durante o procedimento, com menor sangramento e menos necessidade de pontos.  
-* Cicatrização de alta performance: por causar menos dano térmico lateral, a recuperação tende a ser mais confortável e a resposta inflamatória mais controlada.
+* Cicatrização: por causar menos dano térmico lateral, a recuperação tende a ser mais confortável em muitos casos.
 
-## Tecnologia e conforto para resolver o problema
+## Tecnologia e conforto no tratamento
 
-Muitos pacientes adiam o tratamento por medo da dor ou por experiências frustrantes com métodos químicos que exigem múltiplas aplicações. A vaporização a Laser de CO2 oferece uma alternativa precisa, segura e, em muitos casos, resolutiva em sessão única.
+Muitos pacientes adiam o tratamento por medo da dor ou por experiências frustrantes com métodos químicos que exigem múltiplas aplicações. A vaporização a Laser de CO2 é uma alternativa precisa; o número de sessões depende da extensão das lesões e da resposta de cada paciente.

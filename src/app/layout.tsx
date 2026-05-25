@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Montserrat, Cinzel } from 'next/font/google'
 import './globals.css'
 import {
@@ -11,11 +12,16 @@ import {
   SEO_TWITTER_DESCRIPTION,
   SEO_IMAGE,
   SEO_IMAGE_ALT,
+  SEO_LOCATION,
+  SEO_SPECIALTY,
   BUSINESS_NAME,
   BUSINESS_PHONE,
   BUSINESS_EMAIL,
   BUSINESS_ADDRESS,
   TWITTER_HANDLE,
+  CRM_FULL,
+  RQE_FULL,
+  MEDICAL_PROCEDURES,
 } from '@/constants'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -36,9 +42,12 @@ const cinzel = Cinzel({
 })
 
 export const metadata: Metadata = {
+  applicationName: BUSINESS_NAME,
   title: SEO_TITLE,
   description: SEO_DESCRIPTION,
   keywords: SEO_KEYWORDS,
+  category: 'health',
+  classification: 'Medical business website',
   authors: [{ name: SEO_DOCTOR_NAME, url: SITE_URL }],
   creator: SEO_DOCTOR_NAME,
   publisher: SEO_DOCTOR_NAME,
@@ -77,6 +86,10 @@ export const metadata: Metadata = {
     'business:contact_data:locality': BUSINESS_ADDRESS.addressLocality,
     'business:contact_data:region': BUSINESS_ADDRESS.addressRegion,
     'business:contact_data:country_name': 'Brasil',
+    'medical:specialty': SEO_SPECIALTY,
+    'medical:service_area': SEO_LOCATION,
+    'medical:credentials': `${CRM_FULL}, ${RQE_FULL}`,
+    'medical:procedures': MEDICAL_PROCEDURES.join(', '),
     'article:author': SEO_DOCTOR_NAME,
   },
 }
@@ -91,6 +104,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
       <head>
+        {process.env.NODE_ENV === 'development' && (
+          <Script
+            src="https://unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
