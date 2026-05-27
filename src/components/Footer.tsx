@@ -4,6 +4,7 @@ import {
   CRM_FULL,
   DOCTORALIA_URL,
   ECO_TELEPHONE_NUMBER,
+  GOOGLE_MAPS_URL,
   RQE_FULL,
   WHATSAPP_URL,
 } from '@/constants'
@@ -145,6 +146,16 @@ export default function Footer() {
                   className="transition-colors hover:text-white"
                 >
                   Perfil no Doctoralia
+                </Link>
+              ) : null}
+              {GOOGLE_MAPS_URL ? (
+                <Link
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  Como chegar (Google Maps)
                 </Link>
               ) : null}
             </div>

@@ -4,7 +4,11 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
-import { buildBreadcrumbGraph, serializeJsonLd } from '@/lib/structured-data'
+import {
+  buildBreadcrumbGraph,
+  buildItemListGraph,
+  serializeJsonLd,
+} from '@/lib/structured-data'
 import { getAllTreatments } from '@/lib/treatments'
 
 const TREATMENTS_TITLE = `Tratamentos — ${SEO_DOCTOR_NAME} | Coloproctologia`
@@ -39,6 +43,13 @@ export default function TreatmentsPage() {
     { label: 'Início', href: '/' },
     { label: 'Tratamentos' },
   ])
+  const itemListGraph = buildItemListGraph(
+    'Tratamentos de coloproctologia',
+    treatments.map((treatment) => ({
+      name: treatment.title,
+      href: `/tratamentos/${treatment.slug}`,
+    })),
+  )
 
   const getTreatmentCardGridClass = (index: number) => {
     const classes = ['md:col-span-2', 'xl:col-span-2']
@@ -71,7 +82,7 @@ export default function TreatmentsPage() {
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd({
             '@context': 'https://schema.org',
-            '@graph': [breadcrumbGraph],
+            '@graph': [breadcrumbGraph, itemListGraph],
           }),
         }}
       />

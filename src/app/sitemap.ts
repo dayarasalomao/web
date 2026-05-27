@@ -21,11 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const newestTreatmentDate = getNewestDate(
     treatments.map((treatment) => treatment.lastUpdated),
   )
+  const newestContentDate = getNewestDate([
+    ...posts.map((post) => post.lastModified),
+    ...treatments.map((treatment) => treatment.lastUpdated),
+  ])
 
   return [
     {
       url: canonicalUrl('/'),
-      lastModified: new Date(),
+      lastModified: newestContentDate,
       changeFrequency: 'monthly',
       priority: 1,
       images: SITEMAP_IMAGES.map((image) => canonicalUrl(image)),

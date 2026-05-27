@@ -24,6 +24,10 @@ export const ECO_TELEPHONE_NUMBER = '(41) 3123-6550'
 // =================================================================
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
+// Relocation note recorded 2026-05-26: the practice is expected to move
+// from Curitiba/PR to Campo Grande/MS around July 2026. Do not add new
+// Curitiba-targeted local SEO; retarget these local signals only after
+// the move is confirmed.
 export const SEO_LOCATION = 'Curitiba'
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
@@ -51,11 +55,10 @@ export const RQE_NUMBER = '33908'
 export const RQE_FULL = `RQE ${RQE_NUMBER}`
 export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
 
-// TODO: confirm with user before production — public Doctoralia profile URL
-export const DOCTORALIA_URL = ''
+export const DOCTORALIA_URL =
+  'https://www.doctoralia.com.br/dayara-salomao/coloproctologista/curitiba'
 
-// TODO: confirm with user before production — Google Maps place URL (Eco Medical Center listing)
-export const GOOGLE_MAPS_URL = ''
+export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/8pzUEGq1YnVFmsf4A'
 
 // =================================================================
 // BUSINESS INFORMATION (Used in JSON-LD Schema)
@@ -71,16 +74,16 @@ export const BUSINESS_EMAIL = CONTACT_EMAIL
 // LOCATION DATA
 // =================================================================
 export const BUSINESS_ADDRESS = {
-  streetAddress: 'Rua Góias, 70 - 3º andar',
+  streetAddress: 'Rua Goiás, 70 - Água Verde',
   addressLocality: 'Curitiba',
   addressRegion: 'Paraná',
   addressCountry: 'BR',
-  postalCode: '80620-010',
+  postalCode: '80620-060',
 }
 
 export const BUSINESS_GEO = {
-  latitude: -25.4284,
-  longitude: -49.2733,
+  latitude: -25.4646652,
+  longitude: -49.2905794,
 }
 
 export const BUSINESS_HOURS = 'Mo-Fr 08:00-18:00'

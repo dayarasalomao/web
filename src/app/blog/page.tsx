@@ -5,7 +5,11 @@ import { BlogCard } from '@/components/ui/BlogCard'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { getAllPosts } from '@/lib/blog'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
-import { buildBreadcrumbGraph, serializeJsonLd } from '@/lib/structured-data'
+import {
+  buildBreadcrumbGraph,
+  buildItemListGraph,
+  serializeJsonLd,
+} from '@/lib/structured-data'
 import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 
 const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia`
@@ -38,6 +42,13 @@ export default function BlogPage() {
     { label: 'Início', href: '/' },
     { label: 'Blog' },
   ])
+  const itemListGraph = buildItemListGraph(
+    'Artigos de coloproctologia',
+    posts.map((post) => ({
+      name: post.title,
+      href: `/blog/${post.slug}`,
+    })),
+  )
 
   return (
     <main id="main-content" className="min-h-screen bg-cream py-8 lg:py-12">
@@ -46,7 +57,7 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd({
             '@context': 'https://schema.org',
-            '@graph': [breadcrumbGraph],
+            '@graph': [breadcrumbGraph, itemListGraph],
           }),
         }}
       />
