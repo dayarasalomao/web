@@ -4,8 +4,8 @@ metaDescription: >-
   Entenda quando histórico de Crohn, retocolite ulcerativa ou casos na família
   indicam acompanhamento com coloproctologista.
 slug: historico-crohn-retocolite-familia-acompanhamento-coloproctologista
-publishDate: 2026-05-27T00:00:00.000Z
-lastModified: 2026-05-27T00:00:00.000Z
+publishDate: 2026-05-14T00:00:00.000Z
+lastModified: 2026-05-14T00:00:00.000Z
 primaryKeyword: acompanhamento doença inflamatória intestinal
 secondaryKeywords:
   - doença de Crohn

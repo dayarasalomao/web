@@ -4,8 +4,8 @@ metaDescription: >-
   Saiba o que observar diante de lesões, verrugas ou nódulos na região anal e
   quando procurar avaliação com coloproctologista.
 slug: lesoes-verrugas-nodulos-regiao-anal-o-que-observar
-publishDate: 2026-05-27T00:00:00.000Z
-lastModified: 2026-05-27T00:00:00.000Z
+publishDate: 2026-03-27T00:00:00.000Z
+lastModified: 2026-03-27T00:00:00.000Z
 primaryKeyword: lesões na região anal
 secondaryKeywords:
   - verrugas anais

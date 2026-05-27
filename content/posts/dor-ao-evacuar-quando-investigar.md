@@ -4,8 +4,8 @@ metaDescription: >-
   Saiba quais causas podem estar por trás da dor ao evacuar, quando o sintoma
   merece avaliação e como o diagnóstico orienta o tratamento.
 slug: dor-ao-evacuar-quando-investigar
-publishDate: 2026-05-27T00:00:00.000Z
-lastModified: 2026-05-27T00:00:00.000Z
+publishDate: 2026-03-04T00:00:00.000Z
+lastModified: 2026-03-04T00:00:00.000Z
 primaryKeyword: dor ao evacuar
 secondaryKeywords:
   - dor anal ao evacuar

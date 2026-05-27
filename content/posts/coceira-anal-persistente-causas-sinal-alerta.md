@@ -4,8 +4,8 @@ metaDescription: >-
   Veja causas frequentes de coceira anal persistente, quais sinais exigem
   avaliação e por que o tratamento depende do diagnóstico.
 slug: coceira-anal-persistente-causas-sinal-alerta
-publishDate: 2026-05-27T00:00:00.000Z
-lastModified: 2026-05-27T00:00:00.000Z
+publishDate: 2026-04-11T00:00:00.000Z
+lastModified: 2026-04-11T00:00:00.000Z
 primaryKeyword: coceira anal persistente
 secondaryKeywords:
   - prurido anal

@@ -4,8 +4,8 @@ metaDescription: >-
   Entenda quando sangramento anal ou dor na região do ânus merece avaliação
   médica e por que é importante confirmar a causa antes de tratar.
 slug: sangramento-anal-dor-quando-procurar-coloproctologista
-publishDate: 2026-05-27T00:00:00.000Z
-lastModified: 2026-05-27T00:00:00.000Z
+publishDate: 2026-02-19T00:00:00.000Z
+lastModified: 2026-02-19T00:00:00.000Z
 primaryKeyword: sangramento anal
 secondaryKeywords:
   - dor anal

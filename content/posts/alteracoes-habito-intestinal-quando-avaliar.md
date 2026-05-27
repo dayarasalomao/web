@@ -4,8 +4,8 @@ metaDescription: >-
   Entenda quais mudanças no hábito intestinal merecem atenção, quando procurar
   avaliação e quais sinais de alerta observar.
 slug: alteracoes-habito-intestinal-quando-avaliar
-publishDate: 2026-05-27T00:00:00.000Z
-lastModified: 2026-05-27T00:00:00.000Z
+publishDate: 2026-04-24T00:00:00.000Z
+lastModified: 2026-04-24T00:00:00.000Z
 primaryKeyword: alteração do hábito intestinal
 secondaryKeywords:
   - mudança no funcionamento do intestino
