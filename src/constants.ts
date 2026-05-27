@@ -19,6 +19,21 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 
 export const ECO_TELEPHONE_NUMBER = '(41) 3123-6550'
 
+export const BUSINESS_CLINIC_NAME = 'Eco Medical Center'
+export const BUSINESS_STREET = 'Rua Goiás'
+export const BUSINESS_STREET_NUMBER = '70'
+export const BUSINESS_FLOOR = '3º andar'
+export const BUSINESS_NEIGHBORHOOD = 'Água Verde'
+export const BUSINESS_ADDRESS_LOCALITY = 'Curitiba'
+export const BUSINESS_ADDRESS_REGION = 'Paraná'
+export const BUSINESS_ADDRESS_REGION_CODE = 'PR'
+export const BUSINESS_POSTAL_CODE = '80620-060'
+export const BUSINESS_ADDRESS_LINE = `${BUSINESS_STREET}, ${BUSINESS_STREET_NUMBER} - ${BUSINESS_NEIGHBORHOOD}`
+export const BUSINESS_ADDRESS_DETAIL = `${BUSINESS_FLOOR}, ${BUSINESS_ADDRESS_LOCALITY} - ${BUSINESS_ADDRESS_REGION_CODE}, CEP ${BUSINESS_POSTAL_CODE}`
+export const BUSINESS_FULL_ADDRESS = `${BUSINESS_STREET}, ${BUSINESS_STREET_NUMBER}, ${BUSINESS_FLOOR}, ${BUSINESS_NEIGHBORHOOD}, ${BUSINESS_ADDRESS_LOCALITY} - ${BUSINESS_ADDRESS_REGION_CODE}, CEP ${BUSINESS_POSTAL_CODE}`
+export const BUSINESS_LOCATION_LABEL = `${BUSINESS_CLINIC_NAME}, ${BUSINESS_NEIGHBORHOOD}, ${BUSINESS_ADDRESS_LOCALITY}/${BUSINESS_ADDRESS_REGION_CODE}`
+export const BUSINESS_FOOTER_LOCATION = `${BUSINESS_CLINIC_NAME} - ${BUSINESS_ADDRESS_LOCALITY}, ${BUSINESS_ADDRESS_REGION_CODE}`
+
 // =================================================================
 // SEO & METADATA CONSTANTS
 // =================================================================
@@ -28,14 +43,14 @@ export const SEO_SPECIALTY = 'Coloproctologista'
 // from Curitiba/PR to Campo Grande/MS around July 2026. Do not add new
 // Curitiba-targeted local SEO; retarget these local signals only after
 // the move is confirmed.
-export const SEO_LOCATION = 'Curitiba'
+export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
-export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} com atendimento no Eco Medical Center. Tratamentos para hemorroidas, fissura anal, fístula anal, HPV perianal, cisto pilonidal e outras doenças anorretais.`
-export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, Eco Medical Center, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
+export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} com atendimento no ${BUSINESS_CLINIC_NAME}. Tratamentos para hemorroidas, fissura anal, fístula anal, HPV perianal, cisto pilonidal e outras doenças anorretais.`
+export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, ${BUSINESS_CLINIC_NAME}, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
 
-export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no Eco Medical Center.`
-export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no Eco Medical Center para doenças anorretais e tratamentos minimamente invasivos.`
+export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
+export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
 
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
 export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
@@ -74,11 +89,11 @@ export const BUSINESS_EMAIL = CONTACT_EMAIL
 // LOCATION DATA
 // =================================================================
 export const BUSINESS_ADDRESS = {
-  streetAddress: 'Rua Goiás, 70 - Água Verde',
-  addressLocality: 'Curitiba',
-  addressRegion: 'Paraná',
+  streetAddress: BUSINESS_ADDRESS_LINE,
+  addressLocality: BUSINESS_ADDRESS_LOCALITY,
+  addressRegion: BUSINESS_ADDRESS_REGION,
   addressCountry: 'BR',
-  postalCode: '80620-060',
+  postalCode: BUSINESS_POSTAL_CODE,
 }
 
 export const BUSINESS_GEO = {
@@ -97,7 +112,7 @@ export const PHYSICIAN_DATA = {
   name: 'Dayara Salomão',
   medicalSpecialty: BUSINESS_SPECIALTY,
   university: 'Pontifícia Universidade Católica do Paraná',
-  clinic: 'Eco Medical Center',
+  clinic: BUSINESS_CLINIC_NAME,
 }
 
 // =================================================================

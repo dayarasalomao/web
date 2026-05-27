@@ -1,4 +1,5 @@
 import {
+  BUSINESS_FOOTER_LOCATION,
   CFM_REGISTRY_URL,
   CONTACT_EMAIL,
   CRM_FULL,
@@ -24,7 +25,7 @@ export default function Footer() {
           />
         </svg>
       ),
-      text: 'Eco Medical Center - Curitiba, PR',
+      text: BUSINESS_FOOTER_LOCATION,
     },
     {
       icon: (

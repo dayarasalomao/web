@@ -36,8 +36,8 @@
 
 ## Current Repo Evidence
 
-- Active global city is `SEO_LOCATION = 'Curitiba'` in `src/constants.ts`.
-- Active NAP is Eco Medical Center, Rua Goias, 70, Curitiba/PR.
+- Active global city is derived from `BUSINESS_ADDRESS_LOCALITY = 'Curitiba'` in `src/constants.ts`.
+- Active NAP is centralized in `src/constants.ts`: Eco Medical Center, Rua Goiás, 70, 3º andar, Água Verde, Curitiba/PR, CEP 80620-060.
 - Blog engine exists under `content/posts/*.md` and `src/lib/blog.ts`.
 - Treatment engine exists in `src/lib/treatments.ts`.
 - There is no location hub route yet.
@@ -47,29 +47,28 @@
 
 Inventory of every Curitiba reference in the repo, so the July 2026 cutover is mechanical. There is **no literal `"em Curitiba"` string** — it is composed at runtime from `SEO_LOCATION`.
 
-### 1. Single source of truth (change one line, six surfaces update)
+### 1. Single source of truth (change constants once, multiple surfaces update)
 
 | File · Line | Current | Cascades to |
 | --- | --- | --- |
-| `src/constants.ts:31` | `SEO_LOCATION = 'Curitiba'` | `SEO_TITLE` (33), `SEO_DESCRIPTION` (34), `SEO_KEYWORDS` (35), `SEO_OG_DESCRIPTION` (37), `SEO_TWITTER_DESCRIPTION` (38), `SEO_IMAGE_ALT` (41), `BLOG_DEFAULT_OG_IMAGE_ALT` (46) |
+| `src/constants.ts` | `BUSINESS_CLINIC_NAME = 'Eco Medical Center'` | SEO descriptions, visible contact cards, footer location, physician schema clinic |
+| `src/constants.ts` | `BUSINESS_ADDRESS_LOCALITY = 'Curitiba'` | `SEO_LOCATION`, title/description metadata, visible contact cards, footer location, schema address |
+| `src/constants.ts` | `BUSINESS_STREET`, `BUSINESS_STREET_NUMBER`, `BUSINESS_FLOOR`, `BUSINESS_NEIGHBORHOOD`, `BUSINESS_POSTAL_CODE` | `BUSINESS_ADDRESS_LINE`, `BUSINESS_ADDRESS_DETAIL`, `BUSINESS_FULL_ADDRESS`, schema `PostalAddress`, contact UI |
 
-Changing line 31 to `'Campo Grande'` updates the page title, meta description, OG/Twitter descriptions, image alts, and keyword list in one edit.
+Changing the business location constants updates the page title, meta description, OG/Twitter descriptions, image alts, keyword list, visible contact cards, footer location, and schema address without hunting for hardcoded UI strings.
 
 ### 2. NAP / location data — update with confirmed Campo Grande facts
 
 | File · Line | Current (Curitiba) | What |
 | --- | --- | --- |
 | `src/constants.ts:20` | `ECO_TELEPHONE_NUMBER = '(41) 3123-6550'` | Clinic phone (area code 41 = PR) |
-| `src/constants.ts:58-59` | `DOCTORALIA_URL` `.../coloproctologista/curitiba` | Doctoralia profile (city slug) |
-| `src/constants.ts:61` | `GOOGLE_MAPS_URL` `maps.app.goo.gl/8pzUEGq1YnVFmsf4A` | Maps pin (Água Verde) |
-| `src/constants.ts:76-82` | `BUSINESS_ADDRESS` Rua Goiás 70, Água Verde, Curitiba/PR, 80620-060 | Schema `PostalAddress` |
+| `src/constants.ts` | `DOCTORALIA_URL` `.../coloproctologista/curitiba` | Doctoralia profile (city slug), footer trust link, Physician `sameAs` |
+| `src/constants.ts` | `GOOGLE_MAPS_URL` `maps.app.goo.gl/8pzUEGq1YnVFmsf4A` | Maps pin, contact CTA, footer link, schema `sameAs` |
+| `src/constants.ts` | Business address constants for Rua Goiás, 70, 3º andar, Água Verde, Curitiba/PR, 80620-060 | Visible contact UI and schema `PostalAddress` |
 | `src/constants.ts:84-87` | `BUSINESS_GEO` lat -25.4646652, lng -49.2905794 | Schema `GeoCoordinates` |
 | `src/constants.ts:52` | `CRM_STATE = 'PR'` | Only if she registers CRM-MS (affects `CFM_REGISTRY_URL`) |
-| `src/constants.ts:100` | `PHYSICIAN_DATA.clinic = 'Eco Medical Center'` | Clinic name in schema |
-| `src/components/Footer.tsx:27` | `'Eco Medical Center - Curitiba, PR'` | Footer contact line |
-| `src/components/Contact.tsx:24` | `'Curitiba, Paraná'` | Contact section |
-| `public/llms.txt:9` | `Atendimento atual: Eco Medical Center, Água Verde, Curitiba/PR` | AI crawler guidance |
-| `docs/website_content.md:91` | `Rua Góias, 70 - Água Verde, Curitiba, Paraná` | Editorial reference copy |
+| `public/llms.txt:9-10` | `Atendimento atual` and `Endereço` lines | AI crawler guidance |
+| `docs/website_content.md:91` | `Rua Goiás, 70 - 3º andar, Água Verde, Curitiba - PR, CEP 80620-060` | Editorial reference copy |
 
 ### 3. Historical / factual — KEEP (do not change on move)
 
