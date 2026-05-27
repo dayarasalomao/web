@@ -20,8 +20,8 @@ export default function Contact() {
     },
     {
       label: 'Endereço',
-      value: 'Rua Góias, 70 - Água Verde',
-      detail: 'Curitiba, Paraná',
+      value: 'Rua Goiás, 70 - Água Verde',
+      detail: '3º andar, Curitiba - PR, CEP 80620-060',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
           <path
