@@ -10,42 +10,42 @@ export default function WhenToSeek() {
       description:
         'Presença de sangue nas fezes ou dor persistente na região anal',
       urgency: 'high',
-      blogSlug: 'doenca-hemorroidaria-sintomas-graus',
+      blogSlug: 'sangramento-anal-dor-quando-procurar-coloproctologista',
     },
     {
       title: 'Histórico de doenças inflamatórias intestinais',
       description:
         'Se você tem Crohn, retocolite ulcerativa ou histórico familiar',
       urgency: 'medium',
-      blogSlug: 'doencas-inflamatorias-intestinais-crohn-retocolite',
+      blogSlug: 'historico-crohn-retocolite-familia-acompanhamento-coloproctologista',
     },
     {
       title: 'Lesões, verrugas ou nódulos na região do ânus',
       description: 'Qualquer alteração visual ou palpável na área perianal',
 
       urgency: 'high',
-      blogSlug: 'hpv-anal-identificar-tratar',
+      blogSlug: 'lesoes-verrugas-nodulos-regiao-anal-o-que-observar',
     },
     {
       title: 'Dor ou desconforto durante evacuação',
       description:
         'Dificuldade, dor intensa ou desconforto persistente ao evacuar',
       urgency: 'medium',
-      blogSlug: 'fissura-anal-causas-sintomas',
+      blogSlug: 'dor-ao-evacuar-quando-investigar',
     },
     {
       title: 'Alterações no padrão intestinal',
       description:
         'Mudanças significativas na frequência ou consistência das fezes',
       urgency: 'medium',
-      blogSlug: 'sindrome-intestino-irritavel-sintomas-manejo',
+      blogSlug: 'alteracoes-habito-intestinal-quando-avaliar',
     },
     {
       title: 'Coceira ou irritação persistente',
       description:
         'Prurido anal que não melhora com cuidados básicos de higiene',
       urgency: 'low',
-      blogSlug: 'prurido-anal-causas-cuidados',
+      blogSlug: 'coceira-anal-persistente-causas-sinal-alerta',
     },
   ]
 

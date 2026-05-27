@@ -88,8 +88,7 @@ Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cu
 
 ### Eco Medical Center
 
-- Rua Góias, 70 - Água Verde, Curitiba, Paraná
-- 3º andar - setor de coloproctologia
+- Rua Goiás, 70 - 3º andar, Água Verde, Curitiba - PR, CEP 80620-060
 
 ### Contatos
 

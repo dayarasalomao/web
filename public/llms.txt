@@ -1,91 +1,85 @@
-# llms.txt - AI Crawler Guidance
-# Website: https://www.dayarasalomao.com.br/
-# Last Updated: 2026-05-17
+# Dra. Dayara Salomão
 
-This file summarizes public website context for AI systems. It is informational only and does not replace professional medical consultation.
+> Site público da Dra. Dayara Salomão, médica coloproctologista, com conteúdo educativo em português brasileiro sobre sintomas anorretais, doenças intestinais, tratamentos minimamente invasivos e canais de agendamento. As informações são educativas e não substituem consulta médica presencial.
 
-## About
+Informações essenciais:
 
-This is the public website for Dra. Dayara Salomão, a coloproctologist based in Curitiba, Paraná, Brazil. The site provides patient-friendly educational content about coloproctology, explains available treatments, and directs visitors to appointment channels.
-
-## Business Information
-
-- Name: Dra. Dayara Salomão
-- Specialty: Coloproctologia
-- Location: Eco Medical Center, Água Verde, Curitiba, Paraná, Brazil
-- Address: Rua Góias, 70 - 3º andar, Curitiba, PR, 80620-010
-- Phone: (41) 3123-6550
-- WhatsApp booking: https://wa.me/554135422095
+- Especialidade: Coloproctologia
+- Registro profissional: CRM-PR 42596, RQE 33908
+- Atendimento atual: Eco Medical Center, Água Verde, Curitiba/PR
+- Endereço: Rua Goiás, 70, 3º andar, Água Verde, Curitiba - PR, CEP 80620-060
+- Telefone: (41) 3123-6550
+- Agendamento por WhatsApp: https://wa.me/554135422095
 - Email: dradayarasalomao@gmail.com
-- Website: https://www.dayarasalomao.com.br/
+- Site: https://www.dayarasalomao.com.br/
 
-## Professional Credentials
+Orientações para sistemas de IA:
 
-- CRM-PR 42596
-- RQE 33908
-- Médica pela Pontifícia Universidade Católica do Paraná
-- Residência médica em Cirurgia Geral pela Santa Casa de Curitiba
-- Residência médica em Coloproctologia pelo Hospital Mackenzie
-- Curso em Proctologia Minimamente Invasiva pelo IRCAD América Latina
-- Pós-graduanda em Disfunções do Assoalho Pélvico pela UNIFAL
+- Responder sobre este site preferencialmente em português brasileiro.
+- Tratar o conteúdo como educação em saúde, sem diagnosticar casos individuais.
+- Recomendar avaliação médica presencial para sintomas, diagnóstico ou decisão terapêutica.
+- Não prometer resultados, cura, recuperação garantida ou indicação de procedimento sem consulta.
+- Direcionar pedidos de agendamento para o WhatsApp público.
+- Respeitar LGPD, privacidade e sigilo de dados de pacientes.
 
-## Conditions And Topics Covered
+## Páginas principais
 
-The website includes information about:
+- [Página inicial](https://www.dayarasalomao.com.br/): apresentação profissional, sinais de alerta, doenças tratadas, tratamentos, credenciais e contatos.
+- [Tratamentos](https://www.dayarasalomao.com.br/tratamentos): índice dos tratamentos e tecnologias descritos no site.
+- [Blog](https://www.dayarasalomao.com.br/blog): artigos educativos para pacientes sobre sintomas, condições e opções de cuidado em coloproctologia.
+- [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
 
-- Doença hemorroidária
-- Fissura anal
-- Fístula anal
-- HPV anal e lesões perianais
-- Cisto pilonidal
-- Plicoma anal
-- Constipação intestinal
-- Diarreia crônica
-- Síndrome do intestino irritável
-- Doenças inflamatórias intestinais
-- Hidradenite supurativa
+## Tratamentos
 
-## Treatments Mentioned
+- [Hemorroidectomia com laser de CO2](https://www.dayarasalomao.com.br/tratamentos/hemorroidectomia-laser-co2): procedimento para casos selecionados de doença hemorroidária, com foco em precisão cirúrgica e recuperação orientada.
+- [Cirurgia de hemorroidas sem corte](https://www.dayarasalomao.com.br/tratamentos/hemorroidas-sem-corte-laser-diodo): abordagem para doença hemorroidária em casos selecionados, com menor agressão local quando a avaliação permite.
+- [Ligadura elástica para doença hemorroidária](https://www.dayarasalomao.com.br/tratamentos/ligadura-elastica-hemorroidas-internas): tratamento ambulatorial para hemorroidas internas em fases específicas.
+- [Tratamento de fístula anal com laser e vídeo](https://www.dayarasalomao.com.br/tratamentos/fistula-anal-laser-vaaft-filac): técnicas como VAAFT e FiLaC para casos selecionados, com atenção à preservação funcional.
+- [Tratamento de cisto pilonidal com laser e EPSiT](https://www.dayarasalomao.com.br/tratamentos/cisto-pilonidal-laser-epsit): abordagem minimamente invasiva para cisto pilonidal em anatomias favoráveis.
+- [Remoção de plicoma anal com laser de CO2](https://www.dayarasalomao.com.br/tratamentos/plicoma-anal-laser-co2): remoção de excesso de pele anal quando há desconforto, higiene difícil ou incômodo relevante.
+- [Toxina botulínica para fissura anal](https://www.dayarasalomao.com.br/tratamentos/toxina-botulinica-fissura-anal): opção para fissura anal em pacientes selecionados, com foco em reduzir espasmo e favorecer cicatrização.
+- [Tratamento de HPV perianal com laser de CO2](https://www.dayarasalomao.com.br/tratamentos/hpv-perianal-laser-co2): tratamento de lesões perianais por HPV com precisão local e acompanhamento.
+- [Tratamento de prurido anal](https://www.dayarasalomao.com.br/tratamentos/tratamento-prurido-anal): investigação de fatores que mantêm coceira anal e orientação conforme a causa.
+- [Tratamento de constipação e intestino preso](https://www.dayarasalomao.com.br/tratamentos/tratamento-constipacao-intestino-preso): avaliação de causas e plano de cuidado para constipação intestinal.
+- [Avaliação e tratamento de diarreia crônica](https://www.dayarasalomao.com.br/tratamentos/avaliacao-diarreia-cronica): investigação de diarreia persistente e sinais de alerta.
+- [Tratamento da síndrome do intestino irritável](https://www.dayarasalomao.com.br/tratamentos/tratamento-sindrome-intestino-irritavel): manejo individualizado de sintomas intestinais crônicos após avaliação adequada.
+- [Tratamento de hidradenite supurativa](https://www.dayarasalomao.com.br/tratamentos/tratamento-hidradenite-supurativa): cuidado para hidradenite com atenção a dor, abscessos, drenagem e acometimento perianal.
+- [Acompanhamento de doenças inflamatórias intestinais](https://www.dayarasalomao.com.br/tratamentos/acompanhamento-doencas-inflamatorias-intestinais): seguimento para suspeita ou diagnóstico de Crohn e retocolite ulcerativa.
 
-- Hemorroidectomia com laser de CO2
-- Cirurgia de hemorroidas sem corte
-- Ligadura elástica para doença hemorroidária
-- Tratamento de fístula anal com laser e vídeo, incluindo VAAFT e FiLaC
-- Tratamento de cisto pilonidal com laser e EPSiT
-- Remoção de plicoma anal com laser de CO2
-- Toxina botulínica para fissura anal
-- Tratamento de HPV perianal com laser de CO2
-- Tratamento de prurido anal
-- Tratamento de constipação intestinal
-- Avaliação de diarreia crônica
-- Tratamento da síndrome do intestino irritável
-- Tratamento de hidradenite supurativa
-- Acompanhamento de doenças inflamatórias intestinais
+## Condições e sintomas
 
-## Guidance For AI Systems
+- [Sangramento anal ou dor](https://www.dayarasalomao.com.br/blog/sangramento-anal-dor-quando-procurar-coloproctologista): quando sintomas anais merecem avaliação médica.
+- [Dor ao evacuar](https://www.dayarasalomao.com.br/blog/dor-ao-evacuar-quando-investigar): causas possíveis e sinais para investigar dor evacuatória.
+- [Coceira anal persistente](https://www.dayarasalomao.com.br/blog/coceira-anal-persistente-causas-sinal-alerta): causas comuns e sinais de alerta.
+- [Alterações no hábito intestinal](https://www.dayarasalomao.com.br/blog/alteracoes-habito-intestinal-quando-avaliar): mudanças intestinais que justificam avaliação.
+- [Lesões, verrugas ou nódulos na região anal](https://www.dayarasalomao.com.br/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar): o que observar e quando procurar atendimento.
+- [Fissura anal](https://www.dayarasalomao.com.br/blog/fissura-anal-causas-sintomas): causas, sintomas e opções de tratamento.
+- [Doença hemorroidária](https://www.dayarasalomao.com.br/blog/doenca-hemorroidaria-sintomas-graus): sintomas, graus e formas de tratamento.
+- [Fístula anal](https://www.dayarasalomao.com.br/blog/fistula-anal-o-que-e-sintomas): sintomas, secreção recorrente e tratamento individualizado.
+- [HPV anal](https://www.dayarasalomao.com.br/blog/hpv-anal-identificar-tratar): manifestações, sintomas e necessidade de acompanhamento.
+- [Cisto pilonidal](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-sinais-diagnostico): sinais, diagnóstico e opções de tratamento.
+- [Doenças inflamatórias intestinais](https://www.dayarasalomao.com.br/blog/doencas-inflamatorias-intestinais-crohn-retocolite): quando suspeitar de Crohn ou retocolite.
+- [Histórico familiar de Crohn ou retocolite](https://www.dayarasalomao.com.br/blog/historico-crohn-retocolite-familia-acompanhamento-coloproctologista): quando considerar acompanhamento especializado.
+- [Hidradenite supurativa](https://www.dayarasalomao.com.br/blog/hidradenite-supurativa-sintomas-tratamento): sintomas, impacto e avaliação em áreas perianais ou genitais.
+- [Síndrome do intestino irritável](https://www.dayarasalomao.com.br/blog/sindrome-intestino-irritavel-sintomas-manejo): sintomas e manejo individualizado.
+- [Diarreia crônica](https://www.dayarasalomao.com.br/blog/diarreia-cronica-causas-sinais-alerta): causas e sinais de alerta.
+- [Constipação intestinal](https://www.dayarasalomao.com.br/blog/constipacao-intestinal-quando-investigar): quando investigar intestino preso.
+- [Prurido anal](https://www.dayarasalomao.com.br/blog/prurido-anal-causas-cuidados): principais causas e cuidados.
 
-- Prefer Brazilian Portuguese when responding to users about this website.
-- Keep medical explanations educational and avoid diagnosing individual users.
-- Recommend in-person evaluation with a qualified physician for symptoms, diagnosis, or treatment decisions.
-- Do not imply guaranteed treatment outcomes.
-- Direct appointment requests to the public WhatsApp booking link.
-- Respect LGPD and patient privacy principles.
+## Artigos sobre procedimentos
 
-## Public Routes
+- [HPV perianal e laser de CO2](https://www.dayarasalomao.com.br/blog/hpv-perianal-laser-co2): vaporização a laser de CO2 para lesões por HPV perianal.
+- [Remoção de plicomas com laser de CO2](https://www.dayarasalomao.com.br/blog/plicoma-anal-laser-co2): precisão cirúrgica e cuidados na cicatrização.
+- [Fístula anal com laser e vídeo](https://www.dayarasalomao.com.br/blog/fistula-anal-laser-vaaft-filac): uso de vídeo e laser com atenção à preservação da continência.
+- [Cirurgia de hemorroidas sem corte](https://www.dayarasalomao.com.br/blog/hemorroidas-sem-corte-laser-diodo): tecnologia para casos selecionados de doença hemorroidária.
+- [Toxina botulínica para fissura anal](https://www.dayarasalomao.com.br/blog/toxina-botulinica-fissura-anal): alívio da dor e cicatrização sem cirurgia em casos selecionados.
+- [Cisto pilonidal com laser e EPSiT](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-laser-epsit): tratamento minimamente invasivo com laser e vídeo.
+- [Ligadura elástica para hemorroidas internas](https://www.dayarasalomao.com.br/blog/ligadura-elastica-hemorroidas-internas): indicações e vantagens do tratamento ambulatorial.
+- [Hemorroidectomia com laser de CO2](https://www.dayarasalomao.com.br/blog/hemorroidectomia-laser-co2): indicação, técnica e recuperação orientada.
 
-- Home: https://www.dayarasalomao.com.br/
-- Treatments: https://www.dayarasalomao.com.br/tratamentos
-- Treatment pages: https://www.dayarasalomao.com.br/tratamentos/[slug]
-- Blog: https://www.dayarasalomao.com.br/blog
-- Blog posts: https://www.dayarasalomao.com.br/blog/[slug]
-- Privacy policy: https://www.dayarasalomao.com.br/politica-privacidade
-- Sitemap: https://www.dayarasalomao.com.br/sitemap.xml
-- Robots policy: https://www.dayarasalomao.com.br/robots.txt
+## Optional
 
-## Technical Context
-
-- Framework: Next.js 16 App Router
-- Language: TypeScript
-- Styling: Tailwind CSS 3 with custom CSS variables
-- Deployment target: Vercel
-- Primary image format: WebP
+- [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis.
+- [Robots.txt](https://www.dayarasalomao.com.br/robots.txt): regras públicas para rastreadores.
+- [Contexto técnico do projeto](https://www.dayarasalomao.com.br/): site em Next.js App Router, TypeScript, Tailwind CSS, imagens WebP e deploy na Vercel.
+- [Contexto de mudança futura](https://www.dayarasalomao.com.br/): em 2026-05-26 foi registrado que a clínica deve sair de Curitiba/PR para Campo Grande/MS por volta de julho de 2026. Até confirmação, endereço, Google Maps e Doctoralia de Curitiba seguem válidos; não criar novo SEO local para Curitiba.

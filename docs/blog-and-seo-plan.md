@@ -2,6 +2,8 @@
 
 Spec-driven plan. Ports the markdown-driven blog from `analu-procto` (production reference) into `dayara-salomao` and finishes the SEO pass from GitHub issue #2. Designed so the same pattern drops into `dra-ana-pierin` and `versiani` next with only `src/constants.ts` changes.
 
+> **Relocation guardrail (recorded 2026-05-26):** The practice is expected to move from Curitiba/PR to Campo Grande/MS around July 2026. Do **not** add new Curitiba-focused local SEO targets while working from this plan. Keep current Curitiba business data until the move is confirmed; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia, and city mentions to Campo Grande/MS.
+
 ---
 
 ## 1. Context
@@ -191,7 +193,7 @@ export default async function Page({ params }) {
 | 1 | Unique metadata per indexable page | `layout.tsx` (root) ✅; `blog/page.tsx` const; `blog/[slug]/page.tsx` `generateMetadata` |
 | 2 | Canonical URL on every indexable page | `src/lib/seo.ts::buildCanonical(path)` used by every `alternates.canonical` |
 | 3 | OG + Twitter | Root ✅; `buildOgMetadata`, `buildTwitterMetadata` consumed by blog pages |
-| 4 | robots.txt | `src/app/robots.ts` ✅ — no change |
+| 4 | robots.txt | `public/robots.txt` ✅ |
 | 5 | sitemap.xml with blog | `src/app/sitemap.ts` — add `{url:'${SITE_URL}blog',priority:0.8}` + loop posts (`priority:0.7`, `lastModified: new Date(post.lastModified)`) |
 | 6 | JSON-LD: MedicalOrganization, Physician, WebSite, Article, BreadcrumbList, FAQPage | Move current inline `jsonLd` into `src/lib/structured-data.ts::buildGlobalGraph()`; add `WebSite` + lift `physician` into its own `@id`-linked `Physician` node with `alumniOf`, `hasCredential` (CRM), `sameAs` (Instagram, Facebook, Doctoralia). `buildBlogPostGraph(post)` lives in same file. |
 | 7 | Visible breadcrumb UI | `src/components/ui/Breadcrumb.tsx` on `/blog`, `/blog/[slug]`, `/politica-privacidade` |
@@ -199,7 +201,7 @@ export default async function Page({ params }) {
 | 9 | Internal linking | Landing cards → posts (Section 8). "Leia também" block on posts deferred to v2. |
 | 10 | External trust links | Footer.tsx: add Doctoralia, CFM registry (`https://portal.cfm.org.br/busca-medicos/?crm=${CRM_NUMBER}&uf=PR`) |
 | 11 | Heading hierarchy | Audit Header.tsx + Hero.tsx — one visible `<h1>` per page; demote brand to `<p>` if duplicated |
-| 12 | Local SEO | `BUSINESS_ADDRESS` + `BUSINESS_GEO` ✅. Add `areaServed: City(Curitiba)` to Physician node; add Google Maps place URL to `sameAs` |
+| 12 | Local SEO | `BUSINESS_ADDRESS` + `BUSINESS_GEO` ✅. Do not add new Curitiba-targeted local SEO because of the planned relocation. Keep current business data until confirmation, then retarget local signals to Campo Grande/MS. |
 | 13 | Image alt audit | Grep `Image` / `img`; fix generic alts. All `public/assets/*.webp` already descriptively named |
 | 14 | Crawlability | `politica-privacidade/page.tsx` — confirm `robots:{index:false}` in metadata |
 | 15 | Search Console ready | Manual: submit `/sitemap.xml`, request indexing for `/` + 2–3 top posts |

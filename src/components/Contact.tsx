@@ -1,4 +1,12 @@
-import { WHATSAPP_URL, ECO_TELEPHONE_NUMBER, CONTACT_EMAIL } from '@/constants'
+import {
+  BUSINESS_ADDRESS_DETAIL,
+  BUSINESS_ADDRESS_LINE,
+  BUSINESS_CLINIC_NAME,
+  CONTACT_EMAIL,
+  ECO_TELEPHONE_NUMBER,
+  GOOGLE_MAPS_URL,
+  WHATSAPP_URL,
+} from '@/constants'
 import Link from 'next/link'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 
@@ -6,7 +14,7 @@ export default function Contact() {
   const contactInfo = [
     {
       label: 'Local',
-      value: 'Eco Medical Center',
+      value: BUSINESS_CLINIC_NAME,
       detail: 'Setor de Coloproctologia',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -20,8 +28,8 @@ export default function Contact() {
     },
     {
       label: 'Endereço',
-      value: 'Rua Góias, 70 - Água Verde',
-      detail: 'Curitiba, Paraná',
+      value: BUSINESS_ADDRESS_LINE,
+      detail: BUSINESS_ADDRESS_DETAIL,
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -236,7 +244,7 @@ export default function Contact() {
                     </Link>
 
                     <Link
-                      href="mailto:dradayarasalomao@gmail.com"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg  text-center border-2 relative overflow-hidden"
                       style={{
                         backgroundColor: 'rgba(163, 84, 66, 0.1)',
@@ -261,6 +269,41 @@ export default function Contact() {
                         <span>E-mail</span>
                       </div>
                     </Link>
+
+                    {GOOGLE_MAPS_URL ? (
+                      <Link
+                        href={GOOGLE_MAPS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg text-center border-2 relative overflow-hidden"
+                        style={{
+                          backgroundColor: 'rgba(29, 65, 76, 0.08)',
+                          borderColor: 'var(--color-teal)',
+                          color: 'var(--color-teal)',
+                        }}
+                      >
+                        <div className="flex items-center justify-center gap-3">
+                          <div
+                            className="w-6 h-6 rounded-lg flex items-center justify-center"
+                            style={{ backgroundColor: 'rgba(29, 65, 76, 0.16)' }}
+                          >
+                            <svg
+                              className="w-4 h-4"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 001.039.573l.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <span>Como chegar</span>
+                        </div>
+                      </Link>
+                    ) : null}
                   </div>
                 </div>
               </div>
