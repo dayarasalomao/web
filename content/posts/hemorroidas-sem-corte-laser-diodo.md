@@ -34,6 +34,6 @@ O procedimento consiste na aplicação precisa do laser diretamente nos coxins h
 * Recuperação excepcional: por não envolver cortes nas áreas de maior sensibilidade, o pós-operatório tende a ser mais tranquilo.  
 * Retorno mais rápido: em poucos dias, muitos pacientes já conseguem retomar atividades cotidianas com mais conforto.
 
-## A indicação correta é a chave do sucesso
+## A importância da indicação correta
 
-Para garantir resultados satisfatórios e duradouros, a avaliação médica detalhada é fundamental. Quando bem indicada, esta técnica equilibra eficácia clínica e recuperação confortável.
+A avaliação médica detalhada é fundamental para definir a indicação. Quando bem indicada, esta técnica busca equilibrar eficácia clínica e recuperação confortável.

@@ -1,4 +1,5 @@
 import { WHATSAPP_URL } from '@/constants'
+import { getPostHref } from '@/lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -9,36 +10,42 @@ export default function WhenToSeek() {
       description:
         'Presença de sangue nas fezes ou dor persistente na região anal',
       urgency: 'high',
+      blogSlug: 'sangramento-anal-dor-quando-procurar-coloproctologista',
     },
     {
       title: 'Histórico de doenças inflamatórias intestinais',
       description:
         'Se você tem Crohn, retocolite ulcerativa ou histórico familiar',
       urgency: 'medium',
+      blogSlug: 'historico-crohn-retocolite-familia-acompanhamento-coloproctologista',
     },
     {
       title: 'Lesões, verrugas ou nódulos na região do ânus',
       description: 'Qualquer alteração visual ou palpável na área perianal',
 
       urgency: 'high',
+      blogSlug: 'lesoes-verrugas-nodulos-regiao-anal-o-que-observar',
     },
     {
       title: 'Dor ou desconforto durante evacuação',
       description:
         'Dificuldade, dor intensa ou desconforto persistente ao evacuar',
       urgency: 'medium',
+      blogSlug: 'dor-ao-evacuar-quando-investigar',
     },
     {
       title: 'Alterações no padrão intestinal',
       description:
         'Mudanças significativas na frequência ou consistência das fezes',
       urgency: 'medium',
+      blogSlug: 'alteracoes-habito-intestinal-quando-avaliar',
     },
     {
       title: 'Coceira ou irritação persistente',
       description:
         'Prurido anal que não melhora com cuidados básicos de higiene',
       urgency: 'low',
+      blogSlug: 'coceira-anal-persistente-causas-sinal-alerta',
     },
   ]
 
@@ -122,7 +129,8 @@ export default function WhenToSeek() {
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
                     <Image
-                      src="/assets/dayara-clinica.webp"
+                      src="/assets/dayara-frente-de-pe.webp"
+                      // src="/assets/dayara-clinica.webp"
                       alt="Dra. Dayara em consulta médica"
                       width={912}
                       height={1368}
@@ -138,10 +146,12 @@ export default function WhenToSeek() {
             <div className="order-1 lg:order-2 space-y-3">
               {symptoms.map((symptom, index) => {
                 const styles = getUrgencyStyles(symptom.urgency)
+                const href = getPostHref(symptom.blogSlug)
+
                 return (
                   <div
                     key={index}
-                    className="group card px-6 py-4 lg:px-6 lg:py-6 hover:shadow-lg transition-all duration-300 "
+                    className="group card px-6 py-4 lg:px-6 lg:py-6 hover:shadow-lg transition-all duration-300"
                     style={{
                       backgroundColor: styles.bg,
                       borderColor: styles.border,
@@ -161,6 +171,14 @@ export default function WhenToSeek() {
                         <p className="text-xs text-gray-600 leading-relaxed">
                           {symptom.description}
                         </p>
+                        {href ? (
+                          <Link
+                            href={href}
+                            className="mt-3 inline-flex text-xs font-medium text-copper transition-colors hover:text-teal"
+                          >
+                            Saiba mais
+                          </Link>
+                        ) : null}
                       </div>
                     </div>
                   </div>

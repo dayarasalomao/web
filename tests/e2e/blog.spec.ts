@@ -48,7 +48,11 @@ test('homepage treatment cards link into canonical treatment pages', async ({ pa
 test('homepage disease cards route to mapped treatment pages', async ({ page }) => {
   await page.goto('/')
 
-  await page.getByRole('link', { name: /fissura anal/i }).click()
+  await page
+    .locator('#doencas article')
+    .filter({ hasText: /fissura anal/i })
+    .getByRole('link', { name: /saiba mais/i })
+    .click()
 
   await expect(page).toHaveURL(/\/tratamentos\/toxina-botulinica-fissura-anal$/)
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
@@ -67,7 +71,7 @@ test('blog index renders article cards', async ({ page }) => {
     '/#contato',
   )
   await expect(page.getByRole('heading', { level: 1, name: /blog da dra\. dayara salomão/i })).toBeVisible()
-  await expect(page.getByRole('link', { name: /hemorroidectomia de alta performance/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /hemorroidectomia com laser de co2/i })).toBeVisible()
   await expect(page.getByRole('link', { name: /ver tratamentos/i })).toBeVisible()
   await expect(page.locator('footer').last().getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
 })
@@ -76,7 +80,7 @@ test('blog post renders body, faq, and CTA', async ({ page }) => {
   await page.goto(`/blog/${BLOG_POST_SLUG}`)
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    /hemorroidectomia de alta performance/i,
+    /hemorroidectomia com laser de co2/i,
   )
   await expect(page.getByRole('heading', { level: 2, name: /perguntas frequentes/i })).toBeVisible()
   await expect(page.getByRole('link', { name: /agendar consulta/i }).first()).toBeVisible()
@@ -108,7 +112,7 @@ test('treatment detail highlights internal blog content card', async ({ page }) 
   await page.goto('/tratamentos/hemorroidectomia-laser-co2')
 
   await expect(page.getByText(/artigo do blog/i).first()).toBeVisible()
-  await expect(page.getByRole('link', { name: /ler artigo completo/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: /ler artigo completo/i }).first()).toBeVisible()
 })
 
 test('sitemap and robots expose blog crawl signals', async ({ page }) => {
@@ -125,8 +129,14 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/tratamentos`)
   expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
+  expect(blogPostLocs).toContain(
+    `${CANONICAL_WEBSITE_URL}/blog/constipacao-intestinal-quando-investigar`,
+  )
   expect(treatmentLocs).toContain(
     `${CANONICAL_WEBSITE_URL}/tratamentos/hemorroidectomia-laser-co2`,
+  )
+  expect(treatmentLocs).toContain(
+    `${CANONICAL_WEBSITE_URL}/tratamentos/tratamento-constipacao-intestino-preso`,
   )
   expect(locs).not.toContain(`${CANONICAL_WEBSITE_URL}/politica-privacidade`)
 

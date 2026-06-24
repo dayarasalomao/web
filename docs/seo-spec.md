@@ -1,5 +1,7 @@
 # SEO Spec
 
+> **Relocation guardrail (recorded 2026-05-26):** The practice is expected to move from Curitiba/PR to Campo Grande/MS around July 2026. Do **not** add new Curitiba-focused page titles, meta descriptions, H1s, schema area targeting, or local SEO copy. Keep current Curitiba business data until confirmation, then retarget local signals to Campo Grande/MS.
+
 ## URLs indexáveis
 
 - `/`

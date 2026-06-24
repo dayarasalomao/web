@@ -34,6 +34,11 @@ export interface BreadcrumbItem {
   href?: string
 }
 
+export interface ItemListEntry {
+  name: string
+  href: string
+}
+
 function toAbsoluteUrl(value: string): string {
   if (!value) return value
   if (value.startsWith('http://') || value.startsWith('https://')) return value
@@ -56,6 +61,19 @@ export function buildBreadcrumbGraph(items: BreadcrumbItem[]): Thing {
       position: index + 1,
       name: item.label,
       ...(item.href ? { item: toAbsoluteUrl(item.href) } : {}),
+    })),
+  } as Thing
+}
+
+export function buildItemListGraph(name: string, items: ItemListEntry[]): Thing {
+  return {
+    '@type': 'ItemList',
+    name,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      url: toAbsoluteUrl(item.href),
     })),
   } as Thing
 }

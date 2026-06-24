@@ -57,6 +57,7 @@ export interface BlogPostMeta {
   featured?: boolean
   order?: number
   faqs?: FAQItem[]
+  disclaimer?: string
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -202,11 +203,20 @@ export function getAllPosts(): BlogPost[] {
   }
 
   return posts.sort((a, b) => {
+    if (a.publishDate !== b.publishDate) {
+      return a.publishDate < b.publishDate ? 1 : -1
+    }
+
     if (a.order !== undefined && b.order !== undefined) return a.order - b.order
     if (a.order !== undefined) return -1
     if (b.order !== undefined) return 1
-    return a.publishDate < b.publishDate ? 1 : -1
+    return a.slug.localeCompare(b.slug)
   })
+}
+
+export function getPostHref(slug?: string | null): string | null {
+  if (!slug) return null
+  return getPostBySlug(slug) ? `/blog/${slug}` : null
 }
 
 export function getAllPostSlugs(): string[] {

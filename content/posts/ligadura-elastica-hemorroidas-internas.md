@@ -35,4 +35,4 @@ O tratamento consiste na aplicação de um pequeno anel elástico na base da hem
 
 ## Observações importantes
 
-Para garantir a segurança total do paciente, este procedimento requer avaliação prévia sobre o uso de medicamentos anticoagulantes. Caso você utilize esse tipo de medicação, a estratégia terapêutica deve ser planejada de forma individualizada.
+Para a segurança do paciente, este procedimento requer avaliação prévia sobre o uso de medicamentos anticoagulantes. Caso você utilize esse tipo de medicação, a estratégia terapêutica deve ser planejada de forma individualizada.

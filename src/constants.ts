@@ -19,20 +19,38 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 
 export const ECO_TELEPHONE_NUMBER = '(41) 3123-6550'
 
+export const BUSINESS_CLINIC_NAME = 'Eco Medical Center'
+export const BUSINESS_STREET = 'Rua Goiás'
+export const BUSINESS_STREET_NUMBER = '70'
+export const BUSINESS_FLOOR = '3º andar'
+export const BUSINESS_NEIGHBORHOOD = 'Água Verde'
+export const BUSINESS_ADDRESS_LOCALITY = 'Curitiba'
+export const BUSINESS_ADDRESS_REGION = 'Paraná'
+export const BUSINESS_ADDRESS_REGION_CODE = 'PR'
+export const BUSINESS_POSTAL_CODE = '80620-060'
+export const BUSINESS_ADDRESS_LINE = `${BUSINESS_STREET}, ${BUSINESS_STREET_NUMBER} - ${BUSINESS_NEIGHBORHOOD}`
+export const BUSINESS_ADDRESS_DETAIL = `${BUSINESS_FLOOR}, ${BUSINESS_ADDRESS_LOCALITY} - ${BUSINESS_ADDRESS_REGION_CODE}, CEP ${BUSINESS_POSTAL_CODE}`
+export const BUSINESS_FULL_ADDRESS = `${BUSINESS_STREET}, ${BUSINESS_STREET_NUMBER}, ${BUSINESS_FLOOR}, ${BUSINESS_NEIGHBORHOOD}, ${BUSINESS_ADDRESS_LOCALITY} - ${BUSINESS_ADDRESS_REGION_CODE}, CEP ${BUSINESS_POSTAL_CODE}`
+export const BUSINESS_LOCATION_LABEL = `${BUSINESS_CLINIC_NAME}, ${BUSINESS_NEIGHBORHOOD}, ${BUSINESS_ADDRESS_LOCALITY}/${BUSINESS_ADDRESS_REGION_CODE}`
+export const BUSINESS_FOOTER_LOCATION = `${BUSINESS_CLINIC_NAME} - ${BUSINESS_ADDRESS_LOCALITY}, ${BUSINESS_ADDRESS_REGION_CODE}`
+
 // =================================================================
 // SEO & METADATA CONSTANTS
 // =================================================================
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
-export const SEO_BUSINESS_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
-export const SEO_LOCATION = 'Curitiba'
+// Relocation note recorded 2026-05-26: the practice is expected to move
+// from Curitiba/PR to Campo Grande/MS around July 2026. Do not add new
+// Curitiba-targeted local SEO; retarget these local signals only after
+// the move is confirmed.
+export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
-export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Tratamentos minimamente invasivos com laser para hemorroidas, fissura e fístula anal. Agende sua consulta.`
-export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, eco medical center, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável`
+export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} com atendimento no ${BUSINESS_CLINIC_NAME}. Tratamentos para hemorroidas, fissura anal, fístula anal, HPV perianal, cisto pilonidal e outras doenças anorretais.`
+export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, ${BUSINESS_CLINIC_NAME}, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
 
-export const SEO_OG_DESCRIPTION = `Especialista em coloproctologia em ${SEO_LOCATION} com tratamentos minimamente invasivos usando laser e outras tecnologias modernas. Atendimento no Eco Medical Center - Água Verde.`
-export const SEO_TWITTER_DESCRIPTION = `Especialista em coloproctologia com tratamentos minimamente invasivos usando laser. Atendimento em ${SEO_LOCATION} no Eco Medical Center.`
+export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
+export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
 
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
 export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
@@ -52,11 +70,10 @@ export const RQE_NUMBER = '33908'
 export const RQE_FULL = `RQE ${RQE_NUMBER}`
 export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
 
-// TODO: confirm with user before production — public Doctoralia profile URL
-export const DOCTORALIA_URL = ''
+export const DOCTORALIA_URL =
+  'https://www.doctoralia.com.br/dayara-salomao/coloproctologista/curitiba'
 
-// TODO: confirm with user before production — Google Maps place URL (Eco Medical Center listing)
-export const GOOGLE_MAPS_URL = ''
+export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/8pzUEGq1YnVFmsf4A'
 
 // =================================================================
 // BUSINESS INFORMATION (Used in JSON-LD Schema)
@@ -72,16 +89,16 @@ export const BUSINESS_EMAIL = CONTACT_EMAIL
 // LOCATION DATA
 // =================================================================
 export const BUSINESS_ADDRESS = {
-  streetAddress: 'Rua Góias, 70 - 3º andar',
-  addressLocality: 'Curitiba',
-  addressRegion: 'Paraná',
+  streetAddress: BUSINESS_ADDRESS_LINE,
+  addressLocality: BUSINESS_ADDRESS_LOCALITY,
+  addressRegion: BUSINESS_ADDRESS_REGION,
   addressCountry: 'BR',
-  postalCode: '80620-010',
+  postalCode: BUSINESS_POSTAL_CODE,
 }
 
 export const BUSINESS_GEO = {
-  latitude: -25.4284,
-  longitude: -49.2733,
+  latitude: -25.4646652,
+  longitude: -49.2905794,
 }
 
 export const BUSINESS_HOURS = 'Mo-Fr 08:00-18:00'
@@ -95,7 +112,7 @@ export const PHYSICIAN_DATA = {
   name: 'Dayara Salomão',
   medicalSpecialty: BUSINESS_SPECIALTY,
   university: 'Pontifícia Universidade Católica do Paraná',
-  clinic: 'Eco Medical Center',
+  clinic: BUSINESS_CLINIC_NAME,
 }
 
 // =================================================================
@@ -110,6 +127,12 @@ export const MEDICAL_PROCEDURES = [
   'Remoção de plicoma anal com laser de CO2',
   'Toxina botulínica para fissura anal',
   'Tratamento de HPV perianal com laser de CO2',
+  'Tratamento de prurido anal',
+  'Tratamento de constipação intestinal',
+  'Avaliação de diarreia crônica',
+  'Tratamento da síndrome do intestino irritável',
+  'Tratamento de hidradenite supurativa',
+  'Acompanhamento de doenças inflamatórias intestinais',
 ]
 
 // =================================================================
