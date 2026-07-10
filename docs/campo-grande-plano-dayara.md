@@ -1,9 +1,9 @@
 # Dayara, nosso plano pra Campo Grande 🚀
 
 Preparei um resumão rápido do que vamos fazer pra você aparecer bem no Google em Campo Grande.
-A boa notícia: seu site já é ótimo, e Campo Grande tem **bem menos concorrência** que Curitiba —
-dá pra você chegar na primeira página rápido. Só preciso de umas informações suas pra virar a
-chave. Deixei tudo em checklist pra ficar fácil. 😊
+A boa notícia: seu site tem todos os fundamentos técnicos, e Campo Grande tem **bem menos
+concorrência** que Curitiba — dá pra você chegar na primeira página rápido. Só preciso de umas
+informações suas pra virar a chave. Deixei tudo em checklist pra ficar fácil. 😊
 
 ---
 
@@ -21,8 +21,7 @@ Me manda esses dados quando puder (pode ser por WhatsApp mesmo):
 - [ ] Pretende fazer **colonoscopia** por lá? (se sim, crio páginas específicas — muita gente
       procura)
 
-Assim que você me passar isso, eu finalizo o site rapidinho. Já deixei tudo preparado esperando
-esses dados. 👍
+Assim que você me passar isso, eu finalizo o site rapidinho.
 
 ---
 
@@ -32,12 +31,11 @@ Muito bom que você está conseguindo crescer no perfil do Google — 13 avalia�
 estrelas! Dá pra melhorar ainda mais com uns ajustes rápidos:
 
 - [ ] **Trocar a categoria** do perfil de "Centro médico" pra **"Proctologista"**
-- [ ] **Tirar o "| Proctologista"** do nome — deixa só **"Dra. Dayara Salomão"** (o Google pode
-      bloquear perfil com palavra extra no nome)
-- [ ] **Responder as 13 avaliações** que você já tem
+- [ ] **Responder as avaliações** que já tem (pelo menos algumas) — ajuda o Google a entender
+      que você está ativa
 - [ ] **Pedir mais avaliações**: manda o link de avaliação no WhatsApp depois da consulta.
       Meta: chegar a 50+ 🎯
-- [ ] **Postar umas 15 a 20 fotos**: fachada, recepção, você atendendo, equipamentos
+- [ ] **Postar algumas fotos**: fachada, recepção, você atendendo, equipamentos
 
 > Importante: quando mudar pra Campo Grande, a gente **edita o perfil que já existe** — nunca cria
 > um novo. Assim você não perde suas avaliações.
