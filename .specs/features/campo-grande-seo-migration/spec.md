@@ -1,6 +1,6 @@
 # Campo Grande SEO Migration Specification
 
-**Status**: Draft
+**Status**: Active — move is now **imminent** (client confirmed 2026-07-10). This is the *code* half (WS1) of the broader plan in `.specs/features/campo-grande-launch-growth/spec.md`, which adds the GBP/off-site and paid workstreams. The launch switch (T11) is blocked only on collecting confirmed Campo Grande NAP facts.
 **Context**: `.specs/features/campo-grande-seo-migration/context.md`
 
 ## Problem Statement
