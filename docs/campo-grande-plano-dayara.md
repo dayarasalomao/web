@@ -42,19 +42,12 @@ estrelas! Dá pra melhorar ainda mais com uns ajustes rápidos:
 
 ---
 
-## 3. O que eu já estou cuidando
-
-- Seu **site** já está sendo preparado pra virada (só falta seus dados da parte 1).
-- Sobre os **anúncios**: vale focar em Campo Grande. Como lá tem menos concorrência, tende a
-  sair mais barato. 💰
-
----
-
-## 4. A ordem das coisas
+## 3. A ordem das coisas
 
 1. Você me manda os dados da parte 1 + faz os ajustes da parte 2.
 2. Eu finalizo o site e a gente muda seu Google pra Campo Grande juntos.
-3. A campanha de anúncios passa a focar em Campo Grande quando a agenda abrir.
+3. Minha recomendação é a campanha de anúncios passar a focar em Campo Grande quando a agenda
+   abrir (você que decide).
 4. Depois é manter o ritmo: avaliações, fotos e conteúdo novo.
 
 Qualquer dúvida me chama! 🙌
