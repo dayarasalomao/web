@@ -71,12 +71,16 @@ Actions Dayara (or the user on her behalf) performs outside the repo. **This is 
 
 ### WS3 — Paid acquisition (bridge to organic)
 
-| ID | Requirement | Priority |
-| --- | --- | --- |
-| CGGROW-20 | Google Ads **Search** starter, high-intent only ("proctologista campo grande", "cirurgia hemorroida campo grande", "coloproctologista campo grande"), geo-fenced to CG metro | P1 |
-| CGGROW-21 | Conversion tracking: WhatsApp click + call as conversions (GTM already wired in `layout.tsx`) | P1 |
-| CGGROW-22 | Tight negative-keyword list + exact/phrase match to avoid budget waste; small starter budget, scale on CPA | P2 |
-| CGGROW-23 | (Optional) Meta/Instagram retargeting off her 2.3k IG following once CG is live | P3 |
+**Division of labor**: the client has a dedicated **ads person** who builds and runs campaigns.
+Our role (dev/consultant) is **advisory + technical enablement** — recommend keywords/geo/negatives
+and own the on-site conversion-tracking wiring. We do **not** build or manage the campaigns.
+
+| ID | Requirement | Owner | Priority |
+| --- | --- | --- | --- |
+| CGGROW-20 | Advise the ads person: high-intent keywords ("proctologista campo grande", "cirurgia hemorroida campo grande", "coloproctologista campo grande") geo-fenced to CG metro | Us → ads person | P1 |
+| CGGROW-21 | Conversion tracking: WhatsApp click + call as conversions (GTM already wired in `layout.tsx`) | Us (dev) | P1 |
+| CGGROW-22 | Advise negative-keyword list + exact/phrase match + small starter budget scaling on CPA | Us → ads person | P2 |
+| CGGROW-23 | (Optional) Meta/Instagram retargeting off her 2.3k IG following once CG is live | Ads person | P3 |
 
 ---
 
