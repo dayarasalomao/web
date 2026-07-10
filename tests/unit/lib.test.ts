@@ -9,6 +9,12 @@ import {
   TargetAudience,
   ContentIntent,
 } from '../../src/lib/blog.ts'
+import {
+  getAllLocations,
+  getIndexableLocations,
+  getLocationBySlug,
+  isLocationIndexable,
+} from '../../src/lib/locations.ts'
 
 describe('calculateReadingTime', () => {
   it('rounds up by 200 wpm', () => {
@@ -96,6 +102,48 @@ describe('label helpers', () => {
     assert.equal(getContentIntentLabel(ContentIntent.AWARENESS), 'Conscientização')
     assert.equal(getContentIntentLabel(ContentIntent.CONSIDERATION), 'Consideração')
     assert.equal(getContentIntentLabel(ContentIntent.DECISION), 'Decisão')
+  })
+})
+
+describe('practice locations', () => {
+  it('exposes both Curitiba (active) and Campo Grande (planned)', () => {
+    const slugs = getAllLocations().map((location) => location.slug)
+    assert.deepEqual(slugs, ['curitiba', 'campo-grande'])
+  })
+
+  it('keeps Curitiba active with full NAP and indexable', () => {
+    const curitiba = getLocationBySlug('curitiba')
+    if (!curitiba) throw new Error('curitiba location missing')
+    assert.equal(curitiba.status, 'active')
+    assert.ok(curitiba.address)
+    assert.ok(curitiba.geo)
+    assert.equal(isLocationIndexable(curitiba), true)
+  })
+
+  it('keeps planned Campo Grande non-indexable with no active NAP', () => {
+    const campoGrande = getLocationBySlug('campo-grande')
+    if (!campoGrande) throw new Error('campo-grande location missing')
+    assert.equal(campoGrande.status, 'planned')
+    assert.equal(campoGrande.stateCode, 'MS')
+    assert.equal(campoGrande.indexable, false)
+    assert.equal(campoGrande.showAppointmentCta, false)
+    // No address/geo/phone/maps until the client confirms the real facts.
+    assert.equal(campoGrande.address, undefined)
+    assert.equal(campoGrande.geo, undefined)
+    assert.equal(campoGrande.phone, undefined)
+    assert.equal(campoGrande.mapsUrl, undefined)
+    assert.equal(isLocationIndexable(campoGrande), false)
+  })
+
+  it('getIndexableLocations excludes any planned location', () => {
+    const indexable = getIndexableLocations()
+    assert.equal(indexable.length, 1)
+    assert.equal(indexable[0].slug, 'curitiba')
+    assert.ok(indexable.every((location) => location.status === 'active'))
+  })
+
+  it('returns null for unknown slug', () => {
+    assert.equal(getLocationBySlug('sao-paulo'), null)
   })
 })
 

@@ -63,6 +63,11 @@ export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPE
 // =================================================================
 // PROFESSIONAL CREDENTIALS (Used in Physician JSON-LD + Footer)
 // =================================================================
+// TODO(campo-grande): Dra. Dayara is already registered in MS as
+// CRM-MS 16556 / RQE 9819 (seen on her Instagram profile). Once she is
+// practicing in Campo Grande, switch these to the MS registration — or
+// display BOTH during the transition. Keep PR values until the move is
+// live so the current Curitiba practice stays truthful.
 export const CRM_NUMBER = '42596'
 export const CRM_STATE = 'PR'
 export const CRM_FULL = `CRM-${CRM_STATE} ${CRM_NUMBER}`
@@ -70,9 +75,13 @@ export const RQE_NUMBER = '33908'
 export const RQE_FULL = `RQE ${RQE_NUMBER}`
 export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
 
+// TODO(campo-grande): update the Doctoralia city slug (.../curitiba) once
+// her profile reflects Campo Grande.
 export const DOCTORALIA_URL =
   'https://www.doctoralia.com.br/dayara-salomao/coloproctologista/curitiba'
 
+// TODO(campo-grande): replace with the confirmed Campo Grande Google Maps
+// place link when the new clinic is live.
 export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/8pzUEGq1YnVFmsf4A'
 
 // =================================================================
