@@ -111,10 +111,10 @@ export default function WhenToSeek() {
               className="font-semibold"
               style={{ color: 'var(--color-copper)' }}
             >
-              Não ignore os sinais
+              Sintomas persistentes merecem atenção
             </span>{' '}
-            do seu corpo. O diagnóstico precoce é fundamental para tratamentos
-            mais eficazes e menos invasivos.
+            . Uma avaliação ajuda a esclarecer possíveis causas e a definir
+            próximos passos de forma individualizada.
           </p>
         </div>
 
@@ -235,10 +235,10 @@ export default function WhenToSeek() {
                   className="font-semibold mb-1"
                   style={{ color: 'var(--color-teal)' }}
                 >
-                  Diagnóstico Precoce
+                  Avaliação Oportuna
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Melhores resultados no tratamento
+                  Esclarecimento dos sinais e sintomas
                 </p>
               </div>
               <div className="text-center p-4 card">
@@ -264,10 +264,10 @@ export default function WhenToSeek() {
                   className="font-semibold mb-1"
                   style={{ color: 'var(--color-teal)' }}
                 >
-                  Tratamento Preciso
+                  Conduta Individualizada
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Abordagem especializada e eficaz
+                  Opções discutidas conforme cada caso
                 </p>
               </div>
               <div className="text-center p-4 card">
@@ -293,10 +293,10 @@ export default function WhenToSeek() {
                   className="font-semibold mb-1"
                   style={{ color: 'var(--color-teal)' }}
                 >
-                  Alívio dos Sintomas
+                  Acompanhamento
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Retorno ao bem-estar e qualidade de vida
+                  Orientações para evolução e retorno
                 </p>
               </div>
             </div>

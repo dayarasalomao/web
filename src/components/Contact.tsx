@@ -89,8 +89,8 @@ export default function Contact() {
             }}
           ></div>
           <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Entre em contato para agendar sua consulta e receber o melhor
-            tratamento especializado
+            Entre em contato para confirmar horários e receber orientações de
+            agendamento.
           </p>
         </div>
 

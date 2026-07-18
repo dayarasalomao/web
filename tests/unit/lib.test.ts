@@ -120,18 +120,20 @@ describe('practice locations', () => {
     assert.equal(isLocationIndexable(curitiba), true)
   })
 
-  it('keeps planned Campo Grande non-indexable with no active NAP', () => {
+  it('keeps planned Campo Grande non-indexable with confirmed launch facts but no active contact', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
     assert.equal(campoGrande.status, 'planned')
     assert.equal(campoGrande.stateCode, 'MS')
     assert.equal(campoGrande.indexable, false)
     assert.equal(campoGrande.showAppointmentCta, false)
-    // No address/geo/phone/maps until the client confirms the real facts.
-    assert.equal(campoGrande.address, undefined)
+    assert.equal(campoGrande.name, 'Instituto do Aparelho Digestivo')
+    assert.equal(campoGrande.address?.streetAddress, 'R. Alagoas, 700')
+    assert.equal(campoGrande.address?.postalCode, '79020-120')
+    assert.equal(campoGrande.launchDate, '2026-08-05')
     assert.equal(campoGrande.geo, undefined)
     assert.equal(campoGrande.phone, undefined)
-    assert.equal(campoGrande.mapsUrl, undefined)
+    assert.ok(campoGrande.mapsUrl)
     assert.equal(isLocationIndexable(campoGrande), false)
   })
 
@@ -146,4 +148,3 @@ describe('practice locations', () => {
     assert.equal(getLocationBySlug('sao-paulo'), null)
   })
 })
-

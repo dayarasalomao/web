@@ -129,7 +129,7 @@ export default function CV() {
               {' '}
               especialização contínua
             </span>{' '}
-            para oferecer o melhor cuidado aos pacientes
+            para sustentar um cuidado atualizado e responsável
           </p>
         </div>
 
@@ -237,12 +237,12 @@ export default function CV() {
                 className="text-2xl lg:text-3xl font-serif font-bold mb-4"
                 style={{ color: 'var(--color-teal)' }}
               >
-                Comprometimento com a Excelência
+                Compromisso com atualização contínua
               </h3>
               <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-                A formação continuada e a busca constante por novas técnicas
-                garantem que nossos pacientes recebam sempre o melhor e mais
-                moderno tratamento disponível.
+                A formação continuada amplia as possibilidades de avaliação e
+                tratamento, sempre respeitando a indicação e as particularidades
+                de cada paciente.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
@@ -271,7 +271,7 @@ export default function CV() {
                     Excelência Acadêmica
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Formação nas melhores instituições
+                    Formação em instituições reconhecidas
                   </p>
                 </div>
                 <div className="text-center">
@@ -329,7 +329,7 @@ export default function CV() {
                     Atualização Constante
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Sempre em busca do melhor
+                    Revisão contínua de práticas e evidências
                   </p>
                 </div>
               </div>

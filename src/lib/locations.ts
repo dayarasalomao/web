@@ -3,9 +3,9 @@
 // =================================================================
 // Single source of truth for where Dra. Dayara Salomão attends.
 // Separates factual ACTIVE practice data (safe to index) from a
-// PLANNED target market (Campo Grande/MS) that must NOT emit active
-// NAP, geo, schema, sitemap entries, or appointment CTAs until the
-// real facts are confirmed by the client.
+// PLANNED target market (Campo Grande/MS) that may show confirmed
+// pre-launch facts on a noindex page, but must NOT emit active local
+// schema, sitemap entries, or appointment CTAs until activation.
 //
 // See `.specs/features/campo-grande-seo-migration/design.md` and
 // `.specs/features/campo-grande-launch-growth/spec.md`.
@@ -65,11 +65,13 @@ export interface PracticeLocation {
   faqs: LocationFaq[]
   indexable: boolean
   showAppointmentCta: boolean
+  launchDate?: string
   lastUpdated: string
 }
 
-// Core coloproctology services offered — reused for both the active and
-// (assumed-same) planned location until the client confirms otherwise.
+// Core coloproctology services offered — reused for the active location and
+// as a pre-launch editorial model. Colonoscopy is intentionally excluded:
+// the doctor confirmed it will not be offered by her at the new location.
 const CORE_SERVICES: string[] = [
   'Doença hemorroidária',
   'Fissura anal',
@@ -139,20 +141,29 @@ export const LOCATIONS: PracticeLocation[] = [
   // ---------------------------------------------------------------
   // PLANNED — Campo Grande/MS. Move is imminent (client confirmed
   // 2026-07-10). Dra. Dayara is already CRM-MS 16556 / RQE 9819.
-  // Kept indexable:false with NO active NAP/geo/maps/CTA until the
-  // facts below are confirmed. DO NOT flip to 'active' until then.
+  // Address, clinic, map and launch date are confirmed. Kept indexable:false
+  // with no active local schema/geo/phone/CTA until the coordinated launch.
+  // DO NOT flip to 'active' merely because the date has passed.
   // ---------------------------------------------------------------
   {
     slug: 'campo-grande',
-    name: 'Campo Grande', // TODO(campo-grande): replace with confirmed clinic name.
+    name: 'Instituto do Aparelho Digestivo',
     status: 'planned',
     city: 'Campo Grande',
     state: 'Mato Grosso do Sul',
     stateCode: 'MS',
-    // TODO(campo-grande): add confirmed `address` (rua, número, bairro, CEP).
+    address: {
+      streetAddress: 'R. Alagoas, 700',
+      neighborhood: 'Jardim dos Estados',
+      addressLocality: 'Campo Grande',
+      addressRegion: 'Mato Grosso do Sul',
+      postalCode: '79020-120',
+      addressCountry: 'BR',
+    },
     // TODO(campo-grande): add confirmed `geo` (latitude/longitude).
     // TODO(campo-grande): add confirmed `phone` (DDD 67) and `whatsappUrl`.
-    // TODO(campo-grande): add confirmed `mapsUrl` (Google Maps place link).
+    mapsUrl:
+      'https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KaEUri6R6IaUMQkFnCP7Ozlw&daddr=R.+Alagoas,+700+-+Sl+8+-+Jardim+dos+Estados,+Campo+Grande+-+MS,+79020-120',
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
     services: CORE_SERVICES,
@@ -161,7 +172,8 @@ export const LOCATIONS: PracticeLocation[] = [
     faqs: [],
     indexable: false,
     showAppointmentCta: false,
-    lastUpdated: '2026-07-10',
+    launchDate: '2026-08-05',
+    lastUpdated: '2026-07-18',
   },
 ]
 
@@ -178,8 +190,8 @@ export function getLocationBySlug(slug: string): PracticeLocation | null {
 }
 
 // A location is safe to index only when it is active, explicitly flagged
-// indexable, and has a confirmed postal address. Planned locations without
-// an address never leak into metadata, schema, or the sitemap.
+// indexable, and has a confirmed postal address. Planned locations may have
+// a pre-launch page, but never enter the sitemap or active local schema.
 export function isLocationIndexable(location: PracticeLocation): boolean {
   return (
     location.indexable &&

@@ -10,7 +10,7 @@ Dra. Dayara Salomão has a technically excellent website (top ~10% of medical si
 
 **Diagnosis**: On-page technical SEO is not the bottleneck — it is already strong. Local medical (YMYL) ranking is won **off the website**, in this order: (1) Google Business Profile / Map Pack, (2) domain authority & backlinks, (3) review volume & citations, (4) content depth on bottom-funnel queries. She is a young domain competing against 5–15-year-old Curitiba sites, exact-match domains (`cirurgiahemorroidas.com.br`), and press-mentioned competitors, with Doctoralia occupying aggregator slots.
 
-**Strategic pivot**: She is relocating to **Campo Grande/MS** (already CRM-MS 16556 / RQE 9819 registered; website still shows CRM-PR 42596 / RQE 33908). Campo Grande is a **far less competitive market** than Curitiba. Rather than fight uphill in Curitiba for 12+ months, she can plant the flag first in Campo Grande and rank page-1 / map-pack within months. The plan is a **coordinated relocation of her entire digital footprint** — executed in an order that preserves the assets built over the last year (13 Google reviews, 5.0 rating, domain brand trust).
+**Strategic pivot**: She is relocating to **Campo Grande/MS** and authorized CRM-MS 16556 / RQE 9819 for the site. The public site remains on Curitiba until the coordinated launch. Campo Grande is a **less saturated organic market** in the current manual review, so the plan is a coordinated relocation of her digital footprint while preserving existing brand and review assets.
 
 ## Goals
 
@@ -20,21 +20,21 @@ Dra. Dayara Salomão has a technically excellent website (top ~10% of medical si
 - [ ] Get patients **now** via paid, while organic authority compounds over 6–12 months.
 - [ ] Keep everything CFM-compliant (sober, no guarantees, no fake NAP/reviews).
 
-## Critical Blocker (must resolve before launch switch)
+## Remaining blockers before launch switch
 
 The website launch switch (CGSEO T11) and the GBP move both require confirmed Campo Grande facts that we **do not have yet**:
 
 | Fact | Needed for | Status |
 | --- | --- | --- |
-| Campo Grande clinic name | GBP, schema, NAP, site | ❌ MISSING |
-| Full street address + CEP | GBP, `PostalAddress`, contact | ❌ MISSING |
+| Campo Grande clinic name | GBP, schema, NAP, site | ✅ Instituto do Aparelho Digestivo |
+| Full street address + CEP | GBP, `PostalAddress`, contact | ✅ R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, 79020-120 |
 | Phone / WhatsApp for MS | CTAs, schema telephone | ❌ MISSING (site WhatsApp 5541… is a PR number) |
-| Google Maps place URL | GBP, `sameAs`, navigation | ❌ MISSING |
+| Google Maps place URL | GBP, `sameAs`, navigation | ✅ Provided; visible “Sala 8” still needs confirmation |
 | Geo coordinates | `GeoCoordinates` | ❌ MISSING |
-| First active consult date | Launch timing, ad start | ❌ MISSING |
+| First active consult date | Launch timing, ad start | ✅ 2026-08-05 |
 | CRM-MS status | Credential display | ✅ CRM-MS 16556 / RQE 9819 (from Instagram) |
 | Services offered in CG | Treatment/service lists | ⚠️ Assume same unless told otherwise |
-| Colonoscopy offered? | Whether to build colonoscopy pages | ❌ MISSING |
+| Colonoscopy offered? | Whether to build colonoscopy pages | ✅ No; keep out of scope |
 
 **Action: collect these from the client before executing WS1 launch switch or WS2 GBP move.**
 
@@ -111,17 +111,17 @@ STEP 5  Content: Campo Grande local-intent posts (CGSEO T10 backlog)  ── aft
 
 | Item | Reason |
 | --- | --- |
-| Fabricated Campo Grande NAP before facts confirmed | Compliance / trust |
+| Fabricated phone, geo, room number or hours before confirmation | Compliance / trust |
 | Fake or incentivized reviews | CFM + Google policy |
 | Modeling a non-owned clinic as her business in schema | Trust / accuracy |
 | Aggressive/superiority medical claims | CFM advertising rules |
-| Colonoscopy pages | Gated on client confirmation she offers it |
+| Colonoscopy pages | Client confirmed she will not offer it at this location |
 
 ## Requirement Traceability
 
 | ID | Workstream | Priority | Status |
 | --- | --- | --- | --- |
-| CGGROW-01..04 | WS1 Website | P1 | Blocked on Critical Facts |
+| CGGROW-01..04 | WS1 Website | P1 | Partially unblocked; phone/geo/room/publication approval remain |
 | CGGROW-10..12 | WS2 GBP core | P1 | Ready (client action) |
 | CGGROW-13 | WS2 Reviews | P1 | Ready (client action) |
 | CGGROW-14..17 | WS2 Off-site | P2 | Ready |

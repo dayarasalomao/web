@@ -6,6 +6,7 @@ import {
   BLOG_DEFAULT_OG_IMAGE,
   BLOG_DEFAULT_OG_IMAGE_ALT,
   TWITTER_HANDLE,
+  SEO_LOCATION,
 } from '@/constants'
 import type { BlogPost } from './blog'
 import type { Treatment } from './treatments'
@@ -112,15 +113,23 @@ export function buildPostMetadata(post: BlogPost): Metadata {
 export function buildTreatmentMetadata(treatment: Treatment): Metadata {
   const url = buildCanonical(`/tratamentos/${treatment.slug}`)
   const imageAlt = `${treatment.title} — ${SEO_DOCTOR_NAME}`
+  const localizedTitle = `${treatment.shortTitle} em ${SEO_LOCATION} | Dra. Dayara`
+  const localizedDescription = `${treatment.metaDescription.replace(/\.$/, '')} Atendimento em ${SEO_LOCATION}, com indicação definida após avaliação individual.`
+  const localizedKeywords = [
+    ...treatment.keywords,
+    ...treatment.keywords.map(
+      (keyword) => `${keyword} ${SEO_LOCATION.toLocaleLowerCase('pt-BR')}`,
+    ),
+  ]
 
   return {
-    title: treatment.metaTitle,
-    description: treatment.metaDescription,
-    keywords: treatment.keywords,
+    title: localizedTitle,
+    description: localizedDescription,
+    keywords: localizedKeywords,
     alternates: { canonical: url },
     openGraph: buildOgMetadata({
-      title: treatment.metaTitle,
-      description: treatment.metaDescription,
+      title: localizedTitle,
+      description: localizedDescription,
       url,
       image: BLOG_DEFAULT_OG_IMAGE,
       imageAlt,
@@ -128,8 +137,8 @@ export function buildTreatmentMetadata(treatment: Treatment): Metadata {
       modifiedTime: treatment.lastUpdated,
     }),
     twitter: buildTwitterMetadata({
-      title: treatment.metaTitle,
-      description: treatment.metaDescription,
+      title: localizedTitle,
+      description: localizedDescription,
       image: BLOG_DEFAULT_OG_IMAGE,
     }),
     robots: DEFAULT_ROBOTS,

@@ -19,6 +19,7 @@ interface HeaderProps {
 export default function Header({ mode = 'home' }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+  const suppressAppointmentCta = pathname === '/locais-de-atendimento/campo-grande'
   const navItems = mode === 'subpage' ? SUBPAGE_HEADER_NAV_ITEMS : HOME_HEADER_NAV_ITEMS
 
   const isActiveItem = (item: NavItem) => {
@@ -113,7 +114,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-6">
+          <ul className="hidden md:flex items-center space-x-5">
             {navItems.map((item) => (
               <li key={item.href}>
                 {renderNavLink(item)}
@@ -121,11 +122,25 @@ export default function Header({ mode = 'home' }: HeaderProps) {
             ))}
           </ul>
 
+          {!suppressAppointmentCta ? (
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-conversion="whatsapp-header"
+              className="btn btn-secondary hidden text-sm lg:inline-flex"
+            >
+              Agendar consulta
+            </Link>
+          ) : null}
+
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
               <span
@@ -149,7 +164,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-6 card">
+          <div id="mobile-navigation" className="md:hidden mt-6 card">
             <ul className="space-y-3 p-4">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -157,7 +172,8 @@ export default function Header({ mode = 'home' }: HeaderProps) {
                 </li>
               ))}
             </ul>
-            <div className="px-4 pb-4 pt-2 border-t border-gray-200">
+            {!suppressAppointmentCta ? (
+              <div className="px-4 pb-4 pt-2 border-t border-gray-200">
               {/* CTA Button */}
               <ul className="py-2 px-3">
                 <li key="agendar-consulta">
@@ -186,7 +202,8 @@ export default function Header({ mode = 'home' }: HeaderProps) {
                   </Link>
                 </li>
               </ul>
-            </div>
+              </div>
+            ) : null}
           </div>
         )}
       </nav>

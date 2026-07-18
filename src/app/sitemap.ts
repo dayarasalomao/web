@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { SITE_URL, SITEMAP_IMAGES } from '@/constants'
 import { getAllPosts } from '@/lib/blog'
 import { getAllTreatments } from '@/lib/treatments'
+import { getIndexableLocations } from '@/lib/locations'
 
 const CANONICAL_SITE_URL = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL
 
@@ -17,6 +18,7 @@ function getNewestDate(values: string[]): string | Date {
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
   const treatments = getAllTreatments()
+  const locations = getIndexableLocations()
   const newestPostDate = getNewestDate(posts.map((post) => post.lastModified))
   const newestTreatmentDate = getNewestDate(
     treatments.map((treatment) => treatment.lastUpdated),
@@ -46,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: canonicalUrl('/locais-de-atendimento'),
+      lastModified: getNewestDate(locations.map((location) => location.lastUpdated)),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     ...posts.map((post) => ({
       url: canonicalUrl(`/blog/${post.slug}`),
       lastModified: post.lastModified,
@@ -57,6 +65,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: treatment.lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+    ...locations.map((location) => ({
+      url: canonicalUrl(`/locais-de-atendimento/${location.slug}`),
+      lastModified: location.lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
     })),
   ]
 }

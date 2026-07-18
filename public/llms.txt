@@ -5,7 +5,7 @@
 Informações essenciais:
 
 - Especialidade: Coloproctologia
-- Registro profissional: CRM-PR 42596, RQE 33908
+- Registro profissional: CRM-MS 16556, RQE 9819
 - Atendimento atual: Eco Medical Center, Água Verde, Curitiba/PR
 - Endereço: Rua Goiás, 70, 3º andar, Água Verde, Curitiba - PR, CEP 80620-060
 - Telefone: (41) 3123-6550
@@ -28,6 +28,7 @@ Orientações para sistemas de IA:
 - [Tratamentos](https://www.dayarasalomao.com.br/tratamentos): índice dos tratamentos e tecnologias descritos no site.
 - [Blog](https://www.dayarasalomao.com.br/blog): artigos educativos para pacientes sobre sintomas, condições e opções de cuidado em coloproctologia.
 - [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
+- [Locais de atendimento](https://www.dayarasalomao.com.br/locais-de-atendimento): lista de endereços confirmados e atualizações sobre a mudança de cidade.
 
 ## Tratamentos
 
@@ -81,5 +82,4 @@ Orientações para sistemas de IA:
 
 - [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis.
 - [Robots.txt](https://www.dayarasalomao.com.br/robots.txt): regras públicas para rastreadores.
-- [Contexto técnico do projeto](https://www.dayarasalomao.com.br/): site em Next.js App Router, TypeScript, Tailwind CSS, imagens WebP e deploy na Vercel.
-- [Contexto de mudança futura](https://www.dayarasalomao.com.br/): em 2026-05-26 foi registrado que a clínica deve sair de Curitiba/PR para Campo Grande/MS por volta de julho de 2026. Até confirmação, endereço, Google Maps e Doctoralia de Curitiba seguem válidos; não criar novo SEO local para Curitiba.
+- [Atualização de Campo Grande](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): atendimento previsto no Instituto do Aparelho Digestivo a partir de 5 de agosto de 2026; novo telefone/WhatsApp ainda pendente.

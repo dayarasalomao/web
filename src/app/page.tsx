@@ -8,16 +8,20 @@ import Testimonials from '@/components/Testimonials'
 import CV from '@/components/CV'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import LatestArticles from '@/components/LatestArticles'
+import PracticeTransitionNotice from '@/components/PracticeTransitionNotice'
 
 export default function Home() {
   return (
     <main id="main-content" className="min-h-screen">
       <Header />
       <Hero />
+      <PracticeTransitionNotice />
       <About />
       <WhenToSeek />
       <Diseases />
       <Treatments />
+      <LatestArticles />
       <Testimonials />
       <CV />
       <Contact />

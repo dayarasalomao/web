@@ -1,15 +1,20 @@
 # Campo Grande SEO Migration Context
 
-**Status**: Draft
+**Status**: Active — launch facts partially confirmed on 2026-07-17
 
 ## User Decisions Captured
 
-- The doctor is expected to move from Curitiba to Campo Grande/MS, but the new address and final go-live details are not confirmed.
+- The doctor will start attending in Campo Grande/MS on 2026-08-05.
+- Confirmed clinic: Instituto do Aparelho Digestivo.
+- Confirmed written address: R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.
+- Confirmed professional registration for the site: CRM-MS 16556 / RQE 9819.
+- Colonoscopy will not be offered by the doctor at this location.
 - For now, keep factual Curitiba references where they are true:
   - Eco Medical Center contact/location
   - current Curitiba address and phone
   - CV/history items such as Santa Casa de Curitiba
-- Do not add active Campo Grande address, clinic, phone, Google Maps URL, schema geo coordinates, or appointment availability until confirmed.
+- Clinic, written address, Maps URL and start date are confirmed and may be stored as planned launch data.
+- Do not add active Campo Grande phone, WhatsApp, schema geo coordinates, opening hours, or appointment CTA until confirmed.
 - The goal is to prepare a PR ahead of time so the final Campo Grande SEO switch can happen quickly once the doctor says "GO".
 - The PR may prepare architecture, draft content, noindex pages, tests, and implementation hooks before the final migration.
 
@@ -24,15 +29,15 @@
 
 | Fact | Needed For |
 | --- | --- |
-| Campo Grande clinic name | Visible NAP, schema, location page |
-| Full street address and postal code | `PostalAddress`, contact page, location page |
-| Google Maps place URL or map link | Local page, `sameAs`, user navigation |
+| Campo Grande clinic name | ✅ Instituto do Aparelho Digestivo |
+| Full street address and postal code | ✅ R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, 79020-120 |
+| Google Maps place URL or map link | ✅ Provided 2026-07-17; URL contains “Sl 8”, which still needs visible-address confirmation |
 | Geo coordinates | `GeoCoordinates`, local schema |
 | Phone/WhatsApp strategy | CTAs, schema telephone, footer/contact |
-| Active availability date | Launch copy and whether Curitiba remains active |
-| CRM/MS status if applicable | Credential display and CFM link strategy |
+| Active availability date | ✅ 2026-08-05 |
+| CRM/MS status if applicable | ✅ CRM-MS 16556 / RQE 9819; client authorized site change |
 | Confirmed services in Campo Grande | Treatment/location service lists |
-| Colonoscopy applicability | Whether to create colonoscopy SEO pages |
+| Colonoscopy applicability | ✅ Not offered; do not create colonoscopy pages |
 
 ## Current Repo Evidence
 

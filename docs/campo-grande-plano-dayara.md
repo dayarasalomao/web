@@ -9,17 +9,20 @@ informações suas pra virar a chave. Deixei tudo em checklist pra ficar fácil.
 
 ## 1. O que eu preciso de você
 
+> Atualização de 17/07/2026: clínica, endereço, Maps, início em 05/08/2026,
+> CRM-MS 16556 / RQE 9819 e ausência de colonoscopia foram confirmados. Permanecem
+> pendentes o novo telefone/WhatsApp, coordenadas e confirmação de “Sala 8” no
+> endereço visível.
+
 Me manda esses dados quando puder (pode ser por WhatsApp mesmo):
 
-- [ ] **Nome da clínica** em Campo Grande
-- [ ] **Endereço completo + CEP**
+- [x] **Nome da clínica** em Campo Grande — Instituto do Aparelho Digestivo
+- [x] **Endereço completo + CEP** — R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, 79020-120
 - [ ] **Telefone / WhatsApp** novo (ou se vai manter o mesmo)
-- [ ] **Link do Google Maps** do novo consultório
-- [ ] **Quando** começa a atender lá
-- [ ] Vi no seu Instagram o **CRM-MS 16556 / RQE 9819** — a partir de quando posso colocar ele
-      no site?
-- [ ] Pretende fazer **colonoscopia** por lá? (se sim, crio páginas específicas — muita gente
-      procura)
+- [x] **Link do Google Maps** do novo consultório
+- [x] **Quando** começa a atender lá — 05/08/2026
+- [x] **CRM-MS 16556 / RQE 9819** — autorizado para atualização no site
+- [x] **Colonoscopia** — não será oferecida pela Dra. Dayara nesse local
 
 Assim que você me passar isso, eu finalizo o site rapidinho.
 

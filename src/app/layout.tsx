@@ -125,7 +125,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
         />
       </head>
-      <body className={`${montserrat.variable} ${cinzel.variable} antialiased`}>
+      <body className={`${montserrat.variable} ${cinzel.variable} pb-24 antialiased sm:pb-0`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-copper focus:text-white focus:top-0 focus:left-0"

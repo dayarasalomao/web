@@ -321,12 +321,13 @@ Build `/tratamentos` index + `/tratamentos/:slug` for the 8 procedures in `Treat
 - **Playwright in v1** — install chromium-only, 6 smoke tests.
 - **Visible FAQ block** — render `<details>` on posts when `faqs:` present (matches FAQPage schema → passes Google rich-results).
 
-**Still to confirm during implementation (non-blocking — can default or ask in PR):**
-1. **CRM-PR / RQE** — Footer.tsx:115 suggests `CRM-PR 42596` / `RQE 33908`. Confirm before emitting in Physician schema.
+**Updated facts and remaining confirmations (18/07/2026):**
+1. **CRM/RQE** — the client authorized `CRM-MS 16556` / `RQE 9819` for the site. The draft implementation uses these values.
 2. **Doctoralia URL** — needed for Physician `sameAs` + Footer. Flag as TODO if missing.
-3. **Google Maps place URL** — for Physician `sameAs`. Flag as TODO if missing.
-4. **Twitter handle** — layout.tsx:87 uses `@dradayarasalomao` — confirm live before shipping.
-5. **Faqs content** — draft 2–3 Q&A per post from body content (implementer proposes, user reviews in PR).
+3. **Google Maps** — the Campo Grande map URL was provided. The URL says `Sl 8`, but the client-written address does not; do not display a room number until confirmed.
+4. **Phone/WhatsApp and geo** — still missing for Campo Grande; do not infer or emit them.
+5. **Twitter handle** — layout.tsx:87 uses `@dradayarasalomao` — confirm live before shipping.
+6. **FAQs content** — draft 2–3 Q&A per post from body content (implementer proposes, user reviews in PR).
 
 ---
 

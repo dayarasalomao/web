@@ -68,10 +68,10 @@ export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPE
 // practicing in Campo Grande, switch these to the MS registration — or
 // display BOTH during the transition. Keep PR values until the move is
 // live so the current Curitiba practice stays truthful.
-export const CRM_NUMBER = '42596'
-export const CRM_STATE = 'PR'
+export const CRM_NUMBER = '16556'
+export const CRM_STATE = 'MS'
 export const CRM_FULL = `CRM-${CRM_STATE} ${CRM_NUMBER}`
-export const RQE_NUMBER = '33908'
+export const RQE_NUMBER = '9819'
 export const RQE_FULL = `RQE ${RQE_NUMBER}`
 export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
 
@@ -143,14 +143,6 @@ export const MEDICAL_PROCEDURES = [
   'Tratamento de hidradenite supurativa',
   'Acompanhamento de doenças inflamatórias intestinais',
 ]
-
-// =================================================================
-// RATINGS DATA (Used in JSON-LD Schema)
-// =================================================================
-export const BUSINESS_RATING = {
-  ratingValue: '5.0',
-  reviewCount: '10',
-}
 
 // =================================================================
 // SITEMAP IMAGES (Used in sitemap.ts)
