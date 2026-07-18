@@ -361,10 +361,17 @@ export function buildLocationGraph(
         '@id': placeId,
         name: location.name,
         url: locationUrl,
-        ...(location.phone ? { telephone: location.phone } : {}),
+        ...(location.phone || location.clinicPhone
+          ? { telephone: location.phone ?? location.clinicPhone }
+          : {}),
         address: {
           '@type': 'PostalAddress',
-          streetAddress: location.address.streetAddress,
+          streetAddress: [
+            location.address.streetAddress,
+            location.address.addressDetail,
+          ]
+            .filter(Boolean)
+            .join(', '),
           addressLocality: location.address.addressLocality,
           addressRegion: location.address.addressRegion,
           postalCode: location.address.postalCode,
@@ -380,6 +387,9 @@ export function buildLocationGraph(
             }
           : {}),
         ...(location.mapsUrl ? { sameAs: [location.mapsUrl] } : {}),
+        ...(location.openingHours
+          ? { openingHours: location.openingHours.schema }
+          : {}),
       },
       {
         '@type': 'Physician',

@@ -39,10 +39,9 @@ export const BUSINESS_FOOTER_LOCATION = `${BUSINESS_CLINIC_NAME} - ${BUSINESS_AD
 // =================================================================
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
-// Relocation note recorded 2026-05-26: the practice is expected to move
-// from Curitiba/PR to Campo Grande/MS around July 2026. Do not add new
-// Curitiba-targeted local SEO; retarget these local signals only after
-// the move is confirmed.
+// Relocation update 2026-07-18: first Campo Grande attendance is planned
+// for 2026-08-05, after which Curitiba will no longer be active. Keep these
+// production signals on Curitiba until the coordinated public cutover.
 export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`

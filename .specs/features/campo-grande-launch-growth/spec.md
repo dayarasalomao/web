@@ -22,21 +22,23 @@ Dra. Dayara Salomão has a technically excellent website (top ~10% of medical si
 
 ## Remaining blockers before launch switch
 
-The website launch switch (CGSEO T11) and the GBP move both require confirmed Campo Grande facts that we **do not have yet**:
+Most Campo Grande facts were confirmed by the client on 2026-07-18. The remaining launch blockers are precise geo coordinates and approval for the coordinated public cutover:
 
 | Fact | Needed for | Status |
 | --- | --- | --- |
 | Campo Grande clinic name | GBP, schema, NAP, site | ✅ Instituto do Aparelho Digestivo |
-| Full street address + CEP | GBP, `PostalAddress`, contact | ✅ R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, 79020-120 |
-| Phone / WhatsApp for MS | CTAs, schema telephone | ❌ MISSING (site WhatsApp 5541… is a PR number) |
-| Google Maps place URL | GBP, `sameAs`, navigation | ✅ Provided; visible “Sala 8” still needs confirmation |
+| Full street address + CEP | GBP, `PostalAddress`, contact | ✅ R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, 79020-120 |
+| Phone / WhatsApp for MS | CTAs, schema telephone | ✅ Keep current booking WhatsApp; clinic general phone is (67) 3320-9500 |
+| Google Maps place URL | GBP, `sameAs`, navigation | ✅ Provided; Sala 8 confirmed |
 | Geo coordinates | `GeoCoordinates` | ❌ MISSING |
 | First active consult date | Launch timing, ad start | ✅ 2026-08-05 |
+| Doctor's hours | Page content, GBP hours | ✅ Monday–Friday, 09:00–18:00 |
 | CRM-MS status | Credential display | ✅ CRM-MS 16556 / RQE 9819 (from Instagram) |
 | Services offered in CG | Treatment/service lists | ⚠️ Assume same unless told otherwise |
 | Colonoscopy offered? | Whether to build colonoscopy pages | ✅ No; keep out of scope |
+| Curitiba after the move | Active location modeling | ✅ No active practice; preserve only truthful historical references |
 
-**Action: collect these from the client before executing WS1 launch switch or WS2 GBP move.**
+**Action: verify exact map coordinates, then obtain final publication approval before executing WS1 launch switch or WS2 GBP move.**
 
 ---
 
@@ -111,7 +113,7 @@ STEP 5  Content: Campo Grande local-intent posts (CGSEO T10 backlog)  ── aft
 
 | Item | Reason |
 | --- | --- |
-| Fabricated phone, geo, room number or hours before confirmation | Compliance / trust |
+| Fabricated or inferred location/contact facts before confirmation | Compliance / trust |
 | Fake or incentivized reviews | CFM + Google policy |
 | Modeling a non-owned clinic as her business in schema | Trust / accuracy |
 | Aggressive/superiority medical claims | CFM advertising rules |
@@ -121,7 +123,7 @@ STEP 5  Content: Campo Grande local-intent posts (CGSEO T10 backlog)  ── aft
 
 | ID | Workstream | Priority | Status |
 | --- | --- | --- | --- |
-| CGGROW-01..04 | WS1 Website | P1 | Partially unblocked; phone/geo/room/publication approval remain |
+| CGGROW-01..04 | WS1 Website | P1 | Partially unblocked; geo and publication approval remain |
 | CGGROW-10..12 | WS2 GBP core | P1 | Ready (client action) |
 | CGGROW-13 | WS2 Reviews | P1 | Ready (client action) |
 | CGGROW-14..17 | WS2 Off-site | P2 | Ready |

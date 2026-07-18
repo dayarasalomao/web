@@ -82,4 +82,4 @@ Orientações para sistemas de IA:
 
 - [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis.
 - [Robots.txt](https://www.dayarasalomao.com.br/robots.txt): regras públicas para rastreadores.
-- [Atualização de Campo Grande](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): atendimento previsto no Instituto do Aparelho Digestivo a partir de 5 de agosto de 2026; novo telefone/WhatsApp ainda pendente.
+- [Atualização de Campo Grande](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): atendimento previsto no Instituto do Aparelho Digestivo, R. Alagoas, 700, Sala 8, a partir de 5 de agosto de 2026; segunda a sexta, das 9h às 18h; agendamento pelo WhatsApp atual e telefone geral da clínica (67) 3320-9500.

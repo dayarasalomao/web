@@ -2,7 +2,7 @@
 
 Public website for Dra. Dayara Salomão, a coloproctologist in Curitiba, Brazil. The site is a Next.js App Router project focused on medical positioning, patient education, SEO, and appointment conversion.
 
-> **Upcoming relocation (recorded 2026-05-26):** The practice is moving from Curitiba/PR to **Campo Grande/MS** in approximately two months (~July 2026). Do **not** add new local-SEO localization targeting Curitiba. Keep the current Curitiba address, geo, Google Maps, and Doctoralia links until the move is confirmed; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia, and city mentions to Campo Grande/MS.
+> **Upcoming relocation (updated 2026-07-18):** The first Campo Grande/MS attendance is planned for **2026-08-05**, after which Curitiba will no longer be an active practice location. Do **not** add new Curitiba local-SEO targeting. Keep current production NAP, geo, Maps and Doctoralia signals on Curitiba until the coordinated public cutover; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia and city mentions to Campo Grande/MS.
 
 ## Stack
 

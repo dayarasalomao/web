@@ -2,7 +2,7 @@
 
 Spec-driven plan. Ports the markdown-driven blog from `analu-procto` (production reference) into `dayara-salomao` and finishes the SEO pass from GitHub issue #2. Designed so the same pattern drops into `dra-ana-pierin` and `versiani` next with only `src/constants.ts` changes.
 
-> **Relocation guardrail (recorded 2026-05-26):** The practice is expected to move from Curitiba/PR to Campo Grande/MS around July 2026. Do **not** add new Curitiba-focused local SEO targets while working from this plan. Keep current Curitiba business data until the move is confirmed; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia, and city mentions to Campo Grande/MS.
+> **Relocation guardrail (updated 2026-07-18):** First Campo Grande/MS attendance is planned for 2026-08-05, after which Curitiba will no longer be active. Do **not** add new Curitiba-focused local SEO targets. Keep current production signals on Curitiba until the coordinated site/Google/Doctoralia cutover.
 
 ---
 
@@ -324,8 +324,8 @@ Build `/tratamentos` index + `/tratamentos/:slug` for the 8 procedures in `Treat
 **Updated facts and remaining confirmations (18/07/2026):**
 1. **CRM/RQE** — the client authorized `CRM-MS 16556` / `RQE 9819` for the site. The draft implementation uses these values.
 2. **Doctoralia URL** — needed for Physician `sameAs` + Footer. Flag as TODO if missing.
-3. **Google Maps** — the Campo Grande map URL was provided. The URL says `Sl 8`, but the client-written address does not; do not display a room number until confirmed.
-4. **Phone/WhatsApp and geo** — still missing for Campo Grande; do not infer or emit them.
+3. **Google Maps** — the Campo Grande map URL and Sala 8 were confirmed. Exact geo coordinates remain pending and must not be inferred.
+4. **Phone/WhatsApp and hours** — keep the current booking WhatsApp; use (67) 3320-9500 only as the Instituto's general phone. Future hours are Monday–Friday, 09:00–18:00.
 5. **Twitter handle** — layout.tsx:87 uses `@dradayarasalomao` — confirm live before shipping.
 6. **FAQs content** — draft 2–3 Q&A per post from body content (implementer proposes, user reviews in PR).
 

@@ -1,12 +1,15 @@
 # Campo Grande SEO Migration Context
 
-**Status**: Active — launch facts partially confirmed on 2026-07-17
+**Status**: Active — contact and launch facts confirmed through 2026-07-18
 
 ## User Decisions Captured
 
 - The doctor will start attending in Campo Grande/MS on 2026-08-05.
 - Confirmed clinic: Instituto do Aparelho Digestivo.
-- Confirmed written address: R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.
+- Confirmed written address: R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.
+- Keep the current booking WhatsApp temporarily; the clinic's public general phone is (67) 3320-9500.
+- The doctor's future hours are Monday–Friday, 09:00–18:00.
+- After the move, Curitiba will no longer be an active practice location.
 - Confirmed professional registration for the site: CRM-MS 16556 / RQE 9819.
 - Colonoscopy will not be offered by the doctor at this location.
 - For now, keep factual Curitiba references where they are true:
@@ -14,7 +17,7 @@
   - current Curitiba address and phone
   - CV/history items such as Santa Casa de Curitiba
 - Clinic, written address, Maps URL and start date are confirmed and may be stored as planned launch data.
-- Do not add active Campo Grande phone, WhatsApp, schema geo coordinates, opening hours, or appointment CTA until confirmed.
+- Confirmed Campo Grande facts may appear on the planned, noindex page. Do not emit active local schema or exact geo coordinates before the coordinated cutover.
 - The goal is to prepare a PR ahead of time so the final Campo Grande SEO switch can happen quickly once the doctor says "GO".
 - The PR may prepare architecture, draft content, noindex pages, tests, and implementation hooks before the final migration.
 
@@ -30,13 +33,14 @@
 | Fact | Needed For |
 | --- | --- |
 | Campo Grande clinic name | ✅ Instituto do Aparelho Digestivo |
-| Full street address and postal code | ✅ R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, 79020-120 |
-| Google Maps place URL or map link | ✅ Provided 2026-07-17; URL contains “Sl 8”, which still needs visible-address confirmation |
+| Full street address and postal code | ✅ R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, 79020-120 |
+| Google Maps place URL or map link | ✅ Provided 2026-07-17; Sala 8 confirmed 2026-07-18 |
 | Geo coordinates | `GeoCoordinates`, local schema |
-| Phone/WhatsApp strategy | CTAs, schema telephone, footer/contact |
+| Phone/WhatsApp strategy | ✅ Keep current booking WhatsApp; clinic general phone (67) 3320-9500 |
+| Doctor's future hours | ✅ Monday–Friday, 09:00–18:00 |
 | Active availability date | ✅ 2026-08-05 |
 | CRM/MS status if applicable | ✅ CRM-MS 16556 / RQE 9819; client authorized site change |
-| Confirmed services in Campo Grande | Treatment/location service lists |
+| Confirmed services in Campo Grande | Treatment/location service lists; keep current documented scope unless revised |
 | Colonoscopy applicability | ✅ Not offered; do not create colonoscopy pages |
 
 ## Current Repo Evidence

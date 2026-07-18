@@ -1,15 +1,8 @@
-'use client'
-
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { WHATSAPP_URL } from '@/constants'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 
 export default function FloatingWhatsAppButton() {
-  const pathname = usePathname()
-
-  if (pathname === '/locais-de-atendimento/campo-grande') return null
-
   return (
     <>
       <div className="fixed inset-x-3 bottom-3 z-40 flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-teal p-3 pl-4 text-white shadow-xl sm:hidden">

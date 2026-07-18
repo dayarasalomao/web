@@ -106,14 +106,17 @@ export default function LocationsPage() {
               <h2 className="mb-3 text-3xl font-semibold text-teal">Campo Grande/MS</h2>
               <p className="mb-6 text-base leading-relaxed text-gray-700">
                 Atendimento previsto no Instituto do Aparelho Digestivo a partir de 5 de
-                agosto de 2026. O novo telefone e WhatsApp serão divulgados quando
-                confirmados.
+                agosto de 2026. O WhatsApp de agendamento permanece o mesmo utilizado no
+                site.
               </p>
               {campoGrande.address ? (
                 <address className="mb-7 not-italic leading-relaxed text-gray-700">
                   <strong className="block text-teal">
                     {campoGrande.address.streetAddress}
                   </strong>
+                  {campoGrande.address.addressDetail ? (
+                    <span className="block">{campoGrande.address.addressDetail}</span>
+                  ) : null}
                   {campoGrande.address.neighborhood ? (
                     <span>{campoGrande.address.neighborhood} · </span>
                   ) : null}
@@ -121,6 +124,16 @@ export default function LocationsPage() {
                     {campoGrande.city}/{campoGrande.stateCode} · CEP{' '}
                     {campoGrande.address.postalCode}
                   </span>
+                  {campoGrande.clinicPhone ? (
+                    <span className="block">
+                      Telefone geral do Instituto: {campoGrande.clinicPhone}
+                    </span>
+                  ) : null}
+                  {campoGrande.openingHours ? (
+                    <span className="block">
+                      Horário da Dra. Dayara: {campoGrande.openingHours.label}
+                    </span>
+                  ) : null}
                 </address>
               ) : null}
               <Link

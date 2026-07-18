@@ -6,7 +6,7 @@ This file provides guidance to Codex when working with code in this repository.
 
 This repository contains the public website for Dra. Dayara Salomão, a coloproctologist based in Curitiba, Brazil. The site is primarily a Portuguese landing page focused on trust, medical positioning, and appointment conversion, plus a dedicated privacy policy route.
 
-> **Upcoming relocation (recorded 2026-05-26):** The practice is moving from Curitiba/PR to **Campo Grande/MS** in approximately two months (~July 2026). Do **not** add new local-SEO localization targeting Curitiba (page titles, meta descriptions, H1s, copy). When the move is confirmed, local signals — `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia profile, and any city mentions in `src/constants.ts`, `src/lib/treatments.ts`, and `src/app/layout.tsx` — should be retargeted to Campo Grande/MS. The current Curitiba address, geo, and Google Maps/Doctoralia links remain accurate until the move.
+> **Upcoming relocation (updated 2026-07-18):** The first Campo Grande/MS attendance is planned for **2026-08-05**, after which Curitiba will no longer be an active practice location. Do **not** add new Curitiba local-SEO targeting. Keep current production NAP, geo, Maps and Doctoralia signals on Curitiba until the coordinated public cutover; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia and city mentions in `src/constants.ts`, `src/lib/treatments.ts`, and `src/app/layout.tsx` to Campo Grande/MS.
 
 Most work in this repo falls into one of four categories:
 

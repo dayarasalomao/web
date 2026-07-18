@@ -120,16 +120,25 @@ describe('practice locations', () => {
     assert.equal(isLocationIndexable(curitiba), true)
   })
 
-  it('keeps planned Campo Grande non-indexable with confirmed launch facts but no active contact', () => {
+  it('keeps planned Campo Grande non-indexable with confirmed pre-launch contact facts', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
     assert.equal(campoGrande.status, 'planned')
     assert.equal(campoGrande.stateCode, 'MS')
     assert.equal(campoGrande.indexable, false)
-    assert.equal(campoGrande.showAppointmentCta, false)
+    assert.equal(campoGrande.showAppointmentCta, true)
     assert.equal(campoGrande.name, 'Instituto do Aparelho Digestivo')
     assert.equal(campoGrande.address?.streetAddress, 'R. Alagoas, 700')
+    assert.equal(campoGrande.address?.addressDetail, 'Sala 8')
     assert.equal(campoGrande.address?.postalCode, '79020-120')
+    assert.equal(campoGrande.clinicPhone, '(67) 3320-9500')
+    assert.equal(campoGrande.whatsappUrl, 'https://wa.me/554135422095')
+    assert.deepEqual(campoGrande.openingHours, {
+      label: 'Segunda a sexta, das 9h às 18h',
+      opens: '09:00',
+      closes: '18:00',
+      schema: 'Mo-Fr 09:00-18:00',
+    })
     assert.equal(campoGrande.launchDate, '2026-08-05')
     assert.equal(campoGrande.geo, undefined)
     assert.equal(campoGrande.phone, undefined)
@@ -141,14 +150,18 @@ describe('practice locations', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
     assert.ok(campoGrande.faqs.length >= 3)
+    const faqText = campoGrande.faqs
+      .map((faq) => `${faq.question} ${faq.answer}`)
+      .join(' ')
     for (const faq of campoGrande.faqs) {
       const text = `${faq.question} ${faq.answer}`
-      // No Curitiba data, phone digits or unconfirmed room number may leak
-      // into the planned-location FAQs before the coordinated switch.
+      // Active Curitiba contact data must not leak into planned-location FAQs.
       assert.ok(!text.includes('Curitiba'))
-      assert.ok(!/\(\d{2}\)|\+55/.test(text))
-      assert.ok(!/Sala\s*8|Sl\s*8/i.test(text))
+      assert.ok(!text.includes('(41) 3123-6550'))
     }
+    assert.match(faqText, /Sala 8/)
+    assert.match(faqText, /\(67\) 3320-9500/)
+    assert.match(faqText, /9h às 18h/)
   })
 
   it('getIndexableLocations excludes any planned location', () => {

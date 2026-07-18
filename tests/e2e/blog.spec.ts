@@ -52,7 +52,9 @@ test('mobile header keeps the desktop CTA hidden and closes with Escape', async 
   await expect(menuButton).toBeFocused()
 })
 
-test('planned Campo Grande page keeps launch facts isolated from active NAP', async ({ page }) => {
+test('planned Campo Grande page uses confirmed contact while isolating active Curitiba NAP', async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/locais-de-atendimento/campo-grande')
 
@@ -63,7 +65,10 @@ test('planned Campo Grande page keeps launch facts isolated from active NAP', as
     'content',
     /noindex, follow/,
   )
-  await expect(page.locator('a[href*="wa.me"]')).toHaveCount(0)
+  await expect(page.locator('a[href="https://wa.me/554135422095"]').first()).toBeVisible()
+  await expect(page.getByText('Sala 8').first()).toBeVisible()
+  await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
+  await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
 
   const metadataLengths = await page.evaluate(() => ({

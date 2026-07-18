@@ -1,6 +1,6 @@
 # Campo Grande SEO Migration Specification
 
-**Status**: Active — move is now **imminent** (client confirmed 2026-07-10; clinic, written address, date and CRM confirmed 2026-07-17). This is the *code* half (WS1) of the broader plan in `.specs/features/campo-grande-launch-growth/spec.md`. The launch switch remains blocked on phone/WhatsApp, geo, visible room confirmation and publication approval.
+**Status**: Active — move is now **imminent**. Clinic, full address including Sala 8, date, CRM, current booking WhatsApp, clinic general phone and hours were confirmed by 2026-07-18. This is the *code* half (WS1) of the broader plan in `.specs/features/campo-grande-launch-growth/spec.md`. The launch switch remains blocked on precise geo coordinates and coordinated publication approval.
 **Context**: `.specs/features/campo-grande-seo-migration/context.md`
 
 ## Problem Statement
@@ -19,7 +19,7 @@ The site currently targets a truthful Curitiba coloproctology presence, but the 
 | Feature | Reason |
 | --- | --- |
 | Claiming active Campo Grande atendimento before launch approval | Site and external profiles must change in one controlled window |
-| Adding Campo Grande phone, map, or geo coordinates | Would create fake or unverifiable NAP |
+| Adding unconfirmed Campo Grande geo coordinates or activating local schema early | Would create fake, unverifiable, or premature local signals |
 | Removing all Curitiba references | Some are factual CV/history/current-location references |
 | Creating fake reviews or review schema | Compliance and trust risk |
 | Colonoscopy page | The doctor confirmed she will not offer colonoscopy at this location |

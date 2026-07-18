@@ -7,24 +7,24 @@ informações suas pra virar a chave. Deixei tudo em checklist pra ficar fácil.
 
 ---
 
-## 1. O que eu preciso de você
+## 1. Dados confirmados
 
-> Atualização de 17/07/2026: clínica, endereço, Maps, início em 05/08/2026,
-> CRM-MS 16556 / RQE 9819 e ausência de colonoscopia foram confirmados. Permanecem
-> pendentes o novo telefone/WhatsApp, coordenadas e confirmação de “Sala 8” no
-> endereço visível.
-
-Me manda esses dados quando puder (pode ser por WhatsApp mesmo):
+> Atualização de 18/07/2026: já temos os dados necessários para preparar a mudança.
+> O site continua mostrando Curitiba como atendimento atual até a troca coordenada.
 
 - [x] **Nome da clínica** em Campo Grande — Instituto do Aparelho Digestivo
-- [x] **Endereço completo + CEP** — R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, 79020-120
-- [ ] **Telefone / WhatsApp** novo (ou se vai manter o mesmo)
+- [x] **Endereço completo + CEP** — R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, 79020-120
+- [x] **WhatsApp de agendamento** — manter o mesmo por enquanto
+- [x] **Telefone geral do Instituto** — (67) 3320-9500, confirmado no site oficial da clínica
+- [x] **Horário da Dra. Dayara** — segunda a sexta, das 9h às 18h
 - [x] **Link do Google Maps** do novo consultório
 - [x] **Quando** começa a atender lá — 05/08/2026
 - [x] **CRM-MS 16556 / RQE 9819** — autorizado para atualização no site
 - [x] **Colonoscopia** — não será oferecida pela Dra. Dayara nesse local
+- [x] **Curitiba depois da mudança** — não haverá atendimento; ficará apenas como histórico profissional quando necessário
 
-Assim que você me passar isso, eu finalizo o site rapidinho.
+Falta apenas a confirmação técnica das coordenadas exatas do Maps e o “pode publicar” para
+fazermos a virada do site, Google e Doctoralia juntos.
 
 ---
 
@@ -47,8 +47,8 @@ estrelas! Dá pra melhorar ainda mais com uns ajustes rápidos:
 
 ## 3. A ordem das coisas
 
-1. Você me manda os dados da parte 1 + faz os ajustes da parte 2.
-2. Eu finalizo o site e a gente muda seu Google pra Campo Grande juntos.
+1. Eu deixo o site pronto em modo de pré-lançamento.
+2. Na data combinada, a gente muda site, Google e Doctoralia pra Campo Grande juntos.
 3. Minha recomendação é a campanha de anúncios passar a focar em Campo Grande quando a agenda
    abrir (você que decide).
 4. Depois é manter o ritmo: avaliações, fotos e conteúdo novo.

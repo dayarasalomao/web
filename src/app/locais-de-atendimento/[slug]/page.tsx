@@ -110,6 +110,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
     <address className="space-y-2 not-italic text-base leading-relaxed text-gray-700">
       <strong className="block text-lg text-teal">{location.name}</strong>
       <span className="block">{location.address.streetAddress}</span>
+      {location.address.addressDetail ? (
+        <span className="block">{location.address.addressDetail}</span>
+      ) : null}
       {location.address.neighborhood ? (
         <span className="block">{location.address.neighborhood}</span>
       ) : null}
@@ -117,6 +120,14 @@ export default async function LocationPage({ params }: LocationPageProps) {
         {location.city}/{location.stateCode} · CEP {location.address.postalCode}
       </span>
       {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
+      {location.clinicPhone ? (
+        <span className="block">Telefone geral do Instituto: {location.clinicPhone}</span>
+      ) : null}
+      {location.openingHours ? (
+        <span className="block">
+          Horário da Dra. Dayara: {location.openingHours.label}
+        </span>
+      ) : null}
     </address>
   ) : null
 
@@ -224,8 +235,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço confirmado</h2>
               {addressBlock}
               <p className="mt-5 text-base leading-relaxed text-gray-700">
-                O novo telefone e WhatsApp de agendamento serão publicados nesta página
-                assim que forem confirmados.
+                O WhatsApp de agendamento permanece o mesmo já utilizado no site. O
+                telefone acima é o contato geral do Instituto.
               </p>
               {location.mapsUrl ? (
                 <div className="mt-7">
@@ -267,18 +278,30 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
           <CallToActionCard
             className="mx-auto mt-12 max-w-4xl"
-            title="Acompanhando a mudança"
+            title="Agendamento para Campo Grande"
             body={
               <p>
-                Esta página permanece fora dos mecanismos de busca até a virada coordenada
-                do site e dos perfis locais. Os locais com atendimento confirmado seguem
-                disponíveis para agendamento.
+                O atendimento começa em 5 de agosto de 2026. Até a virada coordenada do
+                site e dos perfis locais, esta página permanece fora dos mecanismos de
+                busca.
               </p>
             }
             actions={
-              <Link href="/locais-de-atendimento" className="btn btn-secondary">
-                Ver locais confirmados
-              </Link>
+              <div className="flex flex-wrap justify-center gap-3">
+                {location.showAppointmentCta && location.whatsappUrl ? (
+                  <Link
+                    href={location.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                  >
+                    Falar pelo WhatsApp
+                  </Link>
+                ) : null}
+                <Link href="/locais-de-atendimento" className="btn btn-primary">
+                  Ver locais de atendimento
+                </Link>
+              </div>
             }
           />
         </section>

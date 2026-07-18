@@ -29,6 +29,7 @@ export type LocationStatus = 'active' | 'planned' | 'historical'
 
 export interface LocationAddress {
   streetAddress: string
+  addressDetail?: string
   neighborhood?: string
   addressLocality: string
   addressRegion: string
@@ -56,8 +57,15 @@ export interface PracticeLocation {
   address?: LocationAddress
   geo?: LocationGeo
   phone?: string
+  clinicPhone?: string
   whatsappUrl?: string
   mapsUrl?: string
+  openingHours?: {
+    label: string
+    opens: string
+    closes: string
+    schema: string
+  }
   roleDescription: string
   services: string[]
   relatedTreatmentSlugs: string[]
@@ -141,8 +149,9 @@ export const LOCATIONS: PracticeLocation[] = [
   // ---------------------------------------------------------------
   // PLANNED — Campo Grande/MS. Move is imminent (client confirmed
   // 2026-07-10). Dra. Dayara is already CRM-MS 16556 / RQE 9819.
-  // Address, clinic, map and launch date are confirmed. Kept indexable:false
-  // with no active local schema/geo/phone/CTA until the coordinated launch.
+  // Address, room, clinic phone, booking WhatsApp, weekday hours, map and
+  // launch date are confirmed. Kept indexable:false with no active local
+  // schema/geo until the coordinated launch.
   // DO NOT flip to 'active' merely because the date has passed.
   // ---------------------------------------------------------------
   {
@@ -154,6 +163,7 @@ export const LOCATIONS: PracticeLocation[] = [
     stateCode: 'MS',
     address: {
       streetAddress: 'R. Alagoas, 700',
+      addressDetail: 'Sala 8',
       neighborhood: 'Jardim dos Estados',
       addressLocality: 'Campo Grande',
       addressRegion: 'Mato Grosso do Sul',
@@ -161,7 +171,18 @@ export const LOCATIONS: PracticeLocation[] = [
       addressCountry: 'BR',
     },
     // TODO(campo-grande): add confirmed `geo` (latitude/longitude).
-    // TODO(campo-grande): add confirmed `phone` (DDD 67) and `whatsappUrl`.
+    // Source checked 2026-07-18: https://www.institutodigestivo.com.br/
+    // Keep the clinic phone separate from the doctor's appointment contact
+    // until the clinic confirms that it books directly for her.
+    // TODO(campo-grande): record a dedicated doctor phone if one is provided.
+    clinicPhone: '(67) 3320-9500',
+    whatsappUrl: WHATSAPP_URL,
+    openingHours: {
+      label: 'Segunda a sexta, das 9h às 18h',
+      opens: '09:00',
+      closes: '18:00',
+      schema: 'Mo-Fr 09:00-18:00',
+    },
     mapsUrl:
       'https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KaEUri6R6IaUMQkFnCP7Ozlw&daddr=R.+Alagoas,+700+-+Sl+8+-+Jardim+dos+Estados,+Campo+Grande+-+MS,+79020-120',
     roleDescription:
@@ -169,9 +190,8 @@ export const LOCATIONS: PracticeLocation[] = [
     services: CORE_SERVICES,
     relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,
     relatedBlogSlugs: CORE_BLOG_SLUGS,
-    // Answers restricted to facts confirmed by the client on 2026-07-17.
-    // No phone, WhatsApp, room number, prices, insurance or availability
-    // until those are unblocked.
+    // Answers restricted to facts confirmed by the client through 2026-07-18.
+    // No prices, insurance or unconfirmed availability.
     faqs: [
       {
         question: 'Quando a Dra. Dayara Salomão começa a atender em Campo Grande?',
@@ -181,12 +201,17 @@ export const LOCATIONS: PracticeLocation[] = [
       {
         question: 'Onde fica o consultório em Campo Grande?',
         answer:
-          'No Instituto do Aparelho Digestivo, na R. Alagoas, 700, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.',
+          'No Instituto do Aparelho Digestivo, na R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.',
       },
       {
         question: 'Como agendar consulta em Campo Grande?',
         answer:
-          'O telefone e o WhatsApp de agendamento em Campo Grande ainda serão confirmados e passarão a ser divulgados nesta página assim que estiverem definidos.',
+          'O WhatsApp de agendamento permanece o mesmo já utilizado no site. O telefone geral do Instituto do Aparelho Digestivo é (67) 3320-9500.',
+      },
+      {
+        question: 'Qual será o horário de atendimento em Campo Grande?',
+        answer:
+          'O atendimento da Dra. Dayara está previsto de segunda a sexta, das 9h às 18h.',
       },
       {
         question: 'Quais condições serão atendidas em Campo Grande?',
@@ -195,7 +220,7 @@ export const LOCATIONS: PracticeLocation[] = [
       },
     ],
     indexable: false,
-    showAppointmentCta: false,
+    showAppointmentCta: true,
     launchDate: '2026-08-05',
     lastUpdated: '2026-07-18',
   },
