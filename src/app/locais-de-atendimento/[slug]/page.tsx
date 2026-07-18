@@ -3,7 +3,9 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME } from '@/constants'
 import { getPostBySlug } from '@/lib/blog'
+import type { PracticeLocation } from '@/lib/locations'
 import { getAllLocations, getLocationBySlug, isLocationIndexable } from '@/lib/locations'
 import {
   DEFAULT_ROBOTS,
@@ -13,6 +15,7 @@ import {
 } from '@/lib/seo'
 import {
   buildBreadcrumbGraph,
+  buildFaqGraph,
   buildLocationGraph,
   serializeJsonLd,
 } from '@/lib/structured-data'
@@ -20,6 +23,38 @@ import { getTreatmentBySlug } from '@/lib/treatments'
 
 interface LocationPageProps {
   params: Promise<{ slug: string }>
+}
+
+// launchDate is a plain ISO date; format in UTC so the announced day never
+// shifts with the server timezone.
+const LAUNCH_DATE_LONG = new Intl.DateTimeFormat('pt-BR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+const LAUNCH_DATE_SHORT = new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC' })
+
+function parseLaunchDate(isoDate: string): Date {
+  return new Date(`${isoDate}T00:00:00Z`)
+}
+
+function buildLocationTitle(location: PracticeLocation, indexable: boolean): string {
+  if (indexable) return `Coloproctologista em ${location.city} | ${SEO_DOCTOR_NAME}`
+  const launch = location.launchDate
+    ? ` a partir de ${LAUNCH_DATE_SHORT.format(parseLaunchDate(location.launchDate))}`
+    : ' (em breve)'
+  return `Coloproctologista em ${location.city}${launch} | ${SEO_DOCTOR_NAME}`
+}
+
+function buildLocationDescription(location: PracticeLocation, indexable: boolean): string {
+  if (indexable) {
+    return `Atendimento em coloproctologia com a ${SEO_DOCTOR_NAME} no ${location.name}, em ${location.city}/${location.stateCode}. Veja endereço, condições atendidas e informações de agendamento.`
+  }
+  const launch = location.launchDate
+    ? ` em ${LAUNCH_DATE_LONG.format(parseLaunchDate(location.launchDate))}`
+    : ' em breve'
+  return `A ${SEO_DOCTOR_NAME} (${CRM_FULL} · ${RQE_FULL}) inicia atendimento em coloproctologia no ${location.name}, em ${location.city}/${location.stateCode},${launch}. Veja endereço confirmado, condições atendidas e como será o agendamento.`
 }
 
 export function generateStaticParams() {
@@ -34,12 +69,8 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
   const indexable = isLocationIndexable(location)
   const canonical = buildCanonical(`/locais-de-atendimento/${location.slug}`)
-  const title = indexable
-    ? `Coloproctologista em ${location.city} | Dra. Dayara Salomão`
-    : `Mudança para ${location.city} em preparação | Dra. Dayara`
-  const description = indexable
-    ? `Veja endereço e contatos para atendimento em coloproctologia com a Dra. Dayara Salomão em ${location.city}.`
-    : `Atendimento da Dra. Dayara Salomão previsto no Instituto do Aparelho Digestivo, em ${location.city}/${location.stateCode}, a partir de 5 de agosto de 2026.`
+  const title = buildLocationTitle(location, indexable)
+  const description = buildLocationDescription(location, indexable)
 
   return {
     title,
@@ -50,7 +81,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
       title,
       description,
       url: canonical,
-      imageAlt: `Dra. Dayara Salomão — atendimento em ${location.city}/${location.stateCode}`,
+      imageAlt: `${SEO_DOCTOR_NAME} — atendimento em ${location.city}/${location.stateCode}`,
     }),
     twitter: buildTwitterMetadata({ title, description }),
   }
@@ -63,6 +94,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
   if (!location) notFound()
 
   const indexable = isLocationIndexable(location)
+  const launchDateLong = location.launchDate
+    ? LAUNCH_DATE_LONG.format(parseLaunchDate(location.launchDate))
+    : null
   const treatments = location.relatedTreatmentSlugs
     .map((treatmentSlug) => getTreatmentBySlug(treatmentSlug))
     .filter((treatment): treatment is NonNullable<typeof treatment> => treatment !== null)
@@ -70,11 +104,89 @@ export default async function LocationPage({ params }: LocationPageProps) {
     .map((postSlug) => getPostBySlug(postSlug))
     .filter((post): post is NonNullable<typeof post> => post !== null)
   const locationGraph = indexable ? buildLocationGraph(location) : null
-  const breadcrumbGraph = buildBreadcrumbGraph([
+  const breadcrumbItems = [
     { label: 'Início', href: '/' },
     { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
     { label: location.city },
-  ])
+  ]
+
+  const addressBlock = location.address ? (
+    <address className="space-y-2 not-italic text-base leading-relaxed text-gray-700">
+      <strong className="block text-lg text-teal">{location.name}</strong>
+      <span className="block">{location.address.streetAddress}</span>
+      {location.address.neighborhood ? (
+        <span className="block">{location.address.neighborhood}</span>
+      ) : null}
+      <span className="block">
+        {location.city}/{location.stateCode} · CEP {location.address.postalCode}
+      </span>
+      {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
+    </address>
+  ) : null
+
+  const faqSection = location.faqs.length ? (
+    <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+        Dúvidas frequentes
+      </p>
+      <h2 className="mb-5 text-2xl font-semibold text-teal">
+        Perguntas sobre o atendimento em {location.city}
+      </h2>
+      <div className="divide-y divide-beige/70 border-y border-beige/70">
+        {location.faqs.map((faq) => (
+          <details key={faq.question} className="group py-1">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-teal [&::-webkit-details-marker]:hidden">
+              <span>{faq.question}</span>
+              <span
+                aria-hidden="true"
+                className="text-xl text-copper transition-transform group-open:rotate-45"
+              >
+                +
+              </span>
+            </summary>
+            <p className="pb-5 text-base leading-relaxed text-gray-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  ) : null
+
+  const treatmentsSection = treatments.length ? (
+    <section className="mt-12">
+      <h2 className="mb-6 text-3xl font-semibold text-teal">Tratamentos relacionados</h2>
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {treatments.map((treatment) => (
+          <Link
+            key={treatment.slug}
+            href={`/tratamentos/${treatment.slug}`}
+            className="rounded-2xl border border-beige bg-white p-5 font-semibold text-teal shadow-sm transition hover:-translate-y-0.5 hover:border-copper"
+          >
+            {treatment.title}
+          </Link>
+        ))}
+      </div>
+    </section>
+  ) : null
+
+  const readingsSection = posts.length ? (
+    <section className="mt-12">
+      <h2 className="mb-6 text-3xl font-semibold text-teal">Leituras para antes da consulta</h2>
+      <div className="grid gap-4 md:grid-cols-2">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="rounded-2xl border border-beige bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-copper"
+          >
+            <span className="font-semibold text-teal">{post.title}</span>
+            <span className="mt-2 block text-sm leading-relaxed text-gray-700">
+              {post.excerpt}
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  ) : null
 
   if (!indexable) {
     return (
@@ -84,44 +196,95 @@ export default async function LocationPage({ params }: LocationPageProps) {
           dangerouslySetInnerHTML={{
             __html: serializeJsonLd({
               '@context': 'https://schema.org',
-              '@graph': [breadcrumbGraph],
+              '@graph': [
+                buildBreadcrumbGraph(breadcrumbItems),
+                ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),
+              ],
             }),
           }}
         />
         <section className="container">
-          <Breadcrumb
-            items={[
-              { label: 'Início', href: '/' },
-              { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
-              { label: location.city },
-            ]}
-          />
-          <div className="mx-auto max-w-4xl rounded-[2rem] border border-copper/20 bg-white p-8 shadow-sm lg:p-12">
+          <Breadcrumb items={breadcrumbItems} />
+
+          <header className="mx-auto mb-12 max-w-4xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
-              Atualização de atendimento
+              {launchDateLong
+                ? `Atendimento a partir de ${launchDateLong}`
+                : 'Mudança em preparação'}
             </p>
-            <h1 className="mb-6 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
-              Mudança para Campo Grande em preparação
+            <h1 className="mb-5 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+              Coloproctologista em {location.city}
             </h1>
-            <div className="space-y-5 text-lg leading-relaxed text-gray-700">
-              <p>
-                A Dra. Dayara Salomão inicia atendimentos no Instituto do Aparelho
-                Digestivo, em Campo Grande/MS, em 5 de agosto de 2026.
+            <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
+              A {SEO_DOCTOR_NAME} ({CRM_FULL} · {RQE_FULL}) inicia atendimentos no{' '}
+              {location.name}, em {location.city}/{location.stateCode}
+              {launchDateLong ? `, em ${launchDateLong}` : ', em breve'}.{' '}
+              {location.roleDescription}
+            </p>
+          </header>
+
+          <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr]">
+            <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+              <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço confirmado</h2>
+              {addressBlock}
+              <p className="mt-5 text-base leading-relaxed text-gray-700">
+                O novo telefone e WhatsApp de agendamento serão publicados nesta página
+                assim que forem confirmados.
               </p>
-              <p>
-                O endereço informado é R. Alagoas, 700, Jardim dos Estados, Campo
-                Grande/MS, CEP 79020-120. O novo telefone e WhatsApp ainda serão
-                confirmados.
+              {location.mapsUrl ? (
+                <div className="mt-7">
+                  <Link
+                    href={location.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Abrir no mapa
+                  </Link>
+                </div>
+              ) : null}
+            </section>
+
+            <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+              <h2 className="mb-5 text-2xl font-semibold text-teal">
+                Condições que serão atendidas
+              </h2>
+              <ul className="grid gap-3 text-gray-700 sm:grid-cols-2 lg:grid-cols-1">
+                {location.services.map((service) => (
+                  <li key={service} className="flex gap-3">
+                    <span aria-hidden="true" className="text-copper">
+                      •
+                    </span>
+                    {service}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm leading-relaxed text-gray-600">
+                A colonoscopia não será realizada pela {SEO_DOCTOR_NAME} nesse local.
               </p>
-              <p>
-                A página permanece fora dos mecanismos de busca até a virada coordenada do
-                site e dos perfis locais.
-              </p>
-            </div>
-            <Link href="/locais-de-atendimento" className="btn btn-secondary mt-8">
-              Ver locais confirmados
-            </Link>
+            </section>
           </div>
+
+          {faqSection}
+          {treatmentsSection}
+          {readingsSection}
+
+          <CallToActionCard
+            className="mx-auto mt-12 max-w-4xl"
+            title="Acompanhando a mudança"
+            body={
+              <p>
+                Esta página permanece fora dos mecanismos de busca até a virada coordenada
+                do site e dos perfis locais. Os locais com atendimento confirmado seguem
+                disponíveis para agendamento.
+              </p>
+            }
+            actions={
+              <Link href="/locais-de-atendimento" className="btn btn-secondary">
+                Ver locais confirmados
+              </Link>
+            }
+          />
         </section>
       </main>
     )
@@ -136,13 +299,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         />
       ) : null}
       <section className="container">
-        <Breadcrumb
-          items={[
-            { label: 'Início', href: '/' },
-            { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
-            { label: location.city },
-          ]}
-        />
+        <Breadcrumb items={breadcrumbItems} />
 
         <header className="mx-auto mb-12 max-w-4xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
@@ -159,19 +316,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr]">
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço e contato</h2>
-            {location.address ? (
-              <address className="space-y-2 not-italic text-base leading-relaxed text-gray-700">
-                <strong className="block text-lg text-teal">{location.name}</strong>
-                <span className="block">{location.address.streetAddress}</span>
-                {location.address.neighborhood ? (
-                  <span className="block">{location.address.neighborhood}</span>
-                ) : null}
-                <span className="block">
-                  {location.city}/{location.stateCode} · CEP {location.address.postalCode}
-                </span>
-                {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
-              </address>
-            ) : null}
+            {addressBlock}
             <div className="mt-7 flex flex-wrap gap-3">
               {location.showAppointmentCta && location.whatsappUrl ? (
                 <Link
@@ -211,38 +356,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </section>
         </div>
 
-        <section className="mt-12">
-          <h2 className="mb-6 text-3xl font-semibold text-teal">Tratamentos relacionados</h2>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {treatments.map((treatment) => (
-              <Link
-                key={treatment.slug}
-                href={`/tratamentos/${treatment.slug}`}
-                className="rounded-2xl border border-beige bg-white p-5 font-semibold text-teal shadow-sm transition hover:-translate-y-0.5 hover:border-copper"
-              >
-                {treatment.title}
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-12">
-          <h2 className="mb-6 text-3xl font-semibold text-teal">Leituras para antes da consulta</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {posts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="rounded-2xl border border-beige bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-copper"
-              >
-                <span className="font-semibold text-teal">{post.title}</span>
-                <span className="mt-2 block text-sm leading-relaxed text-gray-700">
-                  {post.excerpt}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
+        {faqSection}
+        {treatmentsSection}
+        {readingsSection}
 
         {location.showAppointmentCta && location.whatsappUrl ? (
           <CallToActionCard

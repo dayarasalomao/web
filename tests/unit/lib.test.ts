@@ -137,6 +137,20 @@ describe('practice locations', () => {
     assert.equal(isLocationIndexable(campoGrande), false)
   })
 
+  it('keeps Campo Grande FAQs restricted to confirmed pre-launch facts', () => {
+    const campoGrande = getLocationBySlug('campo-grande')
+    if (!campoGrande) throw new Error('campo-grande location missing')
+    assert.ok(campoGrande.faqs.length >= 3)
+    for (const faq of campoGrande.faqs) {
+      const text = `${faq.question} ${faq.answer}`
+      // No Curitiba data, phone digits or unconfirmed room number may leak
+      // into the planned-location FAQs before the coordinated switch.
+      assert.ok(!text.includes('Curitiba'))
+      assert.ok(!/\(\d{2}\)|\+55/.test(text))
+      assert.ok(!/Sala\s*8|Sl\s*8/i.test(text))
+    }
+  })
+
   it('getIndexableLocations excludes any planned location', () => {
     const indexable = getIndexableLocations()
     assert.equal(indexable.length, 1)

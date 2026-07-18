@@ -104,11 +104,25 @@ export default function LocationsPage() {
                 Mudança em preparação
               </p>
               <h2 className="mb-3 text-3xl font-semibold text-teal">Campo Grande/MS</h2>
-              <p className="mb-7 text-base leading-relaxed text-gray-700">
+              <p className="mb-6 text-base leading-relaxed text-gray-700">
                 Atendimento previsto no Instituto do Aparelho Digestivo a partir de 5 de
-                agosto de 2026. A página permanece fora dos mecanismos de busca até a
-                aprovação da virada local e a definição do novo contato.
+                agosto de 2026. O novo telefone e WhatsApp serão divulgados quando
+                confirmados.
               </p>
+              {campoGrande.address ? (
+                <address className="mb-7 not-italic leading-relaxed text-gray-700">
+                  <strong className="block text-teal">
+                    {campoGrande.address.streetAddress}
+                  </strong>
+                  {campoGrande.address.neighborhood ? (
+                    <span>{campoGrande.address.neighborhood} · </span>
+                  ) : null}
+                  <span>
+                    {campoGrande.city}/{campoGrande.stateCode} · CEP{' '}
+                    {campoGrande.address.postalCode}
+                  </span>
+                </address>
+              ) : null}
               <Link
                 href="/locais-de-atendimento/campo-grande"
                 className="font-semibold text-copper underline decoration-copper/30 underline-offset-4"

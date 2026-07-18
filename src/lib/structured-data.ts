@@ -53,6 +53,28 @@ export function serializeJsonLd(data: WithContext<Thing> | Record<string, unknow
   return JSON.stringify(data).replace(/</g, '\\u003c')
 }
 
+export interface FaqEntry {
+  question: string
+  answer: string
+}
+
+// FAQPage must mirror FAQ content that is visibly rendered on the page.
+export function buildFaqGraph(faqs: FaqEntry[]): Thing {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+    // TODO: drop this cast by typing the graph nodes with schema-dts
+    // generics instead of asserting, as the other builders in this file do.
+  } as Thing
+}
+
 export function buildBreadcrumbGraph(items: BreadcrumbItem[]): Thing {
   return {
     '@type': 'BreadcrumbList',
@@ -259,17 +281,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
   ]
 
   if (post.faqs?.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      mainEntity: post.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    } as Thing)
+    graph.push(buildFaqGraph(post.faqs))
   }
 
   return {
@@ -324,17 +336,7 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
   ]
 
   if (treatment.faqs?.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      mainEntity: treatment.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    } as Thing)
+    graph.push(buildFaqGraph(treatment.faqs))
   }
 
   return {
@@ -391,6 +393,7 @@ export function buildLocationGraph(
         { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
         { label: location.city },
       ]),
+      ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),
     ],
   }
 }
