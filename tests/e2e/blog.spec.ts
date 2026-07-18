@@ -14,7 +14,7 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /coloproctologista com foco em tratamentos minimamente invasivos/i,
+      name: /coloproctologista.*com foco em tratamentos minimamente invasivos/i,
     }),
   ).toBeVisible()
 
@@ -25,7 +25,9 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
     'href',
     '/#contato',
   )
-  await expect(page.getByRole('link', { name: /agende no whatsapp/i })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: /agendar consulta pelo whatsapp/i }),
+  ).toBeVisible()
 })
 
 test('homepage treatment cards link into canonical treatment pages', async ({ page }) => {
