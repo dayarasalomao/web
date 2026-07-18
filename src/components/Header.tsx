@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
@@ -18,6 +18,7 @@ interface HeaderProps {
 
 export default function Header({ mode = 'home' }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
   const suppressAppointmentCta = pathname === '/locais-de-atendimento/campo-grande'
   const navItems = mode === 'subpage' ? SUBPAGE_HEADER_NAV_ITEMS : HOME_HEADER_NAV_ITEMS
@@ -96,7 +97,15 @@ export default function Header({ mode = 'home' }: HeaderProps) {
       className="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200"
       style={{ boxShadow: '0 2px 15px -3px rgb(0 0 0 / 0.1)' }}
     >
-      <nav className="container py-4">
+      <nav
+        className="container py-4"
+        onKeyDown={(event) => {
+          if (event.key === 'Escape' && isMenuOpen) {
+            setIsMenuOpen(false)
+            menuButtonRef.current?.focus()
+          }
+        }}
+      >
         <div className="flex justify-between items-center">
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center gap-3">
@@ -123,21 +132,24 @@ export default function Header({ mode = 'home' }: HeaderProps) {
           </ul>
 
           {!suppressAppointmentCta ? (
-            <Link
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-conversion="whatsapp-header"
-              className="btn btn-secondary hidden text-sm lg:inline-flex"
-            >
-              Agendar consulta
-            </Link>
+            <div className="hidden lg:block">
+              <Link
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-conversion="whatsapp-header"
+                className="btn btn-secondary text-sm"
+              >
+                Agendar consulta
+              </Link>
+            </div>
           ) : null}
 
           {/* Mobile Menu Button */}
           <button
+            ref={menuButtonRef}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMenuOpen((open) => !open)}
             aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"

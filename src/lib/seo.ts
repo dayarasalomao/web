@@ -114,7 +114,7 @@ export function buildTreatmentMetadata(treatment: Treatment): Metadata {
   const url = buildCanonical(`/tratamentos/${treatment.slug}`)
   const imageAlt = `${treatment.title} — ${SEO_DOCTOR_NAME}`
   const localizedTitle = `${treatment.shortTitle} em ${SEO_LOCATION} | Dra. Dayara`
-  const localizedDescription = `${treatment.metaDescription.replace(/\.$/, '')} Atendimento em ${SEO_LOCATION}, com indicação definida após avaliação individual.`
+  const localizedDescription = `${treatment.shortTitle} em ${SEO_LOCATION}: indicações, como funciona e cuidados. A ${SEO_DOCTOR_NAME} avalia cada caso de forma individual.`
   const localizedKeywords = [
     ...treatment.keywords,
     ...treatment.keywords.map(

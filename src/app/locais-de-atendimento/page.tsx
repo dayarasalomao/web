@@ -11,7 +11,7 @@ import {
 
 const title = 'Locais de atendimento | Dra. Dayara Salomão'
 const description =
-  'Consulte os locais de atendimento confirmados da Dra. Dayara Salomão e veja informações atualizadas para agendamento.'
+  'Locais de atendimento da Dra. Dayara Salomão: consulte endereços confirmados, contatos e atualizações sobre a mudança para Campo Grande/MS.'
 const canonical = buildCanonical('/locais-de-atendimento')
 
 export const metadata: Metadata = {

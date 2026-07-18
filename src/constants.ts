@@ -46,7 +46,7 @@ export const SEO_SPECIALTY = 'Coloproctologista'
 export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
-export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} com atendimento no ${BUSINESS_CLINIC_NAME}. Tratamentos para hemorroidas, fissura anal, fístula anal, HPV perianal, cisto pilonidal e outras doenças anorretais.`
+export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} no ${BUSINESS_CLINIC_NAME}. Avaliação e tratamentos para hemorroidas, fissura, fístula, HPV anal e cisto pilonidal.`
 export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, ${BUSINESS_CLINIC_NAME}, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
 
 export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
@@ -63,11 +63,9 @@ export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPE
 // =================================================================
 // PROFESSIONAL CREDENTIALS (Used in Physician JSON-LD + Footer)
 // =================================================================
-// TODO(campo-grande): Dra. Dayara is already registered in MS as
-// CRM-MS 16556 / RQE 9819 (seen on her Instagram profile). Once she is
-// practicing in Campo Grande, switch these to the MS registration — or
-// display BOTH during the transition. Keep PR values until the move is
-// live so the current Curitiba practice stays truthful.
+// Dra. Dayara authorized CRM-MS 16556 / RQE 9819 for this launch draft.
+// The active practice location remains Curitiba until the coordinated switch;
+// external profiles must only change when they truthfully reflect Campo Grande.
 export const CRM_NUMBER = '16556'
 export const CRM_STATE = 'MS'
 export const CRM_FULL = `CRM-${CRM_STATE} ${CRM_NUMBER}`

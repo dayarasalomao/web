@@ -74,7 +74,6 @@ export default function Hero() {
                   width={400}
                   height={120}
                   className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 h-auto"
-                  priority
                   quality={100}
                 />
               </div>

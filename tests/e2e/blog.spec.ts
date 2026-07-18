@@ -30,6 +30,71 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   ).toBeVisible()
 })
 
+test('mobile header keeps the desktop CTA hidden and closes with Escape', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/')
+
+  await expect(page.locator('header [data-conversion="whatsapp-header"]')).toBeHidden()
+
+  const menuButton = page.locator('button[aria-controls="mobile-navigation"]')
+  await menuButton.focus()
+  await menuButton.press('Enter')
+  await expect(menuButton).toHaveAttribute('aria-expanded', 'true')
+  await expect(page.locator('#mobile-navigation')).toBeVisible()
+
+  await page.keyboard.press('Escape')
+  await expect(menuButton).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.locator('#mobile-navigation')).toHaveCount(0)
+  await expect(menuButton).toBeFocused()
+})
+
+test('planned Campo Grande page keeps launch facts isolated from active NAP', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/locais-de-atendimento/campo-grande')
+
+  await expect(
+    page.getByRole('heading', { level: 1, name: /coloproctologista em campo grande/i }),
+  ).toBeVisible()
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    'content',
+    /noindex, follow/,
+  )
+  await expect(page.locator('a[href*="wa.me"]')).toHaveCount(0)
+  await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
+
+  const metadataLengths = await page.evaluate(() => ({
+    title: document.title.length,
+    description: document.querySelector('meta[name="description"]')?.content.length ?? 0,
+    overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+  }))
+  expect(metadataLengths.title).toBeLessThanOrEqual(60)
+  expect(metadataLengths.description).toBeGreaterThanOrEqual(120)
+  expect(metadataLengths.description).toBeLessThanOrEqual(160)
+  expect(metadataLengths.overflow).toBe(0)
+
+  const pageGraph = await page
+    .locator('script[type="application/ld+json"]')
+    .allTextContents()
+  const plannedGraph = pageGraph.find((graph) => graph.includes('FAQPage')) ?? ''
+  expect(plannedGraph).not.toContain('MedicalClinic')
+  expect(plannedGraph).not.toContain('PostalAddress')
+  expect(plannedGraph).not.toContain('GeoCoordinates')
+
+  const sitemapResponse = await page.request.get('/sitemap.xml')
+  expect(await sitemapResponse.text()).not.toContain(
+    `${CANONICAL_WEBSITE_URL}/locais-de-atendimento/campo-grande`,
+  )
+})
+
+test('localized treatment metadata stays concise and readable', async ({ page }) => {
+  await page.goto('/tratamentos/ligadura-elastica-hemorroidas-internas')
+
+  const description = await page.locator('meta[name="description"]').getAttribute('content')
+  expect(description).toMatch(/^Ligadura elástica em Curitiba:/)
+  expect(description?.length).toBeGreaterThanOrEqual(120)
+  expect(description?.length).toBeLessThanOrEqual(160)
+})
+
 test('homepage treatment cards link into canonical treatment pages', async ({ page }) => {
   await page.goto('/')
 

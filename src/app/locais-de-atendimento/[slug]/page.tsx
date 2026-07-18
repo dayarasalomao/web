@@ -39,22 +39,18 @@ function parseLaunchDate(isoDate: string): Date {
   return new Date(`${isoDate}T00:00:00Z`)
 }
 
-function buildLocationTitle(location: PracticeLocation, indexable: boolean): string {
-  if (indexable) return `Coloproctologista em ${location.city} | ${SEO_DOCTOR_NAME}`
-  const launch = location.launchDate
-    ? ` a partir de ${LAUNCH_DATE_SHORT.format(parseLaunchDate(location.launchDate))}`
-    : ' (em breve)'
-  return `Coloproctologista em ${location.city}${launch} | ${SEO_DOCTOR_NAME}`
+function buildLocationTitle(location: PracticeLocation): string {
+  return `Coloproctologista em ${location.city} | ${SEO_DOCTOR_NAME}`
 }
 
 function buildLocationDescription(location: PracticeLocation, indexable: boolean): string {
   if (indexable) {
-    return `Atendimento em coloproctologia com a ${SEO_DOCTOR_NAME} no ${location.name}, em ${location.city}/${location.stateCode}. Veja endereço, condições atendidas e informações de agendamento.`
+    return `Atendimento em coloproctologia com a ${SEO_DOCTOR_NAME} no ${location.name}, em ${location.city}/${location.stateCode}. Consulte endereço e agendamento.`
   }
   const launch = location.launchDate
-    ? ` em ${LAUNCH_DATE_LONG.format(parseLaunchDate(location.launchDate))}`
-    : ' em breve'
-  return `A ${SEO_DOCTOR_NAME} (${CRM_FULL} · ${RQE_FULL}) inicia atendimento em coloproctologia no ${location.name}, em ${location.city}/${location.stateCode},${launch}. Veja endereço confirmado, condições atendidas e como será o agendamento.`
+    ? `a partir de ${LAUNCH_DATE_SHORT.format(parseLaunchDate(location.launchDate))}`
+    : 'em preparação'
+  return `${SEO_DOCTOR_NAME}, ${CRM_FULL} e ${RQE_FULL}: atendimento no ${location.name}, em ${location.city}/${location.stateCode}, ${launch}.`
 }
 
 export function generateStaticParams() {
@@ -69,7 +65,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
   const indexable = isLocationIndexable(location)
   const canonical = buildCanonical(`/locais-de-atendimento/${location.slug}`)
-  const title = buildLocationTitle(location, indexable)
+  const title = buildLocationTitle(location)
   const description = buildLocationDescription(location, indexable)
 
   return {

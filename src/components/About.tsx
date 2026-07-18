@@ -72,7 +72,6 @@ export default function About() {
                     height={600}
                     className="w-full h-full object-cover"
                     quality={85}
-                    preload
                   />
                 </div>
               </div>
