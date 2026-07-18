@@ -57,6 +57,8 @@ export default function Hero() {
                     height={1368}
                     className="w-full h-full object-contain scale-125"
                     priority
+                    fetchPriority="high"
+                    sizes="(min-width: 1024px) 384px, 344px"
                     quality={85}
                   />
                 </div>
@@ -74,7 +76,8 @@ export default function Hero() {
                   width={400}
                   height={120}
                   className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 h-auto"
-                  quality={100}
+                  sizes="(min-width: 1024px) 512px, calc(100vw - 32px)"
+                  quality={85}
                 />
               </div>
               <div

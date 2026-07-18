@@ -17,7 +17,7 @@ Most work in this repo falls into one of four categories:
 
 ## Current Stack
 
-- **Framework**: Next.js `16.2.1` with the App Router
+- **Framework**: Next.js `16.2.10` with the App Router
 - **React**: React `19.2.4`
 - **Language**: TypeScript `5`
 - **Styling**: Tailwind CSS `3.4.16` plus custom CSS in [`src/app/globals.css`](./src/app/globals.css)

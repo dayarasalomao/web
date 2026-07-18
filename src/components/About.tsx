@@ -71,6 +71,7 @@ export default function About() {
                     width={400}
                     height={600}
                     className="w-full h-full object-cover"
+                    sizes="(min-width: 1024px) 384px, 320px"
                     quality={85}
                   />
                 </div>

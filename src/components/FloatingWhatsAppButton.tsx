@@ -25,7 +25,7 @@ export default function FloatingWhatsAppButton() {
           rel="noopener noreferrer"
           aria-label="Agendar consulta pelo WhatsApp"
           data-conversion="whatsapp-sticky-mobile"
-          className="inline-flex h-11 flex-shrink-0 items-center gap-2 rounded-xl bg-green-600 px-4 font-semibold text-white transition-colors hover:bg-green-700"
+          className="inline-flex h-11 flex-shrink-0 items-center gap-2 rounded-xl bg-green-700 px-4 font-semibold text-white transition-colors hover:bg-green-800"
         >
           <WhatsAppIcon className="h-5 w-5" />
           WhatsApp
@@ -37,7 +37,7 @@ export default function FloatingWhatsAppButton() {
         rel="noopener noreferrer"
         aria-label="Agendar consulta pelo WhatsApp"
         data-conversion="whatsapp-floating-desktop"
-        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-green-700 hover:shadow-xl sm:inline-flex"
+        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-green-700 text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-xl sm:inline-flex"
       >
         <WhatsAppIcon className="h-7 w-7" />
       </Link>

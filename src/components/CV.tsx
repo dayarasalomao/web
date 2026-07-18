@@ -151,6 +151,7 @@ export default function CV() {
                       width={912}
                       height={1368}
                       className="w-full h-full object-cover"
+                      sizes="(min-width: 1024px) 384px, 320px"
                       quality={85}
                     />
                   </div>
@@ -190,8 +191,8 @@ export default function CV() {
                             <span
                               className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
                               style={{
-                                color: styles.accent,
-                                backgroundColor: `color-mix(in srgb, ${styles.accent} 20%, transparent)`,
+                                color: 'var(--color-teal)',
+                                backgroundColor: 'rgba(29, 65, 76, 0.12)',
                               }}
                             >
                               {qualification.year}
@@ -199,7 +200,7 @@ export default function CV() {
                           </div>
                           <p
                             className="font-medium mb-1 text-sm"
-                            style={{ color: 'var(--color-copper)' }}
+                            style={{ color: '#74382f' }}
                           >
                             {qualification.institution}
                           </p>

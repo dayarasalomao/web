@@ -28,6 +28,10 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: /agendar consulta pelo whatsapp/i }),
   ).toBeVisible()
+
+  const lcpImage = page.getByAltText('Retrato profissional da Dra. Dayara Salomão')
+  await expect(lcpImage).toHaveAttribute('fetchpriority', 'high')
+  await expect(lcpImage).toHaveAttribute('sizes', '(min-width: 1024px) 384px, 344px')
 })
 
 test('mobile header keeps the desktop CTA hidden and closes with Escape', async ({ page }) => {
