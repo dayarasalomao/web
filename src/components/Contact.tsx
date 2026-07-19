@@ -9,6 +9,7 @@ import {
 } from '@/constants'
 import Link from 'next/link'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
+import { Building2, CalendarCheck, MapPin, Mail, Navigation, Phone } from 'lucide-react'
 
 export default function Contact() {
   const contactInfo = [
@@ -16,39 +17,19 @@ export default function Contact() {
       label: 'Local',
       value: BUSINESS_CLINIC_NAME,
       detail: 'Setor de Coloproctologia',
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-          <path
-            fillRule="evenodd"
-            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
+      icon: MapPin,
     },
     {
       label: 'Endereço',
       value: BUSINESS_ADDRESS_LINE,
       detail: BUSINESS_ADDRESS_DETAIL,
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-          <path
-            fillRule="evenodd"
-            d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
+      icon: Building2,
     },
     {
       label: 'Telefone',
       value: ECO_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M2.928 1.928A1.5 1.5 0 0 1 4.22 1.5h2.106c.42 0 .79.277.907.68l.58 2.03a1.5 1.5 0 0 1-.398 1.504L6.12 7.01a11.042 11.042 0 0 0 4.87 4.87l1.296-1.295a1.5 1.5 0 0 1 1.504-.399l2.03.58c.403.116.68.487.68.907v2.106a1.5 1.5 0 0 1-.428 1.293l-.97.97a2 2 0 0 1-1.815.546c-2.662-.532-5.345-2.095-7.616-4.365C3.401 10.132 1.837 7.45 1.305 4.786a2 2 0 0 1 .546-1.815l1.077-1.043Z" />
-        </svg>
-      ),
+      icon: Phone,
     },
   ]
 
@@ -105,10 +86,14 @@ export default function Contact() {
                 >
                   <div className="flex items-center gap-4">
                     <div
-                      className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg  transition-transform duration-300"
-                      style={{ backgroundColor: 'var(--color-copper)' }}
+                      className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center"
+                      style={{ backgroundColor: 'rgba(163, 84, 66, 0.1)' }}
                     >
-                      <div className="w-6 h-6">{info.icon}</div>
+                      <info.icon
+                        className="w-5 h-5"
+                        style={{ color: 'var(--color-copper)' }}
+                        strokeWidth={1.75}
+                      />
                     </div>
                     <div className="flex-1">
                       <span
@@ -131,20 +116,17 @@ export default function Contact() {
               ))}
 
               {/* Email Contact */}
-              <div className="group bg-white/80  p-5 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300  relative overflow-hidden">
+              <div className="group bg-white/80 p-5 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                 <div className="flex items-center gap-4">
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg  transition-transform duration-300"
-                    style={{ backgroundColor: 'var(--color-copper)' }}
+                    className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: 'rgba(163, 84, 66, 0.1)' }}
                   >
-                    <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
+                    <Mail
+                      className="w-5 h-5"
+                      style={{ color: 'var(--color-copper)' }}
+                      strokeWidth={1.75}
+                    />
                   </div>
                   <div className="flex-1">
                     <span
@@ -170,36 +152,18 @@ export default function Contact() {
                 className="bg-white/90  p-10 rounded-3xl relative overflow-hidden shadow-lg border"
                 style={{ borderColor: 'rgba(163, 84, 66, 0.2)' }}
               >
-                {/* Elegant background pattern */}
-                <div className="absolute inset-0 opacity-3">
-                  <div
-                    className="absolute top-0 left-0 w-full h-full"
-                    style={{
-                      backgroundSize: '30px 30px',
-                    }}
-                  ></div>
-                </div>
-
                 <div className="relative">
                   {/* Header with icon */}
                   <div className="text-center mb-8">
                     <div
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
-                      style={{ backgroundColor: 'var(--color-teal)' }}
+                      className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
+                      style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
                     >
-                      <svg
-                        className="w-8 h-8 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
+                      <CalendarCheck
+                        className="w-6 h-6"
+                        style={{ color: 'var(--color-teal)' }}
+                        strokeWidth={1.75}
+                      />
                     </div>
                     <h3
                       className="text-2xl lg:text-3xl font-serif font-bold mb-3"
@@ -230,44 +194,23 @@ export default function Contact() {
                       href={WHATSAPP_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group block w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-center py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-lg  relative overflow-hidden"
+                      className="flex items-center justify-center gap-3 w-full bg-green-600 hover:bg-green-700 text-white text-center py-4 px-6 rounded-2xl font-semibold transition-colors duration-300"
                     >
-                      {/* Subtle shimmer effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 group-hover:animate-pulse"></div>
-
-                      <div className="flex items-center justify-center gap-3 relative">
-                        <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
-                          <WhatsAppIcon className="w-4 h-4" />
-                        </div>
-                        <span>WhatsApp</span>
-                      </div>
+                      <WhatsAppIcon className="w-5 h-5" />
+                      <span>WhatsApp</span>
                     </Link>
 
                     <Link
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg  text-center border-2 relative overflow-hidden"
+                      className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 hover:bg-[rgba(163,84,66,0.16)] text-center border"
                       style={{
                         backgroundColor: 'rgba(163, 84, 66, 0.1)',
                         borderColor: 'var(--color-copper)',
                         color: 'var(--color-copper)',
                       }}
                     >
-                      <div className="flex items-center justify-center gap-3">
-                        <div
-                          className="w-6 h-6 rounded-lg flex items-center justify-center"
-                          style={{ backgroundColor: 'rgba(163, 84, 66, 0.2)' }}
-                        >
-                          <svg
-                            className="w-4 h-4"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                          </svg>
-                        </div>
-                        <span>E-mail</span>
-                      </div>
+                      <Mail className="w-5 h-5" strokeWidth={1.75} />
+                      <span>E-mail</span>
                     </Link>
 
                     {GOOGLE_MAPS_URL ? (
@@ -275,33 +218,15 @@ export default function Contact() {
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg text-center border-2 relative overflow-hidden"
+                        className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 hover:bg-[rgba(29,65,76,0.16)] text-center border"
                         style={{
                           backgroundColor: 'rgba(29, 65, 76, 0.08)',
                           borderColor: 'var(--color-teal)',
                           color: 'var(--color-teal)',
                         }}
                       >
-                        <div className="flex items-center justify-center gap-3">
-                          <div
-                            className="w-6 h-6 rounded-lg flex items-center justify-center"
-                            style={{ backgroundColor: 'rgba(29, 65, 76, 0.16)' }}
-                          >
-                            <svg
-                              className="w-4 h-4"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              aria-hidden="true"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 001.039.573l.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          </div>
-                          <span>Como chegar</span>
-                        </div>
+                        <Navigation className="w-5 h-5" strokeWidth={1.75} />
+                        <span>Como chegar</span>
                       </Link>
                     ) : null}
                   </div>

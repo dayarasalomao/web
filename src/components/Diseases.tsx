@@ -95,7 +95,7 @@ export default function Diseases() {
       }}
     >
       {/* Subtle background texture */}
-      <div className="absolute inset-0 opacity-3">
+      <div className="absolute inset-0 opacity-[0.05]">
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{

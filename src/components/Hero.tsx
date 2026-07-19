@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Elegant background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute -top-24 -right-24 w-96 h-96 opacity-70 rounded-full blur-3xl"
+          className="absolute -top-24 -right-24 w-96 h-96 opacity-10 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-straw)' }}
         ></div>
         <div
@@ -24,7 +24,7 @@ export default function Hero() {
         ></div>
 
         {/* Subtle decorative pattern */}
-        <div className="absolute inset-0 opacity-2">
+        <div className="absolute inset-0 opacity-[0.04]">
           <div
             className="absolute top-0 left-0 w-full h-full"
             style={{

@@ -2,6 +2,14 @@ import { WHATSAPP_URL } from '@/constants'
 import { getPostHref } from '@/lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
+import {
+  AlertCircle,
+  CheckCircle2,
+  CircleDot,
+  Clock,
+  Info,
+  Smile,
+} from 'lucide-react'
 
 export default function WhenToSeek() {
   const symptoms = [
@@ -53,23 +61,27 @@ export default function WhenToSeek() {
     switch (urgency) {
       case 'high':
         return {
-          border: '#dc2626',
-          bg: 'rgba(220, 38, 38, 0.05)',
+          accent: '#b91c1c',
+          iconBg: 'rgba(185, 28, 28, 0.1)',
+          icon: AlertCircle,
         }
       case 'medium':
         return {
-          border: 'var(--color-copper)',
-          bg: 'rgba(163, 84, 66, 0.05)',
+          accent: 'var(--color-copper)',
+          iconBg: 'rgba(163, 84, 66, 0.1)',
+          icon: Info,
         }
       case 'low':
         return {
-          border: 'var(--color-teal)',
-          bg: 'rgba(29, 65, 76, 0.05)',
+          accent: 'var(--color-teal)',
+          iconBg: 'rgba(29, 65, 76, 0.1)',
+          icon: CircleDot,
         }
       default:
         return {
-          border: 'var(--color-beige)',
-          bg: 'rgba(215, 203, 191, 0.05)',
+          accent: 'var(--color-straw)',
+          iconBg: 'rgba(209, 175, 139, 0.2)',
+          icon: CircleDot,
         }
     }
   }
@@ -82,11 +94,11 @@ export default function WhenToSeek() {
       {/* Very subtle background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute top-1/4 -right-32 w-96 h-96 opacity-20 rounded-full blur-3xl"
+          className="absolute top-1/4 -right-32 w-96 h-96 opacity-10 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-copper)' }}
         ></div>
         <div
-          className="absolute bottom-1/4 -left-32 w-96 h-96 opacity-50 rounded-full blur-3xl"
+          className="absolute bottom-1/4 -left-32 w-96 h-96 opacity-10 rounded-full blur-3xl"
           style={{ backgroundColor: 'var(--color-teal)' }}
         ></div>
       </div>
@@ -152,22 +164,26 @@ export default function WhenToSeek() {
                   <div
                     key={index}
                     className="group card px-6 py-4 lg:px-6 lg:py-6 hover:shadow-lg transition-all duration-300"
-                    style={{
-                      backgroundColor: styles.bg,
-                      borderColor: styles.border,
-                      borderWidth: '1px',
-                    }}
+                    style={{ borderLeftWidth: '3px', borderLeftColor: styles.accent }}
                   >
                     <div className="flex items-start gap-3">
+                      <div
+                        className="w-9 h-9 shrink-0 rounded-full flex items-center justify-center mt-0.5"
+                        style={{ backgroundColor: styles.iconBg }}
+                      >
+                        <styles.icon
+                          className="w-4 h-4"
+                          style={{ color: styles.accent }}
+                          strokeWidth={1.75}
+                        />
+                      </div>
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <h3
-                            className="text-base font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
-                            style={{ color: 'var(--color-teal)' }}
-                          >
-                            {symptom.title}
-                          </h3>
-                        </div>
+                        <h3
+                          className="text-base font-serif font-semibold mb-1 group-hover:opacity-80 transition-opacity duration-300"
+                          style={{ color: 'var(--color-teal)' }}
+                        >
+                          {symptom.title}
+                        </h3>
                         <p className="text-xs text-gray-600 leading-relaxed">
                           {symptom.description}
                         </p>
@@ -214,22 +230,14 @@ export default function WhenToSeek() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="text-center p-4 card">
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg"
-                  style={{ backgroundColor: 'var(--color-teal)' }}
+                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
+                  style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
                 >
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <Clock
+                    className="w-6 h-6"
+                    style={{ color: 'var(--color-teal)' }}
+                    strokeWidth={1.75}
+                  />
                 </div>
                 <h4
                   className="font-semibold mb-1"
@@ -243,22 +251,14 @@ export default function WhenToSeek() {
               </div>
               <div className="text-center p-4 card">
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg"
-                  style={{ backgroundColor: 'var(--color-copper)' }}
+                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
+                  style={{ backgroundColor: 'rgba(163, 84, 66, 0.1)' }}
                 >
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <CheckCircle2
+                    className="w-6 h-6"
+                    style={{ color: 'var(--color-copper)' }}
+                    strokeWidth={1.75}
+                  />
                 </div>
                 <h4
                   className="font-semibold mb-1"
@@ -272,22 +272,14 @@ export default function WhenToSeek() {
               </div>
               <div className="text-center p-4 card">
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg"
-                  style={{ backgroundColor: 'var(--color-straw)' }}
+                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
+                  style={{ backgroundColor: 'rgba(209, 175, 139, 0.2)' }}
                 >
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <Smile
+                    className="w-6 h-6"
+                    style={{ color: 'var(--color-straw)' }}
+                    strokeWidth={1.75}
+                  />
                 </div>
                 <h4
                   className="font-semibold mb-1"
