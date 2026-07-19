@@ -2,10 +2,10 @@
 // PRACTICE LOCATION MODEL
 // =================================================================
 // Single source of truth for where Dra. Dayara Salomão attends.
-// Separates factual ACTIVE practice data (safe to index) from a
-// PLANNED target market (Campo Grande/MS) that may show confirmed
-// pre-launch facts on a noindex page, but must NOT emit active local
-// schema, sitemap entries, or appointment CTAs until activation.
+// The ACTIVE location derives from src/constants.ts (single source of
+// truth, safe to index). Non-active locations (historical or planned)
+// hardcode their own frozen facts, since constants.ts no longer
+// describes them.
 //
 // See `.specs/features/campo-grande-seo-migration/design.md` and
 // `.specs/features/campo-grande-launch-growth/spec.md`.
@@ -13,14 +13,17 @@
 
 import {
   BUSINESS_CLINIC_NAME,
-  BUSINESS_ADDRESS_LINE,
+  BUSINESS_STREET,
+  BUSINESS_STREET_NUMBER,
+  BUSINESS_UNIT,
   BUSINESS_NEIGHBORHOOD,
   BUSINESS_ADDRESS_LOCALITY,
   BUSINESS_ADDRESS_REGION,
   BUSINESS_ADDRESS_REGION_CODE,
   BUSINESS_POSTAL_CODE,
   BUSINESS_GEO,
-  ECO_TELEPHONE_NUMBER,
+  BUSINESS_TELEPHONE_NUMBER,
+  BUSINESS_HOURS,
   WHATSAPP_URL,
   GOOGLE_MAPS_URL,
 } from '../constants.ts'
@@ -77,9 +80,9 @@ export interface PracticeLocation {
   lastUpdated: string
 }
 
-// Core coloproctology services offered — reused for the active location and
-// as a pre-launch editorial model. Colonoscopy is intentionally excluded:
-// the doctor confirmed it will not be offered by her at the new location.
+// Core coloproctology services offered at the active location. Colonoscopy
+// is intentionally excluded: the doctor confirmed it will not be offered by
+// her at Campo Grande.
 const CORE_SERVICES: string[] = [
   'Doença hemorroidária',
   'Fissura anal',
@@ -111,17 +114,20 @@ const CORE_BLOG_SLUGS: string[] = [
 
 export const LOCATIONS: PracticeLocation[] = [
   // ---------------------------------------------------------------
-  // ACTIVE — Curitiba/PR (truthful current practice until move).
+  // ACTIVE — Campo Grande/MS. Cutover completed 2026-07-19. Address,
+  // room, clinic phone, booking WhatsApp, weekday hours, geo and map
+  // are confirmed and now drive src/constants.ts directly.
   // ---------------------------------------------------------------
   {
-    slug: 'curitiba',
+    slug: 'campo-grande',
     name: BUSINESS_CLINIC_NAME,
     status: 'active',
     city: BUSINESS_ADDRESS_LOCALITY,
     state: BUSINESS_ADDRESS_REGION,
     stateCode: BUSINESS_ADDRESS_REGION_CODE,
     address: {
-      streetAddress: BUSINESS_ADDRESS_LINE,
+      streetAddress: `${BUSINESS_STREET}, ${BUSINESS_STREET_NUMBER}`,
+      addressDetail: BUSINESS_UNIT,
       neighborhood: BUSINESS_NEIGHBORHOOD,
       addressLocality: BUSINESS_ADDRESS_LOCALITY,
       addressRegion: BUSINESS_ADDRESS_REGION,
@@ -132,76 +138,28 @@ export const LOCATIONS: PracticeLocation[] = [
       latitude: BUSINESS_GEO.latitude,
       longitude: BUSINESS_GEO.longitude,
     },
-    phone: ECO_TELEPHONE_NUMBER,
+    // Keep the clinic phone separate from the doctor's appointment contact
+    // until the clinic confirms that it books directly for her.
+    // TODO(campo-grande): record a dedicated doctor phone if one is provided.
+    clinicPhone: BUSINESS_TELEPHONE_NUMBER,
     whatsappUrl: WHATSAPP_URL,
+    openingHours: {
+      label: 'Segunda a sexta, das 9h às 18h',
+      opens: '09:00',
+      closes: '18:00',
+      schema: BUSINESS_HOURS,
+    },
     mapsUrl: GOOGLE_MAPS_URL,
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
     services: CORE_SERVICES,
     relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,
     relatedBlogSlugs: CORE_BLOG_SLUGS,
-    faqs: [],
-    indexable: true,
-    showAppointmentCta: true,
-    lastUpdated: '2026-07-10',
-  },
-
-  // ---------------------------------------------------------------
-  // PLANNED — Campo Grande/MS. Move is imminent (client confirmed
-  // 2026-07-10). Dra. Dayara is already CRM-MS 16556 / RQE 9819.
-  // Address, room, clinic phone, booking WhatsApp, weekday hours, map and
-  // launch date are confirmed. Kept indexable:false with no active local
-  // schema/geo until the coordinated launch.
-  // DO NOT flip to 'active' merely because the date has passed.
-  // ---------------------------------------------------------------
-  {
-    slug: 'campo-grande',
-    name: 'Instituto do Aparelho Digestivo',
-    status: 'planned',
-    city: 'Campo Grande',
-    state: 'Mato Grosso do Sul',
-    stateCode: 'MS',
-    address: {
-      streetAddress: 'R. Alagoas, 700',
-      addressDetail: 'Sala 8',
-      neighborhood: 'Jardim dos Estados',
-      addressLocality: 'Campo Grande',
-      addressRegion: 'Mato Grosso do Sul',
-      postalCode: '79020-120',
-      addressCountry: 'BR',
-    },
-    // Coordinates from the clinic's own Google Maps listing
-    // (https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6, resolved 2026-07-18).
-    // Not emitted as GeoCoordinates while status is 'planned' — see
-    // isLocationIndexable and buildLocationGraph gating.
-    geo: {
-      latitude: -20.4530096,
-      longitude: -54.5956825,
-    },
-    // Keep the clinic phone separate from the doctor's appointment contact
-    // until the clinic confirms that it books directly for her.
-    // TODO(campo-grande): record a dedicated doctor phone if one is provided.
-    clinicPhone: '(67) 3320-9500',
-    whatsappUrl: WHATSAPP_URL,
-    openingHours: {
-      label: 'Segunda a sexta, das 9h às 18h',
-      opens: '09:00',
-      closes: '18:00',
-      schema: 'Mo-Fr 09:00-18:00',
-    },
-    mapsUrl: 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6',
-    roleDescription:
-      'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
-    services: CORE_SERVICES,
-    relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,
-    relatedBlogSlugs: CORE_BLOG_SLUGS,
-    // Answers restricted to facts confirmed by the client through 2026-07-18.
-    // No prices, insurance or unconfirmed availability.
     faqs: [
       {
-        question: 'Quando a Dra. Dayara Salomão começa a atender em Campo Grande?',
+        question: 'Quando a Dra. Dayara Salomão começou a atender em Campo Grande?',
         answer:
-          'O primeiro dia de atendimento no Instituto do Aparelho Digestivo, em Campo Grande/MS, está previsto para 5 de agosto de 2026.',
+          'O atendimento no Instituto do Aparelho Digestivo, em Campo Grande/MS, começou em 5 de agosto de 2026.',
       },
       {
         question: 'Onde fica o consultório em Campo Grande?',
@@ -211,23 +169,63 @@ export const LOCATIONS: PracticeLocation[] = [
       {
         question: 'Como agendar consulta em Campo Grande?',
         answer:
-          'O WhatsApp de agendamento permanece o mesmo já utilizado no site. O telefone geral do Instituto do Aparelho Digestivo é (67) 3320-9500.',
+          'O WhatsApp de agendamento é o mesmo já utilizado no site. O telefone geral do Instituto do Aparelho Digestivo é (67) 3320-9500.',
       },
       {
-        question: 'Qual será o horário de atendimento em Campo Grande?',
-        answer:
-          'O atendimento da Dra. Dayara está previsto de segunda a sexta, das 9h às 18h.',
+        question: 'Qual é o horário de atendimento em Campo Grande?',
+        answer: 'O atendimento da Dra. Dayara é de segunda a sexta, das 9h às 18h.',
       },
       {
-        question: 'Quais condições serão atendidas em Campo Grande?',
+        question: 'Quais condições são atendidas em Campo Grande?',
         answer:
-          'Consultas e tratamentos em coloproctologia, como doença hemorroidária, fissura anal, fístula anal, cisto pilonidal e HPV perianal, com avaliação individual de cada caso. A colonoscopia não será realizada pela Dra. Dayara nesse local.',
+          'Consultas e tratamentos em coloproctologia, como doença hemorroidária, fissura anal, fístula anal, cisto pilonidal e HPV perianal, com avaliação individual de cada caso. A colonoscopia não é realizada pela Dra. Dayara nesse local.',
       },
     ],
-    indexable: false,
+    indexable: true,
     showAppointmentCta: true,
     launchDate: '2026-08-05',
-    lastUpdated: '2026-07-18',
+    lastUpdated: '2026-07-19',
+  },
+
+  // ---------------------------------------------------------------
+  // HISTORICAL — Curitiba/PR. Active practice location until the
+  // 2026-07-19 cutover to Campo Grande/MS. Facts frozen at the time
+  // of the move; this address is no longer bookable. Kept for
+  // truthful record only — noindex, no appointment CTA, no active
+  // local schema. See src/app/locais-de-atendimento/[slug]/page.tsx
+  // for the historical-branch rendering.
+  // ---------------------------------------------------------------
+  {
+    slug: 'curitiba',
+    name: 'Eco Medical Center',
+    status: 'historical',
+    city: 'Curitiba',
+    state: 'Paraná',
+    stateCode: 'PR',
+    address: {
+      streetAddress: 'Rua Goiás, 70',
+      addressDetail: '3º andar',
+      neighborhood: 'Água Verde',
+      addressLocality: 'Curitiba',
+      addressRegion: 'Paraná',
+      postalCode: '80620-060',
+      addressCountry: 'BR',
+    },
+    geo: {
+      latitude: -25.4646652,
+      longitude: -49.2905794,
+    },
+    phone: '(41) 3123-6550',
+    mapsUrl: 'https://maps.app.goo.gl/8pzUEGq1YnVFmsf4A',
+    roleDescription:
+      'Atendimento em coloproctologia realizado neste endereço até a mudança para Campo Grande/MS.',
+    services: [],
+    relatedTreatmentSlugs: [],
+    relatedBlogSlugs: [],
+    faqs: [],
+    indexable: false,
+    showAppointmentCta: false,
+    lastUpdated: '2026-07-19',
   },
 ]
 

@@ -4,9 +4,9 @@ Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Curitiba, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
+This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
 
-> **Upcoming relocation (updated 2026-07-18):** The first Campo Grande/MS attendance is planned for **2026-08-05**, after which Curitiba will no longer be an active practice location. Do **not** add new Curitiba local-SEO targeting. Keep current production NAP, geo, Maps and Doctoralia signals on Curitiba until the coordinated public cutover; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia and city mentions in `src/constants.ts`, `src/lib/treatments.ts`, and `src/app/layout.tsx` to Campo Grande/MS. A line-by-line inventory lives in `.specs/features/campo-grande-seo-migration/context.md` under "Curitiba → Campo Grande Reference Change Map".
+> **Relocation completed (2026-07-19):** The practice moved from Curitiba/PR to Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` now point to Campo Grande; Curitiba is preserved as a `historical` entry in `src/lib/locations.ts` (noindex, no appointment CTA). The Doctoralia profile is not yet migrated — `DOCTORALIA_URL` still points at the Curitiba/CRM-PR profile until a confirmed Campo Grande URL exists. A line-by-line inventory of the change lives in `.specs/features/campo-grande-seo-migration/context.md` under "Curitiba → Campo Grande Reference Change Map".
 
 ## Stack
 

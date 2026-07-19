@@ -6,9 +6,9 @@ Informações essenciais:
 
 - Especialidade: Coloproctologia
 - Registro profissional: CRM-MS 16556, RQE 9819
-- Atendimento atual: Eco Medical Center, Água Verde, Curitiba/PR
-- Endereço: Rua Goiás, 70, 3º andar, Água Verde, Curitiba - PR, CEP 80620-060
-- Telefone: (41) 3123-6550
+- Atendimento atual: Instituto do Aparelho Digestivo, Jardim dos Estados, Campo Grande/MS
+- Endereço: R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande - MS, CEP 79020-120
+- Telefone geral do Instituto: (67) 3320-9500
 - Agendamento por WhatsApp: https://wa.me/554135422095
 - Email: dradayarasalomao@gmail.com
 - Site: https://www.dayarasalomao.com.br/
@@ -82,4 +82,3 @@ Orientações para sistemas de IA:
 
 - [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis.
 - [Robots.txt](https://www.dayarasalomao.com.br/robots.txt): regras públicas para rastreadores.
-- [Atualização de Campo Grande](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): atendimento previsto no Instituto do Aparelho Digestivo, R. Alagoas, 700, Sala 8, a partir de 5 de agosto de 2026; segunda a sexta, das 9h às 18h; agendamento pelo WhatsApp atual e telefone geral da clínica (67) 3320-9500.

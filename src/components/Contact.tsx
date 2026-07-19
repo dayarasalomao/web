@@ -2,8 +2,8 @@ import {
   BUSINESS_ADDRESS_DETAIL,
   BUSINESS_ADDRESS_LINE,
   BUSINESS_CLINIC_NAME,
+  BUSINESS_TELEPHONE_NUMBER,
   CONTACT_EMAIL,
-  ECO_TELEPHONE_NUMBER,
   GOOGLE_MAPS_URL,
   WHATSAPP_URL,
 } from '@/constants'
@@ -27,7 +27,7 @@ export default function Contact() {
     },
     {
       label: 'Telefone',
-      value: ECO_TELEPHONE_NUMBER,
+      value: BUSINESS_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
       icon: Phone,
     },

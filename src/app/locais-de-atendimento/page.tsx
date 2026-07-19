@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
-import { getIndexableLocations, getLocationBySlug } from '@/lib/locations'
+import { getAllLocations, getIndexableLocations } from '@/lib/locations'
 import {
   buildBreadcrumbGraph,
   buildItemListGraph,
@@ -11,7 +11,7 @@ import {
 
 const title = 'Locais de atendimento | Dra. Dayara Salomão'
 const description =
-  'Locais de atendimento da Dra. Dayara Salomão: consulte endereços confirmados, contatos e atualizações sobre a mudança para Campo Grande/MS.'
+  'Locais de atendimento da Dra. Dayara Salomão: consulte o endereço confirmado e os contatos para agendamento.'
 const canonical = buildCanonical('/locais-de-atendimento')
 
 export const metadata: Metadata = {
@@ -24,7 +24,9 @@ export const metadata: Metadata = {
 
 export default function LocationsPage() {
   const locations = getIndexableLocations()
-  const campoGrande = getLocationBySlug('campo-grande')
+  const historicalLocations = getAllLocations().filter(
+    (location) => location.status === 'historical',
+  )
   const breadcrumb = buildBreadcrumbGraph([
     { label: 'Início', href: '/' },
     { label: 'Locais de atendimento' },
@@ -97,54 +99,24 @@ export default function LocationsPage() {
               </Link>
             </article>
           ))}
-
-          {campoGrande?.status === 'planned' ? (
-            <article className="flex flex-col rounded-[2rem] border border-dashed border-copper/40 bg-gradient-to-br from-white to-beige/30 p-7 lg:p-9">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-                Mudança em preparação
-              </p>
-              <h2 className="mb-3 text-3xl font-semibold text-teal">Campo Grande/MS</h2>
-              <p className="mb-6 text-base leading-relaxed text-gray-700">
-                Atendimento previsto no Instituto do Aparelho Digestivo a partir de 5 de
-                agosto de 2026. O WhatsApp de agendamento permanece o mesmo utilizado no
-                site.
-              </p>
-              {campoGrande.address ? (
-                <address className="mb-7 not-italic leading-relaxed text-gray-700">
-                  <strong className="block text-teal">
-                    {campoGrande.address.streetAddress}
-                  </strong>
-                  {campoGrande.address.addressDetail ? (
-                    <span className="block">{campoGrande.address.addressDetail}</span>
-                  ) : null}
-                  {campoGrande.address.neighborhood ? (
-                    <span>{campoGrande.address.neighborhood} · </span>
-                  ) : null}
-                  <span>
-                    {campoGrande.city}/{campoGrande.stateCode} · CEP{' '}
-                    {campoGrande.address.postalCode}
-                  </span>
-                  {campoGrande.clinicPhone ? (
-                    <span className="block">
-                      Telefone geral do Instituto: {campoGrande.clinicPhone}
-                    </span>
-                  ) : null}
-                  {campoGrande.openingHours ? (
-                    <span className="block">
-                      Horário da Dra. Dayara: {campoGrande.openingHours.label}
-                    </span>
-                  ) : null}
-                </address>
-              ) : null}
-              <Link
-                href="/locais-de-atendimento/campo-grande"
-                className="font-semibold text-copper underline decoration-copper/30 underline-offset-4"
-              >
-                Ver o status da mudança
-              </Link>
-            </article>
-          ) : null}
         </div>
+
+        {historicalLocations.length ? (
+          <p className="mt-10 text-sm text-gray-600">
+            Endereços anteriores:{' '}
+            {historicalLocations.map((location, index) => (
+              <span key={location.slug}>
+                {index > 0 ? ', ' : ''}
+                <Link
+                  href={`/locais-de-atendimento/${location.slug}`}
+                  className="font-medium text-copper underline decoration-copper/30 underline-offset-4"
+                >
+                  {location.city}/{location.stateCode}
+                </Link>
+              </span>
+            ))}
+          </p>
+        ) : null}
       </section>
     </main>
   )

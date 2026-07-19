@@ -106,26 +106,17 @@ describe('label helpers', () => {
 })
 
 describe('practice locations', () => {
-  it('exposes both Curitiba (active) and Campo Grande (planned)', () => {
+  it('exposes both Campo Grande (active) and Curitiba (historical)', () => {
     const slugs = getAllLocations().map((location) => location.slug)
-    assert.deepEqual(slugs, ['curitiba', 'campo-grande'])
+    assert.deepEqual(slugs, ['campo-grande', 'curitiba'])
   })
 
-  it('keeps Curitiba active with full NAP and indexable', () => {
-    const curitiba = getLocationBySlug('curitiba')
-    if (!curitiba) throw new Error('curitiba location missing')
-    assert.equal(curitiba.status, 'active')
-    assert.ok(curitiba.address)
-    assert.ok(curitiba.geo)
-    assert.equal(isLocationIndexable(curitiba), true)
-  })
-
-  it('keeps planned Campo Grande non-indexable with confirmed pre-launch contact facts', () => {
+  it('keeps Campo Grande active with full confirmed NAP and indexable', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
-    assert.equal(campoGrande.status, 'planned')
+    assert.equal(campoGrande.status, 'active')
     assert.equal(campoGrande.stateCode, 'MS')
-    assert.equal(campoGrande.indexable, false)
+    assert.equal(campoGrande.indexable, true)
     assert.equal(campoGrande.showAppointmentCta, true)
     assert.equal(campoGrande.name, 'Instituto do Aparelho Digestivo')
     assert.equal(campoGrande.address?.streetAddress, 'R. Alagoas, 700')
@@ -139,20 +130,16 @@ describe('practice locations', () => {
       closes: '18:00',
       schema: 'Mo-Fr 09:00-18:00',
     })
-    assert.equal(campoGrande.launchDate, '2026-08-05')
-    // Confirmed coordinates from the clinic's own Google Maps listing; the
-    // noindex guardrail (no GeoCoordinates emitted pre-launch) is covered by
-    // the E2E schema assertions.
+    // Confirmed coordinates from the clinic's own Google Maps listing.
     assert.deepEqual(campoGrande.geo, {
       latitude: -20.4530096,
       longitude: -54.5956825,
     })
-    assert.equal(campoGrande.phone, undefined)
     assert.equal(campoGrande.mapsUrl, 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6')
-    assert.equal(isLocationIndexable(campoGrande), false)
+    assert.equal(isLocationIndexable(campoGrande), true)
   })
 
-  it('keeps Campo Grande FAQs restricted to confirmed pre-launch facts', () => {
+  it('keeps Campo Grande FAQs restricted to confirmed facts, isolated from Curitiba', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
     assert.ok(campoGrande.faqs.length >= 3)
@@ -161,7 +148,7 @@ describe('practice locations', () => {
       .join(' ')
     for (const faq of campoGrande.faqs) {
       const text = `${faq.question} ${faq.answer}`
-      // Active Curitiba contact data must not leak into planned-location FAQs.
+      // Historical Curitiba contact data must not leak into the active FAQs.
       assert.ok(!text.includes('Curitiba'))
       assert.ok(!text.includes('(41) 3123-6550'))
     }
@@ -170,10 +157,24 @@ describe('practice locations', () => {
     assert.match(faqText, /9h às 18h/)
   })
 
-  it('getIndexableLocations excludes any planned location', () => {
+  it('keeps Curitiba historical, non-indexable, with no appointment CTA', () => {
+    const curitiba = getLocationBySlug('curitiba')
+    if (!curitiba) throw new Error('curitiba location missing')
+    assert.equal(curitiba.status, 'historical')
+    assert.equal(curitiba.indexable, false)
+    assert.equal(curitiba.showAppointmentCta, false)
+    assert.equal(curitiba.whatsappUrl, undefined)
+    assert.equal(curitiba.name, 'Eco Medical Center')
+    assert.equal(curitiba.address?.streetAddress, 'Rua Goiás, 70')
+    assert.equal(curitiba.address?.postalCode, '80620-060')
+    assert.equal(curitiba.phone, '(41) 3123-6550')
+    assert.equal(isLocationIndexable(curitiba), false)
+  })
+
+  it('getIndexableLocations returns only the active location', () => {
     const indexable = getIndexableLocations()
     assert.equal(indexable.length, 1)
-    assert.equal(indexable[0].slug, 'curitiba')
+    assert.equal(indexable[0].slug, 'campo-grande')
     assert.ok(indexable.every((location) => location.status === 'active'))
   })
 

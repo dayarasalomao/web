@@ -1,28 +1,21 @@
-'use client'
-
 import {
   BUSINESS_FOOTER_LOCATION,
+  BUSINESS_TELEPHONE_NUMBER,
   CFM_REGISTRY_URL,
   CONTACT_EMAIL,
   CRM_FULL,
   DOCTORALIA_URL,
-  ECO_TELEPHONE_NUMBER,
   GOOGLE_MAPS_URL,
   RQE_FULL,
 } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { FOOTER_QUICK_LINKS } from '@/lib/navigation'
 import FooterAppointmentCta from '@/components/FooterAppointmentCta'
 
 export default function Footer() {
-  const pathname = usePathname()
-  const suppressCurrentPracticeContact =
-    pathname === '/locais-de-atendimento/campo-grande'
-
   const contactInfo = [
-    ...(!suppressCurrentPracticeContact ? [{
+    {
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path
@@ -33,15 +26,15 @@ export default function Footer() {
         </svg>
       ),
       text: BUSINESS_FOOTER_LOCATION,
-    }] : []),
-    ...(!suppressCurrentPracticeContact ? [{
+    },
+    {
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
         </svg>
       ),
-      text: ECO_TELEPHONE_NUMBER,
-    }] : []),
+      text: BUSINESS_TELEPHONE_NUMBER,
+    },
     {
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -146,7 +139,7 @@ export default function Footer() {
               >
                 Registro no CFM
               </Link>
-              {DOCTORALIA_URL && !suppressCurrentPracticeContact ? (
+              {DOCTORALIA_URL ? (
                 <Link
                   href={DOCTORALIA_URL}
                   target="_blank"
@@ -156,7 +149,7 @@ export default function Footer() {
                   Perfil no Doctoralia
                 </Link>
               ) : null}
-              {GOOGLE_MAPS_URL && !suppressCurrentPracticeContact ? (
+              {GOOGLE_MAPS_URL ? (
                 <Link
                   href={GOOGLE_MAPS_URL}
                   target="_blank"

@@ -32,10 +32,16 @@ interface LocationPageProps {
 }
 
 function buildLocationTitle(location: PracticeLocation): string {
+  if (location.status === 'historical') {
+    return `Endereço anterior em ${location.city} | ${SEO_DOCTOR_NAME}`
+  }
   return `Coloproctologista em ${location.city} | ${SEO_DOCTOR_NAME}`
 }
 
 function buildLocationDescription(location: PracticeLocation, indexable: boolean): string {
+  if (location.status === 'historical') {
+    return `A ${SEO_DOCTOR_NAME} atendeu no ${location.name}, em ${location.city}/${location.stateCode}, até a mudança para Campo Grande/MS. Veja o endereço atual.`
+  }
   if (indexable) {
     return `Atendimento em coloproctologia com a ${SEO_DOCTOR_NAME} no ${location.name}, em ${location.city}/${location.stateCode}. Consulte endereço e agendamento.`
   }
@@ -186,6 +192,62 @@ export default async function LocationPage({ params }: LocationPageProps) {
       </div>
     </section>
   ) : null
+
+  if (location.status === 'historical') {
+    return (
+      <main id="main-content" className="min-h-screen bg-cream py-8 lg:py-14">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd({
+              '@context': 'https://schema.org',
+              '@graph': [buildBreadcrumbGraph(breadcrumbItems)],
+            }),
+          }}
+        />
+        <section className="container">
+          <Breadcrumb items={breadcrumbItems} />
+
+          <header className="mx-auto mb-12 max-w-4xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
+              Endereço anterior
+            </p>
+            <h1 className="mb-5 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+              Atendimento em {location.city} até a mudança
+            </h1>
+            <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
+              A {SEO_DOCTOR_NAME} ({CRM_FULL} · {RQE_FULL}) atendeu no {location.name}, em{' '}
+              {location.city}/{location.stateCode}, até a mudança do consultório para
+              Campo Grande/MS. Os atendimentos acontecem apenas no novo endereço.
+            </p>
+          </header>
+
+          <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr]">
+            <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+              <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço anterior</h2>
+              {addressBlock}
+              <p className="mt-5 text-base leading-relaxed text-gray-700">
+                Este endereço não está mais em atendimento.
+              </p>
+            </section>
+
+            <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+              <h2 className="mb-5 text-2xl font-semibold text-teal">
+                Onde encontrar a Dra. Dayara agora
+              </h2>
+              <p className="mb-5 leading-relaxed text-gray-700">
+                Os atendimentos da Dra. Dayara Salomão acontecem atualmente em Campo
+                Grande/MS.
+              </p>
+              <Link href="/locais-de-atendimento/campo-grande" className="btn btn-primary">
+                Ver endereço atual
+              </Link>
+            </section>
+          </div>
+        </section>
+      </main>
+    )
+  }
 
   if (!indexable) {
     return (
