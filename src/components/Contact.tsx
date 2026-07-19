@@ -202,9 +202,8 @@ export default function Contact() {
 
                     <Link
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 hover:bg-[rgba(163,84,66,0.16)] text-center border"
+                      className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 bg-[rgba(163,84,66,0.1)] hover:bg-[rgba(163,84,66,0.16)] text-center border"
                       style={{
-                        backgroundColor: 'rgba(163, 84, 66, 0.1)',
                         borderColor: 'var(--color-copper)',
                         color: 'var(--color-copper)',
                       }}
@@ -218,9 +217,8 @@ export default function Contact() {
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 hover:bg-[rgba(29,65,76,0.16)] text-center border"
+                        className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 bg-[rgba(29,65,76,0.08)] hover:bg-[rgba(29,65,76,0.16)] text-center border"
                         style={{
-                          backgroundColor: 'rgba(29, 65, 76, 0.08)',
                           borderColor: 'var(--color-teal)',
                           color: 'var(--color-teal)',
                         }}

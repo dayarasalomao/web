@@ -1,10 +1,14 @@
 import Link from 'next/link'
-import { getLocationBySlug } from '@/lib/locations'
+import { formatLaunchDateLong, getLocationBySlug } from '@/lib/locations'
 
 export default function PracticeTransitionNotice() {
   const campoGrande = getLocationBySlug('campo-grande')
 
   if (!campoGrande || campoGrande.status !== 'planned') return null
+
+  const launchDateLong = campoGrande.launchDate
+    ? formatLaunchDateLong(campoGrande.launchDate)
+    : null
 
   return (
     <aside className="border-y border-copper/15 bg-teal px-4 py-5 text-white">
@@ -14,8 +18,10 @@ export default function PracticeTransitionNotice() {
             Próxima etapa
           </p>
           <p className="mt-1 text-sm leading-relaxed sm:text-base">
-            Atendimento no Instituto do Aparelho Digestivo, em Campo Grande/MS, previsto
-            para começar em 5 de agosto de 2026. O novo contato ainda será confirmado.
+            Atendimento no {campoGrande.name}, em {campoGrande.city}/{campoGrande.stateCode},
+            previsto para começar
+            {launchDateLong ? ` em ${launchDateLong}` : ' em breve'}. O WhatsApp de
+            agendamento continua o mesmo já usado no site.
           </p>
         </div>
         <Link

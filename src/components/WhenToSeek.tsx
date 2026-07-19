@@ -123,9 +123,9 @@ export default function WhenToSeek() {
               className="font-semibold"
               style={{ color: 'var(--color-copper)' }}
             >
-              Sintomas persistentes merecem atenção
+              Sintomas persistentes merecem atenção.
             </span>{' '}
-            . Uma avaliação ajuda a esclarecer possíveis causas e a definir
+            Uma avaliação ajuda a esclarecer possíveis causas e a definir
             próximos passos de forma individualizada.
           </p>
         </div>

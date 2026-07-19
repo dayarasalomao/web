@@ -6,7 +6,13 @@ import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME } from '@/constants'
 import { getPostBySlug } from '@/lib/blog'
 import type { PracticeLocation } from '@/lib/locations'
-import { getAllLocations, getLocationBySlug, isLocationIndexable } from '@/lib/locations'
+import {
+  formatLaunchDateLong,
+  formatLaunchDateShort,
+  getAllLocations,
+  getLocationBySlug,
+  isLocationIndexable,
+} from '@/lib/locations'
 import {
   DEFAULT_ROBOTS,
   buildCanonical,
@@ -25,20 +31,6 @@ interface LocationPageProps {
   params: Promise<{ slug: string }>
 }
 
-// launchDate is a plain ISO date; format in UTC so the announced day never
-// shifts with the server timezone.
-const LAUNCH_DATE_LONG = new Intl.DateTimeFormat('pt-BR', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-})
-const LAUNCH_DATE_SHORT = new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC' })
-
-function parseLaunchDate(isoDate: string): Date {
-  return new Date(`${isoDate}T00:00:00Z`)
-}
-
 function buildLocationTitle(location: PracticeLocation): string {
   return `Coloproctologista em ${location.city} | ${SEO_DOCTOR_NAME}`
 }
@@ -48,7 +40,7 @@ function buildLocationDescription(location: PracticeLocation, indexable: boolean
     return `Atendimento em coloproctologia com a ${SEO_DOCTOR_NAME} no ${location.name}, em ${location.city}/${location.stateCode}. Consulte endereço e agendamento.`
   }
   const launch = location.launchDate
-    ? `a partir de ${LAUNCH_DATE_SHORT.format(parseLaunchDate(location.launchDate))}`
+    ? `a partir de ${formatLaunchDateShort(location.launchDate)}`
     : 'em preparação'
   return `${SEO_DOCTOR_NAME}, ${CRM_FULL} e ${RQE_FULL}: atendimento no ${location.name}, em ${location.city}/${location.stateCode}, ${launch}.`
 }
@@ -91,7 +83,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
   const indexable = isLocationIndexable(location)
   const launchDateLong = location.launchDate
-    ? LAUNCH_DATE_LONG.format(parseLaunchDate(location.launchDate))
+    ? formatLaunchDateLong(location.launchDate)
     : null
   const treatments = location.relatedTreatmentSlugs
     .map((treatmentSlug) => getTreatmentBySlug(treatmentSlug))
@@ -278,12 +270,14 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
           <CallToActionCard
             className="mx-auto mt-12 max-w-4xl"
-            title="Agendamento para Campo Grande"
+            title={`Agendamento para ${location.city}`}
             body={
               <p>
-                O atendimento começa em 5 de agosto de 2026. Até a virada coordenada do
-                site e dos perfis locais, esta página permanece fora dos mecanismos de
-                busca.
+                {launchDateLong
+                  ? `O atendimento começa em ${launchDateLong}.`
+                  : 'O atendimento começa em breve.'}{' '}
+                Até a virada coordenada do site e dos perfis locais, esta página
+                permanece fora dos mecanismos de busca.
               </p>
             }
             actions={

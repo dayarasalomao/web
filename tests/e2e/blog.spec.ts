@@ -73,7 +73,8 @@ test('planned Campo Grande page uses confirmed contact while isolating active Cu
 
   const metadataLengths = await page.evaluate(() => ({
     title: document.title.length,
-    description: document.querySelector('meta[name="description"]')?.content.length ?? 0,
+    description:
+      document.querySelector('meta[name="description"]')?.getAttribute('content')?.length ?? 0,
     overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
   }))
   expect(metadataLengths.title).toBeLessThanOrEqual(60)

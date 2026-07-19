@@ -258,6 +258,27 @@ export function getIndexableLocations(): PracticeLocation[] {
   return LOCATIONS.filter(isLocationIndexable)
 }
 
+// launchDate is a plain ISO date; format in UTC so the announced day never
+// shifts with the server timezone.
+const LAUNCH_DATE_LONG_FORMAT = new Intl.DateTimeFormat('pt-BR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
+
+export function formatLaunchDateLong(isoDate: string): string {
+  return LAUNCH_DATE_LONG_FORMAT.format(new Date(`${isoDate}T00:00:00Z`))
+}
+
+const LAUNCH_DATE_SHORT_FORMAT = new Intl.DateTimeFormat('pt-BR', {
+  timeZone: 'UTC',
+})
+
+export function formatLaunchDateShort(isoDate: string): string {
+  return LAUNCH_DATE_SHORT_FORMAT.format(new Date(`${isoDate}T00:00:00Z`))
+}
+
 export function getActiveLocations(): PracticeLocation[] {
   return LOCATIONS.filter((location) => location.status === 'active')
 }
