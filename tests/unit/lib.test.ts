@@ -140,9 +140,15 @@ describe('practice locations', () => {
       schema: 'Mo-Fr 09:00-18:00',
     })
     assert.equal(campoGrande.launchDate, '2026-08-05')
-    assert.equal(campoGrande.geo, undefined)
+    // Confirmed coordinates from the clinic's own Google Maps listing; the
+    // noindex guardrail (no GeoCoordinates emitted pre-launch) is covered by
+    // the E2E schema assertions.
+    assert.deepEqual(campoGrande.geo, {
+      latitude: -20.4530096,
+      longitude: -54.5956825,
+    })
     assert.equal(campoGrande.phone, undefined)
-    assert.ok(campoGrande.mapsUrl)
+    assert.equal(campoGrande.mapsUrl, 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6')
     assert.equal(isLocationIndexable(campoGrande), false)
   })
 

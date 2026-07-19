@@ -170,8 +170,14 @@ export const LOCATIONS: PracticeLocation[] = [
       postalCode: '79020-120',
       addressCountry: 'BR',
     },
-    // TODO(campo-grande): add confirmed `geo` (latitude/longitude).
-    // Source checked 2026-07-18: https://www.institutodigestivo.com.br/
+    // Coordinates from the clinic's own Google Maps listing
+    // (https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6, resolved 2026-07-18).
+    // Not emitted as GeoCoordinates while status is 'planned' — see
+    // isLocationIndexable and buildLocationGraph gating.
+    geo: {
+      latitude: -20.4530096,
+      longitude: -54.5956825,
+    },
     // Keep the clinic phone separate from the doctor's appointment contact
     // until the clinic confirms that it books directly for her.
     // TODO(campo-grande): record a dedicated doctor phone if one is provided.
@@ -183,8 +189,7 @@ export const LOCATIONS: PracticeLocation[] = [
       closes: '18:00',
       schema: 'Mo-Fr 09:00-18:00',
     },
-    mapsUrl:
-      'https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KaEUri6R6IaUMQkFnCP7Ozlw&daddr=R.+Alagoas,+700+-+Sl+8+-+Jardim+dos+Estados,+Campo+Grande+-+MS,+79020-120',
+    mapsUrl: 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6',
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
     services: CORE_SERVICES,

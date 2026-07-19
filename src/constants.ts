@@ -77,8 +77,9 @@ export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profiss
 export const DOCTORALIA_URL =
   'https://www.doctoralia.com.br/dayara-salomao/coloproctologista/curitiba'
 
-// TODO(campo-grande): replace with the confirmed Campo Grande Google Maps
-// place link when the new clinic is live.
+// TODO(campo-grande): at cutover, switch to the confirmed Campo Grande place
+// link https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6 (Instituto do Aparelho
+// Digestivo, -20.4530096, -54.5956825 — see src/lib/locations.ts).
 export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/8pzUEGq1YnVFmsf4A'
 
 // =================================================================
