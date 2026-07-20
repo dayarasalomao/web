@@ -1,17 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
-import { getAllLocations, getIndexableLocations } from '@/lib/locations'
-import {
-  buildBreadcrumbGraph,
-  buildItemListGraph,
-  serializeJsonLd,
-} from '@/lib/structured-data'
+import { getIndexableLocations } from '@/lib/locations'
+import { buildBreadcrumbGraph, buildItemListGraph, serializeJsonLd } from '@/lib/structured-data'
 
-const title = 'Locais de atendimento | Dra. Dayara Salomão'
-const description =
-  'Locais de atendimento da Dra. Dayara Salomão: consulte o endereço confirmado e os contatos para agendamento.'
+const isSingleLocation = getIndexableLocations().length === 1
+
+const title = isSingleLocation
+  ? 'Local de atendimento | Dra. Dayara Salomão'
+  : 'Locais de atendimento | Dra. Dayara Salomão'
+const description = isSingleLocation
+  ? 'Local de atendimento da Dra. Dayara Salomão: consulte o endereço confirmado e os contatos para agendamento.'
+  : 'Locais de atendimento da Dra. Dayara Salomão: consulte os endereços confirmados e os contatos para agendamento.'
 const canonical = buildCanonical('/locais-de-atendimento')
 
 export const metadata: Metadata = {
@@ -24,9 +26,13 @@ export const metadata: Metadata = {
 
 export default function LocationsPage() {
   const locations = getIndexableLocations()
-  const historicalLocations = getAllLocations().filter(
-    (location) => location.status === 'historical',
-  )
+
+  // A single confirmed location IS the contact page — send visitors
+  // straight there instead of making them click through a list of one.
+  if (locations.length === 1) {
+    redirect(`/locais-de-atendimento/${locations[0].slug}`)
+  }
+
   const breadcrumb = buildBreadcrumbGraph([
     { label: 'Início', href: '/' },
     { label: 'Locais de atendimento' },
@@ -100,23 +106,6 @@ export default function LocationsPage() {
             </article>
           ))}
         </div>
-
-        {historicalLocations.length ? (
-          <p className="mt-10 text-sm text-gray-600">
-            Endereços anteriores:{' '}
-            {historicalLocations.map((location, index) => (
-              <span key={location.slug}>
-                {index > 0 ? ', ' : ''}
-                <Link
-                  href={`/locais-de-atendimento/${location.slug}`}
-                  className="font-medium text-copper underline decoration-copper/30 underline-offset-4"
-                >
-                  {location.city}/{location.stateCode}
-                </Link>
-              </span>
-            ))}
-          </p>
-        ) : null}
       </section>
     </main>
   )

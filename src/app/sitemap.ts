@@ -48,12 +48,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    {
-      url: canonicalUrl('/locais-de-atendimento'),
-      lastModified: getNewestDate(locations.map((location) => location.lastUpdated)),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+    // /locais-de-atendimento itself redirects straight to the single
+    // confirmed location when there's only one — keep the sitemap
+    // pointed at the canonical, non-redirecting URL instead.
+    ...(locations.length === 1
+      ? []
+      : [
+          {
+            url: canonicalUrl('/locais-de-atendimento'),
+            lastModified: getNewestDate(locations.map((location) => location.lastUpdated)),
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+          },
+        ]),
     ...posts.map((post) => ({
       url: canonicalUrl(`/blog/${post.slug}`),
       lastModified: post.lastModified,

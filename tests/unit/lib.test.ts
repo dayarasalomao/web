@@ -106,12 +106,12 @@ describe('label helpers', () => {
 })
 
 describe('practice locations', () => {
-  it('exposes both Campo Grande (active) and Curitiba (historical)', () => {
+  it('exposes only Campo Grande — Curitiba was fully retired, not kept historical', () => {
     const slugs = getAllLocations().map((location) => location.slug)
-    assert.deepEqual(slugs, ['campo-grande', 'curitiba'])
+    assert.deepEqual(slugs, ['campo-grande'])
   })
 
-  it('keeps Campo Grande active with full confirmed NAP and indexable', () => {
+  it('keeps Campo Grande active with full confirmed NAP, links, and indexable', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
     assert.equal(campoGrande.status, 'active')
@@ -136,42 +136,24 @@ describe('practice locations', () => {
       longitude: -54.5956825,
     })
     assert.equal(campoGrande.mapsUrl, 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6')
+    assert.equal(campoGrande.websiteUrl, 'https://www.institutodigestivo.com.br/')
+    assert.equal(campoGrande.instagramUrl, 'https://www.instagram.com/institutodigestivo/')
     assert.equal(isLocationIndexable(campoGrande), true)
   })
 
-  it('keeps Campo Grande FAQs restricted to confirmed facts, isolated from Curitiba', () => {
+  it('keeps Campo Grande FAQs restricted to confirmed facts', () => {
     const campoGrande = getLocationBySlug('campo-grande')
     if (!campoGrande) throw new Error('campo-grande location missing')
     assert.ok(campoGrande.faqs.length >= 3)
     const faqText = campoGrande.faqs
       .map((faq) => `${faq.question} ${faq.answer}`)
       .join(' ')
-    for (const faq of campoGrande.faqs) {
-      const text = `${faq.question} ${faq.answer}`
-      // Historical Curitiba contact data must not leak into the active FAQs.
-      assert.ok(!text.includes('Curitiba'))
-      assert.ok(!text.includes('(41) 3123-6550'))
-    }
     assert.match(faqText, /Sala 8/)
     assert.match(faqText, /\(67\) 3320-9500/)
     assert.match(faqText, /9h às 18h/)
   })
 
-  it('keeps Curitiba historical, non-indexable, with no appointment CTA', () => {
-    const curitiba = getLocationBySlug('curitiba')
-    if (!curitiba) throw new Error('curitiba location missing')
-    assert.equal(curitiba.status, 'historical')
-    assert.equal(curitiba.indexable, false)
-    assert.equal(curitiba.showAppointmentCta, false)
-    assert.equal(curitiba.whatsappUrl, undefined)
-    assert.equal(curitiba.name, 'Eco Medical Center')
-    assert.equal(curitiba.address?.streetAddress, 'Rua Goiás, 70')
-    assert.equal(curitiba.address?.postalCode, '80620-060')
-    assert.equal(curitiba.phone, '(41) 3123-6550')
-    assert.equal(isLocationIndexable(curitiba), false)
-  })
-
-  it('getIndexableLocations returns only the active location', () => {
+  it('getIndexableLocations returns exactly the one active location', () => {
     const indexable = getIndexableLocations()
     assert.equal(indexable.length, 1)
     assert.equal(indexable[0].slug, 'campo-grande')
@@ -180,5 +162,6 @@ describe('practice locations', () => {
 
   it('returns null for unknown slug', () => {
     assert.equal(getLocationBySlug('sao-paulo'), null)
+    assert.equal(getLocationBySlug('curitiba'), null)
   })
 })

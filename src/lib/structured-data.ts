@@ -386,7 +386,11 @@ export function buildLocationGraph(
               },
             }
           : {}),
-        ...(location.mapsUrl ? { sameAs: [location.mapsUrl] } : {}),
+        sameAs: sanitizeSameAs([
+          location.mapsUrl,
+          location.websiteUrl,
+          location.instagramUrl,
+        ]),
         ...(location.openingHours
           ? { openingHours: location.openingHours.schema }
           : {}),

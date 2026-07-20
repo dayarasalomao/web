@@ -52,7 +52,7 @@ test('mobile header keeps the desktop CTA hidden and closes with Escape', async 
   await expect(menuButton).toBeFocused()
 })
 
-test('active Campo Grande page emits confirmed NAP and schema, isolated from historical Curitiba', async ({
+test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto links', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
@@ -70,6 +70,17 @@ test('active Campo Grande page emits confirmed NAP and schema, isolated from his
   await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
   await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
+
+  await expect(page.locator('iframe[title*="Mapa"]')).toHaveAttribute(
+    'src',
+    /google\.com\/maps/,
+  )
+  await expect(
+    page.getByRole('link', { name: /site do instituto/i }),
+  ).toHaveAttribute('href', 'https://www.institutodigestivo.com.br/')
+  await expect(
+    page.getByRole('link', { name: /instagram do instituto/i }),
+  ).toHaveAttribute('href', 'https://www.instagram.com/institutodigestivo/')
 
   const metadataLengths = await page.evaluate(() => ({
     title: document.title.length,
@@ -89,6 +100,7 @@ test('active Campo Grande page emits confirmed NAP and schema, isolated from his
   expect(activeGraph).toContain('MedicalClinic')
   expect(activeGraph).toContain('PostalAddress')
   expect(activeGraph).toContain('GeoCoordinates')
+  expect(activeGraph).toContain('institutodigestivo.com.br')
 
   const sitemapResponse = await page.request.get('/sitemap.xml')
   const sitemapText = await sitemapResponse.text()
@@ -96,43 +108,20 @@ test('active Campo Grande page emits confirmed NAP and schema, isolated from his
     `${CANONICAL_WEBSITE_URL}/locais-de-atendimento/campo-grande`,
   )
   expect(sitemapText).not.toContain(`${CANONICAL_WEBSITE_URL}/locais-de-atendimento/curitiba`)
+  // Only one confirmed location exists, so the listing route redirects
+  // straight there instead of appearing as its own indexable URL.
+  const locUrls = getXmlValues(sitemapText, 'loc')
+  expect(locUrls).not.toContain(`${CANONICAL_WEBSITE_URL}/locais-de-atendimento`)
 })
 
-test('historical Curitiba page is noindexed, has no booking CTA, and points to Campo Grande', async ({
+test('the retired Curitiba address is not reachable and locations listing redirects to Campo Grande', async ({
   page,
 }) => {
-  await page.goto('/locais-de-atendimento/curitiba')
+  const curitibaResponse = await page.goto('/locais-de-atendimento/curitiba')
+  expect(curitibaResponse?.status()).toBe(404)
 
-  await expect(
-    page.getByRole('heading', { level: 1, name: /atendimento em curitiba até a mudança/i }),
-  ).toBeVisible()
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
-    'content',
-    /noindex, follow/,
-  )
-  await expect(page.getByText('Rua Goiás, 70').first()).toBeVisible()
-  // Site-wide header/footer/floating WhatsApp touchpoints still render (a
-  // visitor can still reach the doctor) — only this page's own content must
-  // not offer a "book here" CTA for the defunct address.
-  await expect(
-    page.locator('main#main-content a[href="https://wa.me/554135422095"]'),
-  ).toHaveCount(0)
-  await expect(
-    page.getByRole('link', { name: /ver endereço atual/i }),
-  ).toHaveAttribute('href', '/locais-de-atendimento/campo-grande')
-
-  // The global org schema (present on every page) legitimately contains
-  // PostalAddress/GeoCoordinates for the now-active Campo Grande location —
-  // the guardrail here is that no *per-location* MedicalClinic block is
-  // emitted for Curitiba, and none of its frozen facts (old address, old
-  // geo) leak into any schema on this page.
-  const pageGraph = await page
-    .locator('script[type="application/ld+json"]')
-    .allTextContents()
-  const graphText = pageGraph.join(' ')
-  expect(graphText).not.toContain('MedicalClinic')
-  expect(graphText).not.toContain('Rua Goiás')
-  expect(graphText).not.toContain('-25.4646652')
+  await page.goto('/locais-de-atendimento')
+  await expect(page).toHaveURL(/\/locais-de-atendimento\/campo-grande$/)
 })
 
 test('localized treatment metadata stays concise and readable', async ({ page }) => {

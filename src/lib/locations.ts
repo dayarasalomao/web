@@ -3,9 +3,9 @@
 // =================================================================
 // Single source of truth for where Dra. Dayara Salomão attends.
 // The ACTIVE location derives from src/constants.ts (single source of
-// truth, safe to index). Non-active locations (historical or planned)
-// hardcode their own frozen facts, since constants.ts no longer
-// describes them.
+// truth, safe to index). A future PLANNED location (a location not yet
+// launched) would hardcode its own frozen facts, since constants.ts
+// only describes the current active practice.
 //
 // See `.specs/features/campo-grande-seo-migration/design.md` and
 // `.specs/features/campo-grande-launch-growth/spec.md`.
@@ -28,7 +28,7 @@ import {
   GOOGLE_MAPS_URL,
 } from '../constants.ts'
 
-export type LocationStatus = 'active' | 'planned' | 'historical'
+export type LocationStatus = 'active' | 'planned'
 
 export interface LocationAddress {
   streetAddress: string
@@ -63,6 +63,8 @@ export interface PracticeLocation {
   clinicPhone?: string
   whatsappUrl?: string
   mapsUrl?: string
+  websiteUrl?: string
+  instagramUrl?: string
   openingHours?: {
     label: string
     opens: string
@@ -150,6 +152,8 @@ export const LOCATIONS: PracticeLocation[] = [
       schema: BUSINESS_HOURS,
     },
     mapsUrl: GOOGLE_MAPS_URL,
+    websiteUrl: 'https://www.institutodigestivo.com.br/',
+    instagramUrl: 'https://www.instagram.com/institutodigestivo/',
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
     services: CORE_SERVICES,
@@ -184,47 +188,6 @@ export const LOCATIONS: PracticeLocation[] = [
     indexable: true,
     showAppointmentCta: true,
     launchDate: '2026-08-05',
-    lastUpdated: '2026-07-19',
-  },
-
-  // ---------------------------------------------------------------
-  // HISTORICAL — Curitiba/PR. Active practice location until the
-  // 2026-07-19 cutover to Campo Grande/MS. Facts frozen at the time
-  // of the move; this address is no longer bookable. Kept for
-  // truthful record only — noindex, no appointment CTA, no active
-  // local schema. See src/app/locais-de-atendimento/[slug]/page.tsx
-  // for the historical-branch rendering.
-  // ---------------------------------------------------------------
-  {
-    slug: 'curitiba',
-    name: 'Eco Medical Center',
-    status: 'historical',
-    city: 'Curitiba',
-    state: 'Paraná',
-    stateCode: 'PR',
-    address: {
-      streetAddress: 'Rua Goiás, 70',
-      addressDetail: '3º andar',
-      neighborhood: 'Água Verde',
-      addressLocality: 'Curitiba',
-      addressRegion: 'Paraná',
-      postalCode: '80620-060',
-      addressCountry: 'BR',
-    },
-    geo: {
-      latitude: -25.4646652,
-      longitude: -49.2905794,
-    },
-    phone: '(41) 3123-6550',
-    mapsUrl: 'https://maps.app.goo.gl/8pzUEGq1YnVFmsf4A',
-    roleDescription:
-      'Atendimento em coloproctologia realizado neste endereço até a mudança para Campo Grande/MS.',
-    services: [],
-    relatedTreatmentSlugs: [],
-    relatedBlogSlugs: [],
-    faqs: [],
-    indexable: false,
-    showAppointmentCta: false,
     lastUpdated: '2026-07-19',
   },
 ]
@@ -275,8 +238,4 @@ const LAUNCH_DATE_SHORT_FORMAT = new Intl.DateTimeFormat('pt-BR', {
 
 export function formatLaunchDateShort(isoDate: string): string {
   return LAUNCH_DATE_SHORT_FORMAT.format(new Date(`${isoDate}T00:00:00Z`))
-}
-
-export function getActiveLocations(): PracticeLocation[] {
-  return LOCATIONS.filter((location) => location.status === 'active')
 }

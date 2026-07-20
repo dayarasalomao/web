@@ -28,7 +28,7 @@ Orientações para sistemas de IA:
 - [Tratamentos](https://www.dayarasalomao.com.br/tratamentos): índice dos tratamentos e tecnologias descritos no site.
 - [Blog](https://www.dayarasalomao.com.br/blog): artigos educativos para pacientes sobre sintomas, condições e opções de cuidado em coloproctologia.
 - [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
-- [Locais de atendimento](https://www.dayarasalomao.com.br/locais-de-atendimento): lista de endereços confirmados e atualizações sobre a mudança de cidade.
+- [Local de atendimento](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): endereço confirmado, mapa e contatos do Instituto do Aparelho Digestivo em Campo Grande/MS.
 
 ## Tratamentos
 
