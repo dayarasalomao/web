@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { Globe } from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { InstagramIcon } from '@/components/ui/InstagramIcon'
 import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME } from '@/constants'
 import { getPostBySlug } from '@/lib/blog'
 import type { PracticeLocation } from '@/lib/locations'
@@ -381,9 +383,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
+                    className="inline-flex items-center gap-1.5 font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
                   >
-                    Site do {location.name}
+                    <Globe className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
+                    Site do Instituto
                   </Link>
                 ) : null}
                 {location.instagramUrl ? (
@@ -391,9 +394,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
+                    className="inline-flex items-center gap-1.5 font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
                   >
-                    Instagram do {location.name}
+                    <InstagramIcon className="h-4 w-4" aria-hidden="true" />
+                    Instagram
                   </Link>
                 ) : null}
               </div>

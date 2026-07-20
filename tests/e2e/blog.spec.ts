@@ -79,7 +79,7 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
     page.getByRole('link', { name: /site do instituto/i }),
   ).toHaveAttribute('href', 'https://www.institutodigestivo.com.br/')
   await expect(
-    page.getByRole('link', { name: /instagram do instituto/i }),
+    page.getByRole('link', { name: /^instagram$/i }),
   ).toHaveAttribute('href', 'https://www.instagram.com/institutodigestivo/')
 
   const metadataLengths = await page.evaluate(() => ({
