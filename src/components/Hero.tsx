@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from '@/constants'
+import { SEO_LOCATION, WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -57,6 +57,8 @@ export default function Hero() {
                     height={1368}
                     className="w-full h-full object-contain scale-125"
                     priority
+                    fetchPriority="high"
+                    sizes="(min-width: 1024px) 384px, 344px"
                     quality={85}
                   />
                 </div>
@@ -74,8 +76,8 @@ export default function Hero() {
                   width={400}
                   height={120}
                   className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 h-auto"
-                  priority
-                  quality={100}
+                  sizes="(min-width: 1024px) 512px, calc(100vw - 32px)"
+                  quality={85}
                 />
               </div>
               <div
@@ -86,8 +88,12 @@ export default function Hero() {
                 }}
               ></div>
 
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                Atendimento atual em {SEO_LOCATION}
+              </p>
               <h1 className="mb-6 text-3xl font-semibold leading-tight text-teal lg:text-5xl">
-                Coloproctologista com foco em tratamentos minimamente invasivos
+                Coloproctologista em {SEO_LOCATION} com foco em tratamentos
+                minimamente invasivos
               </h1>
 
               <p className="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed font-light">
@@ -173,6 +179,7 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-secondary text-lg px-8 py-4"
+                  data-conversion="whatsapp-hero"
                 >
                   <svg
                     className="w-5 h-5 mr-2"

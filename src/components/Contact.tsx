@@ -2,8 +2,8 @@ import {
   BUSINESS_ADDRESS_DETAIL,
   BUSINESS_ADDRESS_LINE,
   BUSINESS_CLINIC_NAME,
+  BUSINESS_TELEPHONE_NUMBER,
   CONTACT_EMAIL,
-  ECO_TELEPHONE_NUMBER,
   GOOGLE_MAPS_URL,
   WHATSAPP_URL,
 } from '@/constants'
@@ -27,7 +27,7 @@ export default function Contact() {
     },
     {
       label: 'Telefone',
-      value: ECO_TELEPHONE_NUMBER,
+      value: BUSINESS_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
       icon: Phone,
     },
@@ -70,8 +70,8 @@ export default function Contact() {
             }}
           ></div>
           <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            Entre em contato para agendar sua consulta e receber o melhor
-            tratamento especializado
+            Entre em contato para confirmar horários e receber orientações de
+            agendamento.
           </p>
         </div>
 
@@ -202,9 +202,8 @@ export default function Contact() {
 
                     <Link
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 hover:bg-[rgba(163,84,66,0.16)] text-center border"
+                      className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 bg-[rgba(163,84,66,0.1)] hover:bg-[rgba(163,84,66,0.16)] text-center border"
                       style={{
-                        backgroundColor: 'rgba(163, 84, 66, 0.1)',
                         borderColor: 'var(--color-copper)',
                         color: 'var(--color-copper)',
                       }}
@@ -218,9 +217,8 @@ export default function Contact() {
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 hover:bg-[rgba(29,65,76,0.16)] text-center border"
+                        className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 bg-[rgba(29,65,76,0.08)] hover:bg-[rgba(29,65,76,0.16)] text-center border"
                         style={{
-                          backgroundColor: 'rgba(29, 65, 76, 0.08)',
                           borderColor: 'var(--color-teal)',
                           color: 'var(--color-teal)',
                         }}

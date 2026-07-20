@@ -1,17 +1,17 @@
 import {
   BUSINESS_FOOTER_LOCATION,
+  BUSINESS_TELEPHONE_NUMBER,
   CFM_REGISTRY_URL,
   CONTACT_EMAIL,
   CRM_FULL,
   DOCTORALIA_URL,
-  ECO_TELEPHONE_NUMBER,
   GOOGLE_MAPS_URL,
   RQE_FULL,
-  WHATSAPP_URL,
 } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FOOTER_QUICK_LINKS } from '@/lib/navigation'
+import FooterAppointmentCta from '@/components/FooterAppointmentCta'
 
 export default function Footer() {
   const contactInfo = [
@@ -33,7 +33,7 @@ export default function Footer() {
           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
         </svg>
       ),
-      text: ECO_TELEPHONE_NUMBER,
+      text: BUSINESS_TELEPHONE_NUMBER,
     },
     {
       icon: (
@@ -102,8 +102,8 @@ export default function Footer() {
             </div>
             <p className="text-gray-300 leading-relaxed mb-8 max-w-md">
               Especialista em coloproctologia oferecendo tratamento minimamente
-              invasivo com excelência técnica, empatia e acolhimento para seu
-              bem-estar.
+              invasivo com escuta cuidadosa, orientação individualizada e
+              acolhimento.
             </p>
 
             {/* Credentials */}
@@ -211,30 +211,7 @@ export default function Footer() {
               ))}
             </ul>
 
-            {/* CTA */}
-            <div className="mt-8">
-              <Link
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary text-sm inline-flex items-center gap-2"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                Agendar Consulta
-              </Link>
-            </div>
+            <FooterAppointmentCta />
           </div>
         </div>
 
@@ -251,7 +228,7 @@ export default function Footer() {
 
             {/* Additional Info */}
             <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-400">
-              <span>Atendimento humanizado e tecnologia avançada</span>
+              <span>Atendimento acolhedor e conduta individualizada</span>
               <span className="hidden md:inline">•</span>
               <Link
                 href="/politica-privacidade"

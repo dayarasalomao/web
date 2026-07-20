@@ -14,7 +14,7 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 1,
-      name: /coloproctologista com foco em tratamentos minimamente invasivos/i,
+      name: /coloproctologista.*com foco em tratamentos minimamente invasivos/i,
     }),
   ).toBeVisible()
 
@@ -25,7 +25,114 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
     'href',
     '/#contato',
   )
-  await expect(page.getByRole('link', { name: /agende no whatsapp/i })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: /agendar consulta pelo whatsapp/i }),
+  ).toBeVisible()
+
+  const lcpImage = page.getByAltText('Retrato profissional da Dra. Dayara Salomão')
+  await expect(lcpImage).toHaveAttribute('fetchpriority', 'high')
+  await expect(lcpImage).toHaveAttribute('sizes', '(min-width: 1024px) 384px, 344px')
+})
+
+test('mobile header keeps the desktop CTA hidden and closes with Escape', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/')
+
+  await expect(page.locator('header [data-conversion="whatsapp-header"]')).toBeHidden()
+
+  const menuButton = page.locator('button[aria-controls="mobile-navigation"]')
+  await menuButton.focus()
+  await menuButton.press('Enter')
+  await expect(menuButton).toHaveAttribute('aria-expanded', 'true')
+  await expect(page.locator('#mobile-navigation')).toBeVisible()
+
+  await page.keyboard.press('Escape')
+  await expect(menuButton).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.locator('#mobile-navigation')).toHaveCount(0)
+  await expect(menuButton).toBeFocused()
+})
+
+test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto links', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/locais-de-atendimento/campo-grande')
+
+  await expect(
+    page.getByRole('heading', { level: 1, name: /coloproctologista em campo grande/i }),
+  ).toBeVisible()
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    'content',
+    /^index, follow/,
+  )
+  await expect(page.locator('a[href="https://wa.me/554135422095"]').first()).toBeVisible()
+  await expect(page.getByText('Sala 8').first()).toBeVisible()
+  await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
+  await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()
+  await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
+
+  await expect(page.locator('iframe[title*="Mapa"]')).toHaveAttribute(
+    'src',
+    /google\.com\/maps/,
+  )
+  await expect(
+    page.getByRole('link', { name: /site do instituto/i }),
+  ).toHaveAttribute('href', 'https://www.institutodigestivo.com.br/')
+  await expect(
+    page.getByRole('link', { name: /^instagram$/i }),
+  ).toHaveAttribute('href', 'https://www.instagram.com/institutodigestivo/')
+
+  const metadataLengths = await page.evaluate(() => ({
+    title: document.title.length,
+    description:
+      document.querySelector('meta[name="description"]')?.getAttribute('content')?.length ?? 0,
+    overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+  }))
+  expect(metadataLengths.title).toBeLessThanOrEqual(60)
+  expect(metadataLengths.description).toBeGreaterThanOrEqual(120)
+  expect(metadataLengths.description).toBeLessThanOrEqual(160)
+  expect(metadataLengths.overflow).toBe(0)
+
+  const pageGraph = await page
+    .locator('script[type="application/ld+json"]')
+    .allTextContents()
+  const activeGraph = pageGraph.find((graph) => graph.includes('MedicalClinic')) ?? ''
+  expect(activeGraph).toContain('MedicalClinic')
+  expect(activeGraph).toContain('PostalAddress')
+  expect(activeGraph).toContain('GeoCoordinates')
+  expect(activeGraph).toContain('institutodigestivo.com.br')
+  expect(pageGraph.join(' ')).not.toContain('/coloproctologista/curitiba')
+  await expect(page.getByRole('link', { name: /perfil no doctoralia/i })).toHaveCount(0)
+
+  const sitemapResponse = await page.request.get('/sitemap.xml')
+  const sitemapText = await sitemapResponse.text()
+  expect(sitemapText).toContain(
+    `${CANONICAL_WEBSITE_URL}/locais-de-atendimento/campo-grande`,
+  )
+  expect(sitemapText).not.toContain(`${CANONICAL_WEBSITE_URL}/locais-de-atendimento/curitiba`)
+  // Only one confirmed location exists, so the listing route redirects
+  // straight there instead of appearing as its own indexable URL.
+  const locUrls = getXmlValues(sitemapText, 'loc')
+  expect(locUrls).not.toContain(`${CANONICAL_WEBSITE_URL}/locais-de-atendimento`)
+})
+
+test('the retired Curitiba address is not reachable and locations listing redirects to Campo Grande', async ({
+  page,
+}) => {
+  const curitibaResponse = await page.goto('/locais-de-atendimento/curitiba')
+  expect(curitibaResponse?.status()).toBe(404)
+
+  await page.goto('/locais-de-atendimento')
+  await expect(page).toHaveURL(/\/locais-de-atendimento\/campo-grande$/)
+})
+
+test('localized treatment metadata stays concise and readable', async ({ page }) => {
+  await page.goto('/tratamentos/ligadura-elastica-hemorroidas-internas')
+
+  const description = await page.locator('meta[name="description"]').getAttribute('content')
+  expect(description).toMatch(/^Ligadura elástica em Campo Grande:/)
+  expect(description?.length).toBeGreaterThanOrEqual(120)
+  expect(description?.length).toBeLessThanOrEqual(160)
 })
 
 test('homepage treatment cards link into canonical treatment pages', async ({ page }) => {

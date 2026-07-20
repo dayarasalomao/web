@@ -10,7 +10,6 @@ import {
   BUSINESS_NAME,
   BUSINESS_PAYMENT,
   BUSINESS_PHONE,
-  BUSINESS_RATING,
   BUSINESS_SPECIALTY,
   CFM_REGISTRY_URL,
   CONTACT_SOCIAL_MEDIA,
@@ -28,6 +27,7 @@ import {
 import type { BlogPost } from './blog'
 import { buildCanonical } from './seo'
 import type { Treatment } from './treatments'
+import type { PracticeLocation } from './locations'
 
 export interface BreadcrumbItem {
   label: string
@@ -51,6 +51,28 @@ function sanitizeSameAs(values: Array<string | undefined>): string[] {
 
 export function serializeJsonLd(data: WithContext<Thing> | Record<string, unknown>): string {
   return JSON.stringify(data).replace(/</g, '\\u003c')
+}
+
+export interface FaqEntry {
+  question: string
+  answer: string
+}
+
+// FAQPage must mirror FAQ content that is visibly rendered on the page.
+export function buildFaqGraph(faqs: FaqEntry[]): Thing {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+    // TODO: drop this cast by typing the graph nodes with schema-dts
+    // generics instead of asserting, as the other builders in this file do.
+  } as Thing
 }
 
 export function buildBreadcrumbGraph(items: BreadcrumbItem[]): Thing {
@@ -136,11 +158,6 @@ export function buildGlobalGraph(): Record<string, unknown> {
               name: procedure,
             },
           })),
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: BUSINESS_RATING.ratingValue,
-          reviewCount: BUSINESS_RATING.reviewCount,
         },
       },
       {
@@ -264,17 +281,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
   ]
 
   if (post.faqs?.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      mainEntity: post.faqs.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    } as Thing)
+    graph.push(buildFaqGraph(post.faqs))
   }
 
   return {
@@ -288,46 +295,119 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
   const pageId = `${treatmentUrl}#webpage`
   const procedureId = `${treatmentUrl}#procedure`
 
+  const graph: Thing[] = [
+    {
+      '@type': 'MedicalWebPage',
+      '@id': pageId,
+      name: treatment.title,
+      description: treatment.metaDescription,
+      url: treatmentUrl,
+      inLanguage: 'pt-BR',
+      isPartOf: {
+        '@id': `${SITE_URL}#website`,
+      },
+      about: {
+        '@id': procedureId,
+      },
+    } as Thing,
+    {
+      '@type': 'MedicalProcedure',
+      '@id': procedureId,
+      name: treatment.title,
+      description: treatment.summary,
+      url: treatmentUrl,
+      procedureType: treatment.shortTitle,
+      bodyLocation: 'Região anal e perianal',
+      followup: treatment.carePath.join(' '),
+      indication: treatment.indications.join(' '),
+      howPerformed: treatment.overview.join(' '),
+      mainEntityOfPage: {
+        '@id': pageId,
+      },
+      performer: {
+        '@id': `${SITE_URL}#physician`,
+      },
+    } as Thing,
+    buildBreadcrumbGraph([
+      { label: 'Início', href: '/' },
+      { label: 'Tratamentos', href: '/tratamentos' },
+      { label: treatment.title },
+    ]),
+  ]
+
+  if (treatment.faqs?.length) {
+    graph.push(buildFaqGraph(treatment.faqs))
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  }
+}
+
+export function buildLocationGraph(
+  location: PracticeLocation,
+): Record<string, unknown> | null {
+  if (!location.address) return null
+
+  const locationUrl = buildCanonical(`/locais-de-atendimento/${location.slug}`)
+  const placeId = `${locationUrl}#practice-location`
+
   return {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'MedicalWebPage',
-        '@id': pageId,
-        name: treatment.title,
-        description: treatment.metaDescription,
-        url: treatmentUrl,
-        inLanguage: 'pt-BR',
-        isPartOf: {
-          '@id': `${SITE_URL}#website`,
+        '@type': 'MedicalClinic',
+        '@id': placeId,
+        name: location.name,
+        url: locationUrl,
+        ...(location.phone || location.clinicPhone
+          ? { telephone: location.phone ?? location.clinicPhone }
+          : {}),
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: [
+            location.address.streetAddress,
+            location.address.addressDetail,
+          ]
+            .filter(Boolean)
+            .join(', '),
+          addressLocality: location.address.addressLocality,
+          addressRegion: location.address.addressRegion,
+          postalCode: location.address.postalCode,
+          addressCountry: location.address.addressCountry,
         },
-        about: {
-          '@id': procedureId,
-        },
+        ...(location.geo
+          ? {
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: location.geo.latitude,
+                longitude: location.geo.longitude,
+              },
+            }
+          : {}),
+        sameAs: sanitizeSameAs([
+          location.mapsUrl,
+          location.websiteUrl,
+          location.instagramUrl,
+        ]),
+        ...(location.openingHours
+          ? { openingHours: location.openingHours.schema }
+          : {}),
       },
       {
-        '@type': 'MedicalProcedure',
-        '@id': procedureId,
-        name: treatment.title,
-        description: treatment.summary,
-        url: treatmentUrl,
-        procedureType: treatment.shortTitle,
-        bodyLocation: 'Região anal e perianal',
-        followup: treatment.carePath.join(' '),
-        indication: treatment.indications.join(' '),
-        howPerformed: treatment.overview.join(' '),
-        mainEntityOfPage: {
-          '@id': pageId,
+        '@type': 'Physician',
+        '@id': `${SITE_URL}#physician`,
+        workLocation: {
+          '@id': placeId,
         },
-        performer: {
-          '@id': `${SITE_URL}#physician`,
-        },
-      } as Thing,
+      },
       buildBreadcrumbGraph([
         { label: 'Início', href: '/' },
-        { label: 'Tratamentos', href: '/tratamentos' },
-        { label: treatment.title },
+        { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
+        { label: location.city },
       ]),
+      ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),
     ],
   }
 }

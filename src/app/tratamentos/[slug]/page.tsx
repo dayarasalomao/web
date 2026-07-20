@@ -112,6 +112,35 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </ul>
             </section>
 
+            {treatment.faqs?.length ? (
+              <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                  Dúvidas frequentes
+                </p>
+                <h2 className="mb-5 text-2xl font-semibold text-teal">
+                  Perguntas sobre {treatment.shortTitle.toLocaleLowerCase('pt-BR')}
+                </h2>
+                <div className="divide-y divide-beige/70 border-y border-beige/70">
+                  {treatment.faqs.map((faq) => (
+                    <details key={faq.question} className="group py-1">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-teal [&::-webkit-details-marker]:hidden">
+                        <span>{faq.question}</span>
+                        <span
+                          aria-hidden="true"
+                          className="text-xl text-copper transition-transform group-open:rotate-45"
+                        >
+                          +
+                        </span>
+                      </summary>
+                      <p className="pb-5 text-base leading-relaxed text-gray-700">
+                        {faq.answer}
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
             <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
               <h2 className="mb-4 text-2xl font-semibold text-teal">Como a conduta é planejada</h2>
               <div className="space-y-4 text-base leading-relaxed text-gray-700">

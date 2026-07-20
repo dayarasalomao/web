@@ -2,7 +2,7 @@
 
 Spec-driven plan. Ports the markdown-driven blog from `analu-procto` (production reference) into `dayara-salomao` and finishes the SEO pass from GitHub issue #2. Designed so the same pattern drops into `dra-ana-pierin` and `versiani` next with only `src/constants.ts` changes.
 
-> **Relocation guardrail (recorded 2026-05-26):** The practice is expected to move from Curitiba/PR to Campo Grande/MS around July 2026. Do **not** add new Curitiba-focused local SEO targets while working from this plan. Keep current Curitiba business data until the move is confirmed; then retarget `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia, and city mentions to Campo Grande/MS.
+> **Relocation update (2026-07-20):** The site code now targets Campo Grande/MS, with first attendance on 2026-08-05. Do **not** add new Curitiba-focused local SEO targets; Curitiba remains only in truthful CV/history references. Coordinate production publication with Google Business Profile and Doctoralia updates.
 
 ---
 
@@ -201,7 +201,7 @@ export default async function Page({ params }) {
 | 9 | Internal linking | Landing cards → posts (Section 8). "Leia também" block on posts deferred to v2. |
 | 10 | External trust links | Footer.tsx: add Doctoralia, CFM registry (`https://portal.cfm.org.br/busca-medicos/?crm=${CRM_NUMBER}&uf=PR`) |
 | 11 | Heading hierarchy | Audit Header.tsx + Hero.tsx — one visible `<h1>` per page; demote brand to `<p>` if duplicated |
-| 12 | Local SEO | `BUSINESS_ADDRESS` + `BUSINESS_GEO` ✅. Do not add new Curitiba-targeted local SEO because of the planned relocation. Keep current business data until confirmation, then retarget local signals to Campo Grande/MS. |
+| 12 | Local SEO | `BUSINESS_ADDRESS` + `BUSINESS_GEO` ✅. Active site signals target Campo Grande/MS; do not add new Curitiba-targeted local SEO outside truthful CV/history references. |
 | 13 | Image alt audit | Grep `Image` / `img`; fix generic alts. All `public/assets/*.webp` already descriptively named |
 | 14 | Crawlability | `politica-privacidade/page.tsx` — confirm `robots:{index:false}` in metadata |
 | 15 | Search Console ready | Manual: submit `/sitemap.xml`, request indexing for `/` + 2–3 top posts |
@@ -321,12 +321,13 @@ Build `/tratamentos` index + `/tratamentos/:slug` for the 8 procedures in `Treat
 - **Playwright in v1** — install chromium-only, 6 smoke tests.
 - **Visible FAQ block** — render `<details>` on posts when `faqs:` present (matches FAQPage schema → passes Google rich-results).
 
-**Still to confirm during implementation (non-blocking — can default or ask in PR):**
-1. **CRM-PR / RQE** — Footer.tsx:115 suggests `CRM-PR 42596` / `RQE 33908`. Confirm before emitting in Physician schema.
+**Updated facts and remaining confirmations (18/07/2026):**
+1. **CRM/RQE** — the client authorized `CRM-MS 16556` / `RQE 9819` for the site. The draft implementation uses these values.
 2. **Doctoralia URL** — needed for Physician `sameAs` + Footer. Flag as TODO if missing.
-3. **Google Maps place URL** — for Physician `sameAs`. Flag as TODO if missing.
-4. **Twitter handle** — layout.tsx:87 uses `@dradayarasalomao` — confirm live before shipping.
-5. **Faqs content** — draft 2–3 Q&A per post from body content (implementer proposes, user reviews in PR).
+3. **Google Maps** — the Campo Grande map URL and Sala 8 were confirmed. Exact geo coordinates remain pending and must not be inferred.
+4. **Phone/WhatsApp and hours** — keep the current booking WhatsApp; use (67) 3320-9500 only as the Instituto's general phone. Future hours are Monday–Friday, 09:00–18:00.
+5. **Twitter handle** — layout.tsx:87 uses `@dradayarasalomao` — confirm live before shipping.
+6. **FAQs content** — draft 2–3 Q&A per post from body content (implementer proposes, user reviews in PR).
 
 ---
 

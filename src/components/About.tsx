@@ -39,7 +39,7 @@ export default function About() {
                 <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                   Sua abordagem combina{' '}
                   <span className="font-medium text-teal">
-                    excelência técnica{' '}
+                    formação especializada{' '}
                   </span>
                   com{' '}
                   <span className="font-medium text-teal">
@@ -52,8 +52,8 @@ export default function About() {
                   <p className="text-gray-700 italic leading-relaxed">
                     &quot;Acredito que cada paciente merece um cuidado
                     personalizado, com empatia e acolhimento, utilizando
-                    tecnologias modernas sempre com foco no cuidado e no
-                    conforto.&quot;
+                    recursos adequados a cada indicação e sempre com foco no
+                    cuidado e no conforto.&quot;
                   </p>
                 </div>
               </div>
@@ -71,6 +71,7 @@ export default function About() {
                     width={400}
                     height={600}
                     className="w-full h-full object-cover"
+                    sizes="(min-width: 1024px) 384px, 320px"
                     quality={85}
                   />
                 </div>

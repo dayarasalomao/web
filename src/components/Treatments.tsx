@@ -57,7 +57,7 @@ export default function Treatments() {
               className="font-semibold"
               style={{ color: 'var(--color-copper)' }}
             >
-              Tecnologia avançada
+              Tecnologia com indicação individualizada
             </span>{' '}
             e{' '}
             <span
@@ -238,11 +238,11 @@ export default function Treatments() {
                 className="text-2xl lg:text-3xl font-serif font-bold mb-4"
                 style={{ color: 'var(--color-teal)' }}
               >
-                Tecnologia Avançada, Cuidado Humanizado
+                Tecnologia aplicada com cuidado
               </h3>
               <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-                Todos os tratamentos são realizados com equipamentos modernos,
-                priorizando sua segurança e conforto.
+                Cada tratamento depende do diagnóstico, da anatomia e dos
+                objetivos discutidos durante a avaliação.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

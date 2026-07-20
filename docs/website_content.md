@@ -86,9 +86,9 @@ Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cu
 
 ## Local e Agendamento
 
-### Eco Medical Center
+### Instituto do Aparelho Digestivo
 
-- Rua Goiás, 70 - 3º andar, Água Verde, Curitiba - PR, CEP 80620-060
+- R. Alagoas, 700 - Sala 8, Jardim dos Estados, Campo Grande - MS, CEP 79020-120
 
 ### Contatos
 

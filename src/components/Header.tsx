@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { WHATSAPP_URL } from '@/constants'
 import Link from 'next/link'
@@ -18,7 +18,9 @@ interface HeaderProps {
 
 export default function Header({ mode = 'home' }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
+  const suppressAppointmentCta = pathname === '/locais-de-atendimento/campo-grande'
   const navItems = mode === 'subpage' ? SUBPAGE_HEADER_NAV_ITEMS : HOME_HEADER_NAV_ITEMS
 
   const isActiveItem = (item: NavItem) => {
@@ -95,7 +97,15 @@ export default function Header({ mode = 'home' }: HeaderProps) {
       className="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200"
       style={{ boxShadow: '0 2px 15px -3px rgb(0 0 0 / 0.1)' }}
     >
-      <nav className="container py-4">
+      <nav
+        className="container py-4"
+        onKeyDown={(event) => {
+          if (event.key === 'Escape' && isMenuOpen) {
+            setIsMenuOpen(false)
+            menuButtonRef.current?.focus()
+          }
+        }}
+      >
         <div className="flex justify-between items-center">
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center gap-3">
@@ -113,7 +123,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-6">
+          <ul className="hidden md:flex items-center space-x-5">
             {navItems.map((item) => (
               <li key={item.href}>
                 {renderNavLink(item)}
@@ -121,11 +131,28 @@ export default function Header({ mode = 'home' }: HeaderProps) {
             ))}
           </ul>
 
+          {!suppressAppointmentCta ? (
+            <div className="hidden lg:block">
+              <Link
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-conversion="whatsapp-header"
+                className="btn btn-secondary text-sm"
+              >
+                Agendar consulta
+              </Link>
+            </div>
+          ) : null}
+
           {/* Mobile Menu Button */}
           <button
+            ref={menuButtonRef}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
               <span
@@ -149,7 +176,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-6 card">
+          <div id="mobile-navigation" className="md:hidden mt-6 card">
             <ul className="space-y-3 p-4">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -157,7 +184,8 @@ export default function Header({ mode = 'home' }: HeaderProps) {
                 </li>
               ))}
             </ul>
-            <div className="px-4 pb-4 pt-2 border-t border-gray-200">
+            {!suppressAppointmentCta ? (
+              <div className="px-4 pb-4 pt-2 border-t border-gray-200">
               {/* CTA Button */}
               <ul className="py-2 px-3">
                 <li key="agendar-consulta">
@@ -186,7 +214,8 @@ export default function Header({ mode = 'home' }: HeaderProps) {
                   </Link>
                 </li>
               </ul>
-            </div>
+              </div>
+            ) : null}
           </div>
         )}
       </nav>

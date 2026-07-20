@@ -4,9 +4,9 @@ This file provides guidance to Codex when working with code in this repository.
 
 ## Project Overview
 
-This repository contains the public website for Dra. Dayara Salomão, a coloproctologist based in Curitiba, Brazil. The site is primarily a Portuguese landing page focused on trust, medical positioning, and appointment conversion, plus a dedicated privacy policy route.
+This repository contains the public website for Dra. Dayara Salomão, a coloproctologist based in Campo Grande, Brazil. The site is primarily a Portuguese landing page focused on trust, medical positioning, and appointment conversion, plus a dedicated privacy policy route.
 
-> **Upcoming relocation (recorded 2026-05-26):** The practice is moving from Curitiba/PR to **Campo Grande/MS** in approximately two months (~July 2026). Do **not** add new local-SEO localization targeting Curitiba (page titles, meta descriptions, H1s, copy). When the move is confirmed, local signals — `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION`, Doctoralia profile, and any city mentions in `src/constants.ts`, `src/lib/treatments.ts`, and `src/app/layout.tsx` — should be retargeted to Campo Grande/MS. The current Curitiba address, geo, and Google Maps/Doctoralia links remain accurate until the move.
+> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS, with the first attendance on 2026-08-05. Curitiba was removed as a practice location; only truthful professional-history references remain. The external Doctoralia profile still points at Curitiba/CRM-PR, so the site omits that link until the profile is migrated.
 
 Most work in this repo falls into one of four categories:
 
@@ -17,7 +17,7 @@ Most work in this repo falls into one of four categories:
 
 ## Current Stack
 
-- **Framework**: Next.js `16.2.1` with the App Router
+- **Framework**: Next.js `16.2.10` with the App Router
 - **React**: React `19.2.4`
 - **Language**: TypeScript `5`
 - **Styling**: Tailwind CSS `3.4.16` plus custom CSS in [`src/app/globals.css`](./src/app/globals.css)

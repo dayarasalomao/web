@@ -277,7 +277,7 @@ T9 -> T10 -> T11
 
 - [ ] Backlog separates launch-safe generic posts from Campo Grande-only posts.
 - [ ] Each proposed post has intent, primary keyword, related treatment, and publish condition.
-- [ ] Colonoscopy is explicitly gated on doctor confirmation.
+- [ ] Colonoscopy is explicitly excluded because the doctor confirmed it will not be offered.
 - [ ] No app code changes are required.
 
 **Tests**: none

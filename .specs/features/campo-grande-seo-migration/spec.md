@@ -1,7 +1,11 @@
 # Campo Grande SEO Migration Specification
 
-**Status**: Draft
+**Status**: Implemented — the website cutover to Campo Grande, including confirmed coordinates, active schema, sitemap, contact UI and Curitiba retirement, is complete in the migration PR. Production publication still needs coordination with Google Business Profile and Doctoralia (updated 2026-07-20).
 **Context**: `.specs/features/campo-grande-seo-migration/context.md`
+
+> The requirements below are retained as the original pre-cutover specification and implementation
+> record. Where they describe Curitiba as active or Campo Grande as planned, the final implementation
+> outcome above takes precedence.
 
 ## Problem Statement
 
@@ -18,11 +22,11 @@ The site currently targets a truthful Curitiba coloproctology presence, but the 
 
 | Feature | Reason |
 | --- | --- |
-| Claiming active Campo Grande atendimento | Address/clinic/availability not confirmed |
-| Adding Campo Grande phone, map, or geo coordinates | Would create fake or unverifiable NAP |
+| Claiming active Campo Grande atendimento before launch approval | Site and external profiles must change in one controlled window |
+| Adding unconfirmed Campo Grande geo coordinates or activating local schema early | Would create fake, unverifiable, or premature local signals |
 | Removing all Curitiba references | Some are factual CV/history/current-location references |
 | Creating fake reviews or review schema | Compliance and trust risk |
-| Colonoscopy page | Only if the doctor confirms it is applicable and offered |
+| Colonoscopy page | The doctor confirmed she will not offer colonoscopy at this location |
 | Google Business Profile setup | External operational work, not in this repo |
 
 ---

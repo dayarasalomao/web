@@ -1,0 +1,61 @@
+keyword,cluster,intent,priority
+dayara salomao,brand,navigational,3
+dra dayara salomao,brand,navigational,3
+dayara salomao coloproctologista,brand,navigational,3
+dra dayara salomao coloproctologista campo grande,brand,navigational,3
+crm ms 16556,brand,navigational,3
+coloproctologista campo grande,local-acquisition,local-commercial,1
+proctologista campo grande,local-acquisition,local-commercial,1
+coloproctologista em campo grande ms,local-acquisition,local-commercial,1
+proctologista em campo grande ms,local-acquisition,local-commercial,1
+médica coloproctologista campo grande,local-acquisition,local-commercial,1
+coloproctologista mulher campo grande,local-acquisition,local-commercial,1
+consulta coloproctologista campo grande,local-acquisition,local-commercial,1
+agendar consulta proctologista campo grande,local-acquisition,local-commercial,1
+especialista em coloproctologia campo grande,local-acquisition,local-commercial,1
+tratamentos minimamente invasivos coloproctologia campo grande,local-acquisition,local-commercial,2
+hemorroidas campo grande,hemorroidas,local-commercial,1
+tratamento hemorroidas campo grande,hemorroidas,local-commercial,1
+cirurgia hemorroidas campo grande,hemorroidas,local-commercial,1
+cirurgia hemorroidas laser campo grande,hemorroidas,local-commercial,1
+hemorroida a laser campo grande,hemorroidas,local-commercial,1
+cirurgia hemorroida sem corte campo grande,hemorroidas,local-commercial,1
+ligadura elástica hemorroidas campo grande,hemorroidas,local-commercial,1
+ligadura elástica para hemorroidas internas campo grande,hemorroidas,local-commercial,2
+hemorroidectomia campo grande,hemorroidas,local-commercial,2
+tratamento minimamente invasivo hemorroidas campo grande,hemorroidas,local-commercial,2
+hemorroida precisa de cirurgia,hemorroidas,informational,2
+ligadura elástica dói,hemorroidas,informational,2
+fissura anal campo grande,fissura-anal,local-commercial,1
+tratamento fissura anal campo grande,fissura-anal,local-commercial,1
+toxina botulínica fissura anal campo grande,fissura-anal,local-commercial,1
+botox fissura anal campo grande,fissura-anal,local-commercial,2
+cirurgia fissura anal campo grande,fissura-anal,local-commercial,2
+fissura anal cicatriza sozinha,fissura-anal,informational,2
+cirurgia de fissura anal causa incontinência,fissura-anal,informational,2
+fístula anal campo grande,fistula-anal,local-commercial,1
+tratamento fístula anal campo grande,fistula-anal,local-commercial,1
+cirurgia fístula anal campo grande,fistula-anal,local-commercial,1
+fístula anal laser campo grande,fistula-anal,local-commercial,1
+vaaft campo grande,fistula-anal,local-commercial,2
+filac campo grande,fistula-anal,local-commercial,2
+toda fístula precisa de cirurgia,fistula-anal,informational,2
+cisto pilonidal campo grande,cisto-pilonidal,local-commercial,1
+tratamento cisto pilonidal campo grande,cisto-pilonidal,local-commercial,1
+cirurgia cisto pilonidal campo grande,cisto-pilonidal,local-commercial,1
+cisto pilonidal laser campo grande,cisto-pilonidal,local-commercial,1
+epsit campo grande,cisto-pilonidal,local-commercial,2
+cisto pilonidal some sozinho,cisto-pilonidal,informational,2
+hpv anal campo grande,hpv-anal,local-commercial,1
+tratamento hpv anal campo grande,hpv-anal,local-commercial,1
+verruga anal hpv campo grande,hpv-anal,local-commercial,2
+condiloma anal campo grande,hpv-anal,local-commercial,2
+eletrocoagulação hpv anal campo grande,hpv-anal,local-commercial,2
+hpv anal pode virar câncer,hpv-anal,informational,2
+coceira anal campo grande,symptoms,local-commercial,2
+prurido anal campo grande,symptoms,local-commercial,2
+sangramento anal campo grande,symptoms,local-commercial,2
+sangue nas fezes campo grande,symptoms,local-commercial,2
+dor ao evacuar campo grande,symptoms,local-commercial,2
+constipação tratamento campo grande,intestinal,local-commercial,2
+síndrome intestino irritável campo grande,intestinal,local-commercial,2

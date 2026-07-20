@@ -17,6 +17,10 @@ export interface Treatment {
   indications: string[]
   benefits: string[]
   carePath: string[]
+  faqs?: Array<{
+    question: string
+    answer: string
+  }>
   relatedBlogSlugs: string[]
   mappedDiseaseNames: string[]
   keywords: string[]
@@ -53,6 +57,18 @@ export const TREATMENTS: Treatment[] = [
     carePath: [
       'A consulta define se existe indicação para cirurgia e qual técnica faz mais sentido para o seu caso.',
       'No pós-operatório, o seguimento inclui controle da dor, cuidados locais e estratégias para evitar evacuação traumática.',
+    ],
+    faqs: [
+      {
+        question: 'Toda hemorroida precisa de cirurgia?',
+        answer:
+          'Não. Mudanças de hábito, medicamentos e procedimentos ambulatoriais podem ser suficientes em muitos casos. A cirurgia é considerada conforme sintomas, grau da doença, exame e resposta aos tratamentos anteriores.',
+      },
+      {
+        question: 'O laser de CO2 é indicado para qualquer caso?',
+        answer:
+          'Não. A indicação depende do tipo de hemorroida, da anatomia e do impacto dos sintomas. A consulta permite comparar técnicas e explicar benefícios, limites e recuperação esperada para cada opção.',
+      },
     ],
     relatedBlogSlugs: ['hemorroidectomia-laser-co2', 'doenca-hemorroidaria-sintomas-graus'],
     mappedDiseaseNames: ['Doença Hemorroidária'],
@@ -99,7 +115,7 @@ export const TREATMENTS: Treatment[] = [
     title: 'Ligadura elástica para doença hemorroidária',
     shortTitle: 'Ligadura elástica',
     homeCardTitle: 'Ligadura elástica para doença hemorroidária',
-    homeCardDescription: 'Método eficaz e menos invasivo',
+    homeCardDescription: 'Opção ambulatorial para casos selecionados',
     category: 'conservative',
     metaTitle: 'Ligadura elástica para hemorroidas internas | Dra. Dayara Salomão',
     metaDescription:
@@ -124,6 +140,23 @@ export const TREATMENTS: Treatment[] = [
       'A indicação depende do exame proctológico e do estágio da doença.',
       'Após o procedimento, a paciente recebe orientações sobre desconforto esperado, evacuação e sinais de alerta.',
     ],
+    faqs: [
+      {
+        question: 'A ligadura elástica dói?',
+        answer:
+          'Pode haver pressão ou desconforto após o procedimento. Dor intensa não é o esperado e deve ser comunicada à equipe. A experiência varia, e a indicação correta depende do exame proctológico.',
+      },
+      {
+        question: 'A ligadura elástica substitui a cirurgia?',
+        answer:
+          'Em alguns casos de hemorroidas internas, ela pode controlar os sintomas sem uma cirurgia maior. Em outros, o grau da doença ou o componente externo exige outra estratégia.',
+      },
+      {
+        question: 'É preciso internação para fazer a ligadura?',
+        answer:
+          'Em geral, a ligadura é realizada em ambiente ambulatorial. A médica confirma o preparo, os medicamentos em uso e os cuidados após o procedimento durante a avaliação.',
+      },
+    ],
     relatedBlogSlugs: [
       'ligadura-elastica-hemorroidas-internas',
       'sangramento-anal-dor-quando-procurar-coloproctologista',
@@ -137,7 +170,7 @@ export const TREATMENTS: Treatment[] = [
     title: 'Tratamento de fístula anal com laser e vídeo',
     shortTitle: 'Fístula anal com VAAFT / FiLaC',
     homeCardTitle: 'Cirurgia de fístula anal a laser e videoassistida (VAAFT)',
-    homeCardDescription: 'Procedimento videoassistido de alta precisão',
+    homeCardDescription: 'Planejamento videoassistido em casos selecionados',
     category: 'laser',
     metaTitle: 'Fístula anal com laser e vídeo | Dra. Dayara Salomão',
     metaDescription:
@@ -162,6 +195,18 @@ export const TREATMENTS: Treatment[] = [
       'A consulta inclui exame físico e, quando necessário, complementação diagnóstica para definir a anatomia da fístula.',
       'O retorno é importante para acompanhar cicatrização, secreção residual e necessidade de ajustes na conduta.',
     ],
+    faqs: [
+      {
+        question: 'Toda fístula anal precisa de cirurgia?',
+        answer:
+          'A maioria das fístulas exige algum procedimento para tratar o trajeto, mas a técnica varia conforme anatomia, músculos envolvidos, sintomas e histórico de tratamentos. A avaliação define a estratégia apropriada.',
+      },
+      {
+        question: 'Qual é a diferença entre VAAFT e FiLaC?',
+        answer:
+          'VAAFT usa visão endoscópica para identificar e tratar o trajeto. FiLaC utiliza energia laser dentro do trajeto fistuloso. Nem toda fístula é adequada para essas técnicas, e outras opções podem ser necessárias.',
+      },
+    ],
     relatedBlogSlugs: ['fistula-anal-laser-vaaft-filac', 'fistula-anal-o-que-e-sintomas'],
     mappedDiseaseNames: ['Fístula Anal'],
     keywords: ['fístula anal laser vaaft filac', 'tratamento fistula anal', 'fistula anal'],
@@ -172,7 +217,7 @@ export const TREATMENTS: Treatment[] = [
     title: 'Tratamento de cisto pilonidal com laser e EPSiT',
     shortTitle: 'Cisto pilonidal com EPSiT',
     homeCardTitle: 'Cirurgia de cisto pilonidal a laser e videoassistida (EPSiT)',
-    homeCardDescription: 'Tratamento avançado com recuperação mais rápida',
+    homeCardDescription: 'Abordagem por vídeo e laser em casos selecionados',
     category: 'laser',
     metaTitle: 'Cisto pilonidal com laser e EPSiT | Dra. Dayara Salomão',
     metaDescription:
@@ -196,6 +241,18 @@ export const TREATMENTS: Treatment[] = [
     carePath: [
       'A decisão terapêutica considera extensão da doença, infecção ativa e histórico de recorrência.',
       'O pós-procedimento inclui higiene local, depilação orientada quando indicada e acompanhamento para prevenir recidiva.',
+    ],
+    faqs: [
+      {
+        question: 'O cisto pilonidal some sozinho?',
+        answer:
+          'Uma inflamação pode melhorar temporariamente, mas o trajeto do cisto pode permanecer e voltar a causar sintomas. Casos com dor, secreção ou recorrência devem ser avaliados.',
+      },
+      {
+        question: 'EPSiT é indicado para todo cisto pilonidal?',
+        answer:
+          'Não. A técnica depende da extensão, da presença de infecção ativa, de cirurgias anteriores e da anatomia dos orifícios e trajetos. A avaliação compara EPSiT com outras possibilidades.',
+      },
     ],
     relatedBlogSlugs: ['cisto-pilonidal-laser-epsit', 'cisto-pilonidal-sinais-diagnostico'],
     mappedDiseaseNames: ['Cisto Pilonidal'],
@@ -242,7 +299,7 @@ export const TREATMENTS: Treatment[] = [
     title: 'Toxina botulínica para fissura anal',
     shortTitle: 'Toxina botulínica para fissura',
     homeCardTitle: 'Toxina botulínica para fissura e dores anais crônicas',
-    homeCardDescription: 'Tratamento inovador para alívio da dor',
+    homeCardDescription: 'Opção para reduzir espasmo em casos selecionados',
     category: 'innovative',
     metaTitle: 'Toxina botulínica para fissura anal | Dra. Dayara Salomão',
     metaDescription:
@@ -267,6 +324,18 @@ export const TREATMENTS: Treatment[] = [
       'O plano terapêutico inclui também ajuste intestinal, hidratação, orientações de evacuação e manejo da dor.',
       'O seguimento mostra se a fissura está cicatrizando ou se outra abordagem precisa ser discutida.',
     ],
+    faqs: [
+      {
+        question: 'A fissura anal pode cicatrizar sem procedimento?',
+        answer:
+          'Fissuras recentes podem melhorar com ajuste do hábito intestinal e tratamento clínico orientado. Quando persistem, retornam ou têm características atípicas, a avaliação ajuda a definir outras opções.',
+      },
+      {
+        question: 'A toxina botulínica substitui a cirurgia?',
+        answer:
+          'Ela pode ser uma alternativa em casos selecionados, mas não serve para todas as fissuras. Tempo de sintomas, espasmo, tratamentos anteriores e exame influenciam a decisão.',
+      },
+    ],
     relatedBlogSlugs: [
       'toxina-botulinica-fissura-anal',
       'fissura-anal-causas-sintomas',
@@ -281,7 +350,7 @@ export const TREATMENTS: Treatment[] = [
     title: 'Tratamento de HPV perianal com laser de CO2',
     shortTitle: 'HPV perianal com laser',
     homeCardTitle: 'Eletrocoagulação a laser de lesões por HPV',
-    homeCardDescription: 'Remoção segura e eficaz de lesões',
+    homeCardDescription: 'Tratamento local com seguimento individualizado',
     category: 'laser',
     metaTitle: 'HPV perianal com laser de CO2 | Dra. Dayara Salomão',
     metaDescription:
