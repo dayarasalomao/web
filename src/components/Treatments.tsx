@@ -6,36 +6,16 @@ import { getAllTreatments, getTreatmentHrefByCardName } from '@/lib/treatments'
 export default function Treatments() {
   const treatments = getAllTreatments()
 
-  const getCategoryStyles = (category: string) => {
+  const getCategoryAccent = (category: string) => {
     switch (category) {
       case 'laser':
-        return {
-          bg: 'rgba(163, 84, 66, 0.1)',
-          border: 'var(--color-copper)',
-          iconBg: 'var(--color-copper)',
-          accent: 'var(--color-copper)',
-        }
+        return 'var(--color-copper)'
       case 'conservative':
-        return {
-          bg: 'rgba(29, 65, 76, 0.1)',
-          border: 'var(--color-teal)',
-          iconBg: 'var(--color-teal)',
-          accent: 'var(--color-teal)',
-        }
+        return 'var(--color-teal)'
       case 'innovative':
-        return {
-          bg: 'rgba(209, 175, 139, 0.1)',
-          border: 'var(--color-straw)',
-          iconBg: 'var(--color-straw)',
-          accent: 'var(--color-straw)',
-        }
+        return 'var(--color-straw)'
       default:
-        return {
-          bg: 'rgba(163, 84, 66, 0.1)',
-          border: 'var(--color-copper)',
-          iconBg: 'var(--color-copper)',
-          accent: 'var(--color-copper)',
-        }
+        return 'var(--color-copper)'
     }
   }
 
@@ -46,7 +26,7 @@ export default function Treatments() {
       style={{ backgroundColor: 'var(--color-cream)' }}
     >
       {/* Subtle background texture */}
-      <div className="absolute inset-0 opacity-2">
+      <div className="absolute inset-0 opacity-[0.04]">
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
@@ -143,34 +123,31 @@ export default function Treatments() {
             <div className="lg:col-span-6 space-y-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {treatments.map((treatment, index) => {
-                  const styles = getCategoryStyles(treatment.category)
+                  const accent = getCategoryAccent(treatment.category)
                   const href = getTreatmentHrefByCardName(
                     treatment.homeCardTitle,
                   )
                   const content = (
                     <>
                       <div
-                        className="absolute top-0 left-0 w-full h-0.5 opacity-30"
-                        style={{ backgroundColor: styles.accent }}
+                        className="absolute top-0 left-0 w-full h-0.5 opacity-40"
+                        style={{ backgroundColor: accent }}
                       ></div>
-
-                      <div className="flex h-full items-start gap-3">
-                        <div className="flex flex-1 flex-col h-full">
-                          <h3
-                            className="text-sm font-serif font-semibold mb-1"
-                            style={{ color: 'var(--color-teal)' }}
-                          >
-                            {treatment.homeCardTitle}
-                          </h3>
-                          <p className="text-xs text-gray-600 leading-relaxed">
-                            {treatment.homeCardDescription}
-                          </p>
-                          {href ? (
-                            <span className="mt-auto pt-3 inline-flex text-xs font-medium text-copper">
-                              Ver detalhes
-                            </span>
-                          ) : null}
-                        </div>
+                      <div className="flex h-full flex-col">
+                        <h3
+                          className="text-sm font-serif font-semibold mb-1"
+                          style={{ color: 'var(--color-teal)' }}
+                        >
+                          {treatment.homeCardTitle}
+                        </h3>
+                        <p className="text-xs text-gray-600 leading-relaxed">
+                          {treatment.homeCardDescription}
+                        </p>
+                        {href ? (
+                          <span className="mt-auto pt-3 inline-flex text-xs font-medium text-copper">
+                            Ver detalhes
+                          </span>
+                        ) : null}
                       </div>
                     </>
                   )
@@ -180,12 +157,7 @@ export default function Treatments() {
                       <Link
                         key={index}
                         href={href}
-                        className="group card flex h-full p-4 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
-                        style={{
-                          backgroundColor: styles.bg,
-                          borderColor: styles.border,
-                          borderWidth: '1px',
-                        }}
+                        className="group card relative flex h-full p-4 transition-all duration-300 hover:-translate-y-1"
                       >
                         {content}
                       </Link>
@@ -193,15 +165,7 @@ export default function Treatments() {
                   }
 
                   return (
-                    <div
-                      key={index}
-                      className="group card flex h-full p-4 relative overflow-hidden"
-                      style={{
-                        backgroundColor: styles.bg,
-                        borderColor: styles.border,
-                        borderWidth: '1px',
-                      }}
-                    >
+                    <div key={index} className="group card relative flex h-full p-4">
                       {content}
                     </div>
                   )
