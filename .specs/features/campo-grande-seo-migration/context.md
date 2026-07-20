@@ -1,6 +1,10 @@
 # Campo Grande SEO Migration Context
 
-**Status**: Active — contact and launch facts confirmed through 2026-07-18
+**Status**: Website cutover implemented — pending merge and coordinated external-profile updates (2026-07-20)
+
+> The inventory below began as a pre-cutover snapshot. The final implementation now points the
+> website, schema and sitemap at Campo Grande, removes Curitiba as a practice location, and keeps
+> Curitiba only where it is a truthful professional-history fact.
 
 ## User Decisions Captured
 
@@ -12,14 +16,11 @@
 - After the move, Curitiba will no longer be an active practice location.
 - Confirmed professional registration for the site: CRM-MS 16556 / RQE 9819.
 - Colonoscopy will not be offered by the doctor at this location.
-- For now, keep factual Curitiba references where they are true:
-  - Eco Medical Center contact/location
-  - current Curitiba address and phone
-  - CV/history items such as Santa Casa de Curitiba
-- Clinic, written address, Maps URL and start date are confirmed and may be stored as planned launch data.
-- Confirmed Campo Grande facts may appear on the planned, noindex page. Do not emit active local schema or exact geo coordinates before the coordinated cutover.
-- The goal is to prepare a PR ahead of time so the final Campo Grande SEO switch can happen quickly once the doctor says "GO".
-- The PR may prepare architecture, draft content, noindex pages, tests, and implementation hooks before the final migration.
+- Remove Curitiba as a practice location; keep only truthful CV/history items such as Santa Casa de Curitiba.
+- Clinic, written address, Maps URL, coordinates and start date are confirmed.
+- Campo Grande is the sole active/indexable location and drives the site NAP, schema, sitemap and contact UI.
+- `/locais-de-atendimento` redirects to `/locais-de-atendimento/campo-grande`; the retired Curitiba route returns 404.
+- The old Curitiba Doctoralia URL is intentionally omitted from the footer and structured data until the migrated profile URL is confirmed.
 
 ## Compliance Constraints
 
@@ -35,7 +36,7 @@
 | Campo Grande clinic name | ✅ Instituto do Aparelho Digestivo |
 | Full street address and postal code | ✅ R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, 79020-120 |
 | Google Maps place URL or map link | ✅ Provided 2026-07-17; Sala 8 confirmed 2026-07-18 |
-| Geo coordinates | `GeoCoordinates`, local schema |
+| Geo coordinates | ✅ -20.4530096, -54.5956825, confirmed from the clinic's Google Maps listing |
 | Phone/WhatsApp strategy | ✅ Keep current booking WhatsApp; clinic general phone (67) 3320-9500 |
 | Doctor's future hours | ✅ Monday–Friday, 09:00–18:00 |
 | Active availability date | ✅ 2026-08-05 |
@@ -45,16 +46,16 @@
 
 ## Current Repo Evidence
 
-- Active global city is derived from `BUSINESS_ADDRESS_LOCALITY = 'Curitiba'` in `src/constants.ts`.
-- Active NAP is centralized in `src/constants.ts`: Eco Medical Center, Rua Goiás, 70, 3º andar, Água Verde, Curitiba/PR, CEP 80620-060.
+- Active global city is derived from `BUSINESS_ADDRESS_LOCALITY = 'Campo Grande'` in `src/constants.ts`.
+- Active NAP is centralized in `src/constants.ts`: Instituto do Aparelho Digestivo, R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.
 - Blog engine exists under `content/posts/*.md` and `src/lib/blog.ts`.
 - Treatment engine exists in `src/lib/treatments.ts`.
-- There is no location hub route yet.
-- `public/llm.txt` is stale and does not include new blog/treatment routes.
+- The location route is `/locais-de-atendimento/campo-grande`; the plural route redirects there while only one location is configured.
+- `public/llms.txt` describes the active Campo Grande address and public routes.
 
 ## Curitiba → Campo Grande Reference Change Map
 
-Inventory of every Curitiba reference in the repo, so the July 2026 cutover is mechanical. There is **no literal `"em Curitiba"` string** — it is composed at runtime from `SEO_LOCATION`.
+Pre-cutover inventory retained as a migration record. Values in the "Current" columns below describe the old Curitiba state, not the implementation after the cutover.
 
 ### 1. Single source of truth (change constants once, multiple surfaces update)
 

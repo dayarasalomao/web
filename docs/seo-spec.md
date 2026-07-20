@@ -1,16 +1,21 @@
 # SEO Spec
 
-> **Relocation guardrail (updated 2026-07-18):** First Campo Grande/MS attendance is planned for 2026-08-05, after which Curitiba will no longer be active. Do **not** add new Curitiba-focused page titles, metadata, H1s, schema targeting or local copy. Keep current production signals on Curitiba until the coordinated site/Google/Doctoralia cutover.
+> **Relocation update (2026-07-20):** Titles, metadata, H1s, schema and local copy now target Campo Grande/MS. Curitiba remains only in truthful CV/history references. Production publication should be coordinated with Google Business Profile and Doctoralia updates.
 
 ## URLs indexáveis
 
 - `/`
 - `/blog`
 - `/blog/[slug]`
+- `/tratamentos`
+- `/tratamentos/[slug]`
+- `/locais-de-atendimento/campo-grande`
 
-## URL não indexável
+## URLs não indexáveis ou aposentadas
 
 - `/politica-privacidade`
+- `/locais-de-atendimento` redireciona para o único local confirmado
+- `/locais-de-atendimento/curitiba` retorna 404
 
 ## Requisitos implementados
 
@@ -20,12 +25,12 @@
 - Sitemap com índice do blog e entradas dinâmicas dos posts
 - JSON-LD global para organização, médica e website
 - JSON-LD por post com artigo, breadcrumb e FAQ quando existir
+- JSON-LD do local ativo com endereço, coordenadas, horário e vínculo profissional
 - Breadcrumb visível nas rotas profundas
 - Links internos da landing page para posts relacionados
+- Sitemap com Campo Grande e sem a rota aposentada de Curitiba
 
 ## Pendências operacionais
 
-- Confirmar URL pública do Doctoralia
-- Confirmar URL pública do Google Maps da clínica
+- Atualizar `DOCTORALIA_URL` quando o perfil público for migrado para Campo Grande/CRM-MS
 - Confirmar se `@dradayarasalomao` continua sendo o handle correto para metadata social
-- Corrigir a configuração de lint em um passo separado

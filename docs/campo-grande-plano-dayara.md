@@ -9,8 +9,8 @@ informações suas pra virar a chave. Deixei tudo em checklist pra ficar fácil.
 
 ## 1. Dados confirmados
 
-> Atualização de 18/07/2026: já temos os dados necessários para preparar a mudança.
-> O site continua mostrando Curitiba como atendimento atual até a troca coordenada.
+> Atualização de 20/07/2026: os dados e as coordenadas foram confirmados, e o site já está
+> preparado para mostrar Campo Grande assim que a nova versão for publicada.
 
 - [x] **Nome da clínica** em Campo Grande — Instituto do Aparelho Digestivo
 - [x] **Endereço completo + CEP** — R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, 79020-120
@@ -21,10 +21,10 @@ informações suas pra virar a chave. Deixei tudo em checklist pra ficar fácil.
 - [x] **Quando** começa a atender lá — 05/08/2026
 - [x] **CRM-MS 16556 / RQE 9819** — autorizado para atualização no site
 - [x] **Colonoscopia** — não será oferecida pela Dra. Dayara nesse local
-- [x] **Curitiba depois da mudança** — não haverá atendimento; ficará apenas como histórico profissional quando necessário
+- [x] **Curitiba depois da mudança** — não haverá atendimento; permanecerão somente referências verdadeiras do currículo
 
-Falta apenas a confirmação técnica das coordenadas exatas do Maps e o “pode publicar” para
-fazermos a virada do site, Google e Doctoralia juntos.
+No site, a parte técnica está pronta. A publicação deve ser coordenada com a atualização do
+Google e do Doctoralia para manter os dados públicos consistentes.
 
 ---
 
@@ -47,8 +47,8 @@ estrelas! Dá pra melhorar ainda mais com uns ajustes rápidos:
 
 ## 3. A ordem das coisas
 
-1. Eu deixo o site pronto em modo de pré-lançamento.
-2. Na data combinada, a gente muda site, Google e Doctoralia pra Campo Grande juntos.
+1. O site já está pronto para Campo Grande.
+2. Na data combinada, a gente publica o site e atualiza Google e Doctoralia juntos.
 3. Minha recomendação é a campanha de anúncios passar a focar em Campo Grande quando a agenda
    abrir (você que decide).
 4. Depois é manter o ritmo: avaliações, fotos e conteúdo novo.

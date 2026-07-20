@@ -2,7 +2,7 @@
 
 Spec-driven plan. Ports the markdown-driven blog from `analu-procto` (production reference) into `dayara-salomao` and finishes the SEO pass from GitHub issue #2. Designed so the same pattern drops into `dra-ana-pierin` and `versiani` next with only `src/constants.ts` changes.
 
-> **Relocation guardrail (updated 2026-07-18):** First Campo Grande/MS attendance is planned for 2026-08-05, after which Curitiba will no longer be active. Do **not** add new Curitiba-focused local SEO targets. Keep current production signals on Curitiba until the coordinated site/Google/Doctoralia cutover.
+> **Relocation update (2026-07-20):** The site code now targets Campo Grande/MS, with first attendance on 2026-08-05. Do **not** add new Curitiba-focused local SEO targets; Curitiba remains only in truthful CV/history references. Coordinate production publication with Google Business Profile and Doctoralia updates.
 
 ---
 
@@ -201,7 +201,7 @@ export default async function Page({ params }) {
 | 9 | Internal linking | Landing cards → posts (Section 8). "Leia também" block on posts deferred to v2. |
 | 10 | External trust links | Footer.tsx: add Doctoralia, CFM registry (`https://portal.cfm.org.br/busca-medicos/?crm=${CRM_NUMBER}&uf=PR`) |
 | 11 | Heading hierarchy | Audit Header.tsx + Hero.tsx — one visible `<h1>` per page; demote brand to `<p>` if duplicated |
-| 12 | Local SEO | `BUSINESS_ADDRESS` + `BUSINESS_GEO` ✅. Do not add new Curitiba-targeted local SEO because of the planned relocation. Keep current business data until confirmation, then retarget local signals to Campo Grande/MS. |
+| 12 | Local SEO | `BUSINESS_ADDRESS` + `BUSINESS_GEO` ✅. Active site signals target Campo Grande/MS; do not add new Curitiba-targeted local SEO outside truthful CV/history references. |
 | 13 | Image alt audit | Grep `Image` / `img`; fix generic alts. All `public/assets/*.webp` already descriptively named |
 | 14 | Crawlability | `politica-privacidade/page.tsx` — confirm `robots:{index:false}` in metadata |
 | 15 | Search Console ready | Manual: submit `/sitemap.xml`, request indexing for `/` + 2–3 top posts |

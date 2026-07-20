@@ -1,7 +1,11 @@
 # Campo Grande SEO Migration Specification
 
-**Status**: Active — move is now **imminent**. Clinic, full address including Sala 8, date, CRM, current booking WhatsApp, clinic general phone and hours were confirmed by 2026-07-18. This is the *code* half (WS1) of the broader plan in `.specs/features/campo-grande-launch-growth/spec.md`. The launch switch remains blocked on precise geo coordinates and coordinated publication approval.
+**Status**: Implemented — the website cutover to Campo Grande, including confirmed coordinates, active schema, sitemap, contact UI and Curitiba retirement, is complete in the migration PR. Production publication still needs coordination with Google Business Profile and Doctoralia (updated 2026-07-20).
 **Context**: `.specs/features/campo-grande-seo-migration/context.md`
+
+> The requirements below are retained as the original pre-cutover specification and implementation
+> record. Where they describe Curitiba as active or Campo Grande as planned, the final implementation
+> outcome above takes precedence.
 
 ## Problem Statement
 

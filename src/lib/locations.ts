@@ -116,9 +116,9 @@ const CORE_BLOG_SLUGS: string[] = [
 
 export const LOCATIONS: PracticeLocation[] = [
   // ---------------------------------------------------------------
-  // ACTIVE — Campo Grande/MS. Cutover completed 2026-07-19. Address,
+  // ACTIVE — Campo Grande/MS. Website cutover prepared 2026-07-19. Address,
   // room, clinic phone, booking WhatsApp, weekday hours, geo and map
-  // are confirmed and now drive src/constants.ts directly.
+  // are confirmed and derive from src/constants.ts.
   // ---------------------------------------------------------------
   {
     slug: 'campo-grande',
@@ -161,9 +161,9 @@ export const LOCATIONS: PracticeLocation[] = [
     relatedBlogSlugs: CORE_BLOG_SLUGS,
     faqs: [
       {
-        question: 'Quando a Dra. Dayara Salomão começou a atender em Campo Grande?',
+        question: 'Quando começam os atendimentos da Dra. Dayara Salomão em Campo Grande?',
         answer:
-          'O atendimento no Instituto do Aparelho Digestivo, em Campo Grande/MS, começou em 5 de agosto de 2026.',
+          'Os atendimentos no Instituto do Aparelho Digestivo, em Campo Grande/MS, têm início em 5 de agosto de 2026.',
       },
       {
         question: 'Onde fica o consultório em Campo Grande?',

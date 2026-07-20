@@ -101,6 +101,8 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   expect(activeGraph).toContain('PostalAddress')
   expect(activeGraph).toContain('GeoCoordinates')
   expect(activeGraph).toContain('institutodigestivo.com.br')
+  expect(pageGraph.join(' ')).not.toContain('/coloproctologista/curitiba')
+  await expect(page.getByRole('link', { name: /perfil no doctoralia/i })).toHaveCount(0)
 
   const sitemapResponse = await page.request.get('/sitemap.xml')
   const sitemapText = await sitemapResponse.text()

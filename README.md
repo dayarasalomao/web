@@ -2,7 +2,7 @@
 
 Public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The site is a Next.js App Router project focused on medical positioning, patient education, SEO, and appointment conversion.
 
-> **Relocation completed (2026-07-19):** The practice moved from Curitiba/PR to Campo Grande/MS, with the first attendance on 2026-08-05. Curitiba is preserved as a historical, noindexed entry in `src/lib/locations.ts`. The Doctoralia profile still points at Curitiba/CRM-PR until it is migrated.
+> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS, with the first attendance on 2026-08-05. Curitiba was removed as a practice location; only truthful professional-history references remain. The external Doctoralia profile still points at Curitiba/CRM-PR, so the site omits that link until the profile is migrated.
 
 ## Stack
 

@@ -66,12 +66,11 @@ export const RQE_NUMBER = '9819'
 export const RQE_FULL = `RQE ${RQE_NUMBER}`
 export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
 
-// TODO(campo-grande): still points at the Curitiba/CRM-PR Doctoralia
-// profile — the real profile hasn't been updated to Campo Grande yet.
-// Swap this once a confirmed Campo Grande Doctoralia URL exists; do not
-// guess a slug, it will 404 until the profile is actually migrated.
-export const DOCTORALIA_URL =
-  'https://www.doctoralia.com.br/dayara-salomao/coloproctologista/curitiba'
+// TODO(campo-grande): restore this link only after the Doctoralia profile
+// has been migrated to Campo Grande/CRM-MS and its final public URL is
+// confirmed. Leaving it empty keeps the old Curitiba profile out of the
+// footer and Physician `sameAs` during the transition.
+export const DOCTORALIA_URL = ''
 
 export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6'
 

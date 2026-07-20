@@ -6,7 +6,7 @@ Guidance for Claude Code when working in this repository.
 
 This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
 
-> **Relocation completed (2026-07-19):** The practice moved from Curitiba/PR to Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` now point to Campo Grande; Curitiba is preserved as a `historical` entry in `src/lib/locations.ts` (noindex, no appointment CTA). The Doctoralia profile is not yet migrated — `DOCTORALIA_URL` still points at the Curitiba/CRM-PR profile until a confirmed Campo Grande URL exists. A line-by-line inventory of the change lives in `.specs/features/campo-grande-seo-migration/context.md` under "Curitiba → Campo Grande Reference Change Map".
+> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` point to Campo Grande. Curitiba was removed from `src/lib/locations.ts`, and `/locais-de-atendimento/curitiba` returns 404; only truthful professional-history references remain. The external Doctoralia profile is not yet migrated, so `DOCTORALIA_URL` stays empty until a confirmed Campo Grande URL exists. The migration record lives in `.specs/features/campo-grande-seo-migration/context.md`.
 
 ## Stack
 
