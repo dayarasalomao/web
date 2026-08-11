@@ -220,6 +220,16 @@ export function getIndexableLocations(): PracticeLocation[] {
   return LOCATIONS.filter(isLocationIndexable)
 }
 
+// Skip the redirect-only directory route when there is exactly one public
+// location. Keep the directory path as the future fallback for multiple sites.
+export function getLocationsLandingPath(): string {
+  const locations = getIndexableLocations()
+
+  return locations.length === 1
+    ? `/locais-de-atendimento/${locations[0].slug}`
+    : '/locais-de-atendimento'
+}
+
 // launchDate is a plain ISO date; format in UTC so the announced day never
 // shifts with the server timezone.
 const LAUNCH_DATE_LONG_FORMAT = new Intl.DateTimeFormat('pt-BR', {

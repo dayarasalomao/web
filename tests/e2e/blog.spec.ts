@@ -21,6 +21,10 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await expect(page.getByRole('link', { name: /agendar consulta/i }).first()).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^blog$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^locais$/i })).toHaveAttribute(
+    'href',
+    '/locais-de-atendimento/campo-grande',
+  )
   await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toHaveAttribute(
     'href',
     '/#contato',
@@ -232,6 +236,9 @@ test('blog index renders article cards', async ({ page }) => {
   await expect(page.getByRole('link', { name: /hemorroidectomia com laser de co2/i })).toBeVisible()
   await expect(page.getByRole('link', { name: /ver tratamentos/i })).toBeVisible()
   await expect(page.locator('footer').last().getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
+  await expect(
+    page.locator('footer').last().getByRole('link', { name: /^locais de atendimento$/i }),
+  ).toHaveAttribute('href', '/locais-de-atendimento/campo-grande')
 
   const blogHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
     (heading) => heading.getBoundingClientRect().width,

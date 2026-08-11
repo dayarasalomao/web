@@ -27,7 +27,7 @@ import {
 import type { BlogPost } from './blog'
 import { buildCanonical } from './seo'
 import type { Treatment } from './treatments'
-import type { PracticeLocation } from './locations'
+import { getLocationsLandingPath, type PracticeLocation } from './locations'
 import { PROFESSIONAL_MEMBERSHIPS } from './profile'
 
 export interface BreadcrumbItem {
@@ -448,7 +448,12 @@ export function buildLocationGraph(
       },
       buildBreadcrumbGraph([
         { label: 'Início', href: '/' },
-        { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
+        {
+          label: 'Locais de atendimento',
+          ...(getLocationsLandingPath() === '/locais-de-atendimento'
+            ? { href: '/locais-de-atendimento' }
+            : {}),
+        },
         { label: location.city },
       ]),
       ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),

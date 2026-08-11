@@ -12,6 +12,7 @@ import {
   formatLaunchDateLong,
   formatLaunchDateShort,
   getAllLocations,
+  getLocationsLandingPath,
   getLocationBySlug,
   isLocationIndexable,
 } from '@/lib/locations'
@@ -103,7 +104,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
     .filter((post): post is NonNullable<typeof post> => post !== null)
   const locationGraph = indexable ? buildLocationGraph(location) : null
   const mapEmbedUrl = indexable ? buildMapEmbedUrl(location) : null
-  const hasMultipleLocations = getAllLocations().length > 1
+  const locationsLandingPath = getLocationsLandingPath()
+  const hasMultipleLocations = locationsLandingPath === '/locais-de-atendimento'
   const breadcrumbItems = [
     { label: 'Início', href: '/' },
     {
@@ -358,7 +360,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     Falar pelo WhatsApp
                   </Link>
                 ) : null}
-                <Link href="/locais-de-atendimento" className="btn btn-primary">
+                <Link href={locationsLandingPath} className="btn btn-primary">
                   Ver locais de atendimento
                 </Link>
               </div>
