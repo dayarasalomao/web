@@ -7,7 +7,8 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { MedicalSignature } from '@/components/ui/MedicalSignature'
 import { MdxImage } from '@/components/ui/MdxImage'
-import { getAllPostSlugs, getPostBySlug } from '@/lib/blog'
+import { RelatedPostsSection } from '@/components/ui/RelatedPostsSection'
+import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '@/lib/blog'
 import { buildPostMetadata } from '@/lib/seo'
 import { buildBlogPostGraph, serializeJsonLd } from '@/lib/structured-data'
 import { getTreatmentByRelatedBlogSlug } from '@/lib/treatments'
@@ -48,6 +49,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const schema = buildBlogPostGraph(post)
   const relatedTreatment = getTreatmentByRelatedBlogSlug(post.slug)
+  const relatedPosts = getRelatedPosts(post)
 
   return (
     <main id="main-content" className="min-h-screen bg-cream py-8 lg:py-12">
@@ -85,7 +87,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="flex flex-col gap-3 text-sm text-gray-600 sm:flex-row sm:items-center sm:gap-6">
             <span>
-              Por <strong className="text-teal">{SEO_DOCTOR_NAME}</strong>
+              Por{' '}
+              <Link href="/sobre" className="font-semibold text-teal underline decoration-teal/30 underline-offset-2 hover:text-copper">
+                {SEO_DOCTOR_NAME}
+              </Link>
             </span>
             <time dateTime={post.publishDate}>
               {new Date(post.publishDate).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}
@@ -157,6 +162,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </section>
         ) : null}
+
+        <RelatedPostsSection posts={relatedPosts} />
 
         {relatedTreatment ? (
           <section className="mx-auto mt-16 max-w-4xl rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">

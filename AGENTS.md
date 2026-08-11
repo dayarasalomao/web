@@ -45,8 +45,8 @@ src/
   app/
     layout.tsx                 # global metadata, JSON-LD, fonts, analytics, skip link
     page.tsx                   # assembles the homepage sections
+    sobre/                     # canonical practitioner profile route
     politica-privacidade/      # privacy policy route
-    sitemap.ts                 # sitemap metadata route
     sitemap.ts                 # sitemap metadata route
     globals.css                # CSS variables and shared utility classes
   components/
@@ -88,7 +88,7 @@ The homepage is a single composition in [`src/app/page.tsx`](./src/app/page.tsx)
 - `Contact`: location, phone, email, and booking CTAs
 - `Footer`: credentials, contact summary, and privacy-policy link
 
-There is one additional public route at [`src/app/politica-privacidade/page.tsx`](./src/app/politica-privacidade/page.tsx).
+Additional public routes include the practitioner profile at [`src/app/sobre/page.tsx`](./src/app/sobre/page.tsx), treatment and blog hubs/details, the Campo Grande location page, and the privacy policy.
 
 ## Content Source of Truth
 

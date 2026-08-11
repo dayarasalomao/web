@@ -12,9 +12,15 @@ import {
 import {
   getAllLocations,
   getIndexableLocations,
+  getLocationsLandingPath,
   getLocationBySlug,
   isLocationIndexable,
 } from '../../src/lib/locations.ts'
+import {
+  FOOTER_QUICK_LINKS,
+  HOME_HEADER_NAV_ITEMS,
+  SUBPAGE_HEADER_NAV_ITEMS,
+} from '../../src/lib/navigation.ts'
 
 describe('calculateReadingTime', () => {
   it('rounds up by 200 wpm', () => {
@@ -158,6 +164,20 @@ describe('practice locations', () => {
     assert.equal(indexable.length, 1)
     assert.equal(indexable[0].slug, 'campo-grande')
     assert.ok(indexable.every((location) => location.status === 'active'))
+  })
+
+  it('sends user-facing navigation directly to the only active location', () => {
+    const canonicalPath = '/locais-de-atendimento/campo-grande'
+    assert.equal(getLocationsLandingPath(), canonicalPath)
+
+    for (const links of [
+      HOME_HEADER_NAV_ITEMS,
+      SUBPAGE_HEADER_NAV_ITEMS,
+      FOOTER_QUICK_LINKS,
+    ]) {
+      const locationLink = links.find((link) => /locais/i.test(link.label))
+      assert.equal(locationLink?.href, canonicalPath)
+    }
   })
 
   it('returns null for unknown slug', () => {

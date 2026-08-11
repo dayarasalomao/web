@@ -64,7 +64,11 @@ export const CRM_STATE = 'MS'
 export const CRM_FULL = `CRM-${CRM_STATE} ${CRM_NUMBER}`
 export const RQE_NUMBER = '9819'
 export const RQE_FULL = `RQE ${RQE_NUMBER}`
-export const CFM_REGISTRY_URL = `https://portal.cfm.org.br/busca-medicos/profissionais?crm=${CRM_NUMBER}&uf=${CRM_STATE}`
+// The CFM search currently submits through JavaScript and does not expose a
+// stable, physician-specific result URL. Link to the official search form and
+// show the CRM number beside it instead of relying on an obsolete deep link.
+export const CFM_MEDICAL_SEARCH_URL = 'https://portal.cfm.org.br/busca-medicos/'
+export const CRM_COUNCIL_URL = 'https://crmms.org.br/'
 
 // TODO(campo-grande): restore this link only after the Doctoralia profile
 // has been migrated to Campo Grande/CRM-MS and its final public URL is

@@ -1,43 +1,8 @@
 import Image from 'next/image'
 import { GraduationCap, Settings2, TrendingUp } from 'lucide-react'
+import { PROFESSIONAL_QUALIFICATIONS } from '@/lib/profile'
 
 export default function CV() {
-  const qualifications = [
-    {
-      title: 'Formação Médica',
-      institution: 'Pontifícia Universidade Católica do Paraná (PUC-PR)',
-      year: '2019',
-      description:
-        'Graduação em Medicina com formação sólida em ciências médicas',
-    },
-    {
-      title: 'Residência em Cirurgia Geral',
-      institution: 'Santa Casa de Curitiba',
-      year: '2022',
-      description:
-        'Especialização em procedimentos cirúrgicos com foco em técnicas avançadas',
-    },
-    {
-      title: 'Residência em Coloproctologia',
-      institution: 'Hospital Mackenzie',
-      year: '2024',
-      description: 'Especialização completa em doenças do cólon, reto e ânus',
-    },
-    {
-      title: 'Proctologia Minimamente Invasiva',
-      institution: 'IRCAD América Latina',
-      year: '2025',
-      description:
-        'Curso avançado em técnicas minimamente invasivas e cirurgia a laser',
-    },
-    {
-      title: 'Pós-graduação em Disfunções do Assoalho Pélvico',
-      institution: 'UNIFAL',
-      year: '2026',
-      description: 'Especialização avançada em tratamentos do assoalho pélvico',
-    },
-  ]
-
   return (
     <section
       id="curriculo"
@@ -119,8 +84,8 @@ export default function CV() {
 
             {/* Qualifications Timeline */}
             <div className="order-1 lg:order-2 space-y-4">
-              {qualifications.map((qualification, index) => {
-                const isCurrent = index === qualifications.length - 1
+              {PROFESSIONAL_QUALIFICATIONS.map((qualification, index) => {
+                const isCurrent = index === PROFESSIONAL_QUALIFICATIONS.length - 1
                 return (
                   <div key={index} className="relative">
                     <div

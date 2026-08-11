@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Globe } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, BookOpen, Globe, Stethoscope } from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { InstagramIcon } from '@/components/ui/InstagramIcon'
@@ -12,6 +12,7 @@ import {
   formatLaunchDateLong,
   formatLaunchDateShort,
   getAllLocations,
+  getLocationsLandingPath,
   getLocationBySlug,
   isLocationIndexable,
 } from '@/lib/locations'
@@ -103,9 +104,14 @@ export default async function LocationPage({ params }: LocationPageProps) {
     .filter((post): post is NonNullable<typeof post> => post !== null)
   const locationGraph = indexable ? buildLocationGraph(location) : null
   const mapEmbedUrl = indexable ? buildMapEmbedUrl(location) : null
+  const locationsLandingPath = getLocationsLandingPath()
+  const hasMultipleLocations = locationsLandingPath === '/locais-de-atendimento'
   const breadcrumbItems = [
     { label: 'Início', href: '/' },
-    { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
+    {
+      label: 'Locais de atendimento',
+      ...(hasMultipleLocations ? { href: '/locais-de-atendimento' } : {}),
+    },
     { label: location.city },
   ]
 
@@ -169,9 +175,37 @@ export default async function LocationPage({ params }: LocationPageProps) {
           <Link
             key={treatment.slug}
             href={`/tratamentos/${treatment.slug}`}
-            className="rounded-2xl border border-beige bg-white p-5 font-semibold text-teal shadow-sm transition hover:-translate-y-0.5 hover:border-copper"
+            className="group relative flex min-h-[210px] flex-col overflow-hidden rounded-[1.5rem] border border-beige bg-white p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-copper/70 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
           >
-            {treatment.title}
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-copper transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100"
+            />
+            <span className="flex items-center justify-between gap-4">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-copper">
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-copper/10">
+                  <Stethoscope className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+                </span>
+                Tratamento
+              </span>
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-beige text-copper transition-colors duration-300 group-hover:border-copper group-hover:bg-copper group-hover:text-white group-focus-visible:border-copper group-focus-visible:bg-copper group-focus-visible:text-white">
+                <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+              </span>
+            </span>
+            <h3 className="mt-5 text-lg font-semibold leading-snug text-teal">
+              {treatment.title}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-gray-600">
+              {treatment.homeCardDescription}
+            </p>
+            <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-copper">
+              Conhecer tratamento
+              <ArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
+            </span>
           </Link>
         ))}
       </div>
@@ -186,11 +220,34 @@ export default async function LocationPage({ params }: LocationPageProps) {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="rounded-2xl border border-beige bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-copper"
+            className="group relative flex h-full min-h-[250px] flex-col overflow-hidden rounded-[1.5rem] border border-beige bg-white p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-copper/70 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
           >
-            <span className="font-semibold text-teal">{post.title}</span>
-            <span className="mt-2 block text-sm leading-relaxed text-gray-700">
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-copper transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100"
+            />
+            <span className="flex items-center justify-between gap-4">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-copper">
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-copper/10">
+                  <BookOpen className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+                </span>
+                Artigo · {post.readingTime} min de leitura
+              </span>
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-beige text-copper transition-colors duration-300 group-hover:border-copper group-hover:bg-copper group-hover:text-white group-focus-visible:border-copper group-focus-visible:bg-copper group-focus-visible:text-white">
+                <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+              </span>
+            </span>
+            <h3 className="mt-5 text-lg font-semibold leading-snug text-teal">{post.title}</h3>
+            <span className="mt-3 block text-sm leading-relaxed text-gray-700">
               {post.excerpt}
+            </span>
+            <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-copper">
+              Ler artigo
+              <ArrowRight
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
             </span>
           </Link>
         ))}
@@ -216,7 +273,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         <section className="container">
           <Breadcrumb items={breadcrumbItems} />
 
-          <header className="mx-auto mb-12 max-w-4xl">
+          <header className="mb-12">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
               {launchDateLong
                 ? `Atendimento a partir de ${launchDateLong}`
@@ -280,7 +337,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
           {readingsSection}
 
           <CallToActionCard
-            className="mx-auto mt-12 max-w-4xl"
+            className="mt-12"
             title={`Agendamento para ${location.city}`}
             body={
               <p>
@@ -303,7 +360,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     Falar pelo WhatsApp
                   </Link>
                 ) : null}
-                <Link href="/locais-de-atendimento" className="btn btn-primary">
+                <Link href={locationsLandingPath} className="btn btn-primary">
                   Ver locais de atendimento
                 </Link>
               </div>
@@ -325,7 +382,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <section className="container">
         <Breadcrumb items={breadcrumbItems} />
 
-        <header className="mx-auto mb-12 max-w-4xl">
+        <header className="mb-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
             Atendimento em {location.city}/{location.stateCode}
           </p>
@@ -338,7 +395,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         </header>
 
         {mapEmbedUrl ? (
-          <div className="mx-auto mb-12 max-w-5xl overflow-hidden rounded-[2rem] border border-beige shadow-sm">
+          <div className="mb-12 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
             <iframe
               src={mapEmbedUrl}
               title={`Mapa com a localização do ${location.name}`}
@@ -425,7 +482,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
         {location.showAppointmentCta && location.whatsappUrl ? (
           <CallToActionCard
-            className="mx-auto mt-12 max-w-4xl"
+            className="mt-12"
             title="Precisa organizar sua avaliação?"
             body={<p>Entre em contato para confirmar horários e orientações de agendamento.</p>}
             actions={

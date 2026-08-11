@@ -7,6 +7,7 @@
 - `/`
 - `/blog`
 - `/blog/[slug]`
+- `/sobre`
 - `/tratamentos`
 - `/tratamentos/[slug]`
 - `/locais-de-atendimento/campo-grande`
@@ -25,10 +26,12 @@
 - Sitemap com índice do blog e entradas dinâmicas dos posts
 - JSON-LD global para organização, médica e website
 - JSON-LD por post com artigo, breadcrumb e FAQ quando existir
+- JSON-LD `ProfilePage` em `/sobre`, conectado ao nó global da médica
 - JSON-LD do local ativo com endereço, coordenadas, horário e vínculo profissional
 - Breadcrumb visível nas rotas profundas
 - Links internos da landing page para posts relacionados
 - Sitemap com Campo Grande e sem a rota aposentada de Curitiba
+- Links editoriais entre artigos relacionados e bylines ligadas ao perfil profissional
 
 ## Pendências operacionais
 

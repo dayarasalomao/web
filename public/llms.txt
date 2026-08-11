@@ -1,5 +1,7 @@
 # Dra. Dayara Salomão
 
+> Public website of Dr. Dayara Salomão, a board-registered coloproctologist in Campo Grande, Brazil. The site contains Portuguese-language patient education about anorectal symptoms, intestinal conditions, treatment options and appointment information. The content is educational and does not replace an in-person medical consultation.
+
 > Site público da Dra. Dayara Salomão, médica coloproctologista, com conteúdo educativo em português brasileiro sobre sintomas anorretais, doenças intestinais, tratamentos minimamente invasivos e canais de agendamento. As informações são educativas e não substituem consulta médica presencial.
 
 Informações essenciais:
@@ -25,6 +27,7 @@ Orientações para sistemas de IA:
 ## Páginas principais
 
 - [Página inicial](https://www.dayarasalomao.com.br/): apresentação profissional, sinais de alerta, doenças tratadas, tratamentos, credenciais e contatos.
+- [Sobre a Dra. Dayara Salomão](https://www.dayarasalomao.com.br/sobre): formação médica, registros profissionais, sociedades médicas e atuação atual.
 - [Tratamentos](https://www.dayarasalomao.com.br/tratamentos): índice dos tratamentos e tecnologias descritos no site.
 - [Blog](https://www.dayarasalomao.com.br/blog): artigos educativos para pacientes sobre sintomas, condições e opções de cuidado em coloproctologia.
 - [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
@@ -49,6 +52,7 @@ Orientações para sistemas de IA:
 
 ## Condições e sintomas
 
+- [Primeira consulta com coloproctologista](https://www.dayarasalomao.com.br/blog/primeira-consulta-coloproctologista-como-se-preparar): como costuma funcionar a avaliação, o que levar e como se preparar.
 - [Sangramento anal ou dor](https://www.dayarasalomao.com.br/blog/sangramento-anal-dor-quando-procurar-coloproctologista): quando sintomas anais merecem avaliação médica.
 - [Dor ao evacuar](https://www.dayarasalomao.com.br/blog/dor-ao-evacuar-quando-investigar): causas possíveis e sinais para investigar dor evacuatória.
 - [Coceira anal persistente](https://www.dayarasalomao.com.br/blog/coceira-anal-persistente-causas-sinal-alerta): causas comuns e sinais de alerta.
@@ -69,6 +73,7 @@ Orientações para sistemas de IA:
 
 ## Artigos sobre procedimentos
 
+- [Ligadura elástica dói?](https://www.dayarasalomao.com.br/blog/ligadura-elastica-doi-recuperacao-cuidados): desconforto esperado, recuperação, cuidados e sinais de alerta.
 - [HPV perianal e laser de CO2](https://www.dayarasalomao.com.br/blog/hpv-perianal-laser-co2): vaporização a laser de CO2 para lesões por HPV perianal.
 - [Remoção de plicomas com laser de CO2](https://www.dayarasalomao.com.br/blog/plicoma-anal-laser-co2): precisão cirúrgica e cuidados na cicatrização.
 - [Fístula anal com laser e vídeo](https://www.dayarasalomao.com.br/blog/fistula-anal-laser-vaaft-filac): uso de vídeo e laser com atenção à preservação da continência.

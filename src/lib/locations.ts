@@ -108,6 +108,7 @@ const CORE_TREATMENT_SLUGS: string[] = [
 ]
 
 const CORE_BLOG_SLUGS: string[] = [
+  'primeira-consulta-coloproctologista-como-se-preparar',
   'doenca-hemorroidaria-sintomas-graus',
   'fissura-anal-causas-sintomas',
   'fistula-anal-o-que-e-sintomas',
@@ -188,7 +189,7 @@ export const LOCATIONS: PracticeLocation[] = [
     indexable: true,
     showAppointmentCta: true,
     launchDate: '2026-08-05',
-    lastUpdated: '2026-07-19',
+    lastUpdated: '2026-08-10',
   },
 ]
 
@@ -217,6 +218,16 @@ export function isLocationIndexable(location: PracticeLocation): boolean {
 
 export function getIndexableLocations(): PracticeLocation[] {
   return LOCATIONS.filter(isLocationIndexable)
+}
+
+// Skip the redirect-only directory route when there is exactly one public
+// location. Keep the directory path as the future fallback for multiple sites.
+export function getLocationsLandingPath(): string {
+  const locations = getIndexableLocations()
+
+  return locations.length === 1
+    ? `/locais-de-atendimento/${locations[0].slug}`
+    : '/locais-de-atendimento'
 }
 
 // launchDate is a plain ISO date; format in UTC so the announced day never

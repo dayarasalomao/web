@@ -41,7 +41,7 @@ tests/                          Unit and Playwright tests
 
 ## Content Notes
 
-Most homepage copy lives directly in section components. Shared contact details, SEO strings, credentials, schema inputs, sitemap images, and analytics flags live in `src/constants.ts`. Blog articles live in `content/posts`, while treatment landing pages are backed by structured data in `src/lib/treatments.ts`.
+Most homepage copy lives directly in section components. Shared contact details, SEO strings, credentials, schema inputs, sitemap images, and analytics flags live in `src/constants.ts`. Blog articles live in `content/posts`, treatment landing pages are backed by structured data in `src/lib/treatments.ts`, and reusable practitioner biography data lives in `src/lib/profile.ts`. The standalone `/sobre` route is the canonical professional profile linked from article bylines.
 
 When changing contact details, credentials, treatments, or SEO positioning, check the relevant component, `src/constants.ts`, `docs/website_content.md`, and `public/llms.txt`.
 

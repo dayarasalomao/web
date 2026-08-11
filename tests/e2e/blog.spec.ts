@@ -21,6 +21,10 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await expect(page.getByRole('link', { name: /agendar consulta/i }).first()).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
   await expect(page.locator('header').getByRole('link', { name: /^blog$/i })).toBeVisible()
+  await expect(page.locator('header').getByRole('link', { name: /^locais$/i })).toHaveAttribute(
+    'href',
+    '/locais-de-atendimento/campo-grande',
+  )
   await expect(page.locator('header').getByRole('link', { name: /^contato$/i })).toHaveAttribute(
     'href',
     '/#contato',
@@ -65,11 +69,23 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
     'content',
     /^index, follow/,
   )
-  await expect(page.locator('a[href="https://wa.me/554135422095"]').first()).toBeVisible()
+  await expect(
+    page.locator('main a[href="https://wa.me/554135422095"]').first(),
+  ).toBeVisible()
   await expect(page.getByText('Sala 8').first()).toBeVisible()
   await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
   await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
+
+  const breadcrumb = page.getByRole('navigation', { name: /breadcrumb/i })
+  await expect(
+    breadcrumb.getByRole('link', { name: /^locais de atendimento$/i }),
+  ).toHaveCount(0)
+  await expect(breadcrumb.getByText(/^locais de atendimento$/i)).toBeVisible()
+  await expect(breadcrumb.getByText(/^campo grande$/i)).toHaveAttribute(
+    'aria-current',
+    'page',
+  )
 
   await expect(page.locator('iframe[title*="Mapa"]')).toHaveAttribute(
     'src',
@@ -96,7 +112,7 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   const pageGraph = await page
     .locator('script[type="application/ld+json"]')
     .allTextContents()
-  const activeGraph = pageGraph.find((graph) => graph.includes('MedicalClinic')) ?? ''
+  const activeGraph = pageGraph.find((graph) => graph.includes('#practice-location')) ?? ''
   expect(activeGraph).toContain('MedicalClinic')
   expect(activeGraph).toContain('PostalAddress')
   expect(activeGraph).toContain('GeoCoordinates')
@@ -114,6 +130,44 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   // straight there instead of appearing as its own indexable URL.
   const locUrls = getXmlValues(sitemapText, 'loc')
   expect(locUrls).not.toContain(`${CANONICAL_WEBSITE_URL}/locais-de-atendimento`)
+})
+
+test('active location uses one content width and exposes clear destination cards', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
+  await page.goto('/locais-de-atendimento/campo-grande')
+
+  const container = page.locator('main > section.container')
+  const header = container.locator(':scope > header')
+  const map = container.locator(':scope > div').filter({
+    has: page.locator('iframe[title*="Mapa"]'),
+  })
+  const informationGrid = container.locator(':scope > div.grid').first()
+  const widths = await Promise.all(
+    [header, map, informationGrid].map(async (locator) => {
+      const box = await locator.boundingBox()
+      return box?.width ?? 0
+    }),
+  )
+
+  expect(widths[0]).toBeGreaterThan(0)
+  expect(Math.abs(widths[0] - widths[1])).toBeLessThanOrEqual(1)
+  expect(Math.abs(widths[0] - widths[2])).toBeLessThanOrEqual(1)
+  await expect(
+    page.locator('header').getByRole('link', { name: /^agendar consulta$/i }),
+  ).toBeVisible()
+
+  const treatmentCard = page.getByRole('link', {
+    name: /hemorroidectomia com laser de co2/i,
+  })
+  await expect(treatmentCard.getByText(/conhecer tratamento/i)).toBeVisible()
+
+  const readingCard = page.getByRole('link', {
+    name: /primeira consulta com coloproctologista/i,
+  })
+  await expect(readingCard.getByText(/min de leitura/i)).toBeVisible()
+  await expect(readingCard.getByText(/ler artigo/i)).toBeVisible()
 })
 
 test('the retired Curitiba address is not reachable and locations listing redirects to Campo Grande', async ({
@@ -168,6 +222,7 @@ test('homepage disease cards route to mapped treatment pages', async ({ page }) 
 })
 
 test('blog index renders article cards', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto('/blog')
 
   await expect(page.locator('header').getByRole('link', { name: /^início$/i })).toBeVisible()
@@ -181,6 +236,18 @@ test('blog index renders article cards', async ({ page }) => {
   await expect(page.getByRole('link', { name: /hemorroidectomia com laser de co2/i })).toBeVisible()
   await expect(page.getByRole('link', { name: /ver tratamentos/i })).toBeVisible()
   await expect(page.locator('footer').last().getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
+  await expect(
+    page.locator('footer').last().getByRole('link', { name: /^locais de atendimento$/i }),
+  ).toHaveAttribute('href', '/locais-de-atendimento/campo-grande')
+
+  const blogHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
+    (heading) => heading.getBoundingClientRect().width,
+  )
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCSS('text-align', 'left')
+  const blogGridWidth = await page.locator('main > section.container > div.grid').evaluate(
+    (grid) => grid.getBoundingClientRect().width,
+  )
+  expect(Math.abs(blogHeadingWidth - blogGridWidth)).toBeLessThanOrEqual(1)
 })
 
 test('blog post renders body, faq, and CTA', async ({ page }) => {
@@ -194,7 +261,61 @@ test('blog post renders body, faq, and CTA', async ({ page }) => {
   await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i })).toBeVisible()
 })
 
+test('question-led article links to its author profile and related cluster', async ({ page }) => {
+  await page.goto('/blog/ligadura-elastica-doi-recuperacao-cuidados')
+
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/ligadura elástica dói/i)
+  await expect(page.getByRole('link', { name: /^dra\. dayara salomão$/i }).first()).toHaveAttribute(
+    'href',
+    '/sobre',
+  )
+  await expect(
+    page.getByRole('heading', { level: 2, name: /continue entendendo o tema/i }),
+  ).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: /doença hemorroidária: sintomas, graus/i }),
+  ).toBeVisible()
+})
+
+test('about page exposes practitioner credentials, profile schema, and canonical', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
+  await page.goto('/sobre')
+
+  await expect(
+    page.getByRole('heading', { level: 1, name: /sobre a dra\. dayara salomão/i }),
+  ).toBeVisible()
+  await expect(page.getByText('CRM-MS 16556').first()).toBeVisible()
+  await expect(page.getByText('RQE 9819').first()).toBeVisible()
+  await expect(page.getByRole('link', { name: /consultar crm-ms 16556 no cfm/i })).toHaveAttribute(
+    'href',
+    'https://portal.cfm.org.br/busca-medicos/',
+  )
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    `${CANONICAL_WEBSITE_URL}/sobre`,
+  )
+
+  const graph = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(graph.join(' ')).toContain('ProfilePage')
+  expect(graph.join(' ')).toContain(`${CANONICAL_WEBSITE_URL}/#physician`)
+  expect(graph.join(' ')).not.toContain('/busca-medicos/profissionais')
+
+  const heroCard = page.locator('article > header')
+  const trajectorySection = page.locator('article > section').first()
+  const professionalSection = page.locator('article > section').nth(1)
+  const widths = await Promise.all(
+    [heroCard, trajectorySection, professionalSection].map(async (locator) => {
+      const box = await locator.boundingBox()
+      return box?.width ?? 0
+    }),
+  )
+  expect(widths[0]).toBeGreaterThan(0)
+  expect(Math.abs(widths[0] - widths[1])).toBeLessThanOrEqual(1)
+  expect(Math.abs(widths[0] - widths[2])).toBeLessThanOrEqual(1)
+})
+
 test('treatments index renders canonical service cards', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto('/tratamentos')
 
   await expect(
@@ -205,6 +326,15 @@ test('treatments index renders canonical service cards', async ({ page }) => {
   ).toBeVisible()
   await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i }).first()).toBeVisible()
   await expect(page.getByRole('link', { name: /ver artigos do blog/i })).toBeVisible()
+
+  const treatmentsHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
+    (heading) => heading.getBoundingClientRect().width,
+  )
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCSS('text-align', 'left')
+  const treatmentsGridWidth = await page.locator('main > section.container > div.grid').evaluate(
+    (grid) => grid.getBoundingClientRect().width,
+  )
+  expect(Math.abs(treatmentsHeadingWidth - treatmentsGridWidth)).toBeLessThanOrEqual(1)
 })
 
 test('privacy page is crawlable for users but noindex for bots', async ({ page }) => {
@@ -234,6 +364,7 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   )
 
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
+  expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/sobre`)
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/tratamentos`)
   expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
   expect(blogPostLocs).toContain(

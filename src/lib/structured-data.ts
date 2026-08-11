@@ -11,7 +11,7 @@ import {
   BUSINESS_PAYMENT,
   BUSINESS_PHONE,
   BUSINESS_SPECIALTY,
-  CFM_REGISTRY_URL,
+  CRM_COUNCIL_URL,
   CONTACT_SOCIAL_MEDIA,
   CRM_FULL,
   CRM_STATE,
@@ -27,7 +27,8 @@ import {
 import type { BlogPost } from './blog'
 import { buildCanonical } from './seo'
 import type { Treatment } from './treatments'
-import type { PracticeLocation } from './locations'
+import { getLocationsLandingPath, type PracticeLocation } from './locations'
+import { PROFESSIONAL_MEMBERSHIPS } from './profile'
 
 export interface BreadcrumbItem {
   label: string
@@ -166,14 +167,19 @@ export function buildGlobalGraph(): Record<string, unknown> {
         name: PHYSICIAN_DATA.name,
         description: SEO_DESCRIPTION,
         medicalSpecialty: BUSINESS_SPECIALTY,
-        url: SITE_URL,
+        url: buildCanonical('/sobre'),
         image: toAbsoluteUrl(SEO_IMAGE),
         worksFor: {
           '@id': organizationId,
         },
-        memberOf: {
-          '@type': 'MedicalOrganization',
+        memberOf: PROFESSIONAL_MEMBERSHIPS.map((membership) => ({
+          '@type': 'Organization',
+          name: membership,
+        })),
+        affiliation: {
+          '@type': 'MedicalClinic',
           name: PHYSICIAN_DATA.clinic,
+          url: buildCanonical('/locais-de-atendimento/campo-grande'),
         },
         alumniOf: {
           '@type': 'CollegeOrUniversity',
@@ -184,7 +190,6 @@ export function buildGlobalGraph(): Record<string, unknown> {
           CONTACT_SOCIAL_MEDIA.facebook,
           DOCTORALIA_URL || undefined,
           GOOGLE_MAPS_URL || undefined,
-          CFM_REGISTRY_URL,
         ]),
         areaServed: {
           '@type': 'City',
@@ -200,7 +205,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
               '@type': 'Organization',
               name: `Conselho Regional de Medicina do ${CRM_STATE}`,
               alternateName: `CRM-${CRM_STATE}`,
-              url: CFM_REGISTRY_URL,
+              url: CRM_COUNCIL_URL,
             },
           },
           {
@@ -212,7 +217,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
               '@type': 'Organization',
               name: `Conselho Regional de Medicina do ${CRM_STATE}`,
               alternateName: `CRM-${CRM_STATE}`,
-              url: CFM_REGISTRY_URL,
+              url: CRM_COUNCIL_URL,
             },
           },
         ],
@@ -228,6 +233,45 @@ export function buildGlobalGraph(): Record<string, unknown> {
           '@id': organizationId,
         },
       },
+    ],
+  }
+}
+
+interface ProfilePageGraphOptions {
+  title: string
+  description: string
+  lastModified: string
+}
+
+export function buildProfilePageGraph({
+  title,
+  description,
+  lastModified,
+}: ProfilePageGraphOptions): Record<string, unknown> {
+  const profileUrl = buildCanonical('/sobre')
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ProfilePage',
+        '@id': `${profileUrl}#webpage`,
+        name: title,
+        description,
+        url: profileUrl,
+        inLanguage: 'pt-BR',
+        dateModified: lastModified,
+        isPartOf: {
+          '@id': `${SITE_URL}#website`,
+        },
+        mainEntity: {
+          '@id': `${SITE_URL}#physician`,
+        },
+      } as Thing,
+      buildBreadcrumbGraph([
+        { label: 'Início', href: '/' },
+        { label: 'Sobre a Dra. Dayara Salomão' },
+      ]),
     ],
   }
 }
@@ -404,7 +448,12 @@ export function buildLocationGraph(
       },
       buildBreadcrumbGraph([
         { label: 'Início', href: '/' },
-        { label: 'Locais de atendimento', href: '/locais-de-atendimento' },
+        {
+          label: 'Locais de atendimento',
+          ...(getLocationsLandingPath() === '/locais-de-atendimento'
+            ? { href: '/locais-de-atendimento' }
+            : {}),
+        },
         { label: location.city },
       ]),
       ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),
