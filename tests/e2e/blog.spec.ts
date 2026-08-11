@@ -148,6 +148,9 @@ test('active location uses one content width and exposes clear destination cards
   expect(widths[0]).toBeGreaterThan(0)
   expect(Math.abs(widths[0] - widths[1])).toBeLessThanOrEqual(1)
   expect(Math.abs(widths[0] - widths[2])).toBeLessThanOrEqual(1)
+  await expect(
+    page.locator('header').getByRole('link', { name: /^agendar consulta$/i }),
+  ).toBeVisible()
 
   const treatmentCard = page.getByRole('link', {
     name: /hemorroidectomia com laser de co2/i,
@@ -213,6 +216,7 @@ test('homepage disease cards route to mapped treatment pages', async ({ page }) 
 })
 
 test('blog index renders article cards', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto('/blog')
 
   await expect(page.locator('header').getByRole('link', { name: /^início$/i })).toBeVisible()
@@ -226,6 +230,14 @@ test('blog index renders article cards', async ({ page }) => {
   await expect(page.getByRole('link', { name: /hemorroidectomia com laser de co2/i })).toBeVisible()
   await expect(page.getByRole('link', { name: /ver tratamentos/i })).toBeVisible()
   await expect(page.locator('footer').last().getByRole('link', { name: /^tratamentos$/i })).toBeVisible()
+
+  const blogHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
+    (heading) => heading.getBoundingClientRect().width,
+  )
+  const blogGridWidth = await page.locator('main > section.container > div.grid').evaluate(
+    (grid) => grid.getBoundingClientRect().width,
+  )
+  expect(Math.abs(blogHeadingWidth - blogGridWidth)).toBeLessThanOrEqual(1)
 })
 
 test('blog post renders body, faq, and CTA', async ({ page }) => {
@@ -293,6 +305,7 @@ test('about page exposes practitioner credentials, profile schema, and canonical
 })
 
 test('treatments index renders canonical service cards', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto('/tratamentos')
 
   await expect(
@@ -303,6 +316,14 @@ test('treatments index renders canonical service cards', async ({ page }) => {
   ).toBeVisible()
   await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i }).first()).toBeVisible()
   await expect(page.getByRole('link', { name: /ver artigos do blog/i })).toBeVisible()
+
+  const treatmentsHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
+    (heading) => heading.getBoundingClientRect().width,
+  )
+  const treatmentsGridWidth = await page.locator('main > section.container > div.grid').evaluate(
+    (grid) => grid.getBoundingClientRect().width,
+  )
+  expect(Math.abs(treatmentsHeadingWidth - treatmentsGridWidth)).toBeLessThanOrEqual(1)
 })
 
 test('privacy page is crawlable for users but noindex for bots', async ({ page }) => {

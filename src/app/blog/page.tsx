@@ -65,14 +65,14 @@ export default function BlogPage() {
       <section className="container">
         <Breadcrumb items={[{ label: 'Início', href: '/' }, { label: 'Blog' }]} />
 
-        <div className="mx-auto mb-14 max-w-4xl text-center">
+        <div className="mb-14 text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
             Conteúdo médico em português claro
           </p>
           <h1 className="mb-6 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
             Blog da Dra. Dayara Salomão
           </h1>
-          <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
+          <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-700 lg:text-xl">
             Orientações sobre doenças anorretais, procedimentos modernos e cuidados em
             coloproctologia para ajudar você a tomar decisões com mais segurança.
           </p>

@@ -90,14 +90,14 @@ export default function TreatmentsPage() {
       <section className="container">
         <Breadcrumb items={[{ label: 'Início', href: '/' }, { label: 'Tratamentos' }]} />
 
-        <div className="mx-auto mb-14 max-w-4xl text-center">
+        <div className="mb-14 text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
             Condutas especializadas em coloproctologia
           </p>
           <h1 className="mb-6 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
             Tratamentos com foco em precisão e conforto
           </h1>
-          <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
+          <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-700 lg:text-xl">
             Esta página reúne as principais abordagens oferecidas pela Dra. Dayara Salomão
             para doença hemorroidária, fissura anal, fístula anal, HPV perianal, cisto
             pilonidal e outros quadros anorretais.
