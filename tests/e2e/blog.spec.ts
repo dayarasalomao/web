@@ -243,6 +243,7 @@ test('blog index renders article cards', async ({ page }) => {
   const blogHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
     (heading) => heading.getBoundingClientRect().width,
   )
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCSS('text-align', 'left')
   const blogGridWidth = await page.locator('main > section.container > div.grid').evaluate(
     (grid) => grid.getBoundingClientRect().width,
   )
@@ -329,6 +330,7 @@ test('treatments index renders canonical service cards', async ({ page }) => {
   const treatmentsHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(
     (heading) => heading.getBoundingClientRect().width,
   )
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCSS('text-align', 'left')
   const treatmentsGridWidth = await page.locator('main > section.container > div.grid').evaluate(
     (grid) => grid.getBoundingClientRect().width,
   )
