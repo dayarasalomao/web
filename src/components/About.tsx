@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { PROFESSIONAL_PROFILE } from '@/lib/profile'
 
 export default function About() {
   return (
@@ -24,38 +26,25 @@ export default function About() {
 
               <div className="space-y-6">
                 <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-                  Médica formada em{' '}
-                  <span className="font-semibold text-copper">
-                    2019 pela PUC-PR
-                  </span>
-                  , especialista em{' '}
-                  <span className="font-semibold text-copper">
-                    coloproctologia
-                  </span>
-                  , dedica-se ao cuidado integral de pacientes com doenças da
-                  região anal.
+                  {PROFESSIONAL_PROFILE.shortIntroduction}
                 </p>
 
                 <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                  Sua abordagem combina{' '}
-                  <span className="font-medium text-teal">
-                    formação especializada{' '}
-                  </span>
-                  com{' '}
-                  <span className="font-medium text-teal">
-                    tratamentos minimamente invasivos
-                  </span>
-                  , sempre priorizando o conforto e bem-estar de seus pacientes.
+                  {PROFESSIONAL_PROFILE.approach}
                 </p>
 
                 <div className="bg-gradient-to-r from-cream to-beige/50 p-6 rounded-2xl border-l-4 border-copper">
                   <p className="text-gray-700 italic leading-relaxed">
-                    &quot;Acredito que cada paciente merece um cuidado
-                    personalizado, com empatia e acolhimento, utilizando
-                    recursos adequados a cada indicação e sempre com foco no
-                    cuidado e no conforto.&quot;
+                    &quot;{PROFESSIONAL_PROFILE.quote}&quot;
                   </p>
                 </div>
+
+                <Link
+                  href="/sobre"
+                  className="inline-flex font-semibold text-copper transition-colors hover:text-teal"
+                >
+                  Conheça a formação da Dra. Dayara →
+                </Link>
               </div>
             </div>
           </div>

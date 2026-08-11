@@ -108,6 +108,7 @@ const CORE_TREATMENT_SLUGS: string[] = [
 ]
 
 const CORE_BLOG_SLUGS: string[] = [
+  'primeira-consulta-coloproctologista-como-se-preparar',
   'doenca-hemorroidaria-sintomas-graus',
   'fissura-anal-causas-sintomas',
   'fistula-anal-o-que-e-sintomas',
@@ -188,7 +189,7 @@ export const LOCATIONS: PracticeLocation[] = [
     indexable: true,
     showAppointmentCta: true,
     launchDate: '2026-08-05',
-    lastUpdated: '2026-07-19',
+    lastUpdated: '2026-08-10',
   },
 ]
 

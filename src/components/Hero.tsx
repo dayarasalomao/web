@@ -1,6 +1,7 @@
 import { SEO_LOCATION, WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PROFESSIONAL_MEMBERSHIPS } from '@/lib/profile'
 
 export default function Hero() {
   return (
@@ -151,26 +152,19 @@ export default function Hero() {
                 >
                   Técnicas Minimamente Invasivas
                 </div> */}
-                <div
-                  className="px-4 py-2 rounded-full border text-xs"
-                  style={{
-                    backgroundColor: 'rgba(29, 65, 76, 0.1)',
-                    borderColor: 'var(--color-teal)',
-                    color: 'var(--color-teal)',
-                  }}
-                >
-                  Membro da Sociedade Brasileira de Coloproctologia
-                </div>
-                <div
-                  className="px-4 py-2 rounded-full border text-xs"
-                  style={{
-                    backgroundColor: 'rgba(29, 65, 76, 0.1)',
-                    borderColor: 'var(--color-teal)',
-                    color: 'var(--color-teal)',
-                  }}
-                >
-                  Membro da Sociedade Brasileira de Laser em Medicina e Cirurgia
-                </div>
+                {PROFESSIONAL_MEMBERSHIPS.map((membership) => (
+                  <div
+                    key={membership}
+                    className="px-4 py-2 rounded-full border text-xs"
+                    style={{
+                      backgroundColor: 'rgba(29, 65, 76, 0.1)',
+                      borderColor: 'var(--color-teal)',
+                      color: 'var(--color-teal)',
+                    }}
+                  >
+                    Membro da {membership}
+                  </div>
+                ))}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

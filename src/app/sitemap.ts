@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: SITEMAP_IMAGES.map((image) => canonicalUrl(image)),
     },
     {
+      url: canonicalUrl('/sobre'),
+      lastModified: '2026-08-10',
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
       url: canonicalUrl('/blog'),
       lastModified: newestPostDate,
       changeFrequency: 'weekly',

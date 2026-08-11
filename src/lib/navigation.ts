@@ -6,6 +6,7 @@ export interface NavItem {
 }
 
 export const HOME_HEADER_NAV_ITEMS: NavItem[] = [
+  { href: '/sobre', label: 'Sobre', match: '/sobre' },
   { href: '/tratamentos', label: 'Tratamentos', match: '/tratamentos' },
   { href: '/blog', label: 'Blog', match: '/blog' },
   { href: '/locais-de-atendimento', label: 'Locais', match: '/locais-de-atendimento' },
@@ -14,6 +15,7 @@ export const HOME_HEADER_NAV_ITEMS: NavItem[] = [
 
 export const SUBPAGE_HEADER_NAV_ITEMS: NavItem[] = [
   { href: '/', label: 'Início', match: '/' },
+  { href: '/sobre', label: 'Sobre', match: '/sobre' },
   { href: '/tratamentos', label: 'Tratamentos', match: '/tratamentos' },
   { href: '/blog', label: 'Blog', match: '/blog' },
   { href: '/locais-de-atendimento', label: 'Locais', match: '/locais-de-atendimento' },
@@ -21,7 +23,7 @@ export const SUBPAGE_HEADER_NAV_ITEMS: NavItem[] = [
 ]
 
 export const FOOTER_QUICK_LINKS: NavItem[] = [
-  { href: '/#sobre', label: 'Sobre' },
+  { href: '/sobre', label: 'Sobre' },
   { href: '/#doencas', label: 'Doenças' },
   { href: '/#curriculo', label: 'Currículo' },
   { href: '/tratamentos', label: 'Tratamentos' },

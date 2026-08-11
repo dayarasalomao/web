@@ -159,11 +159,12 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: [
       'ligadura-elastica-hemorroidas-internas',
+      'ligadura-elastica-doi-recuperacao-cuidados',
       'sangramento-anal-dor-quando-procurar-coloproctologista',
     ],
     mappedDiseaseNames: ['Doença Hemorroidária'],
     keywords: ['ligadura elástica hemorroidas', 'hemorroidas internas tratamento', 'proctologista'],
-    lastUpdated: '2026-04-17',
+    lastUpdated: '2026-08-10',
   },
   {
     slug: 'fistula-anal-laser-vaaft-filac',

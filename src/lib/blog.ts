@@ -57,6 +57,7 @@ export interface BlogPostMeta {
   featured?: boolean
   order?: number
   faqs?: FAQItem[]
+  relatedPosts?: string[]
   disclaimer?: string
 }
 
@@ -217,6 +218,16 @@ export function getAllPosts(): BlogPost[] {
 export function getPostHref(slug?: string | null): string | null {
   if (!slug) return null
   return getPostBySlug(slug) ? `/blog/${slug}` : null
+}
+
+export function getRelatedPosts(post: BlogPost, limit = 4): BlogPost[] {
+  if (!post.relatedPosts?.length || limit <= 0) return []
+
+  return post.relatedPosts
+    .filter((slug) => slug !== post.slug)
+    .map((slug) => getPostBySlug(slug))
+    .filter((candidate): candidate is BlogPost => candidate !== null)
+    .slice(0, limit)
 }
 
 export function getAllPostSlugs(): string[] {

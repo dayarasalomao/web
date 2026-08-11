@@ -4,7 +4,7 @@ Guidance for Claude Code when working in this repository.
 
 ## Project Overview
 
-This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
+This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, a practitioner profile, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
 
 > **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` point to Campo Grande. Curitiba was removed from `src/lib/locations.ts`, and `/locais-de-atendimento/curitiba` returns 404; only truthful professional-history references remain. The external Doctoralia profile is not yet migrated, so `DOCTORALIA_URL` stays empty until a confirmed Campo Grande URL exists. The migration record lives in `.specs/features/campo-grande-seo-migration/context.md`.
 
@@ -41,6 +41,7 @@ src/app/sitemap.ts              Sitemap route
 src/components/                 Homepage sections and shared components
 src/constants.ts                Shared contact, SEO, schema, sitemap, analytics data
 src/lib/blog.ts                 Blog parsing and metadata helpers
+src/lib/profile.ts              Shared biography, qualifications, memberships
 src/lib/treatments.ts           Treatment page data and mapping helpers
 src/lib/structured-data.ts      Schema.org JSON-LD builders
 ```

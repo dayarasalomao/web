@@ -96,7 +96,7 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   const pageGraph = await page
     .locator('script[type="application/ld+json"]')
     .allTextContents()
-  const activeGraph = pageGraph.find((graph) => graph.includes('MedicalClinic')) ?? ''
+  const activeGraph = pageGraph.find((graph) => graph.includes('#practice-location')) ?? ''
   expect(activeGraph).toContain('MedicalClinic')
   expect(activeGraph).toContain('PostalAddress')
   expect(activeGraph).toContain('GeoCoordinates')
@@ -194,6 +194,40 @@ test('blog post renders body, faq, and CTA', async ({ page }) => {
   await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i })).toBeVisible()
 })
 
+test('question-led article links to its author profile and related cluster', async ({ page }) => {
+  await page.goto('/blog/ligadura-elastica-doi-recuperacao-cuidados')
+
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/ligadura elástica dói/i)
+  await expect(page.getByRole('link', { name: /^dra\. dayara salomão$/i }).first()).toHaveAttribute(
+    'href',
+    '/sobre',
+  )
+  await expect(
+    page.getByRole('heading', { level: 2, name: /continue entendendo o tema/i }),
+  ).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: /doença hemorroidária: sintomas, graus/i }),
+  ).toBeVisible()
+})
+
+test('about page exposes practitioner credentials, profile schema, and canonical', async ({ page }) => {
+  await page.goto('/sobre')
+
+  await expect(
+    page.getByRole('heading', { level: 1, name: /sobre a dra\. dayara salomão/i }),
+  ).toBeVisible()
+  await expect(page.getByText('CRM-MS 16556').first()).toBeVisible()
+  await expect(page.getByText('RQE 9819').first()).toBeVisible()
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    `${CANONICAL_WEBSITE_URL}/sobre`,
+  )
+
+  const graph = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(graph.join(' ')).toContain('ProfilePage')
+  expect(graph.join(' ')).toContain(`${CANONICAL_WEBSITE_URL}/#physician`)
+})
+
 test('treatments index renders canonical service cards', async ({ page }) => {
   await page.goto('/tratamentos')
 
@@ -234,6 +268,7 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   )
 
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
+  expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/sobre`)
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/tratamentos`)
   expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
   expect(blogPostLocs).toContain(

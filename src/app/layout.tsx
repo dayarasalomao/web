@@ -119,6 +119,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
+        <link rel="llms" href="/llms.txt" />
 
         <script
           type="application/ld+json"

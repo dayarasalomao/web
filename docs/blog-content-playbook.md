@@ -27,6 +27,9 @@
 - Explique indicação, benefícios, limites e necessidade de avaliação presencial.
 - Evite copiar briefing, rascunho comercial ou instruções de prompt para o markdown final.
 - Se houver perguntas frequentes reais no conteúdo, registre em `faqs` para renderização visível e schema.
+- Use `relatedPosts` para apontar a até quatro artigos de intenção complementar. Não relacione o post a ele mesmo nem repita a mesma intenção em URLs diferentes.
+- Artigos informacionais devem levar à página comercial principal do cluster; não devem disputar a intenção local ou de agendamento.
+- Para conteúdo médico, inclua uma seção `## Fontes médicas` com diretrizes, sociedades médicas ou estudos primários adequados ao tema.
 
 ## Checklist antes de publicar
 

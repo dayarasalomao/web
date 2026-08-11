@@ -1,6 +1,6 @@
 # Content Backlog: Blog and Treatment Clusters
 
-**Status**: Draft / parking lot
+**Status**: Active editorial backlog. First consultation and ligature-pain articles published in the 2026-08 Campo Grande growth pass.
 **Related spec**: `.specs/features/campo-grande-seo-migration/spec.md`
 **Purpose**: Track future blog content without publishing everything at once. Current priority is to let Google index the improved treatment structure, then expand the blog in later PRs.
 
@@ -24,6 +24,8 @@ These posts already exist under `content/posts/` and are mostly treatment or tec
 | Síndrome do intestino irritável | `sindrome-intestino-irritavel-sintomas-manejo` | Broad condition explainer | Published in support of treatment page |
 | Hidradenite supurativa | `hidradenite-supurativa-sintomas-tratamento` | Broad condition explainer | Published in support of treatment page |
 | Doenças inflamatórias intestinais | `doencas-inflamatorias-intestinais-crohn-retocolite` | Broad condition explainer | Published in support of treatment page |
+| Primeira consulta | `primeira-consulta-coloproctologista-como-se-preparar` | Preparation and expectations before evaluation | Published; supports the Campo Grande location page |
+| Dor após ligadura | `ligadura-elastica-doi-recuperacao-cuidados` | Patient decision question, recovery and warning signs | Published; supports the ligature treatment owner |
 
 ## Current Treatment Pages
 

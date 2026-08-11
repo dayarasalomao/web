@@ -1,6 +1,11 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { getAllPosts, getAllPostSlugs, getPostBySlug } from '../../src/lib/blog.ts'
+import {
+  getAllPosts,
+  getAllPostSlugs,
+  getPostBySlug,
+  getRelatedPosts,
+} from '../../src/lib/blog.ts'
 import {
   getAllTreatments,
   getAllTreatmentSlugs,
@@ -44,6 +49,23 @@ describe('blog content model', () => {
           `post "${slug}" missing frontmatter: ${field}`,
         )
       }
+    }
+  })
+
+  it('every relatedPosts entry resolves and does not point to itself', () => {
+    for (const post of getAllPosts()) {
+      for (const relatedSlug of post.relatedPosts ?? []) {
+        assert.notEqual(relatedSlug, post.slug, `post "${post.slug}" links to itself`)
+        assert.ok(
+          getPostBySlug(relatedSlug),
+          `post "${post.slug}" references missing post "${relatedSlug}"`,
+        )
+      }
+
+      assert.equal(
+        getRelatedPosts(post).length,
+        Math.min(post.relatedPosts?.length ?? 0, 4),
+      )
     }
   })
 })
