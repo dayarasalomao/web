@@ -211,6 +211,7 @@ test('question-led article links to its author profile and related cluster', asy
 })
 
 test('about page exposes practitioner credentials, profile schema, and canonical', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
   await page.goto('/sobre')
 
   await expect(
@@ -218,6 +219,10 @@ test('about page exposes practitioner credentials, profile schema, and canonical
   ).toBeVisible()
   await expect(page.getByText('CRM-MS 16556').first()).toBeVisible()
   await expect(page.getByText('RQE 9819').first()).toBeVisible()
+  await expect(page.getByRole('link', { name: /consultar crm-ms 16556 no cfm/i })).toHaveAttribute(
+    'href',
+    'https://portal.cfm.org.br/busca-medicos/',
+  )
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
     'href',
     `${CANONICAL_WEBSITE_URL}/sobre`,
@@ -226,6 +231,20 @@ test('about page exposes practitioner credentials, profile schema, and canonical
   const graph = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(graph.join(' ')).toContain('ProfilePage')
   expect(graph.join(' ')).toContain(`${CANONICAL_WEBSITE_URL}/#physician`)
+  expect(graph.join(' ')).not.toContain('/busca-medicos/profissionais')
+
+  const heroCard = page.locator('article > header')
+  const trajectorySection = page.locator('article > section').first()
+  const professionalSection = page.locator('article > section').nth(1)
+  const widths = await Promise.all(
+    [heroCard, trajectorySection, professionalSection].map(async (locator) => {
+      const box = await locator.boundingBox()
+      return box?.width ?? 0
+    }),
+  )
+  expect(widths[0]).toBeGreaterThan(0)
+  expect(Math.abs(widths[0] - widths[1])).toBeLessThanOrEqual(1)
+  expect(Math.abs(widths[0] - widths[2])).toBeLessThanOrEqual(1)
 })
 
 test('treatments index renders canonical service cards', async ({ page }) => {

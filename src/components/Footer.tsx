@@ -1,7 +1,7 @@
 import {
   BUSINESS_FOOTER_LOCATION,
   BUSINESS_TELEPHONE_NUMBER,
-  CFM_REGISTRY_URL,
+  CFM_MEDICAL_SEARCH_URL,
   CONTACT_EMAIL,
   CRM_FULL,
   DOCTORALIA_URL,
@@ -132,7 +132,7 @@ export default function Footer() {
 
             <div className="mt-6 flex flex-wrap gap-4 text-sm text-gray-300">
               <Link
-                href={CFM_REGISTRY_URL}
+                href={CFM_MEDICAL_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-white"

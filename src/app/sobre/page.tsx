@@ -5,7 +5,7 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import {
   BUSINESS_CLINIC_NAME,
-  CFM_REGISTRY_URL,
+  CFM_MEDICAL_SEARCH_URL,
   CRM_FULL,
   RQE_FULL,
   SEO_DOCTOR_NAME,
@@ -102,14 +102,14 @@ export default function AboutPage() {
           </div>
         </header>
 
-        <section className="mx-auto mt-14 max-w-4xl">
+        <section className="mt-14">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
             Trajetória
           </p>
           <h2 className="text-3xl font-semibold text-teal lg:text-4xl">
             Formação médica e atualização contínua
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-gray-700 lg:text-lg">
+          <p className="mt-5 max-w-4xl text-base leading-relaxed text-gray-700 lg:text-lg">
             A formação reúne base cirúrgica, especialização em coloproctologia e
             aperfeiçoamento em técnicas minimamente invasivas e disfunções do assoalho
             pélvico. A escolha de qualquer tratamento continua dependente do diagnóstico,
@@ -137,7 +137,7 @@ export default function AboutPage() {
           </ol>
         </section>
 
-        <section className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
+        <section className="mt-14 grid gap-6 md:grid-cols-2">
           <div className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
               Participação profissional
@@ -171,11 +171,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <blockquote className="mx-auto mt-14 max-w-4xl rounded-[2rem] border-l-4 border-copper bg-white/95 p-7 text-lg italic leading-relaxed text-gray-700 shadow-sm">
+        <blockquote className="mt-14 rounded-[2rem] border-l-4 border-copper bg-white/95 p-7 text-lg italic leading-relaxed text-gray-700 shadow-sm">
           “{PROFESSIONAL_PROFILE.quote}”
         </blockquote>
 
-        <div className="mx-auto mt-14 max-w-4xl">
+        <div className="mt-14">
           <CallToActionCard
             title="Quer conhecer os próximos passos?"
             body={
@@ -203,12 +203,12 @@ export default function AboutPage() {
             }
             footer={
               <Link
-                href={CFM_REGISTRY_URL}
+                href={CFM_MEDICAL_SEARCH_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-copper transition-colors hover:text-teal"
               >
-                Consultar registro profissional no CFM
+                Consultar {CRM_FULL} no CFM
               </Link>
             }
           />
