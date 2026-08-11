@@ -71,6 +71,16 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
 
+  const breadcrumb = page.getByRole('navigation', { name: /breadcrumb/i })
+  await expect(
+    breadcrumb.getByRole('link', { name: /^locais de atendimento$/i }),
+  ).toHaveCount(0)
+  await expect(breadcrumb.getByText(/^locais de atendimento$/i)).toBeVisible()
+  await expect(breadcrumb.getByText(/^campo grande$/i)).toHaveAttribute(
+    'aria-current',
+    'page',
+  )
+
   await expect(page.locator('iframe[title*="Mapa"]')).toHaveAttribute(
     'src',
     /google\.com\/maps/,
@@ -114,6 +124,41 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   // straight there instead of appearing as its own indexable URL.
   const locUrls = getXmlValues(sitemapText, 'loc')
   expect(locUrls).not.toContain(`${CANONICAL_WEBSITE_URL}/locais-de-atendimento`)
+})
+
+test('active location uses one content width and exposes clear destination cards', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
+  await page.goto('/locais-de-atendimento/campo-grande')
+
+  const container = page.locator('main > section.container')
+  const header = container.locator(':scope > header')
+  const map = container.locator(':scope > div').filter({
+    has: page.locator('iframe[title*="Mapa"]'),
+  })
+  const informationGrid = container.locator(':scope > div.grid').first()
+  const widths = await Promise.all(
+    [header, map, informationGrid].map(async (locator) => {
+      const box = await locator.boundingBox()
+      return box?.width ?? 0
+    }),
+  )
+
+  expect(widths[0]).toBeGreaterThan(0)
+  expect(Math.abs(widths[0] - widths[1])).toBeLessThanOrEqual(1)
+  expect(Math.abs(widths[0] - widths[2])).toBeLessThanOrEqual(1)
+
+  const treatmentCard = page.getByRole('link', {
+    name: /hemorroidectomia com laser de co2/i,
+  })
+  await expect(treatmentCard.getByText(/conhecer tratamento/i)).toBeVisible()
+
+  const readingCard = page.getByRole('link', {
+    name: /primeira consulta com coloproctologista/i,
+  })
+  await expect(readingCard.getByText(/min de leitura/i)).toBeVisible()
+  await expect(readingCard.getByText(/ler artigo/i)).toBeVisible()
 })
 
 test('the retired Curitiba address is not reachable and locations listing redirects to Campo Grande', async ({
