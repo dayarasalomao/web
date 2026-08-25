@@ -50,6 +50,18 @@ function sanitizeSameAs(values: Array<string | undefined>): string[] {
   return values.filter((value): value is string => Boolean(value))
 }
 
+// Campo Grande/MS is UTC-04:00 year-round (Brazil dropped DST in 2019).
+const SITE_UTC_OFFSET = '-04:00'
+
+/**
+ * Google's Rich Results Test rejects date-only values for schema datetime
+ * fields, so expand `YYYY-MM-DD` into a full ISO 8601 timestamp with offset.
+ */
+export function toSchemaDateTime(value: string): string {
+  if (!value) return value
+  return /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00${SITE_UTC_OFFSET}` : value
+}
+
 export function serializeJsonLd(data: WithContext<Thing> | Record<string, unknown>): string {
   return JSON.stringify(data).replace(/</g, '\\u003c')
 }
@@ -260,7 +272,7 @@ export function buildProfilePageGraph({
         description,
         url: profileUrl,
         inLanguage: 'pt-BR',
-        dateModified: lastModified,
+        dateModified: toSchemaDateTime(lastModified),
         isPartOf: {
           '@id': `${SITE_URL}#website`,
         },
@@ -307,8 +319,8 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       headline: post.title,
       description: post.metaDescription,
       url: postUrl,
-      datePublished: post.publishDate,
-      dateModified: post.lastModified,
+      datePublished: toSchemaDateTime(post.publishDate),
+      dateModified: toSchemaDateTime(post.lastModified),
       author: {
         '@id': `${SITE_URL}#physician`,
       },
