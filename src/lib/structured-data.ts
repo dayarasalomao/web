@@ -23,12 +23,13 @@ import {
   SEO_DESCRIPTION,
   SEO_IMAGE,
   SITE_URL,
-} from '@/constants'
-import type { BlogPost } from './blog'
-import { buildCanonical } from './seo'
-import type { Treatment } from './treatments'
-import { getLocationsLandingPath, type PracticeLocation } from './locations'
-import { PROFESSIONAL_MEMBERSHIPS } from './profile'
+} from '../constants.ts'
+import type { BlogPost } from './blog.ts'
+import { buildCanonical } from './seo.ts'
+import { toSchemaDateTime } from './dates.ts'
+import type { Treatment } from './treatments.ts'
+import { getLocationsLandingPath, type PracticeLocation } from './locations.ts'
+import { PROFESSIONAL_MEMBERSHIPS } from './profile.ts'
 
 export interface BreadcrumbItem {
   label: string
@@ -76,16 +77,41 @@ export function buildFaqGraph(faqs: FaqEntry[]): Thing {
   } as Thing
 }
 
+/**
+ * Google only allows the final crumb to omit `item`; an intermediate entry
+ * without a URL is rejected with `Missing field "item"`. Visible breadcrumbs
+ * may legitimately carry unlinked intermediate labels, so drop those from the
+ * structured data instead of emitting an invalid list.
+ */
 export function buildBreadcrumbGraph(items: BreadcrumbItem[]): Thing {
+  const linkable = items.filter((item, index) => Boolean(item.href) || index === items.length - 1)
+
   return {
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
+    itemListElement: linkable.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
       ...(item.href ? { item: toAbsoluteUrl(item.href) } : {}),
     })),
   } as Thing
+}
+
+/**
+ * While a single location is active the landing path resolves to that location
+ * itself, so an intermediate "Locais de atendimento" crumb would be a dead
+ * label. Shared so the rendered breadcrumb and the JSON-LD never diverge.
+ */
+export function buildLocationBreadcrumbItems(city: string): BreadcrumbItem[] {
+  const hasLandingPage = getLocationsLandingPath() === '/locais-de-atendimento'
+
+  return [
+    { label: 'Início', href: '/' },
+    ...(hasLandingPage
+      ? [{ label: 'Locais de atendimento', href: '/locais-de-atendimento' }]
+      : []),
+    { label: city },
+  ]
 }
 
 export function buildItemListGraph(name: string, items: ItemListEntry[]): Thing {
@@ -260,7 +286,7 @@ export function buildProfilePageGraph({
         description,
         url: profileUrl,
         inLanguage: 'pt-BR',
-        dateModified: lastModified,
+        dateModified: toSchemaDateTime(lastModified),
         isPartOf: {
           '@id': `${SITE_URL}#website`,
         },
@@ -307,8 +333,8 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       headline: post.title,
       description: post.metaDescription,
       url: postUrl,
-      datePublished: post.publishDate,
-      dateModified: post.lastModified,
+      datePublished: toSchemaDateTime(post.publishDate),
+      dateModified: toSchemaDateTime(post.lastModified),
       author: {
         '@id': `${SITE_URL}#physician`,
       },
@@ -446,16 +472,7 @@ export function buildLocationGraph(
           '@id': placeId,
         },
       },
-      buildBreadcrumbGraph([
-        { label: 'Início', href: '/' },
-        {
-          label: 'Locais de atendimento',
-          ...(getLocationsLandingPath() === '/locais-de-atendimento'
-            ? { href: '/locais-de-atendimento' }
-            : {}),
-        },
-        { label: location.city },
-      ]),
+      buildBreadcrumbGraph(buildLocationBreadcrumbItems(location.city)),
       ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),
     ],
   }
