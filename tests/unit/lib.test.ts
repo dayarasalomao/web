@@ -1,5 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
+import type { Thing } from 'schema-dts'
+import { buildBreadcrumbGraph, toSchemaDateTime } from '../../src/lib/structured-data.ts'
 import {
   calculateReadingTime,
   extractItalicHook,
@@ -183,5 +185,53 @@ describe('practice locations', () => {
   it('returns null for unknown slug', () => {
     assert.equal(getLocationBySlug('sao-paulo'), null)
     assert.equal(getLocationBySlug('curitiba'), null)
+  })
+})
+
+describe('structured data', () => {
+  const breadcrumbItems = (graph: Thing) =>
+    (graph as unknown as { itemListElement: Array<Record<string, unknown>> }).itemListElement
+
+  it('expands date-only values into full ISO 8601 datetimes', () => {
+    assert.equal(toSchemaDateTime('2026-08-10'), '2026-08-10T00:00:00-04:00')
+    assert.equal(
+      toSchemaDateTime('2026-08-10T09:30:00-04:00'),
+      '2026-08-10T09:30:00-04:00',
+    )
+    assert.equal(toSchemaDateTime(''), '')
+  })
+
+  it('drops unlinked intermediate crumbs so every non-final entry has item', () => {
+    const items = breadcrumbItems(
+      buildBreadcrumbGraph([
+        { label: 'Início', href: '/' },
+        { label: 'Locais de atendimento' },
+        { label: 'Campo Grande' },
+      ]),
+    )
+
+    assert.deepEqual(
+      items.map((item) => item.name),
+      ['Início', 'Campo Grande'],
+    )
+    assert.deepEqual(
+      items.map((item) => item.position),
+      [1, 2],
+    )
+    assert.ok(items.slice(0, -1).every((item) => typeof item.item === 'string'))
+  })
+
+  it('keeps linked intermediate crumbs and their absolute urls', () => {
+    const items = breadcrumbItems(
+      buildBreadcrumbGraph([
+        { label: 'Início', href: '/' },
+        { label: 'Blog', href: '/blog' },
+        { label: 'Post' },
+      ]),
+    )
+
+    assert.equal(items.length, 3)
+    assert.equal(items[1].item, 'https://www.dayarasalomao.com.br/blog')
+    assert.equal(items[2].item, undefined)
   })
 })
