@@ -26,6 +26,7 @@ import {
 } from '../constants.ts'
 import type { BlogPost } from './blog.ts'
 import { buildCanonical } from './seo.ts'
+import { toSchemaDateTime } from './dates.ts'
 import type { Treatment } from './treatments.ts'
 import { getLocationsLandingPath, type PracticeLocation } from './locations.ts'
 import { PROFESSIONAL_MEMBERSHIPS } from './profile.ts'
@@ -48,18 +49,6 @@ function toAbsoluteUrl(value: string): string {
 
 function sanitizeSameAs(values: Array<string | undefined>): string[] {
   return values.filter((value): value is string => Boolean(value))
-}
-
-// Campo Grande/MS is UTC-04:00 year-round (Brazil dropped DST in 2019).
-const SITE_UTC_OFFSET = '-04:00'
-
-/**
- * Google's Rich Results Test rejects date-only values for schema datetime
- * fields, so expand `YYYY-MM-DD` into a full ISO 8601 timestamp with offset.
- */
-export function toSchemaDateTime(value: string): string {
-  if (!value) return value
-  return /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00${SITE_UTC_OFFSET}` : value
 }
 
 export function serializeJsonLd(data: WithContext<Thing> | Record<string, unknown>): string {
@@ -106,6 +95,23 @@ export function buildBreadcrumbGraph(items: BreadcrumbItem[]): Thing {
       ...(item.href ? { item: toAbsoluteUrl(item.href) } : {}),
     })),
   } as Thing
+}
+
+/**
+ * While a single location is active the landing path resolves to that location
+ * itself, so an intermediate "Locais de atendimento" crumb would be a dead
+ * label. Shared so the rendered breadcrumb and the JSON-LD never diverge.
+ */
+export function buildLocationBreadcrumbItems(city: string): BreadcrumbItem[] {
+  const hasLandingPage = getLocationsLandingPath() === '/locais-de-atendimento'
+
+  return [
+    { label: 'Início', href: '/' },
+    ...(hasLandingPage
+      ? [{ label: 'Locais de atendimento', href: '/locais-de-atendimento' }]
+      : []),
+    { label: city },
+  ]
 }
 
 export function buildItemListGraph(name: string, items: ItemListEntry[]): Thing {
@@ -466,16 +472,7 @@ export function buildLocationGraph(
           '@id': placeId,
         },
       },
-      buildBreadcrumbGraph([
-        { label: 'Início', href: '/' },
-        {
-          label: 'Locais de atendimento',
-          ...(getLocationsLandingPath() === '/locais-de-atendimento'
-            ? { href: '/locais-de-atendimento' }
-            : {}),
-        },
-        { label: location.city },
-      ]),
+      buildBreadcrumbGraph(buildLocationBreadcrumbItems(location.city)),
       ...(location.faqs.length ? [buildFaqGraph(location.faqs)] : []),
     ],
   }

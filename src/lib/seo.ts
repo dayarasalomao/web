@@ -10,6 +10,7 @@ import {
 } from '../constants.ts'
 import type { BlogPost } from './blog.ts'
 import type { Treatment } from './treatments.ts'
+import { toSchemaDateTime } from './dates.ts'
 
 export function buildCanonical(path: string): string {
   const normalizedBase = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL
@@ -91,8 +92,8 @@ export function buildPostMetadata(post: BlogPost): Metadata {
       image,
       imageAlt,
       type: 'article',
-      publishedTime: post.publishDate,
-      modifiedTime: post.lastModified,
+      publishedTime: toSchemaDateTime(post.publishDate),
+      modifiedTime: toSchemaDateTime(post.lastModified),
       authors: [SEO_DOCTOR_NAME],
     }),
     twitter: buildTwitterMetadata({

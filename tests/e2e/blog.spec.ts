@@ -78,10 +78,9 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
 
   const breadcrumb = page.getByRole('navigation', { name: /breadcrumb/i })
-  await expect(
-    breadcrumb.getByRole('link', { name: /^locais de atendimento$/i }),
-  ).toHaveCount(0)
-  await expect(breadcrumb.getByText(/^locais de atendimento$/i)).toBeVisible()
+  // With a single active location the landing path is this page, so the
+  // intermediate crumb is dropped rather than rendered as a dead label.
+  await expect(breadcrumb.getByText(/^locais de atendimento$/i)).toHaveCount(0)
   await expect(breadcrumb.getByText(/^campo grande$/i)).toHaveAttribute(
     'aria-current',
     'page',

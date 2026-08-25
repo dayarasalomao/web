@@ -24,6 +24,7 @@ import {
 } from '@/lib/seo'
 import {
   buildBreadcrumbGraph,
+  buildLocationBreadcrumbItems,
   buildFaqGraph,
   buildLocationGraph,
   serializeJsonLd,
@@ -105,15 +106,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const locationGraph = indexable ? buildLocationGraph(location) : null
   const mapEmbedUrl = indexable ? buildMapEmbedUrl(location) : null
   const locationsLandingPath = getLocationsLandingPath()
-  const hasMultipleLocations = locationsLandingPath === '/locais-de-atendimento'
-  const breadcrumbItems = [
-    { label: 'Início', href: '/' },
-    {
-      label: 'Locais de atendimento',
-      ...(hasMultipleLocations ? { href: '/locais-de-atendimento' } : {}),
-    },
-    { label: location.city },
-  ]
+  const breadcrumbItems = buildLocationBreadcrumbItems(location.city)
 
   const addressBlock = location.address ? (
     <address className="space-y-2 not-italic text-base leading-relaxed text-gray-700">

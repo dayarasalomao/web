@@ -178,7 +178,9 @@ function normalizeDate(value: unknown, slug: string, field: 'publishDate' | 'las
     return DATE_FALLBACK
   }
 
-  return value
+  // Canonicalize loose-but-parsable frontmatter (`2026-8-5`, `March 24, 2026`)
+  // so downstream metadata and JSON-LD always get a `YYYY-MM-DD` value.
+  return parsed.toISOString().slice(0, 10)
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {

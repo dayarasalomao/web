@@ -1,7 +1,11 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import type { Thing } from 'schema-dts'
-import { buildBreadcrumbGraph, toSchemaDateTime } from '../../src/lib/structured-data.ts'
+import {
+  buildBreadcrumbGraph,
+  buildLocationBreadcrumbItems,
+} from '../../src/lib/structured-data.ts'
+import { toSchemaDateTime } from '../../src/lib/dates.ts'
 import {
   calculateReadingTime,
   extractItalicHook,
@@ -219,6 +223,16 @@ describe('structured data', () => {
       [1, 2],
     )
     assert.ok(items.slice(0, -1).every((item) => typeof item.item === 'string'))
+  })
+
+  it('omits the dead landing crumb while a single location is active', () => {
+    const items = buildLocationBreadcrumbItems('Campo Grande')
+
+    assert.deepEqual(
+      items.map((item) => item.label),
+      ['Início', 'Campo Grande'],
+    )
+    assert.ok(items.slice(0, -1).every((item) => Boolean(item.href)))
   })
 
   it('keeps linked intermediate crumbs and their absolute urls', () => {
