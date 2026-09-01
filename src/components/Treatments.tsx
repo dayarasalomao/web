@@ -249,6 +249,7 @@ export default function Treatments() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-treatments-section"
                   className="btn btn-secondary"
                 >
                   Gostaria de agendar uma consulta?

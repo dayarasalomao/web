@@ -192,6 +192,7 @@ export default function Diseases() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              data-conversion="whatsapp-diseases"
               className="btn btn-primary"
             >
               Falar com a Dra. Dayara

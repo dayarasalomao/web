@@ -30,6 +30,7 @@ import { GOOGLE_TAG_ID, ANALYTICS_ENABLED } from '@/constants'
 import { buildGlobalGraph, serializeJsonLd } from '@/lib/structured-data'
 import { DEFAULT_ROBOTS } from '@/lib/seo'
 import FloatingWhatsAppButton from '@/components/FloatingWhatsAppButton'
+import ConversionTracker from '@/components/ConversionTracker'
 
 const montserrat = Montserrat({
   variable: '--font-geist-sans',
@@ -141,6 +142,7 @@ export default function RootLayout({
         </a>
         {children}
         <FloatingWhatsAppButton />
+        <ConversionTracker />
 
         {/* Analytics - Only load in production or debug mode */}
         {ANALYTICS_ENABLED &&

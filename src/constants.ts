@@ -18,6 +18,9 @@ export const WHATSAPP_NUMBER = '554135422095'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 
 export const BUSINESS_TELEPHONE_NUMBER = '(67) 3320-9500'
+// E.164 form for `tel:` links. Kept next to the display number so the two
+// can never drift apart.
+export const BUSINESS_TELEPHONE_HREF = 'tel:+556733209500'
 
 export const BUSINESS_CLINIC_NAME = 'Instituto do Aparelho Digestivo'
 export const BUSINESS_STREET = 'R. Alagoas'

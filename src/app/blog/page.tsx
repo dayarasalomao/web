@@ -110,6 +110,7 @@ export default function BlogPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-blog-index"
                   className="btn btn-secondary"
                 >
                   Agendar consulta

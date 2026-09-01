@@ -298,6 +298,7 @@ export default function WhenToSeek() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-conversion="whatsapp-when-to-seek"
                 className="btn btn-primary text-lg px-8 py-4"
               >
                 Agendar Consulta Agora

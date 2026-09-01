@@ -206,6 +206,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-conversion="whatsapp-blog-post"
                 className="btn btn-secondary"
               >
                 Agendar consulta

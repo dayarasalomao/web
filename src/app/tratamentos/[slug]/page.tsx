@@ -219,6 +219,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-treatment-page"
                   className="btn btn-secondary"
                 >
                   Agendar consulta
