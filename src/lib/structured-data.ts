@@ -390,7 +390,7 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       bodyLocation: 'Região anal e perianal',
       followup: treatment.carePath.join(' '),
       indication: treatment.indications.join(' '),
-      howPerformed: treatment.overview.join(' '),
+      howPerformed: (treatment.howItWorks ?? treatment.overview).join(' '),
       mainEntityOfPage: {
         '@id': pageId,
       },

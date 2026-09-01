@@ -141,6 +141,19 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </section>
             ) : null}
 
+            {treatment.howItWorks?.length ? (
+              <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+                <h2 className="mb-4 text-2xl font-semibold text-teal">
+                  Como o procedimento é feito
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-gray-700">
+                  {treatment.howItWorks.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
             <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
               <h2 className="mb-4 text-2xl font-semibold text-teal">Como a conduta é planejada</h2>
               <div className="space-y-4 text-base leading-relaxed text-gray-700">
