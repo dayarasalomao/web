@@ -5,7 +5,7 @@ metaDescription: >-
   na região perianal e como o tratamento é individualizado para cada caso.
 slug: fistula-anal-o-que-e-sintomas
 publishDate: 2026-05-22T00:00:00.000Z
-lastModified: 2026-05-22T00:00:00.000Z
+lastModified: 2026-09-01
 primaryKeyword: fístula anal
 secondaryKeywords:
   - sintomas de fístula anal
@@ -15,6 +15,10 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 17
+relatedPosts:
+  - por-que-a-fistula-anal-aparece
+  - drenagem-abscesso-perianal-e-risco-de-fistula
+  - fistula-anal-laser-vaaft-filac
 faqs:
   - question: O que é uma fístula anal?
     answer: >-

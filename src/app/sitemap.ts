@@ -54,6 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: canonicalUrl('/perguntas-frequentes'),
+      lastModified: '2026-09-01',
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     // /locais-de-atendimento itself redirects straight to the single
     // confirmed location when there's only one — keep the sitemap
     // pointed at the canonical, non-redirecting URL instead.

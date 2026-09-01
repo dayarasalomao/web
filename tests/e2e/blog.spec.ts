@@ -336,6 +336,67 @@ test('treatments index renders canonical service cards', async ({ page }) => {
   expect(Math.abs(treatmentsHeadingWidth - treatmentsGridWidth)).toBeLessThanOrEqual(1)
 })
 
+test('faq page mirrors every FAQPage schema question in visible content', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
+  await page.goto('/perguntas-frequentes')
+
+  await expect(page.getByRole('heading', { level: 1, name: /perguntas frequentes/i })).toBeVisible()
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    `${CANONICAL_WEBSITE_URL}/perguntas-frequentes`,
+  )
+  await expect(page.locator('header').getByRole('link', { name: /^dúvidas$/i })).toHaveAttribute(
+    'href',
+    '/perguntas-frequentes',
+  )
+  await expect(
+    page.locator('footer').last().getByRole('link', { name: /^perguntas frequentes$/i }),
+  ).toHaveAttribute('href', '/perguntas-frequentes')
+
+  // Google requires FAQPage markup to reflect content the visitor can actually
+  // read, so assert the schema never drifts ahead of the rendered accordions.
+  const schemaQuestions = await page.evaluate(() => {
+    const nodes = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+      .map((script) => JSON.parse(script.textContent ?? '{}'))
+      .flatMap((json) => (Array.isArray(json['@graph']) ? json['@graph'] : [json]))
+    const faqPage = nodes.find((node) => node['@type'] === 'FAQPage')
+    return (faqPage?.mainEntity ?? []).map((entry: { name: string }) => entry.name)
+  })
+
+  expect(schemaQuestions.length).toBeGreaterThan(0)
+
+  const renderedQuestions = await page
+    .locator('main summary > span:first-child')
+    .allInnerTexts()
+    .then((texts) => texts.map((text) => text.trim()))
+
+  expect(renderedQuestions).toEqual(schemaQuestions)
+})
+
+test('illustrated article renders its images and comparison table without page overflow', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 812 })
+  await page.goto('/blog/hemorroida-ou-plicoma-como-diferenciar')
+
+  const figure = page.locator('article img').first()
+  await expect(figure).toBeVisible()
+  await expect(figure).toHaveAttribute('alt', /hemorroida/i)
+
+  // Wide tables must scroll inside their own wrapper, never the page body.
+  const overflow = await page.evaluate(() => {
+    const table = document.querySelector('article table')
+    const wrapper = table?.parentElement
+    return {
+      tableScrolls: wrapper ? wrapper.scrollWidth > wrapper.clientWidth : false,
+      bodyScrolls: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+    }
+  })
+
+  expect(overflow.tableScrolls).toBe(true)
+  expect(overflow.bodyScrolls).toBe(false)
+})
+
 test('privacy page is crawlable for users but noindex for bots', async ({ page }) => {
   await page.goto('/politica-privacidade')
 
@@ -365,6 +426,7 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/blog`)
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/sobre`)
   expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/tratamentos`)
+  expect(locs).toContain(`${CANONICAL_WEBSITE_URL}/perguntas-frequentes`)
   expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
   expect(blogPostLocs).toContain(
     `${CANONICAL_WEBSITE_URL}/blog/constipacao-intestinal-quando-investigar`,

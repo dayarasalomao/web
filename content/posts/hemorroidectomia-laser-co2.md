@@ -3,7 +3,7 @@ title: "Hemorroidectomia com Laser de CO2: Precisão e Recuperação"
 metaDescription: Entenda quando a hemorroidectomia com laser de CO2 é indicada, os diferenciais técnicos do método e por que o pós-operatório tende a ser mais confortável.
 slug: hemorroidectomia-laser-co2
 publishDate: 2026-03-12
-lastModified: 2026-04-22
+lastModified: 2026-09-01
 primaryKeyword: hemorroidectomia laser CO2
 secondaryKeywords:
   - cirurgia de hemorroidas a laser
@@ -13,6 +13,10 @@ targetAudience: patients
 intent: decision
 featured: true
 order: 1
+relatedPosts:
+  - pos-operatorio-cirurgia-hemorroidas-o-que-esperar
+  - hemorroidas-qual-tecnica-cirurgica-escolher
+  - eletrocauterio-laser-diodo-laser-co2-diferencas
 faqs:
   - question: Quando a hemorroidectomia com laser de CO2 costuma ser indicada?
     answer: Em geral, ela é considerada em quadros com hemorroidas volumosas, prolapsadas ou de componente misto, sempre após avaliação individualizada.
