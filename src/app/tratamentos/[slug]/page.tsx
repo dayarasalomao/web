@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
-import { WHATSAPP_URL } from '@/constants'
+import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 import { buildTreatmentMetadata } from '@/lib/seo'
 import { buildTreatmentGraph, serializeJsonLd } from '@/lib/structured-data'
 import {
@@ -87,13 +87,30 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             {treatment.summary}
           </p>
 
-          <div className="text-sm text-gray-600">
-            Última atualização:{' '}
-            <time dateTime={treatment.lastUpdated}>
-              {new Date(treatment.lastUpdated).toLocaleDateString('pt-BR', {
-                timeZone: 'UTC',
-              })}
-            </time>
+          {/* Authorship and credentials belong on the procedure page itself.
+              A reader deciding on surgery should not have to visit /sobre to
+              find out who is behind the recommendation. */}
+          <div className="flex flex-col gap-2 text-sm text-gray-600 sm:flex-row sm:items-center sm:gap-6">
+            <span>
+              Por{' '}
+              <Link
+                href="/sobre"
+                className="font-semibold text-teal underline decoration-teal/30 underline-offset-2 hover:text-copper"
+              >
+                {SEO_DOCTOR_NAME}
+              </Link>
+              <span className="ml-2 whitespace-nowrap text-gray-500">
+                {CRM_FULL} · {RQE_FULL}
+              </span>
+            </span>
+            <span>
+              Última atualização:{' '}
+              <time dateTime={treatment.lastUpdated}>
+                {new Date(treatment.lastUpdated).toLocaleDateString('pt-BR', {
+                  timeZone: 'UTC',
+                })}
+              </time>
+            </span>
           </div>
         </header>
 
