@@ -83,4 +83,4 @@ A maior parte dos abscessos e fístulas anais (cerca de 80%) surge dessa forma s
 
 ## Por que é importante tratar
 
-Diferente de outras infecções, a fístula não costuma fechar sozinha com antibióticos, porque o trajeto já está revestido por tecido cronicamente inflamado que impede o fechamento espontâneo. Por isso, o tratamento definitivo é cirúrgico.
+Diferente de outras infecções, a [fístula](/blog/fistula-anal-o-que-e-sintomas) não costuma fechar sozinha com antibióticos, porque o trajeto já está revestido por tecido cronicamente inflamado que impede o fechamento espontâneo. Por isso, o tratamento definitivo é cirúrgico.

@@ -70,11 +70,11 @@ Procure avaliação quando a coceira é persistente, recorrente ou acompanhada d
 * duração por mais de quatro a seis semanas;
 * falha de melhora após cuidados básicos.
 
-Esses sinais ajudam a definir se há dermatite, infecção, HPV, fissura, hemorroidas ou outra condição associada.
+Esses sinais ajudam a definir se há dermatite, infecção, [HPV](/blog/hpv-anal-identificar-tratar), [fissura](/blog/fissura-anal-causas-sintomas), [hemorroidas](/blog/doenca-hemorroidaria-sintomas-graus) ou outra condição associada.
 
 ## Como o tratamento é definido?
 
-O tratamento depende da causa. Em alguns casos, reduzir irritantes, controlar umidade e ajustar hábitos de higiene já melhora muito. Em outros, é necessário tratar fissuras, hemorroidas, dermatites, infecções ou lesões específicas.
+O tratamento depende da causa. Em alguns casos, reduzir irritantes, controlar umidade e ajustar hábitos de higiene já melhora muito. Em outros, é necessário tratar fissuras, hemorroidas, dermatites, infecções ou lesões específicas. Vale lembrar que um [plicoma](/blog/plicoma-anal-causas-e-tratamento) que dificulta a higiene também pode ser a causa da coceira persistente.
 
 Por isso, o exame local é importante. Ele evita o uso repetido de pomadas inadequadas e orienta cuidados mais precisos.
 

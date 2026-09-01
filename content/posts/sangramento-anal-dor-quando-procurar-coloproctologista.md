@@ -44,7 +44,7 @@ disclaimer: >-
 
 ## Por que sangramento anal precisa de atenção?
 
-Ver sangue no papel, no vaso sanitário ou misturado às fezes costuma gerar preocupação. Em muitos casos, o sangramento está relacionado a fissuras ou doença hemorroidária, mas essa não deve ser uma conclusão sem avaliação.
+Ver sangue no papel, no vaso sanitário ou misturado às fezes costuma gerar preocupação. Em muitos casos, o sangramento está relacionado a [fissuras](/blog/fissura-anal-causas-sintomas) ou [doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus), mas essa não deve ser uma conclusão sem avaliação.
 
 O aspecto do sangue também importa. Sangue vermelho vivo costuma sugerir origem mais baixa, como região anal ou reto. Já fezes muito escuras, pretas ou com aspecto de borra podem indicar sangramento em outra parte do aparelho digestivo e exigem avaliação rápida.
 
@@ -52,7 +52,7 @@ O coloproctologista investiga a origem do sangramento, avalia a região anal e c
 
 ## E quando há dor anal?
 
-A dor pode aparecer ao evacuar, depois da evacuação, ao sentar ou de forma contínua. Pode estar relacionada a fissura anal, trombose hemorroidária, abscesso, inflamações, trauma local ou outras condições.
+A dor pode aparecer ao evacuar, depois da evacuação, ao sentar ou de forma contínua. Pode estar relacionada a fissura anal, trombose hemorroidária, [abscesso](/blog/drenagem-abscesso-perianal-e-risco-de-fistula), inflamações, trauma local ou outras condições.
 
 Dor intensa, dor que piora rapidamente, sensação de caroço dolorido, febre, secreção ou dificuldade para evacuar são sinais que merecem avaliação com mais urgência.
 

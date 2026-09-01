@@ -52,6 +52,8 @@ disclaimer: >-
 
 *Nenhuma técnica de cirurgia de hemorroidas é melhor de forma absoluta: a escolha ideal equilibra o conforto no pós-operatório contra a durabilidade do resultado a longo prazo.*
 
+Antes de comparar as técnicas, vale saber [em que grau está a sua doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus) — é esse dado que mais restringe as opções.
+
 ![Comparativo das tecnologias na cirurgia proctológica: eletrocautério, laser de diodo e laser de CO2, com o efeito de cada um no tecido](/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp)
 
 ## O que é a cirurgia convencional (hemorroidectomia)

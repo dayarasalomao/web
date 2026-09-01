@@ -45,7 +45,7 @@ disclaimer: >-
 
 Lesões, verrugas, bolinhas, caroços, feridas ou excesso de pele podem surgir ao redor do ânus ou dentro do canal anal. Muitas alterações são benignas, mas isso só pode ser afirmado com segurança após avaliação. Outras precisam de tratamento específico.
 
-Entre as possibilidades estão plicomas, hemorroidas externas ou trombosadas, fissuras, abscessos, fístulas, lesões por HPV, dermatites e outras alterações da pele.
+Entre as possibilidades estão [plicomas](/blog/plicoma-anal-causas-e-tratamento), hemorroidas externas ou trombosadas, [fissuras](/blog/fissura-anal-causas-sintomas), abscessos, [fístulas](/blog/fistula-anal-o-que-e-sintomas), [lesões por HPV](/blog/hpv-anal-identificar-tratar), dermatites e outras alterações da pele.
 
 ## O que observar?
 

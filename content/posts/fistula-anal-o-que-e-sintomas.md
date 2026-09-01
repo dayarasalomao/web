@@ -29,6 +29,17 @@ faqs:
     answer: >-
       Muitos pacientes descrevem a presença de uma "espinha recorrente" na
       região perianal, que drena secreção e volta a aparecer com o tempo.
+  - question: Por que a fístula não fecha com antibiótico?
+    answer: >-
+      Porque o trajeto já está revestido por tecido cronicamente inflamado, que
+      impede o fechamento espontâneo. O antibiótico pode controlar uma infecção
+      aguda, mas não fecha o canal. O tratamento definitivo é cirúrgico.
+  - question: De onde vem a fístula anal?
+    answer: >-
+      Cerca de 80% das fístulas têm origem criptoglandular: uma pequena glândula
+      dentro do canal anal entope, infecciona e forma um abscesso. Quando o pus
+      sai, o corpo tenta cicatrizar o caminho — e em parte dos casos esse
+      caminho não fecha e vira a fístula.
   - question: Existe uma única técnica cirúrgica para fístula anal?
     answer: >-
       Não. O tratamento é sempre cirúrgico, mas a técnica é individualizada. A
@@ -39,30 +50,62 @@ disclaimer: >-
   inflamação recorrente na região perianal, procure avaliação presencial.
 ---
 
-*A fístula anal costuma se manifestar como uma "espinha recorrente" perianal que drena secreção. Entender o que é essa condição ajuda a buscar avaliação especializada.*
+*A frase mais comum na consulta é sempre a mesma: "tenho uma espinha que volta". Ela drena, melhora, some por um tempo e reaparece no mesmo lugar. Esse padrão de repetição é o que caracteriza a fístula anal.*
 
-## O que é a fístula anal?
+![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
 
-A fístula anal é uma comunicação anômala que se forma entre o canal anal ou o reto e a pele perianal. Esse trajeto pode gerar infecções recorrentes que incomodam e drenam secreção purulenta.
+## O que é a fístula anal
 
-A frase mais característica que muitos pacientes trazem na consulta é a presença de uma "espinha recorrente" na região perianal, que melhora e depois volta a aparecer.
+A fístula anal é um pequeno túnel ou canal anormal que se forma entre o interior do canal anal e a pele ao redor do ânus. Esse trajeto conecta um ponto interno, dentro do reto ou do ânus, a uma abertura externa na pele.
+
+Como é um canal aberto, ele drena cronicamente pequenas quantidades de secreção, pus ou até um pouco de sangue — geralmente por um orifício na pele ao lado do ânus.
+
+## De onde ela vem
+
+Dentro do canal anal existem pequenas glândulas que produzem um lubrificante natural para ajudar na evacuação, localizadas perto de uma região chamada linha pectínea.
+
+Às vezes uma dessas glândulas entope, por acúmulo de fezes ou muco. Bactérias se multiplicam no local e a infecção forma um abscesso — uma bolsa de pus dolorosa e inchada perto do ânus. Essa é a fase aguda, que costuma exigir drenagem cirúrgica imediata.
+
+Quando o abscesso é drenado, seja espontaneamente ou por cirurgia, o corpo tenta cicatrizar o trajeto por onde o pus saiu. Em parte dos casos esse trajeto não fecha completamente e vira um canal permanente, revestido por tecido de cicatrização. Essa é a fístula.
+
+Cerca de 80% das fístulas surgem exatamente assim — é a chamada origem criptoglandular, sem nenhuma doença de base associada. O passo a passo completo está no artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece).
+
+## Por que acontece com algumas pessoas e não com outras
+
+Alguns fatores aumentam a chance de um abscesso evoluir para fístula, ou de a fístula ser mais complicada:
+
+* **Doença inflamatória intestinal**, especialmente a [doença de Crohn](/blog/doencas-inflamatorias-intestinais-crohn-retocolite), na qual a inflamação crônica do intestino pode levar diretamente à formação de fístulas, mesmo sem uma infecção glandular clássica.
+* **Sexo feminino e idade entre 41 e 60 anos**, que aumentam discretamente o risco após um abscesso.
+* **Diabetes e tabagismo**, que agregam risco.
+* Causas mais raras, como traumas, infecções sexualmente transmissíveis e radioterapia prévia na região pélvica.
 
 ## Sintomas que merecem atenção
 
-* Drenagem de secreção purulenta perianal.
-* Episódios repetidos de inflamação ou infecção local.
-* Desconforto, dor ou um pequeno orifício que volta a drenar.
+* Dor e inchaço persistentes perto do ânus.
+* Saída repetida de secreção, pus ou sangue por um pequeno orifício na pele ao lado do ânus.
+* Irritação, coceira ou manchas na roupa íntima causadas pela drenagem contínua.
+* Histórico de um abscesso anal que foi drenado, mas que não cicatrizou de forma definitiva.
 
-## Como é feito o tratamento?
+## Por que é importante tratar
+
+Diferente de outras infecções, a fístula não costuma fechar sozinha com antibióticos. O trajeto já está revestido por tecido cronicamente inflamado, que impede o fechamento espontâneo.
+
+Isso tem uma consequência prática importante: melhorar não é o mesmo que resolver. Mesmo que os sintomas cedam por semanas, o canal continua lá. O acompanhamento depois de uma drenagem de abscesso é essencial justamente por isso — a fístula pode não dar sinais até semanas ou meses depois, como explica o artigo sobre [drenagem de abscesso perianal](/blog/drenagem-abscesso-perianal-e-risco-de-fistula).
+
+## Como é feito o tratamento
 
 O tratamento da fístula anal é sempre cirúrgico. A técnica, porém, depende de vários fatores, tanto da doença quanto do paciente.
 
-Alguns cuidados podem aumentar a chance de cura, como controle do peso, controle do diabetes e parar de fumar. Esses fatores fazem parte do planejamento do tratamento.
+Alguns cuidados podem aumentar a chance de cura: controle do peso, controle do diabetes e parar de fumar. Esses fatores fazem parte do planejamento.
 
 As técnicas podem ser organizadas em três grupos:
 
 * **Ablativas:** quando se corta ou se retira o trajeto fistuloso.
-* **Poupadoras de esfíncter:** que buscam preservar a continência, como as que utilizam laser.
+* **Poupadoras de esfíncter:** que buscam preservar a continência, como as que utilizam [laser e vídeo](/blog/fistula-anal-laser-vaaft-filac).
 * **Regenerativas:** que estimulam o processo de cicatrização local.
 
-Nenhuma técnica é superior a outra de forma genérica. Nesta doença, a individualização da abordagem é fundamental, e a definição depende da avaliação presencial.
+Nenhuma técnica é superior a outra de forma genérica. O ponto central da decisão é quanto do músculo esfincteriano está envolvido no trajeto — porque seccionar esse músculo pode deixar algum grau de dificuldade para segurar gases ou fezes. Nesta doença, a individualização da abordagem é fundamental.
+
+## Quando procurar avaliação
+
+Procure um coloproctologista se você tem uma lesão perianal que drena e volta, se já drenou um abscesso e a região não cicatrizou por completo, ou se percebe secreção contínua manchando a roupa íntima.

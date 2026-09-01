@@ -50,9 +50,9 @@ Entre os fatores que podem estar envolvidos estão:
 * umidade local, suor ou escape discreto de secreção;
 * higiene excessiva, uso de sabonetes fortes, lenços umedecidos ou produtos perfumados;
 * atrito, roupas apertadas ou permanência prolongada com a pele úmida;
-* fissuras, hemorroidas, fístulas ou outras doenças da região anal;
+* [fissuras](/blog/fissura-anal-causas-sintomas), [hemorroidas](/blog/doenca-hemorroidaria-sintomas-graus), [fístulas](/blog/fistula-anal-o-que-e-sintomas) ou outras doenças da região anal;
 * dermatites, alergias, micoses e outras alterações da pele;
-* lesões por HPV ou outras causas que exigem avaliação específica.
+* lesões por [HPV](/blog/hpv-anal-identificar-tratar), [plicomas](/blog/plicoma-anal-causas-e-tratamento) que dificultam a higiene, ou outras causas que exigem avaliação específica.
 
 Coçar costuma piorar o ciclo: a pele fica mais sensível, inflamada e vulnerável, o que mantém a coceira.
 

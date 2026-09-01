@@ -58,7 +58,7 @@ disclaimer: >-
 
 A técnica escolhida não muda apenas o modo como a cirurgia é feita. Ela influencia como será a primeira semana, o primeiro mês e até o risco de a hemorroida voltar mais adiante.
 
-Não existe uma técnica "perfeita". Cada uma tem vantagens e desvantagens, e o que uma boa cirurgiã vai considerar é o grau da hemorroida, o tamanho e as preferências do paciente.
+Não existe uma técnica "perfeita". Cada uma tem vantagens e desvantagens, e o que uma boa cirurgiã vai considerar é [o grau da hemorroida](/blog/doenca-hemorroidaria-sintomas-graus), o tamanho e as preferências do paciente. O artigo sobre [qual técnica escolher](/blog/hemorroidas-qual-tecnica-cirurgica-escolher) detalha o cenário ideal de cada uma.
 
 ## Cirurgia convencional (hemorroidectomia excisional)
 

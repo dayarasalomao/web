@@ -49,7 +49,7 @@ disclaimer: >-
 
 ![Comparação entre cirurgia convencional e cirurgia a laser SiLaC para cisto pilonidal, mostrando a excisão aberta e a inserção da fibra de laser pelos orifícios de entrada](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
-O cisto pilonidal (também chamado de doença pilonidal ou cisto sacrococcígeo) é uma inflamação crônica que ocorre na região entre as nádegas, próxima ao cóccix, e a cirurgia é o tratamento recomendado. Existem diferentes técnicas cirúrgicas, e cada uma tem vantagens, desvantagens e indicações específicas.
+O [cisto pilonidal](/blog/cisto-pilonidal-sinais-diagnostico) (também chamado de doença pilonidal ou cisto sacrococcígeo) é uma inflamação crônica que ocorre na região entre as nádegas, próxima ao cóccix, e a cirurgia é o tratamento recomendado. Existem diferentes técnicas cirúrgicas, e cada uma tem vantagens, desvantagens e indicações específicas.
 
 ## Cirurgia convencional (excisão)
 
