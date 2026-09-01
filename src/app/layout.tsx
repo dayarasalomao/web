@@ -104,11 +104,17 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
       <head>
+        {/*
+          Dev-only inspector. It must not run `beforeInteractive`: react-grab
+          decorates same-origin iframes (the location map), and doing that
+          before React hydrates produces an unrecoverable hydration mismatch.
+          Loading it after hydration keeps the tool without corrupting the tree.
+        */}
         {process.env.NODE_ENV === 'development' && (
           <Script
             src="https://unpkg.com/react-grab/dist/index.global.js"
             crossOrigin="anonymous"
-            strategy="beforeInteractive"
+            strategy="afterInteractive"
           />
         )}
         {/* Preconnect to external domains */}

@@ -7,6 +7,7 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { MedicalSignature } from '@/components/ui/MedicalSignature'
 import { MdxImage } from '@/components/ui/MdxImage'
+import { MdxTable } from '@/components/ui/MdxTable'
 import { RelatedPostsSection } from '@/components/ui/RelatedPostsSection'
 import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '@/lib/blog'
 import { buildPostMetadata } from '@/lib/seo'
@@ -108,8 +109,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-teal
             [&_p]:mb-5 [&_p]:text-base [&_p]:leading-8 lg:[&_p]:text-lg
             [&_ul]:mb-6 [&_ul]:list-disc [&_ul]:space-y-3 [&_ul]:pl-6
+            [&_ol]:mb-6 [&_ol]:list-decimal [&_ol]:space-y-3 [&_ol]:pl-6
             [&_li]:leading-8
-            [&_strong]:font-semibold [&_strong]:text-teal"
+            [&_strong]:font-semibold [&_strong]:text-teal
+            [&_a]:font-medium [&_a]:text-copper [&_a]:underline [&_a]:decoration-copper/30 [&_a]:underline-offset-2 [&_a:hover]:text-teal
+            [&_table]:w-full [&_table]:border-collapse [&_table]:text-left [&_table]:text-base
+            [&_thead]:bg-beige/40
+            [&_th]:border [&_th]:border-beige [&_th]:px-4 [&_th]:py-3 [&_th]:font-semibold [&_th]:text-teal
+            [&_td]:border [&_td]:border-beige [&_td]:px-4 [&_td]:py-3 [&_td]:align-top [&_td]:leading-7"
         >
           <MDXRemote
             source={post.content}
@@ -118,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 remarkPlugins: [remarkGfm],
               },
             }}
-            components={{ img: MdxImage }}
+            components={{ img: MdxImage, table: MdxTable }}
           />
         </div>
 

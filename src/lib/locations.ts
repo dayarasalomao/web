@@ -162,11 +162,6 @@ export const LOCATIONS: PracticeLocation[] = [
     relatedBlogSlugs: CORE_BLOG_SLUGS,
     faqs: [
       {
-        question: 'Quando começam os atendimentos da Dra. Dayara Salomão em Campo Grande?',
-        answer:
-          'Os atendimentos no Instituto do Aparelho Digestivo, em Campo Grande/MS, têm início em 5 de agosto de 2026.',
-      },
-      {
         question: 'Onde fica o consultório em Campo Grande?',
         answer:
           'No Instituto do Aparelho Digestivo, na R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande/MS, CEP 79020-120.',
@@ -188,8 +183,7 @@ export const LOCATIONS: PracticeLocation[] = [
     ],
     indexable: true,
     showAppointmentCta: true,
-    launchDate: '2026-08-05',
-    lastUpdated: '2026-08-10',
+    lastUpdated: '2026-09-01',
   },
 ]
 

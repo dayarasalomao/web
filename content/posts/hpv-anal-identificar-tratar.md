@@ -5,7 +5,7 @@ metaDescription: >-
   por que o tratamento e o acompanhamento são individualizados.
 slug: hpv-anal-identificar-tratar
 publishDate: 2026-05-23T00:00:00.000Z
-lastModified: 2026-05-23T00:00:00.000Z
+lastModified: 2026-09-01
 primaryKeyword: HPV anal
 secondaryKeywords:
   - verrugas anais
@@ -15,6 +15,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 18
+relatedPosts:
+  - plicoma-ou-hpv-perianal-como-diferenciar
+  - hpv-perianal-laser-co2
 faqs:
   - question: Como o HPV anal costuma se manifestar?
     answer: >-

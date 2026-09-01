@@ -5,7 +5,7 @@ metaDescription: >-
   externas, os graus da doença e as opções de tratamento.
 slug: doenca-hemorroidaria-sintomas-graus
 publishDate: 2026-05-18T00:00:00.000Z
-lastModified: 2026-08-10
+lastModified: 2026-09-01
 primaryKeyword: doença hemorroidária
 secondaryKeywords:
   - sintomas de hemorroida
@@ -20,6 +20,8 @@ relatedPosts:
   - ligadura-elastica-hemorroidas-internas
   - hemorroidas-sem-corte-laser-diodo
   - sangramento-anal-dor-quando-procurar-coloproctologista
+  - hemorroidas-qual-tecnica-cirurgica-escolher
+  - hemorroida-ou-plicoma-como-diferenciar
 faqs:
   - question: Toda hemorroida causa dor?
     answer: >-

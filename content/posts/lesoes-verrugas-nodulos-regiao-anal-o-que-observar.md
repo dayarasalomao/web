@@ -5,7 +5,7 @@ metaDescription: >-
   quando procurar avaliação com coloproctologista.
 slug: lesoes-verrugas-nodulos-regiao-anal-o-que-observar
 publishDate: 2026-03-27T00:00:00.000Z
-lastModified: 2026-03-27T00:00:00.000Z
+lastModified: 2026-09-01
 primaryKeyword: lesões na região anal
 secondaryKeywords:
   - verrugas anais
@@ -15,6 +15,10 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 24
+relatedPosts:
+  - hemorroida-ou-plicoma-como-diferenciar
+  - plicoma-ou-hpv-perianal-como-diferenciar
+  - plicoma-anal-causas-e-tratamento
 faqs:
   - question: Toda verruga na região anal é HPV?
     answer: >-

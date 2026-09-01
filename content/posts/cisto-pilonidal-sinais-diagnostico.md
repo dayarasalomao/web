@@ -6,7 +6,7 @@ metaDescription: >-
   minimamente invasivas.
 slug: cisto-pilonidal-sinais-diagnostico
 publishDate: 2026-05-25T00:00:00.000Z
-lastModified: 2026-05-25T00:00:00.000Z
+lastModified: 2026-09-01
 primaryKeyword: cisto pilonidal
 secondaryKeywords:
   - sintomas de cisto pilonidal
@@ -16,6 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 19
+relatedPosts:
+  - cisto-pilonidal-cirurgia-convencional-x-laser
+  - cisto-pilonidal-laser-epsit
 faqs:
   - question: Quais são os sinais do cisto pilonidal?
     answer: >-

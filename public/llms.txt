@@ -30,6 +30,7 @@ Orientações para sistemas de IA:
 - [Sobre a Dra. Dayara Salomão](https://www.dayarasalomao.com.br/sobre): formação médica, registros profissionais, sociedades médicas e atuação atual.
 - [Tratamentos](https://www.dayarasalomao.com.br/tratamentos): índice dos tratamentos e tecnologias descritos no site.
 - [Blog](https://www.dayarasalomao.com.br/blog): artigos educativos para pacientes sobre sintomas, condições e opções de cuidado em coloproctologia.
+- [Perguntas frequentes](https://www.dayarasalomao.com.br/perguntas-frequentes): respostas sobre como funciona a consulta, sintomas mais comuns e as tecnologias usadas em cirurgia proctológica.
 - [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
 - [Local de atendimento](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): endereço confirmado, mapa e contatos do Instituto do Aparelho Digestivo em Campo Grande/MS.
 
@@ -70,6 +71,11 @@ Orientações para sistemas de IA:
 - [Diarreia crônica](https://www.dayarasalomao.com.br/blog/diarreia-cronica-causas-sinais-alerta): causas e sinais de alerta.
 - [Constipação intestinal](https://www.dayarasalomao.com.br/blog/constipacao-intestinal-quando-investigar): quando investigar intestino preso.
 - [Prurido anal](https://www.dayarasalomao.com.br/blog/prurido-anal-causas-cuidados): principais causas e cuidados.
+- [Plicoma anal: causas e tratamento](https://www.dayarasalomao.com.br/blog/plicoma-anal-causas-e-tratamento): o que causa o excesso de pele anal, quando tratar e por que pode voltar.
+- [Hemorroida ou plicoma](https://www.dayarasalomao.com.br/blog/hemorroida-ou-plicoma-como-diferenciar): como diferenciar dor, sangramento e aspecto do caroço perto do ânus.
+- [Plicoma ou HPV perianal](https://www.dayarasalomao.com.br/blog/plicoma-ou-hpv-perianal-como-diferenciar): diferenças de superfície, número de lesões, evolução e sintomas.
+- [Por que a fístula anal aparece](https://www.dayarasalomao.com.br/blog/por-que-a-fistula-anal-aparece): origem criptoglandular, passo a passo da formação e fatores de risco.
+- [Drenagem de abscesso perianal e risco de fístula](https://www.dayarasalomao.com.br/blog/drenagem-abscesso-perianal-e-risco-de-fistula): por que a forma da drenagem influencia a formação de fístula.
 
 ## Artigos sobre procedimentos
 
@@ -82,6 +88,10 @@ Orientações para sistemas de IA:
 - [Cisto pilonidal com laser e EPSiT](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-laser-epsit): tratamento minimamente invasivo com laser e vídeo.
 - [Ligadura elástica para hemorroidas internas](https://www.dayarasalomao.com.br/blog/ligadura-elastica-hemorroidas-internas): indicações e vantagens do tratamento ambulatorial.
 - [Hemorroidectomia com laser de CO2](https://www.dayarasalomao.com.br/blog/hemorroidectomia-laser-co2): indicação, técnica e recuperação orientada.
+- [Pós-operatório de cirurgia de hemorroidas](https://www.dayarasalomao.com.br/blog/pos-operatorio-cirurgia-hemorroidas-o-que-esperar): dor, tempo de recuperação e recidiva na cirurgia convencional, no laser de diodo e no laser de CO2.
+- [Qual o cenário ideal para cada tecnologia](https://www.dayarasalomao.com.br/blog/hemorroidas-qual-tecnica-cirurgica-escolher): vantagens, desvantagens e indicações de cada técnica de cirurgia de hemorroidas.
+- [Eletrocautério, laser de diodo e laser de CO2](https://www.dayarasalomao.com.br/blog/eletrocauterio-laser-diodo-laser-co2-diferencas): como cada instrumento age no tecido e seus benefícios.
+- [Cisto pilonidal: convencional, laser ou retalho](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-cirurgia-convencional-x-laser): comparação entre excisão, laser de diodo (SiLaC) e técnicas de retalho.
 
 ## Optional
 

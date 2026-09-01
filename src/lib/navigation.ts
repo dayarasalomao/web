@@ -13,6 +13,7 @@ export const HOME_HEADER_NAV_ITEMS: NavItem[] = [
   { href: '/sobre', label: 'Sobre', match: '/sobre' },
   { href: '/tratamentos', label: 'Tratamentos', match: '/tratamentos' },
   { href: '/blog', label: 'Blog', match: '/blog' },
+  { href: '/perguntas-frequentes', label: 'Dúvidas', match: '/perguntas-frequentes' },
   { href: PRIMARY_LOCATION_PATH, label: 'Locais', match: '/locais-de-atendimento' },
   { href: '/#contato', label: 'Contato' },
 ]
@@ -22,6 +23,7 @@ export const SUBPAGE_HEADER_NAV_ITEMS: NavItem[] = [
   { href: '/sobre', label: 'Sobre', match: '/sobre' },
   { href: '/tratamentos', label: 'Tratamentos', match: '/tratamentos' },
   { href: '/blog', label: 'Blog', match: '/blog' },
+  { href: '/perguntas-frequentes', label: 'Dúvidas', match: '/perguntas-frequentes' },
   { href: PRIMARY_LOCATION_PATH, label: 'Locais', match: '/locais-de-atendimento' },
   { href: '/#contato', label: 'Contato' },
 ]
@@ -32,5 +34,6 @@ export const FOOTER_QUICK_LINKS: NavItem[] = [
   { href: '/#curriculo', label: 'Currículo' },
   { href: '/tratamentos', label: 'Tratamentos' },
   { href: '/blog', label: 'Blog' },
+  { href: '/perguntas-frequentes', label: 'Perguntas frequentes' },
   { href: PRIMARY_LOCATION_PATH, label: 'Locais de atendimento' },
 ]
