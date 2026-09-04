@@ -70,7 +70,7 @@ export default function WhenToSeek() {
       description:
         'Prurido anal que não melhora com cuidados básicos de higiene',
       urgency: 'low',
-      blogSlug: 'coceira-anal-persistente-causas-sinal-alerta',
+      blogSlug: 'prurido-anal-causas-cuidados',
     },
   ]
 

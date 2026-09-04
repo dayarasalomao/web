@@ -559,7 +559,6 @@ export const TREATMENTS: Treatment[] = [
     ],
     relatedBlogSlugs: [
       'prurido-anal-causas-cuidados',
-      'coceira-anal-persistente-causas-sinal-alerta',
     ],
     mappedDiseaseNames: ['Prurido Anal'],
     keywords: ['tratamento prurido anal', 'coceira anal', 'prurido anal'],
