@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:#374151;background:#F4F3F2;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:#A35442;text-decoration:none}
+  a:hover{color:#8a4436}
+  ::selection{background:#D1AF8B;color:#16323b}
+</style>
+</helmet>
+
+<div style="background:#F4F3F2;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(244,243,242,.85);border-bottom:1px solid rgba(29,65,76,.1)">
+    <div style="max-width:1180px;margin:0 auto;padding:16px clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="Homepage-Copper.dc.html" style="display:flex;flex-direction:column;line-height:1.05;color:#16323b">
+        <span style="font-family:'Newsreader',Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.01em">Dra. Dayara Salomão</span>
+        <span style="font:600 10px 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:#A35442;margin-top:3px">Coloproctologista</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:28px">
+        <a href="Homepage-Copper.dc.html#doencas" style="font:600 14px 'Manrope';color:#374151">Doenças</a>
+        <a href="Tratamentos.dc.html" style="font:700 14px 'Manrope';color:#A35442">Tratamentos</a>
+        <a href="Blog.dc.html" style="font:600 14px 'Manrope';color:#374151">Blog</a>
+        <a href="Homepage-Copper.dc.html#contato" style="font:600 14px 'Manrope';color:#374151">Contato</a>
+        <a href="{{ wa }}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#A35442;color:#F4F3F2;font:600 14px 'Manrope';padding:11px 20px;border-radius:999px" style-hover="background:#8a4436;color:#F4F3F2">Agendar consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="padding:clamp(48px,7vw,90px) clamp(20px,5vw,56px) clamp(36px,5vw,56px)">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="font:600 12px 'Manrope';color:#6b7280;display:flex;gap:8px;align-items:center"><a href="Homepage-Copper.dc.html" style="color:#6b7280">Início</a><span>/</span><span style="color:#A35442">Tratamentos</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);align-items:end;margin-top:20px">
+        <div style="max-width:620px">
+          <div style="font:600 12px 'Manrope';letter-spacing:.18em;text-transform:uppercase;color:#A35442">Tecnologia a serviço do conforto</div>
+          <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1.04;letter-spacing:-.02em;color:#16323b;margin:16px 0 0">Tratamentos <em style="font-style:italic;color:#A35442">minimamente invasivos</em></h1>
+          <p style="font-size:clamp(16px,1.6vw,18px);line-height:1.7;color:#374151;margin:18px 0 0">Técnicas modernas com laser e vídeo-assistência, pensadas para reduzir a dor, acelerar a recuperação e devolver seu bem-estar com segurança.</p>
+        </div>
+        <div style="display:flex;gap:20px;flex-wrap:wrap">
+          <div><div style="font-family:'Newsreader',serif;font-size:40px;color:#A35442;line-height:1">14</div><div style="font:600 13px 'Manrope';color:#6b7280;margin-top:4px">procedimentos</div></div>
+          <div><div style="font-family:'Newsreader',serif;font-size:40px;color:#A35442;line-height:1">CO₂</div><div style="font:600 13px 'Manrope';color:#6b7280;margin-top:4px">laser & diodo</div></div>
+          <div><div style="font-family:'Newsreader',serif;font-size:40px;color:#A35442;line-height:1">Eco</div><div style="font:600 13px 'Manrope';color:#6b7280;margin-top:4px">Medical Center</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROUPS -->
+  <section style="padding:0 clamp(20px,5vw,56px) clamp(48px,6vw,90px)">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+      <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+        <div>
+          <div style="display:flex;align-items:baseline;gap:14px;padding-bottom:18px;border-bottom:1px solid rgba(29,65,76,.12)">
+            <span style="font-family:'Newsreader',serif;font-size:22px;color:#A35442">{{ g.num }}</span>
+            <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(24px,3vw,32px);color:#16323b;margin:0">{{ g.label }}</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:24px">
+            <sc-for list="{{ g.items }}" as="item" hint-placeholder-count="4">
+              <a href="Tratamento.dc.html" style="display:flex;flex-direction:column;background:#FFFFFF;border:1px solid rgba(29,65,76,.1);border-radius:18px;padding:26px;color:#16323b" style-hover="border-color:#A35442;box-shadow:0 20px 36px -26px rgba(29,65,76,.45);transform:translateY(-2px)">
+                <span style="display:inline-flex;align-self:flex-start;font:600 11px 'Manrope';letter-spacing:.1em;text-transform:uppercase;color:#A35442;background:#EDE6DE;padding:5px 11px;border-radius:999px">{{ item.tag }}</span>
+                <span style="font:600 18px 'Manrope';color:#16323b;margin-top:16px;line-height:1.3">{{ item.title }}</span>
+                <span style="font-size:14.5px;line-height:1.6;color:#4b5563;margin-top:8px;flex:1">{{ item.desc }}</span>
+                <span style="font:600 13px 'Manrope';color:#A35442;margin-top:18px">Ver detalhes →</span>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section style="padding:0 clamp(20px,5vw,56px) clamp(64px,8vw,110px)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,48px);align-items:center;background:#1D414C;border-radius:24px;padding:clamp(32px,4vw,56px);color:#EDE6DE">
+      <div>
+        <div style="font:600 12px 'Manrope';letter-spacing:.16em;text-transform:uppercase;color:#D1AF8B">Cada caso é único</div>
+        <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(26px,3vw,36px);line-height:1.12;color:#FFFFFF;margin:12px 0 0">Não sabe qual tratamento é o ideal para você?</h2>
+        <p style="font-size:15.5px;line-height:1.7;color:#c3d0cc;margin:14px 0 0">Agende uma avaliação. A conduta é sempre definida em conjunto, com base no seu diagnóstico e no seu conforto.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;justify-self:start">
+        <a href="{{ wa }}" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#A35442;color:#F4F3F2;font:600 15px 'Manrope';padding:16px 30px;border-radius:999px" style-hover="background:#8a4436;color:#F4F3F2">Agendar avaliação →</a>
+        <a href="Homepage-Copper.dc.html#contato" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:transparent;color:#EDE6DE;font:600 15px 'Manrope';padding:15px 28px;border-radius:999px;border:1px solid rgba(255,255,255,.25)" style-hover="background:rgba(255,255,255,.08);color:#FFFFFF">Ver local & contato</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#16323b;color:#c3d0cc;padding:clamp(40px,5vw,64px) clamp(20px,5vw,56px) 30px">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
+      <div>
+        <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;font-weight:600;color:#FFFFFF">Dra. Dayara Salomão</div>
+        <div style="font:600 10px 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:#D1AF8B;margin-top:4px">Coloproctologista · CRM-PR 42596</div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px;font:500 14px 'Manrope';color:#c3d0cc">
+        <a href="Homepage-Copper.dc.html" style="color:#c3d0cc">Início</a>
+        <a href="Tratamentos.dc.html" style="color:#c3d0cc">Tratamentos</a>
+        <a href="Blog.dc.html" style="color:#c3d0cc">Blog</a>
+        <a href="Homepage-Copper.dc.html#contato" style="color:#c3d0cc">Contato</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:28px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#8fa19c">© 2025 Dra. Dayara Salomão. Todos os direitos reservados.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      wa: "https://wa.me/554135422095",
+      groups: [
+        { num: "01", label: "Doença hemorroidária", items: [
+          { tag: "Laser CO₂", title: "Hemorroidectomia com laser de CO₂", desc: "Tecnologia avançada para tratamento minimamente invasivo, com menos dor." },
+          { tag: "Sem corte", title: "Cirurgia de hemorroidas sem corte", desc: "Laser de diodo que preserva os tecidos e acelera a recuperação." },
+          { tag: "Ambulatorial", title: "Ligadura elástica", desc: "Método eficaz e menos invasivo para hemorroidas internas." },
+        ]},
+        { num: "02", label: "Doenças anorretais", items: [
+          { tag: "Toxina", title: "Toxina botulínica para fissura anal", desc: "Alívio da dor anal crônica e cicatrização da fissura." },
+          { tag: "VAAFT · FiLaC", title: "Fístula anal a laser e vídeo-assistida", desc: "Procedimento de alta precisão que preserva o esfíncter." },
+          { tag: "EPSiT", title: "Cisto pilonidal a laser e vídeo", desc: "Tratamento avançado com recuperação mais rápida e menos recidiva." },
+          { tag: "Laser CO₂", title: "Plicoma anal a laser de CO₂", desc: "Remoção precisa de plicomas com tecnologia laser." },
+          { tag: "Laser CO₂", title: "Lesões por HPV perianal a laser", desc: "Eletrocoagulação segura e eficaz de lesões externas e internas." },
+          { tag: "Clínico", title: "Tratamento de prurido anal", desc: "Investigação da coceira e cuidado da pele local." },
+        ]},
+        { num: "03", label: "Distúrbios intestinais & funcionais", items: [
+          { tag: "Clínico", title: "Tratamento de constipação intestinal", desc: "Avaliação do intestino preso e ajuste do hábito evacuatório." },
+          { tag: "Investigação", title: "Avaliação de diarreia crônica", desc: "Investigação de evacuações frequentes e fezes líquidas." },
+          { tag: "Clínico", title: "Síndrome do intestino irritável", desc: "Cuidado para dor abdominal e alteração do hábito intestinal." },
+          { tag: "Multidisciplinar", title: "Hidradenite supurativa", desc: "Avaliação de nódulos, abscessos e fístulas em áreas de dobra." },
+          { tag: "Acompanhamento", title: "Doenças inflamatórias intestinais", desc: "Cuidado para retocolite ulcerativa e doença de Crohn." },
+        ]},
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

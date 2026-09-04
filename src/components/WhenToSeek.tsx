@@ -1,15 +1,32 @@
-import { WHATSAPP_URL } from '@/constants'
+import { HighlightCta } from '@/components/ui/HighlightCta'
 import { getPostHref } from '@/lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  AlertCircle,
-  CheckCircle2,
-  CircleDot,
-  Clock,
-  Info,
-  Smile,
-} from 'lucide-react'
+import { CheckCircle2, Clock, Smile } from 'lucide-react'
+
+const CONSULTATION_VALUES = [
+  {
+    title: 'Avaliação Oportuna',
+    description: 'Esclarecimento dos sinais e sintomas',
+    Icon: Clock,
+    iconColor: 'var(--color-teal)',
+    iconBackground: 'rgba(29, 65, 76, 0.1)',
+  },
+  {
+    title: 'Conduta Individualizada',
+    description: 'Opções discutidas conforme cada caso',
+    Icon: CheckCircle2,
+    iconColor: 'var(--color-copper)',
+    iconBackground: 'rgba(163, 84, 66, 0.1)',
+  },
+  {
+    title: 'Acompanhamento',
+    description: 'Orientações para evolução e retorno',
+    Icon: Smile,
+    iconColor: 'var(--color-straw)',
+    iconBackground: 'rgba(209, 175, 139, 0.2)',
+  },
+] as const
 
 export default function WhenToSeek() {
   const symptoms = [
@@ -53,36 +70,22 @@ export default function WhenToSeek() {
       description:
         'Prurido anal que não melhora com cuidados básicos de higiene',
       urgency: 'low',
-      blogSlug: 'coceira-anal-persistente-causas-sinal-alerta',
+      blogSlug: 'prurido-anal-causas-cuidados',
     },
   ]
 
+  // Only the accent colour is still needed: the icon badge that used to
+  // sit beside each signal was dropped for a plain dot.
   const getUrgencyStyles = (urgency: string) => {
     switch (urgency) {
       case 'high':
-        return {
-          accent: '#b91c1c',
-          iconBg: 'rgba(185, 28, 28, 0.1)',
-          icon: AlertCircle,
-        }
+        return { accent: '#b91c1c' }
       case 'medium':
-        return {
-          accent: 'var(--color-copper)',
-          iconBg: 'rgba(163, 84, 66, 0.1)',
-          icon: Info,
-        }
+        return { accent: 'var(--color-copper)' }
       case 'low':
-        return {
-          accent: 'var(--color-teal)',
-          iconBg: 'rgba(29, 65, 76, 0.1)',
-          icon: CircleDot,
-        }
+        return { accent: 'var(--color-teal)' }
       default:
-        return {
-          accent: 'var(--color-straw)',
-          iconBg: 'rgba(209, 175, 139, 0.2)',
-          icon: CircleDot,
-        }
+        return { accent: 'var(--color-straw)' }
     }
   }
 
@@ -163,36 +166,32 @@ export default function WhenToSeek() {
                 return (
                   <div
                     key={index}
-                    className="group card px-6 py-4 lg:px-6 lg:py-6 hover:shadow-lg transition-all duration-300"
+                    className="group card px-6 py-5 lg:px-7 lg:py-6"
                     style={{ borderLeftWidth: '3px', borderLeftColor: styles.accent }}
                   >
-                    <div className="flex items-start gap-3">
-                      <div
-                        className="w-9 h-9 shrink-0 rounded-full flex items-center justify-center mt-0.5"
-                        style={{ backgroundColor: styles.iconBg }}
-                      >
-                        <styles.icon
-                          className="w-4 h-4"
-                          style={{ color: styles.accent }}
-                          strokeWidth={1.75}
-                        />
-                      </div>
+                    <div className="flex items-start gap-3.5">
+                      {/* A dot instead of an icon badge: the icons repeated
+                          what the accent border already says, and three
+                          different glyphs added noise to a list meant to be
+                          scanned. */}
+                      <span
+                        aria-hidden="true"
+                        className="mt-[9px] h-2 w-2 shrink-0 rounded-full"
+                        style={{ backgroundColor: styles.accent }}
+                      />
                       <div className="flex-1">
-                        <h3
-                          className="text-base font-serif font-semibold mb-1 group-hover:opacity-80 transition-opacity duration-300"
-                          style={{ color: 'var(--color-teal)' }}
-                        >
+                        <h3 className="mb-1 font-sans text-base font-semibold text-teal-deep transition-colors duration-200 group-hover:text-copper">
                           {symptom.title}
                         </h3>
-                        <p className="text-xs text-gray-600 leading-relaxed">
+                        <p className="text-[0.8125rem] leading-relaxed text-gray-600">
                           {symptom.description}
                         </p>
                         {href ? (
                           <Link
                             href={href}
-                            className="mt-3 inline-flex text-xs font-medium text-copper transition-colors hover:text-teal"
+                            className="mt-3 inline-flex text-xs font-semibold text-copper transition-colors hover:text-teal"
                           >
-                            Saiba mais
+                            Saiba mais →
                           </Link>
                         ) : null}
                       </div>
@@ -204,106 +203,41 @@ export default function WhenToSeek() {
           </div>
         </div>
 
-        {/* Important Notice */}
-        <div className="mt-16 text-center">
-          <div
-            className="card p-8 max-w-4xl mx-auto border-2"
-            style={{ borderColor: 'var(--color-copper)' }}
-          >
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <h3
-                className="text-2xl font-serif font-bold"
-                style={{ color: 'var(--color-teal)' }}
+        {/* What the consultation delivers, then the closing conversion block.
+            The heading and paragraph that used to sit here said the same
+            thing as HighlightCta below, so only the block says it now. */}
+        <div className="mt-16">
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-5 md:grid-cols-3">
+            {CONSULTATION_VALUES.map(({ title, description, Icon, iconColor, iconBackground }) => (
+              <div
+                key={title}
+                className="rounded-[1.125rem] border border-teal/10 bg-white p-6 text-center transition-all duration-200 hover:-translate-y-[3px] hover:border-copper hover:shadow-[0_20px_36px_-26px_rgba(29,65,76,0.45)]"
               >
-                Importante Lembrar
-              </h3>
-            </div>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              <span className="font-semibold text-red-600">
-                Não se automedique
-              </span>{' '}
-              nem ignore sintomas persistentes. O coloproctologista é o
-              especialista indicado para diagnosticar e tratar adequadamente as
-              condições da região anal e intestinal.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center p-4 card">
                 <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
-                  style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
+                  className="mx-auto mb-3.5 flex h-14 w-14 items-center justify-center rounded-full"
+                  style={{ backgroundColor: iconBackground }}
                 >
-                  <Clock
-                    className="w-6 h-6"
-                    style={{ color: 'var(--color-teal)' }}
-                    strokeWidth={1.75}
-                  />
+                  <Icon className="h-6 w-6" style={{ color: iconColor }} strokeWidth={1.75} />
                 </div>
-                <h4
-                  className="font-semibold mb-1"
-                  style={{ color: 'var(--color-teal)' }}
-                >
-                  Avaliação Oportuna
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Esclarecimento dos sinais e sintomas
-                </p>
+                <h4 className="mb-1 font-sans font-semibold text-teal-deep">{title}</h4>
+                <p className="text-sm leading-relaxed text-gray-600">{description}</p>
               </div>
-              <div className="text-center p-4 card">
-                <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
-                  style={{ backgroundColor: 'rgba(163, 84, 66, 0.1)' }}
-                >
-                  <CheckCircle2
-                    className="w-6 h-6"
-                    style={{ color: 'var(--color-copper)' }}
-                    strokeWidth={1.75}
-                  />
-                </div>
-                <h4
-                  className="font-semibold mb-1"
-                  style={{ color: 'var(--color-teal)' }}
-                >
-                  Conduta Individualizada
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Opções discutidas conforme cada caso
-                </p>
-              </div>
-              <div className="text-center p-4 card">
-                <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
-                  style={{ backgroundColor: 'rgba(209, 175, 139, 0.2)' }}
-                >
-                  <Smile
-                    className="w-6 h-6"
-                    style={{ color: 'var(--color-straw)' }}
-                    strokeWidth={1.75}
-                  />
-                </div>
-                <h4
-                  className="font-semibold mb-1"
-                  style={{ color: 'var(--color-teal)' }}
-                >
-                  Acompanhamento
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Orientações para evolução e retorno
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <Link
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary text-lg px-8 py-4"
-              >
-                Agendar Consulta Agora
-              </Link>
-            </div>
+            ))}
           </div>
+
+          <HighlightCta
+            className="mx-auto mt-8 max-w-4xl text-left"
+            eyebrow="Importante lembrar"
+            title="Não se automedique nem ignore sintomas persistentes."
+            body="O coloproctologista é o especialista indicado para diagnosticar e tratar adequadamente as condições da região anal e intestinal."
+            ctaLabel="Agendar consulta agora"
+            conversionSuffix="when-to-seek"
+            items={[
+              { title: 'Diagnóstico precoce', description: 'Melhores resultados no tratamento' },
+              { title: 'Tratamento preciso', description: 'Abordagem especializada e eficaz' },
+              { title: 'Alívio dos sintomas', description: 'Retorno ao bem-estar e qualidade de vida' },
+            ]}
+          />
         </div>
       </div>
     </section>

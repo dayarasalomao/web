@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { CallToActionCard } from '@/components/ui/CallToActionCard'
-import { WHATSAPP_URL } from '@/constants'
+import { BookingCard } from '@/components/ui/BookingCard'
+import { LocationCard } from '@/components/ui/LocationCard'
+import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME } from '@/constants'
 import { buildTreatmentMetadata } from '@/lib/seo'
 import { buildTreatmentGraph, serializeJsonLd } from '@/lib/structured-data'
 import {
@@ -87,13 +88,30 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             {treatment.summary}
           </p>
 
-          <div className="text-sm text-gray-600">
-            Última atualização:{' '}
-            <time dateTime={treatment.lastUpdated}>
-              {new Date(treatment.lastUpdated).toLocaleDateString('pt-BR', {
-                timeZone: 'UTC',
-              })}
-            </time>
+          {/* Authorship and credentials belong on the procedure page itself.
+              A reader deciding on surgery should not have to visit /sobre to
+              find out who is behind the recommendation. */}
+          <div className="flex flex-col gap-2 text-sm text-gray-600 sm:flex-row sm:items-center sm:gap-6">
+            <span>
+              Por{' '}
+              <Link
+                href="/sobre"
+                className="font-semibold text-teal underline decoration-teal/30 underline-offset-2 hover:text-copper"
+              >
+                {SEO_DOCTOR_NAME}
+              </Link>
+              <span className="ml-2 whitespace-nowrap text-gray-500">
+                {CRM_FULL} · {RQE_FULL}
+              </span>
+            </span>
+            <span>
+              Última atualização:{' '}
+              <time dateTime={treatment.lastUpdated}>
+                {new Date(treatment.lastUpdated).toLocaleDateString('pt-BR', {
+                  timeZone: 'UTC',
+                })}
+              </time>
+            </span>
           </div>
         </header>
 
@@ -141,6 +159,19 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </section>
             ) : null}
 
+            {treatment.howItWorks?.length ? (
+              <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+                <h2 className="mb-4 text-2xl font-semibold text-teal">
+                  Como o procedimento é feito
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-gray-700">
+                  {treatment.howItWorks.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
             <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
               <h2 className="mb-4 text-2xl font-semibold text-teal">Como a conduta é planejada</h2>
               <div className="space-y-4 text-base leading-relaxed text-gray-700">
@@ -164,7 +195,15 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             </section>
           </div>
 
-          <aside className="space-y-6">
+          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+            <BookingCard
+              title="Avalie seu caso com a Dra. Dayara"
+              body="A indicação depende do diagnóstico, do exame físico e do seu histórico. Atendimento acolhedor, com explicação clara de cada etapa."
+              conversionPrefix="treatment-page"
+            />
+
+            <LocationCard />
+
             <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
               <h2 className="mb-4 text-2xl font-semibold text-teal">
                 Avaliação e recuperação
@@ -206,25 +245,6 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </section>
             ) : null}
 
-            <CallToActionCard
-              title="Quer saber se esta é a melhor opção para você?"
-              body={
-                <p>
-                  A indicação depende do diagnóstico, do exame físico e do seu histórico.
-                  Uma avaliação especializada define a conduta mais adequada.
-                </p>
-              }
-              actions={
-                <Link
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary"
-                >
-                  Agendar consulta
-                </Link>
-              }
-            />
           </aside>
         </div>
 

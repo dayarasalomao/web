@@ -72,6 +72,12 @@ export interface PracticeLocation {
     schema: string
   }
   roleDescription: string
+  /**
+   * Substantive prose about practising at this location. `roleDescription`
+   * is a one-line summary for the hero; this is the body a patient
+   * searching "coloproctologista <cidade>" actually needs to read.
+   */
+  about?: string[]
   services: string[]
   relatedTreatmentSlugs: string[]
   relatedBlogSlugs: string[]
@@ -157,6 +163,12 @@ export const LOCATIONS: PracticeLocation[] = [
     instagramUrl: 'https://www.instagram.com/institutodigestivo/',
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
+    about: [
+      'A coloproctologia cuida das doenças do intestino grosso, do reto e da região anal. Na prática, é a especialidade procurada por quem convive com sangramento ao evacuar, dor anal, coceira persistente, um caroço que apareceu na região, secreção que volta sempre ou uma mudança no hábito intestinal que não passa.',
+      'O atendimento em Campo Grande acontece no Instituto do Aparelho Digestivo, no Jardim dos Estados. A avaliação começa por uma conversa sem pressa sobre o seu histórico e as suas dúvidas. Quando o exame físico é necessário, ele é feito com privacidade, respeito e adaptação ao seu nível de conforto — a vergonha é a reação mais comum nesse tipo de consulta, e ela não deveria custar a ninguém o diagnóstico.',
+      'A partir dessa avaliação é que se define a conduta. Boa parte dos casos se resolve com medidas clínicas e ajuste do hábito intestinal, sem cirurgia. Quando existe indicação cirúrgica, o planejamento considera o tipo e o grau da doença, as suas prioridades quanto a dor e tempo de afastamento, e os limites de cada técnica disponível — incluindo as abordagens minimamente invasivas com laser e vídeo.',
+      'Uma informação prática para evitar deslocamento desnecessário: a colonoscopia não é realizada pela Dra. Dayara neste local. Se o seu caso exigir o exame, a orientação de onde realizá-lo faz parte da consulta.',
+    ],
     services: CORE_SERVICES,
     relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,
     relatedBlogSlugs: CORE_BLOG_SLUGS,

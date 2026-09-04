@@ -400,6 +400,19 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
         ) : null}
 
+        {location.about?.length ? (
+          <section className="mb-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+            <h2 className="mb-5 text-2xl font-semibold text-teal">
+              O atendimento em {location.city}
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
+              {location.about.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr]">
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço e contato</h2>

@@ -1,47 +1,70 @@
 import Link from 'next/link'
 import type { BlogPost } from '@/lib/blog'
+import { getTreatmentByRelatedBlogSlug } from '@/lib/treatments'
+
+/**
+ * Accent stripe colours, cycled so a grid of cards reads as a set rather
+ * than a repetition. Derived from the slug so a given post always gets the
+ * same colour, however the list is filtered or ordered.
+ */
+const ACCENTS = ['bg-copper', 'bg-teal', 'bg-straw'] as const
+
+function accentFor(slug: string): string {
+  let sum = 0
+  for (const char of slug) sum += char.charCodeAt(0)
+  return ACCENTS[sum % ACCENTS.length]
+}
+
+/**
+ * Reads the condition a post is about from the treatment that links to it,
+ * so the pill carries real taxonomy instead of a label invented per card.
+ * Posts that map to no treatment simply render without a pill.
+ */
+function categoryFor(slug: string): string | null {
+  return getTreatmentByRelatedBlogSlug(slug)?.mappedDiseaseNames[0] ?? null
+}
 
 interface BlogCardProps {
   post: BlogPost
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+  const category = categoryFor(post.slug)
+
   return (
-    <article className="group flex h-full flex-col rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg lg:p-7">
-      <div className="mb-4 flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-copper">
-        <span>{new Date(post.publishDate).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>
-        <span className="text-beige">•</span>
-        <span>{post.readingTime} min de leitura</span>
-      </div>
+    <article className="group h-full">
+      <Link
+        href={`/blog/${post.slug}`}
+        className="flex h-full flex-col overflow-hidden rounded-[1.125rem] border border-teal/10 bg-white transition-all duration-200 hover:-translate-y-[3px] hover:border-copper hover:shadow-[0_22px_40px_-28px_rgba(29,65,76,0.5)]"
+      >
+        <span aria-hidden="true" className={`h-1.5 w-full ${accentFor(post.slug)}`} />
 
-      <h2 className="mb-4 text-2xl font-semibold leading-tight text-teal transition-colors group-hover:text-copper">
-        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-      </h2>
+        <div className="flex flex-1 flex-col p-6 lg:p-7">
+          {category ? (
+            <span className="self-start rounded-full bg-beige-soft px-3 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-copper">
+              {category}
+            </span>
+          ) : null}
 
-      <p className="mb-6 flex-1 text-base leading-relaxed text-gray-700">{post.excerpt}</p>
+          {/* Sans, not the brand serif: Cinzel is an inscriptional all-caps
+              face, and a two-line card title set in it stops being
+              scannable. The mock uses Newsreader here — a text serif we do
+              not ship. Revisit if the font swap is approved. */}
+          <h2 className="mt-4 font-sans text-lg font-semibold leading-snug text-teal-deep transition-colors group-hover:text-copper">
+            {post.title}
+          </h2>
 
-      <div className="flex flex-wrap gap-2">
-        <Link
-          href={`/blog/${post.slug}`}
-          className="inline-flex items-center gap-2 rounded-xl border border-teal/15 bg-teal/5 px-4 py-2 text-sm font-semibold text-teal transition-all duration-300 hover:border-teal hover:bg-teal hover:text-white"
-        >
-          <span>Ler artigo</span>
-          <svg
-            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
-            viewBox="0 0 20 20"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden="true"
-          >
-            <path
-              d="M7.5 5 12.5 10l-5 5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </Link>
-      </div>
+          <p className="mt-2.5 flex-1 text-[0.925rem] leading-relaxed text-gray-600">
+            {post.excerpt}
+          </p>
+
+          <div className="mt-5 flex items-center gap-3 border-t border-teal/[0.08] pt-4 text-[0.8125rem] font-semibold text-gray-500">
+            <span>{post.readingTime} min</span>
+            <span aria-hidden="true" className="h-1 w-1 rounded-full bg-beige" />
+            <span className="text-copper">Ler →</span>
+          </div>
+        </div>
+      </Link>
     </article>
   )
 }

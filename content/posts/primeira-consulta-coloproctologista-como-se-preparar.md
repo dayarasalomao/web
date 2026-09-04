@@ -19,7 +19,7 @@ relatedPosts:
   - sangramento-anal-dor-quando-procurar-coloproctologista
   - dor-ao-evacuar-quando-investigar
   - alteracoes-habito-intestinal-quando-avaliar
-  - coceira-anal-persistente-causas-sinal-alerta
+  - prurido-anal-causas-cuidados
 faqs:
   - question: Preciso fazer algum preparo antes da consulta com coloproctologista?
     answer: >-
@@ -117,7 +117,7 @@ Se a dúvida começou por um sintoma específico, estas leituras podem ajudar a 
 - [sangramento anal ou dor: quando procurar avaliação](/blog/sangramento-anal-dor-quando-procurar-coloproctologista)
 - [dor ao evacuar: o que pode ser](/blog/dor-ao-evacuar-quando-investigar)
 - [alterações no hábito intestinal que merecem atenção](/blog/alteracoes-habito-intestinal-quando-avaliar)
-- [coceira anal persistente: causas e sinais de alerta](/blog/coceira-anal-persistente-causas-sinal-alerta)
+- [coceira anal (prurido anal): causas, sinais de alerta e cuidados](/blog/prurido-anal-causas-cuidados)
 
 ## Quando não esperar pela consulta agendada?
 

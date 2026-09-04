@@ -52,7 +52,7 @@ Os sinais mais comuns incluem:
 * túneis ou trajetos sob a pele;
 * dor, mau cheiro, desconforto e impacto na vida social ou sexual.
 
-Quando essas lesões aparecem perto do ânus, é importante diferenciar hidradenite de fístula anal, abscessos anorretais, doença de Crohn e outras condições.
+Quando essas lesões aparecem perto do ânus, é importante diferenciar hidradenite de [fístula anal](/blog/fistula-anal-o-que-e-sintomas), abscessos anorretais, [doença de Crohn](/blog/doencas-inflamatorias-intestinais-crohn-retocolite) e outras condições.
 
 ## Por que a avaliação é importante?
 

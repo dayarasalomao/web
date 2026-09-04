@@ -1,6 +1,7 @@
 import {
   BUSINESS_FOOTER_LOCATION,
   BUSINESS_TELEPHONE_NUMBER,
+  BUSINESS_TELEPHONE_HREF,
   CFM_MEDICAL_SEARCH_URL,
   CONTACT_EMAIL,
   CRM_FULL,
@@ -34,6 +35,8 @@ export default function Footer() {
         </svg>
       ),
       text: BUSINESS_TELEPHONE_NUMBER,
+      href: BUSINESS_TELEPHONE_HREF,
+      conversion: 'phone-footer',
     },
     {
       icon: (
@@ -154,6 +157,7 @@ export default function Footer() {
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="maps-footer"
                   className="transition-colors hover:text-white"
                 >
                   Como chegar (Google Maps)
@@ -204,9 +208,19 @@ export default function Footer() {
                   >
                     {info.icon}
                   </div>
-                  <span className="text-gray-300 text-sm leading-relaxed">
-                    {info.text}
-                  </span>
+                  {info.href ? (
+                    <a
+                      href={info.href}
+                      data-conversion={info.conversion}
+                      className="text-gray-300 text-sm leading-relaxed underline-offset-2 transition-colors hover:text-white hover:underline"
+                    >
+                      {info.text}
+                    </a>
+                  ) : (
+                    <span className="text-gray-300 text-sm leading-relaxed">
+                      {info.text}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

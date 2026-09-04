@@ -1,4 +1,4 @@
-import { WHATSAPP_URL } from '@/constants'
+import { InlinePromptCta } from '@/components/ui/InlinePromptCta'
 import Link from 'next/link'
 import { getTreatmentHrefByDiseaseName } from '@/lib/treatments'
 
@@ -142,13 +142,12 @@ export default function Diseases() {
             return (
               <article
                 key={index}
-                className={`group card flex h-full flex-col p-6 hover:shadow-lg transition-all duration-300 ${cardGridClass}`}
+                className={`group card flex h-full flex-col p-6 ${cardGridClass}`}
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
                     <h3
-                      className="text-lg font-serif font-semibold mb-2 group-hover:opacity-80 transition-opacity duration-300"
-                      style={{ color: 'var(--color-teal)' }}
+                      className="mb-2 font-sans text-lg font-semibold text-teal-deep transition-colors duration-200 group-hover:text-copper"
                     >
                       {disease.name}
                     </h3>
@@ -161,9 +160,9 @@ export default function Diseases() {
                 {href ? (
                   <Link
                     href={href}
-                    className="mt-auto pt-4 text-sm font-medium text-copper transition-colors hover:text-teal"
+                    className="mt-auto pt-4 text-sm font-semibold text-copper transition-colors hover:text-teal"
                   >
-                    Saiba mais
+                    Saiba mais →
                   </Link>
                 ) : null}
               </article>
@@ -172,31 +171,13 @@ export default function Diseases() {
         </div>
 
         <div className="text-center mt-12">
-          <div
-            className="card p-6 max-w-2xl mx-auto border"
-            style={{ borderColor: 'var(--color-beige)' }}
-          >
-            <p className="text-gray-700 mb-4">
-              <span
-                className="font-semibold"
-                style={{ color: 'var(--color-copper)' }}
-              >
-                Não encontrou sua condição?
-              </span>
-            </p>
-            <p className="text-sm text-gray-600 mb-6">
-              Entre em contato para uma avaliação personalizada. Cada caso é
-              único e merece atenção especializada.
-            </p>
-            <Link
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              Falar com a Dra. Dayara
-            </Link>
-          </div>
+          <InlinePromptCta
+            className="mx-auto max-w-4xl"
+            title="Não encontrou sua condição?"
+            description="Cada caso é único e merece uma avaliação personalizada."
+            ctaLabel="Falar com a Dra. Dayara"
+            conversionSuffix="diseases"
+          />
         </div>
       </div>
     </section>

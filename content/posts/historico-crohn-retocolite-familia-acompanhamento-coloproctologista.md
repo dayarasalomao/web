@@ -39,7 +39,7 @@ disclaimer: >-
 
 ## O que são doenças inflamatórias intestinais?
 
-Doença de Crohn e retocolite ulcerativa fazem parte do grupo das doenças inflamatórias intestinais. Elas podem causar inflamação crônica no intestino e evoluir em fases de atividade e remissão.
+Doença de Crohn e retocolite ulcerativa fazem parte do grupo das [doenças inflamatórias intestinais](/blog/doencas-inflamatorias-intestinais-crohn-retocolite). Elas podem causar inflamação crônica no intestino e evoluir em fases de atividade e remissão.
 
 Os sintomas variam muito. Algumas pessoas têm diarreia, sangue nas fezes e dor abdominal; outras apresentam perda de peso, anemia, cansaço, febre ou manifestações na região anal. Também podem ocorrer sintomas fora do intestino, como dores articulares, alterações de pele ou inflamações oculares.
 

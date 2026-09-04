@@ -52,7 +52,7 @@ Alguns sintomas levantam suspeita de inflamação intestinal e devem ser avaliad
 * anemia;
 * febre ou cansaço importante;
 * urgência evacuatória;
-* dor, secreção, abscessos ou fístulas na região anal.
+* dor, secreção, [abscessos ou fístulas](/blog/fistula-anal-o-que-e-sintomas) na região anal.
 
 Esses sintomas não confirmam DII sozinhos, mas ajudam a definir a necessidade de exames e acompanhamento.
 
