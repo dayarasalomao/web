@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
-import { CallToActionCard } from '@/components/ui/CallToActionCard'
-import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BookingCard } from '@/components/ui/BookingCard'
+import { LocationCard } from '@/components/ui/LocationCard'
+import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME } from '@/constants'
 import { buildTreatmentMetadata } from '@/lib/seo'
 import { buildTreatmentGraph, serializeJsonLd } from '@/lib/structured-data'
 import {
@@ -194,7 +195,15 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             </section>
           </div>
 
-          <aside className="space-y-6">
+          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+            <BookingCard
+              title="Avalie seu caso com a Dra. Dayara"
+              body="A indicação depende do diagnóstico, do exame físico e do seu histórico. Atendimento acolhedor, com explicação clara de cada etapa."
+              conversionPrefix="treatment-page"
+            />
+
+            <LocationCard />
+
             <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
               <h2 className="mb-4 text-2xl font-semibold text-teal">
                 Avaliação e recuperação
@@ -236,26 +245,6 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </section>
             ) : null}
 
-            <CallToActionCard
-              title="Quer saber se esta é a melhor opção para você?"
-              body={
-                <p>
-                  A indicação depende do diagnóstico, do exame físico e do seu histórico.
-                  Uma avaliação especializada define a conduta mais adequada.
-                </p>
-              }
-              actions={
-                <Link
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-conversion="whatsapp-treatment-page"
-                  className="btn btn-secondary"
-                >
-                  Agendar consulta
-                </Link>
-              }
-            />
           </aside>
         </div>
 

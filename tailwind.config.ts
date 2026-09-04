@@ -11,7 +11,9 @@ const config: Config = {
       colors: {
         // Core Brand Colors
         copper: '#A35442',
+        'copper-deep': '#8A4436',
         teal: '#1D414C',
+        'teal-deep': '#16323B',
         beige: '#D7CBBF',
         cream: '#F4F3F2',
         straw: '#D1AF8B',

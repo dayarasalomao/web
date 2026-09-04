@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:#374151;background:#F4F3F2;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:#A35442;text-decoration:none}
+  a:hover{color:#8a4436}
+  ::selection{background:#D1AF8B;color:#16323b}
+</style>
+</helmet>
+
+<div style="background:#F4F3F2;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(244,243,242,.85);border-bottom:1px solid rgba(29,65,76,.1)">
+    <div style="max-width:1180px;margin:0 auto;padding:16px clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="Homepage-Copper.dc.html" style="display:flex;flex-direction:column;line-height:1.05;color:#16323b">
+        <span style="font-family:'Newsreader',Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.01em">Dra. Dayara Salomão</span>
+        <span style="font:600 10px 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:#A35442;margin-top:3px">Coloproctologista</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:28px">
+        <a href="Homepage-Copper.dc.html#doencas" style="font:600 14px 'Manrope';color:#374151">Doenças</a>
+        <a href="Tratamentos.dc.html" style="font:600 14px 'Manrope';color:#374151">Tratamentos</a>
+        <a href="Blog.dc.html" style="font:700 14px 'Manrope';color:#A35442">Blog</a>
+        <a href="Homepage-Copper.dc.html#contato" style="font:600 14px 'Manrope';color:#374151">Contato</a>
+        <a href="{{ wa }}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#A35442;color:#F4F3F2;font:600 14px 'Manrope';padding:11px 20px;border-radius:999px" style-hover="background:#8a4436;color:#F4F3F2">Agendar consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="padding:clamp(44px,6vw,84px) clamp(20px,5vw,56px) clamp(28px,3vw,40px)">
+    <div style="max-width:1180px;margin:0 auto;max-width:720px">
+      <div style="font:600 12px 'Manrope';letter-spacing:.18em;text-transform:uppercase;color:#A35442">Conteúdo & orientação</div>
+      <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1.04;letter-spacing:-.02em;color:#16323b;margin:16px 0 0">Blog da Dra. Dayara</h1>
+      <p style="font-size:clamp(16px,1.6vw,18px);line-height:1.7;color:#374151;margin:16px 0 0">Informação confiável sobre saúde intestinal e anorretal — para você reconhecer sinais, quebrar tabus e cuidar de si no momento certo.</p>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section style="padding:0 clamp(20px,5vw,56px) 8px">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px">
+      <sc-for list="{{ categories }}" as="c" hint-placeholder-count="4">
+        <span style="font:600 13px 'Manrope';color:{{ c.fg }};background:{{ c.bg }};border:1px solid {{ c.bd }};padding:9px 16px;border-radius:999px">{{ c.label }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section style="padding:clamp(20px,3vw,36px) clamp(20px,5vw,56px) 0">
+    <div style="max-width:1180px;margin:0 auto">
+      <a href="#" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,4vw,48px);align-items:center;background:#1D414C;border-radius:24px;padding:clamp(24px,3vw,40px);color:#EDE6DE" style-hover="color:#EDE6DE">
+        <div style="position:relative;width:100%">
+          <img src="https://www.dayarasalomao.com.br/assets/dayara-trabalhando.webp" alt="Artigo em destaque" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px">
+        </div>
+        <div>
+          <span style="display:inline-flex;font:600 11px 'Manrope';letter-spacing:.12em;text-transform:uppercase;color:#16323b;background:#D1AF8B;padding:6px 13px;border-radius:999px">Em destaque · Sinais de alerta</span>
+          <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(26px,3.2vw,40px);line-height:1.1;color:#FFFFFF;margin:16px 0 0">Sangramento anal e dor: quando procurar uma coloproctologista?</h2>
+          <p style="font-size:16px;line-height:1.7;color:#c3d0cc;margin:14px 0 0">Sangue nas fezes quase nunca deve ser ignorado. Entenda as causas mais comuns, os sinais que pedem avaliação e por que o diagnóstico precoce muda o tratamento.</p>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:20px;font:600 13px 'Manrope';color:#D1AF8B"><span>Leitura de 6 min</span><span style="width:4px;height:4px;border-radius:50%;background:#8fa19c"></span><span style="color:#EDE6DE">Ler artigo →</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section style="padding:clamp(32px,4vw,56px) clamp(20px,5vw,56px) clamp(56px,7vw,100px)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+        <a href="#" style="display:flex;flex-direction:column;background:#FFFFFF;border:1px solid rgba(29,65,76,.1);border-radius:18px;overflow:hidden;color:#16323b" style-hover="border-color:#A35442;box-shadow:0 22px 40px -28px rgba(29,65,76,.5);transform:translateY(-3px)">
+          <div style="height:6px;background:{{ p.accent }}"></div>
+          <div style="padding:26px;display:flex;flex-direction:column;flex:1">
+            <span style="align-self:flex-start;font:600 11px 'Manrope';letter-spacing:.1em;text-transform:uppercase;color:#A35442;background:#EDE6DE;padding:5px 11px;border-radius:999px">{{ p.category }}</span>
+            <h3 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:22px;line-height:1.18;color:#16323b;margin:16px 0 0">{{ p.title }}</h3>
+            <p style="font-size:14.5px;line-height:1.6;color:#4b5563;margin:10px 0 0;flex:1">{{ p.excerpt }}</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(29,65,76,.08);font:600 12.5px 'Manrope';color:#6b7280"><span>{{ p.read }}</span><span style="width:4px;height:4px;border-radius:50%;background:#D7CBBF"></span><span style="color:#A35442">Ler →</span></div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:0 clamp(20px,5vw,56px) clamp(64px,8vw,110px)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,4vw,48px);align-items:center;background:#EDE6DE;border:1px solid rgba(29,65,76,.1);border-radius:24px;padding:clamp(32px,4vw,56px)">
+      <div>
+        <div style="font:600 12px 'Manrope';letter-spacing:.16em;text-transform:uppercase;color:#A35442">Ainda com dúvidas?</div>
+        <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(26px,3vw,36px);line-height:1.12;color:#16323b;margin:12px 0 0">Nenhum artigo substitui uma boa consulta.</h2>
+        <p style="font-size:15.5px;line-height:1.7;color:#374151;margin:14px 0 0">Se algum sintoma te preocupa, agende uma avaliação. O cuidado começa por escutar você.</p>
+      </div>
+      <a href="{{ wa }}" target="_blank" style="justify-self:start;display:inline-flex;align-items:center;gap:10px;background:#A35442;color:#F4F3F2;font:600 15px 'Manrope';padding:16px 30px;border-radius:999px" style-hover="background:#8a4436;color:#F4F3F2">Agendar consulta →</a>
+    </div>
+  </section>
+
+  <footer style="background:#16323b;color:#c3d0cc;padding:clamp(40px,5vw,64px) clamp(20px,5vw,56px) 30px">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
+      <div>
+        <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;font-weight:600;color:#FFFFFF">Dra. Dayara Salomão</div>
+        <div style="font:600 10px 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:#D1AF8B;margin-top:4px">Coloproctologista · CRM-PR 42596</div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px;font:500 14px 'Manrope';color:#c3d0cc">
+        <a href="Homepage-Copper.dc.html" style="color:#c3d0cc">Início</a>
+        <a href="Tratamentos.dc.html" style="color:#c3d0cc">Tratamentos</a>
+        <a href="Blog.dc.html" style="color:#c3d0cc">Blog</a>
+        <a href="Homepage-Copper.dc.html#contato" style="color:#c3d0cc">Contato</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:28px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#8fa19c">© 2025 Dra. Dayara Salomão. Todos os direitos reservados.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const copper = "#A35442", teal = "#1D414C", straw = "#D1AF8B", beige = "#D7CBBF";
+    return {
+      wa: "https://wa.me/554135422095",
+      categories: [
+        { label: "Todos", fg: "#F4F3F2", bg: "#A35442", bd: "#A35442" },
+        { label: "Sinais de alerta", fg: "#16323b", bg: "#FFFFFF", bd: "rgba(29,65,76,.14)" },
+        { label: "Hemorroidas", fg: "#16323b", bg: "#FFFFFF", bd: "rgba(29,65,76,.14)" },
+        { label: "Intestino", fg: "#16323b", bg: "#FFFFFF", bd: "rgba(29,65,76,.14)" },
+        { label: "Prevenção", fg: "#16323b", bg: "#FFFFFF", bd: "rgba(29,65,76,.14)" },
+      ],
+      posts: [
+        { category: "Doença inflamatória", title: "Histórico de Crohn ou retocolite na família: quando se acompanhar?", excerpt: "Se há casos na família ou diagnóstico prévio, o acompanhamento regular faz diferença. Entenda os sinais e a periodicidade ideal.", read: "5 min", accent: copper },
+        { category: "Sinais de alerta", title: "Lesões, verrugas ou nódulos na região anal: o que observar", excerpt: "Nem toda alteração é grave, mas toda alteração merece avaliação. Saiba o que diferenciar e quando buscar ajuda.", read: "4 min", accent: teal },
+        { category: "Sintomas", title: "Dor ao evacuar: quando é hora de investigar?", excerpt: "Dor persistente ao evacuar pode indicar fissura, hemorroidas ou outras condições. Veja os sinais que pedem consulta.", read: "5 min", accent: straw },
+        { category: "Intestino", title: "Alterações no hábito intestinal: quando avaliar", excerpt: "Mudanças na frequência ou na consistência das fezes podem ser passageiras — ou não. Entenda os limites do normal.", read: "6 min", accent: teal },
+        { category: "Sintomas", title: "Coceira anal persistente: causas e sinais de alerta", excerpt: "O prurido anal que não passa tem causas variadas. Descubra o que pode estar por trás e como tratar corretamente.", read: "4 min", accent: copper },
+        { category: "Prevenção", title: "Coloproctologista sem tabu: por que a primeira consulta importa", excerpt: "Muita gente adia por vergonha. Veja como é a consulta, o que esperar e por que o acolhimento faz toda a diferença.", read: "5 min", accent: beige },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

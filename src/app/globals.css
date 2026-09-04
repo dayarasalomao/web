@@ -9,6 +9,10 @@
   --color-beige: #D7CBBF;
   --color-cream: #F4F3F2;
   --color-straw: #D1AF8B;
+  /* Deep variants: hover/pressed states and the darkest surfaces.
+     From the redesign system in .design-ref/. */
+  --color-copper-deep: #8A4436;
+  --color-teal-deep: #16323B;
 }
 
 /* Base Styles */
