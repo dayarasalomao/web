@@ -65,12 +65,20 @@ export function HighlightCta({
         {items.map((item) => (
           <li
             key={item.title}
-            className="flex items-start gap-3.5 rounded-2xl border border-white/10 bg-white/[0.06] px-4.5 py-4"
+            className="flex items-start gap-3.5 rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4"
           >
+            {/* Centre the dot inside a box the height of the title's line
+                rather than nudging it with a magic top margin, so it stays
+                put when the title wraps. h-6 is a hair under Montserrat's
+                rendered 25.6px line box — sub-pixel, and it avoids pinning
+                the layout to one font's metrics while the typeface is
+                still undecided. */}
             <span
               aria-hidden="true"
-              className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-straw"
-            />
+              className="flex h-6 shrink-0 items-center"
+            >
+              <span className="h-2 w-2 rounded-full bg-straw" />
+            </span>
             <div>
               <p className="font-semibold text-white">{item.title}</p>
               <p className="mt-0.5 text-sm text-cream/70">{item.description}</p>
