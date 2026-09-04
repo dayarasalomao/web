@@ -13,6 +13,8 @@
      From the redesign system in .design-ref/. */
   --color-copper-deep: #8A4436;
   --color-teal-deep: #16323B;
+  /* Beige-tinted soft fill: muted cards and chips sitting on cream. */
+  --color-beige-soft: #EDE6DE;
 }
 
 /* Base Styles */

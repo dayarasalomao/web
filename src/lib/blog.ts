@@ -89,6 +89,24 @@ export function calculateReadingTime(content: string): number {
   return Math.max(1, Math.ceil(wordCount / 200))
 }
 
+/**
+ * Strip inline markdown so an excerpt reads as plain prose.
+ *
+ * Links matter most here: posts carry in-body links, and a hook containing
+ * one used to surface raw `[texto](/url)` on cards and in JSON-LD.
+ */
+function stripInlineMarkdown(text: string): string {
+  return text
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/__(.*?)__/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/_(.*?)_/g, '$1')
+    .replace(/`([^`]*)`/g, '$1')
+    .trim()
+}
+
 export function extractItalicHook(content: string): string {
   const paragraphs = content.trim().split('\n\n')
   const firstParagraph =
@@ -101,19 +119,15 @@ export function extractItalicHook(content: string): string {
 
   const asteriskItalic = trimmedParagraph.match(/^\*(?!\*)([\s\S]+?)\*$/)
   if (asteriskItalic?.[1]) {
-    return asteriskItalic[1].trim()
+    return stripInlineMarkdown(asteriskItalic[1])
   }
 
   const underscoreItalic = trimmedParagraph.match(/^_(?!_)([\s\S]+?)_$/)
   if (underscoreItalic?.[1]) {
-    return underscoreItalic[1].trim()
+    return stripInlineMarkdown(underscoreItalic[1])
   }
 
-  return trimmedParagraph
-    .replace(/\*\*(.*?)\*\*/g, '$1')
-    .replace(/__(.*?)__/g, '$1')
-    .replace(/\*(.*?)\*/g, '$1')
-    .replace(/_(.*?)_/g, '$1')
+  return stripInlineMarkdown(trimmedParagraph)
 }
 
 export function extractFirstImage(content: string): BlogCardImage | undefined {

@@ -15,6 +15,7 @@ const config: Config = {
         teal: '#1D414C',
         'teal-deep': '#16323B',
         beige: '#D7CBBF',
+        'beige-soft': '#EDE6DE',
         cream: '#F4F3F2',
         straw: '#D1AF8B',
       },
