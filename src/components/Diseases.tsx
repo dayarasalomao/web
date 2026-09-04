@@ -142,13 +142,12 @@ export default function Diseases() {
             return (
               <article
                 key={index}
-                className={`group card flex h-full flex-col p-6 hover:shadow-lg transition-all duration-300 ${cardGridClass}`}
+                className={`group card flex h-full flex-col p-6 ${cardGridClass}`}
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
                     <h3
-                      className="text-lg font-serif font-semibold mb-2 group-hover:opacity-80 transition-opacity duration-300"
-                      style={{ color: 'var(--color-teal)' }}
+                      className="mb-2 font-sans text-lg font-semibold text-teal-deep transition-colors duration-200 group-hover:text-copper"
                     >
                       {disease.name}
                     </h3>
@@ -161,9 +160,9 @@ export default function Diseases() {
                 {href ? (
                   <Link
                     href={href}
-                    className="mt-auto pt-4 text-sm font-medium text-copper transition-colors hover:text-teal"
+                    className="mt-auto pt-4 text-sm font-semibold text-copper transition-colors hover:text-teal"
                   >
-                    Saiba mais
+                    Saiba mais →
                   </Link>
                 ) : null}
               </article>

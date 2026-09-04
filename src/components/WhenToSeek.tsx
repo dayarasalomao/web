@@ -2,14 +2,7 @@ import { HighlightCta } from '@/components/ui/HighlightCta'
 import { getPostHref } from '@/lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  AlertCircle,
-  CheckCircle2,
-  CircleDot,
-  Clock,
-  Info,
-  Smile,
-} from 'lucide-react'
+import { CheckCircle2, Clock, Smile } from 'lucide-react'
 
 const CONSULTATION_VALUES = [
   {
@@ -81,32 +74,18 @@ export default function WhenToSeek() {
     },
   ]
 
+  // Only the accent colour is still needed: the icon badge that used to
+  // sit beside each signal was dropped for a plain dot.
   const getUrgencyStyles = (urgency: string) => {
     switch (urgency) {
       case 'high':
-        return {
-          accent: '#b91c1c',
-          iconBg: 'rgba(185, 28, 28, 0.1)',
-          icon: AlertCircle,
-        }
+        return { accent: '#b91c1c' }
       case 'medium':
-        return {
-          accent: 'var(--color-copper)',
-          iconBg: 'rgba(163, 84, 66, 0.1)',
-          icon: Info,
-        }
+        return { accent: 'var(--color-copper)' }
       case 'low':
-        return {
-          accent: 'var(--color-teal)',
-          iconBg: 'rgba(29, 65, 76, 0.1)',
-          icon: CircleDot,
-        }
+        return { accent: 'var(--color-teal)' }
       default:
-        return {
-          accent: 'var(--color-straw)',
-          iconBg: 'rgba(209, 175, 139, 0.2)',
-          icon: CircleDot,
-        }
+        return { accent: 'var(--color-straw)' }
     }
   }
 
@@ -187,36 +166,32 @@ export default function WhenToSeek() {
                 return (
                   <div
                     key={index}
-                    className="group card px-6 py-4 lg:px-6 lg:py-6 hover:shadow-lg transition-all duration-300"
+                    className="group card px-6 py-5 lg:px-7 lg:py-6"
                     style={{ borderLeftWidth: '3px', borderLeftColor: styles.accent }}
                   >
-                    <div className="flex items-start gap-3">
-                      <div
-                        className="w-9 h-9 shrink-0 rounded-full flex items-center justify-center mt-0.5"
-                        style={{ backgroundColor: styles.iconBg }}
-                      >
-                        <styles.icon
-                          className="w-4 h-4"
-                          style={{ color: styles.accent }}
-                          strokeWidth={1.75}
-                        />
-                      </div>
+                    <div className="flex items-start gap-3.5">
+                      {/* A dot instead of an icon badge: the icons repeated
+                          what the accent border already says, and three
+                          different glyphs added noise to a list meant to be
+                          scanned. */}
+                      <span
+                        aria-hidden="true"
+                        className="mt-[9px] h-2 w-2 shrink-0 rounded-full"
+                        style={{ backgroundColor: styles.accent }}
+                      />
                       <div className="flex-1">
-                        <h3
-                          className="text-base font-serif font-semibold mb-1 group-hover:opacity-80 transition-opacity duration-300"
-                          style={{ color: 'var(--color-teal)' }}
-                        >
+                        <h3 className="mb-1 font-sans text-base font-semibold text-teal-deep transition-colors duration-200 group-hover:text-copper">
                           {symptom.title}
                         </h3>
-                        <p className="text-xs text-gray-600 leading-relaxed">
+                        <p className="text-[0.8125rem] leading-relaxed text-gray-600">
                           {symptom.description}
                         </p>
                         {href ? (
                           <Link
                             href={href}
-                            className="mt-3 inline-flex text-xs font-medium text-copper transition-colors hover:text-teal"
+                            className="mt-3 inline-flex text-xs font-semibold text-copper transition-colors hover:text-teal"
                           >
-                            Saiba mais
+                            Saiba mais →
                           </Link>
                         ) : null}
                       </div>

@@ -135,8 +135,7 @@ export default function Treatments() {
                       ></div>
                       <div className="flex h-full flex-col">
                         <h3
-                          className="text-sm font-serif font-semibold mb-1"
-                          style={{ color: 'var(--color-teal)' }}
+                          className="mb-1 font-sans text-sm font-semibold text-teal-deep"
                         >
                           {treatment.homeCardTitle}
                         </h3>
