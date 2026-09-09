@@ -399,7 +399,6 @@ export const TREATMENTS: Treatment[] = [
       'plicoma-anal-laser-co2',
       'plicoma-anal-causas-e-tratamento',
       'hemorroida-ou-plicoma-como-diferenciar',
-      'plicoma-ou-hpv-perianal-como-diferenciar',
     ],
     mappedDiseaseNames: ['Plicoma Anal'],
     keywords: ['plicoma anal laser CO2', 'remoção plicoma anal', 'proctologista'],

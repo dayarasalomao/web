@@ -195,7 +195,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             </section>
           </div>
 
-          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+          <aside className="space-y-6">
             <BookingCard
               title="Avalie seu caso com a Dra. Dayara"
               body="A indicação depende do diagnóstico, do exame físico e do seu histórico. Atendimento acolhedor, com explicação clara de cada etapa."
