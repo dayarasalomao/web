@@ -14,7 +14,8 @@ export const CONTACT_SOCIAL_MEDIA = {
   twitter: 'https://www.twitter.com/dradayarasalomao',
 }
 
-export const WHATSAPP_NUMBER = '554135422095'
+// WhatsApp Business da Dra. Dayara: (67) 2180-3675, atendido pela secretaria.
+export const WHATSAPP_NUMBER = '556721803675'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 
 export const BUSINESS_TELEPHONE_NUMBER = '(67) 3320-9500'

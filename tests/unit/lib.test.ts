@@ -135,7 +135,7 @@ describe('practice locations', () => {
     assert.equal(campoGrande.address?.addressDetail, 'Sala 8')
     assert.equal(campoGrande.address?.postalCode, '79020-120')
     assert.equal(campoGrande.clinicPhone, '(67) 3320-9500')
-    assert.equal(campoGrande.whatsappUrl, 'https://wa.me/554135422095')
+    assert.equal(campoGrande.whatsappUrl, 'https://wa.me/556721803675')
     assert.deepEqual(campoGrande.openingHours, {
       label: 'Segunda a sexta, das 9h às 18h',
       opens: '09:00',

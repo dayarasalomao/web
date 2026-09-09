@@ -92,7 +92,7 @@ Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cu
 
 ### Contatos
 
-- **WhatsApp**: (41) 3123-6550
+- **WhatsApp**: (67) 2180-3675
 - **E-mail**: [dradayarasalomao@gmail.com](mailto:dradayarasalomao@gmail.com)
 
 Agende sua consulta para receber o melhor tratamento especializado
