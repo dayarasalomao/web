@@ -664,91 +664,71 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </section>
         ) : null}
 
+        {faqSection}
+
         {/* Whoever arrives from a local search has never seen /sobre, so the
             credentials that justify the visit have to exist on this page
             too, not only one click away. */}
-        {faqSection}
+        <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+          <div className="mb-3 flex items-center gap-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+              Experiência e registro
+            </span>
+            <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+          </div>
+          <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
 
-        <section className="mt-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
-          {/* Portrait on the left here: the hero and the about block both
-              put their image on the right, and a third would read as a
-              column rather than a rhythm. */}
-          <div className="grid gap-0 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="min-h-[18rem] lg:min-h-0">
-              <Image
-                src="/assets/dayara-clinica.webp"
-                alt={`Retrato de ${SEO_DOCTOR_NAME}`}
-                width={3648}
-                height={5472}
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="h-full w-full object-cover object-top"
-              />
-            </div>
+          <p className="text-base leading-relaxed text-gray-700 lg:text-lg">
+            {PROFESSIONAL_PROFILE.shortIntroduction}
+          </p>
 
-            <div className="min-w-0 p-7 lg:p-9">
-              <div className="mb-3 flex items-center gap-3">
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
-                  A médica
+          <p className="mt-5 inline-flex rounded-full bg-teal/[0.06] px-4 py-1.5 text-sm font-semibold text-teal">
+            {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
+          </p>
+
+          <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            Formação
+          </h3>
+          <ol className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+            {PROFESSIONAL_QUALIFICATIONS.map((qualification) => (
+              <li
+                key={qualification.title}
+                className="tile flex items-baseline gap-3 rounded-xl px-4 py-3"
+              >
+                <span className="rounded-md bg-copper/10 px-2 py-0.5 text-xs font-semibold tabular-nums text-copper">
+                  {qualification.year}
                 </span>
-                <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
-              </div>
-              <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[0.9375rem] font-semibold leading-snug text-teal">
+                    {qualification.title}
+                  </span>
+                  <span className="block text-sm text-gray-600">{qualification.institution}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
 
-              <p className="text-base leading-relaxed text-gray-700 lg:text-lg">
-                {PROFESSIONAL_PROFILE.shortIntroduction}
-              </p>
+          <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            Associações
+          </h3>
+          <ul className="flex flex-wrap gap-2">
+            {PROFESSIONAL_MEMBERSHIPS.map((membership) => (
+              <li
+                key={membership}
+                className="rounded-full border border-copper/25 bg-copper/[0.06] px-3.5 py-1.5 text-sm text-teal-deep"
+              >
+                {membership}
+              </li>
+            ))}
+          </ul>
 
-              <p className="mt-5 inline-flex rounded-full bg-teal/[0.06] px-4 py-1.5 text-sm font-semibold text-teal">
-                {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
-              </p>
-
-              <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-                Formação
-              </h3>
-              <ol className="grid gap-2.5 sm:grid-cols-2">
-                {PROFESSIONAL_QUALIFICATIONS.map((qualification) => (
-                  <li
-                    key={qualification.title}
-                    className="tile flex items-baseline gap-3 rounded-xl px-4 py-3"
-                  >
-                    <span className="rounded-md bg-copper/10 px-2 py-0.5 text-xs font-semibold tabular-nums text-copper">
-                      {qualification.year}
-                    </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="block text-[0.9375rem] font-semibold leading-snug text-teal">
-                        {qualification.title}
-                      </span>
-                      <span className="block text-sm text-gray-600">
-                        {qualification.institution}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
-
-              <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-                Associações
-              </h3>
-              <ul className="flex flex-wrap gap-2">
-                {PROFESSIONAL_MEMBERSHIPS.map((membership) => (
-                  <li
-                    key={membership}
-                    className="rounded-full border border-copper/25 bg-copper/[0.06] px-3.5 py-1.5 text-sm text-teal-deep"
-                  >
-                    {membership}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/sobre" className="btn btn-primary">
-                  Conhecer a trajetória completa
-                </Link>
-                <Link href="/" className="btn btn-ghost">
-                  Ir para a página inicial
-                </Link>
-              </div>
-            </div>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link href="/sobre" className="btn btn-primary">
+              Conhecer a trajetória completa
+            </Link>
+            <Link href="/" className="btn btn-ghost">
+              Ir para a página inicial
+            </Link>
           </div>
         </section>
 
