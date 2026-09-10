@@ -498,13 +498,15 @@ export default async function LocationPage({ params }: LocationPageProps) {
               capping the height forced a near-square crop that cut her off. */}
           <div className="relative min-w-0 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
             <Image
-              src="/assets/dayara-sorrindo.webp"
+              src="/assets/dayara-frente-pose.webp"
               alt={`${SEO_DOCTOR_NAME}, coloproctologista que atende no ${location.name}, em ${location.city}/${location.stateCode}`}
               width={1600}
               height={2400}
               priority
+              fetchPriority="high"
+              quality={85}
               sizes="(min-width: 1024px) 42vw, 100vw"
-              className="aspect-[4/5] w-full object-cover object-[center_25%]"
+              className="aspect-[4/5] w-full object-cover object-[center_22%]"
             />
           </div>
         </header>
