@@ -65,7 +65,7 @@ Sangue nas fezes, perda de peso, febre, anemia, sintomas noturnos, início recen
 
 ## Como o manejo é feito?
 
-O tratamento busca reduzir sintomas e melhorar qualidade de vida, mas precisa ser personalizado. Pode envolver ajuste alimentar, regularidade do sono, atividade física, manejo de estresse, medicamentos específicos e tratamento de constipação ou diarreia quando presentes.
+O tratamento busca reduzir sintomas e melhorar qualidade de vida, mas precisa ser personalizado. Pode envolver ajuste alimentar, regularidade do sono, atividade física, manejo de estresse, medicamentos específicos e tratamento de [constipação](/blog/constipacao-intestinal-quando-investigar) ou [diarreia](/blog/diarreia-cronica-causas-sinais-alerta) quando presentes.
 
 Em alguns casos, acompanhar o padrão dos sintomas em um diário ajuda a identificar gatilhos e evitar restrições alimentares desnecessárias.
 

@@ -1,7 +1,18 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowRight, ArrowUpRight, BookOpen, Globe, Stethoscope } from 'lucide-react'
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BookOpen,
+  Clock,
+  Globe,
+  Info,
+  MapPin,
+  Phone,
+  Stethoscope,
+} from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { InstagramIcon } from '@/components/ui/InstagramIcon'
@@ -29,6 +40,11 @@ import {
   buildLocationGraph,
   serializeJsonLd,
 } from '@/lib/structured-data'
+import {
+  PROFESSIONAL_MEMBERSHIPS,
+  PROFESSIONAL_PROFILE,
+  PROFESSIONAL_QUALIFICATIONS,
+} from '@/lib/profile'
 import { getTreatmentBySlug } from '@/lib/treatments'
 
 interface LocationPageProps {
@@ -108,28 +124,63 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const locationsLandingPath = getLocationsLandingPath()
   const breadcrumbItems = buildLocationBreadcrumbItems(location.city)
 
+  // Icon-led rows rather than a flat stack: address, hours and phone are
+  // three different kinds of fact and a patient scans for one of them.
+  // The label and its value stay inside one element so the strings the e2e
+  // suite asserts on remain contiguous.
   const addressBlock = location.address ? (
-    <address className="space-y-2 not-italic text-base leading-relaxed text-gray-700">
-      <strong className="block text-lg text-teal">{location.name}</strong>
-      <span className="block">{location.address.streetAddress}</span>
-      {location.address.addressDetail ? (
-        <span className="block">{location.address.addressDetail}</span>
-      ) : null}
-      {location.address.neighborhood ? (
-        <span className="block">{location.address.neighborhood}</span>
-      ) : null}
-      <span className="block">
-        {location.city}/{location.stateCode} · CEP {location.address.postalCode}
-      </span>
-      {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
-      {location.clinicPhone ? (
-        <span className="block">Telefone geral do Instituto: {location.clinicPhone}</span>
-      ) : null}
-      {location.openingHours ? (
-        <span className="block">
-          Horário da Dra. Dayara: {location.openingHours.label}
-        </span>
-      ) : null}
+    <address className="not-italic">
+      <ul className="space-y-4 text-base leading-relaxed text-gray-700">
+        <li className="flex gap-3">
+          <MapPin
+            className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+            strokeWidth={1.5}
+            aria-hidden="true"
+          />
+          <span className="min-w-0">
+            <strong className="block text-lg text-teal">{location.name}</strong>
+            <span className="block">{location.address.streetAddress}</span>
+            {location.address.addressDetail ? (
+              <span className="block">{location.address.addressDetail}</span>
+            ) : null}
+            {location.address.neighborhood ? (
+              <span className="block">{location.address.neighborhood}</span>
+            ) : null}
+            <span className="block">
+              {location.city}/{location.stateCode} · CEP {location.address.postalCode}
+            </span>
+          </span>
+        </li>
+
+        {location.openingHours ? (
+          <li className="flex gap-3">
+            <Clock
+              className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+            <span className="min-w-0">Horário da Dra. Dayara: {location.openingHours.label}</span>
+          </li>
+        ) : null}
+
+        {location.phone || location.clinicPhone ? (
+          <li className="flex gap-3">
+            <Phone
+              className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+            <span className="min-w-0">
+              {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
+              {location.clinicPhone ? (
+                <span className="block">
+                  Telefone geral do Instituto: {location.clinicPhone}
+                </span>
+              ) : null}
+            </span>
+          </li>
+        ) : null}
+      </ul>
     </address>
   ) : null
 
@@ -272,7 +323,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 ? `Atendimento a partir de ${launchDateLong}`
                 : 'Mudança em preparação'}
             </p>
-            <h1 className="mb-5 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+            <h1 className="mb-5 break-words text-[1.625rem] font-semibold leading-tight text-teal sm:text-4xl lg:text-[2.75rem]">
               Coloproctologista em {location.city}
             </h1>
             <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
@@ -297,6 +348,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-conversion="maps-location-address"
                     className="btn btn-primary"
                   >
                     Abrir no mapa
@@ -326,8 +378,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
 
           {faqSection}
-          {treatmentsSection}
           {readingsSection}
+          {treatmentsSection}
 
           <CallToActionCard
             className="mt-12"
@@ -348,6 +400,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-conversion="whatsapp-location-launch"
                     className="btn btn-secondary"
                   >
                     Falar pelo WhatsApp
@@ -375,32 +428,90 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <section className="container">
         <Breadcrumb items={breadcrumbItems} />
 
-        <header className="mb-12">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
-            Atendimento em {location.city}/{location.stateCode}
-          </p>
-          <h1 className="mb-5 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
-            Coloproctologista em {location.city}
-          </h1>
-          <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
-            {location.roleDescription}
-          </p>
-        </header>
+        {/* Landing page, not an address card: this is the page local search
+            actually lands on, so the doctor, the address and a way to book
+            all have to be reachable without scrolling. */}
+        <header className="mb-12 grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+          <div className="min-w-0">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
+              Atendimento em {location.city}/{location.stateCode}
+            </p>
+            <h1 className="mb-5 break-words text-[1.625rem] font-semibold leading-tight text-teal sm:text-4xl lg:text-[2.75rem]">
+              Coloproctologista em {location.city}
+            </h1>
+            <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
+              {location.roleDescription}
+            </p>
 
-        {mapEmbedUrl ? (
-          <div className="mb-12 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
-            <iframe
-              src={mapEmbedUrl}
-              title={`Mapa com a localização do ${location.name}`}
-              className="h-[360px] w-full lg:h-[420px]"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+            {location.address ? (
+              <p className="mt-6 text-base leading-relaxed text-gray-700">
+                <strong className="text-teal">{location.name}</strong>
+                {location.address.neighborhood ? ` · ${location.address.neighborhood}` : ''}
+                {location.openingHours ? ` · ${location.openingHours.label}` : ''}
+              </p>
+            ) : null}
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {location.showAppointmentCta && location.whatsappUrl ? (
+                <Link
+                  href={location.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-conversion="whatsapp-location-hero"
+                  className="btn btn-secondary"
+                >
+                  Agendar pelo WhatsApp
+                </Link>
+              ) : null}
+              {location.mapsUrl ? (
+                <Link
+                  href={location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-conversion="maps-location-hero"
+                  className="btn btn-primary"
+                >
+                  Como chegar
+                </Link>
+              ) : null}
+            </div>
+
+            <p className="mt-5 text-sm text-gray-600">
+              {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
+            </p>
+
+            {/* Her own sentence, and it also gives the column the height it
+                needs so the portrait beside it can be shown at its real
+                proportions instead of cropped to a square. */}
+            <figure className="relative mt-7 overflow-hidden rounded-2xl bg-cream py-5 pl-7 pr-6">
+              <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-copper" />
+              <blockquote className="text-base italic leading-relaxed text-teal-deep">
+                “{PROFESSIONAL_PROFILE.quote}”
+              </blockquote>
+              <figcaption className="mt-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                {SEO_DOCTOR_NAME}
+              </figcaption>
+            </figure>
+          </div>
+
+          {/* 4:5 rather than a max-height: the source is a 2:3 portrait, and
+              capping the height forced a near-square crop that cut her off. */}
+          <div className="relative min-w-0 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
+            <Image
+              src="/assets/dayara-frente-pose.webp"
+              alt={`${SEO_DOCTOR_NAME}, coloproctologista que atende no ${location.name}, em ${location.city}/${location.stateCode}`}
+              width={1600}
+              height={2400}
+              priority
+              fetchPriority="high"
+              quality={85}
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="aspect-[4/5] w-full object-cover object-[center_22%]"
             />
           </div>
-        ) : null}
+        </header>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr]">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço e contato</h2>
             {addressBlock}
@@ -410,6 +521,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   href={location.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-location-contact"
                   className="btn btn-secondary"
                 >
                   Agendar consulta
@@ -420,6 +532,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   href={location.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="maps-location-contact"
                   className="btn btn-primary"
                 >
                   Abrir no mapa
@@ -442,6 +555,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 {location.instagramUrl ? (
                   <Link
                     href={location.instagramUrl}
+                    data-conversion="social-location-instagram"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
@@ -454,24 +568,172 @@ export default async function LocationPage({ params }: LocationPageProps) {
             ) : null}
           </section>
 
-          <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
-            <h2 className="mb-5 text-2xl font-semibold text-teal">Condições avaliadas</h2>
-            <ul className="grid gap-3 text-gray-700 sm:grid-cols-2 lg:grid-cols-1">
-              {location.services.map((service) => (
-                <li key={service} className="flex gap-3">
-                  <span aria-hidden="true" className="text-copper">
-                    •
+          {mapEmbedUrl ? (
+            <div className="min-h-[20rem] overflow-hidden rounded-[2rem] border border-beige shadow-sm">
+              <iframe
+                src={mapEmbedUrl}
+                title={`Mapa com a localização do ${location.name}`}
+                className="h-full min-h-[20rem] w-full"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          ) : null}
+        </div>
+
+        {location.about?.length ? (
+          <section className="mt-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
+            <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+              <div className="p-7 lg:p-9">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                    Sobre o atendimento
                   </span>
+                  <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+                </div>
+                <h2 className="mb-5 text-2xl font-semibold text-teal">
+                  O atendimento em {location.city}
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
+                  {location.about.map((paragraph) =>
+                    // The practical note about colonoscopy is the one
+                    // paragraph a patient needs before travelling here, so
+                    // it is lifted out of the prose rather than left as the
+                    // last line of it.
+                    paragraph.toLowerCase().includes('colonoscopia') ? (
+                      <div
+                        key={paragraph}
+                        className="tile flex gap-3 rounded-2xl p-4 text-base lg:text-[1.0625rem]"
+                      >
+                        <Info
+                          className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+                          strokeWidth={1.5}
+                          aria-hidden="true"
+                        />
+                        <span className="min-w-0 text-gray-700">{paragraph}</span>
+                      </div>
+                    ) : (
+                      <p key={paragraph}>{paragraph}</p>
+                    ),
+                  )}
+                </div>
+              </div>
+              <div className="min-h-[16rem] lg:min-h-0">
+                <Image
+                  src="/assets/dayara-trabalhando.webp"
+                  alt={`${SEO_DOCTOR_NAME} durante o trabalho no consultório`}
+                  width={1600}
+                  height={2400}
+                  sizes="(min-width: 1024px) 36vw, 100vw"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {location.services.length ? (
+          <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+            <div className="mb-3 flex items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                Áreas de atuação
+              </span>
+              <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+            </div>
+            <h2 className="mb-6 text-2xl font-semibold text-teal">Condições avaliadas</h2>
+            {/* Full width and five across: ten of these stacked in a sidebar
+                left the card beside them half empty. */}
+            {/* Chips that size to their text rather than a fixed grid: the
+                names run from two words to four, and equal-width cells left
+                half of them padded with empty space. */}
+            <ul className="flex flex-wrap gap-2.5">
+              {location.services.map((service) => (
+                <li
+                  key={service}
+                  className="tile inline-flex max-w-full items-center gap-2.5 rounded-full py-2.5 pl-4 pr-5 text-[0.9375rem] text-teal-deep"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="h-1.5 w-1.5 shrink-0 rounded-full bg-copper"
+                  />
                   {service}
                 </li>
               ))}
             </ul>
           </section>
-        </div>
+        ) : null}
 
         {faqSection}
-        {treatmentsSection}
+
+        {/* Whoever arrives from a local search has never seen /sobre, so the
+            credentials that justify the visit have to exist on this page
+            too, not only one click away. */}
+        <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+          <div className="mb-3 flex items-center gap-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+              Experiência e registro
+            </span>
+            <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+          </div>
+          <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
+
+          <p className="text-base leading-relaxed text-gray-700 lg:text-lg">
+            {PROFESSIONAL_PROFILE.shortIntroduction}
+          </p>
+
+          <p className="mt-5 inline-flex rounded-full bg-teal/[0.06] px-4 py-1.5 text-sm font-semibold text-teal">
+            {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
+          </p>
+
+          <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            Formação
+          </h3>
+          <ol className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+            {PROFESSIONAL_QUALIFICATIONS.map((qualification) => (
+              <li
+                key={qualification.title}
+                className="tile flex items-baseline gap-3 rounded-xl px-4 py-3"
+              >
+                <span className="rounded-md bg-copper/10 px-2 py-0.5 text-xs font-semibold tabular-nums text-copper">
+                  {qualification.year}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[0.9375rem] font-semibold leading-snug text-teal">
+                    {qualification.title}
+                  </span>
+                  <span className="block text-sm text-gray-600">{qualification.institution}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+            Associações
+          </h3>
+          <ul className="flex flex-wrap gap-2">
+            {PROFESSIONAL_MEMBERSHIPS.map((membership) => (
+              <li
+                key={membership}
+                className="rounded-full border border-copper/25 bg-copper/[0.06] px-3.5 py-1.5 text-sm text-teal-deep"
+              >
+                {membership}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link href="/sobre" className="btn btn-primary">
+              Conhecer a trajetória completa
+            </Link>
+            <Link href="/" className="btn btn-ghost">
+              Ir para a página inicial
+            </Link>
+          </div>
+        </section>
+
         {readingsSection}
+        {treatmentsSection}
 
         {location.showAppointmentCta && location.whatsappUrl ? (
           <CallToActionCard
@@ -483,6 +745,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 href={location.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-conversion="whatsapp-location-closing"
                 className="btn btn-secondary"
               >
                 Falar pelo WhatsApp

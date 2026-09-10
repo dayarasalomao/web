@@ -24,6 +24,16 @@ const nextConfig: NextConfig = {
         destination: 'https://www.dayarasalomao.com.br/:path*',
         permanent: true,
       },
+      // Consolidated duplicates. Both posts covered anal itching with
+      // near-identical structure, and each listed the other's primary
+      // keyword as its own secondary — so the two split the ranking signal
+      // instead of one of them earning it. 301 keeps the retired URL's
+      // equity, which matters: it was live and indexed.
+      {
+        source: '/blog/coceira-anal-persistente-causas-sinal-alerta',
+        destination: '/blog/prurido-anal-causas-cuidados',
+        permanent: true,
+      },
     ]
   },
   async headers() {

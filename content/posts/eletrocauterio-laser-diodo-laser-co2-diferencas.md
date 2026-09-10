@@ -49,7 +49,7 @@ disclaimer: >-
   tecnologia substitui a avaliação médica individual.
 ---
 
-*Muitos pacientes ouvem falar em "cirurgia a laser" ou "cauterização" para tratar hemorroidas, fístulas ou cistos pilonidais e ficam com dúvidas sobre o que cada tecnologia realmente faz.*
+*Muitos pacientes ouvem falar em "cirurgia a laser" ou "cauterização" para tratar [hemorroidas](/blog/doenca-hemorroidaria-sintomas-graus), [fístulas](/blog/fistula-anal-o-que-e-sintomas) ou [cistos pilonidais](/blog/cisto-pilonidal-sinais-diagnostico) e ficam com dúvidas sobre o que cada tecnologia realmente faz.*
 
 ![Comparação entre eletrocautério, laser de diodo e laser de CO2 mostrando o dano térmico, a inflamação e a recuperação associados a cada instrumento](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
 

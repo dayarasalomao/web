@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BlogCard } from '@/components/ui/BlogCard'
-import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { SoftCta } from '@/components/ui/SoftCta'
 import { getAllPosts } from '@/lib/blog'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import {
@@ -10,7 +10,7 @@ import {
   buildItemListGraph,
   serializeJsonLd,
 } from '@/lib/structured-data'
-import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME } from '@/constants'
 
 const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia`
 const BLOG_DESCRIPTION =
@@ -94,31 +94,14 @@ export default function BlogPage() {
           </div>
         )}
 
-        <div className="mx-auto mt-16 max-w-4xl">
-          <CallToActionCard
-            title="Quer uma avaliação individualizada?"
-            body={
-              <p>
-                O conteúdo do blog ajuda na orientação, mas a conduta correta depende da
-                avaliação clínica. Se você tem sintomas persistentes, procure atendimento
-                especializado.
-              </p>
-            }
-            actions={
-              <>
-                <Link
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary"
-                >
-                  Agendar consulta
-                </Link>
-                <Link href="/tratamentos" className="btn btn-primary">
-                  Ver tratamentos
-                </Link>
-              </>
-            }
+        <div className="mt-16">
+          <SoftCta
+            eyebrow="Ainda com dúvidas?"
+            title="Nenhum artigo substitui uma boa consulta."
+            body="Se algum sintoma te preocupa, agende uma avaliação. O cuidado começa por escutar você."
+            ctaLabel="Agendar consulta"
+            conversionSuffix="blog-index"
+            secondary={{ label: 'Ver tratamentos', href: '/tratamentos' }}
           />
         </div>
 

@@ -3,6 +3,7 @@ import {
   BUSINESS_ADDRESS_LINE,
   BUSINESS_CLINIC_NAME,
   BUSINESS_TELEPHONE_NUMBER,
+  BUSINESS_TELEPHONE_HREF,
   CONTACT_EMAIL,
   GOOGLE_MAPS_URL,
   WHATSAPP_URL,
@@ -30,6 +31,8 @@ export default function Contact() {
       value: BUSINESS_TELEPHONE_NUMBER,
       detail: 'Agendamento de consultas',
       icon: Phone,
+      href: BUSINESS_TELEPHONE_HREF,
+      conversion: 'phone-contact',
     },
   ]
 
@@ -102,9 +105,19 @@ export default function Contact() {
                       >
                         {info.label}
                       </span>
-                      <span className="text-base font-semibold text-gray-900 block">
-                        {info.value}
-                      </span>
+                      {info.href ? (
+                        <a
+                          href={info.href}
+                          data-conversion={info.conversion}
+                          className="text-base font-semibold text-gray-900 block underline-offset-2 hover:underline"
+                        >
+                          {info.value}
+                        </a>
+                      ) : (
+                        <span className="text-base font-semibold text-gray-900 block">
+                          {info.value}
+                        </span>
+                      )}
                       {info.detail && (
                         <span className="text-sm text-gray-600 block mt-0.5">
                           {info.detail}
@@ -194,6 +207,7 @@ export default function Contact() {
                       href={WHATSAPP_URL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-conversion="whatsapp-contact"
                       className="flex items-center justify-center gap-3 w-full bg-green-600 hover:bg-green-700 text-white text-center py-4 px-6 rounded-2xl font-semibold transition-colors duration-300"
                     >
                       <WhatsAppIcon className="w-5 h-5" />
@@ -217,6 +231,7 @@ export default function Contact() {
                         href={GOOGLE_MAPS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-conversion="maps-contact"
                         className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-2xl font-semibold transition-colors duration-300 bg-[rgba(29,65,76,0.08)] hover:bg-[rgba(29,65,76,0.16)] text-center border"
                         style={{
                           borderColor: 'var(--color-teal)',

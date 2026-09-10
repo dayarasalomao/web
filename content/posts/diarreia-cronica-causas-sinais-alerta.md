@@ -45,7 +45,7 @@ Mais do que contar quantas vezes a pessoa evacua, é importante entender consist
 
 ## Possíveis causas
 
-A diarreia persistente pode estar relacionada a infecções, intolerâncias alimentares, uso de medicamentos, alterações da absorção intestinal, síndrome do intestino irritável, doença inflamatória intestinal, doença celíaca, alterações biliares e outras condições.
+A diarreia persistente pode estar relacionada a infecções, intolerâncias alimentares, uso de medicamentos, alterações da absorção intestinal, [síndrome do intestino irritável](/blog/sindrome-intestino-irritavel-sintomas-manejo), [doença inflamatória intestinal](/blog/doencas-inflamatorias-intestinais-crohn-retocolite), doença celíaca, alterações biliares e outras condições.
 
 Por isso, nem sempre a solução é tomar antidiarreico ou restringir alimentos. O tratamento depende da causa provável ou confirmada.
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:#374151;background:#F4F3F2;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:#A35442;text-decoration:none}
+  a:hover{color:#8a4436}
+  ::selection{background:#D1AF8B;color:#16323b}
+</style>
+</helmet>
+
+<div style="background:#F4F3F2;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(244,243,242,.85);border-bottom:1px solid rgba(29,65,76,.1)">
+    <div style="max-width:1180px;margin:0 auto;padding:16px clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="Homepage-Copper.dc.html" style="display:flex;flex-direction:column;line-height:1.05;color:#16323b">
+        <span style="font-family:'Newsreader',Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.01em">Dra. Dayara Salomão</span>
+        <span style="font:600 10px 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:#A35442;margin-top:3px">Coloproctologista</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:28px">
+        <a href="Homepage-Copper.dc.html#doencas" style="font:600 14px 'Manrope';color:#374151">Doenças</a>
+        <a href="Tratamentos.dc.html" style="font:700 14px 'Manrope';color:#A35442">Tratamentos</a>
+        <a href="Blog.dc.html" style="font:600 14px 'Manrope';color:#374151">Blog</a>
+        <a href="Homepage-Copper.dc.html#contato" style="font:600 14px 'Manrope';color:#374151">Contato</a>
+        <a href="{{ wa }}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#A35442;color:#F4F3F2;font:600 14px 'Manrope';padding:11px 20px;border-radius:999px" style-hover="background:#8a4436;color:#F4F3F2">Agendar consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="padding:clamp(40px,6vw,80px) clamp(20px,5vw,56px) clamp(32px,4vw,48px)">
+    <div style="max-width:1120px;margin:0 auto">
+      <div style="font:600 12px 'Manrope';color:#6b7280;display:flex;gap:8px;align-items:center;flex-wrap:wrap"><a href="Homepage-Copper.dc.html" style="color:#6b7280">Início</a><span>/</span><a href="Tratamentos.dc.html" style="color:#6b7280">Tratamentos</a><span>/</span><span style="color:#A35442">Hemorroidectomia a laser</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,60px);align-items:center;margin-top:22px">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:8px;font:600 11px 'Manrope';letter-spacing:.12em;text-transform:uppercase;color:#A35442;background:#EDE6DE;padding:6px 13px;border-radius:999px">Doença hemorroidária</div>
+          <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(32px,4.6vw,52px);line-height:1.05;letter-spacing:-.02em;color:#16323b;margin:18px 0 0">Hemorroidectomia com <em style="font-style:italic;color:#A35442">laser de CO₂</em></h1>
+          <p style="font-size:clamp(16px,1.6vw,18px);line-height:1.7;color:#374151;margin:18px 0 0;max-width:540px">Cirurgia minimamente invasiva que trata as hemorroidas com precisão milimétrica, preservando os tecidos saudáveis e reduzindo a dor no pós-operatório.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px">
+            <a href="{{ wa }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#A35442;color:#F4F3F2;font:600 15px 'Manrope';padding:15px 28px;border-radius:999px;box-shadow:0 16px 30px -18px rgba(163,84,66,.7)" style-hover="background:#8a4436;color:#F4F3F2">Agendar consulta →</a>
+            <a href="Tratamentos.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#16323b;font:600 15px 'Manrope';padding:14px 26px;border-radius:999px;border:1px solid rgba(29,65,76,.2)" style-hover="background:#FFFFFF">Todos os tratamentos</a>
+          </div>
+        </div>
+        <div style="position:relative;width:100%;max-width:460px;justify-self:center">
+          <div style="position:absolute;inset:16px -16px -16px 16px;background:#D1AF8B;border-radius:24px"></div>
+          <img src="https://www.dayarasalomao.com.br/assets/operando-claro.webp" alt="Procedimento a laser de CO2" style="position:relative;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:0 34px 60px -34px rgba(29,65,76,.5)">
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:36px">
+        <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+          <div style="background:#FFFFFF;border:1px solid rgba(29,65,76,.1);border-radius:14px;padding:18px 20px">
+            <div style="font:600 11px 'Manrope';letter-spacing:.1em;text-transform:uppercase;color:#6b7280">{{ f.label }}</div>
+            <div style="font:600 16px 'Manrope';color:#16323b;margin-top:6px">{{ f.value }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section style="padding:clamp(24px,4vw,48px) clamp(20px,5vw,56px) clamp(48px,6vw,80px)">
+    <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="min-width:0">
+        <div style="font:600 12px 'Manrope';letter-spacing:.16em;text-transform:uppercase;color:#A35442">Entenda</div>
+        <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(24px,3vw,34px);color:#16323b;margin:10px 0 0">O que é a doença hemorroidária?</h2>
+        <p style="font-size:17px;line-height:1.75;color:#374151;margin:16px 0 0">As hemorroidas são estruturas vasculares normais do canal anal. A doença surge quando esses vasos dilatam e se inflamam, provocando sintomas que afetam a qualidade de vida.</p>
+
+        <h3 style="font:600 15px 'Manrope';letter-spacing:.02em;color:#16323b;margin:30px 0 0">Sinais e sintomas mais comuns</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+          <sc-for list="{{ symptoms }}" as="s" hint-placeholder-count="4">
+            <div style="display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border:1px solid rgba(29,65,76,.08);border-radius:12px;padding:14px 16px">
+              <span style="flex:none;width:7px;height:7px;border-radius:50%;background:#A35442;margin-top:7px"></span>
+              <span style="font-size:15px;line-height:1.55;color:#374151">{{ s }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(24px,3vw,34px);color:#16323b;margin:40px 0 0">Como funciona o laser de CO₂</h2>
+        <p style="font-size:17px;line-height:1.75;color:#374151;margin:16px 0 0">O laser de CO₂ permite cortar e cauterizar ao mesmo tempo, com energia altamente focada. Isso significa menos sangramento durante a cirurgia, incisões mais precisas e menor lesão dos tecidos vizinhos — fatores diretamente ligados a um pós-operatório mais tranquilo.</p>
+
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:26px">
+          <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
+            <div style="display:flex;gap:18px;align-items:flex-start;background:#EDE6DE;border-radius:16px;padding:22px">
+              <span style="flex:none;width:42px;height:42px;border-radius:12px;background:#1D414C;color:#F4F3F2;display:flex;align-items:center;justify-content:center;font-family:'Newsreader',serif;font-size:18px">{{ st.num }}</span>
+              <div><div style="font:600 16px 'Manrope';color:#16323b">{{ st.title }}</div><div style="font-size:14.5px;line-height:1.6;color:#4b5563;margin-top:5px">{{ st.desc }}</div></div>
+            </div>
+          </sc-for>
+        </div>
+
+        <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(24px,3vw,34px);color:#16323b;margin:40px 0 0">Perguntas frequentes</h2>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+          <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="3">
+            <div style="background:#FFFFFF;border:1px solid rgba(29,65,76,.1);border-radius:14px;padding:22px 24px">
+              <div style="font:600 16px 'Manrope';color:#16323b">{{ q.q }}</div>
+              <div style="font-size:15px;line-height:1.65;color:#4b5563;margin-top:8px">{{ q.a }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside style="position:sticky;top:96px;display:flex;flex-direction:column;gap:16px">
+        <div style="background:#1D414C;border-radius:20px;padding:28px;color:#EDE6DE">
+          <div style="font-family:'Newsreader',serif;font-size:22px;line-height:1.2;color:#FFFFFF">Avalie seu caso com a Dra. Dayara</div>
+          <p style="font-size:14.5px;line-height:1.65;color:#c3d0cc;margin:12px 0 20px">Atendimento acolhedor, sem julgamentos, com explicação clara de cada etapa.</p>
+          <a href="{{ wa }}" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#A35442;color:#F4F3F2;font:600 15px 'Manrope';padding:14px 22px;border-radius:12px" style-hover="background:#8a4436;color:#F4F3F2">Agendar pelo WhatsApp</a>
+          <a href="tel:+554131236550" style="display:flex;align-items:center;justify-content:center;gap:10px;background:transparent;color:#EDE6DE;font:600 15px 'Manrope';padding:13px 22px;border-radius:12px;border:1px solid rgba(255,255,255,.25);margin-top:10px" style-hover="background:rgba(255,255,255,.08);color:#FFFFFF">(41) 3123-6550</a>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid rgba(29,65,76,.1);border-radius:20px;padding:24px">
+          <div style="font:600 12px 'Manrope';letter-spacing:.12em;text-transform:uppercase;color:#A35442">Onde é feito</div>
+          <div style="font:600 16px 'Manrope';color:#16323b;margin-top:10px">Eco Medical Center</div>
+          <div style="font-size:14px;line-height:1.6;color:#4b5563;margin-top:4px">Rua Goiás, 70 — Água Verde, 3º andar · Curitiba - PR</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section style="background:#FFFFFF;border-top:1px solid rgba(29,65,76,.08);padding:clamp(48px,6vw,80px) clamp(20px,5vw,56px)">
+    <div style="max-width:1120px;margin:0 auto">
+      <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(24px,3vw,32px);color:#16323b;margin:0">Tratamentos relacionados</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+          <a href="Tratamento.dc.html" style="display:flex;flex-direction:column;background:#F4F3F2;border:1px solid rgba(29,65,76,.08);border-radius:16px;padding:24px;color:#16323b" style-hover="border-color:#A35442;background:#FFFFFF;box-shadow:0 16px 30px -24px rgba(29,65,76,.4)">
+            <span style="font:600 17px 'Manrope';color:#16323b">{{ r.title }}</span>
+            <span style="font-size:14px;line-height:1.6;color:#4b5563;margin-top:8px;flex:1">{{ r.desc }}</span>
+            <span style="font:600 13px 'Manrope';color:#A35442;margin-top:14px">Ver detalhes →</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#16323b;color:#c3d0cc;padding:clamp(40px,5vw,64px) clamp(20px,5vw,56px) 30px">
+    <div style="max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center">
+      <div>
+        <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;font-weight:600;color:#FFFFFF">Dra. Dayara Salomão</div>
+        <div style="font:600 10px 'Manrope';letter-spacing:.22em;text-transform:uppercase;color:#D1AF8B;margin-top:4px">Coloproctologista · CRM-PR 42596</div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px;font:500 14px 'Manrope';color:#c3d0cc">
+        <a href="Homepage-Copper.dc.html" style="color:#c3d0cc">Início</a>
+        <a href="Tratamentos.dc.html" style="color:#c3d0cc">Tratamentos</a>
+        <a href="Blog.dc.html" style="color:#c3d0cc">Blog</a>
+        <a href="Homepage-Copper.dc.html#contato" style="color:#c3d0cc">Contato</a>
+      </div>
+    </div>
+    <div style="max-width:1120px;margin:28px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#8fa19c">© 2025 Dra. Dayara Salomão. Todos os direitos reservados.</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      wa: "https://wa.me/554135422095",
+      facts: [
+        { label: "Anestesia", value: "Raqui / sedação" },
+        { label: "Internação", value: "Ambulatorial" },
+        { label: "Recuperação", value: "Mais rápida" },
+        { label: "Tecnologia", value: "Laser de CO₂" },
+      ],
+      symptoms: [
+        "Sangramento vermelho-vivo ao evacuar",
+        "Dor, ardência ou desconforto na região anal",
+        "Coceira e sensação de umidade",
+        "Prolapso (nódulos que saem pelo ânus)",
+      ],
+      steps: [
+        { num: "1", title: "Avaliação e diagnóstico", desc: "Consulta acolhedora com exame proctológico e definição do grau da doença." },
+        { num: "2", title: "Procedimento a laser", desc: "Remoção precisa com laser de CO₂, com corte e cauterização simultâneos." },
+        { num: "3", title: "Recuperação orientada", desc: "Orientações de cuidados, controle da dor e retorno para acompanhamento." },
+      ],
+      faqs: [
+        { q: "O procedimento dói?", a: "A cirurgia é feita sob anestesia. No pós-operatório, a dor tende a ser menor do que na técnica convencional, com analgesia orientada." },
+        { q: "Quanto tempo dura a recuperação?", a: "Varia conforme o caso, mas o laser costuma proporcionar retorno mais rápido às atividades. Isso é individualizado na consulta." },
+        { q: "Preciso de internação?", a: "Na maioria dos casos é um procedimento ambulatorial, realizado no Eco Medical Center." },
+      ],
+      related: [
+        { title: "Hemorroidas sem corte", desc: "Laser de diodo que preserva os tecidos." },
+        { title: "Ligadura elástica", desc: "Método ambulatorial para hemorroidas internas." },
+        { title: "Toxina botulínica para fissura", desc: "Alívio da dor anal crônica." },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

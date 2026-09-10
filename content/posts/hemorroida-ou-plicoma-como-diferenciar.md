@@ -60,7 +60,7 @@ São veias inchadas na região do ânus. Podem ser:
 
 ## O que é plicoma
 
-É uma sobra de pele, macia e flácida, geralmente sequela de uma hemorroida externa antiga que já cicatrizou ou de uma fissura anal. Características principais:
+É uma sobra de pele, macia e flácida, geralmente sequela de uma hemorroida externa antiga que já cicatrizou ou de uma [fissura anal](/blog/fissura-anal-causas-sintomas). As [causas e o tratamento do plicoma](/blog/plicoma-anal-causas-e-tratamento) estão detalhados em outro artigo. Características principais:
 
 * Não sangra.
 * Não dói, a menos que atrapalhe a higiene e cause irritação local.

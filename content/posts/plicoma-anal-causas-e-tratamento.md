@@ -82,7 +82,7 @@ O tratamento costuma ser considerado apenas quando o plicoma:
 Quando a remoção é indicada, as opções mais usadas incluem:
 
 * Excisão cirúrgica simples (corte com tesoura ou bisturi).
-* Excisão cirúrgica com laser de CO2.
+* Excisão cirúrgica [com laser de CO2](/blog/plicoma-anal-laser-co2).
 
 ## Por que o plicoma pode voltar
 

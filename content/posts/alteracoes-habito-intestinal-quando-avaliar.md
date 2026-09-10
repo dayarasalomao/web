@@ -75,7 +75,7 @@ A avaliação também é importante quando a mudança causa limitação, insegur
 
 ## O que pode estar por trás?
 
-As causas variam de alterações funcionais, como síndrome do intestino irritável, até constipação, diarreia crônica, intolerâncias, inflamações, infecções e outras condições que precisam de investigação específica.
+As causas variam de alterações funcionais, como [síndrome do intestino irritável](/blog/sindrome-intestino-irritavel-sintomas-manejo), até [constipação](/blog/constipacao-intestinal-quando-investigar), [diarreia crônica](/blog/diarreia-cronica-causas-sinais-alerta), intolerâncias, inflamações, infecções e outras condições que precisam de investigação específica.
 
 A consulta ajuda a organizar os sintomas, identificar sinais de alerta e decidir se exames são necessários.
 

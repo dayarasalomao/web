@@ -13,7 +13,7 @@ import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from '@/lib/blog'
 import { buildPostMetadata } from '@/lib/seo'
 import { buildBlogPostGraph, serializeJsonLd } from '@/lib/structured-data'
 import { getTreatmentByRelatedBlogSlug } from '@/lib/treatments'
-import { SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -92,6 +92,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <Link href="/sobre" className="font-semibold text-teal underline decoration-teal/30 underline-offset-2 hover:text-copper">
                 {SEO_DOCTOR_NAME}
               </Link>
+              {/* Credentials sit next to the byline, not only on /sobre:
+                  for medical content, the author's qualification has to be
+                  visible on the page the reader actually lands on. */}
+              <span className="ml-2 whitespace-nowrap text-gray-500">
+                {CRM_FULL} · {RQE_FULL}
+              </span>
             </span>
             <time dateTime={post.publishDate}>
               {new Date(post.publishDate).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}
@@ -206,6 +212,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-conversion="whatsapp-blog-post"
                 className="btn btn-secondary"
               >
                 Agendar consulta

@@ -58,7 +58,7 @@ disclaimer: >-
 
 A técnica escolhida não muda apenas o modo como a cirurgia é feita. Ela influencia como será a primeira semana, o primeiro mês e até o risco de a hemorroida voltar mais adiante.
 
-Não existe uma técnica "perfeita". Cada uma tem vantagens e desvantagens, e o que uma boa cirurgiã vai considerar é o grau da hemorroida, o tamanho e as preferências do paciente.
+Não existe uma técnica "perfeita". Cada uma tem vantagens e desvantagens, e o que uma boa cirurgiã vai considerar é [o grau da hemorroida](/blog/doenca-hemorroidaria-sintomas-graus), o tamanho e as preferências do paciente. O artigo sobre [qual técnica escolher](/blog/hemorroidas-qual-tecnica-cirurgica-escolher) detalha o cenário ideal de cada uma.
 
 ## Cirurgia convencional (hemorroidectomia excisional)
 
@@ -77,7 +77,7 @@ Nessa técnica, uma fibra de laser é inserida dentro do tecido hemorroidário p
 
 O que esperar no pós-operatório:
 
-* **Dor:** significativamente menor do que na cirurgia convencional, tanto no primeiro dia quanto na primeira semana e no primeiro mês.
+* **Dor:** os estudos mostram diferença a favor do laser no primeiro dia, na primeira semana e no primeiro mês.
 * **Uso de analgésicos:** menor quantidade e por menos tempo, em média cerca de 2 a 3 dias a menos de uso de analgésicos fortes.
 * **Tempo de recuperação:** retorno mais rápido às atividades diárias, em média cerca de 9 a 11 dias mais cedo do que com a cirurgia convencional.
 * **Cuidado com o curativo:** costuma ser mais simples, já que não há uma ferida aberta extensa.

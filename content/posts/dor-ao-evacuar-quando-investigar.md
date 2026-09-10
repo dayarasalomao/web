@@ -38,9 +38,9 @@ disclaimer: >-
 
 ## O que pode causar dor ao evacuar?
 
-A dor ao evacuar pode ter diferentes causas. Uma das mais comuns é a fissura anal, uma pequena ferida na borda do ânus que costuma causar dor em corte, ardor e, às vezes, sangramento vivo.
+A dor ao evacuar pode ter diferentes causas. Uma das mais comuns é a [fissura anal](/blog/fissura-anal-causas-sintomas), uma pequena ferida na borda do ânus que costuma causar dor em corte, ardor e, às vezes, sangramento vivo.
 
-Também podem estar envolvidos doença hemorroidária, inflamações, abscessos, irritação da pele, diarreia frequente, constipação, trauma por fezes endurecidas ou outras alterações da região anal.
+Também podem estar envolvidos [doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus), inflamações, abscessos, irritação da pele, diarreia frequente, constipação, trauma por fezes endurecidas ou outras alterações da região anal.
 
 Em situações menos comuns, dor e sangramento persistentes também podem exigir investigação para pólipos, tumores ou outras doenças do reto e do canal anal. Quando existe um caroço dolorido e arroxeado na borda do ânus, uma possibilidade é trombose hemorroidária. Nesses casos, não se deve tentar furar ou drenar em casa.
 
@@ -66,7 +66,7 @@ Dor intensa com febre alta, calafrios, secreção purulenta, dificuldade para ur
 
 Esses sinais não indicam necessariamente gravidade, mas mostram que é preciso entender a causa.
 
-Fissuras recentes podem melhorar com ajuste intestinal, hidratação, fibras, banhos de assento e medicações quando prescritas. Já fissuras que persistem por mais de seis semanas, retornam com frequência ou não cicatrizam precisam de avaliação especializada.
+Fissuras recentes podem melhorar com ajuste intestinal, hidratação, fibras, banhos de assento e medicações quando prescritas. Já fissuras que persistem por mais de seis semanas, retornam com frequência ou não cicatrizam precisam de avaliação especializada — nesses casos, a [toxina botulínica](/blog/toxina-botulinica-fissura-anal) é uma das opções que podem interromper o espasmo que impede a cicatrização.
 
 ## Como é feita a avaliação?
 

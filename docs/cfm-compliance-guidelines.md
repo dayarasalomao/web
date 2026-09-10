@@ -4,6 +4,11 @@
 
 Este site deve manter posicionamento médico institucional, informativo e compatível com comunicação ética em saúde.
 
+Este documento é o **check de publicação**: aplica-se ao texto pronto, antes do
+merge. O **check de captação** é `docs/pesquisa/brief.md`, que rege como o
+material com fonte é levantado antes de a página ser escrita. Todo tema clínico
+novo passa pelos dois.
+
 ## Diretrizes para blog e landing page
 
 - Não prometer cura, resultado garantido ou superioridade absoluta.

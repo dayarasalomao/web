@@ -108,12 +108,12 @@ export default function TreatmentsPage() {
           {treatments.map((treatment, index) => (
             <article
               key={treatment.slug}
-              className={`flex h-full flex-col rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 ${getTreatmentCardGridClass(index)}`}
+              className={`group card flex h-full flex-col p-6 ${getTreatmentCardGridClass(index)}`}
             >
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                 {treatment.shortTitle}
               </p>
-              <h2 className="mb-3 text-2xl font-semibold leading-tight text-teal">
+              <h2 className="mb-3 font-sans text-xl font-semibold leading-snug text-teal-deep transition-colors duration-200 group-hover:text-copper">
                 {treatment.title}
               </h2>
               <p className="mb-5 text-base leading-relaxed text-gray-700">
@@ -157,6 +157,7 @@ export default function TreatmentsPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-treatments-index"
                   className="btn btn-secondary"
                 >
                   Agendar consulta

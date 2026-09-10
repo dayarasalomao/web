@@ -58,7 +58,7 @@ disclaimer: >-
 
 ## Por que a forma como o abscesso é drenado importa tanto?
 
-Depois que o abscesso é drenado, pode acontecer de sobrar um "canal" ligando o interior do intestino à pele ao redor do ânus. Esse canal é o que chamamos de fístula anal. Ela não surge sempre, mas alguns fatores aumentam bastante a chance de isso acontecer:
+Depois que o abscesso é drenado, pode acontecer de sobrar um "canal" ligando o interior do intestino à pele ao redor do ânus. Esse canal é o que chamamos de [fístula anal](/blog/fistula-anal-o-que-e-sintomas). Ela não surge sempre, mas alguns fatores aumentam bastante a chance de isso acontecer:
 
 * **Drenagem incompleta.** Se o pus não for totalmente esvaziado, ou se existirem "bolsões" escondidos que não foram abertos, a infecção tende a persistir e formar um trajeto crônico.
 * **Local do procedimento.** Estudos mostram que a drenagem feita em centro cirúrgico, com boas condições de visualização e anestesia adequada, tem resultado bem melhor do que uma drenagem feita às pressas, por exemplo em um consultório ou pronto-socorro sem estrutura cirúrgica. Nesse tipo de comparação, o risco de o problema voltar ou virar fístula caiu cerca de 80% quando o procedimento foi feito em ambiente cirúrgico adequado.

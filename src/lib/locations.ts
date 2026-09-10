@@ -72,6 +72,12 @@ export interface PracticeLocation {
     schema: string
   }
   roleDescription: string
+  /**
+   * Substantive prose about practising at this location. `roleDescription`
+   * is a one-line summary for the hero; this is the body a patient
+   * searching "coloproctologista <cidade>" actually needs to read.
+   */
+  about?: string[]
   services: string[]
   relatedTreatmentSlugs: string[]
   relatedBlogSlugs: string[]
@@ -157,6 +163,12 @@ export const LOCATIONS: PracticeLocation[] = [
     instagramUrl: 'https://www.instagram.com/institutodigestivo/',
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
+    about: [
+      'A coloproctologia cuida das doenças do intestino grosso, do reto e da região anal. Procuram a especialidade pessoas que convivem com sangramento ao evacuar, dor anal, coceira que não passa, um caroço na região ou alguma mudança no hábito intestinal.',
+      'A consulta começa por uma conversa sem pressa. O exame físico só é feito quando é necessário, com privacidade e no seu ritmo. Sentir vergonha é comum nesse tipo de consulta, e isso não deveria custar o diagnóstico a ninguém.',
+      'Boa parte dos casos se resolve com medidas clínicas, sem cirurgia. Quando existe indicação cirúrgica, a escolha da técnica considera o grau da doença e as suas prioridades quanto a dor e tempo de afastamento. Laser e videocirurgia estão entre as opções disponíveis.',
+      'A colonoscopia não é realizada pela Dra. Dayara neste local. Se o seu caso exigir o exame, a orientação de onde fazê-lo faz parte da consulta.',
+    ],
     services: CORE_SERVICES,
     relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,
     relatedBlogSlugs: CORE_BLOG_SLUGS,

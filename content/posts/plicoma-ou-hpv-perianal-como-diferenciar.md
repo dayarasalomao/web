@@ -51,11 +51,11 @@ disclaimer: >-
 
 ## O que é o plicoma?
 
-É uma "sobrinha" de pele — um pedacinho de pele mole, da mesma cor da pele normal, que sobra ao redor do ânus. Geralmente é resultado de uma hemorroida antiga que já cicatrizou ou consequência de uma fissura anal. Não coça, não sangra, não cresce e não tem relação com vírus ou infecção sexualmente transmissível.
+É uma "sobrinha" de pele — um pedacinho de pele mole, da mesma cor da pele normal, que sobra ao redor do ânus. Geralmente é resultado de uma hemorroida antiga que já cicatrizou ou consequência de uma fissura anal. Não coça, não sangra, não cresce e não tem relação com vírus ou infecção sexualmente transmissível. Veja mais sobre [as causas e o tratamento do plicoma anal](/blog/plicoma-anal-causas-e-tratamento).
 
 ## O que é a verruga de HPV (condiloma)?
 
-É causada por um vírus (HPV) transmitido principalmente por contato sexual. Costuma aparecer como uma ou várias lesões com superfície irregular, "em couve-flor", às vezes ásperas ao toque. Podem crescer, se multiplicar, coçar e ocasionalmente sangrar levemente.
+É causada por um vírus ([HPV](/blog/hpv-anal-identificar-tratar)) transmitido principalmente por contato sexual. Costuma aparecer como uma ou várias lesões com superfície irregular, "em couve-flor", às vezes ásperas ao toque. Podem crescer, se multiplicar, coçar e ocasionalmente sangrar levemente.
 
 ## Como diferenciar no dia a dia
 

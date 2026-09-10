@@ -46,7 +46,7 @@ Algumas pessoas evacuam todos os dias e ainda assim têm constipação, porque a
 
 O intestino preso pode estar relacionado a ingestão insuficiente de fibras e líquidos, sedentarismo, mudanças de rotina, viagens, gravidez, medicamentos, dor anal que faz a pessoa evitar evacuar ou alterações do assoalho pélvico.
 
-Também pode coexistir com fissura anal, hemorroidas e outras condições que pioram com esforço. Nesses casos, tratar apenas a dor sem corrigir o padrão evacuatório costuma ser insuficiente.
+Também pode coexistir com [fissura anal](/blog/fissura-anal-causas-sintomas), [hemorroidas](/blog/doenca-hemorroidaria-sintomas-graus) e outras condições que pioram com esforço. Nesses casos, tratar apenas a dor sem corrigir o padrão evacuatório costuma ser insuficiente.
 
 ## Quando investigar?
 

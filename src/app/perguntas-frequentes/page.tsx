@@ -143,6 +143,7 @@ export default function FaqPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-faq"
                   className="btn btn-secondary"
                 >
                   Agendar consulta

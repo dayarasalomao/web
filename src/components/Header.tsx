@@ -189,6 +189,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-conversion="whatsapp-header-mobile"
                     className="group relative whitespace-nowrap py-2 text-sm font-medium text-gray-700 transition-all duration-300 hover:opacity-80"
                     style={
                       {
