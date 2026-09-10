@@ -297,6 +297,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-conversion="maps-location-address"
                     className="btn btn-primary"
                   >
                     Abrir no mapa
@@ -348,6 +349,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-conversion="whatsapp-location-launch"
                     className="btn btn-secondary"
                   >
                     Falar pelo WhatsApp
@@ -423,6 +425,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   href={location.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="whatsapp-location-contact"
                   className="btn btn-secondary"
                 >
                   Agendar consulta
@@ -433,6 +436,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   href={location.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-conversion="maps-location-contact"
                   className="btn btn-primary"
                 >
                   Abrir no mapa
@@ -455,6 +459,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 {location.instagramUrl ? (
                   <Link
                     href={location.instagramUrl}
+                    data-conversion="social-location-instagram"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
@@ -496,6 +501,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 href={location.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-conversion="whatsapp-location-closing"
                 className="btn btn-secondary"
               >
                 Falar pelo WhatsApp

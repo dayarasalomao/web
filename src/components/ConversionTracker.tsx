@@ -36,6 +36,17 @@ function classify(href: string): ConversionEventName | null {
 }
 
 /**
+ * A `tel:` link only starts a call on a device that can place one. Desktop
+ * browsers accept the click and do nothing — the visitor is usually just
+ * reading or copying the number — so counting it books a conversion that
+ * never happened. A coarse pointer with no hover is the closest thing the
+ * platform gives us to "this is a phone".
+ */
+function canPlaceCalls(): boolean {
+  return window.matchMedia('(pointer: coarse) and (hover: none)').matches
+}
+
+/**
  * Where on the page the click happened. Prefers an explicit
  * `data-conversion` marker, then the enclosing landmark, so a CTA that
  * has not been labelled still reports something more useful than
@@ -50,7 +61,13 @@ function resolvePlacement(anchor: HTMLAnchorElement): string {
   if (!section) return 'unlabelled'
 
   if (section.id) return section.id
-  return section.tagName.toLowerCase()
+
+  // Bare tag names collide: treatment and blog pages carry their own
+  // <header> inside <article> on top of the site header, and both would
+  // report "header" — indistinguishable once the events reach GA4.
+  // Qualifying by scope keeps the two apart.
+  const tag = section.tagName.toLowerCase()
+  return section.closest('article') ? `article-${tag}` : `page-${tag}`
 }
 
 /**
@@ -78,6 +95,15 @@ export default function ConversionTracker() {
       const eventName = classify(href)
       if (!eventName) return
 
+      if (eventName === CONVERSION_EVENTS.phone && !canPlaceCalls()) return
+
+      // Recorded immediately, and deliberately without consulting
+      // `defaultPrevented`. Deferring the decision until dispatch ends is
+      // the only way to read that flag reliably — a microtask checkpoint
+      // can run before the bubble phase — and a deferred callback is not
+      // guaranteed to run at all once a same-tab navigation starts. Losing
+      // real conversions is worse than counting a cancelled click, and no
+      // CTA on this site cancels one.
       trackConversion(eventName, {
         placement: resolvePlacement(anchor),
         pagePath: pathname,
