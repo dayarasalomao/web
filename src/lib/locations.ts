@@ -164,10 +164,10 @@ export const LOCATIONS: PracticeLocation[] = [
     roleDescription:
       'Atendimento em coloproctologia com foco em tratamentos minimamente invasivos.',
     about: [
-      'A coloproctologia cuida das doenças do intestino grosso, do reto e da região anal. É a especialidade procurada por quem convive com sangramento ao evacuar, dor anal, coceira persistente, um caroço na região ou uma mudança no hábito intestinal que não passa.',
-      'A avaliação começa por uma conversa sem pressa. Quando o exame físico é necessário, ele é feito com privacidade e no seu ritmo: a vergonha é a reação mais comum nesse tipo de consulta, e ela não deveria custar a ninguém o diagnóstico.',
-      'Boa parte dos casos se resolve com medidas clínicas, sem cirurgia. Quando há indicação cirúrgica, o planejamento considera o grau da doença, as suas prioridades quanto a dor e afastamento, e os limites de cada técnica — incluindo laser e vídeo.',
-      'Uma informação prática para evitar deslocamento desnecessário: a colonoscopia não é realizada pela Dra. Dayara neste local. Se o seu caso exigir o exame, a orientação de onde realizá-lo faz parte da consulta.',
+      'A coloproctologia cuida das doenças do intestino grosso, do reto e da região anal. Procuram a especialidade pessoas que convivem com sangramento ao evacuar, dor anal, coceira que não passa, um caroço na região ou alguma mudança no hábito intestinal.',
+      'A consulta começa por uma conversa sem pressa. O exame físico só é feito quando é necessário, com privacidade e no seu ritmo. Sentir vergonha é comum nesse tipo de consulta, e isso não deveria custar o diagnóstico a ninguém.',
+      'Boa parte dos casos se resolve com medidas clínicas, sem cirurgia. Quando existe indicação cirúrgica, a escolha da técnica considera o grau da doença e as suas prioridades quanto a dor e tempo de afastamento. Laser e videocirurgia estão entre as opções disponíveis.',
+      'A colonoscopia não é realizada pela Dra. Dayara neste local. Se o seu caso exigir o exame, a orientação de onde fazê-lo faz parte da consulta.',
     ],
     services: CORE_SERVICES,
     relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,

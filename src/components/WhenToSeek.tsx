@@ -134,12 +134,12 @@ export default function WhenToSeek() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:items-stretch">
             {/* Professional Image */}
             <div className="order-2 lg:order-1 flex justify-center">
-              <div className="relative">
+              <div className="relative lg:h-full">
                 <div
-                  className="w-80 h-128 lg:w-96 lg:h-[547px] rounded-2xl p-2 shadow-lg"
+                  className="w-80 h-128 rounded-2xl p-2 shadow-lg lg:h-full lg:w-[26rem]"
                   style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
@@ -166,7 +166,7 @@ export default function WhenToSeek() {
                 return (
                   <div
                     key={index}
-                    className="group card px-6 py-5 lg:px-7 lg:py-6"
+                    className="group card px-6 py-4 lg:px-7 lg:py-[1.15rem]"
                     style={{ borderLeftWidth: '3px', borderLeftColor: styles.accent }}
                   >
                     <div className="flex items-start gap-3.5">
@@ -189,7 +189,7 @@ export default function WhenToSeek() {
                         {href ? (
                           <Link
                             href={href}
-                            className="mt-3 inline-flex text-xs font-semibold text-copper transition-colors hover:text-teal"
+                            className="mt-2 inline-flex text-xs font-semibold text-copper transition-colors hover:text-teal"
                           >
                             Saiba mais →
                           </Link>
