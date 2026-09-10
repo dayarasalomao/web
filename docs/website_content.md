@@ -52,7 +52,7 @@ Aumento da frequência evacuatória e fezes líquidas
 
 Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cursam com inflamações específicas do intestino.
 
-## Tratamentos
+## Tratamentos em destaque
 
 - Cirurgias de hemorroidas com laser de CO2
 - Cirurgia de hemorroidas sem corte
@@ -60,8 +60,8 @@ Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cu
 - Cirurgia de fístula anal a laser e videoassistida (VAAFT)
 - Cirurgia de cisto pilonidal a laser e videoassistida (VAAFT)
 - Cirurgia de plicoma anal a laser de CO2
-- Toxina botulínica para fissura e dores anais crônicas
-- Eletrocoagulação a laser de lesões por HPV
+
+O catálogo completo permanece disponível na página de tratamentos.
 
 ## Opinões de quem já passou por aqui
 

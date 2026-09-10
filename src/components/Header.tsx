@@ -9,6 +9,7 @@ import {
   SUBPAGE_HEADER_NAV_ITEMS,
   type NavItem,
 } from '@/lib/navigation'
+import { InfoCard } from '@/components/ui/InfoCard'
 
 type HeaderMode = 'home' | 'subpage'
 
@@ -173,7 +174,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div id="mobile-navigation" className="md:hidden mt-6 card">
+          <InfoCard id="mobile-navigation" className="mt-6 !p-0 md:hidden">
             <ul className="space-y-3 p-4">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -212,7 +213,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
                 </li>
               </ul>
             </div>
-          </div>
+          </InfoCard>
         )}
       </nav>
     </header>

@@ -25,8 +25,8 @@ interface HighlightCtaProps {
  * short translucent rows. It reads as a deliberate pause in the page rather
  * than a button tacked onto the end of a section.
  *
- * The button is straw rather than copper: on a teal surface, straw is the
- * design system's soft button, and copper loses contrast against it.
+ * The button is `.btn-soft` rather than copper: copper loses contrast on a
+ * teal surface, so the system's dark-surface button is cream.
  */
 export function HighlightCta({
   eyebrow,
@@ -54,7 +54,7 @@ export function HighlightCta({
           target="_blank"
           rel="noopener noreferrer"
           data-conversion={`whatsapp-${conversionSuffix}`}
-          className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-straw px-7 py-3.5 font-semibold text-teal-deep transition-colors duration-200 hover:bg-white"
+          className="btn btn-soft mt-6"
         >
           {ctaLabel}
           <span aria-hidden="true">→</span>

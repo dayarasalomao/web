@@ -1,32 +1,15 @@
 import { HighlightCta } from '@/components/ui/HighlightCta'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { InfoCard } from '@/components/ui/InfoCard'
 import { getPostHref } from '@/lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle2, Clock, Smile } from 'lucide-react'
 
-const CONSULTATION_VALUES = [
-  {
-    title: 'Avaliação Oportuna',
-    description: 'Esclarecimento dos sinais e sintomas',
-    Icon: Clock,
-    iconColor: 'var(--color-teal)',
-    iconBackground: 'rgba(29, 65, 76, 0.1)',
-  },
-  {
-    title: 'Conduta Individualizada',
-    description: 'Opções discutidas conforme cada caso',
-    Icon: CheckCircle2,
-    iconColor: 'var(--color-copper)',
-    iconBackground: 'rgba(163, 84, 66, 0.1)',
-  },
-  {
-    title: 'Acompanhamento',
-    description: 'Orientações para evolução e retorno',
-    Icon: Smile,
-    iconColor: 'var(--color-straw)',
-    iconBackground: 'rgba(209, 175, 139, 0.2)',
-  },
-] as const
+const URGENCY_STYLES = {
+  high: { accent: 'danger', dot: 'bg-red-700' },
+  medium: { accent: 'copper', dot: 'bg-copper' },
+  low: { accent: 'teal', dot: 'bg-teal' },
+} as const
 
 export default function WhenToSeek() {
   const symptoms = [
@@ -74,21 +57,6 @@ export default function WhenToSeek() {
     },
   ]
 
-  // Only the accent colour is still needed: the icon badge that used to
-  // sit beside each signal was dropped for a plain dot.
-  const getUrgencyStyles = (urgency: string) => {
-    switch (urgency) {
-      case 'high':
-        return { accent: '#b91c1c' }
-      case 'medium':
-        return { accent: 'var(--color-copper)' }
-      case 'low':
-        return { accent: 'var(--color-teal)' }
-      default:
-        return { accent: 'var(--color-straw)' }
-    }
-  }
-
   return (
     <section
       id="procurar"
@@ -107,39 +75,26 @@ export default function WhenToSeek() {
       </div>
 
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2
-            className="text-3xl lg:text-5xl font-serif font-bold mb-6"
-            style={{ color: 'var(--color-teal)' }}
-          >
-            Quando procurar uma coloproctologista?
-          </h2>
-          <div
-            className="w-20 h-1 mx-auto mb-6"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
-            }}
-          ></div>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-copper)' }}
-            >
-              Sintomas persistentes merecem atenção.
-            </span>{' '}
-            Uma avaliação ajuda a esclarecer possíveis causas e a definir
-            próximos passos de forma individualizada.
-          </p>
-        </div>
+        <SectionHeader
+          title="Quando procurar uma coloproctologista?"
+          lead={
+            <>
+              <span className="font-semibold text-copper">
+                Sintomas persistentes merecem atenção.
+              </span>{' '}
+              Uma avaliação ajuda a esclarecer possíveis causas e a definir
+              próximos passos de forma individualizada.
+            </>
+          }
+        />
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:items-stretch">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:items-stretch lg:gap-12">
             {/* Professional Image */}
-            <div className="order-2 lg:order-1 flex justify-center">
-              <div className="relative lg:h-full">
+            <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
+              <div className="relative lg:h-full lg:w-full">
                 <div
-                  className="w-80 h-128 rounded-2xl p-2 shadow-lg lg:h-full lg:w-[26rem]"
+                  className="w-80 h-128 rounded-2xl p-2 shadow-lg lg:h-full lg:w-full"
                   style={{ backgroundColor: 'rgba(163, 84, 66, 0.08)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
@@ -160,14 +115,15 @@ export default function WhenToSeek() {
             {/* Symptoms List */}
             <div className="order-1 lg:order-2 space-y-3">
               {symptoms.map((symptom, index) => {
-                const styles = getUrgencyStyles(symptom.urgency)
+                const styles =
+                  URGENCY_STYLES[symptom.urgency as keyof typeof URGENCY_STYLES]
                 const href = getPostHref(symptom.blogSlug)
 
                 return (
-                  <div
+                  <InfoCard
                     key={index}
-                    className="group card px-6 py-4 lg:px-7 lg:py-[1.15rem]"
-                    style={{ borderLeftWidth: '3px', borderLeftColor: styles.accent }}
+                    accent={styles.accent}
+                    className="!px-6 !py-4 lg:!px-7 lg:!py-[1.15rem]"
                   >
                     <div className="flex items-start gap-3.5">
                       {/* A dot instead of an icon badge: the icons repeated
@@ -176,11 +132,10 @@ export default function WhenToSeek() {
                           scanned. */}
                       <span
                         aria-hidden="true"
-                        className="mt-[9px] h-2 w-2 shrink-0 rounded-full"
-                        style={{ backgroundColor: styles.accent }}
+                        className={`mt-[9px] h-2 w-2 shrink-0 rounded-full ${styles.dot}`}
                       />
                       <div className="flex-1">
-                        <h3 className="mb-1 font-sans text-base font-semibold text-teal-deep transition-colors duration-200 group-hover:text-copper">
+                        <h3 className="mb-1 font-sans text-base font-semibold text-teal-deep">
                           {symptom.title}
                         </h3>
                         <p className="text-[0.8125rem] leading-relaxed text-gray-600">
@@ -196,37 +151,16 @@ export default function WhenToSeek() {
                         ) : null}
                       </div>
                     </div>
-                  </div>
+                  </InfoCard>
                 )
               })}
             </div>
           </div>
         </div>
 
-        {/* What the consultation delivers, then the closing conversion block.
-            The heading and paragraph that used to sit here said the same
-            thing as HighlightCta below, so only the block says it now. */}
         <div className="mt-16">
-          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-5 md:grid-cols-3">
-            {CONSULTATION_VALUES.map(({ title, description, Icon, iconColor, iconBackground }) => (
-              <div
-                key={title}
-                className="rounded-[1.125rem] border border-teal/10 bg-white p-6 text-center transition-all duration-200 hover:-translate-y-[3px] hover:border-copper hover:shadow-[0_20px_36px_-26px_rgba(29,65,76,0.45)]"
-              >
-                <div
-                  className="mx-auto mb-3.5 flex h-14 w-14 items-center justify-center rounded-full"
-                  style={{ backgroundColor: iconBackground }}
-                >
-                  <Icon className="h-6 w-6" style={{ color: iconColor }} strokeWidth={1.75} />
-                </div>
-                <h4 className="mb-1 font-sans font-semibold text-teal-deep">{title}</h4>
-                <p className="text-sm leading-relaxed text-gray-600">{description}</p>
-              </div>
-            ))}
-          </div>
-
           <HighlightCta
-            className="mx-auto mt-8 max-w-4xl text-left"
+            className="mx-auto max-w-7xl text-left"
             eyebrow="Importante lembrar"
             title="Não se automedique nem ignore sintomas persistentes."
             body="O coloproctologista é o especialista indicado para diagnosticar e tratar adequadamente as condições da região anal e intestinal."

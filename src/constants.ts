@@ -151,7 +151,7 @@ export const SITEMAP_IMAGES = [
   '/assets/dayara-profissional-vermelho.webp',
   '/assets/dayara-profissional-escuro.webp',
   '/assets/dayara-clinica.webp',
-  '/assets/operando-claro.webp',
+  '/assets/operando-claro-espelhado.webp',
   '/assets/operando-longe.webp',
   '/assets/day-clinica-pe.webp',
   '/core/lettering-blue.png',

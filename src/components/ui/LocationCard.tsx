@@ -5,6 +5,7 @@ import {
   BUSINESS_CLINIC_NAME,
 } from '@/constants'
 import { getLocationsLandingPath } from '@/lib/locations'
+import { InfoCard } from '@/components/ui/InfoCard'
 
 interface LocationCardProps {
   className?: string
@@ -20,9 +21,7 @@ interface LocationCardProps {
  */
 export function LocationCard({ className = '' }: LocationCardProps) {
   return (
-    <section
-      className={`rounded-[1.5rem] border border-beige bg-white p-6 ${className}`}
-    >
+    <InfoCard as="section" className={className}>
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
         Onde é feito
       </p>
@@ -38,6 +37,6 @@ export function LocationCard({ className = '' }: LocationCardProps) {
       >
         Ver como chegar →
       </Link>
-    </section>
+    </InfoCard>
   )
 }

@@ -3,8 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import {
-  ArrowRight,
-  ArrowUpRight,
   BookOpen,
   Clock,
   Globe,
@@ -13,6 +11,7 @@ import {
   Phone,
   Stethoscope,
 } from 'lucide-react'
+import { LinkCard } from '@/components/ui/LinkCard'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { InstagramIcon } from '@/components/ui/InstagramIcon'
@@ -216,41 +215,15 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <h2 className="mb-6 text-3xl font-semibold text-teal">Tratamentos relacionados</h2>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {treatments.map((treatment) => (
-          <Link
+          <LinkCard
             key={treatment.slug}
             href={`/tratamentos/${treatment.slug}`}
-            className="group relative flex min-h-[210px] flex-col overflow-hidden rounded-[1.5rem] border border-beige bg-white p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-copper/70 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
-          >
-            <span
-              aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-copper transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100"
-            />
-            <span className="flex items-center justify-between gap-4">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-copper">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-copper/10">
-                  <Stethoscope className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
-                </span>
-                Tratamento
-              </span>
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-beige text-copper transition-colors duration-300 group-hover:border-copper group-hover:bg-copper group-hover:text-white group-focus-visible:border-copper group-focus-visible:bg-copper group-focus-visible:text-white">
-                <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
-              </span>
-            </span>
-            <h3 className="mt-5 text-lg font-semibold leading-snug text-teal">
-              {treatment.title}
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-gray-600">
-              {treatment.homeCardDescription}
-            </p>
-            <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-copper">
-              Conhecer tratamento
-              <ArrowRight
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"
-                strokeWidth={1.8}
-                aria-hidden="true"
-              />
-            </span>
-          </Link>
+            icon={Stethoscope}
+            eyebrow="Tratamento"
+            title={treatment.title}
+            body={treatment.homeCardDescription}
+            ctaLabel="Conhecer tratamento"
+          />
         ))}
       </div>
     </section>
@@ -261,39 +234,16 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <h2 className="mb-6 text-3xl font-semibold text-teal">Leituras para antes da consulta</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {posts.map((post) => (
-          <Link
+          <LinkCard
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group relative flex h-full min-h-[250px] flex-col overflow-hidden rounded-[1.5rem] border border-beige bg-white p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-copper/70 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-copper focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
-          >
-            <span
-              aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-copper transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100"
-            />
-            <span className="flex items-center justify-between gap-4">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-copper">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-copper/10">
-                  <BookOpen className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
-                </span>
-                Artigo · {post.readingTime} min de leitura
-              </span>
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-beige text-copper transition-colors duration-300 group-hover:border-copper group-hover:bg-copper group-hover:text-white group-focus-visible:border-copper group-focus-visible:bg-copper group-focus-visible:text-white">
-                <ArrowUpRight className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
-              </span>
-            </span>
-            <h3 className="mt-5 text-lg font-semibold leading-snug text-teal">{post.title}</h3>
-            <span className="mt-3 block text-sm leading-relaxed text-gray-700">
-              {post.excerpt}
-            </span>
-            <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-copper">
-              Ler artigo
-              <ArrowRight
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"
-                strokeWidth={1.8}
-                aria-hidden="true"
-              />
-            </span>
-          </Link>
+            icon={BookOpen}
+            eyebrow={`Artigo · ${post.readingTime} min de leitura`}
+            title={post.title}
+            body={post.excerpt}
+            ctaLabel="Ler artigo"
+            minHeightClass="min-h-[250px]"
+          />
         ))}
       </div>
     </section>
@@ -451,7 +401,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </p>
             ) : null}
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {location.showAppointmentCta && location.whatsappUrl ? (
                 <Link
                   href={location.whatsappUrl}
@@ -515,7 +465,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço e contato</h2>
             {addressBlock}
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {location.showAppointmentCta && location.whatsappUrl ? (
                 <Link
                   href={location.whatsappUrl}
@@ -722,9 +672,15 @@ export default async function LocationPage({ params }: LocationPageProps) {
             ))}
           </ul>
 
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {/* The full label wraps to two lines once the button goes
+                full-width on a narrow phone, which leaves it a head taller
+                than the ghost button beside it. Only the phone drops the
+                last word; `hidden` is display:none, so a screen reader is
+                given one label, not both. */}
             <Link href="/sobre" className="btn btn-primary">
-              Conhecer a trajetória completa
+              <span className="sm:hidden">Conhecer a trajetória</span>
+              <span className="hidden sm:inline">Conhecer a trajetória completa</span>
             </Link>
             <Link href="/" className="btn btn-ghost">
               Ir para a página inicial

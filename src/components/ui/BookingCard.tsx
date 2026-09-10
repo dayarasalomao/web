@@ -41,7 +41,7 @@ export function BookingCard({
         target="_blank"
         rel="noopener noreferrer"
         data-conversion={`whatsapp-${conversionPrefix}`}
-        className="mt-6 flex items-center justify-center gap-2.5 rounded-xl bg-copper px-6 py-3.5 font-semibold text-cream transition-colors duration-200 hover:bg-copper-deep"
+        className="btn btn-soft mt-6 w-full"
       >
         <WhatsAppIcon className="h-5 w-5" />
         Agendar pelo WhatsApp
@@ -50,7 +50,7 @@ export function BookingCard({
       <a
         href={BUSINESS_TELEPHONE_HREF}
         data-conversion={`phone-${conversionPrefix}`}
-        className="mt-2.5 flex items-center justify-center rounded-xl border border-white/25 px-6 py-3 font-semibold text-cream transition-colors duration-200 hover:bg-white/10 hover:text-white"
+        className="btn mt-2.5 w-full border border-white/25 bg-transparent py-3 text-white shadow-none hover:border-white/40 hover:bg-white/10 hover:shadow-none"
       >
         {BUSINESS_TELEPHONE_NUMBER}
       </a>

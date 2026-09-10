@@ -157,14 +157,24 @@ test('active location uses one content width and exposes clear destination cards
     page.locator('header').getByRole('link', { name: /^agendar consulta$/i }),
   ).toBeVisible()
 
-  const treatmentCard = page.getByRole('link', {
-    name: /hemorroidectomia com laser de co2/i,
-  })
+  // The card is a LinkCard: the title is the only anchor, and a stretched
+  // ::after makes the whole surface clickable. So the link's accessible name
+  // is the title alone — not the eyebrow, body and CTA read as one run-on
+  // link — while the eyebrow and CTA remain visible decoration on the card.
+  const treatmentCard = page
+    .locator('article')
+    .filter({ hasText: /hemorroidectomia com laser de co2/i })
+  await expect(
+    treatmentCard.getByRole('link', { name: /^hemorroidectomia com laser de co2$/i }),
+  ).toBeVisible()
   await expect(treatmentCard.getByText(/conhecer tratamento/i)).toBeVisible()
 
-  const readingCard = page.getByRole('link', {
-    name: /primeira consulta com coloproctologista/i,
-  })
+  const readingCard = page
+    .locator('article')
+    .filter({ hasText: /primeira consulta com coloproctologista/i })
+  await expect(
+    readingCard.getByRole('link', { name: /primeira consulta com coloproctologista/i }),
+  ).toBeVisible()
   await expect(readingCard.getByText(/min de leitura/i)).toBeVisible()
   await expect(readingCard.getByText(/ler artigo/i)).toBeVisible()
 })
@@ -191,7 +201,13 @@ test('localized treatment metadata stays concise and readable', async ({ page })
 test('homepage treatment cards link into canonical treatment pages', async ({ page }) => {
   await page.goto('/')
 
-  await expect(page.getByRole('link', { name: /ver todos os tratamentos/i })).toBeVisible()
+  await expect(
+    page.getByRole('heading', { level: 2, name: /tratamentos em destaque/i }),
+  ).toBeVisible()
+  await expect(page.locator('#tratamentos article')).toHaveCount(6)
+  await expect(
+    page.locator('#tratamentos').getByRole('link', { name: /ver todos os tratamentos/i }),
+  ).toBeVisible()
 
   await page
     .getByRole('link', {
@@ -208,11 +224,15 @@ test('homepage treatment cards link into canonical treatment pages', async ({ pa
 test('homepage disease cards route to mapped treatment pages', async ({ page }) => {
   await page.goto('/')
 
-  await page
+  const card = page
     .locator('#doencas article')
     .filter({ hasText: /fissura anal/i })
-    .getByRole('link', { name: /saiba mais/i })
-    .click()
+    .first()
+
+  // "Saiba mais" is decoration; the title carries the link. Clicking the card
+  // body still navigates, because the title's stretched ::after covers it.
+  await expect(card.getByText(/saiba mais/i)).toBeVisible()
+  await card.getByRole('link', { name: /^fissura anal$/i }).click()
 
   await expect(page).toHaveURL(/\/tratamentos\/toxina-botulinica-fissura-anal$/)
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
@@ -323,7 +343,14 @@ test('treatments index renders canonical service cards', async ({ page }) => {
       name: /tratamentos com foco em precisão e conforto/i,
     }),
   ).toBeVisible()
-  await expect(page.getByRole('link', { name: /ver detalhes do tratamento/i }).first()).toBeVisible()
+  const treatmentCard = page
+    .locator('article')
+    .filter({ hasText: /hemorroidectomia com laser de co2/i })
+    .first()
+  await expect(
+    treatmentCard.getByRole('link', { name: /^hemorroidectomia com laser de co2$/i }),
+  ).toBeVisible()
+  await expect(treatmentCard.getByText(/ver detalhes do tratamento/i)).toBeVisible()
   await expect(page.getByRole('link', { name: /ver artigos do blog/i })).toBeVisible()
 
   const treatmentsHeadingWidth = await page.getByRole('heading', { level: 1 }).evaluate(

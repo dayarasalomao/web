@@ -16,8 +16,8 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <WhenToSeek />
       <Diseases />
+      <WhenToSeek />
       <Treatments />
       <LatestArticles />
       <Testimonials />

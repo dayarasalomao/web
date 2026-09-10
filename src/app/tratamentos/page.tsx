@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { LinkCard } from '@/components/ui/LinkCard'
 import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import {
@@ -106,43 +107,35 @@ export default function TreatmentsPage() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4 xl:grid-cols-6">
           {treatments.map((treatment, index) => (
-            <article
+            <LinkCard
               key={treatment.slug}
-              className={`group card flex h-full flex-col p-6 ${getTreatmentCardGridClass(index)}`}
-            >
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-                {treatment.shortTitle}
-              </p>
-              <h2 className="mb-3 font-sans text-xl font-semibold leading-snug text-teal-deep transition-colors duration-200 group-hover:text-copper">
-                {treatment.title}
-              </h2>
-              <p className="mb-5 text-base leading-relaxed text-gray-700">
-                {treatment.summary}
-              </p>
-
-              {treatment.mappedDiseaseNames.length ? (
-                <p className="mb-5 text-sm text-gray-600">
+              href={`/tratamentos/${treatment.slug}`}
+              eyebrow={treatment.shortTitle}
+              title={treatment.title}
+              titleAs="h2"
+              body={treatment.summary}
+              details={
+                <p>
+                  {treatment.mappedDiseaseNames.length ? (
+                    <>
                   Indicado em casos selecionados de:{' '}
                   <span className="font-medium text-teal">
                     {treatment.mappedDiseaseNames.join(', ')}
                   </span>
+                    </>
+                  ) : (
+                    'Conduta definida após exame clínico e avaliação individualizada.'
+                  )}
                 </p>
-              ) : (
-                <p className="mb-5 text-sm text-gray-600">
-                  Conduta definida após exame clínico e avaliação individualizada.
-                </p>
-              )}
-
-              <div className="mt-auto flex flex-col gap-3">
-                <Link href={`/tratamentos/${treatment.slug}`} className="btn btn-secondary text-center">
-                  Ver detalhes do tratamento
-                </Link>
-              </div>
-            </article>
+              }
+              ctaLabel="Ver detalhes do tratamento"
+              minHeightClass="min-h-full"
+              className={getTreatmentCardGridClass(index)}
+            />
           ))}
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl">
+        <div className="mt-16 w-full">
           <CallToActionCard
             title="Precisa de orientação para o seu caso?"
             body={

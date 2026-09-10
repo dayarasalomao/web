@@ -23,6 +23,9 @@ const config: Config = {
         sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-cinzel)', 'Georgia', 'serif'],
       },
+      borderRadius: {
+        card: '1.5rem',
+      },
     },
   },
   plugins: [],
