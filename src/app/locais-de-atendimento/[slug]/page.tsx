@@ -479,9 +479,24 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <p className="mt-5 text-sm text-gray-600">
               {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
             </p>
+
+            {/* Her own sentence, and it also gives the column the height it
+                needs so the portrait beside it can be shown at its real
+                proportions instead of cropped to a square. */}
+            <figure className="relative mt-7 overflow-hidden rounded-2xl bg-cream py-5 pl-7 pr-6">
+              <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-copper" />
+              <blockquote className="text-base italic leading-relaxed text-teal-deep">
+                “{PROFESSIONAL_PROFILE.quote}”
+              </blockquote>
+              <figcaption className="mt-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                {SEO_DOCTOR_NAME}
+              </figcaption>
+            </figure>
           </div>
 
-          <div className="min-w-0 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
+          {/* 4:5 rather than a max-height: the source is a 2:3 portrait, and
+              capping the height forced a near-square crop that cut her off. */}
+          <div className="relative min-w-0 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
             <Image
               src="/assets/dayara-sorrindo.webp"
               alt={`${SEO_DOCTOR_NAME}, coloproctologista que atende no ${location.name}, em ${location.city}/${location.stateCode}`}
@@ -489,23 +504,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
               height={2400}
               priority
               sizes="(min-width: 1024px) 42vw, 100vw"
-              className="h-full max-h-[26rem] w-full object-cover object-top lg:max-h-[32rem]"
+              className="aspect-[4/5] w-full object-cover object-[center_25%]"
             />
           </div>
         </header>
-
-        {mapEmbedUrl ? (
-          <div className="mb-12 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
-            <iframe
-              src={mapEmbedUrl}
-              title={`Mapa com a localização do ${location.name}`}
-              className="h-[360px] w-full lg:h-[420px]"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        ) : null}
 
         {location.about?.length ? (
           <section className="mb-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
@@ -543,16 +545,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     ),
                   )}
                 </div>
-
-                <figure className="relative mt-7 overflow-hidden rounded-2xl bg-cream py-6 pl-7 pr-6">
-                  <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-copper" />
-                  <blockquote className="text-lg italic leading-relaxed text-teal-deep">
-                    “{PROFESSIONAL_PROFILE.quote}”
-                  </blockquote>
-                  <figcaption className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
-                    {SEO_DOCTOR_NAME}
-                  </figcaption>
-                </figure>
               </div>
               <div className="min-h-[16rem] lg:min-h-0">
                 <Image
@@ -568,7 +560,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </section>
         ) : null}
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_0.85fr]">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço e contato</h2>
             {addressBlock}
@@ -625,9 +617,32 @@ export default async function LocationPage({ params }: LocationPageProps) {
             ) : null}
           </section>
 
-          <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
-            <h2 className="mb-5 text-2xl font-semibold text-teal">Condições avaliadas</h2>
-            <ul className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+          {mapEmbedUrl ? (
+            <div className="min-h-[20rem] overflow-hidden rounded-[2rem] border border-beige shadow-sm">
+              <iframe
+                src={mapEmbedUrl}
+                title={`Mapa com a localização do ${location.name}`}
+                className="h-full min-h-[20rem] w-full"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          ) : null}
+        </div>
+
+        {location.services.length ? (
+          <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+            <div className="mb-3 flex items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                Áreas de atuação
+              </span>
+              <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+            </div>
+            <h2 className="mb-6 text-2xl font-semibold text-teal">Condições avaliadas</h2>
+            {/* Full width and five across: ten of these stacked in a sidebar
+                left the card beside them half empty. */}
+            <ul className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {location.services.map((service) => (
                 <li
                   key={service}
@@ -642,7 +657,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               ))}
             </ul>
           </section>
-        </div>
+        ) : null}
 
         {/* Whoever arrives from a local search has never seen /sobre, so the
             credentials that justify the visit have to exist on this page
@@ -672,29 +687,30 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </div>
               <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
 
-              <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
-                <p>{PROFESSIONAL_PROFILE.shortIntroduction}</p>
-                <p>{PROFESSIONAL_PROFILE.approach}</p>
-              </div>
+              <p className="text-base leading-relaxed text-gray-700 lg:text-lg">
+                {PROFESSIONAL_PROFILE.shortIntroduction}
+              </p>
 
               <p className="mt-5 inline-flex rounded-full bg-teal/[0.06] px-4 py-1.5 text-sm font-semibold text-teal">
                 {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
               </p>
 
-              <h3 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+              <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                 Formação
               </h3>
-              <ol className="space-y-2.5">
+              <ol className="grid gap-2.5 sm:grid-cols-2">
                 {PROFESSIONAL_QUALIFICATIONS.map((qualification) => (
                   <li
                     key={qualification.title}
-                    className="tile flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl px-4 py-3"
+                    className="tile flex items-baseline gap-3 rounded-xl px-4 py-3"
                   >
                     <span className="rounded-md bg-copper/10 px-2 py-0.5 text-xs font-semibold tabular-nums text-copper">
                       {qualification.year}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="block font-semibold text-teal">{qualification.title}</span>
+                      <span className="block text-[0.9375rem] font-semibold leading-snug text-teal">
+                        {qualification.title}
+                      </span>
                       <span className="block text-sm text-gray-600">
                         {qualification.institution}
                       </span>
@@ -703,7 +719,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 ))}
               </ol>
 
-              <h3 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+              <h3 className="mb-3 mt-7 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                 Associações
               </h3>
               <ul className="flex flex-wrap gap-2">
@@ -717,7 +733,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 ))}
               </ul>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-7 flex flex-wrap gap-3">
                 <Link href="/sobre" className="btn btn-primary">
                   Conhecer a trajetória completa
                 </Link>
