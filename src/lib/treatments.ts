@@ -66,7 +66,7 @@ export const TREATMENTS: Treatment[] = [
     benefits: [
       'Corte com precisão milimétrica e menor dano térmico ao tecido saudável ao redor.',
       'Menos dor no pós-operatório imediato: revisões da literatura mostram que técnicas a laser tendem a doer menos nas primeiras 12 a 24 horas do que a cirurgia convencional.',
-      'Taxas de sangramento pós-operatório menores do que na cirurgia tradicional, já que o laser sela pequenos vasos enquanto corta.',
+      'Menos sangramento no pós-operatório nos estudos disponíveis, já que o laser sela pequenos vasos enquanto corta.',
       'Cicatrização acelerada e melhor resultado estético, com maior satisfação relatada em estudos comparativos.',
       'Planejamento cirúrgico individualizado conforme o grau, o volume e o tipo de hemorroida.',
     ],
@@ -120,9 +120,9 @@ export const TREATMENTS: Treatment[] = [
       'Sintomas persistentes que comprometem qualidade de vida.',
     ],
     benefits: [
-      'Dor significativamente menor do que na cirurgia convencional — no primeiro dia, na primeira semana e no primeiro mês.',
+      'Menos dor no pós-operatório. Os estudos disponíveis mostram diferença a favor do laser no primeiro dia, na primeira semana e no primeiro mês.',
       'Menor uso de analgésicos: em média, cerca de 2 a 3 dias a menos de analgésicos fortes.',
-      'Retorno mais rápido às atividades diárias: estudos apontam, em média, cerca de 9 a 11 dias mais cedo do que com a cirurgia convencional.',
+      'Retorno às atividades em média cerca de 9 a 11 dias mais cedo nos estudos disponíveis. O tempo real varia conforme o caso.',
       'Cuidado com o curativo mais simples, já que não há uma ferida aberta extensa.',
       'Menor risco de complicações como retenção urinária e estreitamento do canal anal.',
     ],

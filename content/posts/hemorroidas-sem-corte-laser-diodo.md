@@ -71,7 +71,7 @@ Quando as hemorroidas são um pouco mais volumosas, pode ser necessária a confe
 
 Este é o lado forte da técnica, e ele é consistente:
 
-* **Dor:** significativamente menor do que na cirurgia convencional — no primeiro dia, na primeira semana e no primeiro mês.
+* **Dor:** os estudos mostram diferença a favor do laser no primeiro dia, na primeira semana e no primeiro mês.
 * **Analgésicos:** menor quantidade e por menos tempo, em média cerca de 2 a 3 dias a menos de analgésicos fortes.
 * **Retorno às atividades:** em média cerca de 9 a 11 dias mais cedo do que com a cirurgia convencional, que costuma exigir de 3 a 4 semanas.
 * **Curativos:** mais simples, já que não há ferida aberta extensa.

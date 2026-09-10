@@ -77,7 +77,7 @@ Nessa técnica, uma fibra de laser é inserida dentro do tecido hemorroidário p
 
 O que esperar no pós-operatório:
 
-* **Dor:** significativamente menor do que na cirurgia convencional, tanto no primeiro dia quanto na primeira semana e no primeiro mês.
+* **Dor:** os estudos mostram diferença a favor do laser no primeiro dia, na primeira semana e no primeiro mês.
 * **Uso de analgésicos:** menor quantidade e por menos tempo, em média cerca de 2 a 3 dias a menos de uso de analgésicos fortes.
 * **Tempo de recuperação:** retorno mais rápido às atividades diárias, em média cerca de 9 a 11 dias mais cedo do que com a cirurgia convencional.
 * **Cuidado com o curativo:** costuma ser mais simples, já que não há uma ferida aberta extensa.
