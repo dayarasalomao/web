@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowRight, ArrowUpRight, BookOpen, Globe, Stethoscope } from 'lucide-react'
@@ -29,6 +30,11 @@ import {
   buildLocationGraph,
   serializeJsonLd,
 } from '@/lib/structured-data'
+import {
+  PROFESSIONAL_MEMBERSHIPS,
+  PROFESSIONAL_PROFILE,
+  PROFESSIONAL_QUALIFICATIONS,
+} from '@/lib/profile'
 import { getTreatmentBySlug } from '@/lib/treatments'
 
 interface LocationPageProps {
@@ -272,7 +278,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 ? `Atendimento a partir de ${launchDateLong}`
                 : 'Mudança em preparação'}
             </p>
-            <h1 className="mb-5 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+            <h1 className="mb-5 break-words text-[1.625rem] font-semibold leading-tight text-teal sm:text-4xl lg:text-[2.75rem]">
               Coloproctologista em {location.city}
             </h1>
             <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
@@ -377,16 +383,70 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <section className="container">
         <Breadcrumb items={breadcrumbItems} />
 
-        <header className="mb-12">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
-            Atendimento em {location.city}/{location.stateCode}
-          </p>
-          <h1 className="mb-5 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
-            Coloproctologista em {location.city}
-          </h1>
-          <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
-            {location.roleDescription}
-          </p>
+        {/* Landing page, not an address card: this is the page local search
+            actually lands on, so the doctor, the address and a way to book
+            all have to be reachable without scrolling. */}
+        <header className="mb-12 grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+          <div className="min-w-0">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-copper">
+              Atendimento em {location.city}/{location.stateCode}
+            </p>
+            <h1 className="mb-5 break-words text-[1.625rem] font-semibold leading-tight text-teal sm:text-4xl lg:text-[2.75rem]">
+              Coloproctologista em {location.city}
+            </h1>
+            <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
+              {location.roleDescription}
+            </p>
+
+            {location.address ? (
+              <p className="mt-6 text-base leading-relaxed text-gray-700">
+                <strong className="text-teal">{location.name}</strong>
+                {location.address.neighborhood ? ` · ${location.address.neighborhood}` : ''}
+                {location.openingHours ? ` · ${location.openingHours.label}` : ''}
+              </p>
+            ) : null}
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {location.showAppointmentCta && location.whatsappUrl ? (
+                <Link
+                  href={location.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-conversion="whatsapp-location-hero"
+                  className="btn btn-secondary"
+                >
+                  Agendar pelo WhatsApp
+                </Link>
+              ) : null}
+              {location.mapsUrl ? (
+                <Link
+                  href={location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-conversion="maps-location-hero"
+                  className="btn btn-primary"
+                >
+                  Como chegar
+                </Link>
+              ) : null}
+            </div>
+
+            <p className="mt-5 text-sm text-gray-600">
+              {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
+            </p>
+          </div>
+
+          <div className="min-w-0 overflow-hidden rounded-[2rem] border border-beige shadow-sm">
+            <Image
+              src="/assets/dayara-sorrindo.webp"
+              alt={`${SEO_DOCTOR_NAME}, coloproctologista que atende no ${location.name}, em ${location.city}/${location.stateCode}`}
+              width={1600}
+              height={2400}
+              priority
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="h-full max-h-[26rem] w-full object-cover object-top lg:max-h-[32rem]"
+            />
+          </div>
         </header>
 
         {mapEmbedUrl ? (
@@ -403,14 +463,28 @@ export default async function LocationPage({ params }: LocationPageProps) {
         ) : null}
 
         {location.about?.length ? (
-          <section className="mb-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
-            <h2 className="mb-5 text-2xl font-semibold text-teal">
-              O atendimento em {location.city}
-            </h2>
-            <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
-              {location.about.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+          <section className="mb-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
+            <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+              <div className="p-7 lg:p-9">
+                <h2 className="mb-5 text-2xl font-semibold text-teal">
+                  O atendimento em {location.city}
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
+                  {location.about.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+              <div className="min-h-[16rem] lg:min-h-0">
+                <Image
+                  src="/assets/dayara-trabalhando.webp"
+                  alt={`${SEO_DOCTOR_NAME} durante o trabalho no consultório`}
+                  width={1600}
+                  height={2400}
+                  sizes="(min-width: 1024px) 36vw, 100vw"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
             </div>
           </section>
         ) : null}
@@ -486,6 +560,62 @@ export default async function LocationPage({ params }: LocationPageProps) {
             </ul>
           </section>
         </div>
+
+        {/* Whoever arrives from a local search has never seen /sobre, so the
+            credentials that justify the visit have to exist on this page
+            too, not only one click away. */}
+        <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
+          <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
+
+          <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
+            <p>{PROFESSIONAL_PROFILE.shortIntroduction}</p>
+            <p>{PROFESSIONAL_PROFILE.approach}</p>
+          </div>
+
+          <p className="mt-5 text-sm font-semibold text-teal">
+            {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
+          </p>
+
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+                Formação
+              </h3>
+              <ul className="space-y-3">
+                {PROFESSIONAL_QUALIFICATIONS.map((qualification) => (
+                  <li key={qualification.title} className="text-base leading-relaxed text-gray-700">
+                    <span className="block font-semibold text-teal">{qualification.title}</span>
+                    <span className="block text-sm text-gray-600">
+                      {qualification.institution} · {qualification.year}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+                Associações
+              </h3>
+              <ul className="space-y-3">
+                {PROFESSIONAL_MEMBERSHIPS.map((membership) => (
+                  <li key={membership} className="text-base leading-relaxed text-gray-700">
+                    {membership}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/sobre" className="btn btn-primary">
+                  Conhecer a trajetória completa
+                </Link>
+                <Link href="/" className="btn btn-ghost">
+                  Ir para a página inicial
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {faqSection}
         {treatmentsSection}
