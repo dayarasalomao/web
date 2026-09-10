@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { InfoCard } from '@/components/ui/InfoCard'
 
 function getCardsPerView() {
   if (window.innerWidth >= 1024) return 3 // desktop
@@ -137,38 +139,20 @@ export default function Testimonials() {
       </div>
 
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2
-            className="text-3xl lg:text-5xl font-serif font-bold mb-6"
-            style={{ color: 'var(--color-teal)' }}
-          >
-            Opiniões de quem já passou por aqui
-          </h2>
-          <div
-            className="w-20 h-1 mx-auto mb-6"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
-            }}
-          ></div>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            O que nossos pacientes falam sobre o{' '}
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-copper)' }}
-            >
-              cuidado humanizado
-            </span>{' '}
-            e{' '}
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-teal)' }}
-            >
-              excelência técnica
-            </span>{' '}
-            que oferecemos
-          </p>
-        </div>
+        <SectionHeader
+          title="Opiniões de quem já passou por aqui"
+          lead={
+            <>
+              O que nossos pacientes falam sobre o{' '}
+              <span className="font-semibold text-copper">
+                cuidado humanizado
+              </span>{' '}
+              e{' '}
+              <span className="font-semibold text-teal">excelência técnica</span>{' '}
+              que oferecemos
+            </>
+          }
+        />
 
         {/* Carousel Container */}
         <div className="relative max-w-7xl mx-auto lg:px-10">
@@ -176,8 +160,7 @@ export default function Testimonials() {
           <button
             onClick={prevSlide}
             aria-label="Depoimento anterior"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80  border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg -translate-x-3"
-            style={{ color: 'var(--color-copper)' }}
+            className="absolute left-0 top-1/2 z-10 flex h-12 w-12 -translate-x-3 -translate-y-1/2 items-center justify-center rounded-full border border-beige bg-white/80 text-copper shadow-sm transition-colors duration-200 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
           >
             <svg
               className="w-6 h-6"
@@ -197,8 +180,7 @@ export default function Testimonials() {
           <button
             onClick={nextSlide}
             aria-label="Próximo depoimento"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/80  border border-gray-200 flex items-center justify-center hover:bg-white transition-all duration-200 hover:shadow-lg translate-x-3"
-            style={{ color: 'var(--color-copper)' }}
+            className="absolute right-0 top-1/2 z-10 flex h-12 w-12 translate-x-3 -translate-y-1/2 items-center justify-center rounded-full border border-beige bg-white/80 text-copper shadow-sm transition-colors duration-200 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
           >
             <svg
               className="w-6 h-6"
@@ -239,18 +221,14 @@ export default function Testimonials() {
                       (slideIndex + 1) * cardsPerView
                     )
                     .map((testimonial, cardIndex) => (
-                      <div
+                      <InfoCard
                         key={slideIndex * cardsPerView + cardIndex}
-                        className="group max-w-md mx-auto flex flex-col justify-between bg-white/80  p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:bg-white/90 relative overflow-hidden"
+                        as="article"
+                        surface="translucent"
+                        className="relative mx-auto flex max-w-md flex-col justify-between overflow-hidden"
                       >
                         {/* Decorative quote mark */}
-                        <div
-                          className="absolute -top-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center opacity-20"
-                          style={{
-                            background:
-                              'linear-gradient(135deg, var(--color-copper), var(--color-straw))',
-                          }}
-                        >
+                        <div className="absolute -right-2 -top-2 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-copper to-straw opacity-20">
                           <svg
                             className="w-4 h-4 text-white"
                             fill="currentColor"
@@ -265,8 +243,7 @@ export default function Testimonials() {
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <svg
                               key={i}
-                              className="w-4 h-4 fill-current"
-                              style={{ color: 'var(--color-straw)' }}
+                              className="h-4 w-4 fill-current text-straw"
                               viewBox="0 0 20 20"
                             >
                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -281,28 +258,19 @@ export default function Testimonials() {
 
                         {/* Patient Name */}
                         <div className="flex items-center gap-3">
-                          <div
-                            className="w-10 h-10 rounded-full flex items-center justify-center"
-                            style={{
-                              background:
-                                'linear-gradient(135deg, var(--color-copper), var(--color-straw))',
-                            }}
-                          >
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-copper to-straw">
                             <span className="text-white font-serif font-semibold text-sm">
                               {testimonial.name.charAt(0)}
                             </span>
                           </div>
                           <div>
-                            <p
-                              className="font-semibold text-sm"
-                              style={{ color: 'var(--color-teal)' }}
-                            >
+                            <p className="text-sm font-semibold text-teal">
                               {testimonial.name}
                             </p>
                             <p className="text-xs text-gray-500">Paciente</p>
                           </div>
                         </div>
-                      </div>
+                      </InfoCard>
                     ))}
                 </div>
               ))}
@@ -317,15 +285,9 @@ export default function Testimonials() {
                 onClick={() => goToSlide(index)}
                 aria-label={`Ir para depoimento ${index + 1}`}
                 aria-current={index === currentIndex ? 'true' : 'false'}
-                className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? 'w-6' : 'w-2'
+                className={`h-2 rounded-full transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper ${
+                  index === currentIndex ? 'w-6 bg-copper' : 'w-2 bg-beige'
                 }`}
-                style={{
-                  backgroundColor:
-                    index === currentIndex
-                      ? 'var(--color-copper)'
-                      : 'var(--color-beige)',
-                }}
               />
             ))}
           </div>
@@ -333,11 +295,8 @@ export default function Testimonials() {
 
         {/* Trust section */}
         <div className="text-center mt-16">
-          <div className="bg-white/60  p-8 rounded-2xl border border-gray-200 max-w-3xl mx-auto">
-            <h3
-              className="text-2xl font-serif font-bold mb-4"
-              style={{ color: 'var(--color-teal)' }}
-            >
+          <InfoCard surface="translucent" padding="spacious" className="mx-auto max-w-3xl">
+            <h3 className="mb-4 font-sans text-2xl font-bold text-teal">
               Atendimento Extraordinário
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -345,10 +304,7 @@ export default function Testimonials() {
               pacientes. Quem dera se encontrássemos profissionais com o tato e
               a sensibilidade dessa médica em outras áreas.&quot;
             </p>
-            <div
-              className="flex items-center justify-center gap-2"
-              style={{ color: 'var(--color-straw)' }}
-            >
+            <div className="flex items-center justify-center gap-2 text-straw">
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
@@ -362,7 +318,7 @@ export default function Testimonials() {
             <p className="text-sm text-gray-600 mt-2">
               Avaliação média dos pacientes
             </p>
-          </div>
+          </InfoCard>
         </div>
       </div>
     </section>

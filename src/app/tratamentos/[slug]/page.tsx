@@ -68,7 +68,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
           ]}
         />
 
-        <header className="mx-auto mb-12 max-w-4xl border-b border-beige pb-8">
+        <header className="mb-8 border-b border-beige pb-6">
           <div className="mb-4 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.14em]">
             <span className="rounded-full border border-copper/20 bg-copper/10 px-3 py-1 text-copper">
               Tratamento especializado
@@ -80,11 +80,11 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             ) : null}
           </div>
 
-          <h1 className="mb-6 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+          <h1 className="mb-4 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
             {treatment.title}
           </h1>
 
-          <p className="mb-8 text-lg leading-relaxed text-gray-700 lg:text-xl">
+          <p className="mb-6 text-lg leading-relaxed text-gray-700 lg:text-xl">
             {treatment.summary}
           </p>
 
@@ -115,7 +115,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
           </div>
         </header>
 
-        <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
           <div className="space-y-6">
             <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
               <h2 className="mb-4 text-2xl font-semibold text-teal">
@@ -248,7 +248,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
           </aside>
         </div>
 
-        <footer className="mx-auto mt-8 flex max-w-5xl flex-col gap-4 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+        <footer className="mt-8 flex flex-col gap-4 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <Link
             href="/tratamentos"
             className="font-medium text-copper transition-colors hover:text-teal"

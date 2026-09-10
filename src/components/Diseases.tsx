@@ -1,5 +1,7 @@
 import { InlinePromptCta } from '@/components/ui/InlinePromptCta'
-import Link from 'next/link'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { LinkCard } from '@/components/ui/LinkCard'
+import { Stethoscope } from 'lucide-react'
 import { getTreatmentHrefByDiseaseName } from '@/lib/treatments'
 
 export default function Diseases() {
@@ -59,26 +61,37 @@ export default function Diseases() {
     },
   ]
 
-  const mdLastRowCount = diseases.length % 2
-  const lgLastRowCount = diseases.length % 3
+  /**
+   * The homepage shows the leading conditions, not the whole list. Eleven
+   * cards made the section a wall to scroll past rather than a set to read,
+   * and the ones below the fold were the least searched. The full list stays
+   * in this file: every condition still has a treatment page, reachable from
+   * the "Ver todos os tratamentos" link in the section below and from the
+   * sitemap, so nothing is orphaned by showing fewer here.
+   */
+  const HOMEPAGE_DISEASE_COUNT = 6
+  const visibleDiseases = diseases.slice(0, HOMEPAGE_DISEASE_COUNT)
+
+  const mdLastRowCount = visibleDiseases.length % 2
+  const lgLastRowCount = visibleDiseases.length % 3
 
   const getDiseaseCardGridClass = (index: number) => {
     const classes = ['md:col-span-2', 'lg:col-span-2']
 
-    if (mdLastRowCount === 1 && index === diseases.length - 1) {
+    if (mdLastRowCount === 1 && index === visibleDiseases.length - 1) {
       classes.push('md:col-start-2')
     }
 
-    if (lgLastRowCount === 1 && index === diseases.length - 1) {
+    if (lgLastRowCount === 1 && index === visibleDiseases.length - 1) {
       classes.push('lg:col-start-3')
     }
 
     if (lgLastRowCount === 2) {
-      if (index === diseases.length - 2) {
+      if (index === visibleDiseases.length - 2) {
         classes.push('lg:col-start-2')
       }
 
-      if (index === diseases.length - 1) {
+      if (index === visibleDiseases.length - 1) {
         classes.push('lg:col-start-4')
       }
     }
@@ -107,76 +120,44 @@ export default function Diseases() {
       </div>
 
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2
-            className="text-3xl lg:text-5xl font-serif font-bold mb-6"
-            style={{ color: 'var(--color-teal)' }}
-          >
-            Doenças que trato
-          </h2>
-          <div
-            className="w-20 h-1 mx-auto mb-6"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
-            }}
-          ></div>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Especialização em{' '}
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-copper)' }}
-            >
-              coloproctologia
-            </span>{' '}
-            com tratamentos modernos e minimamente invasivos para diversas
-            condições
-          </p>
-        </div>
+        <SectionHeader
+          title="Doenças que trato"
+          lead={
+            <>
+              Especialização em{' '}
+              <span className="font-semibold text-copper">coloproctologia</span>{' '}
+              com tratamentos modernos e minimamente invasivos para diversas
+              condições
+            </>
+          }
+        />
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-6">
-          {diseases.map((disease, index) => {
+          {visibleDiseases.map((disease, index) => {
             const href = getTreatmentHrefByDiseaseName(disease.name)
             const cardGridClass = getDiseaseCardGridClass(index)
 
             return (
-              <article
+              <LinkCard
                 key={index}
-                className={`group card flex h-full flex-col p-6 ${cardGridClass}`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-1">
-                    <h3
-                      className="mb-2 font-sans text-lg font-semibold text-teal-deep transition-colors duration-200 group-hover:text-copper"
-                    >
-                      {disease.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {disease.description}
-                    </p>
-                  </div>
-                </div>
-
-                {href ? (
-                  <Link
-                    href={href}
-                    className="mt-auto pt-4 text-sm font-semibold text-copper transition-colors hover:text-teal"
-                  >
-                    Saiba mais →
-                  </Link>
-                ) : null}
-              </article>
+                href={href}
+                icon={Stethoscope}
+                title={disease.name}
+                body={disease.description}
+                ctaLabel="Saiba mais"
+                className={cardGridClass}
+              />
             )
           })}
         </div>
 
         <div className="text-center mt-12">
           <InlinePromptCta
-            className="mx-auto max-w-4xl"
+            className="mx-auto max-w-7xl"
             title="Não encontrou sua condição?"
-            description="Cada caso é único e merece uma avaliação personalizada."
-            ctaLabel="Falar com a Dra. Dayara"
-            conversionSuffix="diseases"
+            description="A página de tratamentos reúne todas as condutas e as condições atendidas em cada uma."
+            href="/tratamentos"
+            ctaLabel="Ver todos os tratamentos"
           />
         </div>
       </div>

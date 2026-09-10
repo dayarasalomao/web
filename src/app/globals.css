@@ -46,11 +46,33 @@ h1, h2, h3, h4, h5, h6 {
    black, so buttons sit on the cream background instead of floating
    above it. */
 .btn {
-  @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 font-semibold;
+  @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-center font-semibold;
   transition:
     background-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
+}
+
+/* On the narrowest phones the 28px side padding is what pushes a label onto
+   a second line once buttons go full-width. Buying the room back from the
+   padding keeps the labels intact. */
+@media (max-width: 380px) {
+  .btn {
+    padding-inline: 1.25rem;
+  }
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 3px;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+  transform: none;
 }
 
 .btn-primary {
@@ -75,11 +97,14 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 18px 30px -14px rgb(29 65 76 / 0.65);
 }
 
-/* Ghost: the system's tertiary action — no fill until hovered. */
+/* Ghost: the system's tertiary action — no fill until hovered.
+   The 1px border is paid for out of the vertical padding, so a ghost button
+   is exactly as tall as a filled one and a row mixing the two lines up. */
 .btn-ghost {
   background: transparent;
   color: var(--color-teal-deep);
   border: 1px solid rgb(29 65 76 / 0.2);
+  padding-block: calc(0.875rem - 1px);
 }
 
 .btn-ghost:hover {
@@ -87,20 +112,23 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgb(29 65 76 / 0.35);
 }
 
-/* Soft: for dark surfaces, where copper loses contrast. */
+/* Soft: for dark surfaces, where copper loses contrast.
+   Cream rather than straw — on teal it reads as the page's own surface
+   lifted onto the dark block, which is quieter than a third accent hue and
+   gives the CTA more contrast. Hover steps down to beige: cream to white
+   would be a three-value change and effectively invisible. */
 .btn-soft {
-  background: var(--color-straw);
+  background: var(--color-cream);
   color: var(--color-teal-deep);
 }
 
 .btn-soft:hover {
-  background: #ffffff;
+  background: var(--color-beige);
 }
 
 /* Tile — the quiet grouped-fact surface: condition chips, qualification
    rows. Tinted rather than white, so a page of stacked cards has more than
-   one depth to it. Unlike .card it does not lift; it is a surface, not a
-   target. */
+   one depth to it. It does not lift; it is a surface, not a target. */
 .tile {
   background: rgb(215 203 191 / 0.2);
   border: 1px solid rgb(29 65 76 / 0.06);
@@ -124,24 +152,6 @@ h1, h2, h3, h4, h5, h6 {
   .tile {
     transition: none;
   }
-}
-
-/* Cards — hairline teal border on white, lifting to a copper edge on
-   hover. Replaces the grey border and black shadow, which read as
-   generic UI rather than part of the brand. */
-.card {
-  @apply rounded-[1.125rem] border bg-white;
-  border-color: rgb(29 65 76 / 0.1);
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
-}
-
-.card:hover {
-  border-color: var(--color-copper);
-  transform: translateY(-3px);
-  box-shadow: 0 22px 40px -28px rgb(29 65 76 / 0.5);
 }
 
 /* Utilities */

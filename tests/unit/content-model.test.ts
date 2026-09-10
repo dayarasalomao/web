@@ -9,7 +9,9 @@ import {
 import {
   getAllTreatments,
   getAllTreatmentSlugs,
+  getFeaturedHomeTreatments,
   getTreatmentBySlug,
+  HOME_FEATURED_TREATMENT_SLUGS,
   DISEASE_TO_TREATMENT_SLUG,
   TREATMENT_CARD_TO_SLUG,
 } from '../../src/lib/treatments.ts'
@@ -74,6 +76,17 @@ describe('treatment content model', () => {
   it('has no duplicate treatment slugs', () => {
     const slugs = getAllTreatmentSlugs()
     assert.equal(new Set(slugs).size, slugs.length)
+  })
+
+  it('keeps the homepage treatment showcase curated and resolvable', () => {
+    const featuredTreatments = getFeaturedHomeTreatments()
+
+    assert.equal(featuredTreatments.length, 6)
+    assert.equal(featuredTreatments.length, HOME_FEATURED_TREATMENT_SLUGS.length)
+    assert.deepEqual(
+      featuredTreatments.map((treatment) => treatment.slug),
+      [...HOME_FEATURED_TREATMENT_SLUGS],
+    )
   })
 
   it('every relatedBlogSlugs entry resolves to an existing post', () => {

@@ -767,6 +767,20 @@ export const TREATMENTS: Treatment[] = [
 
 const treatmentsBySlug = new Map(TREATMENTS.map((treatment) => [treatment.slug, treatment]))
 
+/**
+ * Signature procedures shown on the homepage. The complete clinical catalog
+ * remains available at `/tratamentos`; keeping this list explicit prevents the
+ * landing page from growing whenever a new treatment page is published.
+ */
+export const HOME_FEATURED_TREATMENT_SLUGS = [
+  'hemorroidectomia-laser-co2',
+  'hemorroidas-sem-corte-laser-diodo',
+  'ligadura-elastica-hemorroidas-internas',
+  'fistula-anal-laser-vaaft-filac',
+  'cisto-pilonidal-laser-epsit',
+  'plicoma-anal-laser-co2',
+] as const
+
 export const TREATMENT_CARD_TO_SLUG: Record<string, string> = Object.fromEntries(
   TREATMENTS.map((treatment) => [treatment.homeCardTitle, treatment.slug]),
 )
@@ -788,6 +802,12 @@ export const DISEASE_TO_TREATMENT_SLUG: Record<string, string> = {
 
 export function getAllTreatments(): Treatment[] {
   return TREATMENTS
+}
+
+export function getFeaturedHomeTreatments(): Treatment[] {
+  return HOME_FEATURED_TREATMENT_SLUGS.map((slug) => treatmentsBySlug.get(slug)).filter(
+    (treatment): treatment is Treatment => treatment !== undefined,
+  )
 }
 
 export function getAllTreatmentSlugs(): string[] {

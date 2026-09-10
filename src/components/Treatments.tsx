@@ -1,24 +1,14 @@
+import { Stethoscope } from 'lucide-react'
 import { WHATSAPP_URL } from '@/constants'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { LinkCard } from '@/components/ui/LinkCard'
+import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getAllTreatments, getTreatmentHrefByCardName } from '@/lib/treatments'
+import { getFeaturedHomeTreatments, getTreatmentHref } from '@/lib/treatments'
 
 export default function Treatments() {
-  const treatments = getAllTreatments()
-
-  const getCategoryAccent = (category: string) => {
-    switch (category) {
-      case 'laser':
-        return 'var(--color-copper)'
-      case 'conservative':
-        return 'var(--color-teal)'
-      case 'innovative':
-        return 'var(--color-straw)'
-      default:
-        return 'var(--color-copper)'
-    }
-  }
-
+  const treatments = getFeaturedHomeTreatments()
   return (
     <section
       id="tratamentos"
@@ -38,45 +28,24 @@ export default function Treatments() {
 
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2
-            className="text-3xl lg:text-5xl font-serif font-bold mb-6"
-            style={{ color: 'var(--color-teal)' }}
-          >
-            Tratamentos
-          </h2>
-          <div
-            className="w-20 h-1 mx-auto mb-6"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
-            }}
-          ></div>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-copper)' }}
-            >
-              Tecnologia com indicação individualizada
-            </span>{' '}
-            e{' '}
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-teal)' }}
-            >
-              técnicas minimamente invasivas
-            </span>{' '}
-            com foco em precisão e conforto no cuidado
-          </p>
-        </div>
+        <SectionHeader
+          title="Tratamentos em destaque"
+          lead={
+            <>
+              Procedimentos e tecnologias disponíveis para casos selecionados, sempre
+              definidos após uma{' '}
+              <span className="font-semibold text-copper">avaliação individualizada</span>
+            </>
+          }
+        />
 
-        {/* First Image - operando-claro.webp - Before treatments (mobile only) */}
-        <div className="lg:hidden max-w-4xl mx-auto mb-16">
+        {/* First procedure image - before treatments (mobile only) */}
+        <div className="mx-auto mb-12 max-w-4xl lg:hidden">
           <div className="flex justify-center">
-            <div className="relative w-80 h-[480px]">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+            <div className="relative h-[400px] w-72">
+              <div className="relative h-full w-full overflow-hidden rounded-card border-4 border-white bg-white shadow-lg">
                 <Image
-                  src="/assets/operando-claro.webp"
+                  src="/assets/operando-claro-espelhado.webp"
                   alt="Dra. Dayara em procedimento especializado"
                   width={751}
                   height={1126}
@@ -95,14 +64,14 @@ export default function Treatments() {
         </div>
 
         {/* Enhanced Layout with Left and Right Images */}
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            {/* Left Image - operando-claro.webp (desktop only) */}
-            <div className="hidden lg:flex lg:col-span-3 justify-center">
-              <div className="relative w-[240px] h-[360px]">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-stretch">
+            {/* Left procedure image (desktop only) */}
+            <div className="hidden justify-center lg:col-span-3 lg:flex">
+              <div className="relative min-h-[32rem] w-full max-w-[260px]">
+                <div className="relative h-full w-full overflow-hidden rounded-card border-4 border-white bg-white shadow-lg">
                   <Image
-                    src="/assets/operando-claro.webp"
+                    src="/assets/operando-claro-espelhado.webp"
                     alt="Dra. Dayara em procedimento especializado"
                     width={751}
                     height={1126}
@@ -122,53 +91,24 @@ export default function Treatments() {
             {/* Treatments List - 2 columns */}
             <div className="lg:col-span-6 space-y-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {treatments.map((treatment, index) => {
-                  const accent = getCategoryAccent(treatment.category)
-                  const href = getTreatmentHrefByCardName(
-                    treatment.homeCardTitle,
-                  )
-                  const content = (
-                    <>
-                      <div
-                        className="absolute top-0 left-0 w-full h-0.5 opacity-40"
-                        style={{ backgroundColor: accent }}
-                      ></div>
-                      <div className="flex h-full flex-col">
-                        <h3
-                          className="mb-1 font-sans text-sm font-semibold text-teal-deep"
-                        >
-                          {treatment.homeCardTitle}
-                        </h3>
-                        <p className="text-xs text-gray-600 leading-relaxed">
-                          {treatment.homeCardDescription}
-                        </p>
-                        {href ? (
-                          <span className="mt-auto pt-3 inline-flex text-xs font-medium text-copper">
-                            Ver detalhes
-                          </span>
-                        ) : null}
-                      </div>
-                    </>
-                  )
-
-                  if (href) {
-                    return (
-                      <Link
-                        key={index}
-                        href={href}
-                        className="group card relative flex h-full p-4 transition-all duration-300 hover:-translate-y-1"
-                      >
-                        {content}
-                      </Link>
-                    )
-                  }
-
-                  return (
-                    <div key={index} className="group card relative flex h-full p-4">
-                      {content}
-                    </div>
-                  )
-                })}
+                {/* The category accent stripe that used to sit on top of each
+                    card is gone. It painted copper / teal / straw for laser /
+                    conservative / innovative, but nothing on the page said so —
+                    an unlabelled colour is decoration pretending to be data, and
+                    at 40% opacity it read as a rendering artifact. If the
+                    category is worth surfacing it belongs in the eyebrow, in
+                    words a patient can read. */}
+                {treatments.map((treatment) => (
+                  <LinkCard
+                    key={treatment.slug}
+                    density="compact"
+                    icon={Stethoscope}
+                    href={getTreatmentHref(treatment.slug)}
+                    title={treatment.homeCardTitle}
+                    body={treatment.homeCardDescription}
+                    ctaLabel="Ver detalhes"
+                  />
+                ))}
               </div>
 
               <div className="pt-4 text-center">
@@ -179,9 +119,9 @@ export default function Treatments() {
             </div>
 
             {/* Right Image - operando-longe.webp (desktop only) */}
-            <div className="hidden lg:flex lg:col-span-3 justify-center">
-              <div className="relative w-[240px] h-[360px]">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
+            <div className="hidden justify-center lg:col-span-3 lg:flex">
+              <div className="relative min-h-[32rem] w-full max-w-[260px]">
+                <div className="relative h-full w-full overflow-hidden rounded-card border-4 border-white bg-white shadow-lg">
                   <Image
                     src="/assets/operando-longe.webp"
                     alt="Dra. Dayara realizando procedimento"
@@ -202,61 +142,23 @@ export default function Treatments() {
           </div>
         </div>
 
-        {/* Second Image - operando-longe.webp - After treatments (mobile only) */}
-        <div className="lg:hidden max-w-4xl mx-auto mt-16">
-          <div className="flex justify-center">
-            <div className="relative w-80 h-[480px]">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-white">
-                <Image
-                  src="/assets/operando-longe.webp"
-                  alt="Dra. Dayara realizando procedimento"
-                  width={946}
-                  height={1419}
-                  className="w-full h-full object-cover"
-                  quality={85}
-                />
-              </div>
-
-              {/* Subtle accent elements */}
-              <div
-                className="absolute -bottom-3 -left-3 w-4 h-4 rounded-full opacity-40"
-                style={{ backgroundColor: 'var(--color-teal)' }}
-              ></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Enhanced CTA Section */}
-        <div className="text-center mt-20">
-          <div
-            className="card p-8 max-w-4xl mx-auto border-2 relative overflow-hidden"
-            style={{ borderColor: 'var(--color-copper)' }}
-          >
-            <div className="relative">
-              <h3
-                className="text-2xl lg:text-3xl font-serif font-bold mb-4"
-                style={{ color: 'var(--color-teal)' }}
-              >
-                Tecnologia aplicada com cuidado
-              </h3>
-              <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-                Cada tratamento depende do diagnóstico, da anatomia e dos
-                objetivos discutidos durante a avaliação.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-conversion="whatsapp-treatments-section"
-                  className="btn btn-secondary"
-                >
-                  Gostaria de agendar uma consulta?
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CallToActionCard
+          className="mx-auto mt-12 max-w-7xl lg:mt-20"
+          align="center"
+          title="Tecnologia aplicada com cuidado"
+          body="Cada tratamento depende do diagnóstico, da anatomia e dos objetivos discutidos durante a avaliação."
+          actions={
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-conversion="whatsapp-treatments-section"
+              className="btn btn-secondary"
+            >
+              Gostaria de agendar uma consulta?
+            </Link>
+          }
+        />
       </div>
     </section>
   )

@@ -68,7 +68,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           ]}
         />
 
-        <header className="mx-auto mb-12 max-w-4xl border-b border-beige pb-8">
+        <header className="mb-8 border-b border-beige pb-6">
           <div className="mb-4 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.14em]">
             <span className="rounded-full border border-copper/20 bg-copper/10 px-3 py-1 text-copper">
               {post.primaryKeyword}
@@ -78,11 +78,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </span>
           </div>
 
-          <h1 className="mb-6 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+          <h1 className="mb-4 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
             {post.title}
           </h1>
 
-          <p className="mb-8 text-lg leading-relaxed text-gray-700 lg:text-xl">
+          <p className="mb-6 text-lg leading-relaxed text-gray-700 lg:text-xl">
             {post.metaDescription}
           </p>
 
@@ -110,7 +110,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         <div
-          className="mx-auto max-w-4xl text-gray-700
+          className="text-gray-700
             [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-teal lg:[&_h2]:text-3xl
             [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-teal
             [&_p]:mb-5 [&_p]:text-base [&_p]:leading-8 lg:[&_p]:text-lg
@@ -136,7 +136,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {post.faqs?.length ? (
-          <section id="faq" className="mx-auto mt-16 max-w-4xl">
+          <section id="faq" className="mt-16">
             <h2 className="mb-6 text-3xl font-semibold text-teal">Perguntas frequentes</h2>
             <div className="space-y-4">
               {post.faqs.map((faq) => (
@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <RelatedPostsSection posts={relatedPosts} />
 
         {relatedTreatment ? (
-          <section className="mx-auto mt-16 max-w-4xl rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+          <section className="mt-16 rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
               Tratamento relacionado
             </p>
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </section>
         ) : null}
 
-        <div className="mx-auto mt-8 max-w-4xl">
+        <div className="mt-8">
           <CallToActionCard
             title="Precisa de avaliação especializada?"
             body={
@@ -222,7 +222,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         </div>
 
-        <footer className="mx-auto mt-8 flex max-w-4xl flex-col gap-4 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+        <footer className="mt-8 flex flex-col gap-4 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <Link href="/blog" className="font-medium text-copper transition-colors hover:text-teal">
             ← Voltar para o blog
           </Link>

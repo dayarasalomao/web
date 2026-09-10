@@ -1,6 +1,27 @@
 import Image from 'next/image'
 import { GraduationCap, Settings2, TrendingUp } from 'lucide-react'
 import { PROFESSIONAL_QUALIFICATIONS } from '@/lib/profile'
+import { CallToActionCard } from '@/components/ui/CallToActionCard'
+import { SectionHeader } from '@/components/ui/SectionHeader'
+import { InfoCard } from '@/components/ui/InfoCard'
+
+const CONTINUING_EDUCATION = [
+  {
+    title: 'Excelência Acadêmica',
+    description: 'Formação em instituições reconhecidas',
+    Icon: GraduationCap,
+  },
+  {
+    title: 'Especialização Avançada',
+    description: 'Técnicas minimamente invasivas',
+    Icon: Settings2,
+  },
+  {
+    title: 'Atualização Constante',
+    description: 'Revisão contínua de práticas e evidências',
+    Icon: TrendingUp,
+  },
+] as const
 
 export default function CV() {
   return (
@@ -22,47 +43,31 @@ export default function CV() {
       </div>
 
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2
-            className="text-3xl lg:text-5xl font-serif font-bold mb-6"
-            style={{ color: 'var(--color-teal)' }}
-          >
-            Formação e Experiência
-          </h2>
-          <div
-            className="w-20 h-1 mx-auto mb-6"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--color-copper), var(--color-straw))',
-            }}
-          ></div>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Uma trajetória de{' '}
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-copper)' }}
-            >
-              excelência acadêmica
-            </span>{' '}
-            e
-            <span
-              className="font-semibold"
-              style={{ color: 'var(--color-teal)' }}
-            >
-              {' '}
-              especialização contínua
-            </span>{' '}
-            para sustentar um cuidado atualizado e responsável
-          </p>
-        </div>
+        <SectionHeader
+          title="Formação e Experiência"
+          lead={
+            <>
+              Uma trajetória de{' '}
+              <span className="font-semibold text-copper">
+                excelência acadêmica
+              </span>{' '}
+              e
+              <span className="font-semibold text-teal">
+                {' '}
+                especialização contínua
+              </span>{' '}
+              para sustentar um cuidado atualizado e responsável
+            </>
+          }
+        />
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:gap-12">
             {/* Professional Photo */}
-            <div className="order-2 lg:order-1 flex justify-center h-full items-center">
-              <div className="relative">
+            <div className="order-2 lg:order-1 flex justify-center lg:justify-start h-full items-center">
+              <div className="relative lg:w-full">
                 <div
-                  className="w-80 h-96 lg:w-96 lg:h-[547px] rounded-2xl p-2 shadow-lg"
+                  className="w-80 h-96 lg:h-[547px] lg:w-full rounded-2xl p-2 shadow-lg"
                   style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
                 >
                   <div className="w-full h-full rounded-xl overflow-hidden bg-white shadow-lg">
@@ -74,7 +79,7 @@ export default function CV() {
                       width={912}
                       height={1368}
                       className="w-full h-full object-cover"
-                      sizes="(min-width: 1024px) 384px, 320px"
+                      sizes="(min-width: 1024px) 416px, 320px"
                       quality={85}
                     />
                   </div>
@@ -88,40 +93,18 @@ export default function CV() {
                 const isCurrent = index === PROFESSIONAL_QUALIFICATIONS.length - 1
                 return (
                   <div key={index} className="relative">
-                    <div
-                      className="group card p-4 hover:shadow-lg transition-all duration-300"
-                      style={
-                        isCurrent
-                          ? {
-                              borderLeftWidth: '3px',
-                              borderLeftColor: 'var(--color-copper)',
-                            }
-                          : undefined
-                      }
-                    >
+                    <InfoCard padding="compact" accent={isCurrent ? 'copper' : undefined}>
                       <div className="flex items-start gap-3">
                         <div className="flex-1">
                           <div className="flex items-start justify-between gap-2 mb-1">
-                            <h3
-                              className="text-base font-serif font-semibold group-hover:opacity-80 transition-opacity duration-300"
-                              style={{ color: 'var(--color-teal)' }}
-                            >
+                            <h3 className="font-sans text-base font-semibold text-teal">
                               {qualification.title}
                             </h3>
-                            <span
-                              className="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap"
-                              style={{
-                                color: 'var(--color-teal)',
-                                backgroundColor: 'rgba(29, 65, 76, 0.1)',
-                              }}
-                            >
+                            <span className="whitespace-nowrap rounded-full bg-teal/10 px-2 py-0.5 text-xs font-medium text-teal">
                               {qualification.year}
                             </span>
                           </div>
-                          <p
-                            className="font-medium mb-1 text-sm"
-                            style={{ color: 'var(--color-copper)' }}
-                          >
+                          <p className="mb-1 text-sm font-medium text-copper">
                             {qualification.institution}
                           </p>
                           <p className="text-xs text-gray-800 leading-relaxed">
@@ -129,7 +112,7 @@ export default function CV() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </InfoCard>
                   </div>
                 )
               })}
@@ -137,92 +120,32 @@ export default function CV() {
           </div>
         </div>
 
-        {/* Excellence section */}
-        <div className="text-center mt-20">
-          <div
-            className="card p-8 max-w-4xl mx-auto border-2 relative overflow-hidden"
-            style={{ borderColor: 'var(--color-teal)' }}
-          >
-            <div className="relative">
-              <h3
-                className="text-2xl lg:text-3xl font-serif font-bold mb-4"
-                style={{ color: 'var(--color-teal)' }}
+        <CallToActionCard
+          className="mx-auto mt-20 max-w-7xl"
+          align="center"
+          title="Compromisso com atualização contínua"
+          body="A formação continuada amplia as possibilidades de avaliação e tratamento, sempre respeitando a indicação e as particularidades de cada paciente."
+        >
+          <ul className="grid border-y border-beige text-left sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:divide-beige">
+            {CONTINUING_EDUCATION.map(({ title, description, Icon }) => (
+              <li
+                key={title}
+                className="flex items-start gap-3 border-b border-beige py-5 last:border-b-0 sm:border-b-0 sm:px-5 sm:first:pl-0 sm:last:pr-0"
               >
-                Compromisso com atualização contínua
-              </h3>
-              <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-                A formação continuada amplia as possibilidades de avaliação e
-                tratamento, sempre respeitando a indicação e as particularidades
-                de cada paciente.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
-                    style={{ backgroundColor: 'rgba(29, 65, 76, 0.1)' }}
-                  >
-                    <GraduationCap
-                      className="w-6 h-6"
-                      style={{ color: 'var(--color-teal)' }}
-                      strokeWidth={1.75}
-                    />
-                  </div>
-                  <h4
-                    className="font-semibold mb-1"
-                    style={{ color: 'var(--color-teal)' }}
-                  >
-                    Excelência Acadêmica
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Formação em instituições reconhecidas
-                  </p>
+                <Icon
+                  className="mt-0.5 h-5 w-5 shrink-0 text-copper"
+                  strokeWidth={1.75}
+                  aria-hidden="true"
+                />
+                <div>
+                  <p className="font-semibold leading-snug text-teal-deep">{title}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">{description}</p>
                 </div>
-                <div className="text-center">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
-                    style={{ backgroundColor: 'rgba(163, 84, 66, 0.1)' }}
-                  >
-                    <Settings2
-                      className="w-6 h-6"
-                      style={{ color: 'var(--color-copper)' }}
-                      strokeWidth={1.75}
-                    />
-                  </div>
-                  <h4
-                    className="font-semibold mb-1"
-                    style={{ color: 'var(--color-teal)' }}
-                  >
-                    Especialização Avançada
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Técnicas minimamente invasivas
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3"
-                    style={{ backgroundColor: 'rgba(209, 175, 139, 0.2)' }}
-                  >
-                    <TrendingUp
-                      className="w-6 h-6"
-                      style={{ color: 'var(--color-straw)' }}
-                      strokeWidth={1.75}
-                    />
-                  </div>
-                  <h4
-                    className="font-semibold mb-1"
-                    style={{ color: 'var(--color-teal)' }}
-                  >
-                    Atualização Constante
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Revisão contínua de práticas e evidências
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </li>
+            ))}
+          </ul>
+        </CallToActionCard>
+
       </div>
     </section>
   )

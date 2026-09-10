@@ -10,7 +10,7 @@ export function RelatedPostsSection({ posts }: RelatedPostsSectionProps) {
   if (posts.length === 0) return null
 
   return (
-    <aside className="mx-auto mt-16 max-w-4xl border-t border-beige pt-8" aria-labelledby="related-posts-heading">
+    <aside className="mt-16 border-t border-beige pt-8" aria-labelledby="related-posts-heading">
       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-copper">
         Próximas leituras
       </p>

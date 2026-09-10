@@ -127,7 +127,7 @@ export default function FaqPage() {
           ))}
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl">
+        <div className="mt-16 w-full">
           <CallToActionCard
             title="Sua dúvida não estava aqui?"
             body={

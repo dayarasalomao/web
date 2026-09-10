@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BlogCard } from '@/components/ui/BlogCard'
-import { SoftCta } from '@/components/ui/SoftCta'
+import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { getAllPosts } from '@/lib/blog'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import {
@@ -10,7 +10,7 @@ import {
   buildItemListGraph,
   serializeJsonLd,
 } from '@/lib/structured-data'
-import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 
 const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia`
 const BLOG_DESCRIPTION =
@@ -95,13 +95,30 @@ export default function BlogPage() {
         )}
 
         <div className="mt-16">
-          <SoftCta
+          <CallToActionCard
             eyebrow="Ainda com dúvidas?"
             title="Nenhum artigo substitui uma boa consulta."
             body="Se algum sintoma te preocupa, agende uma avaliação. O cuidado começa por escutar você."
-            ctaLabel="Agendar consulta"
-            conversionSuffix="blog-index"
-            secondary={{ label: 'Ver tratamentos', href: '/tratamentos' }}
+            tone="teal"
+            actions={
+              <>
+                <Link
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-conversion="whatsapp-blog-index"
+                  className="btn btn-soft"
+                >
+                  Agendar consulta
+                </Link>
+                <Link
+                  href="/tratamentos"
+                  className="btn border border-white/25 text-white hover:bg-white/10"
+                >
+                  Ver tratamentos
+                </Link>
+              </>
+            }
           />
         </div>
 
