@@ -2,7 +2,17 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowRight, ArrowUpRight, BookOpen, Globe, Stethoscope } from 'lucide-react'
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BookOpen,
+  Clock,
+  Globe,
+  Info,
+  MapPin,
+  Phone,
+  Stethoscope,
+} from 'lucide-react'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { InstagramIcon } from '@/components/ui/InstagramIcon'
@@ -114,28 +124,63 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const locationsLandingPath = getLocationsLandingPath()
   const breadcrumbItems = buildLocationBreadcrumbItems(location.city)
 
+  // Icon-led rows rather than a flat stack: address, hours and phone are
+  // three different kinds of fact and a patient scans for one of them.
+  // The label and its value stay inside one element so the strings the e2e
+  // suite asserts on remain contiguous.
   const addressBlock = location.address ? (
-    <address className="space-y-2 not-italic text-base leading-relaxed text-gray-700">
-      <strong className="block text-lg text-teal">{location.name}</strong>
-      <span className="block">{location.address.streetAddress}</span>
-      {location.address.addressDetail ? (
-        <span className="block">{location.address.addressDetail}</span>
-      ) : null}
-      {location.address.neighborhood ? (
-        <span className="block">{location.address.neighborhood}</span>
-      ) : null}
-      <span className="block">
-        {location.city}/{location.stateCode} · CEP {location.address.postalCode}
-      </span>
-      {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
-      {location.clinicPhone ? (
-        <span className="block">Telefone geral do Instituto: {location.clinicPhone}</span>
-      ) : null}
-      {location.openingHours ? (
-        <span className="block">
-          Horário da Dra. Dayara: {location.openingHours.label}
-        </span>
-      ) : null}
+    <address className="not-italic">
+      <ul className="space-y-4 text-base leading-relaxed text-gray-700">
+        <li className="flex gap-3">
+          <MapPin
+            className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+            strokeWidth={1.5}
+            aria-hidden="true"
+          />
+          <span className="min-w-0">
+            <strong className="block text-lg text-teal">{location.name}</strong>
+            <span className="block">{location.address.streetAddress}</span>
+            {location.address.addressDetail ? (
+              <span className="block">{location.address.addressDetail}</span>
+            ) : null}
+            {location.address.neighborhood ? (
+              <span className="block">{location.address.neighborhood}</span>
+            ) : null}
+            <span className="block">
+              {location.city}/{location.stateCode} · CEP {location.address.postalCode}
+            </span>
+          </span>
+        </li>
+
+        {location.openingHours ? (
+          <li className="flex gap-3">
+            <Clock
+              className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+            <span className="min-w-0">Horário da Dra. Dayara: {location.openingHours.label}</span>
+          </li>
+        ) : null}
+
+        {location.phone || location.clinicPhone ? (
+          <li className="flex gap-3">
+            <Phone
+              className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+            <span className="min-w-0">
+              {location.phone ? <span className="block">Telefone: {location.phone}</span> : null}
+              {location.clinicPhone ? (
+                <span className="block">
+                  Telefone geral do Instituto: {location.clinicPhone}
+                </span>
+              ) : null}
+            </span>
+          </li>
+        ) : null}
+      </ul>
     </address>
   ) : null
 
@@ -466,14 +511,48 @@ export default async function LocationPage({ params }: LocationPageProps) {
           <section className="mb-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
             <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
               <div className="p-7 lg:p-9">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                    Sobre o atendimento
+                  </span>
+                  <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+                </div>
                 <h2 className="mb-5 text-2xl font-semibold text-teal">
                   O atendimento em {location.city}
                 </h2>
                 <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
-                  {location.about.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
+                  {location.about.map((paragraph) =>
+                    // The practical note about colonoscopy is the one
+                    // paragraph a patient needs before travelling here, so
+                    // it is lifted out of the prose rather than left as the
+                    // last line of it.
+                    paragraph.toLowerCase().includes('colonoscopia') ? (
+                      <div
+                        key={paragraph}
+                        className="tile flex gap-3 rounded-2xl p-4 text-base lg:text-[1.0625rem]"
+                      >
+                        <Info
+                          className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+                          strokeWidth={1.5}
+                          aria-hidden="true"
+                        />
+                        <span className="min-w-0 text-gray-700">{paragraph}</span>
+                      </div>
+                    ) : (
+                      <p key={paragraph}>{paragraph}</p>
+                    ),
+                  )}
                 </div>
+
+                <figure className="relative mt-7 overflow-hidden rounded-2xl bg-cream py-6 pl-7 pr-6">
+                  <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-copper" />
+                  <blockquote className="text-lg italic leading-relaxed text-teal-deep">
+                    “{PROFESSIONAL_PROFILE.quote}”
+                  </blockquote>
+                  <figcaption className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                    {SEO_DOCTOR_NAME}
+                  </figcaption>
+                </figure>
               </div>
               <div className="min-h-[16rem] lg:min-h-0">
                 <Image
@@ -548,12 +627,16 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Condições avaliadas</h2>
-            <ul className="grid gap-3 text-gray-700 sm:grid-cols-2 lg:grid-cols-1">
+            <ul className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
               {location.services.map((service) => (
-                <li key={service} className="flex gap-3">
-                  <span aria-hidden="true" className="text-copper">
-                    •
-                  </span>
+                <li
+                  key={service}
+                  className="tile flex items-start gap-2.5 rounded-xl px-4 py-3 text-[0.9375rem] text-teal-deep"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-copper"
+                  />
                   {service}
                 </li>
               ))}
@@ -564,42 +647,71 @@ export default async function LocationPage({ params }: LocationPageProps) {
         {/* Whoever arrives from a local search has never seen /sobre, so the
             credentials that justify the visit have to exist on this page
             too, not only one click away. */}
-        <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
-          <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
+        <section className="mt-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
+          {/* Portrait on the left here: the hero and the about block both
+              put their image on the right, and a third would read as a
+              column rather than a rhythm. */}
+          <div className="grid gap-0 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="min-h-[18rem] lg:min-h-0">
+              <Image
+                src="/assets/dayara-clinica.webp"
+                alt={`Retrato de ${SEO_DOCTOR_NAME}`}
+                width={3648}
+                height={5472}
+                sizes="(min-width: 1024px) 32vw, 100vw"
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
 
-          <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
-            <p>{PROFESSIONAL_PROFILE.shortIntroduction}</p>
-            <p>{PROFESSIONAL_PROFILE.approach}</p>
-          </div>
+            <div className="min-w-0 p-7 lg:p-9">
+              <div className="mb-3 flex items-center gap-3">
+                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                  A médica
+                </span>
+                <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+              </div>
+              <h2 className="mb-5 text-2xl font-semibold text-teal">Quem vai te atender</h2>
 
-          <p className="mt-5 text-sm font-semibold text-teal">
-            {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
-          </p>
+              <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
+                <p>{PROFESSIONAL_PROFILE.shortIntroduction}</p>
+                <p>{PROFESSIONAL_PROFILE.approach}</p>
+              </div>
 
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+              <p className="mt-5 inline-flex rounded-full bg-teal/[0.06] px-4 py-1.5 text-sm font-semibold text-teal">
+                {SEO_DOCTOR_NAME} · {CRM_FULL} · {RQE_FULL}
+              </p>
+
+              <h3 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                 Formação
               </h3>
-              <ul className="space-y-3">
+              <ol className="space-y-2.5">
                 {PROFESSIONAL_QUALIFICATIONS.map((qualification) => (
-                  <li key={qualification.title} className="text-base leading-relaxed text-gray-700">
-                    <span className="block font-semibold text-teal">{qualification.title}</span>
-                    <span className="block text-sm text-gray-600">
-                      {qualification.institution} · {qualification.year}
+                  <li
+                    key={qualification.title}
+                    className="tile flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-xl px-4 py-3"
+                  >
+                    <span className="rounded-md bg-copper/10 px-2 py-0.5 text-xs font-semibold tabular-nums text-copper">
+                      {qualification.year}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block font-semibold text-teal">{qualification.title}</span>
+                      <span className="block text-sm text-gray-600">
+                        {qualification.institution}
+                      </span>
                     </span>
                   </li>
                 ))}
-              </ul>
-            </div>
+              </ol>
 
-            <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-copper">
+              <h3 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-copper">
                 Associações
               </h3>
-              <ul className="space-y-3">
+              <ul className="flex flex-wrap gap-2">
                 {PROFESSIONAL_MEMBERSHIPS.map((membership) => (
-                  <li key={membership} className="text-base leading-relaxed text-gray-700">
+                  <li
+                    key={membership}
+                    className="rounded-full border border-copper/25 bg-copper/[0.06] px-3.5 py-1.5 text-sm text-teal-deep"
+                  >
                     {membership}
                   </li>
                 ))}

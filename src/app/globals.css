@@ -97,6 +97,35 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
 }
 
+/* Tile — the quiet grouped-fact surface: condition chips, qualification
+   rows. Tinted rather than white, so a page of stacked cards has more than
+   one depth to it. Unlike .card it does not lift; it is a surface, not a
+   target. */
+.tile {
+  background: rgb(215 203 191 / 0.2);
+  border: 1px solid rgb(29 65 76 / 0.06);
+}
+
+/* Hover only where hovering exists — on touch the state sticks after a tap. */
+@media (hover: hover) {
+  .tile {
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .tile:hover {
+    background: rgb(215 203 191 / 0.34);
+    border-color: rgb(163 84 66 / 0.26);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile {
+    transition: none;
+  }
+}
+
 /* Cards — hairline teal border on white, lifting to a copper edge on
    hover. Replaces the grey border and black shadow, which read as
    generic UI rather than part of the brand. */
