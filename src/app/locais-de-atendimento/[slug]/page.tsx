@@ -378,8 +378,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
 
           {faqSection}
-          {treatmentsSection}
           {readingsSection}
+          {treatmentsSection}
 
           <CallToActionCard
             className="mt-12"
@@ -509,57 +509,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
         </header>
 
-        {location.about?.length ? (
-          <section className="mb-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
-            <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
-              <div className="p-7 lg:p-9">
-                <div className="mb-3 flex items-center gap-3">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
-                    Sobre o atendimento
-                  </span>
-                  <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
-                </div>
-                <h2 className="mb-5 text-2xl font-semibold text-teal">
-                  O atendimento em {location.city}
-                </h2>
-                <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
-                  {location.about.map((paragraph) =>
-                    // The practical note about colonoscopy is the one
-                    // paragraph a patient needs before travelling here, so
-                    // it is lifted out of the prose rather than left as the
-                    // last line of it.
-                    paragraph.toLowerCase().includes('colonoscopia') ? (
-                      <div
-                        key={paragraph}
-                        className="tile flex gap-3 rounded-2xl p-4 text-base lg:text-[1.0625rem]"
-                      >
-                        <Info
-                          className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
-                          strokeWidth={1.5}
-                          aria-hidden="true"
-                        />
-                        <span className="min-w-0 text-gray-700">{paragraph}</span>
-                      </div>
-                    ) : (
-                      <p key={paragraph}>{paragraph}</p>
-                    ),
-                  )}
-                </div>
-              </div>
-              <div className="min-h-[16rem] lg:min-h-0">
-                <Image
-                  src="/assets/dayara-trabalhando.webp"
-                  alt={`${SEO_DOCTOR_NAME} durante o trabalho no consultório`}
-                  width={1600}
-                  height={2400}
-                  sizes="(min-width: 1024px) 36vw, 100vw"
-                  className="h-full w-full object-cover object-top"
-                />
-              </div>
-            </div>
-          </section>
-        ) : null}
-
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <section className="rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <h2 className="mb-5 text-2xl font-semibold text-teal">Endereço e contato</h2>
@@ -631,6 +580,57 @@ export default async function LocationPage({ params }: LocationPageProps) {
           ) : null}
         </div>
 
+        {location.about?.length ? (
+          <section className="mt-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
+            <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+              <div className="p-7 lg:p-9">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+                    Sobre o atendimento
+                  </span>
+                  <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
+                </div>
+                <h2 className="mb-5 text-2xl font-semibold text-teal">
+                  O atendimento em {location.city}
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
+                  {location.about.map((paragraph) =>
+                    // The practical note about colonoscopy is the one
+                    // paragraph a patient needs before travelling here, so
+                    // it is lifted out of the prose rather than left as the
+                    // last line of it.
+                    paragraph.toLowerCase().includes('colonoscopia') ? (
+                      <div
+                        key={paragraph}
+                        className="tile flex gap-3 rounded-2xl p-4 text-base lg:text-[1.0625rem]"
+                      >
+                        <Info
+                          className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
+                          strokeWidth={1.5}
+                          aria-hidden="true"
+                        />
+                        <span className="min-w-0 text-gray-700">{paragraph}</span>
+                      </div>
+                    ) : (
+                      <p key={paragraph}>{paragraph}</p>
+                    ),
+                  )}
+                </div>
+              </div>
+              <div className="min-h-[16rem] lg:min-h-0">
+                <Image
+                  src="/assets/dayara-trabalhando.webp"
+                  alt={`${SEO_DOCTOR_NAME} durante o trabalho no consultório`}
+                  width={1600}
+                  height={2400}
+                  sizes="(min-width: 1024px) 36vw, 100vw"
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {location.services.length ? (
           <section className="mt-12 rounded-[2rem] border border-beige bg-white p-7 shadow-sm lg:p-9">
             <div className="mb-3 flex items-center gap-3">
@@ -642,15 +642,18 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <h2 className="mb-6 text-2xl font-semibold text-teal">Condições avaliadas</h2>
             {/* Full width and five across: ten of these stacked in a sidebar
                 left the card beside them half empty. */}
-            <ul className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {/* Chips that size to their text rather than a fixed grid: the
+                names run from two words to four, and equal-width cells left
+                half of them padded with empty space. */}
+            <ul className="flex flex-wrap gap-2.5">
               {location.services.map((service) => (
                 <li
                   key={service}
-                  className="tile flex items-start gap-2.5 rounded-xl px-4 py-3 text-[0.9375rem] text-teal-deep"
+                  className="tile inline-flex max-w-full items-center gap-2.5 rounded-full py-2.5 pl-4 pr-5 text-[0.9375rem] text-teal-deep"
                 >
                   <span
                     aria-hidden="true"
-                    className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-copper"
+                    className="h-1.5 w-1.5 shrink-0 rounded-full bg-copper"
                   />
                   {service}
                 </li>
@@ -662,6 +665,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
         {/* Whoever arrives from a local search has never seen /sobre, so the
             credentials that justify the visit have to exist on this page
             too, not only one click away. */}
+        {faqSection}
+
         <section className="mt-12 overflow-hidden rounded-[2rem] border border-beige bg-white shadow-sm">
           {/* Portrait on the left here: the hero and the about block both
               put their image on the right, and a third would read as a
@@ -745,9 +750,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
         </section>
 
-        {faqSection}
-        {treatmentsSection}
         {readingsSection}
+        {treatmentsSection}
 
         {location.showAppointmentCta && location.whatsappUrl ? (
           <CallToActionCard
