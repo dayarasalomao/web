@@ -53,11 +53,12 @@ export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia 
 export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
 
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
+export const SEO_SOCIAL_IMAGE = '/opengraph-image'
 export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
 
 export const TWITTER_HANDLE = '@dradayarasalomao'
 
-export const BLOG_DEFAULT_OG_IMAGE = SEO_IMAGE
+export const BLOG_DEFAULT_OG_IMAGE = SEO_SOCIAL_IMAGE
 export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
 
 // =================================================================
@@ -80,7 +81,15 @@ export const CRM_COUNCIL_URL = 'https://crmms.org.br/'
 // footer and Physician `sameAs` during the transition.
 export const DOCTORALIA_URL = ''
 
-export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6'
+// The practitioner's own verified Google Business Profile. Keep this separate
+// from the clinic's map listing: they are two different entities in JSON-LD.
+export const GOOGLE_BUSINESS_PROFILE_URL = 'https://share.google/xtnb20zDzJn8N3B6G'
+
+// URL to set manually as the website field inside the Google Business Profile.
+// Canonicals deliberately remain clean; this URL exists only for attribution.
+export const GOOGLE_BUSINESS_PROFILE_WEBSITE_URL = `${SITE_URL}?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile`
+
+export const CLINIC_GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6'
 
 // =================================================================
 // BUSINESS INFORMATION (Used in JSON-LD Schema)
@@ -111,8 +120,6 @@ export const BUSINESS_GEO = {
 }
 
 export const BUSINESS_HOURS = 'Mo-Fr 09:00-18:00'
-export const BUSINESS_PAYMENT = 'Cash, Credit Card, Health Insurance'
-export const BUSINESS_CURRENCY = 'BRL'
 
 // =================================================================
 // PHYSICIAN DATA (Used in JSON-LD Schema)

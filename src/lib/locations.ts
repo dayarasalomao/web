@@ -25,7 +25,7 @@ import {
   BUSINESS_TELEPHONE_NUMBER,
   BUSINESS_HOURS,
   WHATSAPP_URL,
-  GOOGLE_MAPS_URL,
+  CLINIC_GOOGLE_MAPS_URL,
 } from '../constants.ts'
 
 export type LocationStatus = 'active' | 'planned'
@@ -158,7 +158,7 @@ export const LOCATIONS: PracticeLocation[] = [
       closes: '18:00',
       schema: BUSINESS_HOURS,
     },
-    mapsUrl: GOOGLE_MAPS_URL,
+    mapsUrl: CLINIC_GOOGLE_MAPS_URL,
     websiteUrl: 'https://www.institutodigestivo.com.br/',
     instagramUrl: 'https://www.instagram.com/institutodigestivo/',
     roleDescription:

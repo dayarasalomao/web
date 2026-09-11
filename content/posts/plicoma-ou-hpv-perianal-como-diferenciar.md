@@ -14,6 +14,12 @@ secondaryKeywords:
   - lesão nova na região anal
 targetAudience: patients
 intent: awareness
+image:
+  src: /assets/blog/plicoma-x-hpv-perianal.webp
+  alt: Comparação entre plicoma anal e HPV perianal
+  caption: Ilustração educativa comparando uma dobra lisa de pele e lesões verrucosas perianais.
+  width: 1600
+  height: 873
 order: 34
 relatedPosts:
   - plicoma-anal-causas-e-tratamento

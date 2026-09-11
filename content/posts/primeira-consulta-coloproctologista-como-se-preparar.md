@@ -20,6 +20,15 @@ relatedPosts:
   - dor-ao-evacuar-quando-investigar
   - alteracoes-habito-intestinal-quando-avaliar
   - prurido-anal-causas-cuidados
+sources:
+  - title: Tratado de Coloproctologia — preparo e técnica do exame proctológico
+    organization: Sociedade Brasileira de Coloproctologia
+    url: https://sbcp.org.br/medico/publicacao/tratado-de-coloproctologia/
+    accessedAt: 2026-09-11
+  - title: Informações ampliadas para pacientes e descrição do exame
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: Preciso fazer algum preparo antes da consulta com coloproctologista?
     answer: >-
@@ -124,11 +133,6 @@ Se a dúvida começou por um sintoma específico, estas leituras podem ajudar a 
 Alguns sinais pedem avaliação mais rápida. Procure atendimento de urgência diante de sangramento em grande quantidade, desmaio ou fraqueza importante, febre com dor e inchaço na região anal, piora rápida do estado geral ou dor intensa que não permite as atividades habituais.
 
 Esses sinais não definem um diagnóstico sozinhos, mas precisam de avaliação sem demora.
-
-## Fontes médicas
-
-- [Sociedade Brasileira de Coloproctologia — Tratado de Coloproctologia, capítulo sobre preparo e técnica do exame proctológico](https://sbcp.org.br/medico/publicacao/tratado-de-coloproctologia/)
-- [ASCRS — informações ampliadas para pacientes com doença hemorroidária e descrição do exame](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
 
 ## Próximo passo
 

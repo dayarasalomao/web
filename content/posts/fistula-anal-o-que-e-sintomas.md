@@ -14,6 +14,12 @@ secondaryKeywords:
   - abscesso perianal recorrente
 targetAudience: patients
 intent: awareness
+image:
+  src: /assets/blog/fistula-anal-etapas-formacao.webp
+  alt: Etapas de formação de uma fístula anal
+  caption: Ilustração educativa da evolução da infecção glandular até a formação de um trajeto crônico.
+  width: 1376
+  height: 768
 order: 17
 relatedPosts:
   - por-que-a-fistula-anal-aparece

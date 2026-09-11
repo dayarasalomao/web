@@ -14,6 +14,12 @@ secondaryKeywords:
   - tratamento de HPV anal
 targetAudience: patients
 intent: awareness
+image:
+  src: /assets/blog/plicoma-x-hpv-perianal.webp
+  alt: Comparação visual entre plicoma anal e verruga de HPV perianal
+  caption: Ilustração educativa de diferenças visuais que não substituem a avaliação médica presencial.
+  width: 1600
+  height: 873
 order: 18
 relatedPosts:
   - plicoma-ou-hpv-perianal-como-diferenciar

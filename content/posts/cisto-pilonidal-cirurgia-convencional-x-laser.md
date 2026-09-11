@@ -14,6 +14,12 @@ secondaryKeywords:
   - técnica de retalho cisto pilonidal
 targetAudience: patients
 intent: consideration
+image:
+  src: /assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp
+  alt: Comparação entre cirurgia convencional e laser SiLaC para cisto pilonidal
+  caption: Ilustração educativa das diferenças entre a excisão convencional e a abordagem minimamente invasiva com fibra de laser.
+  width: 1600
+  height: 893
 featured: true
 order: 29
 relatedPosts:

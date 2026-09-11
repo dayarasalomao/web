@@ -56,11 +56,11 @@ export default function Hero() {
                     alt="Retrato profissional da Dra. Dayara Salomão"
                     width={912}
                     height={1368}
-                    className="w-full h-full object-contain scale-125"
+                    className="h-full w-full object-cover object-[center_18%]"
                     priority
                     fetchPriority="high"
-                    sizes="(min-width: 1024px) 384px, 344px"
-                    quality={85}
+                    sizes="(min-width: 1024px) 352px, 312px"
+                    quality={75}
                   />
                 </div>
               </div>

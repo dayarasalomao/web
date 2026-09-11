@@ -6,7 +6,7 @@ import {
   CONTACT_EMAIL,
   CRM_FULL,
   DOCTORALIA_URL,
-  GOOGLE_MAPS_URL,
+  CLINIC_GOOGLE_MAPS_URL,
   RQE_FULL,
 } from '@/constants'
 import Image from 'next/image'
@@ -152,9 +152,9 @@ export default function Footer() {
                   Perfil no Doctoralia
                 </Link>
               ) : null}
-              {GOOGLE_MAPS_URL ? (
+              {CLINIC_GOOGLE_MAPS_URL ? (
                 <Link
-                  href={GOOGLE_MAPS_URL}
+                  href={CLINIC_GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-conversion="maps-footer"

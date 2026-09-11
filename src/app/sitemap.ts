@@ -78,6 +78,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post.lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+      ...(post.cardImage
+        ? { images: [canonicalUrl(post.cardImage.src)] }
+        : {}),
     })),
     ...treatments.map((treatment) => ({
       url: canonicalUrl(`/tratamentos/${treatment.slug}`),

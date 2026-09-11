@@ -14,6 +14,12 @@ secondaryKeywords:
   - antibiótico depois de drenar abscesso
 targetAudience: patients
 intent: awareness
+image:
+  src: /assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp
+  alt: Evolução do abscesso anal e formação de fístula
+  caption: Ilustração educativa comparando drenagem, persistência do trajeto e formação de fístula anal.
+  width: 1024
+  height: 572
 order: 32
 relatedPosts:
   - por-que-a-fistula-anal-aparece

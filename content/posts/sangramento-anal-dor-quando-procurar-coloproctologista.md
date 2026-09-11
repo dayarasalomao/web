@@ -14,6 +14,10 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 20
+relatedPosts:
+  - primeira-consulta-coloproctologista-como-se-preparar
+  - dor-ao-evacuar-quando-investigar
+  - doenca-hemorroidaria-sintomas-graus
 faqs:
   - question: Sangramento anal é sempre hemorroida?
     answer: >-

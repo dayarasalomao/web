@@ -22,6 +22,15 @@ relatedPosts:
   - sangramento-anal-dor-quando-procurar-coloproctologista
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - hemorroida-ou-plicoma-como-diferenciar
+sources:
+  - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf
+    accessedAt: 2026-09-11
+  - title: Informações ampliadas para pacientes com doença hemorroidária
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: Toda hemorroida causa dor?
     answer: >-
@@ -131,11 +140,6 @@ Uma comparação responsável considera:
 Procure atendimento se houver sangramento em grande quantidade, tontura ou fraqueza, dor forte com febre, inchaço progressivo, perda de peso sem explicação ou alteração persistente do hábito intestinal.
 
 Mesmo um sangramento pequeno e recorrente merece ser investigado, porque hemorroida é apenas uma das causas possíveis.
-
-## Fontes médicas
-
-* [Diretriz da ASCRS para o tratamento de hemorroidas (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-* [ASCRS — informações ampliadas para pacientes com doença hemorroidária](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
 
 ## Próximo passo
 

@@ -20,6 +20,7 @@ npm run dev
 npm run build
 npm run lint
 npm run test:unit
+npm run audit:seo
 npm run e2e
 ```
 
@@ -43,7 +44,11 @@ tests/                          Unit and Playwright tests
 
 Most homepage copy lives directly in section components. Shared contact details, SEO strings, credentials, schema inputs, sitemap images, and analytics flags live in `src/constants.ts`. Blog articles live in `content/posts`, treatment landing pages are backed by structured data in `src/lib/treatments.ts`, and reusable practitioner biography data lives in `src/lib/profile.ts`. The standalone `/sobre` route is the canonical professional profile linked from article bylines.
 
-When changing contact details, credentials, treatments, or SEO positioning, check the relevant component, `src/constants.ts`, `docs/website_content.md`, and `public/llms.txt`.
+When changing contact details, credentials, treatments, or SEO positioning, check the relevant component, `src/constants.ts`, `docs/website_content.md`, and `public/llms.txt`. The repeatable Search Console/GA4 workflow and the attributed Google Business Profile URL are documented in `docs/seo-local-operacao.md`.
+
+Blog frontmatter supports structured `sources` and an enriched primary `image` (`src`, `alt`, `caption`, `width`, and `height`). Sources are rendered visibly and mirrored to `Article.citation`; enriched images generate `ImageObject` data and sitemap image entries. Keep intrinsic dimensions for every Markdown image in `src/lib/editorial-images.ts` to prevent layout shift.
+
+Local entity links are intentionally separate: `GOOGLE_BUSINESS_PROFILE_URL` belongs to the physician, while `CLINIC_GOOGLE_MAPS_URL` belongs to the Instituto clinic location. `src/lib/seo-map.ts` assigns strategic searches to canonical pages and `npm run audit:seo` checks the editorial graph for conflicts and broken links.
 
 ## Environment
 

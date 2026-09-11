@@ -3,18 +3,32 @@ import assert from 'node:assert/strict'
 import type { Thing } from 'schema-dts'
 import {
   buildBreadcrumbGraph,
+  buildBlogPostGraph,
+  buildGlobalGraph,
   buildLocationBreadcrumbItems,
+  buildLocationGraph,
+  buildPracticeLocationId,
+  serializeJsonLd,
 } from '../../src/lib/structured-data.ts'
 import { toSchemaDateTime } from '../../src/lib/dates.ts'
 import {
   calculateReadingTime,
   extractItalicHook,
   extractFirstImage,
+  getPostBySlug,
   getTargetAudienceLabel,
   getContentIntentLabel,
   TargetAudience,
   ContentIntent,
 } from '../../src/lib/blog.ts'
+import {
+  CLINIC_GOOGLE_MAPS_URL,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  GOOGLE_BUSINESS_PROFILE_WEBSITE_URL,
+  SITE_URL,
+} from '../../src/constants.ts'
+import { getStrategicTarget, STRATEGIC_SEARCH_TARGETS } from '../../src/lib/seo-map.ts'
+import { runSeoContentAudit } from '../../src/lib/seo-audit.ts'
 import {
   getAllLocations,
   getIndexableLocations,
@@ -247,5 +261,70 @@ describe('structured data', () => {
     assert.equal(items.length, 3)
     assert.equal(items[1].item, 'https://www.dayarasalomao.com.br/blog')
     assert.equal(items[2].item, undefined)
+  })
+
+  it('separates the physician profile from the clinic map entity', () => {
+    const globalGraph = buildGlobalGraph() as { '@graph': Array<Record<string, unknown>> }
+    const physician = globalGraph['@graph'].find((node) => node['@type'] === 'Physician')
+    const website = globalGraph['@graph'].find((node) => node['@type'] === 'WebSite')
+
+    assert.ok(physician)
+    assert.ok(website)
+    assert.equal(
+      globalGraph['@graph'].some((node) => node['@type'] === 'MedicalOrganization'),
+      false,
+    )
+    assert.ok((physician.sameAs as string[]).includes(GOOGLE_BUSINESS_PROFILE_URL))
+    assert.ok(!(physician.sameAs as string[]).includes(CLINIC_GOOGLE_MAPS_URL))
+    assert.ok((physician.sameAs as string[]).every((url) => /^https:\/\//.test(url)))
+    assert.equal(physician.openingHours, undefined)
+    assert.equal(physician.hasOfferCatalog, undefined)
+    assert.deepEqual(physician.workLocation, {
+      '@id': buildPracticeLocationId('campo-grande'),
+    })
+    assert.deepEqual(website.publisher, { '@id': `${SITE_URL}#physician` })
+
+    const location = getLocationBySlug('campo-grande')
+    assert.ok(location)
+    const locationGraph = buildLocationGraph(location) as {
+      '@graph': Array<Record<string, unknown>>
+    }
+    const clinic = locationGraph['@graph'].find((node) => node['@type'] === 'MedicalClinic')
+    assert.ok(clinic)
+    assert.equal(clinic['@id'], buildPracticeLocationId('campo-grande'))
+    assert.ok((clinic.sameAs as string[]).includes(CLINIC_GOOGLE_MAPS_URL))
+    assert.ok(!(clinic.sameAs as string[]).includes(GOOGLE_BUSINESS_PROFILE_URL))
+    assert.ok((clinic.sameAs as string[]).every((url) => /^https:\/\//.test(url)))
+  })
+
+  it('serializes structured sources as visible Article citations', () => {
+    const post = getPostBySlug('ligadura-elastica-doi-recuperacao-cuidados')
+    assert.ok(post?.sources?.length)
+    const graph = buildBlogPostGraph(post) as { '@graph': Array<Record<string, unknown>> }
+    const article = graph['@graph'].find((node) => node['@type'] === 'Article')
+    assert.ok(article)
+    assert.equal((article.citation as unknown[]).length, post.sources.length)
+    assert.doesNotThrow(() => JSON.parse(serializeJsonLd(graph)))
+  })
+})
+
+describe('seo architecture', () => {
+  it('maps every strategic search to an existing audited page', () => {
+    assert.equal(
+      getStrategicTarget('Proctologista Campo Grande')?.canonicalPath,
+      '/locais-de-atendimento/campo-grande',
+    )
+    assert.equal(new Set(STRATEGIC_SEARCH_TARGETS.map((target) => target.query)).size, STRATEGIC_SEARCH_TARGETS.length)
+    assert.deepEqual(
+      runSeoContentAudit().filter((issue) => issue.severity === 'error'),
+      [],
+    )
+  })
+
+  it('publishes the exact attributed URL for the Google profile website field', () => {
+    assert.equal(
+      GOOGLE_BUSINESS_PROFILE_WEBSITE_URL,
+      'https://www.dayarasalomao.com.br/?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile',
+    )
   })
 })

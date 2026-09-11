@@ -11,6 +11,7 @@ import {
   serializeJsonLd,
 } from '@/lib/structured-data'
 import { getAllTreatments } from '@/lib/treatments'
+import { getLocationsLandingPath } from '@/lib/locations'
 
 const TREATMENTS_TITLE = `Tratamentos — ${SEO_DOCTOR_NAME} | Coloproctologia`
 const TREATMENTS_DESCRIPTION =
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
 
 export default function TreatmentsPage() {
   const treatments = getAllTreatments()
+  const locationPath = getLocationsLandingPath()
   const mdLastRowCount = treatments.length % 2
   const xlLastRowCount = treatments.length % 3
   const breadcrumbGraph = buildBreadcrumbGraph([
@@ -103,6 +105,14 @@ export default function TreatmentsPage() {
             para doença hemorroidária, fissura anal, fístula anal, HPV perianal, cisto
             pilonidal e outros quadros anorretais.
           </p>
+          <nav aria-label="Atalhos de tratamento" className="mt-7 flex flex-wrap gap-3">
+            <Link href={locationPath} className="btn btn-secondary">
+              Atendimento em Campo Grande
+            </Link>
+            <Link href="/blog" className="btn btn-primary">
+              Conteúdo médico relacionado
+            </Link>
+          </nav>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4 xl:grid-cols-6">

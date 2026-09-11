@@ -14,6 +14,12 @@ secondaryKeywords:
   - sangramento ao evacuar
 targetAudience: patients
 intent: awareness
+image:
+  src: /assets/blog/hemorroida-x-plicoma-anal.webp
+  alt: Comparação anatômica entre hemorroida e plicoma anal
+  caption: Ilustração educativa comparando tecido vascular aumentado e excesso de pele na região anal.
+  width: 1600
+  height: 893
 featured: true
 order: 33
 relatedPosts:

@@ -496,6 +496,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href={location.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-conversion="institution-location-website"
                     className="inline-flex items-center gap-1.5 font-medium text-copper underline decoration-copper/30 underline-offset-4 hover:text-teal"
                   >
                     <Globe className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
