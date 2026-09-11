@@ -314,6 +314,10 @@ describe('seo architecture', () => {
       getStrategicTarget('Proctologista Campo Grande')?.canonicalPath,
       '/locais-de-atendimento/campo-grande',
     )
+    assert.equal(
+      getStrategicTarget('Coloproctologista Campo Grande MS')?.canonicalPath,
+      '/locais-de-atendimento/campo-grande',
+    )
     assert.equal(new Set(STRATEGIC_SEARCH_TARGETS.map((target) => target.query)).size, STRATEGIC_SEARCH_TARGETS.length)
     assert.deepEqual(
       runSeoContentAudit().filter((issue) => issue.severity === 'error'),

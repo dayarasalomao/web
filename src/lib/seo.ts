@@ -7,6 +7,7 @@ import {
   BLOG_DEFAULT_OG_IMAGE_ALT,
   TWITTER_HANDLE,
   SEO_LOCATION,
+  SEO_LOCATION_WITH_STATE,
 } from '../constants.ts'
 import type { BlogPost } from './blog.ts'
 import type { Treatment } from './treatments.ts'
@@ -114,8 +115,8 @@ export function buildPostMetadata(post: BlogPost): Metadata {
 export function buildTreatmentMetadata(treatment: Treatment): Metadata {
   const url = buildCanonical(`/tratamentos/${treatment.slug}`)
   const imageAlt = `${treatment.title} — ${SEO_DOCTOR_NAME}`
-  const localizedTitle = `${treatment.shortTitle} em ${SEO_LOCATION} | Dra. Dayara`
-  const localizedDescription = `${treatment.shortTitle} em ${SEO_LOCATION}: indicações, como funciona e cuidados. A ${SEO_DOCTOR_NAME} avalia cada caso de forma individual.`
+  const localizedTitle = `${treatment.shortTitle} em ${SEO_LOCATION_WITH_STATE} | Dra. Dayara`
+  const localizedDescription = `${treatment.shortTitle} em ${SEO_LOCATION_WITH_STATE}: indicações, como funciona e cuidados. A ${SEO_DOCTOR_NAME} avalia cada caso de forma individual.`
   const localizedKeywords = [
     ...treatment.keywords,
     ...treatment.keywords.map(

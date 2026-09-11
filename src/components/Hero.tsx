@@ -1,4 +1,4 @@
-import { SEO_LOCATION, WHATSAPP_URL } from '@/constants'
+import { SEO_LOCATION_WITH_STATE, WHATSAPP_URL } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PROFESSIONAL_MEMBERSHIPS } from '@/lib/profile'
@@ -90,10 +90,10 @@ export default function Hero() {
               ></div>
 
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-copper">
-                Atendimento atual em {SEO_LOCATION}
+                Atendimento atual em {SEO_LOCATION_WITH_STATE}
               </p>
               <h1 className="mb-6 text-3xl font-semibold leading-tight text-teal lg:text-5xl">
-                Coloproctologista em {SEO_LOCATION} com foco em tratamentos
+                Coloproctologista em {SEO_LOCATION_WITH_STATE} com foco em tratamentos
                 minimamente invasivos
               </h1>
 

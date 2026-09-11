@@ -16,6 +16,11 @@ export const STRATEGIC_SEARCH_TARGETS: StrategicSearchTarget[] = [
     intent: 'local',
   },
   {
+    query: 'coloproctologista campo grande ms',
+    canonicalPath: '/locais-de-atendimento/campo-grande',
+    intent: 'local',
+  },
+  {
     query: 'proctologista campo grande',
     canonicalPath: '/locais-de-atendimento/campo-grande',
     intent: 'local',

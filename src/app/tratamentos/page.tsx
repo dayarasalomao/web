@@ -107,7 +107,7 @@ export default function TreatmentsPage() {
           </p>
           <nav aria-label="Atalhos de tratamento" className="mt-7 flex flex-wrap gap-3">
             <Link href={locationPath} className="btn btn-secondary">
-              Atendimento em Campo Grande
+              Atendimento em Campo Grande, MS
             </Link>
             <Link href="/blog" className="btn btn-primary">
               Conteúdo médico relacionado

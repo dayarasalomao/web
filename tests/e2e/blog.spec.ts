@@ -207,7 +207,7 @@ test('localized treatment metadata stays concise and readable', async ({ page })
   await page.goto('/tratamentos/ligadura-elastica-hemorroidas-internas')
 
   const description = await page.locator('meta[name="description"]').getAttribute('content')
-  expect(description).toMatch(/^Ligadura elástica em Campo Grande:/)
+  expect(description).toMatch(/^Ligadura elástica em Campo Grande, MS:/)
   expect(description?.length).toBeGreaterThanOrEqual(120)
   expect(description?.length).toBeLessThanOrEqual(160)
 })

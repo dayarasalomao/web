@@ -44,22 +44,23 @@ export const BUSINESS_FOOTER_LOCATION = `${BUSINESS_CLINIC_NAME} - ${BUSINESS_AD
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
 export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
+export const SEO_LOCATION_WITH_STATE = `${SEO_LOCATION}, ${BUSINESS_ADDRESS_REGION_CODE}`
 
-export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
-export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} no ${BUSINESS_CLINIC_NAME}. Avaliação e tratamentos para hemorroidas, fissura, fístula, HPV anal e cisto pilonidal.`
+export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
+export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION_WITH_STATE} no ${BUSINESS_CLINIC_NAME}. Avaliação e tratamentos para hemorroidas, fissura, fístula, HPV anal e cisto pilonidal.`
 export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, ${BUSINESS_CLINIC_NAME}, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
 
-export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
-export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
+export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION_WITH_STATE}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
+export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION_WITH_STATE}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
 
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
 export const SEO_SOCIAL_IMAGE = '/opengraph-image'
-export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
+export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
 
 export const TWITTER_HANDLE = '@dradayarasalomao'
 
 export const BLOG_DEFAULT_OG_IMAGE = SEO_SOCIAL_IMAGE
-export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
+export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
 
 // =================================================================
 // PROFESSIONAL CREDENTIALS (Used in Physician JSON-LD + Footer)

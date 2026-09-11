@@ -59,7 +59,7 @@ function buildMapEmbedUrl(location: PracticeLocation): string | null {
 }
 
 function buildLocationTitle(location: PracticeLocation): string {
-  return `Coloproctologista em ${location.city} | ${SEO_DOCTOR_NAME}`
+  return `Coloproctologista em ${location.city}, ${location.stateCode} | ${SEO_DOCTOR_NAME}`
 }
 
 function buildLocationDescription(location: PracticeLocation, indexable: boolean): string {
@@ -189,7 +189,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         Dúvidas frequentes
       </p>
       <h2 className="mb-5 text-2xl font-semibold text-teal">
-        Perguntas sobre o atendimento em {location.city}
+        Perguntas sobre o atendimento em {location.city}, {location.stateCode}
       </h2>
       <div className="divide-y divide-beige/70 border-y border-beige/70">
         {location.faqs.map((faq) => (
@@ -274,7 +274,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 : 'Mudança em preparação'}
             </p>
             <h1 className="mb-5 break-words text-[1.625rem] font-semibold leading-tight text-teal sm:text-4xl lg:text-[2.75rem]">
-              Coloproctologista em {location.city}
+              Coloproctologista em {location.city} ({location.stateCode})
             </h1>
             <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
               A {SEO_DOCTOR_NAME} ({CRM_FULL} · {RQE_FULL}) inicia atendimentos no{' '}
@@ -387,7 +387,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               Atendimento em {location.city}/{location.stateCode}
             </p>
             <h1 className="mb-5 break-words text-[1.625rem] font-semibold leading-tight text-teal sm:text-4xl lg:text-[2.75rem]">
-              Coloproctologista em {location.city}
+              Coloproctologista em {location.city} ({location.stateCode})
             </h1>
             <p className="text-lg leading-relaxed text-gray-700 lg:text-xl">
               {location.roleDescription}
@@ -544,7 +544,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   <span aria-hidden="true" className="h-px w-10 bg-copper/30" />
                 </div>
                 <h2 className="mb-5 text-2xl font-semibold text-teal">
-                  O atendimento em {location.city}
+                  O atendimento em {location.city}, {location.stateCode}
                 </h2>
                 <div className="space-y-4 text-base leading-relaxed text-gray-700 lg:text-lg">
                   {location.about.map((paragraph) =>

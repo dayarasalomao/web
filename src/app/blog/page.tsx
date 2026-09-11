@@ -83,7 +83,7 @@ export default function BlogPage() {
               Explorar tratamentos
             </Link>
             <Link href={locationPath} className="btn btn-ghost border border-copper/30 text-copper">
-              Atendimento em Campo Grande
+              Atendimento em Campo Grande, MS
             </Link>
             <Link href="/perguntas-frequentes" className="btn btn-ghost border border-teal/20 text-teal">
               Perguntas frequentes
