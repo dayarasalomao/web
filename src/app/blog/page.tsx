@@ -4,6 +4,7 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BlogCard } from '@/components/ui/BlogCard'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { getAllPosts } from '@/lib/blog'
+import { getLocationsLandingPath } from '@/lib/locations'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import {
   buildBreadcrumbGraph,
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = getAllPosts()
+  const locationPath = getLocationsLandingPath()
   const breadcrumbGraph = buildBreadcrumbGraph([
     { label: 'Início', href: '/' },
     { label: 'Blog' },
@@ -76,6 +78,17 @@ export default function BlogPage() {
             Orientações sobre doenças anorretais, procedimentos modernos e cuidados em
             coloproctologia para ajudar você a tomar decisões com mais segurança.
           </p>
+          <nav aria-label="Atalhos de conteúdo" className="mt-7 flex flex-wrap gap-3">
+            <Link href="/tratamentos" className="btn btn-primary">
+              Explorar tratamentos
+            </Link>
+            <Link href={locationPath} className="btn btn-ghost border border-copper/30 text-copper">
+              Atendimento em Campo Grande, MS
+            </Link>
+            <Link href="/perguntas-frequentes" className="btn btn-ghost border border-teal/20 text-teal">
+              Perguntas frequentes
+            </Link>
+          </nav>
         </div>
 
         {posts.length === 0 ? (

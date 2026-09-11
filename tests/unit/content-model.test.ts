@@ -1,5 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
+import fs from 'node:fs'
+import path from 'node:path'
 import {
   getAllPosts,
   getAllPostSlugs,
@@ -15,6 +17,7 @@ import {
   DISEASE_TO_TREATMENT_SLUG,
   TREATMENT_CARD_TO_SLUG,
 } from '../../src/lib/treatments.ts'
+import { getEditorialImageDimensions } from '../../src/lib/editorial-images.ts'
 
 const REQUIRED_FRONTMATTER = [
   'title',
@@ -68,6 +71,52 @@ describe('blog content model', () => {
         getRelatedPosts(post).length,
         Math.min(post.relatedPosts?.length ?? 0, 4),
       )
+    }
+  })
+
+  it('normalizes structured medical sources without duplicating a manual body section', () => {
+    const sourcedPosts = getAllPosts().filter((post) => post.sources?.length)
+    assert.ok(sourcedPosts.length >= 4)
+
+    for (const post of sourcedPosts) {
+      assert.doesNotMatch(post.content, /^## Fontes médicas$/m)
+      for (const source of post.sources ?? []) {
+        assert.ok(source.title)
+        assert.ok(source.organization)
+        assert.match(source.url, /^https:\/\//)
+        assert.match(source.accessedAt, /^\d{4}-\d{2}-\d{2}$/)
+      }
+    }
+  })
+
+  it('keeps enriched editorial images dimensioned and present on disk', () => {
+    const imagePosts = getAllPosts().filter((post) => post.image)
+    assert.ok(imagePosts.length >= 8)
+
+    for (const post of imagePosts) {
+      const image = post.image
+      assert.ok(image)
+      assert.ok((image.width ?? 0) > 0)
+      assert.ok((image.height ?? 0) > 0)
+      assert.ok(image.alt.length >= 10)
+      assert.ok(
+        fs.existsSync(path.join(process.cwd(), 'public', image.src.replace(/^\//, ''))),
+        `${post.slug} references a missing image: ${image.src}`,
+      )
+      assert.deepEqual(post.cardImage, image)
+    }
+  })
+
+  it('reserves the real aspect ratio for every Markdown blog image', () => {
+    const markdownImagePattern = /!\[[^\]]*\]\((\/assets\/blog\/[^)\s]+)(?:\s+"[^"]*")?\)/g
+
+    for (const post of getAllPosts()) {
+      for (const [, src] of post.content.matchAll(markdownImagePattern)) {
+        const dimensions = getEditorialImageDimensions(src)
+        assert.ok(dimensions, `missing intrinsic dimensions for ${src}`)
+        assert.ok(dimensions.width > 0)
+        assert.ok(dimensions.height > 0)
+      }
     }
   })
 })

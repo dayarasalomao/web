@@ -42,6 +42,17 @@ export interface FAQItem {
 export interface BlogCardImage {
   src: string
   alt: string
+  caption?: string
+  width?: number
+  height?: number
+}
+
+export interface MedicalSource {
+  title: string
+  organization: string
+  url: string
+  publishedAt?: string
+  accessedAt: string
 }
 
 export interface BlogPostMeta {
@@ -59,6 +70,8 @@ export interface BlogPostMeta {
   faqs?: FAQItem[]
   relatedPosts?: string[]
   disclaimer?: string
+  image?: BlogCardImage
+  sources?: MedicalSource[]
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -162,7 +175,9 @@ function parsePostFile(slug: string, fullPath: string): BlogPost | null {
   const normalizedLastModified = normalizeDate(data.lastModified, slug, 'lastModified')
   const readingTime = calculateReadingTime(content)
   const excerpt = extractItalicHook(content)
-  const cardImage = extractFirstImage(content)
+  const image = normalizeEditorialImage(data.image, slug)
+  const sources = normalizeMedicalSources(data.sources, slug)
+  const cardImage = image ?? extractFirstImage(content)
 
   return {
     ...(data as BlogPostMeta),
@@ -172,8 +187,96 @@ function parsePostFile(slug: string, fullPath: string): BlogPost | null {
     content,
     excerpt,
     readingTime,
+    image,
+    sources,
     cardImage,
   }
+}
+
+function normalizeEditorialImage(value: unknown, slug: string): BlogCardImage | undefined {
+  if (value === undefined || value === null) return undefined
+  if (typeof value !== 'object' || Array.isArray(value)) {
+    throw new Error(`Post "${slug}" has invalid image frontmatter.`)
+  }
+
+  const image = value as Record<string, unknown>
+  const src = typeof image.src === 'string' ? image.src.trim() : ''
+  const alt = typeof image.alt === 'string' ? image.alt.trim() : ''
+  const caption = typeof image.caption === 'string' ? image.caption.trim() : undefined
+  const width = typeof image.width === 'number' ? image.width : Number(image.width)
+  const height = typeof image.height === 'number' ? image.height : Number(image.height)
+
+  if (!src || !alt || !Number.isInteger(width) || width <= 0 || !Number.isInteger(height) || height <= 0) {
+    throw new Error(
+      `Post "${slug}" image requires src, alt, and positive integer width/height.`,
+    )
+  }
+
+  return { src, alt, ...(caption ? { caption } : {}), width, height }
+}
+
+function normalizeMedicalSources(value: unknown, slug: string): MedicalSource[] | undefined {
+  if (value === undefined || value === null) return undefined
+  if (!Array.isArray(value) || value.length === 0) {
+    throw new Error(`Post "${slug}" sources must be a non-empty list.`)
+  }
+
+  return value.map((entry, index) => {
+    if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+      throw new Error(`Post "${slug}" source ${index + 1} must be an object.`)
+    }
+
+    const source = entry as Record<string, unknown>
+    const title = typeof source.title === 'string' ? source.title.trim() : ''
+    const organization =
+      typeof source.organization === 'string' ? source.organization.trim() : ''
+    const url = typeof source.url === 'string' ? source.url.trim() : ''
+    const publishedAt = normalizeOptionalDate(source.publishedAt, slug, index)
+    const accessedAt = normalizeRequiredDate(source.accessedAt, slug, index, 'accessedAt')
+
+    if (!title || !organization || !/^https:\/\//.test(url)) {
+      throw new Error(
+        `Post "${slug}" source ${index + 1} requires title, organization, and an HTTPS URL.`,
+      )
+    }
+
+    return {
+      title,
+      organization,
+      url,
+      ...(publishedAt ? { publishedAt } : {}),
+      accessedAt,
+    }
+  })
+}
+
+function normalizeOptionalDate(value: unknown, slug: string, sourceIndex: number): string | undefined {
+  if (value === undefined || value === null || value === '') return undefined
+  return normalizeRequiredDate(value, slug, sourceIndex, 'publishedAt')
+}
+
+function normalizeRequiredDate(
+  value: unknown,
+  slug: string,
+  sourceIndex: number,
+  field: 'publishedAt' | 'accessedAt',
+): string {
+  if (value instanceof Date && !Number.isNaN(value.getTime())) {
+    return value.toISOString().slice(0, 10)
+  }
+
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    throw new Error(
+      `Post "${slug}" source ${sourceIndex + 1} has invalid ${field}; use YYYY-MM-DD.`,
+    )
+  }
+
+  const parsed = new Date(`${value}T00:00:00Z`)
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) {
+    throw new Error(`Post "${slug}" source ${sourceIndex + 1} has invalid ${field}.`)
+  }
+
+  return value
 }
 
 function normalizeDate(value: unknown, slug: string, field: 'publishDate' | 'lastModified'): string {

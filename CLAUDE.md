@@ -6,7 +6,7 @@ Guidance for Claude Code when working in this repository.
 
 This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, a practitioner profile, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
 
-> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` point to Campo Grande. Curitiba was removed from `src/lib/locations.ts`, and `/locais-de-atendimento/curitiba` returns 404; only truthful professional-history references remain. The external Doctoralia profile is not yet migrated, so `DOCTORALIA_URL` stays empty until a confirmed Campo Grande URL exists. The migration record lives in `.specs/features/campo-grande-seo-migration/context.md`.
+> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `CLINIC_GOOGLE_MAPS_URL`, `GOOGLE_BUSINESS_PROFILE_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` point to their respective Campo Grande entities. Curitiba was removed from `src/lib/locations.ts`, and `/locais-de-atendimento/curitiba` returns 404; only truthful professional-history references remain. The external Doctoralia profile is not yet migrated, so `DOCTORALIA_URL` stays empty until a confirmed Campo Grande URL exists. The migration record lives in `.specs/features/campo-grande-seo-migration/context.md`.
 
 ## Stack
 
@@ -24,6 +24,7 @@ npm run dev
 npm run build
 npm run lint
 npm run test:unit
+npm run audit:seo
 npm run e2e
 ```
 
@@ -41,7 +42,9 @@ src/app/sitemap.ts              Sitemap route
 src/components/                 Homepage sections and shared components
 src/constants.ts                Shared contact, SEO, schema, sitemap, analytics data
 src/lib/blog.ts                 Blog parsing and metadata helpers
+src/lib/editorial-images.ts     Intrinsic dimensions for Markdown images
 src/lib/profile.ts              Shared biography, qualifications, memberships
+src/lib/seo-map.ts              Strategic query-to-page ownership
 src/lib/treatments.ts           Treatment page data and mapping helpers
 src/lib/structured-data.ts      Schema.org JSON-LD builders
 ```
@@ -74,6 +77,8 @@ Use the existing tokens and utility classes instead of introducing new visual sy
 ## SEO And Metadata
 
 Global metadata is in `src/app/layout.tsx`; shared values live in `src/constants.ts`. Blog and treatment routes generate route-specific metadata and JSON-LD from `src/lib/seo.ts` and `src/lib/structured-data.ts`.
+
+Blog frontmatter may contain visible structured medical `sources` and an enriched primary `image`; keep their runtime validation in `src/lib/blog.ts` aligned with the renderer and schema builders. The physician's Google Business Profile and the clinic's Maps listing are separate entity URLs and must not be merged in `sameAs`. Run `npm run audit:seo` after changing slugs, keywords, relationships, or internal links.
 
 If domain, image, doctor credentials, contact information, or treatment content changes, review:
 

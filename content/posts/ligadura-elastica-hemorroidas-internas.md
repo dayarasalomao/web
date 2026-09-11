@@ -20,6 +20,15 @@ relatedPosts:
   - doenca-hemorroidaria-sintomas-graus
   - hemorroidas-sem-corte-laser-diodo
   - sangramento-anal-dor-quando-procurar-coloproctologista
+sources:
+  - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf
+    accessedAt: 2026-09-11
+  - title: Informações ampliadas para pacientes com doença hemorroidária
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: A ligadura elástica é feita com internação?
     answer: Em muitos casos, não. Trata-se de um procedimento ambulatorial, geralmente rápido e realizado com o paciente acordado.
@@ -79,8 +88,3 @@ A ligadura também não impede que novos sintomas apareçam no futuro. Cuidar da
 Antes de definir a ligadura, a avaliação deve confirmar que o sangramento ou prolapso realmente vem de hemorroidas internas e verificar se existe doença externa associada.
 
 Para entender como grau e anatomia mudam a decisão, leia o guia sobre [doença hemorroidária: sintomas, graus e tratamentos](/blog/doenca-hemorroidaria-sintomas-graus).
-
-## Fontes médicas
-
-* [Diretriz da ASCRS para o tratamento de hemorroidas (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-* [ASCRS — informações ampliadas para pacientes com doença hemorroidária](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)

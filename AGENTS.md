@@ -34,6 +34,7 @@ npm run dev    # next dev --turbopack
 npm run build  # production build
 npm run start  # production server
 npm run lint   # eslint src tests playwright.config.ts next.config.ts eslint.config.mjs
+npm run audit:seo # editorial graph, keyword ownership, and internal-link audit
 ```
 
 Linting uses direct ESLint invocation rather than `next lint`.
@@ -143,6 +144,8 @@ Do not copy those patterns into new work. Either use the existing CSS variables 
 SEO and machine-readable metadata are an important part of this repo.
 
 - [`src/app/layout.tsx`](./src/app/layout.tsx) defines the global `metadata` object and injects medical-business JSON-LD.
+- [`src/lib/structured-data.ts`](./src/lib/structured-data.ts) keeps the physician and Instituto clinic as separate, linked entities; do not mix their `sameAs` URLs.
+- [`src/lib/seo-map.ts`](./src/lib/seo-map.ts) assigns strategic searches to a single canonical page, and `npm run audit:seo` validates the editorial graph.
 - [`src/app/sitemap.ts`](./src/app/sitemap.ts) publishes entries for the homepage and privacy-policy page.
 - [`public/robots.txt`](./public/robots.txt) publishes crawler rules and a sitemap reference.
 - [`next.config.ts`](./next.config.ts) adds:
@@ -150,6 +153,8 @@ SEO and machine-readable metadata are an important part of this repo.
   - security headers including CSP, HSTS, `X-Frame-Options`, and related hardening
 
 If you change domain, images, doctor metadata, contact details, or privacy-policy behavior, review all of those files together.
+
+Blog frontmatter supports structured medical `sources` and an enriched primary `image` with intrinsic dimensions. Sources must be visible before they are emitted as `Article.citation`. Keep every Markdown image's real dimensions in [`src/lib/editorial-images.ts`](./src/lib/editorial-images.ts) so `next/image` can reserve its aspect ratio.
 
 ## Analytics and Environment Variables
 

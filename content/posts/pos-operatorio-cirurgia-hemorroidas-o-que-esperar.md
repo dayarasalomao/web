@@ -14,6 +14,12 @@ secondaryKeywords:
   - quanto tempo de afastamento cirurgia de hemorroida
 targetAudience: patients
 intent: consideration
+image:
+  src: /assets/blog/pos-operatorio-hemorroidas-comparativo.webp
+  alt: Comparação do pós-operatório de diferentes cirurgias para hemorroidas
+  caption: Linha do tempo educativa sobre recuperação após cirurgia convencional, laser de diodo e laser de CO2.
+  width: 1376
+  height: 768
 featured: true
 order: 26
 relatedPosts:

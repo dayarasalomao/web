@@ -14,6 +14,12 @@ secondaryKeywords:
   - instrumentos cirúrgicos proctologia
 targetAudience: patients
 intent: consideration
+image:
+  src: /assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp
+  alt: Comparação entre eletrocautério, laser de diodo e laser de CO2
+  caption: Comparação educativa do efeito térmico e do modo de ação dos três instrumentos cirúrgicos.
+  width: 1600
+  height: 873
 featured: true
 order: 28
 relatedPosts:

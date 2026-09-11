@@ -2,7 +2,7 @@
 // CONVERSION ANALYTICS
 // =================================================================
 // The site's only real conversions are off-site: a WhatsApp message,
-// a phone call, or a route to the clinic. None of them produce a page
+// a phone call, a route to the clinic, or a handoff to the clinic website. None of them produce a page
 // view, so without explicit events the funnel is invisible and the
 // only measurable metric is sessions — which is not what the practice
 // is optimising for.
@@ -20,6 +20,7 @@ export const CONVERSION_EVENTS = {
   whatsapp: 'whatsapp_click',
   phone: 'phone_click',
   maps: 'maps_click',
+  institution: 'institution_click',
   social: 'social_click',
 } as const
 

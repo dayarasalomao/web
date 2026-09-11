@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { MedicalSignature } from '@/components/ui/MedicalSignature'
+import { MedicalSources } from '@/components/ui/MedicalSources'
 import { MdxImage } from '@/components/ui/MdxImage'
 import { MdxTable } from '@/components/ui/MdxTable'
 import { RelatedPostsSection } from '@/components/ui/RelatedPostsSection'
@@ -51,6 +52,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const schema = buildBlogPostGraph(post)
   const relatedTreatment = getTreatmentByRelatedBlogSlug(post.slug)
   const relatedPosts = getRelatedPosts(post)
+  const mdxComponents = {
+    img: (props: React.ComponentPropsWithoutRef<'img'>) => (
+      <MdxImage {...props} metadata={post.image} />
+    ),
+    table: MdxTable,
+  }
 
   return (
     <main id="main-content" className="min-h-screen bg-cream py-8 lg:py-12">
@@ -131,9 +138,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 remarkPlugins: [remarkGfm],
               },
             }}
-            components={{ img: MdxImage, table: MdxTable }}
+            components={mdxComponents}
           />
         </div>
+
+        {post.sources?.length ? <MedicalSources sources={post.sources} /> : null}
 
         {post.faqs?.length ? (
           <section id="faq" className="mt-16">

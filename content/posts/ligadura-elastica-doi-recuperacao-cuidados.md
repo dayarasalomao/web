@@ -20,6 +20,15 @@ relatedPosts:
   - doenca-hemorroidaria-sintomas-graus
   - hemorroidas-sem-corte-laser-diodo
   - sangramento-anal-dor-quando-procurar-coloproctologista
+sources:
+  - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf
+    accessedAt: 2026-09-11
+  - title: Informações ampliadas para pacientes com doença hemorroidária
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: A ligadura elástica dói?
     answer: >-
@@ -127,11 +136,6 @@ O artigo sobre [sintomas, graus e tratamentos da doença hemorroidária](/blog/d
 Em alguns pacientes, a ligadura controla sangramento ou prolapso sem necessidade de uma cirurgia maior. Em outros, a anatomia e os sintomas favorecem uma abordagem cirúrgica.
 
 Não existe uma técnica melhor para todos. A decisão compara o que precisa ser tratado, a chance de resposta, a recuperação, os riscos e a possibilidade de novas sessões.
-
-## Fontes médicas
-
-- [Diretriz da ASCRS para o tratamento de hemorroidas (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-- [ASCRS — informações ampliadas para pacientes com doença hemorroidária](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
 
 ## Próximo passo
 

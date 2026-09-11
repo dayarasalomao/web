@@ -10,7 +10,7 @@ import {
   SEO_DOCTOR_NAME,
   SEO_OG_DESCRIPTION,
   SEO_TWITTER_DESCRIPTION,
-  SEO_IMAGE,
+  SEO_SOCIAL_IMAGE,
   SEO_IMAGE_ALT,
   SEO_LOCATION,
   SEO_SPECIALTY,
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description: SEO_OG_DESCRIPTION,
     images: [
       {
-        url: SEO_IMAGE,
+        url: SEO_SOCIAL_IMAGE,
         width: 1200,
         height: 630,
         alt: SEO_IMAGE_ALT,
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SEO_TITLE,
     description: SEO_TWITTER_DESCRIPTION,
-    images: [SEO_IMAGE],
+    images: [SEO_SOCIAL_IMAGE],
     creator: TWITTER_HANDLE,
   },
   other: {
@@ -118,14 +118,6 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="preconnect" href="https://va.vercel-scripts.com" />
         <link rel="llms" href="/llms.txt" />
 
         <script
@@ -152,8 +144,12 @@ export default function RootLayout({
           )}
 
         {/* Vercel Analytics */}
-        <Analytics />
-        <SpeedInsights />
+        {ANALYTICS_ENABLED ? (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        ) : null}
       </body>
     </html>
   )

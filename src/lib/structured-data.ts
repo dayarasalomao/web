@@ -2,13 +2,10 @@ import type { Thing, WithContext } from 'schema-dts'
 import {
   BUSINESS_ADDRESS,
   BUSINESS_ALTERNATE_NAME,
-  BUSINESS_CURRENCY,
   BUSINESS_DESCRIPTION,
   BUSINESS_EMAIL,
   BUSINESS_GEO,
-  BUSINESS_HOURS,
   BUSINESS_NAME,
-  BUSINESS_PAYMENT,
   BUSINESS_PHONE,
   BUSINESS_SPECIALTY,
   CRM_COUNCIL_URL,
@@ -16,8 +13,7 @@ import {
   CRM_FULL,
   CRM_STATE,
   DOCTORALIA_URL,
-  GOOGLE_MAPS_URL,
-  MEDICAL_PROCEDURES,
+  GOOGLE_BUSINESS_PROFILE_URL,
   PHYSICIAN_DATA,
   RQE_FULL,
   SEO_DESCRIPTION,
@@ -128,25 +124,24 @@ export function buildItemListGraph(name: string, items: ItemListEntry[]): Thing 
 }
 
 export function buildGlobalGraph(): Record<string, unknown> {
-  const organizationId = `${SITE_URL}#organization`
   const physicianId = `${SITE_URL}#physician`
   const websiteId = `${SITE_URL}#website`
+  const clinicId = buildPracticeLocationId('campo-grande')
 
   return {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'MedicalOrganization',
-        '@id': organizationId,
-        name: BUSINESS_NAME,
+        '@type': 'Physician',
+        '@id': physicianId,
+        name: PHYSICIAN_DATA.name,
         alternateName: BUSINESS_ALTERNATE_NAME,
-        description: BUSINESS_DESCRIPTION,
-        url: SITE_URL,
-        logo: toAbsoluteUrl(SEO_IMAGE),
+        description: SEO_DESCRIPTION,
+        medicalSpecialty: BUSINESS_SPECIALTY,
+        url: buildCanonical('/sobre'),
         image: toAbsoluteUrl(SEO_IMAGE),
         telephone: BUSINESS_PHONE,
         email: BUSINESS_EMAIL,
-        medicalSpecialty: BUSINESS_SPECIALTY,
         address: {
           '@type': 'PostalAddress',
           streetAddress: BUSINESS_ADDRESS.streetAddress,
@@ -160,53 +155,16 @@ export function buildGlobalGraph(): Record<string, unknown> {
           latitude: BUSINESS_GEO.latitude,
           longitude: BUSINESS_GEO.longitude,
         },
-        openingHours: BUSINESS_HOURS,
-        paymentAccepted: BUSINESS_PAYMENT,
-        currenciesAccepted: BUSINESS_CURRENCY,
-        areaServed: {
-          '@type': 'City',
-          name: BUSINESS_ADDRESS.addressLocality,
-        },
-        sameAs: sanitizeSameAs([
-          CONTACT_SOCIAL_MEDIA.instagram,
-          CONTACT_SOCIAL_MEDIA.facebook,
-          GOOGLE_MAPS_URL || undefined,
-        ]),
-        physician: {
-          '@id': physicianId,
-        },
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Tratamentos de Coloproctologia',
-          itemListElement: MEDICAL_PROCEDURES.map((procedure) => ({
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'MedicalProcedure',
-              name: procedure,
-            },
-          })),
-        },
-      },
-      {
-        '@type': 'Physician',
-        '@id': physicianId,
-        name: PHYSICIAN_DATA.name,
-        description: SEO_DESCRIPTION,
-        medicalSpecialty: BUSINESS_SPECIALTY,
-        url: buildCanonical('/sobre'),
-        image: toAbsoluteUrl(SEO_IMAGE),
         worksFor: {
-          '@id': organizationId,
+          '@id': clinicId,
+        },
+        workLocation: {
+          '@id': clinicId,
         },
         memberOf: PROFESSIONAL_MEMBERSHIPS.map((membership) => ({
           '@type': 'Organization',
           name: membership,
         })),
-        affiliation: {
-          '@type': 'MedicalClinic',
-          name: PHYSICIAN_DATA.clinic,
-          url: buildCanonical('/locais-de-atendimento/campo-grande'),
-        },
         alumniOf: {
           '@type': 'CollegeOrUniversity',
           name: PHYSICIAN_DATA.university,
@@ -215,7 +173,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
           CONTACT_SOCIAL_MEDIA.instagram,
           CONTACT_SOCIAL_MEDIA.facebook,
           DOCTORALIA_URL || undefined,
-          GOOGLE_MAPS_URL || undefined,
+          GOOGLE_BUSINESS_PROFILE_URL || undefined,
         ]),
         areaServed: {
           '@type': 'City',
@@ -256,11 +214,15 @@ export function buildGlobalGraph(): Record<string, unknown> {
         description: BUSINESS_DESCRIPTION,
         inLanguage: 'pt-BR',
         publisher: {
-          '@id': organizationId,
+          '@id': physicianId,
         },
       },
     ],
   }
+}
+
+export function buildPracticeLocationId(slug: string): string {
+  return `${buildCanonical(`/locais-de-atendimento/${slug}`)}#medical-clinic`
 }
 
 interface ProfilePageGraphOptions {
@@ -306,6 +268,19 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
   const postUrl = buildCanonical(`/blog/${post.slug}`)
   const pageId = `${postUrl}#webpage`
   const articleId = `${postUrl}#article`
+  const articleImage = post.image
+    ? {
+        '@type': 'ImageObject',
+        '@id': `${postUrl}#primary-image`,
+        contentUrl: toAbsoluteUrl(post.image.src),
+        url: toAbsoluteUrl(post.image.src),
+        width: post.image.width,
+        height: post.image.height,
+        caption: post.image.caption ?? post.image.alt,
+        creator: { '@id': `${SITE_URL}#physician` },
+        copyrightHolder: { '@id': `${SITE_URL}#physician` },
+      }
+    : toAbsoluteUrl(post.cardImage?.src || SEO_IMAGE)
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Início', href: '/' },
     { label: 'Blog', href: '/blog' },
@@ -326,6 +301,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       about: {
         '@id': articleId,
       },
+      ...(post.image ? { primaryImageOfPage: { '@id': `${postUrl}#primary-image` } } : {}),
     } as Thing,
     {
       '@type': 'Article',
@@ -339,10 +315,26 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
         '@id': `${SITE_URL}#physician`,
       },
       publisher: {
-        '@id': `${SITE_URL}#organization`,
+        '@id': `${SITE_URL}#physician`,
       },
-      image: toAbsoluteUrl(post.cardImage?.src || SEO_IMAGE),
+      image: articleImage,
       keywords: [post.primaryKeyword, ...post.secondaryKeywords],
+      ...(post.sources?.length
+        ? {
+            citation: post.sources.map((source) => ({
+              '@type': 'CreativeWork',
+              name: source.title,
+              url: source.url,
+              publisher: {
+                '@type': 'Organization',
+                name: source.organization,
+              },
+              ...(source.publishedAt
+                ? { datePublished: toSchemaDateTime(source.publishedAt) }
+                : {}),
+            })),
+          }
+        : {}),
       mainEntityOfPage: {
         '@id': pageId,
       },
@@ -421,7 +413,7 @@ export function buildLocationGraph(
   if (!location.address) return null
 
   const locationUrl = buildCanonical(`/locais-de-atendimento/${location.slug}`)
-  const placeId = `${locationUrl}#practice-location`
+  const placeId = buildPracticeLocationId(location.slug)
 
   return {
     '@context': 'https://schema.org',
@@ -431,6 +423,8 @@ export function buildLocationGraph(
         '@id': placeId,
         name: location.name,
         url: locationUrl,
+        image: toAbsoluteUrl(SEO_IMAGE),
+        medicalSpecialty: BUSINESS_SPECIALTY,
         ...(location.phone || location.clinicPhone
           ? { telephone: location.phone ?? location.clinicPhone }
           : {}),
@@ -468,6 +462,9 @@ export function buildLocationGraph(
       {
         '@type': 'Physician',
         '@id': `${SITE_URL}#physician`,
+        worksFor: {
+          '@id': placeId,
+        },
         workLocation: {
           '@id': placeId,
         },

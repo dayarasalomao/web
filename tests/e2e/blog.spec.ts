@@ -35,7 +35,18 @@ test('homepage renders SEO hero heading and CTA', async ({ page }) => {
 
   const lcpImage = page.getByAltText('Retrato profissional da Dra. Dayara Salomão')
   await expect(lcpImage).toHaveAttribute('fetchpriority', 'high')
-  await expect(lcpImage).toHaveAttribute('sizes', '(min-width: 1024px) 384px, 344px')
+  await expect(lcpImage).toHaveAttribute('sizes', '(min-width: 1024px) 352px, 312px')
+
+  await expect(page.locator('link[rel="preconnect"]')).toHaveCount(0)
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    'content',
+    /\/opengraph-image(?:\?[a-z0-9]+)?$/,
+  )
+
+  const socialImage = await page.request.get('/opengraph-image')
+  expect(socialImage.ok()).toBeTruthy()
+  expect(socialImage.headers()['content-type']).toContain('image/png')
+  expect((await socialImage.body()).byteLength).toBeGreaterThan(1_000)
 })
 
 test('mobile header keeps the desktop CTA hidden and closes with Escape', async ({ page }) => {
@@ -94,6 +105,9 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
     page.getByRole('link', { name: /site do instituto/i }),
   ).toHaveAttribute('href', 'https://www.institutodigestivo.com.br/')
   await expect(
+    page.getByRole('link', { name: /site do instituto/i }),
+  ).toHaveAttribute('data-conversion', 'institution-location-website')
+  await expect(
     page.getByRole('link', { name: /^instagram$/i }),
   ).toHaveAttribute('href', 'https://www.instagram.com/institutodigestivo/')
 
@@ -111,7 +125,7 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   const pageGraph = await page
     .locator('script[type="application/ld+json"]')
     .allTextContents()
-  const activeGraph = pageGraph.find((graph) => graph.includes('#practice-location')) ?? ''
+  const activeGraph = pageGraph.find((graph) => graph.includes('"@type":"MedicalClinic"')) ?? ''
   expect(activeGraph).toContain('MedicalClinic')
   expect(activeGraph).toContain('PostalAddress')
   expect(activeGraph).toContain('GeoCoordinates')
@@ -193,7 +207,7 @@ test('localized treatment metadata stays concise and readable', async ({ page })
   await page.goto('/tratamentos/ligadura-elastica-hemorroidas-internas')
 
   const description = await page.locator('meta[name="description"]').getAttribute('content')
-  expect(description).toMatch(/^Ligadura elástica em Campo Grande:/)
+  expect(description).toMatch(/^Ligadura elástica em Campo Grande, MS:/)
   expect(description?.length).toBeGreaterThanOrEqual(120)
   expect(description?.length).toBeLessThanOrEqual(160)
 })
@@ -294,6 +308,26 @@ test('question-led article links to its author profile and related cluster', asy
   await expect(
     page.getByRole('link', { name: /doença hemorroidária: sintomas, graus/i }),
   ).toBeVisible()
+})
+
+test('sourced article renders one bibliography and mirrors it in Article schema', async ({
+  page,
+}) => {
+  await page.goto('/blog/ligadura-elastica-doi-recuperacao-cuidados')
+
+  await expect(
+    page.getByRole('heading', { level: 2, name: /^fontes médicas$/i }),
+  ).toHaveCount(1)
+  const visibleSources = page.locator('section[aria-labelledby="medical-sources-title"] li')
+  await expect(visibleSources).toHaveCount(2)
+
+  const citations = await page.evaluate(() => {
+    const nodes = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+      .map((script) => JSON.parse(script.textContent ?? '{}'))
+      .flatMap((json) => (Array.isArray(json['@graph']) ? json['@graph'] : [json]))
+    return nodes.find((node) => node['@type'] === 'Article')?.citation ?? []
+  })
+  expect(citations).toHaveLength(2)
 })
 
 test('about page exposes practitioner credentials, profile schema, and canonical', async ({ page }) => {
@@ -409,6 +443,11 @@ test('illustrated article renders its images and comparison table without page o
   const figure = page.locator('article img').first()
   await expect(figure).toBeVisible()
   await expect(figure).toHaveAttribute('alt', /hemorroida/i)
+  await expect(figure).toHaveAttribute('width', '1600')
+  await expect(figure).toHaveAttribute('height', '893')
+  await expect(page.locator('article [data-editorial-caption]')).toContainText(
+    /ilustração educativa/i,
+  )
 
   // Wide tables must scroll inside their own wrapper, never the page body.
   const overflow = await page.evaluate(() => {
@@ -457,6 +496,9 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   expect(blogPostLocs).toContain(`${CANONICAL_WEBSITE_URL}/blog/${BLOG_POST_SLUG}`)
   expect(blogPostLocs).toContain(
     `${CANONICAL_WEBSITE_URL}/blog/constipacao-intestinal-quando-investigar`,
+  )
+  expect(sitemapXml).toContain(
+    `${CANONICAL_WEBSITE_URL}/assets/blog/hemorroida-x-plicoma-anal.webp`,
   )
   expect(treatmentLocs).toContain(
     `${CANONICAL_WEBSITE_URL}/tratamentos/hemorroidectomia-laser-co2`,

@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src tests playwright.config.ts next.config.ts eslint.config.mjs",
+    "audit:seo": "node --experimental-transform-types --no-warnings scripts/audit-seo-content.ts",
     "e2e": "playwright test",
     "e2e:headed": "playwright test --headed",
     "test:unit": "node --test --experimental-transform-types --no-warnings tests/unit/*.test.ts"
