@@ -6,7 +6,7 @@ metaDescription: >-
   externas, os graus da doença e as opções de tratamento.
 slug: doenca-hemorroidaria-sintomas-graus
 publishDate: 2026-05-18T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: doença hemorroidária
 secondaryKeywords:
   - sintomas de hemorroida
@@ -17,6 +17,8 @@ targetAudience: patients
 intent: awareness
 order: 15
 relatedPosts:
+  - hemorroida-tem-cura-ou-passa-sozinha
+  - pomada-hemorroida-resolve
   - ligadura-elastica-doi-recuperacao-cuidados
   - ligadura-elastica-hemorroidas-internas
   - hemorroidas-sem-corte-laser-diodo

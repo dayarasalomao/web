@@ -6,7 +6,7 @@ metaDescription: >-
   diferenças de dor, sangramento e aspecto, e quando procurar um médico.
 slug: hemorroida-ou-plicoma-como-diferenciar
 publishDate: 2026-09-01
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: diferença entre hemorroida e plicoma
 secondaryKeywords:
   - caroço perto do ânus
@@ -24,6 +24,7 @@ image:
 featured: true
 order: 33
 relatedPosts:
+  - hemorroida-externa-trombosada
   - plicoma-anal-causas-e-tratamento
   - doenca-hemorroidaria-sintomas-graus
   - sangramento-anal-dor-quando-procurar-coloproctologista

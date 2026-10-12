@@ -17,6 +17,7 @@ targetAudience: patients
 intent: awareness
 featured: true
 relatedPosts:
+  - como-encontrar-coloproctologista-campo-grande-ms
   - sangramento-anal-dor-quando-procurar-coloproctologista
   - dor-ao-evacuar-quando-investigar
   - alteracoes-habito-intestinal-quando-avaliar

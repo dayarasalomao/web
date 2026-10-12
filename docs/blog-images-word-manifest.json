@@ -61,5 +61,32 @@
     "post": "cisto-pilonidal-cirurgia-convencional-x-laser",
     "alt": "Ilustração da região sacrococcígea durante uma cirurgia para doença pilonidal",
     "caption": "Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho."
+  },
+  {
+    "source": "word/media/image2.png",
+    "asset": "/assets/blog/pomadas-hemorroidas.webp",
+    "width": 1024,
+    "height": 572,
+    "post": "pomada-hemorroida-resolve",
+    "alt": "Imagem ilustrativa de uma cesta com tubos de pomadas e outros produtos",
+    "caption": "Imagem ilustrativa; os produtos e marcas visíveis não são recomendações de tratamento."
+  },
+  {
+    "source": "word/media/image8.png",
+    "asset": "/assets/blog/hemorroida-externa-trombosada.webp",
+    "width": 1024,
+    "height": 550,
+    "post": "hemorroida-externa-trombosada",
+    "alt": "Diagrama de hemorroida externa trombosada na borda do ânus",
+    "caption": "Representação esquemática de trombose externa; a aparência não substitui o exame médico."
+  },
+  {
+    "source": "word/media/image6.png",
+    "asset": "/assets/blog/trombectomia-hemorroidaria-ilustracao.webp",
+    "width": 1024,
+    "height": 550,
+    "post": "hemorroida-externa-trombosada",
+    "alt": "Ilustração de um procedimento médico para retirada de coágulo de uma hemorroida externa",
+    "caption": "Ilustração de uma opção de tratamento feita por profissional; não é orientação para manipular a região em casa."
   }
 ]

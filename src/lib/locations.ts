@@ -114,6 +114,7 @@ const CORE_TREATMENT_SLUGS: string[] = [
 ]
 
 const CORE_BLOG_SLUGS: string[] = [
+  'como-encontrar-coloproctologista-campo-grande-ms',
   'primeira-consulta-coloproctologista-como-se-preparar',
   'doenca-hemorroidaria-sintomas-graus',
   'fissura-anal-causas-sintomas',

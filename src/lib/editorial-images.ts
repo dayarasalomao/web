@@ -59,6 +59,9 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
   '/assets/blog/laser-co2-regiao-perianal.webp': { width: 1024, height: 572 },
   '/assets/blog/prurido-anal-desconforto.webp': { width: 1024, height: 559 },
   '/assets/blog/fissura-anal-anatomia.webp': { width: 1024, height: 559 },
+  '/assets/blog/pomadas-hemorroidas.webp': { width: 1024, height: 572 },
+  '/assets/blog/hemorroida-externa-trombosada.webp': { width: 1024, height: 550 },
+  '/assets/blog/trombectomia-hemorroidaria-ilustracao.webp': { width: 1024, height: 550 },
 } as const satisfies Readonly<Record<string, EditorialImageDimensions>>
 
 export function getEditorialImageDimensions(

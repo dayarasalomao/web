@@ -1,7 +1,7 @@
 export interface StrategicSearchTarget {
   query: string
   canonicalPath: string
-  intent: 'local' | 'condition' | 'treatment' | 'recovery'
+  intent: 'local' | 'condition' | 'treatment' | 'recovery' | 'guide'
 }
 
 /**
@@ -29,6 +29,16 @@ export const STRATEGIC_SEARCH_TARGETS: StrategicSearchTarget[] = [
     query: 'coloproctologia campo grande ms',
     canonicalPath: '/locais-de-atendimento/campo-grande',
     intent: 'local',
+  },
+  ...['procto campo grande (ms)', 'proctologista campo grande (ms)', 'coloproctologista campo grande (ms)'].map((query): StrategicSearchTarget => ({
+    query,
+    canonicalPath: '/locais-de-atendimento/campo-grande',
+    intent: 'local',
+  })),
+  {
+    query: 'como encontrar um coloproctologista em campo grande (ms)',
+    canonicalPath: '/blog/como-encontrar-coloproctologista-campo-grande-ms',
+    intent: 'guide',
   },
   {
     query: 'doença hemorroidária sintomas',

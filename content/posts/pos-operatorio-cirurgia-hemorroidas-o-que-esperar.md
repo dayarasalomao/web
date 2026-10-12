@@ -6,7 +6,7 @@ metaDescription: >-
   diferentes. Entenda dor, tempo de recuperação e o que conversar antes de operar.
 slug: pos-operatorio-cirurgia-hemorroidas-o-que-esperar
 publishDate: 2026-09-01
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: pós-operatório cirurgia de hemorroidas
 secondaryKeywords:
   - recuperação cirurgia de hemorroidas
@@ -24,6 +24,7 @@ image:
 featured: true
 order: 26
 relatedPosts:
+  - primeiros-30-dias-hemorroidectomia-laser-co2
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - hemorroidectomia-laser-co2
   - hemorroidas-sem-corte-laser-diodo

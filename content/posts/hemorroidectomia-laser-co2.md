@@ -24,6 +24,7 @@ image:
   width: 1024
   height: 559
 relatedPosts:
+  - primeiros-30-dias-hemorroidectomia-laser-co2
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - pos-operatorio-cirurgia-hemorroidas-o-que-esperar
   - eletrocauterio-laser-diodo-laser-co2-diferencas
