@@ -7,7 +7,7 @@ metaDescription: >-
   dois lados.
 slug: hemorroidas-sem-corte-laser-diodo
 publishDate: 2026-04-05
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: hemorroidas sem corte laser
 secondaryKeywords:
   - laser de diodo hemorroidas
@@ -19,6 +19,12 @@ targetAudience: patients
 intent: decision
 featured: true
 order: 5
+image:
+  src: /assets/blog/hemorroidoplastia-laser-diodo.webp
+  alt: Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário
+  caption: Representação esquemática da ação interna da fibra de laser; a indicação depende do exame.
+  width: 1024
+  height: 844
 relatedPosts:
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - pos-operatorio-cirurgia-hemorroidas-o-que-esperar
@@ -59,6 +65,8 @@ disclaimer: >-
 ---
 
 *"Sem corte" soa como a opção óbvia. Ela é de fato mais confortável — mas serve para um grupo específico de hemorroidas, e tem um custo que precisa entrar na conta antes de decidir.*
+
+![Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário](/assets/blog/hemorroidoplastia-laser-diodo.webp)
 
 ## Como funciona a tecnologia
 

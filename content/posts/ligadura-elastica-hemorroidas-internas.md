@@ -16,6 +16,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: consideration
 order: 2
+image:
+  src: /assets/blog/ligadura-elastica-etapas.webp
+  alt: Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica
+  caption: Etapas ilustrativas da ligadura elástica; a resposta ao procedimento varia entre pacientes.
+  width: 1024
+  height: 572
 relatedPosts:
   - ligadura-elastica-doi-recuperacao-cuidados
   - doenca-hemorroidaria-sintomas-graus
@@ -40,6 +46,8 @@ faqs:
 ---
 
 *A ligadura elástica é um procedimento ambulatorial para hemorroidas internas selecionadas. A indicação depende do grau, da anatomia e do sintoma predominante.*
+
+![Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica](/assets/blog/ligadura-elastica-etapas.webp)
 
 ## Como funciona o procedimento?
 

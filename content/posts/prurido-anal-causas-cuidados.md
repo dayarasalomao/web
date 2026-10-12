@@ -18,6 +18,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 9
+image:
+  src: /assets/blog/prurido-anal-desconforto.webp
+  alt: Imagem ilustrativa de pessoa com desconforto e coceira na região anal
+  caption: A coceira anal pode ter diferentes causas; a imagem não representa um diagnóstico.
+  width: 1024
+  height: 559
 relatedPosts:
   - lesoes-verrugas-nodulos-regiao-anal-o-que-observar
   - fissura-anal-causas-sintomas
@@ -57,6 +63,8 @@ disclaimer: >-
 ---
 
 *A pergunta que quase todo paciente faz na consulta é se a coceira é falta de higiene. Quase sempre é o contrário — e essa inversão explica por que o sintoma não passa.*
+
+![Imagem ilustrativa de pessoa com desconforto e coceira na região anal](/assets/blog/prurido-anal-desconforto.webp)
 
 ## Prurido anal e coceira anal são a mesma coisa
 

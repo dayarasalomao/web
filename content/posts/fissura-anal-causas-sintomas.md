@@ -7,7 +7,7 @@ metaDescription: >-
   tratamento.
 slug: fissura-anal-causas-sintomas
 publishDate: 2026-05-20T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: fissura anal
 secondaryKeywords:
   - dor anal ao evacuar
@@ -17,6 +17,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 16
+image:
+  src: /assets/blog/fissura-anal-anatomia.webp
+  alt: Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo
+  caption: Representação esquemática de fissura anal; o diagnóstico é feito na avaliação médica.
+  width: 1024
+  height: 559
 relatedPosts:
   - toxina-botulinica-fissura-anal
   - dor-ao-evacuar-quando-investigar
@@ -53,6 +59,8 @@ disclaimer: >-
 ---
 
 *A fissura anal é pequena — às vezes milimétrica — e dói de forma completamente desproporcional ao seu tamanho. Entender por que ela não fecha sozinha é o que explica todo o tratamento.*
+
+![Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo](/assets/blog/fissura-anal-anatomia.webp)
 
 ## O que é a fissura anal
 

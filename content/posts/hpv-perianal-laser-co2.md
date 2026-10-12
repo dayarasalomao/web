@@ -7,7 +7,7 @@ metaDescription: >-
   tratamento.
 slug: hpv-perianal-laser-co2
 publishDate: 2026-04-22
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: HPV perianal laser CO2
 secondaryKeywords:
   - tratamento de verruga anal
@@ -17,6 +17,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: decision
 order: 8
+image:
+  src: /assets/blog/laser-co2-regiao-perianal.webp
+  alt: Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico
+  caption: Imagem ilustrativa de tratamento local; não permite identificar uma lesão ou confirmar um diagnóstico.
+  width: 1024
+  height: 572
 relatedPosts:
   - hpv-anal-identificar-tratar
   - plicoma-ou-hpv-perianal-como-diferenciar
@@ -54,6 +60,8 @@ disclaimer: >-
 *Duas coisas costumam pesar mais do que o procedimento em si: a vergonha de mostrar a lesão e o medo de que ela volte. Vale falar das duas abertamente.*
 
 ![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
+
+![Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico](/assets/blog/laser-co2-regiao-perianal.webp)
 
 ## Antes de tratar: é mesmo HPV?
 

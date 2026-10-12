@@ -18,8 +18,8 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
     height: 893,
   },
   '/assets/blog/cisto-pilonidal-tecnica-retalho.webp': {
-    width: 1600,
-    height: 873,
+    width: 1024,
+    height: 558,
   },
   '/assets/blog/comparativo-instrumentos-cirurgicos.webp': {
     width: 1024,
@@ -53,6 +53,12 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
     width: 1376,
     height: 768,
   },
+  '/assets/blog/laser-co2-instrumento.webp': { width: 1024, height: 559 },
+  '/assets/blog/hemorroidoplastia-laser-diodo.webp': { width: 1024, height: 844 },
+  '/assets/blog/ligadura-elastica-etapas.webp': { width: 1024, height: 572 },
+  '/assets/blog/laser-co2-regiao-perianal.webp': { width: 1024, height: 572 },
+  '/assets/blog/prurido-anal-desconforto.webp': { width: 1024, height: 559 },
+  '/assets/blog/fissura-anal-anatomia.webp': { width: 1024, height: 559 },
 } as const satisfies Readonly<Record<string, EditorialImageDimensions>>
 
 export function getEditorialImageDimensions(

@@ -7,7 +7,7 @@ metaDescription: >-
   na cicatrização.
 slug: hemorroidectomia-laser-co2
 publishDate: 2026-03-12
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: hemorroidectomia laser CO2
 secondaryKeywords:
   - cirurgia de hemorroidas a laser
@@ -17,6 +17,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: decision
 order: 1
+image:
+  src: /assets/blog/laser-co2-instrumento.webp
+  alt: Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico
+  caption: Imagem ilustrativa do equipamento; não é registro de um procedimento ou paciente da Dra. Dayara.
+  width: 1024
+  height: 559
 relatedPosts:
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - pos-operatorio-cirurgia-hemorroidas-o-que-esperar
@@ -58,6 +64,8 @@ disclaimer: >-
 *Existe uma confusão comum: "cirurgia a laser" virou um guarda-chuva para coisas bem diferentes. A hemorroidectomia com laser de CO2 não é a cirurgia "sem corte" — ela corta. A diferença está em com o quê.*
 
 ![Comparação entre instrumentos cirúrgicos: eletrocautério, laser de diodo e laser de CO2](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
+
+![Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico](/assets/blog/laser-co2-instrumento.webp)
 
 ## O que o laser de CO2 faz no tecido
 

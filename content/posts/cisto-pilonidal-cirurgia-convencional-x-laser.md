@@ -6,7 +6,7 @@ metaDescription: >-
   laser de diodo (SiLaC) e retalhos — com benefícios, desvantagens e indicações.
 slug: cisto-pilonidal-cirurgia-convencional-x-laser
 publishDate: 2026-09-01
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: cirurgia cisto pilonidal convencional x laser
 secondaryKeywords:
   - cisto pilonidal a laser SiLaC
@@ -89,4 +89,6 @@ Usadas principalmente em casos mais complicados e extremamente complexos. O ciru
 
 **Indicação:** preferida em casos de doença extensa, recidivada, ou quando outras abordagens já falharam várias vezes.
 
-![Ilustração cirúrgica de uma técnica de retalho para doença pilonidal extensa, com remoção ampla do tecido doente na região sacrococcígea](/assets/blog/cisto-pilonidal-tecnica-retalho.webp)
+![Ilustração da região sacrococcígea durante uma cirurgia para doença pilonidal](/assets/blog/cisto-pilonidal-tecnica-retalho.webp)
+
+*Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho.*

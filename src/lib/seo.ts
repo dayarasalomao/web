@@ -12,6 +12,7 @@ import {
 import type { BlogPost } from './blog.ts'
 import type { Treatment } from './treatments.ts'
 import { toSchemaDateTime } from './dates.ts'
+import { getEditorialImageDimensions } from './editorial-images.ts'
 
 export function buildCanonical(path: string): string {
   const normalizedBase = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL
@@ -37,6 +38,8 @@ interface OgOptions {
   url: string
   image?: string
   imageAlt?: string
+  imageWidth?: number
+  imageHeight?: number
   type?: 'website' | 'article'
   publishedTime?: string
   modifiedTime?: string
@@ -53,7 +56,7 @@ export function buildOgMetadata(opts: OgOptions): NonNullable<Metadata['openGrap
     siteName: BUSINESS_NAME,
     title: opts.title,
     description: opts.description,
-    images: [{ url: image, width: 1200, height: 630, alt: imageAlt }],
+    images: [{ url: image, width: opts.imageWidth ?? 1200, height: opts.imageHeight ?? 630, alt: imageAlt }],
     ...(opts.publishedTime ? { publishedTime: opts.publishedTime } : {}),
     ...(opts.modifiedTime ? { modifiedTime: opts.modifiedTime } : {}),
     ...(opts.authors ? { authors: opts.authors } : {}),
@@ -80,6 +83,9 @@ export function buildPostMetadata(post: BlogPost): Metadata {
   const url = buildCanonical(`/blog/${post.slug}`)
   const title = post.seoTitle ?? post.title
   const image = post.cardImage?.src ?? BLOG_DEFAULT_OG_IMAGE
+  const imageDimensions = post.cardImage?.width && post.cardImage?.height
+    ? { width: post.cardImage.width, height: post.cardImage.height }
+    : getEditorialImageDimensions(image)
   const imageAlt = post.cardImage?.alt ?? `${post.title} — ${SEO_DOCTOR_NAME}`
 
   return {
@@ -93,6 +99,8 @@ export function buildPostMetadata(post: BlogPost): Metadata {
       url,
       image,
       imageAlt,
+      imageWidth: imageDimensions?.width,
+      imageHeight: imageDimensions?.height,
       type: 'article',
       publishedTime: toSchemaDateTime(post.publishDate),
       modifiedTime: toSchemaDateTime(post.lastModified),
