@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { LinkCard } from '@/components/ui/LinkCard'
-import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_LOCATION_WITH_STATE, WHATSAPP_URL } from '@/constants'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import {
   buildBreadcrumbGraph,
@@ -13,7 +13,7 @@ import {
 import { getAllTreatments } from '@/lib/treatments'
 import { getLocationsLandingPath } from '@/lib/locations'
 
-const TREATMENTS_TITLE = `Tratamentos — ${SEO_DOCTOR_NAME} | Coloproctologia`
+const TREATMENTS_TITLE = `Tratamentos de coloproctologia em ${SEO_LOCATION_WITH_STATE}`
 const TREATMENTS_DESCRIPTION =
   'Conheça os principais tratamentos em coloproctologia com foco em precisão, conforto e técnicas minimamente invasivas.'
 

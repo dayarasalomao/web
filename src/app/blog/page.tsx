@@ -11,9 +11,9 @@ import {
   buildItemListGraph,
   serializeJsonLd,
 } from '@/lib/structured-data'
-import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_LOCATION_WITH_STATE, WHATSAPP_URL } from '@/constants'
 
-const BLOG_TITLE = `Blog — ${SEO_DOCTOR_NAME} | Coloproctologia`
+const BLOG_TITLE = `Blog de coloproctologia em ${SEO_LOCATION_WITH_STATE} | Dra. Dayara`
 const BLOG_DESCRIPTION =
   'Conteúdos sobre hemorroidas, fissura anal, fístula, HPV perianal, cisto pilonidal e tecnologias minimamente invasivas em coloproctologia.'
 

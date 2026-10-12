@@ -1,5 +1,6 @@
 ---
 title: 'Plicoma ou HPV perianal? Como diferenciar as lesões'
+seoTitle: 'Plicoma ou HPV perianal? Diferenças entre as lesões'
 metaDescription: >-
   Plicoma é sobra de pele; condiloma por HPV é verruga viral. Veja como
   diferenciar pela superfície, número de lesões, evolução e sintomas.

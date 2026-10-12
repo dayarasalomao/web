@@ -1,5 +1,6 @@
 ---
 title: 'Cisto pilonidal com EPSiT e laser: por dentro, sem ferida aberta'
+seoTitle: 'Cisto pilonidal: tratamento com EPSiT e laser'
 metaDescription: >-
   Como o EPSiT e o laser de diodo tratam o cisto pilonidal por dentro do
   trajeto, e por que isso evita os meses de curativos da cirurgia convencional.

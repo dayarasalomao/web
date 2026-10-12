@@ -1,5 +1,6 @@
 ---
 title: 'Eletrocautério, laser de diodo e laser de CO2: qual a diferença real?'
+seoTitle: 'Eletrocautério, laser de diodo e CO2: diferenças'
 metaDescription: >-
   Entenda como funcionam o eletrocautério, o laser de diodo e o laser de CO2 na
   cirurgia proctológica, o que cada tecnologia faz no tecido e seus benefícios.

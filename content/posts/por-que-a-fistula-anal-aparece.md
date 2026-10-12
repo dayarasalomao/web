@@ -1,5 +1,6 @@
 ---
 title: 'Por que uma fístula anal aparece? Da glândula infectada ao trajeto crônico'
+seoTitle: 'Por que a fístula anal aparece? Causas e formação'
 metaDescription: >-
   A maioria das fístulas anais começa com a infecção de uma glândula do canal
   anal. Entenda o passo a passo, os fatores de risco e os sinais de alerta.

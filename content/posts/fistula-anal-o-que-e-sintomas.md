@@ -1,5 +1,6 @@
 ---
 title: 'Fístula Anal: O Que É, Sintomas e Como Tratar'
+seoTitle: 'Fístula anal: o que é, sintomas e tratamento'
 metaDescription: >-
   Entenda o que é a fístula anal, por que causa secreção e infecções recorrentes
   na região perianal e como o tratamento é individualizado para cada caso.

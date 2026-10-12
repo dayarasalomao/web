@@ -59,7 +59,7 @@ function buildMapEmbedUrl(location: PracticeLocation): string | null {
 }
 
 function buildLocationTitle(location: PracticeLocation): string {
-  return `Coloproctologista em ${location.city}, ${location.stateCode} | ${SEO_DOCTOR_NAME}`
+  return `Coloproctologista em ${location.city} (${location.stateCode}) | Dra. Dayara`
 }
 
 function buildLocationDescription(location: PracticeLocation, indexable: boolean): string {

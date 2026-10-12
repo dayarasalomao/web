@@ -1,5 +1,6 @@
 ---
 title: 'Dor ao Evacuar: O Que Pode Ser e Quando Investigar'
+seoTitle: 'Dor ao evacuar: causas e quando investigar'
 metaDescription: >-
   Saiba quais causas podem estar por trás da dor ao evacuar, quando o sintoma
   merece avaliação e como o diagnóstico orienta o tratamento.

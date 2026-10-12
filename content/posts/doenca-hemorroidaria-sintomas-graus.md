@@ -1,5 +1,6 @@
 ---
 title: 'Doença Hemorroidária: Sintomas, Graus e Formas de Tratamento'
+seoTitle: 'Hemorroidas: sintomas, graus e opções de tratamento'
 metaDescription: >-
   Entenda os sintomas das hemorroidas, a diferença entre hemorroidas internas e
   externas, os graus da doença e as opções de tratamento.

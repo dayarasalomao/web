@@ -1,5 +1,6 @@
 ---
 title: 'Diarreia Crônica: Causas e Sinais de Alerta'
+seoTitle: 'Diarreia crônica: causas e sinais de alerta'
 metaDescription: >-
   Saiba quando a diarreia persistente precisa ser investigada, quais sintomas
   exigem atenção e como a avaliação médica orienta o tratamento.

@@ -1,5 +1,6 @@
 ---
 title: 'Cirurgia de hemorroidas: qual o cenário ideal para cada tecnologia'
+seoTitle: 'Cirurgia de hemorroidas: como escolher a técnica'
 metaDescription: >-
   Hemorroidectomia convencional, laser de diodo e laser de CO2 têm indicações
   diferentes. Veja o cenário ideal de cada uma e como decidir com sua cirurgiã.

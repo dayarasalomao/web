@@ -1,5 +1,6 @@
 ---
 title: 'Plicoma anal: o que causa esse "excesso de pele" e quando tratar'
+seoTitle: 'Plicoma anal: o que é e quando tratar o excesso de pele'
 metaDescription: >-
   Plicoma anal é uma dobra de pele benigna ao redor do ânus. Entenda as causas
   mais comuns, quando o tratamento é indicado e por que ele pode voltar.

@@ -78,16 +78,17 @@ export function buildTwitterMetadata(opts: TwitterOptions): NonNullable<Metadata
 
 export function buildPostMetadata(post: BlogPost): Metadata {
   const url = buildCanonical(`/blog/${post.slug}`)
+  const title = post.seoTitle ?? post.title
   const image = post.cardImage?.src ?? BLOG_DEFAULT_OG_IMAGE
   const imageAlt = post.cardImage?.alt ?? `${post.title} — ${SEO_DOCTOR_NAME}`
 
   return {
-    title: post.title,
+    title,
     description: post.metaDescription,
     keywords: [post.primaryKeyword, ...post.secondaryKeywords],
     alternates: { canonical: url },
     openGraph: buildOgMetadata({
-      title: post.title,
+      title,
       description: post.metaDescription,
       url,
       image,
@@ -98,7 +99,7 @@ export function buildPostMetadata(post: BlogPost): Metadata {
       authors: [SEO_DOCTOR_NAME],
     }),
     twitter: buildTwitterMetadata({
-      title: post.title,
+      title,
       description: post.metaDescription,
       image,
     }),

@@ -1,5 +1,6 @@
 ---
 title: 'Remoção de plicoma anal com laser de CO2: como funciona e quando vale a pena'
+seoTitle: 'Plicoma anal: remoção com laser de CO2'
 metaDescription: >-
   Como o laser de CO2 remove o plicoma anal, por que ele reduz o risco de
   recidiva em comparação ao eletrocautério e em quais casos a remoção é

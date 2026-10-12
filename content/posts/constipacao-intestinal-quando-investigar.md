@@ -1,5 +1,6 @@
 ---
 title: 'Constipação Intestinal: Quando é Preciso Investigar'
+seoTitle: 'Intestino preso: quando investigar a constipação'
 metaDescription: >-
   Entenda quando o intestino preso merece avaliação médica, quais sinais de
   alerta observar e como a constipação pode ser investigada.

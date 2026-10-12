@@ -1,5 +1,6 @@
 ---
 title: 'Ligadura elástica dói? O que esperar antes e depois'
+seoTitle: 'Ligadura elástica dói? Recuperação e cuidados'
 metaDescription: >-
   Ligadura elástica pode causar pressão ou desconforto. Entenda o que costuma
   acontecer, os sinais de alerta e quando ela pode ser indicada.

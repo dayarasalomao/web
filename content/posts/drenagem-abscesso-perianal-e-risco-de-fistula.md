@@ -1,5 +1,6 @@
 ---
 title: 'Drenar um abscesso perianal evita a formação de uma fístula?'
+seoTitle: 'Abscesso perianal: drenagem e risco de fístula'
 metaDescription: >-
   A forma como o abscesso anal é drenado muda o risco de virar fístula. Entenda
   o papel do ambiente cirúrgico, do seton e do acompanhamento após a drenagem.

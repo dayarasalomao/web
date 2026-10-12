@@ -1,5 +1,6 @@
 ---
 title: 'Caroço, verruga ou ferida na região anal: como saber o que é'
+seoTitle: 'Caroço, verruga ou ferida anal: o que observar'
 metaDescription: >-
   Plicoma, verruga de HPV, hemorroida trombosada, abscesso, hidradenite: causas
   diferentes com aparência parecida. Veja o que distingue cada uma e quando a

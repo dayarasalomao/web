@@ -1,5 +1,6 @@
 ---
 title: 'Hidradenite Supurativa: Sintomas, Impacto e Tratamento'
+seoTitle: 'Hidradenite supurativa: sintomas e tratamento'
 metaDescription: >-
   Entenda o que é hidradenite supurativa, como ela pode afetar virilhas, períneo
   e região perianal, e quando procurar avaliação.

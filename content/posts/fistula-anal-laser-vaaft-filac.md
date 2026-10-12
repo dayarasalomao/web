@@ -1,5 +1,6 @@
 ---
 title: 'Fístula anal com VAAFT e FiLaC: vídeo para mapear, laser para tratar'
+seoTitle: 'Fístula anal: tratamento com VAAFT e FiLaC'
 metaDescription: >-
   Como as técnicas VAAFT e FiLaC tratam a fístula anal por dentro do trajeto,
   por que a preservação do esfíncter é o ponto central e em quais casos elas

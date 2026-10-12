@@ -1,5 +1,6 @@
 ---
 title: 'Histórico de Crohn, Retocolite ou Casos na Família: Quando Fazer Acompanhamento com Coloproctologista'
+seoTitle: 'Crohn ou retocolite na família: quando acompanhar'
 metaDescription: >-
   Entenda quando histórico de Crohn, retocolite ulcerativa ou casos na família
   indicam acompanhamento com coloproctologista.

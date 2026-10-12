@@ -44,7 +44,7 @@ export const BUSINESS_FOOTER_LOCATION = `${BUSINESS_CLINIC_NAME} - ${BUSINESS_AD
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
 export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
-export const SEO_LOCATION_WITH_STATE = `${SEO_LOCATION}, ${BUSINESS_ADDRESS_REGION_CODE}`
+export const SEO_LOCATION_WITH_STATE = `${SEO_LOCATION} (${BUSINESS_ADDRESS_REGION_CODE})`
 
 export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
 export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION_WITH_STATE} no ${BUSINESS_CLINIC_NAME}. Avaliação e tratamentos para hemorroidas, fissura, fístula, HPV anal e cisto pilonidal.`

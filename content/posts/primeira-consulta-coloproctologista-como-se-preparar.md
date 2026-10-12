@@ -1,5 +1,6 @@
 ---
 title: 'Primeira consulta com coloproctologista: o que esperar'
+seoTitle: 'Primeira consulta com coloproctologista: como se preparar'
 metaDescription: >-
   Saiba como costuma funcionar a primeira consulta com coloproctologista, o que
   levar, como pode ser o exame e quando avisar sobre dor intensa.

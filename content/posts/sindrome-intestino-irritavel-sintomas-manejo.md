@@ -1,5 +1,6 @@
 ---
 title: 'Síndrome do Intestino Irritável: Sintomas e Manejo'
+seoTitle: 'Síndrome do intestino irritável: sintomas e cuidados'
 metaDescription: >-
   Entenda sintomas da síndrome do intestino irritável, por que o diagnóstico
   exige excluir sinais de alerta e como o manejo é individualizado.

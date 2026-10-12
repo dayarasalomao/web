@@ -1,5 +1,6 @@
 ---
 title: 'Toxina botulínica para fissura anal: como quebra o ciclo da dor'
+seoTitle: 'Toxina botulínica para fissura anal: quando usar'
 metaDescription: >-
   Por que a fissura anal não cicatriza sozinha, como a toxina botulínica
   interrompe o espasmo do esfíncter e em que casos ela é indicada antes de

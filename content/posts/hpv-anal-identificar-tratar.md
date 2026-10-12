@@ -1,5 +1,6 @@
 ---
 title: 'HPV Anal: Como Identificar e Tratar'
+seoTitle: 'HPV anal: como identificar e tratar'
 metaDescription: >-
   Saiba como o HPV se manifesta na região anal, quais sintomas merecem atenção e
   por que o tratamento e o acompanhamento são individualizados.

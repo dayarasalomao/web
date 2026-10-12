@@ -1,5 +1,6 @@
 ---
 title: 'Alterações no Hábito Intestinal: Quando a Mudança Merece Avaliação Médica'
+seoTitle: 'Mudança no hábito intestinal: quando procurar avaliação'
 metaDescription: >-
   Entenda quais mudanças no hábito intestinal merecem atenção, quando procurar
   avaliação e quais sinais de alerta observar.

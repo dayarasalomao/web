@@ -1,5 +1,6 @@
 ---
 title: 'Coceira anal (prurido anal): por que não passa e o que realmente ajuda'
+seoTitle: 'Coceira anal: causas, cuidados e quando investigar'
 metaDescription: >-
   Coceira anal persistente quase nunca é falta de higiene — muitas vezes é o
   contrário. Entenda as causas, o ciclo que mantém o sintoma, os sinais de

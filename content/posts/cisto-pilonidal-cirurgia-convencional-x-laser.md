@@ -1,5 +1,6 @@
 ---
 title: 'Cisto pilonidal: cirurgia convencional, laser ou retalho?'
+seoTitle: 'Cisto pilonidal: cirurgia convencional, laser ou retalho?'
 metaDescription: >-
   Compare as técnicas cirúrgicas para cisto pilonidal — excisão convencional,
   laser de diodo (SiLaC) e retalhos — com benefícios, desvantagens e indicações.

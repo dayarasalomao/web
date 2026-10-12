@@ -1,5 +1,6 @@
 ---
 title: 'Cirurgia de hemorroidas sem corte: para quem serve e quais são os limites'
+seoTitle: 'Hemorroidas sem corte: indicação e limites do laser'
 metaDescription: >-
   A hemorroidoplastia a laser de diodo dói menos e devolve o paciente à rotina
   mais cedo — mas tem indicação restrita e recidiva um pouco maior. Entenda os

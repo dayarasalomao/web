@@ -1,5 +1,6 @@
 ---
 title: 'HPV perianal: como é o tratamento a laser de CO2'
+seoTitle: 'HPV perianal: tratamento com laser de CO2'
 metaDescription: >-
   Como o laser de CO2 vaporiza as verrugas perianais preservando o tecido
   saudável, como é feita a anestesia e por que o acompanhamento faz parte do

@@ -1,5 +1,6 @@
 ---
 title: 'Ligadura elástica para hemorroidas internas: como funciona'
+seoTitle: 'Ligadura elástica para hemorroidas: como funciona'
 metaDescription: >-
   Entenda como funciona a ligadura elástica, para quais hemorroidas internas ela
   pode ser indicada, seus limites, cuidados e sinais de alerta.

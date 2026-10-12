@@ -1,5 +1,6 @@
 ---
 title: 'Fissura Anal: Causas, Sintomas e Opções de Tratamento'
+seoTitle: 'Fissura anal: causas, sintomas e tratamento'
 metaDescription: >-
   Saiba o que é a fissura anal, por que causa dor intensa ao evacuar, a
   diferença entre fissuras típicas e atípicas e quais são as opções de

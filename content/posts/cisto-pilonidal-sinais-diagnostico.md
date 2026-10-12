@@ -1,5 +1,6 @@
 ---
 title: 'Cisto Pilonidal: Sinais, Diagnóstico e Tratamento'
+seoTitle: 'Cisto pilonidal: sinais, diagnóstico e tratamento'
 metaDescription: >-
   Entenda os sinais do cisto pilonidal na região do cóccix, como é feito o
   diagnóstico e quais são as opções de tratamento, das convencionais às

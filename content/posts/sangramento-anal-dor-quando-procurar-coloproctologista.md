@@ -1,5 +1,6 @@
 ---
 title: 'Sangramento Anal ou Dor: Quando Procurar uma Coloproctologista'
+seoTitle: 'Sangramento anal ou dor: quando procurar avaliação'
 metaDescription: >-
   Entenda quando sangramento anal ou dor na região do ânus merece avaliação
   médica e por que é importante confirmar a causa antes de tratar.

@@ -1,5 +1,6 @@
 ---
 title: 'Doenças Inflamatórias Intestinais: Quando Suspeitar de Crohn ou Retocolite'
+seoTitle: 'Crohn e retocolite: quando suspeitar de inflamação intestinal'
 metaDescription: >-
   Conheça sinais que podem sugerir doença de Crohn ou retocolite ulcerativa e
   entenda quando o acompanhamento coloproctológico é importante.

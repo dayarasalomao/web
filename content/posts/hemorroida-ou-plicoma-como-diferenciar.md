@@ -1,5 +1,6 @@
 ---
 title: 'Hemorroida ou plicoma? Como diferenciar o caroço perto do ânus'
+seoTitle: 'Hemorroida ou plicoma? Como diferenciar o caroço anal'
 metaDescription: >-
   Caroço ou "pelinha" perto do ânus pode ser hemorroida ou plicoma. Veja as
   diferenças de dor, sangramento e aspecto, e quando procurar um médico.

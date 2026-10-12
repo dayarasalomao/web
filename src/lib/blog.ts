@@ -57,6 +57,7 @@ export interface MedicalSource {
 
 export interface BlogPostMeta {
   title: string
+  seoTitle?: string
   metaDescription: string
   slug: string
   publishDate: string

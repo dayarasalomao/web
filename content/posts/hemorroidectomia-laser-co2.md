@@ -1,5 +1,6 @@
 ---
 title: 'Hemorroidectomia com laser de CO2: o que muda quando o corte é feito a laser'
+seoTitle: 'Hemorroidectomia com laser de CO2: como funciona'
 metaDescription: >-
   A hemorroidectomia com laser de CO2 continua sendo uma cirurgia com cortes —
   o que muda é o instrumento. Entenda o efeito disso na dor, no sangramento e
