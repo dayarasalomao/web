@@ -9,4 +9,8 @@
 ## Handoff
 
 Feature: blog-images-local-titles. Branch: codex/seo-local-campo-grande.
-Escopo e quatro tarefas definidos; implementação começa por títulos. Base: 7c01737.
+Base: 7c01737. T1 24b63c7, T2 fc62343, T3 05bf2cd e F1 736dae6 concluídos.
+62 unitários, 46 e2e, lint, build (69 páginas) e auditoria SEO (0/0) aprovados.
+Revisão visual final aprovada. Verificação independente PASS: 8/8 critérios e 5/5 mutações detectadas.
+Implementação e documentação concluídas para a PR #21, mantida aberta para revisão/merge.
+Próximo passo fora desta entrega: revisão médica final e confirmação de origem/licença das imagens antes do merge; depois mensuração no Search Console.

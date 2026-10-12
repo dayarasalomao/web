@@ -4,7 +4,7 @@
 - [x] T2 — Imagens existentes: 7 assets WebP, cadastro de dimensões, 7 artigos e relatório de cruzamento; teste dos arquivos/dimensões/destinos. Gate: unitários + audit:seo. Commit `feat(blog): integrate supplied illustrations into existing articles`.
 - [x] T3 — Conteúdo: 5 artigos novos, 3 assets, atualização da pauta sem corte, fontes/notas de pesquisa, links e mapa SEO; testes de conteúdo e e2e dos novos artigos. Gate: lint + build + unitários + audit:seo + e2e completos. Commit `feat(blog): add patient guides and local specialist search article`.
 - [x] F1 — Correções da revisão: omitir creator/copyrightHolder de imagens sem autoria confirmada; garantir H1 local dentro da coluna após carregar fontes em 320/390 px. Gate: unitários + e2e completo + lint + build. Commit `fix(blog): keep image attribution factual and mobile headings contained`.
-- [ ] T4 — Verificação independente, revisão visual, relatório, STATE e documentação final; atualizar PR. Gate: evidências T1–T3 + sensor independente. Commit `docs(seo): record editorial integration and verification`.
+- [x] T4 — Verificação independente, revisão visual, relatório, STATE e documentação final; atualizar PR. Gate: evidências T1–T3 + sensor independente. Commit `docs(seo): record editorial integration and verification`.
 
 ## Cobertura
 

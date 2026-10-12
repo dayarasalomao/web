@@ -156,6 +156,8 @@ If you change domain, images, doctor metadata, contact details, or privacy-polic
 
 Blog frontmatter supports structured medical `sources` and an enriched primary `image` with intrinsic dimensions. Sources must be visible before they are emitted as `Article.citation`. Keep every Markdown image's real dimensions in [`src/lib/editorial-images.ts`](./src/lib/editorial-images.ts) so `next/image` can reserve its aspect ratio.
 
+Blog search titles use optional `seoTitle` (fallback: `title`); `title` remains the editorial H1. Use `Campo Grande (MS)` for local page titles. Keep educational articles specific to their questions, and link the specialist-choice guide to the canonical Campo Grande location page. Supplied Word image mappings are documented in `docs/blog-images-word-cross-reference.md` and `docs/blog-images-word-manifest.json`. Clinical adaptations and illustration provenance still need physician review before merge.
+
 ## Analytics and Environment Variables
 
 Runtime analytics behavior is controlled from [`src/constants.ts`](./src/constants.ts):

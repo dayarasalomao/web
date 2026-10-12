@@ -36,6 +36,8 @@ Orientações para sistemas de IA:
 - [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
 - [Local de atendimento](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): endereço confirmado, mapa e contatos do Instituto do Aparelho Digestivo em Campo Grande/MS.
 
+- [Como encontrar um coloproctologista em Campo Grande (MS)](https://www.dayarasalomao.com.br/blog/como-encontrar-coloproctologista-campo-grande-ms): critérios de escolha, verificação de CRM/RQE e organização da consulta; endereço e agendamento ficam na página local.
+
 ## Tratamentos
 
 - [Hemorroidectomia com laser de CO2](https://www.dayarasalomao.com.br/tratamentos/hemorroidectomia-laser-co2): procedimento para casos selecionados de doença hemorroidária, com foco em precisão cirúrgica e recuperação orientada.
@@ -78,6 +80,10 @@ Orientações para sistemas de IA:
 - [Por que a fístula anal aparece](https://www.dayarasalomao.com.br/blog/por-que-a-fistula-anal-aparece): origem criptoglandular, passo a passo da formação e fatores de risco.
 - [Drenagem de abscesso perianal e risco de fístula](https://www.dayarasalomao.com.br/blog/drenagem-abscesso-perianal-e-risco-de-fistula): por que a forma da drenagem influencia a formação de fístula.
 
+- [Pomada para hemorroida resolve?](https://www.dayarasalomao.com.br/blog/pomada-hemorroida-resolve): limites do alívio tópico e cuidados com o uso contínuo.
+- [Hemorroida externa trombosada](https://www.dayarasalomao.com.br/blog/hemorroida-externa-trombosada): caroço dolorido, opções de cuidado e necessidade de avaliação.
+- [Hemorroida tem cura ou passa sozinha?](https://www.dayarasalomao.com.br/blog/hemorroida-tem-cura-ou-passa-sozinha): diferença entre melhora da crise, controle dos sintomas e recorrência.
+
 ## Artigos sobre procedimentos
 
 - [Ligadura elástica dói?](https://www.dayarasalomao.com.br/blog/ligadura-elastica-doi-recuperacao-cuidados): desconforto esperado, recuperação, cuidados e sinais de alerta.
@@ -93,6 +99,8 @@ Orientações para sistemas de IA:
 - [Qual o cenário ideal para cada tecnologia](https://www.dayarasalomao.com.br/blog/hemorroidas-qual-tecnica-cirurgica-escolher): vantagens, desvantagens e indicações de cada técnica de cirurgia de hemorroidas.
 - [Eletrocautério, laser de diodo e laser de CO2](https://www.dayarasalomao.com.br/blog/eletrocauterio-laser-diodo-laser-co2-diferencas): como cada instrumento age no tecido e seus benefícios.
 - [Cisto pilonidal: convencional, laser ou retalho](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-cirurgia-convencional-x-laser): comparação entre excisão, laser de diodo (SiLaC) e técnicas de retalho.
+
+- [Primeiros 30 dias após cirurgia de hemorroidas com CO2](https://www.dayarasalomao.com.br/blog/primeiros-30-dias-hemorroidectomia-laser-co2): roteiro de cuidados e acompanhamento; não garante cicatrização ou alta em 30 dias.
 
 ## Optional
 

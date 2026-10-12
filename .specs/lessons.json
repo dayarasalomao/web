@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "promote_threshold": 2,
+  "window_days": 45,
+  "quarantine_threshold": 2,
+  "next_id": 3,
+  "lessons": [
+    {
+      "id": "L-001",
+      "key": "ac_gap::emit editorial image creator and copyright ownership only when image specific provenance is verified",
+      "text": "Emit editorial image creator and copyright ownership only when image-specific provenance is verified.",
+      "signal": "ac_gap",
+      "scope": "structured-data",
+      "status": "candidate",
+      "features": [
+        "blog-images-local-titles"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "src/lib/structured-data.ts:280 (structured-data)"
+      ],
+      "created": "2026-10-12T22:52:01Z",
+      "last_seen": "2026-10-12T22:52:01Z"
+    },
+    {
+      "id": "L-002",
+      "key": "ac_gap::check heading text bounds after document fonts ready because global overflow clipping can hide mobile text overflow",
+      "text": "Check heading text bounds after document.fonts.ready because global overflow clipping can hide mobile text overflow.",
+      "signal": "ac_gap",
+      "scope": "editorial-ui",
+      "status": "candidate",
+      "features": [
+        "blog-images-local-titles"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "tests/e2e/editorial-update.spec.ts:114 (editorial-ui)"
+      ],
+      "created": "2026-10-12T22:52:01Z",
+      "last_seen": "2026-10-12T22:52:01Z"
+    }
+  ]
+}
