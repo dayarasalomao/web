@@ -51,3 +51,15 @@ it('uses intrinsic image dimensions in Open Graph instead of the social fallback
     assert.equal(images[0].height, height)
   }
 })
+
+it('does not assign unverified creator or copyright ownership to editorial images (IMG-01)', async () => {
+  const { getAllPosts } = await import('../../src/lib/blog.ts')
+  const { buildBlogPostGraph } = await import('../../src/lib/structured-data.ts')
+  for (const post of getAllPosts().filter((post) => post.image)) {
+    const graph = buildBlogPostGraph(post) as { '@graph': Array<Record<string, unknown>> }
+    const article = graph['@graph'].find((node) => node['@type'] === 'Article')
+    const image = article?.image as Record<string, unknown>
+    assert.equal(image.creator, undefined)
+    assert.equal(image.copyrightHolder, undefined)
+  }
+})

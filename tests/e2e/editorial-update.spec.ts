@@ -111,3 +111,20 @@ test('local guide is linked from the location and first consultation pages (LOCA
     await expect(page.locator('main a[href="/blog/como-encontrar-coloproctologista-campo-grande-ms"]').first()).toBeVisible()
   }
 })
+
+for (const width of [320, 390]) {
+  test(`local guide heading stays within its column after font loading at ${width}px (QA-01)`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 })
+    await page.goto('/blog/como-encontrar-coloproctologista-campo-grande-ms')
+    await page.evaluate(() => document.fonts.ready)
+    const bounds = await page.locator('main h1').evaluate((heading) => {
+      const range = document.createRange()
+      range.selectNodeContents(heading)
+      return {
+        textRight: range.getBoundingClientRect().right,
+        columnRight: heading.getBoundingClientRect().right,
+      }
+    })
+    expect(bounds.textRight).toBeLessThanOrEqual(bounds.columnRight + 1)
+  })
+}

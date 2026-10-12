@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </span>
           </div>
 
-          <h1 className="mb-4 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+          <h1 className="mb-4 break-words text-[clamp(1.5rem,7.5vw,2.25rem)] font-semibold leading-tight text-teal lg:text-6xl">
             {post.title}
           </h1>
 

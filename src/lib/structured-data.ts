@@ -277,8 +277,6 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
         width: post.image.width,
         height: post.image.height,
         caption: post.image.caption ?? post.image.alt,
-        creator: { '@id': `${SITE_URL}#physician` },
-        copyrightHolder: { '@id': `${SITE_URL}#physician` },
       }
     : toAbsoluteUrl(post.cardImage?.src || SEO_IMAGE)
   const breadcrumbItems: BreadcrumbItem[] = [
