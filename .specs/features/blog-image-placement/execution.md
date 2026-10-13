@@ -42,3 +42,7 @@ Todos os comandos solicitados aprovados: lint exit 0; build Next 16.2.10, 69 pá
 AC7: baseline de cardImage, OG e Article protegido em unitário; sitemap.ts e lib/blog.ts/seo.ts/structured-data.ts não foram alterados. E2e blog.spec.ts:581–607 preserva sitemap e imagens, e editorial-update.spec.ts mantém as verificações de metadados.
 
 Mapeamento reverso da evidência visual: todas as capturas cobrem AC5/6/8 e distribuição AC1; checks.json registra zero overflow para dez combinações página/viewport. Frontmatters/prosa/alt/disclaimers comparados contra a base com script somente de leitura, sem diferenças de significado. Nenhum gate enfraquecido ou teste antigo removido/ignorado. Verifier independente será executado após este commit.
+
+## Encerramento
+
+Verifier independente PASS (validation.md): AC1–8, lint/build69/unit126/SEO0/0/e2e relevante9 aprovados; dois mutantes editoriais detectados, zero sobreviventes, cópia restaurada55/55. Nenhuma lacuna bloqueante. Spec, implementação, capturas e verificações concluídas; revisão clínica/procedência continua sendo requisito antes do merge.
