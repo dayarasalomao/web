@@ -101,8 +101,8 @@ export default function BlogPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
-            {posts.map((post) => (
-              <BlogCard key={post.slug} post={post} />
+            {posts.map((post, index) => (
+              <BlogCard key={post.slug} post={post} priority={index < 2} />
             ))}
           </div>
         )}

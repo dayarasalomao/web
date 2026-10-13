@@ -1,7 +1,60 @@
 import { expect, test } from '@playwright/test'
+import { getAllPosts } from '../../src/lib/blog'
 
 const CANONICAL_WEBSITE_URL = 'https://www.dayarasalomao.com.br'
 const BLOG_POST_SLUG = 'hemorroidectomia-laser-co2'
+
+for (const width of [1280, 375]) {
+  test(`blog card media preserves diagrams, links and layout at ${width}px (AC5/6)`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto('/blog')
+    const posts = getAllPosts()
+    const cards = page.locator('main article')
+    await expect(cards).toHaveCount(posts.length)
+    for (const [index, post] of posts.entries()) {
+      const card = cards.nth(index)
+      const image = card.locator('img')
+      await expect(image).toHaveCount(1)
+      await expect(image).toHaveAttribute('alt', '')
+      await expect(image).toHaveAttribute('src', new RegExp(encodeURIComponent(post.cardImage?.src ?? '/core/lettering-blue.png')))
+      await expect(image).toHaveCSS('object-fit', 'contain')
+      await expect(image).toHaveAttribute('loading', index < 2 ? 'eager' : 'lazy')
+      await expect(image).toHaveAttribute('fetchpriority', index < 2 ? 'high' : 'auto')
+      await expect(card.getByRole('link', { name: post.title, exact: true })).toHaveAttribute('href', `/blog/${post.slug}`)
+      const box = await image.evaluate((img) => ({
+        width: img.parentElement!.clientWidth,
+        height: img.parentElement!.clientHeight,
+      }))
+      expect(Math.abs(box.width / box.height - 16 / 9)).toBeLessThan(0.02)
+    }
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
+    expect(overflow).toBe(0)
+    const firstImage = cards.first().locator('img')
+    await expect(firstImage).toHaveAttribute('sizes', '(max-width: 768px) 100vw, 50vw')
+    await firstImage.scrollIntoViewIfNeeded()
+    await expect(firstImage).toBeVisible()
+    await cards.first().getByRole('link').click()
+    await expect(page).toHaveURL(`/blog/${posts[0].slug}`)
+  })
+}
+
+test('homepage article cards share decorative media and lazy loading (AC5/6)', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 })
+  await page.goto('/')
+  const section = page.locator('section[aria-labelledby="latest-articles-title"]')
+  const cards = section.locator('article')
+  await expect(cards).toHaveCount(3)
+  for (const [index, post] of getAllPosts().slice(0, 3).entries()) {
+    const image = cards.nth(index).locator('img')
+    await expect(image).toHaveAttribute('alt', '')
+    await expect(image).toHaveAttribute('src', new RegExp(encodeURIComponent(post.cardImage?.src ?? '/core/lettering-blue.png')))
+    await expect(image).toHaveAttribute('loading', 'lazy')
+    await expect(image).toHaveAttribute('sizes', '(max-width: 768px) 100vw, (max-width: 1279px) 50vw, 33vw')
+  }
+  await cards.first().scrollIntoViewIfNeeded()
+  await expect(cards.first().locator('img')).toBeVisible()
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0)
+})
 
 function getXmlValues(xml: string, tagName: string): string[] {
   const pattern = new RegExp(`<${tagName}>(.*?)</${tagName}>`, 'g')

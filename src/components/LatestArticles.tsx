@@ -33,7 +33,11 @@ export default function LatestArticles() {
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {posts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
+            <BlogCard
+              key={post.slug}
+              post={post}
+              sizes="(max-width: 768px) 100vw, (max-width: 1279px) 50vw, 33vw"
+            />
           ))}
         </div>
       </div>
