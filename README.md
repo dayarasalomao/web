@@ -50,6 +50,8 @@ When changing contact details, credentials, treatments, or SEO positioning, chec
 
 Blog frontmatter supports structured `sources` and an enriched primary `image` (`src`, `alt`, `caption`, `width`, and `height`). Sources are rendered visibly and mirrored to `Article.citation`; enriched images generate `ImageObject` data and sitemap image entries. Keep intrinsic dimensions for every Markdown image in `src/lib/editorial-images.ts` to prevent layout shift.
 
+Blog images are placed editorially in Markdown beside the matching explanation, before the final H2. Never stack figures or put them inside lists, tables, FAQ, sources, or CTA sections. Secondary image captions may use the Markdown title (`![alt](src "existing caption")`); preserve medical disclaimers. Blog cards use decorative, uncropped 16:9 media and a branded panel when no image exists.
+
 Blog search titles use optional `seoTitle` (fallback: `title`); `title` remains the editorial H1. Use `Campo Grande (MS)` for local page titles. Keep educational articles specific to their questions, and link the specialist-choice guide to the canonical Campo Grande location page. Supplied Word image mappings are documented in `docs/blog-images-word-cross-reference.md` and `docs/blog-images-word-manifest.json`. Clinical adaptations and illustration provenance still need physician review before merge.
 
 Local entity links are intentionally separate: `GOOGLE_BUSINESS_PROFILE_URL` belongs to the physician, while `CLINIC_GOOGLE_MAPS_URL` belongs to the Instituto clinic location. `src/lib/seo-map.ts` assigns strategic searches to canonical pages and `npm run audit:seo` checks the editorial graph for conflicts and broken links.

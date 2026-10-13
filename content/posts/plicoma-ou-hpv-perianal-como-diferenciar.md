@@ -54,8 +54,6 @@ disclaimer: >-
 
 *Nem toda saliência na região anal é a mesma coisa: distinguir uma sobra de pele de uma verruga viral muda completamente o tratamento e o acompanhamento.*
 
-![Comparação entre plicoma anal, com superfície lisa e dobra única de pele, e HPV perianal, com múltiplas lesões de superfície irregular e aspecto verrucoso](/assets/blog/plicoma-x-hpv-perianal.webp)
-
 ## O que é o plicoma?
 
 É uma "sobrinha" de pele — um pedacinho de pele mole, da mesma cor da pele normal, que sobra ao redor do ânus. Geralmente é resultado de uma hemorroida antiga que já cicatrizou ou consequência de uma fissura anal. Não coça, não sangra, não cresce e não tem relação com vírus ou infecção sexualmente transmissível. Veja mais sobre [as causas e o tratamento do plicoma anal](/blog/plicoma-anal-causas-e-tratamento).
@@ -65,6 +63,8 @@ disclaimer: >-
 É causada por um vírus ([HPV](/blog/hpv-anal-identificar-tratar)) transmitido principalmente por contato sexual. Costuma aparecer como uma ou várias lesões com superfície irregular, "em couve-flor", às vezes ásperas ao toque. Podem crescer, se multiplicar, coçar e ocasionalmente sangrar levemente.
 
 ## Como diferenciar no dia a dia
+
+![Comparação entre plicoma anal, com superfície lisa e dobra única de pele, e HPV perianal, com múltiplas lesões de superfície irregular e aspecto verrucoso](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 * **Superfície:** o plicoma é liso; a verruga de HPV é irregular, granulada, tipo couve-flor.
 * **Número de lesões:** o plicoma costuma ser único ou em pequeno número; o HPV tende a aparecer em grupos.

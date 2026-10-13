@@ -49,11 +49,11 @@ disclaimer: >-
 
 *O plicoma anal é uma das queixas mais comuns no consultório e uma das que mais gera susto, porque muitos pacientes descobrem a "pelinha" por acaso e imaginam o pior.*
 
-![Ilustração da região anal com indicação de um plicoma anal, descrito como prega de pele externa e não uma hemorroida](/assets/blog/plicoma-anal-ilustracao.webp)
-
 ## O que é o plicoma anal?
 
 O plicoma anal, ou "excesso de pele" na região do ânus, é uma pequena saliência de pele benigna que se forma ao redor do ânus. Geralmente tem a mesma cor da pele ao redor, é mole ao toque e pode ter formato de "orelhinha" ou dobra de pele pendurada.
+
+![Ilustração da região anal com indicação de um plicoma anal, descrito como prega de pele externa e não uma hemorroida](/assets/blog/plicoma-anal-ilustracao.webp)
 
 Não é uma verruga genital nem uma doença sexualmente transmissível, embora às vezes seja confundido com condiloma (verruga viral) por profissionais menos experientes. Por isso a avaliação médica é importante quando surge uma alteração nova nessa região.
 

@@ -59,15 +59,13 @@ disclaimer: >-
 
 *Duas coisas costumam pesar mais do que o procedimento em si: a vergonha de mostrar a lesão e o medo de que ela volte. Vale falar das duas abertamente.*
 
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
-
-![Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico](/assets/blog/laser-co2-regiao-perianal.webp)
-
 ## Antes de tratar: é mesmo HPV?
 
 O condiloma causado pelo HPV aparece como uma ou várias lesões de superfície irregular, "em couve-flor", às vezes ásperas ao toque. Podem crescer, se multiplicar, coçar e ocasionalmente sangrar levemente. O vírus é transmitido principalmente por contato sexual.
 
 Nem toda lesão perianal é HPV, e a confusão mais comum é com o plicoma — uma simples sobra de pele, lisa, da cor da pele normal, geralmente única ou em pequeno número, que não coça e não cresce.
+
+![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 A diferença importa porque a conduta é completamente diferente. O artigo sobre [como diferenciar plicoma de HPV perianal](/blog/plicoma-ou-hpv-perianal-como-diferenciar) detalha os sinais de cada um, e o de [lesões, verrugas e nódulos na região anal](/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar) ajuda a saber o que observar.
 
@@ -88,6 +86,8 @@ Aplicado aos condilomas, isso significa:
 ## Como é feito na prática
 
 O procedimento é realizado com anestesia local ou sedação rápida, conforme a extensão das lesões.
+
+![Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico](/assets/blog/laser-co2-regiao-perianal.webp)
 
 O planejamento considera a quantidade, o tamanho e a localização dos condilomas — lesões espalhadas ou em áreas mais delicadas exigem uma estratégia diferente de uma lesão única.
 

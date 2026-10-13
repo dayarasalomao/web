@@ -47,13 +47,13 @@ faqs:
 
 *A ligadura elástica é um procedimento ambulatorial para hemorroidas internas selecionadas. A indicação depende do grau, da anatomia e do sintoma predominante.*
 
-![Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica](/assets/blog/ligadura-elastica-etapas.webp)
-
 ## Como funciona o procedimento?
 
 O tratamento consiste na aplicação de um pequeno anel elástico na base da hemorroida interna. Esse anel interrompe o fluxo sanguíneo do segmento tratado, que diminui e se desprende nos dias seguintes. A cicatrização ajuda a fixar o tecido e a reduzir sangramento ou prolapso em casos adequados.
 
 O procedimento é feito através de um aparelho curto que permite visualizar o canal anal. O anel deve ficar acima da região mais sensível, mas ainda pode haver pressão, cólica ou desconforto após a aplicação.
+
+![Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica](/assets/blog/ligadura-elastica-etapas.webp)
 
 ## Para quais casos ela pode ser indicada?
 

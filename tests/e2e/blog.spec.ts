@@ -61,6 +61,43 @@ function getXmlValues(xml: string, tagName: string): string[] {
   return Array.from(xml.matchAll(pattern), ([, value]) => value.trim())
 }
 
+for (const slug of [
+  'hemorroidectomia-laser-co2',
+  'eletrocauterio-laser-diodo-laser-co2-diferencas',
+  'hpv-perianal-laser-co2',
+  'hemorroida-externa-trombosada',
+  'cisto-pilonidal-cirurgia-convencional-x-laser',
+]) {
+  test(`two-image article ${slug} separates figures by an H2 (AC1/4)`, async ({ page }) => {
+    await page.goto(`/blog/${slug}`)
+    const images = page.locator('article > div > p > span:has(> img)')
+    await expect(images).toHaveCount(2)
+    const separated = await images.first().evaluate((first) => {
+      const nodes = Array.from(first.closest('article')!.querySelectorAll('h2, p > span:has(> img)'))
+      const start = nodes.indexOf(first)
+      const second = nodes.findIndex((node, index) => index > start && node.matches('p > span:has(> img)'))
+      return nodes.slice(start + 1, second).some((node) => node.tagName === 'H2')
+    })
+    expect(separated).toBe(true)
+    const post = getAllPosts().find((post) => post.slug === slug)!
+    const primary = images.filter({ has: page.locator(`img[src*="${encodeURIComponent(post.image!.src)}"]`) })
+    await expect(primary.locator('[data-editorial-caption]')).toHaveText(post.image!.caption!)
+    await expect(primary).toHaveAttribute('role', 'group')
+    await expect(primary).toHaveAttribute('aria-label', `Imagem: ${post.image!.caption}`)
+    if (slug === 'hemorroida-externa-trombosada') {
+      const secondary = images.nth(1)
+      const caption = 'Ilustração de uma opção de tratamento feita por profissional; não é orientação para manipular a região em casa.'
+      await expect(secondary.locator('[data-editorial-caption]')).toHaveText(caption)
+      await expect(secondary).toHaveAttribute('aria-label', `Imagem: ${caption}`)
+    }
+    if (slug === 'cisto-pilonidal-cirurgia-convencional-x-laser') {
+      await expect(images.nth(1)).not.toHaveAttribute('role')
+      await expect(images.nth(1)).not.toHaveAttribute('aria-label')
+      await expect(page.getByText('Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho.')).toBeVisible()
+    }
+  })
+}
+
 test('homepage renders SEO hero heading and CTA', async ({ page }) => {
   await page.goto('/')
 

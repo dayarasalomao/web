@@ -57,8 +57,6 @@ disclaimer: >-
 
 *Muitas pessoas notam um "caroço" ou uma "pelinha" perto do ânus e ficam em dúvida se é hemorroida ou plicoma — e a diferença muda bastante a conduta.*
 
-![Comparação anatômica entre hemorroida, definida como tecido vascular aumentado, e plicoma anal, definido como excesso ou dobra de pele](/assets/blog/hemorroida-x-plicoma-anal.webp)
-
 ## O que é hemorroida
 
 São veias inchadas na região do ânus. Podem ser:
@@ -76,6 +74,8 @@ São veias inchadas na região do ânus. Podem ser:
 * É basicamente uma "dobrinha" de pele, sem conteúdo de sangue ou veia inchada.
 
 ## Resumo prático
+
+![Comparação anatômica entre hemorroida, definida como tecido vascular aumentado, e plicoma anal, definido como excesso ou dobra de pele](/assets/blog/hemorroida-x-plicoma-anal.webp)
 
 | Característica | Hemorroida | Plicoma |
 | --- | --- | --- |

@@ -57,8 +57,6 @@ disclaimer: >-
 
 *Drenar o pus é sempre necessário no abscesso anal, mas a forma como essa drenagem é feita influencia diretamente a chance de o problema virar uma fístula.*
 
-![Evolução do abscesso anal: a coleção de pus, a drenagem adequada comparada à drenagem persistente, e a formação de fístula simples ou complexa com ramificação](/assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp)
-
 ## O que é um abscesso anal?
 
 É uma bolsa de pus que se forma perto do ânus, geralmente por causa de uma infecção em pequenas glândulas internas. Quando isso acontece, o tratamento é sempre o mesmo: drenar o pus, ou seja, fazer um pequeno corte para esvaziar a coleção infectada. Sem essa drenagem, a infecção não melhora.
@@ -66,6 +64,8 @@ disclaimer: >-
 ## Por que a forma como o abscesso é drenado importa tanto?
 
 Depois que o abscesso é drenado, pode acontecer de sobrar um "canal" ligando o interior do intestino à pele ao redor do ânus. Esse canal é o que chamamos de [fístula anal](/blog/fistula-anal-o-que-e-sintomas). Ela não surge sempre, mas alguns fatores aumentam bastante a chance de isso acontecer:
+
+![Evolução do abscesso anal: a coleção de pus, a drenagem adequada comparada à drenagem persistente, e a formação de fístula simples ou complexa com ramificação](/assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp)
 
 * **Drenagem incompleta.** Se o pus não for totalmente esvaziado, ou se existirem "bolsões" escondidos que não foram abertos, a infecção tende a persistir e formar um trajeto crônico.
 * **Local do procedimento.** Estudos mostram que a drenagem feita em centro cirúrgico, com boas condições de visualização e anestesia adequada, tem resultado bem melhor do que uma drenagem feita às pressas, por exemplo em um consultório ou pronto-socorro sem estrutura cirúrgica. Nesse tipo de comparação, o risco de o problema voltar ou virar fístula caiu cerca de 80% quando o procedimento foi feito em ambiente cirúrgico adequado.

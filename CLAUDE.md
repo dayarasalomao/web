@@ -81,6 +81,8 @@ Global metadata is in `src/app/layout.tsx`; shared values live in `src/constants
 
 Blog frontmatter may contain visible structured medical `sources` and an enriched primary `image`; keep their runtime validation in `src/lib/blog.ts` aligned with the renderer and schema builders. The physician's Google Business Profile and the clinic's Maps listing are separate entity URLs and must not be merged in `sameAs`. Run `npm run audit:seo` after changing slugs, keywords, relationships, or internal links.
 
+Blog images are placed editorially in Markdown beside the matching explanation, before the final H2. Never stack figures or put them inside lists, tables, FAQ, sources, or CTA sections. Secondary image captions may use the Markdown title (`![alt](src "existing caption")`); preserve medical disclaimers. Blog cards use decorative, uncropped 16:9 media and a branded panel when no image exists.
+
 Blog search titles use optional `seoTitle` (fallback: `title`); `title` remains the editorial H1. Use `Campo Grande (MS)` for local page titles. Keep educational articles specific to their questions, and link the specialist-choice guide to the canonical Campo Grande location page. Supplied Word image mappings are documented in `docs/blog-images-word-cross-reference.md` and `docs/blog-images-word-manifest.json`. Clinical adaptations and illustration provenance still need physician review before merge.
 
 If domain, image, doctor credentials, contact information, or treatment content changes, review:

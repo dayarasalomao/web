@@ -54,13 +54,13 @@ disclaimer: >-
 
 *Existe mais de uma forma de operar um cisto pilonidal, e a diferença entre elas aparece principalmente no tamanho da ferida, no tempo de cicatrização e na chance de o cisto voltar.*
 
-![Comparação entre cirurgia convencional e cirurgia a laser SiLaC para cisto pilonidal, mostrando a excisão aberta e a inserção da fibra de laser pelos orifícios de entrada](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
-
 O [cisto pilonidal](/blog/cisto-pilonidal-sinais-diagnostico) (também chamado de doença pilonidal ou cisto sacrococcígeo) é uma inflamação crônica que ocorre na região entre as nádegas, próxima ao cóccix, e a cirurgia é o tratamento recomendado. Existem diferentes técnicas cirúrgicas, e cada uma tem vantagens, desvantagens e indicações específicas.
 
 ## Cirurgia convencional (excisão)
 
 É a técnica mais tradicional. O cirurgião remove todo o trajeto do cisto e o tecido doente ao redor. Depois, existem duas formas de fechar a área:
+
+![Comparação entre cirurgia convencional e cirurgia a laser SiLaC para cisto pilonidal, mostrando a excisão aberta e a inserção da fibra de laser pelos orifícios de entrada](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
 * **Fechamento aberto (cicatrização por segunda intenção):** a ferida é deixada aberta e cicatriza aos poucos, de dentro para fora, com curativos regulares.
 * **Fechamento fechado (sutura direta na linha do meio):** as bordas da ferida são costuradas logo após a remoção do cisto. Costuma dar certo somente para cistos muito pequenos, pois os pontos nessa região tendem a se abrir em quase todos os casos, sendo a opção de deixar aberto melhor.
@@ -79,6 +79,10 @@ Nessa técnica, uma fibra de laser fina é introduzida dentro do trajeto do cist
 
 **Indicação:** boa opção para pacientes com doença pilonidal simples a complexa que exigiria extensas ressecções, para pacientes que priorizam recuperação rápida, menor dor e melhor estética, e que têm acesso a essa tecnologia.
 
+![Ilustração da região sacrococcígea durante uma cirurgia para doença pilonidal](/assets/blog/cisto-pilonidal-tecnica-retalho.webp)
+
+*Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho.*
+
 ## Técnicas de retalho (Limberg, Karydakis, Bascom "cleft-lift")
 
 Usadas principalmente em casos mais complicados e extremamente complexos. O cirurgião remove todo o tecido doente e depois usa um retalho de pele e tecido saudável das áreas vizinhas para cobrir e fechar a ferida, geralmente deslocando a linha de fechamento para fora do meio das nádegas (fora da linha média).
@@ -89,6 +93,3 @@ Usadas principalmente em casos mais complicados e extremamente complexos. O ciru
 
 **Indicação:** preferida em casos de doença extensa, recidivada, ou quando outras abordagens já falharam várias vezes.
 
-![Ilustração da região sacrococcígea durante uma cirurgia para doença pilonidal](/assets/blog/cisto-pilonidal-tecnica-retalho.webp)
-
-*Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho.*

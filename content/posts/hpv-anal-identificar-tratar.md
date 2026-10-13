@@ -58,8 +58,6 @@ disclaimer: >-
 
 *Encontrar uma lesão nova na região anal costuma gerar duas reações ao mesmo tempo: susto e vontade de não contar para ninguém. Vale saber que nem toda lesão ali é HPV — e que, quando é, o tratamento é simples e sigiloso.*
 
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
-
 ## Como o HPV anal se manifesta
 
 O HPV na região anal é comum. Na maioria das vezes aparece como verrugas — os condilomas — que podem ser únicas ou múltiplas e às vezes vêm acompanhadas de coceira ou sangramento discreto.
@@ -78,6 +76,8 @@ O vírus é transmitido principalmente por contato sexual.
 A confusão mais frequente é com o plicoma — uma simples sobra de pele, sequela de uma hemorroida antiga ou de uma fissura já cicatrizada.
 
 O plicoma é liso, tem a cor da pele normal, costuma ser único ou em pequeno número, não coça, não sangra e não cresce. Não tem nenhuma relação com vírus ou com infecção sexualmente transmissível.
+
+![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 A distinção importa porque a conduta é completamente diferente — e porque a confusão gera um sofrimento desnecessário. O artigo sobre [como diferenciar plicoma de HPV perianal](/blog/plicoma-ou-hpv-perianal-como-diferenciar) detalha os sinais lado a lado, e o de [lesões, verrugas e nódulos na região anal](/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar) amplia para outras possibilidades.
 

@@ -7,3 +7,5 @@
 - Leituras relacionadas não usam `BlogCard`; conservar seu layout atual está dentro do escopo solicitado.
 - Manter `span` para imagem/legenda no MDX: é válido dentro do parágrafo existente. Não acrescentar plugin, dependência ou transformação em runtime.
 - Colocação definida no Markdown; nenhuma alteração em `src/lib/blog.ts` ou resolução de imagem SEO. Reaproveitar apenas legendas/disclaimers existentes com procedência documentada.
+
+- Decisão explícita do usuário: nenhuma imagem depois do último H2. Para o retalho, figura imediatamente antes desse H2; o quadro de instrumentos fica no CO2, antes do resumo final.

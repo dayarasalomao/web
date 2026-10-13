@@ -55,8 +55,6 @@ disclaimer: >-
 
 Antes de comparar as técnicas, vale saber [em que grau está a sua doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus) — é esse dado que mais restringe as opções.
 
-![Comparativo das tecnologias na cirurgia proctológica: eletrocautério, laser de diodo e laser de CO2, com o efeito de cada um no tecido](/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp)
-
 ## O que é a cirurgia convencional (hemorroidectomia)
 
 É a técnica mais tradicional, na qual o cirurgião remove fisicamente o tecido hemorroidário com auxílio do eletrocautério (a técnica mais usada é chamada de Milligan-Morgan). É considerada o tratamento padrão-ouro para hemorroidas mais avançadas e volumosas.
@@ -76,6 +74,8 @@ Nessa técnica, o cirurgião usa um laser de diodo (geralmente com comprimento d
 ## E o laser de CO2?
 
 O laser de CO2 é utilizado com frequência para abordar hemorroidas externas e plicomas, podendo ser utilizado para técnica excisional de hemorroidas internas quando apropriado.
+
+![Comparativo das tecnologias na cirurgia proctológica: eletrocautério, laser de diodo e laser de CO2, com o efeito de cada um no tecido](/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp)
 
 **Vantagens:** fornece maior precisão na ressecção, menor dor no pós-operatório, cicatrização acelerada e melhores resultados estéticos.
 

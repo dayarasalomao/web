@@ -59,8 +59,6 @@ disclaimer: >-
 
 *A frase mais comum na consulta é sempre a mesma: "tenho uma espinha que volta". Ela drena, melhora, some por um tempo e reaparece no mesmo lugar. Esse padrão de repetição é o que caracteriza a fístula anal.*
 
-![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
-
 ## O que é a fístula anal
 
 A fístula anal é um pequeno túnel ou canal anormal que se forma entre o interior do canal anal e a pele ao redor do ânus. Esse trajeto conecta um ponto interno, dentro do reto ou do ânus, a uma abertura externa na pele.
@@ -74,6 +72,8 @@ Dentro do canal anal existem pequenas glândulas que produzem um lubrificante na
 Às vezes uma dessas glândulas entope, por acúmulo de fezes ou muco. Bactérias se multiplicam no local e a infecção forma um abscesso — uma bolsa de pus dolorosa e inchada perto do ânus. Essa é a fase aguda, que costuma exigir drenagem cirúrgica imediata.
 
 Quando o abscesso é drenado, seja espontaneamente ou por cirurgia, o corpo tenta cicatrizar o trajeto por onde o pus saiu. Em parte dos casos esse trajeto não fecha completamente e vira um canal permanente, revestido por tecido de cicatrização. Essa é a fístula.
+
+![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 Cerca de 80% das fístulas surgem exatamente assim — é a chamada origem criptoglandular, sem nenhuma doença de base associada. O passo a passo completo está no artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece).
 

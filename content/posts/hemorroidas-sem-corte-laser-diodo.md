@@ -67,11 +67,11 @@ disclaimer: >-
 
 *A cirurgia sem corte pode ser uma opção para hemorroidas internas selecionadas. Entender a indicação e os limites ajuda a decidir sem confundir menor agressão local com ausência de cuidados.*
 
-![Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário](/assets/blog/hemorroidoplastia-laser-diodo.webp)
-
 ## Como funciona a tecnologia
 
 Uma fibra de laser fina e flexível é introduzida dentro do tecido hemorroidário. A energia do laser de diodo, normalmente com comprimento de onda de 980 ou 1470 nanômetros, sela os vasos de dentro para fora e provoca a retração da hemorroida.
+
+![Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário](/assets/blog/hemorroidoplastia-laser-diodo.webp)
 
 Não há remoção de tecido e não há incisão na mucosa anal. É daí que vem o nome popular da técnica: a agressão à superfície da pele e da mucosa ao redor é muito menor, e não fica uma ferida aberta extensa para cuidar.
 

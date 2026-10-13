@@ -8,7 +8,7 @@ interface EditorialImageProps extends MdxImageProps {
   metadata?: BlogCardImage
 }
 
-export function MdxImage({ src, alt, metadata }: EditorialImageProps) {
+export function MdxImage({ src, alt, title, metadata }: EditorialImageProps) {
   if (!src || typeof src !== 'string') return null
 
   const knownImage = metadata?.src === src ? metadata : undefined
@@ -16,11 +16,12 @@ export function MdxImage({ src, alt, metadata }: EditorialImageProps) {
   const width = dimensions?.width ?? 1200
   const height = dimensions?.height ?? 800
   const resolvedAlt = knownImage?.alt ?? alt ?? ''
+  const caption = knownImage ? knownImage.caption : title
 
   return (
     <span
-      role="group"
-      aria-label={knownImage?.caption ? `Imagem: ${knownImage.caption}` : undefined}
+      role={caption ? 'group' : undefined}
+      aria-label={caption ? `Imagem: ${caption}` : undefined}
       className="my-8 block overflow-hidden rounded-[1.75rem] border border-beige bg-white p-2 shadow-sm"
     >
       <Image
@@ -31,12 +32,12 @@ export function MdxImage({ src, alt, metadata }: EditorialImageProps) {
         sizes="(max-width: 768px) 100vw, 896px"
         className="h-auto w-full rounded-[1.25rem] object-cover"
       />
-      {knownImage?.caption ? (
+      {caption ? (
         <span
           data-editorial-caption
           className="block px-3 pb-2 pt-3 text-sm leading-relaxed text-gray-600"
         >
-          {knownImage.caption}
+          {caption}
         </span>
       ) : null}
     </span>

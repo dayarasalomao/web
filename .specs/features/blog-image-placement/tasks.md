@@ -1,7 +1,7 @@
 # Tarefas e verificação
 
 1. [x] T1 — Mídia nos cards (`LinkCard`, `BlogCard`, listagem, `LatestArticles`, e2e de cards). Gate: lint + unitários + e2e de cards. AC5/6.
-2. [ ] T2 — Colocação e legendas (`content/posts`, `MdxImage`, unitário de guardrails, e2e de figuras; documentação README/CLAUDE/AGENTS/llms). Gate: lint + unitários + e2e de figuras. AC1–4/7.
+2. [x] T2 — Colocação e legendas (`content/posts`, `MdxImage`, unitário de guardrails, e2e de figuras; documentação README/CLAUDE/AGENTS/llms). Gate: lint + unitários + e2e de figuras. AC1–4/7.
 3. [ ] T3 — Verificação integrada e capturas nesta pasta. Gate: lint, build, unitários, `audit:seo`, e2e completos. AC7/8. Em seguida Verifier independente.
 
 Cada tarefa gera um commit atômico após seu gate. Não alterar textos clínicos, frontmatter, alt, seleção de cardImage ou ativos.

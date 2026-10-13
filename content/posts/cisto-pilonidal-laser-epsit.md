@@ -56,8 +56,6 @@ disclaimer: >-
 
 *A pergunta que quase todo paciente com cisto pilonidal faz não é sobre a cirurgia. É sobre os curativos: quantos meses vou passar cuidando de uma ferida aberta nas costas? A resposta depende inteiramente da técnica escolhida.*
 
-![Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
-
 ## O que é o cisto pilonidal
 
 É uma inflamação crônica na região entre as nádegas, próxima ao cóccix. Também chamado de doença pilonidal ou cisto sacrococcígeo, ele costuma cursar com episódios repetidos de dor, inchaço e drenagem de secreção.
@@ -86,6 +84,8 @@ Um microendoscópio entra pelo próprio orifício do cisto. Isso permite:
 * **Limpar todos os trajetos**, o que é decisivo para reduzir a chance de recidiva.
 
 Em seguida, uma fibra fina de laser de diodo é usada para selar e destruir o tecido doente por dentro — a técnica conhecida como SiLaC ou SiLaT. Não é preciso fazer um corte grande na pele.
+
+![Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
 ## O que muda na prática
 

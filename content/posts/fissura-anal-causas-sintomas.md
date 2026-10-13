@@ -60,11 +60,11 @@ disclaimer: >-
 
 *A fissura anal é pequena — às vezes milimétrica — e dói de forma completamente desproporcional ao seu tamanho. Entender por que ela não fecha sozinha é o que explica todo o tratamento.*
 
-![Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo](/assets/blog/fissura-anal-anatomia.webp)
-
 ## O que é a fissura anal
 
 A fissura anal é um pequeno corte na mucosa da borda da região anal. A dor típica é em corte ou ardor, aparece ao evacuar e pode persistir por cerca de trinta minutos depois. Costuma vir acompanhada de sangramento discreto, geralmente vermelho-vivo.
+
+![Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo](/assets/blog/fissura-anal-anatomia.webp)
 
 ## Por que ela não cicatriza sozinha
 

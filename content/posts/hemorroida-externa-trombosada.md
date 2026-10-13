@@ -80,9 +80,7 @@ A dor pode ser mais intensa nos primeiros dias e diminuir gradualmente. A inform
 
 Se a dor já está diminuindo, podem ser discutidos cuidados com o intestino, higiene e medicamentos prescritos. Quando a dor é importante, a retirada do coágulo e do tecido envolvido pode ser uma opção em casos selecionados, com anestesia e avaliação profissional.
 
-![Ilustração de um procedimento médico para retirada de coágulo de uma hemorroida externa](/assets/blog/trombectomia-hemorroidaria-ilustracao.webp)
-
-*Ilustração de uma opção de tratamento feita por profissional; não é orientação para manipular a região em casa.*
+![Ilustração de um procedimento médico para retirada de coágulo de uma hemorroida externa](/assets/blog/trombectomia-hemorroidaria-ilustracao.webp "Ilustração de uma opção de tratamento feita por profissional; não é orientação para manipular a região em casa.")
 
 O procedimento não deve ser decidido somente pela aparência ou pelo tamanho do nódulo. Não há uma técnica igual para todos, e a melhora pode ocorrer sem cirurgia em parte dos casos.
 

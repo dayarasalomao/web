@@ -52,13 +52,13 @@ disclaimer: >-
 
 *A maioria das fístulas anais tem origem em uma infecção simples de glândulas localizadas dentro do canal anal, e entender esse processo explica por que ela costuma aparecer depois de um abscesso.*
 
-![As quatro etapas da formação de uma fístula anal: infecção da glândula anal, formação do abscesso, persistência do trajeto e fístula anal formada](/assets/blog/fistula-anal-etapas-formacao.webp)
-
 ## O que é uma fístula anal?
 
 É um pequeno túnel ou canal anormal que se forma entre o interior do canal anal e a pele ao redor do ânus. Esse túnel conecta um ponto interno (dentro do reto ou do ânus) a uma abertura externa na pele.
 
 ## Como ela se forma, passo a passo
+
+![As quatro etapas da formação de uma fístula anal: infecção da glândula anal, formação do abscesso, persistência do trajeto e fístula anal formada](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 1. Dentro do canal anal existem pequenas glândulas que produzem um lubrificante natural para ajudar na evacuação. Essas glândulas ficam próximas a uma região chamada linha pectínea.
 2. Às vezes, uma dessas glândulas entope — por exemplo, por acúmulo de fezes ou muco. Isso permite que bactérias se multipliquem no local.

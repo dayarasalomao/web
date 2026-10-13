@@ -54,11 +54,11 @@ disclaimer: >-
 
 *Quase todo plicoma anal pode simplesmente ser deixado em paz. A conversa útil não é sobre qual tecnologia é melhor, mas sobre se aquele plicoma precisa sair — e, quando precisa, por que a escolha do instrumento muda o resultado.*
 
-![Ilustração de plicoma anal, um excesso de pele benigno na região perianal](/assets/blog/plicoma-anal-ilustracao.webp)
-
 ## Antes da técnica: esse plicoma precisa sair?
 
 O plicoma anal é uma saliência de pele benigna ao redor do ânus. É macio, tem a cor da pele ao redor e costuma ter formato de dobra ou "orelhinha". É muito comum: estima-se que cerca de um terço das pessoas com problemas anais benignos, como hemorroidas ou fissuras, apresente algum plicoma.
+
+![Ilustração de plicoma anal, um excesso de pele benigno na região perianal](/assets/blog/plicoma-anal-ilustracao.webp)
 
 Na maioria dos casos ele não causa sintoma nenhum. Quando não há inflamação, dor ou incômodo, a recomendação é deixá-lo em paz — não faz sentido transformar em problema algo que não incomoda.
 

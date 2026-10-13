@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "cisto-pilonidal-cirurgia-convencional-x-laser",
+    "src": "/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp",
+    "section": "Cirurgia convencional (excisão)",
+    "reason": "Comparação com laser depois da explicação da excisão convencional, antes da lista de fechamento."
+  },
+  {
+    "slug": "cisto-pilonidal-cirurgia-convencional-x-laser",
+    "src": "/assets/blog/cisto-pilonidal-tecnica-retalho.webp",
+    "section": "Cirurgia a laser de diodo (SiLaC/SiLaT)",
+    "reason": "Imediatamente antes do H2 de retalho, com a ressalva original; respeita a proibição literal de imagem após o último H2."
+  },
+  {
+    "slug": "cisto-pilonidal-laser-epsit",
+    "src": "/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp",
+    "section": "Como funciona a abordagem videoassistida com laser",
+    "reason": "Mostra a fibra SiLaC depois da explicação de sua inserção, fora da lista de etapas EPSiT."
+  },
+  {
+    "slug": "drenagem-abscesso-perianal-e-risco-de-fistula",
+    "src": "/assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp",
+    "section": "Por que a forma como o abscesso é drenado importa tanto?",
+    "reason": "Mostra a persistência do canal e precede a lista de fatores relacionados à drenagem."
+  },
+  {
+    "slug": "eletrocauterio-laser-diodo-laser-co2-diferencas",
+    "src": "/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp",
+    "section": "O que essas tecnologias têm em comum",
+    "reason": "Introduz visualmente as três formas de energia usadas nos instrumentos."
+  },
+  {
+    "slug": "eletrocauterio-laser-diodo-laser-co2-diferencas",
+    "src": "/assets/blog/comparativo-instrumentos-cirurgicos.webp",
+    "section": "Laser de CO2",
+    "reason": "Compara os instrumentos depois da definição do último, antes das aplicações e do H2 final."
+  },
+  {
+    "slug": "fissura-anal-causas-sintomas",
+    "src": "/assets/blog/fissura-anal-anatomia.webp",
+    "section": "O que é a fissura anal",
+    "reason": "Relaciona a anatomia à definição do corte na mucosa."
+  },
+  {
+    "slug": "fistula-anal-laser-vaaft-filac",
+    "src": "/assets/blog/fistula-anal-etapas-formacao.webp",
+    "section": "Por que a fístula não fecha sozinha",
+    "reason": "Mostra a infecção, o abscesso e a persistência do canal já descritos."
+  },
+  {
+    "slug": "fistula-anal-o-que-e-sintomas",
+    "src": "/assets/blog/fistula-anal-etapas-formacao.webp",
+    "section": "De onde ela vem",
+    "reason": "Ilustra o trajeto após drenagem do abscesso, explicado nos parágrafos anteriores."
+  },
+  {
+    "slug": "hemorroida-externa-trombosada",
+    "src": "/assets/blog/hemorroida-externa-trombosada.webp",
+    "section": "Como é uma hemorroida externa trombosada?",
+    "reason": "Preserva a posição junto à definição e à ressalva de que a imagem não diagnostica."
+  },
+  {
+    "slug": "hemorroida-externa-trombosada",
+    "src": "/assets/blog/trombectomia-hemorroidaria-ilustracao.webp",
+    "section": "Quais são as opções de tratamento?",
+    "reason": "Preserva a opção médica no tratamento e usa a ressalva existente como legenda Markdown."
+  },
+  {
+    "slug": "hemorroida-ou-plicoma-como-diferenciar",
+    "src": "/assets/blog/hemorroida-x-plicoma-anal.webp",
+    "section": "Resumo prático",
+    "reason": "Comparação anatômica junto à tabela que diferencia as duas condições."
+  },
+  {
+    "slug": "hemorroidas-qual-tecnica-cirurgica-escolher",
+    "src": "/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp",
+    "section": "E o laser de CO2?",
+    "reason": "As três tecnologias já foram apresentadas; permite comparar antes de discutir vantagens e limites."
+  },
+  {
+    "slug": "hemorroidas-sem-corte-laser-diodo",
+    "src": "/assets/blog/hemorroidoplastia-laser-diodo.webp",
+    "section": "Como funciona a tecnologia",
+    "reason": "A fibra interna é mostrada logo após a explicação de sua ação."
+  },
+  {
+    "slug": "hemorroidectomia-laser-co2",
+    "src": "/assets/blog/laser-co2-instrumento.webp",
+    "section": "O que o laser de CO2 faz no tecido",
+    "reason": "A imagem do instrumento acompanha sua definição, com a legenda original do frontmatter."
+  },
+  {
+    "slug": "hemorroidectomia-laser-co2",
+    "src": "/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp",
+    "section": "A confusão que vale desfazer",
+    "reason": "A comparação visual aparece depois da distinção entre diodo e CO2, sem interromper a lista."
+  },
+  {
+    "slug": "hpv-anal-identificar-tratar",
+    "src": "/assets/blog/plicoma-x-hpv-perianal.webp",
+    "section": "Nem toda lesão anal é HPV",
+    "reason": "Compara o aspecto das lesões depois da descrição do plicoma."
+  },
+  {
+    "slug": "hpv-perianal-laser-co2",
+    "src": "/assets/blog/plicoma-x-hpv-perianal.webp",
+    "section": "Antes de tratar: é mesmo HPV?",
+    "reason": "Mostra a comparação depois das descrições de condiloma e plicoma."
+  },
+  {
+    "slug": "hpv-perianal-laser-co2",
+    "src": "/assets/blog/laser-co2-regiao-perianal.webp",
+    "section": "Como é feito na prática",
+    "reason": "A aplicação do instrumento acompanha a explicação do ambiente de procedimento."
+  },
+  {
+    "slug": "lesoes-verrugas-nodulos-regiao-anal-o-que-observar",
+    "src": "/assets/blog/plicoma-x-hpv-perianal.webp",
+    "section": "Plicoma ou HPV: a confusão mais comum",
+    "reason": "Precede a lista de diferenças visuais, sem interromper a tabela anterior."
+  },
+  {
+    "slug": "ligadura-elastica-hemorroidas-internas",
+    "src": "/assets/blog/ligadura-elastica-etapas.webp",
+    "section": "Como funciona o procedimento?",
+    "reason": "As quatro etapas acompanham a explicação do anel e do aparelho usado."
+  },
+  {
+    "slug": "plicoma-anal-causas-e-tratamento",
+    "src": "/assets/blog/plicoma-anal-ilustracao.webp",
+    "section": "O que é o plicoma anal?",
+    "reason": "A prega de pele é mostrada logo após sua definição."
+  },
+  {
+    "slug": "plicoma-anal-laser-co2",
+    "src": "/assets/blog/plicoma-anal-ilustracao.webp",
+    "section": "Antes da técnica: esse plicoma precisa sair?",
+    "reason": "Ilustra o aspecto benigno descrito antes de discutir necessidade de retirada."
+  },
+  {
+    "slug": "plicoma-ou-hpv-perianal-como-diferenciar",
+    "src": "/assets/blog/plicoma-x-hpv-perianal.webp",
+    "section": "Como diferenciar no dia a dia",
+    "reason": "Comparação visual imediatamente antes da lista de características."
+  },
+  {
+    "slug": "pomada-hemorroida-resolve",
+    "src": "/assets/blog/pomadas-hemorroidas.webp",
+    "section": "O que a pomada pode fazer",
+    "reason": "Acompanha a descrição dos produtos, preservando a legenda que não recomenda marcas."
+  },
+  {
+    "slug": "por-que-a-fistula-anal-aparece",
+    "src": "/assets/blog/fistula-anal-etapas-formacao.webp",
+    "section": "Como ela se forma, passo a passo",
+    "reason": "Diagrama das etapas junto à lista completa, antes de seu início."
+  },
+  {
+    "slug": "pos-operatorio-cirurgia-hemorroidas-o-que-esperar",
+    "src": "/assets/blog/pos-operatorio-hemorroidas-comparativo.webp",
+    "section": "Resumo comparativo",
+    "reason": "Linha do tempo junto à comparação de recuperação, após explicar cada técnica."
+  },
+  {
+    "slug": "primeiros-30-dias-hemorroidectomia-laser-co2",
+    "src": "/assets/blog/laser-co2-instrumento.webp",
+    "section": "Introdução",
+    "reason": "Manter lead autorizado pelo frontmatter junto ao esclarecimento de que a cirurgia retira tecido."
+  },
+  {
+    "slug": "prurido-anal-causas-cuidados",
+    "src": "/assets/blog/prurido-anal-desconforto.webp",
+    "section": "Prurido anal e coceira anal são a mesma coisa",
+    "reason": "Ilustra o desconforto logo após a definição do sintoma, com a ressalva original."
+  }
+]

@@ -64,11 +64,11 @@ disclaimer: >-
 
 *A pergunta que quase todo paciente faz na consulta é se a coceira é falta de higiene. Quase sempre é o contrário — e essa inversão explica por que o sintoma não passa.*
 
-![Imagem ilustrativa de pessoa com desconforto e coceira na região anal](/assets/blog/prurido-anal-desconforto.webp)
-
 ## Prurido anal e coceira anal são a mesma coisa
 
 Prurido anal é o nome clínico da coceira na pele ao redor do ânus. Pode ser leve e passageira, mas também pode se tornar persistente, incomodar à noite, piorar depois de evacuar ou gerar ardor pela própria irritação da pele.
+
+![Imagem ilustrativa de pessoa com desconforto e coceira na região anal](/assets/blog/prurido-anal-desconforto.webp)
 
 O ponto mais importante: **é um sintoma, não um diagnóstico**. Em alguns casos vem de hábitos locais. Em outros, é a manifestação de uma doença anorretal, de uma alteração de pele ou de uma infecção. Tratar sem saber qual dos casos é o seu costuma não funcionar.
 

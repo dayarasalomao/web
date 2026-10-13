@@ -58,11 +58,11 @@ disclaimer: >-
 
 *Muitos pacientes ouvem falar em "cirurgia a laser" ou "cauterização" para tratar [hemorroidas](/blog/doenca-hemorroidaria-sintomas-graus), [fístulas](/blog/fistula-anal-o-que-e-sintomas) ou [cistos pilonidais](/blog/cisto-pilonidal-sinais-diagnostico) e ficam com dúvidas sobre o que cada tecnologia realmente faz.*
 
-![Comparação entre eletrocautério, laser de diodo e laser de CO2 mostrando o dano térmico, a inflamação e a recuperação associados a cada instrumento](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
-
 ## O que essas tecnologias têm em comum
 
 Eletrocautério e lasers são formas de energia que nós, cirurgiões, usamos para cortar tecido, controlar sangramento ou destruir tecido doente, sem precisar usar apenas o bisturi tradicional. A escolha entre eles depende da doença e do doente, além da imprescindível experiência e familiaridade da sua cirurgiã com as plataformas de tecnologia.
+
+![Comparação entre eletrocautério, laser de diodo e laser de CO2 mostrando o dano térmico, a inflamação e a recuperação associados a cada instrumento](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
 
 ## Eletrocautério
 
@@ -95,6 +95,8 @@ Benefícios observados em estudos:
 
 O laser de CO2 (dióxido de carbono) usa um feixe de luz que é fortemente absorvido pela água presente no tecido. Isso faz com que ele vaporize (literalmente "evapore") camadas finas de tecido com grande precisão, em vez de apenas coagular como o eletrocautério.
 
+![Quadro comparativo entre eletrocautério, laser de diodo e laser de CO2, com o modo de ação e o principal benefício de cada instrumento](/assets/blog/comparativo-instrumentos-cirurgicos.webp)
+
 **Como funciona na prática:** é muito utilizado para cortes precisos e superficiais, sendo útil em lesões da pele perianal, verrugas anais (condilomas) e outras lesões de superfície, pois permite remover tecido com controle milimétrico e menor dano às áreas vizinhas.
 
 Benefícios:
@@ -105,6 +107,5 @@ Benefícios:
 
 ## Resumo comparativo
 
-![Quadro comparativo entre eletrocautério, laser de diodo e laser de CO2, com o modo de ação e o principal benefício de cada instrumento](/assets/blog/comparativo-instrumentos-cirurgicos.webp)
-
 É importante lembrar que a escolha do instrumento é feita pelo cirurgião com base no tipo e na gravidade do problema, no grau da doença hemorroidária e nas condições clínicas do paciente. Nenhuma dessas tecnologias substitui a avaliação médica individual, e a decisão final sobre a melhor técnica deve ser sempre conversada com a sua cirurgiã responsável.
+

@@ -62,8 +62,6 @@ image:
 
 *A pomada pode aliviar a crise, mas repetir o mesmo produto a cada novo episódio não esclarece por que o problema volta. O próximo passo pode ser confirmar o diagnóstico.*
 
-![Imagem ilustrativa de uma cesta com tubos de pomadas e outros produtos](/assets/blog/pomadas-hemorroidas.webp)
-
 ## Por que tanta gente troca de pomada a cada crise?
 
 Dor, coceira e inchaço podem melhorar temporariamente, enquanto a queixa que motivou o uso continua aparecendo. Trocar de marca não significa que a nova pomada tratará a origem do sintoma.
@@ -73,6 +71,8 @@ Sangramento e caroços na região anal também podem ter outras causas. Por isso
 ## O que a pomada pode fazer
 
 Alguns produtos contêm anestésicos, corticoides ou outras substâncias destinadas a aliviar sintomas locais. O efeito depende da composição e do problema tratado. A revisão de especialistas de 2026 da AGA, apresentada em seu resumo institucional, destaca que a evidência para esses tratamentos tópicos é limitada.
+
+![Imagem ilustrativa de uma cesta com tubos de pomadas e outros produtos](/assets/blog/pomadas-hemorroidas.webp)
 
 A pomada não deve ser apresentada como forma de recolocar uma hemorroida que sai na evacuação ou de remover um [plicoma, o excesso de pele anal](/blog/plicoma-anal-causas-e-tratamento). Tampouco é uma garantia de que a crise não voltará.
 

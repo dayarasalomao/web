@@ -60,8 +60,6 @@ disclaimer: >-
 
 *Antes de operar hemorroidas, a dúvida mais comum não é sobre a cirurgia em si, mas sobre o depois: quanto vai doer, quantos dias de afastamento e qual a chance de o problema voltar.*
 
-![Comparação do pós-operatório de cirurgia de hemorroidas no dia 1, na primeira semana, no primeiro mês e a longo prazo, entre cirurgia convencional, laser de diodo e laser de CO2](/assets/blog/pos-operatorio-hemorroidas-comparativo.webp)
-
 ## Por que a escolha da técnica importa
 
 A técnica escolhida não muda apenas o modo como a cirurgia é feita. Ela influencia como será a primeira semana, o primeiro mês e até o risco de a hemorroida voltar mais adiante.
@@ -104,6 +102,8 @@ O que esperar no pós-operatório:
 ## Resumo comparativo
 
 De forma geral, os lasers (diodo e CO2) tendem a proporcionar uma recuperação mais rápida e menos dolorosa nos primeiros dias e semanas, com curativos mais simples e retorno mais rápido às atividades. Já a cirurgia convencional, apesar de um pós-operatório mais desconfortável, segue sendo a opção para hemorroidas muito volumosas e de quadro clínico arrastado por vários anos.
+
+![Comparação do pós-operatório de cirurgia de hemorroidas no dia 1, na primeira semana, no primeiro mês e a longo prazo, entre cirurgia convencional, laser de diodo e laser de CO2](/assets/blog/pos-operatorio-hemorroidas-comparativo.webp)
 
 ## O que conversar com a sua cirurgiã antes da cirurgia
 

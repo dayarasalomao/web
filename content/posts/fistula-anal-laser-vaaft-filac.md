@@ -53,13 +53,13 @@ disclaimer: >-
 
 *O maior receio de quem tem fístula anal não é a cirurgia em si — é o que pode sobrar dela. Tratar uma fístula pode envolver cortar músculo, e músculo cortado nessa região significa risco de não segurar gases ou fezes. As técnicas com vídeo e laser existem para lidar com esse problema.*
 
-![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
-
 ## Por que a fístula não fecha sozinha
 
 A maioria das fístulas anais começa em uma infecção simples: uma pequena glândula dentro do canal anal entope, bactérias se multiplicam e forma-se um abscesso. Quando o pus sai — espontaneamente ou por drenagem cirúrgica — o corpo tenta cicatrizar o caminho por onde ele saiu.
 
 Em parte dos casos esse caminho não fecha. Ele vira um canal permanente, revestido por tecido de cicatrização, que passa a drenar cronicamente secreção, pus ou um pouco de sangue.
+
+![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 É exatamente esse revestimento que explica por que antibiótico não resolve: o trajeto está revestido por tecido cronicamente inflamado, que impede o fechamento espontâneo. O tratamento definitivo é cirúrgico. O artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece) detalha esse processo passo a passo.
 
