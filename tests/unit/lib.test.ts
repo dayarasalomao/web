@@ -271,7 +271,7 @@ describe('structured data', () => {
 
   it('separates the physician profile from the clinic map entity', () => {
     const globalGraph = buildGlobalGraph() as { '@graph': Array<Record<string, unknown>> }
-    const physician = globalGraph['@graph'].find((node) => node['@type'] === 'Physician')
+    const physician = globalGraph['@graph'].find((node) => node['@id'] === `${SITE_URL}#physician`)
     const website = globalGraph['@graph'].find((node) => node['@type'] === 'WebSite')
 
     assert.ok(physician)

@@ -132,7 +132,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Physician',
+        '@type': ['Person', 'Physician'],
         '@id': physicianId,
         name: PHYSICIAN_DATA.name,
         alternateName: BUSINESS_ALTERNATE_NAME,
@@ -458,7 +458,7 @@ export function buildLocationGraph(
           : {}),
       },
       {
-        '@type': 'Physician',
+        '@type': ['Person', 'Physician'],
         '@id': `${SITE_URL}#physician`,
         worksFor: {
           '@id': placeId,
