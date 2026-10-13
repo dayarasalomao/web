@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: consideration
 image:
-  src: /assets/blog/pos-operatorio-hemorroidas-comparativo.webp
-  alt: Comparação do pós-operatório de diferentes cirurgias para hemorroidas
-  caption: Linha do tempo educativa sobre recuperação após cirurgia convencional, laser de diodo e laser de CO2.
+  src: "/assets/blog/pos-operatorio-hemorroidas-comparativo.webp"
+  alt: "Quadro com fases do pós-operatório de cirurgia convencional, laser de diodo e laser de CO2, do primeiro dia ao longo prazo."
+  caption: "Comparação ilustrativa de fases do pós-operatório; não é um cronograma individual de recuperação."
   width: 1376
   height: 768
 featured: true
@@ -103,7 +103,7 @@ O que esperar no pós-operatório:
 
 De forma geral, os lasers (diodo e CO2) tendem a proporcionar uma recuperação mais rápida e menos dolorosa nos primeiros dias e semanas, com curativos mais simples e retorno mais rápido às atividades. Já a cirurgia convencional, apesar de um pós-operatório mais desconfortável, segue sendo a opção para hemorroidas muito volumosas e de quadro clínico arrastado por vários anos.
 
-![Comparação do pós-operatório de cirurgia de hemorroidas no dia 1, na primeira semana, no primeiro mês e a longo prazo, entre cirurgia convencional, laser de diodo e laser de CO2](/assets/blog/pos-operatorio-hemorroidas-comparativo.webp)
+![Quadro com fases do pós-operatório de cirurgia convencional, laser de diodo e laser de CO2, do primeiro dia ao longo prazo.](/assets/blog/pos-operatorio-hemorroidas-comparativo.webp)
 
 ## O que conversar com a sua cirurgiã antes da cirurgia
 

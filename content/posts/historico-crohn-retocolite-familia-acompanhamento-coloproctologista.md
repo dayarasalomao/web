@@ -36,8 +36,8 @@ disclaimer: >-
   relevante devem receber avaliação individualizada.
 image:
   src: "/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp"
-  alt: "Ilustração de árvore familiar, calendário e estetoscópio para acompanhamento médico"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Árvore familiar ilustrada com retratos, ao lado de um calendário e um estetoscópio."
+  caption: "Ilustração sobre conversar a respeito do histórico familiar e organizar o acompanhamento médico."
   width: 1672
   height: 941
 ---
@@ -54,7 +54,7 @@ Os sintomas variam muito. Algumas pessoas têm diarreia, sangue nas fezes e dor 
 
 Ter familiares com doença de Crohn ou retocolite não significa que a pessoa terá a doença. Ainda assim, o histórico familiar é uma informação relevante, principalmente quando surgem sintomas persistentes ou recorrentes.
 
-![Ilustração de árvore familiar, calendário e estetoscópio para acompanhamento médico](/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp)
+![Árvore familiar ilustrada com retratos, ao lado de um calendário e um estetoscópio.](/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp)
 
 Outros fatores podem aumentar a atenção clínica, como início de sintomas em idade jovem, tabagismo no caso da doença de Crohn, uso de medicamentos, infecções prévias e condições imunológicas. Esses fatores não fecham diagnóstico, mas ajudam a orientar a investigação.
 

@@ -48,6 +48,12 @@ disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. Em caso de dor,
   secreção ou inflamação recorrente na região perianal, procure avaliação
   presencial.
+image:
+  src: "/assets/blog/fistula-anal-etapas-formacao.webp"
+  alt: "Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal."
+  caption: "Esquema ilustrativo de uma possível evolução da infecção glandular até a fístula anal."
+  width: 1376
+  height: 768
 ---
 
 *A maioria das fístulas anais tem origem em uma infecção simples de glândulas localizadas dentro do canal anal, e entender esse processo explica por que ela costuma aparecer depois de um abscesso.*
@@ -58,7 +64,7 @@ disclaimer: >-
 
 ## Como ela se forma, passo a passo
 
-![As quatro etapas da formação de uma fístula anal: infecção da glândula anal, formação do abscesso, persistência do trajeto e fístula anal formada](/assets/blog/fistula-anal-etapas-formacao.webp)
+![Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal.](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 1. Dentro do canal anal existem pequenas glândulas que produzem um lubrificante natural para ajudar na evacuação. Essas glândulas ficam próximas a uma região chamada linha pectínea.
 2. Às vezes, uma dessas glândulas entope — por exemplo, por acúmulo de fezes ou muco. Isso permite que bactérias se multipliquem no local.

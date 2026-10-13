@@ -56,8 +56,8 @@ disclaimer: >-
   importante exigem contato médico imediato.
 image:
   src: "/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp"
-  alt: "Ilustração de agenda, copo de água e telefone para contato com a equipe médica"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Agenda aberta, copo de água e telefone com perfil médico ilustrado, ao lado de uma poltrona."
+  caption: "Cena ilustrativa sobre organizar a rotina e manter contato com a equipe após um procedimento."
   width: 1672
   height: 940
 ---
@@ -120,7 +120,7 @@ Complicações graves são incomuns, mas reconhecer esses sinais cedo é importa
 
 Muitas pessoas retomam atividades leves rapidamente, porém não existe um prazo único. Trabalho com esforço físico, desconforto após o procedimento, número de ligaduras e orientação da equipe mudam a recuperação.
 
-![Ilustração de agenda, copo de água e telefone para contato com a equipe médica](/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp)
+![Agenda aberta, copo de água e telefone com perfil médico ilustrado, ao lado de uma poltrona.](/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp)
 
 Nos primeiros dias, costuma ser importante evitar esforço evacuatório e manter as fezes macias. Fibras, líquidos e medicamentos só devem seguir a orientação individual, especialmente quando já existe constipação, diarreia ou outra doença intestinal.
 

@@ -53,9 +53,9 @@ disclaimer: >-
   Este conteúdo é informativo e não substitui avaliação médica presencial. Diagnóstico, indicação e
   recuperação dependem de cada caso.
 image:
-  src: /assets/blog/pomadas-hemorroidas.webp
-  alt: Imagem ilustrativa de uma cesta com tubos de pomadas e outros produtos
-  caption: Imagem ilustrativa; os produtos e marcas visíveis não são recomendações de tratamento.
+  src: "/assets/blog/pomadas-hemorroidas.webp"
+  alt: "Cesta com tubos, caixas e frascos de produtos tópicos em uma imagem ilustrativa."
+  caption: "Cesta de produtos tópicos em uma imagem ilustrativa; os produtos e marcas visíveis não são recomendações de tratamento."
   width: 1024
   height: 572
 ---
@@ -72,7 +72,7 @@ Sangramento e caroços na região anal também podem ter outras causas. Por isso
 
 Alguns produtos contêm anestésicos, corticoides ou outras substâncias destinadas a aliviar sintomas locais. O efeito depende da composição e do problema tratado. A revisão de especialistas de 2026 da AGA, apresentada em seu resumo institucional, destaca que a evidência para esses tratamentos tópicos é limitada.
 
-![Imagem ilustrativa de uma cesta com tubos de pomadas e outros produtos](/assets/blog/pomadas-hemorroidas.webp)
+![Cesta com tubos, caixas e frascos de produtos tópicos em uma imagem ilustrativa.](/assets/blog/pomadas-hemorroidas.webp)
 
 A pomada não deve ser apresentada como forma de recolocar uma hemorroida que sai na evacuação ou de remover um [plicoma, o excesso de pele anal](/blog/plicoma-anal-causas-e-tratamento). Tampouco é uma garantia de que a crise não voltará.
 

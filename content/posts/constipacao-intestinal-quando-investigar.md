@@ -35,8 +35,8 @@ disclaimer: >-
   dor importante, perda de peso ou anemia.
 image:
   src: "/assets/blog/capa-constipacao-intestinal-quando-investigar.webp"
-  alt: "Ilustração de diário da rotina, água, pera e aveia em uma mesa de acompanhamento"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Garrafa de água, pera, aveia e diário de hábitos, com uma representação decorativa do intestino ao fundo."
+  caption: "Ilustração de hábitos e registros que podem ser discutidos na avaliação do intestino preso."
   width: 1672
   height: 941
 ---
@@ -73,7 +73,7 @@ Esses sinais não significam necessariamente doença grave, mas indicam que a ca
 
 O tratamento costuma começar pela compreensão do padrão intestinal: formato das fezes, frequência, esforço, dieta, ingestão de líquidos, medicamentos e sintomas associados.
 
-![Ilustração de diário da rotina, água, pera e aveia em uma mesa de acompanhamento](/assets/blog/capa-constipacao-intestinal-quando-investigar.webp)
+![Garrafa de água, pera, aveia e diário de hábitos, com uma representação decorativa do intestino ao fundo.](/assets/blog/capa-constipacao-intestinal-quando-investigar.webp)
 
 As orientações podem incluir ajuste gradual de fibras, hidratação, rotina de evacuação, atividade física, manejo da dor anal e uso de medicamentos quando indicado. Em alguns casos, exames complementares ajudam a investigar causas específicas.
 

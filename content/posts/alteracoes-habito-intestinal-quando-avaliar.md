@@ -41,8 +41,8 @@ disclaimer: >-
   importante devem ser avaliados presencialmente.
 image:
   src: "/assets/blog/capa-alteracoes-habito-intestinal-quando-avaliar.webp"
-  alt: "Ilustração de diário com símbolos da rotina intestinal, calendário e relógio"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Pessoa observa um diário ilustrado, com calendário, relógio e uma conversa médica representada ao fundo."
+  caption: "Ilustração sobre o registro de mudanças na rotina intestinal antes de uma avaliação."
   width: 1672
   height: 941
 ---
@@ -59,7 +59,7 @@ O número de evacuações considerado normal varia bastante, de três vezes ao d
 
 Algumas alterações podem acontecer por fatores do dia a dia, como viagem, mudança alimentar, menor ingestão de água, estresse, ciclo menstrual, uso de medicamentos, infecções intestinais leves ou redução de atividade física.
 
-![Ilustração de diário com símbolos da rotina intestinal, calendário e relógio](/assets/blog/capa-alteracoes-habito-intestinal-quando-avaliar.webp)
+![Pessoa observa um diário ilustrado, com calendário, relógio e uma conversa médica representada ao fundo.](/assets/blog/capa-alteracoes-habito-intestinal-quando-avaliar.webp)
 
 Quando o quadro é breve e melhora com a rotina, nem sempre indica doença. Mas persistência, recorrência ou sintomas associados mudam a conduta.
 

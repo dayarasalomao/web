@@ -35,8 +35,8 @@ disclaimer: >-
   próximas ao ânus, virilhas, períneo ou região genital.
 image:
   src: "/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp"
-  alt: "Ilustração de consulta sobre cuidados de pele com toalha macia, tecido de algodão e ficha médica"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Mãos de duas pessoas em conversa, com uma toalha dobrada, tecido de algodão e ficha sobre a mesa."
+  caption: "Composição ilustrativa sobre avaliação e cuidados de pele, sem representar lesões ou um tratamento específico."
   width: 1672
   height: 941
 ---
@@ -65,7 +65,7 @@ Quando essas lesões aparecem perto do ânus, é importante diferenciar hidraden
 
 O tratamento depende da fase e extensão da doença. Casos leves podem ter manejo clínico e cuidados locais. Casos com abscessos, túneis, cicatrizes ou muita recorrência podem precisar de exames, procedimentos ou acompanhamento conjunto com dermatologia.
 
-![Ilustração de consulta sobre cuidados de pele com toalha macia, tecido de algodão e ficha médica](/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp)
+![Mãos de duas pessoas em conversa, com uma toalha dobrada, tecido de algodão e ficha sobre a mesa.](/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp)
 
 A avaliação também evita atrasos quando existe outra doença associada ou quando a lesão perianal precisa de abordagem específica.
 

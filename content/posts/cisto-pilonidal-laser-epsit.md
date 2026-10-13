@@ -53,9 +53,9 @@ disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A técnica
   cirúrgica adequada depende de avaliação presencial e individualizada.
 image:
-  src: /assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp
-  alt: Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal
-  caption: Ilustração educativa das diferenças entre a excisão convencional e a abordagem minimamente invasiva com fibra de laser.
+  src: "/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp"
+  alt: "Dois quadros comparam a excisão convencional do cisto pilonidal e a introdução de uma fibra de laser."
+  caption: "Comparação ilustrativa entre excisão convencional e abordagem com fibra de laser. A figura não mostra o uso do vídeo no EPSiT."
   width: 1600
   height: 893
 ---
@@ -91,7 +91,7 @@ Um microendoscópio entra pelo próprio orifício do cisto. Isso permite:
 
 Em seguida, uma fibra fina de laser de diodo é usada para selar e destruir o tecido doente por dentro — a técnica conhecida como SiLaC ou SiLaT. Não é preciso fazer um corte grande na pele.
 
-![Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
+![Dois quadros comparam a excisão convencional do cisto pilonidal e a introdução de uma fibra de laser.](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
 ## O que muda na prática
 

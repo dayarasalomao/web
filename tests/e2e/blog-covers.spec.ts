@@ -10,7 +10,7 @@ test('corrected phone illustration uses its fresh URL and neutral caption on des
     await image.scrollIntoViewIfNeeded()
     await expect(image).toHaveCount(1)
     await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true)
-    await expect(page.locator('[data-editorial-caption]')).toHaveText('Ilustração editorial; não representa paciente, consultório real ou procedimento médico.')
+    await expect(page.locator('[data-editorial-caption]')).toHaveText('Cena ilustrativa sobre buscar orientação para sintomas anais; não representa uma consulta real.')
     expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0)
   }
 })
@@ -39,7 +39,7 @@ test('distinct cover drives social metadata while original clinical illustration
   const original = page.locator(`article img[src*="${encodeURIComponent(post.image!.src)}"]`)
   await expect(original).toBeVisible()
   await expect(original).toHaveAttribute('alt', post.image!.alt)
-  await expect(page.locator('[data-editorial-caption]')).toHaveText(post.image!.caption!)
+  await expect(original.locator('..').locator('[data-editorial-caption]')).toHaveText(post.image!.caption!)
   const primary = await page.evaluate(() => {
     const nodes = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
       .flatMap((script) => JSON.parse(script.textContent ?? '{}')['@graph'] ?? [])

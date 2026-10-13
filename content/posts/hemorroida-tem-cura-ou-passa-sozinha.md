@@ -54,8 +54,8 @@ disclaimer: >-
   recuperação dependem de cada caso.
 image:
   src: "/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp"
-  alt: "Ilustração de calendário, garrafa de água e caderno de acompanhamento da rotina"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Calendário de mesa, garrafa de água e caderno aberto em um ambiente doméstico ilustrado."
+  caption: "Ilustração sobre registrar a rotina e conversar sobre a evolução dos sintomas ao longo do tempo."
   width: 1672
   height: 941
 ---
@@ -86,7 +86,7 @@ A palavra “cura” não deve virar uma promessa de que nunca haverá outro epi
 
 Evitar esforço para evacuar e longos períodos no vaso, manter uma alimentação adequada e cuidar da consistência das fezes são medidas relevantes antes e depois de um procedimento.
 
-![Ilustração de calendário, garrafa de água e caderno de acompanhamento da rotina](/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp)
+![Calendário de mesa, garrafa de água e caderno aberto em um ambiente doméstico ilustrado.](/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp)
 
 Isso não significa atribuir culpa ao paciente por uma recorrência. Há vários fatores envolvidos, e sintomas que persistem merecem reavaliação. Se você depende continuamente de produtos tópicos, leia [o que a pomada para hemorroida pode e não pode fazer](/blog/pomada-hemorroida-resolve).
 

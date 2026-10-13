@@ -34,8 +34,8 @@ disclaimer: >-
   recorrente ou sintomas anais como secreção, abscesso ou fístula.
 image:
   src: "/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp"
-  alt: "Ilustração de pessoa vestida com a mão no abdome e caderno para avaliação de sintomas"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Pessoa com as mãos sobre o abdome, ao lado de um caderno ilustrado e uma lupa."
+  caption: "Cena ilustrativa de desconforto abdominal, usada como apoio ao texto sobre investigação de sintomas intestinais."
   width: 1672
   height: 941
 ---
@@ -52,7 +52,7 @@ Embora possam causar sintomas parecidos, Crohn e retocolite não são a mesma co
 
 Alguns sintomas levantam suspeita de inflamação intestinal e devem ser avaliados:
 
-![Ilustração de pessoa vestida com a mão no abdome e caderno para avaliação de sintomas](/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp)
+![Pessoa com as mãos sobre o abdome, ao lado de um caderno ilustrado e uma lupa.](/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp)
 
 * diarreia persistente ou recorrente;
 * sangue ou muco nas fezes;

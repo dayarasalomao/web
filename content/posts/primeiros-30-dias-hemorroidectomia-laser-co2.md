@@ -50,9 +50,9 @@ disclaimer: >-
   Este conteúdo é informativo e não substitui avaliação médica presencial. Diagnóstico, indicação e
   recuperação dependem de cada caso.
 image:
-  src: /assets/blog/laser-co2-instrumento.webp
-  alt: Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico
-  caption: Imagem ilustrativa do equipamento; não é registro de um procedimento ou paciente da Dra. Dayara.
+  src: "/assets/blog/laser-co2-instrumento.webp"
+  alt: "Mão enluvada segura um instrumento conectado a um braço articulado em uma cena cirúrgica ilustrada."
+  caption: "Instrumento em uma cena cirúrgica ilustrada; não é registro de um procedimento ou paciente da Dra. Dayara."
   width: 1024
   height: 559
 ---
@@ -61,7 +61,7 @@ image:
 
 A hemorroidectomia com laser de CO2 continua sendo uma cirurgia com retirada de tecido e uma ferida que precisa cicatrizar. O uso do laser não elimina a dor nem os cuidados após o procedimento. O calendário abaixo é uma orientação para conversar com a equipe: **não é uma garantia de cicatrização ou alta em 30 dias**.
 
-![Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico](/assets/blog/laser-co2-instrumento.webp)
+![Mão enluvada segura um instrumento conectado a um braço articulado em uma cena cirúrgica ilustrada.](/assets/blog/laser-co2-instrumento.webp)
 
 ## Antes da cirurgia: preparar a rotina
 

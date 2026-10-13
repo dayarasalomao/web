@@ -18,9 +18,9 @@ targetAudience: patients
 intent: decision
 order: 1
 image:
-  src: /assets/blog/laser-co2-instrumento.webp
-  alt: Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico
-  caption: Imagem ilustrativa do equipamento; não é registro de um procedimento ou paciente da Dra. Dayara.
+  src: "/assets/blog/laser-co2-instrumento.webp"
+  alt: "Mão enluvada segura um instrumento conectado a um braço articulado em uma cena cirúrgica ilustrada."
+  caption: "Instrumento em uma cena cirúrgica ilustrada; não é registro de um procedimento ou paciente da Dra. Dayara."
   width: 1024
   height: 559
 relatedPosts:
@@ -62,8 +62,8 @@ disclaimer: >-
   técnica cirúrgica depende de avaliação presencial e individualizada.
 coverImage:
   src: "/assets/blog/capa-hemorroidectomia-laser-co2.webp"
-  alt: "Ilustração de prancheta de planejamento e instrumento médico genérico desligado sobre bandeja"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Instrumento médico genérico sobre uma bandeja, ao lado de uma prancheta sem texto legível."
+  caption: "Imagem ilustrativa de planejamento cirúrgico; o instrumento não identifica um modelo ou tecnologia específica."
   width: 1672
   height: 941
 ---
@@ -74,7 +74,7 @@ coverImage:
 
 O laser de CO2 usa um feixe de luz que é fortemente absorvido pela água presente no tecido. Isso faz com que ele vaporize — literalmente evapore — camadas finas de tecido com grande precisão, em vez de apenas coagular como faz o eletrocautério.
 
-![Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico](/assets/blog/laser-co2-instrumento.webp)
+![Mão enluvada segura um instrumento conectado a um braço articulado em uma cena cirúrgica ilustrada.](/assets/blog/laser-co2-instrumento.webp)
 
 Essa é a diferença física central, e ela tem consequências práticas:
 
@@ -91,7 +91,7 @@ Quando alguém diz "operei hemorroida a laser", pode estar falando de duas coisa
 
 São indicações diferentes, resultados diferentes e pós-operatórios diferentes. O artigo sobre [qual técnica cirúrgica escolher](/blog/hemorroidas-qual-tecnica-cirurgica-escolher) compara os cenários de cada uma.
 
-![Comparação entre instrumentos cirúrgicos: eletrocautério, laser de diodo e laser de CO2](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
+![Três cortes de tecido ilustram a aplicação de eletrocautério, fibra de laser de diodo e instrumento de laser de CO2.](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp "Esquema comparativo de aplicação e efeitos térmicos de três instrumentos cirúrgicos.")
 
 ## Por que trocar o eletrocautério pelo laser
 

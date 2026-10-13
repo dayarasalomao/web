@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 image:
-  src: /assets/blog/plicoma-x-hpv-perianal.webp
-  alt: Comparação entre plicoma anal e HPV perianal
-  caption: Ilustração educativa comparando uma dobra lisa de pele e lesões verrucosas perianais.
+  src: "/assets/blog/plicoma-x-hpv-perianal.webp"
+  alt: "Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal."
+  caption: "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial."
   width: 1600
   height: 873
 order: 34
@@ -64,7 +64,7 @@ disclaimer: >-
 
 ## Como diferenciar no dia a dia
 
-![Comparação entre plicoma anal, com superfície lisa e dobra única de pele, e HPV perianal, com múltiplas lesões de superfície irregular e aspecto verrucoso](/assets/blog/plicoma-x-hpv-perianal.webp)
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 * **Superfície:** o plicoma é liso; a verruga de HPV é irregular, granulada, tipo couve-flor.
 * **Número de lesões:** o plicoma costuma ser único ou em pequeno número; o HPV tende a aparecer em grupos.

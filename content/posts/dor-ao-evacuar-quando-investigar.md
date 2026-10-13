@@ -35,8 +35,8 @@ disclaimer: >-
   presencialmente.
 image:
   src: "/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp"
-  alt: "Ilustração de pessoa com desconforto anotando sintomas e pensando em uma consulta"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Pessoa anota informações em um caderno, com a outra mão sobre o abdome e uma consulta representada ao fundo."
+  caption: "Ilustração sobre registrar quando a dor aparece e levar essas informações à avaliação médica."
   width: 1672
   height: 941
 ---
@@ -79,7 +79,7 @@ Fissuras recentes podem melhorar com ajuste intestinal, hidratação, fibras, ba
 
 A consulta avalia o tipo de dor, tempo de evolução, presença de sangue, padrão das fezes, constipação, diarreia, uso de medicamentos e sintomas associados.
 
-![Ilustração de pessoa com desconforto anotando sintomas e pensando em uma consulta](/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp)
+![Pessoa anota informações em um caderno, com a outra mão sobre o abdome e uma consulta representada ao fundo.](/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp)
 
 O exame da região anal ajuda a identificar fissuras, hemorroidas, inflamações e outras alterações. A partir disso, a conduta pode envolver cuidados locais, ajuste intestinal, medicações ou procedimentos em casos selecionados.
 

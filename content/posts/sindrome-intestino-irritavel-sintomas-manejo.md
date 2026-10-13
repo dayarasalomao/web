@@ -37,8 +37,8 @@ disclaimer: >-
   sintomas que atrapalham sua rotina, procure avaliação presencial.
 image:
   src: "/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp"
-  alt: "Ilustração de pessoa anotando a rotina com a mão no abdome e uma xícara sobre a mesa"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Pessoa escreve em um diário com uma mão, enquanto a outra repousa sobre o abdome."
+  caption: "Ilustração sobre registrar a rotina e os sintomas para a conversa sobre funcionamento intestinal."
   width: 1672
   height: 941
 ---
@@ -74,7 +74,7 @@ Sangue nas fezes, perda de peso, febre, anemia, sintomas noturnos, início recen
 
 O tratamento busca reduzir sintomas e melhorar qualidade de vida, mas precisa ser personalizado. Pode envolver ajuste alimentar, regularidade do sono, atividade física, manejo de estresse, medicamentos específicos e tratamento de [constipação](/blog/constipacao-intestinal-quando-investigar) ou [diarreia](/blog/diarreia-cronica-causas-sinais-alerta) quando presentes.
 
-![Ilustração de pessoa anotando a rotina com a mão no abdome e uma xícara sobre a mesa](/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp)
+![Pessoa escreve em um diário com uma mão, enquanto a outra repousa sobre o abdome.](/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp)
 
 Em alguns casos, acompanhar o padrão dos sintomas em um diário ajuda a identificar gatilhos e evitar restrições alimentares desnecessárias.
 

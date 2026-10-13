@@ -60,10 +60,16 @@ disclaimer: >-
   presencialmente.
 coverImage:
   src: "/assets/blog/capa-lesoes-verrugas-nodulos-regiao-anal-o-que-observar.webp"
-  alt: "Ilustração de lupa sobre formas abstratas, caderno de perguntas e telefone para consulta"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Lupa sobre três formas geométricas, caderno com perguntas e telefone com ícone de contato."
+  caption: "Ilustração sobre organizar dúvidas antes da consulta; as formas não representam lesões reais."
   width: 1672
   height: 941
+image:
+  src: "/assets/blog/plicoma-x-hpv-perianal.webp"
+  alt: "Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal."
+  caption: "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial."
+  width: 1600
+  height: 873
 ---
 
 *O problema de encontrar um caroço nessa região não é o caroço em si — é que meia dúzia de condições muito diferentes se parecem bastante, e algumas pedem conduta imediata enquanto outras não pedem nada.*
@@ -89,7 +95,7 @@ O **plicoma** é o oposto: na maioria das vezes não causa sintoma nenhum e não
 
 Vale detalhar porque a conduta muda completamente.
 
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 * **Superfície:** plicoma é liso; verruga de HPV é irregular, granulada, tipo couve-flor.
 * **Número:** plicoma costuma ser único ou em pequeno número; HPV tende a aparecer em grupos.

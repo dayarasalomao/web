@@ -53,8 +53,8 @@ disclaimer: >-
   secreção na região do cóccix, procure avaliação presencial.
 image:
   src: "/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp"
-  alt: "Ilustração de pessoa vestida com desconforto na região baixa das costas e diário de sintomas"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Pessoa sentada mantém a mão na parte baixa das costas, ao lado de um diário de sintomas."
+  caption: "Cena ilustrativa de desconforto ao sentar, usada como apoio ao texto sobre cisto pilonidal."
   width: 1672
   height: 941
 ---
@@ -71,7 +71,7 @@ Ele pode causar episódios repetidos de inflamação, dor e drenagem de secreç�
 
 Dor, inflamação e secreção na região do cóccix são sintomas muito característicos. Além disso, a presença de pequenos orifícios na pele, que chamamos de *pits*, reforça ainda mais a hipótese diagnóstica.
 
-![Ilustração de pessoa vestida com desconforto na região baixa das costas e diário de sintomas](/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp)
+![Pessoa sentada mantém a mão na parte baixa das costas, ao lado de um diário de sintomas.](/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp)
 
 O diagnóstico é feito pela avaliação clínica e pelo exame da região, que ajuda a diferenciar o cisto pilonidal de outras condições e a definir o melhor momento para o tratamento.
 

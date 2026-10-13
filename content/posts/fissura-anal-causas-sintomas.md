@@ -18,9 +18,9 @@ targetAudience: patients
 intent: awareness
 order: 16
 image:
-  src: /assets/blog/fissura-anal-anatomia.webp
-  alt: Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo
-  caption: Representação esquemática de fissura anal; o diagnóstico é feito na avaliação médica.
+  src: "/assets/blog/fissura-anal-anatomia.webp"
+  alt: "Esquema do canal anal com a fissura assinalada na borda e a musculatura ao redor."
+  caption: "Ilustração anatômica de fissura anal; o diagnóstico é feito na avaliação médica."
   width: 1024
   height: 559
 relatedPosts:
@@ -64,7 +64,7 @@ disclaimer: >-
 
 A fissura anal é um pequeno corte na mucosa da borda da região anal. A dor típica é em corte ou ardor, aparece ao evacuar e pode persistir por cerca de trinta minutos depois. Costuma vir acompanhada de sangramento discreto, geralmente vermelho-vivo.
 
-![Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo](/assets/blog/fissura-anal-anatomia.webp)
+![Esquema do canal anal com a fissura assinalada na borda e a musculatura ao redor.](/assets/blog/fissura-anal-anatomia.webp)
 
 ## Por que ela não cicatriza sozinha
 

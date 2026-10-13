@@ -17,9 +17,9 @@ targetAudience: patients
 intent: consideration
 order: 2
 image:
-  src: /assets/blog/ligadura-elastica-etapas.webp
-  alt: Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica
-  caption: Etapas ilustrativas da ligadura elástica; a resposta ao procedimento varia entre pacientes.
+  src: "/assets/blog/ligadura-elastica-etapas.webp"
+  alt: "Quatro quadros mostram hemorroida interna, posicionamento do instrumento, colocação da banda e segmento ligado."
+  caption: "Sequência ilustrativa da colocação da banda elástica; a resposta ao procedimento varia entre pacientes."
   width: 1024
   height: 572
 relatedPosts:
@@ -53,7 +53,7 @@ O tratamento consiste na aplicação de um pequeno anel elástico na base da hem
 
 O procedimento é feito através de um aparelho curto que permite visualizar o canal anal. O anel deve ficar acima da região mais sensível, mas ainda pode haver pressão, cólica ou desconforto após a aplicação.
 
-![Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica](/assets/blog/ligadura-elastica-etapas.webp)
+![Quatro quadros mostram hemorroida interna, posicionamento do instrumento, colocação da banda e segmento ligado.](/assets/blog/ligadura-elastica-etapas.webp)
 
 ## Para quais casos ela pode ser indicada?
 

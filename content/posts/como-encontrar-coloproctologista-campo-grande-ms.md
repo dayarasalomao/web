@@ -52,8 +52,8 @@ disclaimer: >-
   recuperação dependem de cada caso.
 image:
   src: "/assets/blog/capa-como-encontrar-coloproctologista-campo-grande-ms.webp"
-  alt: "Ilustração de tablet com perfil profissional, checklist e lupa para escolha de especialista"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Tablet com um perfil médico ilustrado, lista de conferência e lupa sobre uma mesa."
+  caption: "Ilustração sobre a conferência de informações profissionais na escolha de um especialista."
   width: 1672
   height: 941
 ---
@@ -74,7 +74,7 @@ A diferença entre os termos pesquisados não exige escolher páginas ou profiss
 
 Use a [Busca por Médicos do Conselho Federal de Medicina](https://portal.cfm.org.br/busca-medicos/). É possível pesquisar por nome, UF ou número do CRM, além de filtros como município e especialidade.
 
-![Ilustração de tablet com perfil profissional, checklist e lupa para escolha de especialista](/assets/blog/capa-como-encontrar-coloproctologista-campo-grande-ms.webp)
+![Tablet com um perfil médico ilustrado, lista de conferência e lupa sobre uma mesa.](/assets/blog/capa-como-encontrar-coloproctologista-campo-grande-ms.webp)
 
 - Confira se o nome corresponde ao profissional procurado.
 - Verifique a inscrição e sua situação no estado onde ocorre o atendimento.

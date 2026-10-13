@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 image:
-  src: /assets/blog/hemorroida-x-plicoma-anal.webp
-  alt: Comparação anatômica entre hemorroida e plicoma anal
-  caption: Ilustração educativa comparando tecido vascular aumentado e excesso de pele na região anal.
+  src: "/assets/blog/hemorroida-x-plicoma-anal.webp"
+  alt: "Dois quadros comparam hemorroida, representada por tecido vascular aumentado, e plicoma, representado por uma dobra de pele."
+  caption: "Ilustração educativa que compara aumento do tecido hemorroidário e excesso de pele, chamado plicoma."
   width: 1600
   height: 893
 featured: true
@@ -75,7 +75,7 @@ São veias inchadas na região do ânus. Podem ser:
 
 ## Resumo prático
 
-![Comparação anatômica entre hemorroida, definida como tecido vascular aumentado, e plicoma anal, definido como excesso ou dobra de pele](/assets/blog/hemorroida-x-plicoma-anal.webp)
+![Dois quadros comparam hemorroida, representada por tecido vascular aumentado, e plicoma, representado por uma dobra de pele.](/assets/blog/hemorroida-x-plicoma-anal.webp)
 
 | Característica | Hemorroida | Plicoma |
 | --- | --- | --- |

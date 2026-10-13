@@ -57,8 +57,8 @@ disclaimer: >-
   urgência.
 image:
   src: "/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp"
-  alt: "Ilustração de ambiente acolhedor com cadeiras e caderno para uma primeira consulta"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Mesa de consultório ilustrado com caderno aberto, canetas e duas poltronas para conversa."
+  caption: "Cena ilustrativa de um espaço de conversa para a primeira consulta; não é o consultório real da médica."
   width: 1672
   height: 941
 ---
@@ -73,7 +73,7 @@ Não existe uma sequência idêntica para todas as pessoas. Sintomas, histórico
 
 A consulta costuma começar com perguntas sobre a queixa principal. Mais do que saber apenas “onde dói”, a médica precisa entender o contexto:
 
-![Ilustração de ambiente acolhedor com cadeiras e caderno para uma primeira consulta](/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp)
+![Mesa de consultório ilustrado com caderno aberto, canetas e duas poltronas para conversa.](/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp)
 
 - quando o sintoma começou e se está piorando
 - presença de sangue, secreção, coceira, nódulo ou prolapso

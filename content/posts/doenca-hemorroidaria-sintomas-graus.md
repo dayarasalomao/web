@@ -57,8 +57,8 @@ disclaimer: >-
   prolapso ou outros sintomas anais persistentes, procure avaliação presencial.
 image:
   src: "/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp"
-  alt: "Ilustração de conversa médica sobre uma ficha de classificação e avaliação de sintomas"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Duas pessoas conversam diante de uma ficha ilustrada de avaliação, com círculos e uma lupa."
+  caption: "Ilustração de uma conversa sobre sintomas e classificação das hemorroidas; não substitui o exame."
   width: 1672
   height: 941
 ---
@@ -82,7 +82,7 @@ Existem dois tipos de hemorroida:
 
 A classificação é feita pela avaliação clínica associada ao exame físico:
 
-![Ilustração de conversa médica sobre uma ficha de classificação e avaliação de sintomas](/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp)
+![Duas pessoas conversam diante de uma ficha ilustrada de avaliação, com círculos e uma lupa.](/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp)
 
 * **Grau I:** apenas sangramento vermelho-vivo, sem prolapso pelo ânus.
 * **Grau II:** a hemorroida prolapsa ao evacuar, mas retorna espontaneamente para dentro do canal anal.

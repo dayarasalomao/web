@@ -55,8 +55,8 @@ disclaimer: >-
   toxina botulínica depende de avaliação presencial e individualizada.
 image:
   src: "/assets/blog/capa-toxina-botulinica-fissura-anal.webp"
-  alt: "Ilustração de conversa médica e frasco genérico sem rótulo sobre bandeja de consulta"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Duas pessoas conversam à mesa, com um frasco sem rótulo sobre uma bandeja."
+  caption: "Cena ilustrativa de uma conversa sobre tratamento; o frasco não identifica um medicamento ou uma dose."
   width: 1672
   height: 941
 ---
@@ -77,7 +77,7 @@ Se você ainda não tem certeza de que se trata de fissura, o artigo sobre [dor 
 
 A toxina botulínica relaxa a musculatura do esfíncter. Esse relaxamento:
 
-![Ilustração de conversa médica e frasco genérico sem rótulo sobre bandeja de consulta](/assets/blog/capa-toxina-botulinica-fissura-anal.webp)
+![Duas pessoas conversam à mesa, com um frasco sem rótulo sobre uma bandeja.](/assets/blog/capa-toxina-botulinica-fissura-anal.webp)
 
 * **Reduz a dor quase de imediato**, porque interrompe o espasmo;
 * **Restaura o fluxo sanguíneo local**, o que devolve à região as condições de cicatrizar;

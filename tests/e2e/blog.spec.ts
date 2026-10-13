@@ -86,14 +86,15 @@ for (const slug of [
     await expect(primary).toHaveAttribute('aria-label', `Imagem: ${post.image!.caption}`)
     if (slug === 'hemorroida-externa-trombosada') {
       const secondary = images.nth(1)
-      const caption = 'Ilustração de uma opção de tratamento feita por profissional; não é orientação para manipular a região em casa.'
+      const caption = 'Esquema ilustrativo de retirada de um coágulo por um profissional; não é orientação para manipular a região em casa.'
       await expect(secondary.locator('[data-editorial-caption]')).toHaveText(caption)
       await expect(secondary).toHaveAttribute('aria-label', `Imagem: ${caption}`)
     }
     if (slug === 'cisto-pilonidal-cirurgia-convencional-x-laser') {
-      await expect(images.nth(1)).not.toHaveAttribute('role')
-      await expect(images.nth(1)).not.toHaveAttribute('aria-label')
-      await expect(page.getByText('Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho.')).toBeVisible()
+      const caption = 'Cena ilustrativa na região sacrococcígea; não mostra todas as etapas de confecção e fechamento de um retalho.'
+      await expect(images.nth(1)).toHaveAttribute('role', 'group')
+      await expect(images.nth(1)).toHaveAttribute('aria-label', `Imagem: ${caption}`)
+      await expect(images.nth(1).locator('[data-editorial-caption]')).toHaveText(caption)
     }
   })
 }

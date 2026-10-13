@@ -52,10 +52,16 @@ disclaimer: >-
   remoção e a escolha da técnica dependem de avaliação presencial.
 coverImage:
   src: "/assets/blog/capa-plicoma-anal-laser-co2.webp"
-  alt: "Ilustração de ficha de planejamento, lupa e instrumento genérico sobre bandeja médica"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Prancheta com silhueta ilustrada, lupa e instrumentos genéricos sobre uma bandeja."
+  caption: "Imagem ilustrativa de avaliação e planejamento; não mostra a retirada de um plicoma."
   width: 1672
   height: 941
+image:
+  src: "/assets/blog/plicoma-anal-ilustracao.webp"
+  alt: "Representação da região anal com uma prega de pele externa assinalada como plicoma."
+  caption: "Ilustração de uma prega de pele na borda anal, chamada plicoma; não permite identificar uma lesão sem exame."
+  width: 1600
+  height: 873
 ---
 
 *Quase todo plicoma anal pode simplesmente ser deixado em paz. A conversa útil não é sobre qual tecnologia é melhor, mas sobre se aquele plicoma precisa sair — e, quando precisa, por que a escolha do instrumento muda o resultado.*
@@ -64,7 +70,7 @@ coverImage:
 
 O plicoma anal é uma saliência de pele benigna ao redor do ânus. É macio, tem a cor da pele ao redor e costuma ter formato de dobra ou "orelhinha". É muito comum: estima-se que cerca de um terço das pessoas com problemas anais benignos, como hemorroidas ou fissuras, apresente algum plicoma.
 
-![Ilustração de plicoma anal, um excesso de pele benigno na região perianal](/assets/blog/plicoma-anal-ilustracao.webp)
+![Representação da região anal com uma prega de pele externa assinalada como plicoma.](/assets/blog/plicoma-anal-ilustracao.webp)
 
 Na maioria dos casos ele não causa sintoma nenhum. Quando não há inflamação, dor ou incômodo, a recomendação é deixá-lo em paz — não faz sentido transformar em problema algo que não incomoda.
 

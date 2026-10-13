@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 image:
-  src: /assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp
-  alt: Evolução do abscesso anal e formação de fístula
-  caption: Ilustração educativa comparando drenagem, persistência do trajeto e formação de fístula anal.
+  src: "/assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp"
+  alt: "Três quadros mostram um abscesso anal, formas de drenagem e trajetos de fístula."
+  caption: "Esquema da possível evolução de um abscesso para um trajeto de fístula, com exemplos de drenagem."
   width: 1024
   height: 572
 order: 32
@@ -65,7 +65,7 @@ disclaimer: >-
 
 Depois que o abscesso é drenado, pode acontecer de sobrar um "canal" ligando o interior do intestino à pele ao redor do ânus. Esse canal é o que chamamos de [fístula anal](/blog/fistula-anal-o-que-e-sintomas). Ela não surge sempre, mas alguns fatores aumentam bastante a chance de isso acontecer:
 
-![Evolução do abscesso anal: a coleção de pus, a drenagem adequada comparada à drenagem persistente, e a formação de fístula simples ou complexa com ramificação](/assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp)
+![Três quadros mostram um abscesso anal, formas de drenagem e trajetos de fístula.](/assets/blog/abscesso-anal-drenagem-evolucao-fistula.webp)
 
 * **Drenagem incompleta.** Se o pus não for totalmente esvaziado, ou se existirem "bolsões" escondidos que não foram abertos, a infecção tende a persistir e formar um trajeto crônico.
 * **Local do procedimento.** Estudos mostram que a drenagem feita em centro cirúrgico, com boas condições de visualização e anestesia adequada, tem resultado bem melhor do que uma drenagem feita às pressas, por exemplo em um consultório ou pronto-socorro sem estrutura cirúrgica. Nesse tipo de comparação, o risco de o problema voltar ou virar fístula caiu cerca de 80% quando o procedimento foi feito em ambiente cirúrgico adequado.

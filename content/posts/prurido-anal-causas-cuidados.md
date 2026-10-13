@@ -19,9 +19,9 @@ targetAudience: patients
 intent: awareness
 order: 9
 image:
-  src: /assets/blog/prurido-anal-desconforto.webp
-  alt: Imagem ilustrativa de pessoa com desconforto e coceira na região anal
-  caption: A coceira anal pode ter diferentes causas; a imagem não representa um diagnóstico.
+  src: "/assets/blog/prurido-anal-desconforto.webp"
+  alt: "Pessoa vestida mantém a mão na região glútea em uma cena ilustrativa de desconforto."
+  caption: "A coceira anal pode ter diferentes causas; a imagem não representa um diagnóstico."
   width: 1024
   height: 559
 relatedPosts:
@@ -68,7 +68,7 @@ disclaimer: >-
 
 Prurido anal é o nome clínico da coceira na pele ao redor do ânus. Pode ser leve e passageira, mas também pode se tornar persistente, incomodar à noite, piorar depois de evacuar ou gerar ardor pela própria irritação da pele.
 
-![Imagem ilustrativa de pessoa com desconforto e coceira na região anal](/assets/blog/prurido-anal-desconforto.webp)
+![Pessoa vestida mantém a mão na região glútea em uma cena ilustrativa de desconforto.](/assets/blog/prurido-anal-desconforto.webp)
 
 O ponto mais importante: **é um sintoma, não um diagnóstico**. Em alguns casos vem de hábitos locais. Em outros, é a manifestação de uma doença anorretal, de uma alteração de pele ou de uma infecção. Tratar sem saber qual dos casos é o seu costuma não funcionar.
 

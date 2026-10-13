@@ -19,9 +19,9 @@ intent: decision
 featured: true
 order: 5
 image:
-  src: /assets/blog/hemorroidoplastia-laser-diodo.webp
-  alt: Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário
-  caption: Representação esquemática da ação interna da fibra de laser; a indicação depende do exame.
+  src: "/assets/blog/hemorroidoplastia-laser-diodo.webp"
+  alt: "Corte esquemático mostra uma fibra de laser no coxim hemorroidário, com a área tratada destacada."
+  caption: "Diagrama da posição da fibra de laser na hemorroidoplastia; a indicação depende do exame."
   width: 1024
   height: 844
 relatedPosts:
@@ -71,7 +71,7 @@ disclaimer: >-
 
 Uma fibra de laser fina e flexível é introduzida dentro do tecido hemorroidário. A energia do laser de diodo, normalmente com comprimento de onda de 980 ou 1470 nanômetros, sela os vasos de dentro para fora e provoca a retração da hemorroida.
 
-![Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário](/assets/blog/hemorroidoplastia-laser-diodo.webp)
+![Corte esquemático mostra uma fibra de laser no coxim hemorroidário, com a área tratada destacada.](/assets/blog/hemorroidoplastia-laser-diodo.webp)
 
 Não há remoção de tecido e não há incisão na mucosa anal. É daí que vem o nome popular da técnica: a agressão à superfície da pele e da mucosa ao redor é muito menor, e não fica uma ferida aberta extensa para cuidar.
 

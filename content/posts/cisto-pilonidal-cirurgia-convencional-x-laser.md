@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: consideration
 image:
-  src: /assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp
-  alt: Comparação entre cirurgia convencional e laser SiLaC para cisto pilonidal
-  caption: Ilustração educativa das diferenças entre a excisão convencional e a abordagem minimamente invasiva com fibra de laser.
+  src: "/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp"
+  alt: "Dois quadros comparam a excisão convencional do cisto pilonidal e a introdução de uma fibra de laser."
+  caption: "Comparação ilustrativa entre excisão convencional e abordagem com fibra de laser. A figura não mostra o uso do vídeo no EPSiT."
   width: 1600
   height: 893
 featured: true
@@ -60,7 +60,7 @@ O [cisto pilonidal](/blog/cisto-pilonidal-sinais-diagnostico) (também chamado d
 
 É a técnica mais tradicional. O cirurgião remove todo o trajeto do cisto e o tecido doente ao redor. Depois, existem duas formas de fechar a área:
 
-![Comparação entre cirurgia convencional e cirurgia a laser SiLaC para cisto pilonidal, mostrando a excisão aberta e a inserção da fibra de laser pelos orifícios de entrada](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
+![Dois quadros comparam a excisão convencional do cisto pilonidal e a introdução de uma fibra de laser.](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
 * **Fechamento aberto (cicatrização por segunda intenção):** a ferida é deixada aberta e cicatriza aos poucos, de dentro para fora, com curativos regulares.
 * **Fechamento fechado (sutura direta na linha do meio):** as bordas da ferida são costuradas logo após a remoção do cisto. Costuma dar certo somente para cistos muito pequenos, pois os pontos nessa região tendem a se abrir em quase todos os casos, sendo a opção de deixar aberto melhor.
@@ -79,9 +79,7 @@ Nessa técnica, uma fibra de laser fina é introduzida dentro do trajeto do cist
 
 **Indicação:** boa opção para pacientes com doença pilonidal simples a complexa que exigiria extensas ressecções, para pacientes que priorizam recuperação rápida, menor dor e melhor estética, e que têm acesso a essa tecnologia.
 
-![Ilustração da região sacrococcígea durante uma cirurgia para doença pilonidal](/assets/blog/cisto-pilonidal-tecnica-retalho.webp)
-
-*Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho.*
+![Ilustração da região sacrococcígea em uma abordagem cirúrgica, com instrumentos e mãos enluvadas.](/assets/blog/cisto-pilonidal-tecnica-retalho.webp "Cena ilustrativa na região sacrococcígea; não mostra todas as etapas de confecção e fechamento de um retalho.")
 
 ## Técnicas de retalho (Limberg, Karydakis, Bascom "cleft-lift")
 

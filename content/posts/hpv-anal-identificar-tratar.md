@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 image:
-  src: /assets/blog/plicoma-x-hpv-perianal.webp
-  alt: Comparação visual entre plicoma anal e verruga de HPV perianal
-  caption: Ilustração educativa de diferenças visuais que não substituem a avaliação médica presencial.
+  src: "/assets/blog/plicoma-x-hpv-perianal.webp"
+  alt: "Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal."
+  caption: "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial."
   width: 1600
   height: 873
 order: 18
@@ -56,8 +56,8 @@ disclaimer: >-
   outras alterações na região anal, procure avaliação presencial.
 coverImage:
   src: "/assets/blog/capa-hpv-anal-identificar-tratar.webp"
-  alt: "Ilustração de consultório fictício e pasta fechada com cadeado, representando sigilo na avaliação"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Duas poltronas em um consultório ilustrado, com uma pasta fechada por cadeado em primeiro plano."
+  caption: "Cena ilustrativa que representa privacidade e sigilo na conversa sobre sintomas e lesões."
   width: 1672
   height: 941
 ---
@@ -83,7 +83,7 @@ A confusão mais frequente é com o plicoma — uma simples sobra de pele, seque
 
 O plicoma é liso, tem a cor da pele normal, costuma ser único ou em pequeno número, não coça, não sangra e não cresce. Não tem nenhuma relação com vírus ou com infecção sexualmente transmissível.
 
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 A distinção importa porque a conduta é completamente diferente — e porque a confusão gera um sofrimento desnecessário. O artigo sobre [como diferenciar plicoma de HPV perianal](/blog/plicoma-ou-hpv-perianal-como-diferenciar) detalha os sinais lado a lado, e o de [lesões, verrugas e nódulos na região anal](/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar) amplia para outras possibilidades.
 

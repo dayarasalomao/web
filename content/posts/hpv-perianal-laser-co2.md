@@ -18,9 +18,9 @@ targetAudience: patients
 intent: decision
 order: 8
 image:
-  src: /assets/blog/laser-co2-regiao-perianal.webp
-  alt: Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico
-  caption: Imagem ilustrativa de tratamento local; não permite identificar uma lesão ou confirmar um diagnóstico.
+  src: "/assets/blog/laser-co2-regiao-perianal.webp"
+  alt: "Cena ilustrativa mostra a aplicação de um instrumento em uma pequena área de pele delimitada por um campo cirúrgico."
+  caption: "Cena ilustrativa de aplicação de um instrumento sobre a pele; não permite identificar uma lesão ou confirmar um diagnóstico."
   width: 1024
   height: 572
 relatedPosts:
@@ -65,7 +65,7 @@ O condiloma causado pelo HPV aparece como uma ou várias lesões de superfície 
 
 Nem toda lesão perianal é HPV, e a confusão mais comum é com o plicoma — uma simples sobra de pele, lisa, da cor da pele normal, geralmente única ou em pequeno número, que não coça e não cresce.
 
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial.")
 
 A diferença importa porque a conduta é completamente diferente. O artigo sobre [como diferenciar plicoma de HPV perianal](/blog/plicoma-ou-hpv-perianal-como-diferenciar) detalha os sinais de cada um, e o de [lesões, verrugas e nódulos na região anal](/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar) ajuda a saber o que observar.
 
@@ -87,7 +87,7 @@ Aplicado aos condilomas, isso significa:
 
 O procedimento é realizado com anestesia local ou sedação rápida, conforme a extensão das lesões.
 
-![Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico](/assets/blog/laser-co2-regiao-perianal.webp)
+![Cena ilustrativa mostra a aplicação de um instrumento em uma pequena área de pele delimitada por um campo cirúrgico.](/assets/blog/laser-co2-regiao-perianal.webp)
 
 O planejamento considera a quantidade, o tamanho e a localização dos condilomas — lesões espalhadas ou em áreas mais delicadas exigem uma estratégia diferente de uma lesão única.
 

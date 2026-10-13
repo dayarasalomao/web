@@ -12,6 +12,7 @@ import { buildBlogPostGraph } from '../../src/lib/structured-data.ts'
 const manifest = JSON.parse(fs.readFileSync('docs/blog-generated-images-manifest.json', 'utf8')) as Array<{
   slug: string; src: string; alt: string; caption: string; width: number; height: number; kind: string;
 }>
+const reviewed = new Map((JSON.parse(fs.readFileSync('docs/blog-image-editorial-review.json', 'utf8')) as Array<{ src: string; alt: string; caption: string }>).map((image) => [image.src, image]))
 
 it('gives every article an image and shares only the client pilonidal comparison (I1)', () => {
   const posts = getAllPosts()
@@ -27,7 +28,8 @@ it('gives every article an image and shares only the client pilonidal comparison
 
 it('uses each declared generated image in cards, OG, Twitter and Article schema (F2/3)', () => {
   for (const expected of manifest) {
-    assert.equal(expected.caption, 'Ilustração editorial; não representa paciente, consultório real ou procedimento médico.')
+    assert.equal(expected.caption, reviewed.get(expected.src)!.caption)
+    assert.equal(expected.alt, reviewed.get(expected.src)!.alt)
     if (expected.slug === 'sangramento-anal-dor-quando-procurar-coloproctologista') {
       assert.equal(expected.src, '/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp')
     }

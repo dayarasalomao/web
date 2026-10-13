@@ -11,12 +11,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de tablet com perfil profissional, checklist e lupa para escolha de especialista",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Tablet com um perfil médico ilustrado, lista de conferência e lupa sobre uma mesa.",
+    "caption": "Ilustração sobre a conferência de informações profissionais na escolha de um especialista.",
     "width": 1672,
     "height": 941,
     "bytes": 85330,
-    "sha256": "06412b246f273af71d1c07bb24a5f261bdb40a06b4dbe4effc291a4c341da7fc"
+    "sha256": "06412b246f273af71d1c07bb24a5f261bdb40a06b4dbe4effc291a4c341da7fc",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "hemorroida-tem-cura-ou-passa-sozinha",
@@ -30,12 +32,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de calendário, garrafa de água e caderno de acompanhamento da rotina",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Calendário de mesa, garrafa de água e caderno aberto em um ambiente doméstico ilustrado.",
+    "caption": "Ilustração sobre registrar a rotina e conversar sobre a evolução dos sintomas ao longo do tempo.",
     "width": 1672,
     "height": 941,
     "bytes": 111246,
-    "sha256": "e97d6ee2a4afd734ff9cbe160af78ca3ac7a8f357150097d8e7b2ea7c10a232f"
+    "sha256": "e97d6ee2a4afd734ff9cbe160af78ca3ac7a8f357150097d8e7b2ea7c10a232f",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "ligadura-elastica-doi-recuperacao-cuidados",
@@ -49,12 +53,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de agenda, copo de água e telefone para contato com a equipe médica",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Agenda aberta, copo de água e telefone com perfil médico ilustrado, ao lado de uma poltrona.",
+    "caption": "Cena ilustrativa sobre organizar a rotina e manter contato com a equipe após um procedimento.",
     "width": 1672,
     "height": 940,
     "bytes": 109170,
-    "sha256": "f7ece9d8dfe9a23ddfcae51e334d742545dfd3b1ee74f144ca6e697b1c7eaebd"
+    "sha256": "f7ece9d8dfe9a23ddfcae51e334d742545dfd3b1ee74f144ca6e697b1c7eaebd",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "primeira-consulta-coloproctologista-como-se-preparar",
@@ -68,12 +74,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de ambiente acolhedor com cadeiras e caderno para uma primeira consulta",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Mesa de consultório ilustrado com caderno aberto, canetas e duas poltronas para conversa.",
+    "caption": "Cena ilustrativa de um espaço de conversa para a primeira consulta; não é o consultório real da médica.",
     "width": 1672,
     "height": 941,
     "bytes": 152016,
-    "sha256": "6e8cbe47bf31821b892f672b3048e8ac2b383568414266f037983a04deffd37b"
+    "sha256": "6e8cbe47bf31821b892f672b3048e8ac2b383568414266f037983a04deffd37b",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "cisto-pilonidal-sinais-diagnostico",
@@ -87,12 +95,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de pessoa vestida com desconforto na região baixa das costas e diário de sintomas",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Pessoa sentada mantém a mão na parte baixa das costas, ao lado de um diário de sintomas.",
+    "caption": "Cena ilustrativa de desconforto ao sentar, usada como apoio ao texto sobre cisto pilonidal.",
     "width": 1672,
     "height": 941,
     "bytes": 96306,
-    "sha256": "5677e3831294c6b40e80a69ef0b91713219c0dfaa477c797de77376d0995f620"
+    "sha256": "5677e3831294c6b40e80a69ef0b91713219c0dfaa477c797de77376d0995f620",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "hpv-anal-identificar-tratar",
@@ -112,12 +122,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de consultório fictício e pasta fechada com cadeado, representando sigilo na avaliação",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Duas poltronas em um consultório ilustrado, com uma pasta fechada por cadeado em primeiro plano.",
+    "caption": "Cena ilustrativa que representa privacidade e sigilo na conversa sobre sintomas e lesões.",
     "width": 1672,
     "height": 941,
     "bytes": 88672,
-    "sha256": "b6f55d210e7083019adce987fe47d9f5d29230e39f3352cb7c2481bab918ae9a"
+    "sha256": "b6f55d210e7083019adce987fe47d9f5d29230e39f3352cb7c2481bab918ae9a",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "fistula-anal-o-que-e-sintomas",
@@ -137,12 +149,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de conversa médica, ficha de avaliação e caminhos abstratos sob uma lupa",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Duas pessoas conversam diante de uma prancheta, com linhas curvas e uma lupa em primeiro plano.",
+    "caption": "Cena ilustrativa de uma conversa de avaliação; as linhas são simbólicas e não representam um trajeto de fístula.",
     "width": 1672,
     "height": 941,
     "bytes": 80032,
-    "sha256": "7dbce74e5510a301de707c10c4001e50ae9ce44b807dd464d14f1ed710abadb0"
+    "sha256": "7dbce74e5510a301de707c10c4001e50ae9ce44b807dd464d14f1ed710abadb0",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "doenca-hemorroidaria-sintomas-graus",
@@ -156,12 +170,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de conversa médica sobre uma ficha de classificação e avaliação de sintomas",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Duas pessoas conversam diante de uma ficha ilustrada de avaliação, com círculos e uma lupa.",
+    "caption": "Ilustração de uma conversa sobre sintomas e classificação das hemorroidas; não substitui o exame.",
     "width": 1672,
     "height": 941,
     "bytes": 100324,
-    "sha256": "446836c59b30f85168599898a381bf6c2ee4d1f57be02cfa3cb67d1f9fc39f87"
+    "sha256": "446836c59b30f85168599898a381bf6c2ee4d1f57be02cfa3cb67d1f9fc39f87",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "doencas-inflamatorias-intestinais-crohn-retocolite",
@@ -175,12 +191,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de pessoa vestida com a mão no abdome e caderno para avaliação de sintomas",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Pessoa com as mãos sobre o abdome, ao lado de um caderno ilustrado e uma lupa.",
+    "caption": "Cena ilustrativa de desconforto abdominal, usada como apoio ao texto sobre investigação de sintomas intestinais.",
     "width": 1672,
     "height": 941,
     "bytes": 129322,
-    "sha256": "ad8d4dc0cf19687c8268fb3b8d3356fd38790e3dcb77f58b6a9a95e74a4384a6"
+    "sha256": "ad8d4dc0cf19687c8268fb3b8d3356fd38790e3dcb77f58b6a9a95e74a4384a6",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "historico-crohn-retocolite-familia-acompanhamento-coloproctologista",
@@ -194,12 +212,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de árvore familiar, calendário e estetoscópio para acompanhamento médico",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Árvore familiar ilustrada com retratos, ao lado de um calendário e um estetoscópio.",
+    "caption": "Ilustração sobre conversar a respeito do histórico familiar e organizar o acompanhamento médico.",
     "width": 1672,
     "height": 941,
     "bytes": 105656,
-    "sha256": "fe8c523c1ab86d12b1dd83f049e5f2310e67bd9d2e382a2abb87b5d297ad5e22"
+    "sha256": "fe8c523c1ab86d12b1dd83f049e5f2310e67bd9d2e382a2abb87b5d297ad5e22",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "hidradenite-supurativa-sintomas-tratamento",
@@ -213,12 +233,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de consulta sobre cuidados de pele com toalha macia, tecido de algodão e ficha médica",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Mãos de duas pessoas em conversa, com uma toalha dobrada, tecido de algodão e ficha sobre a mesa.",
+    "caption": "Composição ilustrativa sobre avaliação e cuidados de pele, sem representar lesões ou um tratamento específico.",
     "width": 1672,
     "height": 941,
     "bytes": 88426,
-    "sha256": "10d79d61a910192c36e468a214d8f8850b538b74f0ed91b58c0c9271cc549910"
+    "sha256": "10d79d61a910192c36e468a214d8f8850b538b74f0ed91b58c0c9271cc549910",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "sindrome-intestino-irritavel-sintomas-manejo",
@@ -232,12 +254,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de pessoa anotando a rotina com a mão no abdome e uma xícara sobre a mesa",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Pessoa escreve em um diário com uma mão, enquanto a outra repousa sobre o abdome.",
+    "caption": "Ilustração sobre registrar a rotina e os sintomas para a conversa sobre funcionamento intestinal.",
     "width": 1672,
     "height": 941,
     "bytes": 128332,
-    "sha256": "f886220b0f50dd1ad763f0d61cac85c1c99e08d1bea7fe7f596f74b14555dcc1"
+    "sha256": "f886220b0f50dd1ad763f0d61cac85c1c99e08d1bea7fe7f596f74b14555dcc1",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "diarreia-cronica-causas-sinais-alerta",
@@ -251,12 +275,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de calendário, diário de sintomas, copo de água e telefone para avaliação médica",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Calendário marcado, diário de sintomas, copo de água e telefone com contato médico ilustrado.",
+    "caption": "Ilustração sobre acompanhar sintomas persistentes e organizar as informações para a consulta.",
     "width": 1672,
     "height": 941,
     "bytes": 107304,
-    "sha256": "64f4fe82b73af74a588081cece600e3691d6e00e49fa38dc346f4ae9f7677e13"
+    "sha256": "64f4fe82b73af74a588081cece600e3691d6e00e49fa38dc346f4ae9f7677e13",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "constipacao-intestinal-quando-investigar",
@@ -270,12 +296,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de diário da rotina, água, pera e aveia em uma mesa de acompanhamento",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Garrafa de água, pera, aveia e diário de hábitos, com uma representação decorativa do intestino ao fundo.",
+    "caption": "Ilustração de hábitos e registros que podem ser discutidos na avaliação do intestino preso.",
     "width": 1672,
     "height": 941,
     "bytes": 131666,
-    "sha256": "c9f8fbc403421bc12161b0c550c4c7371418b5dd475ac4fc21f8c8627e4ec66d"
+    "sha256": "c9f8fbc403421bc12161b0c550c4c7371418b5dd475ac4fc21f8c8627e4ec66d",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "alteracoes-habito-intestinal-quando-avaliar",
@@ -289,12 +317,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de diário com símbolos da rotina intestinal, calendário e relógio",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Pessoa observa um diário ilustrado, com calendário, relógio e uma conversa médica representada ao fundo.",
+    "caption": "Ilustração sobre o registro de mudanças na rotina intestinal antes de uma avaliação.",
     "width": 1672,
     "height": 941,
     "bytes": 97964,
-    "sha256": "e998e5ef44f134c80dfcae3a1dfb9a085e08ced9dc59d826b7468c44aa1b8d95"
+    "sha256": "e998e5ef44f134c80dfcae3a1dfb9a085e08ced9dc59d826b7468c44aa1b8d95",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "plicoma-anal-laser-co2",
@@ -311,12 +341,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de ficha de planejamento, lupa e instrumento genérico sobre bandeja médica",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Prancheta com silhueta ilustrada, lupa e instrumentos genéricos sobre uma bandeja.",
+    "caption": "Imagem ilustrativa de avaliação e planejamento; não mostra a retirada de um plicoma.",
     "width": 1672,
     "height": 941,
     "bytes": 105708,
-    "sha256": "b537d317c160133c1c4666e9c798050634a502c1c710b7cf14806852fd51502e"
+    "sha256": "b537d317c160133c1c4666e9c798050634a502c1c710b7cf14806852fd51502e",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "fistula-anal-laser-vaaft-filac",
@@ -333,12 +365,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de monitor com gráfico abstrato, caderno fechado e instrumentos desligados para planejamento",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Monitor com pontos ligados por uma linha, caderno fechado e instrumentos genéricos sobre uma bandeja.",
+    "caption": "Composição ilustrativa sobre planejamento com vídeo e laser; a tela não mostra um exame real.",
     "width": 1672,
     "height": 941,
     "bytes": 67850,
-    "sha256": "73a9a8bbe2f6b9c5de0d42d25d12ae12fd7d267a84343642efc313a5ac1b3528"
+    "sha256": "73a9a8bbe2f6b9c5de0d42d25d12ae12fd7d267a84343642efc313a5ac1b3528",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "toxina-botulinica-fissura-anal",
@@ -352,12 +386,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de conversa médica e frasco genérico sem rótulo sobre bandeja de consulta",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Duas pessoas conversam à mesa, com um frasco sem rótulo sobre uma bandeja.",
+    "caption": "Cena ilustrativa de uma conversa sobre tratamento; o frasco não identifica um medicamento ou uma dose.",
     "width": 1672,
     "height": 941,
     "bytes": 97766,
-    "sha256": "33636743373c06fe095573de78095ffad6ee9985849f8cfa3041afc800866b20"
+    "sha256": "33636743373c06fe095573de78095ffad6ee9985849f8cfa3041afc800866b20",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "lesoes-verrugas-nodulos-regiao-anal-o-que-observar",
@@ -374,12 +410,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de lupa sobre formas abstratas, caderno de perguntas e telefone para consulta",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Lupa sobre três formas geométricas, caderno com perguntas e telefone com ícone de contato.",
+    "caption": "Ilustração sobre organizar dúvidas antes da consulta; as formas não representam lesões reais.",
     "width": 1672,
     "height": 941,
     "bytes": 78160,
-    "sha256": "11b19dd42ac95a3b5241dd2f36d03fdc9a52cd2531de45bf6eecdafb1c655cd4"
+    "sha256": "11b19dd42ac95a3b5241dd2f36d03fdc9a52cd2531de45bf6eecdafb1c655cd4",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "hemorroidectomia-laser-co2",
@@ -399,12 +437,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de prancheta de planejamento e instrumento médico genérico desligado sobre bandeja",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Instrumento médico genérico sobre uma bandeja, ao lado de uma prancheta sem texto legível.",
+    "caption": "Imagem ilustrativa de planejamento cirúrgico; o instrumento não identifica um modelo ou tecnologia específica.",
     "width": 1672,
     "height": 941,
     "bytes": 85692,
-    "sha256": "f64acfbe88e3cfebe20dbb53975f4815d050835ebe5f36bb8f17537c1c417e7f"
+    "sha256": "f64acfbe88e3cfebe20dbb53975f4815d050835ebe5f36bb8f17537c1c417e7f",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "dor-ao-evacuar-quando-investigar",
@@ -418,12 +458,14 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de pessoa com desconforto anotando sintomas e pensando em uma consulta",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Pessoa anota informações em um caderno, com a outra mão sobre o abdome e uma consulta representada ao fundo.",
+    "caption": "Ilustração sobre registrar quando a dor aparece e levar essas informações à avaliação médica.",
     "width": 1672,
     "height": 941,
     "bytes": 98604,
-    "sha256": "262e3e8c7831cf0ff5457b5c9b522168641f7b94240da1d38eb1cbf6b15121e8"
+    "sha256": "262e3e8c7831cf0ff5457b5c9b522168641f7b94240da1d38eb1cbf6b15121e8",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   },
   {
     "slug": "sangramento-anal-dor-quando-procurar-coloproctologista",
@@ -437,13 +479,15 @@
     "generationTool": "OpenAI image_gen (built-in)",
     "generatedAt": "2026-10-13",
     "reviewStatus": "pending-physician-review",
-    "alt": "Ilustração de pessoa usando telefone para avaliação médica de sintomas anais",
-    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "alt": "Pessoa sentada segura o telefone com uma mão e mantém a outra apoiada no colo.",
+    "caption": "Cena ilustrativa sobre buscar orientação para sintomas anais; não representa uma consulta real.",
     "width": 1671,
     "height": 941,
     "bytes": 76074,
     "sha256": "e00aa4ad69bbf9e29d3894fcc80540781a09b9b6c024bcb2c2f209c890a60d50",
     "replacesSrc": "/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista.webp",
-    "revisionReason": "Correção da pose e das mãos solicitada pelo usuário; URL v2 para evitar cache antigo."
+    "revisionReason": "Correção da pose e das mãos solicitada pelo usuário; URL v2 para evitar cache antigo.",
+    "textReviewedAt": "2026-10-13",
+    "textReviewType": "visual-editorial"
   }
 ]

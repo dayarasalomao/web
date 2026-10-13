@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 image:
-  src: /assets/blog/fistula-anal-etapas-formacao.webp
-  alt: Etapas de formação de uma fístula anal
-  caption: Ilustração educativa da evolução da infecção glandular até a formação de um trajeto crônico.
+  src: "/assets/blog/fistula-anal-etapas-formacao.webp"
+  alt: "Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal."
+  caption: "Esquema ilustrativo de uma possível evolução da infecção glandular até a fístula anal."
   width: 1376
   height: 768
 order: 17
@@ -57,8 +57,8 @@ disclaimer: >-
   inflamação recorrente na região perianal, procure avaliação presencial.
 coverImage:
   src: "/assets/blog/capa-fistula-anal-o-que-e-sintomas.webp"
-  alt: "Ilustração de conversa médica, ficha de avaliação e caminhos abstratos sob uma lupa"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Duas pessoas conversam diante de uma prancheta, com linhas curvas e uma lupa em primeiro plano."
+  caption: "Cena ilustrativa de uma conversa de avaliação; as linhas são simbólicas e não representam um trajeto de fístula."
   width: 1672
   height: 941
 ---
@@ -79,7 +79,7 @@ Dentro do canal anal existem pequenas glândulas que produzem um lubrificante na
 
 Quando o abscesso é drenado, seja espontaneamente ou por cirurgia, o corpo tenta cicatrizar o trajeto por onde o pus saiu. Em parte dos casos esse trajeto não fecha completamente e vira um canal permanente, revestido por tecido de cicatrização. Essa é a fístula.
 
-![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
+![Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal.](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 Cerca de 80% das fístulas surgem exatamente assim — é a chamada origem criptoglandular, sem nenhuma doença de base associada. O passo a passo completo está no artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece).
 

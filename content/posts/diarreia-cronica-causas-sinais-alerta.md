@@ -36,8 +36,8 @@ disclaimer: >-
   dor importante ou sinais de desidratação.
 image:
   src: "/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp"
-  alt: "Ilustração de calendário, diário de sintomas, copo de água e telefone para avaliação médica"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  alt: "Calendário marcado, diário de sintomas, copo de água e telefone com contato médico ilustrado."
+  caption: "Ilustração sobre acompanhar sintomas persistentes e organizar as informações para a consulta."
   width: 1672
   height: 941
 ---
@@ -76,7 +76,7 @@ Esses achados ajudam a decidir se são necessários exames laboratoriais, avalia
 
 A consulta organiza a investigação. O médico avalia duração, padrão das fezes, alimentação, medicações, histórico familiar, sintomas fora do intestino e exames anteriores.
 
-![Ilustração de calendário, diário de sintomas, copo de água e telefone para avaliação médica](/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp)
+![Calendário marcado, diário de sintomas, copo de água e telefone com contato médico ilustrado.](/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp)
 
 Dependendo do caso, o plano pode envolver hidratação, ajustes alimentares, exames complementares, tratamento de infecções, controle de inflamação ou acompanhamento de condições funcionais.
 

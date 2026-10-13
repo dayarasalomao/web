@@ -16,9 +16,9 @@ secondaryKeywords:
 targetAudience: patients
 intent: consideration
 image:
-  src: /assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp
-  alt: Comparação entre eletrocautério, laser de diodo e laser de CO2
-  caption: Comparação educativa do efeito térmico e do modo de ação dos três instrumentos cirúrgicos.
+  src: "/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp"
+  alt: "Três cortes de tecido ilustram a aplicação de eletrocautério, fibra de laser de diodo e instrumento de laser de CO2."
+  caption: "Esquema comparativo de aplicação e efeitos térmicos de três instrumentos cirúrgicos."
   width: 1600
   height: 873
 featured: true
@@ -62,7 +62,7 @@ disclaimer: >-
 
 Eletrocautério e lasers são formas de energia que nós, cirurgiões, usamos para cortar tecido, controlar sangramento ou destruir tecido doente, sem precisar usar apenas o bisturi tradicional. A escolha entre eles depende da doença e do doente, além da imprescindível experiência e familiaridade da sua cirurgiã com as plataformas de tecnologia.
 
-![Comparação entre eletrocautério, laser de diodo e laser de CO2 mostrando o dano térmico, a inflamação e a recuperação associados a cada instrumento](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
+![Três cortes de tecido ilustram a aplicação de eletrocautério, fibra de laser de diodo e instrumento de laser de CO2.](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
 
 ## Eletrocautério
 
@@ -95,7 +95,7 @@ Benefícios observados em estudos:
 
 O laser de CO2 (dióxido de carbono) usa um feixe de luz que é fortemente absorvido pela água presente no tecido. Isso faz com que ele vaporize (literalmente "evapore") camadas finas de tecido com grande precisão, em vez de apenas coagular como o eletrocautério.
 
-![Quadro comparativo entre eletrocautério, laser de diodo e laser de CO2, com o modo de ação e o principal benefício de cada instrumento](/assets/blog/comparativo-instrumentos-cirurgicos.webp)
+![Tabela ilustrada com eletrocautério, laser de diodo e laser de CO2 organizados em três linhas.](/assets/blog/comparativo-instrumentos-cirurgicos.webp "Quadro ilustrativo do modo de ação de três instrumentos cirúrgicos; não define a melhor escolha para um caso.")
 
 **Como funciona na prática:** é muito utilizado para cortes precisos e superficiais, sendo útil em lesões da pele perianal, verrugas anais (condilomas) e outras lesões de superfície, pois permite remover tecido com controle milimétrico e menor dano às áreas vizinhas.
 
