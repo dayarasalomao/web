@@ -1,7 +1,21 @@
 import { expect, test } from '@playwright/test'
 import { getPostBySlug } from '../../src/lib/blog'
 
-test('newly illustrated article renders its image and AI disclosure on mobile (F2)', async ({ page }) => {
+test('corrected phone illustration uses its fresh URL and neutral caption on desktop and mobile (F7)', async ({ page }) => {
+  const src = '/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp'
+  for (const width of [1280, 375]) {
+    await page.setViewportSize({ width, height: 812 })
+    await page.goto('/blog/sangramento-anal-dor-quando-procurar-coloproctologista')
+    const image = page.locator(`article img[src*="${encodeURIComponent(src)}"]`)
+    await image.scrollIntoViewIfNeeded()
+    await expect(image).toHaveCount(1)
+    await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true)
+    await expect(page.locator('[data-editorial-caption]')).toHaveText('Ilustração editorial; não representa paciente, consultório real ou procedimento médico.')
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0)
+  }
+})
+
+test('newly illustrated article renders its image and neutral illustration caption on mobile (F2/7)', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 })
   const post = getPostBySlug('primeira-consulta-coloproctologista-como-se-preparar')!
   await page.goto(`/blog/${post.slug}`)
@@ -12,6 +26,7 @@ test('newly illustrated article renders its image and AI disclosure on mobile (F
   await expect(image).toHaveAttribute('width', String(post.image!.width))
   await expect(image).toHaveAttribute('height', String(post.image!.height))
   await expect(page.locator('[data-editorial-caption]')).toHaveText(post.image!.caption!)
+  await expect(page.locator('[data-editorial-caption]')).not.toContainText('inteligência artificial')
   await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true)
   expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0)
 })

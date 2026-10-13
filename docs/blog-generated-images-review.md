@@ -32,7 +32,7 @@ Manifest completo (prompts, dimensões, arquivos, SHA-256 e fonte original): [bl
 | Cisto pilonidal com EPSiT e laser: por dentro, sem ferida aberta | Capa de card/SEO; diagrama do corpo preservado | [Ver imagem](../public/assets/blog/capa-cisto-pilonidal-laser-epsit.webp) |
 | Hemorroidectomia com laser de CO2: o que muda quando o corte é feito a laser | Capa de card/SEO; diagrama do corpo preservado | [Ver imagem](../public/assets/blog/capa-hemorroidectomia-laser-co2.webp) |
 | Dor ao Evacuar: O Que Pode Ser e Quando Investigar | Imagem de corpo e card/SEO | [Ver imagem](../public/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp) |
-| Sangramento Anal ou Dor: Quando Procurar uma Coloproctologista | Imagem de corpo e card/SEO | [Ver imagem](../public/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista.webp) |
+| Sangramento Anal ou Dor: Quando Procurar uma Coloproctologista | Imagem de corpo e card/SEO | [Ver imagem](../public/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp) |
 
 ## Prévia das imagens
 
@@ -126,5 +126,5 @@ Manifest completo (prompts, dimensões, arquivos, SHA-256 e fonte original): [bl
 
 ### Sangramento Anal ou Dor: Quando Procurar uma Coloproctologista
 
-![Prévia editorial: Ilustração de pessoa usando telefone para avaliação médica de sintomas anais](../public/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista.webp)
+![Prévia editorial: Ilustração de pessoa usando telefone para avaliação médica de sintomas anais](../public/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp)
 

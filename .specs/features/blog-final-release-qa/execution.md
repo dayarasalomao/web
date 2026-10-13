@@ -52,3 +52,13 @@ Capturas finais:12 JPEGs, dez combinações page/viewport com overflow0, em scre
 | F6 mensagem | docs/client-updates/revisao-final-site-blog-2026-10-13.md:1–13 |pt-BR, resumo fiel, pede revisão artigos/imagens/IA antes de publicar | Sim |
 
 Mapeamento reverso: três e2e novos cobrem apenas F3/4/5; imagem lazy continua ligada a F2. Conteúdo de docs cobre F6 por inspeção. Sem testes antigos removidos/ignorados ou assertions enfraquecidas. A imagem de corpo é analisada via AST no teste, independentemente da extração simples do sitemap. Review médico/procedência permanece requisito editorial antes do merge.
+
+## R4 — imagem de telefone e legenda neutra
+
+Preferência explícita do usuário: corrigir mãos/pose da imagem de telefone e retirar a menção à IA da legenda pública. Regenerada com referência de estilo via image_gen built-in, com vista de frente em3/4, uma mão no telefone e outra no colo; inspecionadas conexões braço/punho/mãos na saída. Nova URL v2 evita reutilização do cache antigo; arquivo substituído sem manter asset de produção sem uso. Dimensões reais1671×941, WebP76074bytes, SHA atualizado no manifest. Alt mantém o mesmo significado, e conteúdo médico/legendas antigas permanece intacto.
+
+Caption das23 imagens novas agora: “Ilustração editorial; não representa paciente, consultório real ou procedimento médico.” Procedência IA segue no manifest, galeria e mensagem para a cliente, sem a antiga afirmação pública de que aparece nas legendas. AGENTS/CLAUDE/README/llms sincronizados com essa escolha.
+
+Gate aprovado: lint0, unit131/131, build69, audit0/0 e e2e completo65/65 no build local de produção. Capturas atualizadas:14JPEGs,12combinações com overflow0; telefone desktop/mobile incluído.
+
+F7: blog-covers.test.ts:25 caption exata para23 entries e :27 URLv2 exata; blog-covers.spec.ts:4–16 carrega URLv2, caption exata e overflow0 em1280/375px; :29 proíbe menção à IA na legenda; imagem revisada visualmente, sem testar anatomia por assertions de software. As evidências F1–6 e regressões clínicas/SEO continuam aprovadas. Nenhum teste removido/ignorado. Independent Verifier reiniciará no diff final, pois a rodada anterior foi interrompida por esta correção solicitada.

@@ -44,10 +44,10 @@ disclaimer: >-
   persistente, piora dos sintomas ou sinais de alerta, procure avaliação
   presencial.
 image:
-  src: "/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista.webp"
+  src: "/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp"
   alt: "Ilustração de pessoa usando telefone para avaliação médica de sintomas anais"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
-  width: 1672
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
+  width: 1671
   height: 941
 ---
 
@@ -57,7 +57,7 @@ image:
 
 Ver sangue no papel, no vaso sanitário ou misturado às fezes costuma gerar preocupação. Em muitos casos, o sangramento está relacionado a [fissuras](/blog/fissura-anal-causas-sintomas) ou [doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus), mas essa não deve ser uma conclusão sem avaliação.
 
-![Ilustração de pessoa usando telefone para avaliação médica de sintomas anais](/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista.webp)
+![Ilustração de pessoa usando telefone para avaliação médica de sintomas anais](/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp)
 
 O aspecto do sangue também importa. Sangue vermelho vivo costuma sugerir origem mais baixa, como região anal ou reto. Já fezes muito escuras, pretas ou com aspecto de borra podem indicar sangramento em outra parte do aparelho digestivo e exigem avaliação rápida.
 

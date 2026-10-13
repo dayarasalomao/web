@@ -57,7 +57,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp"
   alt: "Ilustração de agenda, copo de água e telefone para contato com a equipe médica"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 940
 ---

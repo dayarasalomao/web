@@ -36,7 +36,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-constipacao-intestinal-quando-investigar.webp"
   alt: "Ilustração de diário da rotina, água, pera e aveia em uma mesa de acompanhamento"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

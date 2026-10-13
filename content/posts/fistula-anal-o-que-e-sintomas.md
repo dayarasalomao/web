@@ -58,7 +58,7 @@ disclaimer: >-
 coverImage:
   src: "/assets/blog/capa-fistula-anal-o-que-e-sintomas.webp"
   alt: "Ilustração de conversa médica, ficha de avaliação e caminhos abstratos sob uma lupa"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

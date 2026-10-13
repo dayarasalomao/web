@@ -53,7 +53,7 @@ disclaimer: >-
 coverImage:
   src: "/assets/blog/capa-plicoma-anal-laser-co2.webp"
   alt: "Ilustração de ficha de planejamento, lupa e instrumento genérico sobre bandeja médica"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

@@ -22,6 +22,10 @@ it('gives all 40 articles a distinct card image (F2)', () => {
 
 it('uses each declared generated image in cards, OG, Twitter and Article schema (F2/3)', () => {
   for (const expected of manifest) {
+    assert.equal(expected.caption, 'Ilustração editorial; não representa paciente, consultório real ou procedimento médico.')
+    if (expected.slug === 'sangramento-anal-dor-quando-procurar-coloproctologista') {
+      assert.equal(expected.src, '/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp')
+    }
     const post = getPostBySlug(expected.slug)!
     const image = { src: expected.src, alt: expected.alt, caption: expected.caption, width: expected.width, height: expected.height }
     assert.deepEqual(expected.kind === 'cover' ? post.coverImage : post.image, image)

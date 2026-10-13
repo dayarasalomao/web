@@ -35,7 +35,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp"
   alt: "Ilustração de pessoa vestida com a mão no abdome e caderno para avaliação de sintomas"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

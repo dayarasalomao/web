@@ -55,7 +55,7 @@ disclaimer: >-
 coverImage:
   src: "/assets/blog/capa-cisto-pilonidal-laser-epsit.webp"
   alt: "Ilustração de planejamento com monitor de formas abstratas, caderno e instrumentos desligados"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

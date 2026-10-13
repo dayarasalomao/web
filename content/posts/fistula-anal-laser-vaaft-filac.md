@@ -52,7 +52,7 @@ disclaimer: >-
 coverImage:
   src: "/assets/blog/capa-fistula-anal-laser-vaaft-filac.webp"
   alt: "Ilustração de monitor com gráfico abstrato, caderno fechado e instrumentos desligados para planejamento"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

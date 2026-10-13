@@ -61,7 +61,7 @@ disclaimer: >-
 coverImage:
   src: "/assets/blog/capa-lesoes-verrugas-nodulos-regiao-anal-o-que-observar.webp"
   alt: "Ilustração de lupa sobre formas abstratas, caderno de perguntas e telefone para consulta"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

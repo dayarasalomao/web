@@ -37,7 +37,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp"
   alt: "Ilustração de árvore familiar, calendário e estetoscópio para acompanhamento médico"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

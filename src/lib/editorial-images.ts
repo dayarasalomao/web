@@ -84,7 +84,7 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
   '/assets/blog/capa-cisto-pilonidal-laser-epsit.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-hemorroidectomia-laser-co2.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp': { width: 1672, height: 941 },
-  '/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista.webp': { width: 1672, height: 941 },
+  '/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp': { width: 1671, height: 941 },
 } as const satisfies Readonly<Record<string, EditorialImageDimensions>>
 
 export function getEditorialImageDimensions(

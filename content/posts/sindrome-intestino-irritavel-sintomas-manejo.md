@@ -38,7 +38,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp"
   alt: "Ilustração de pessoa anotando a rotina com a mão no abdome e uma xícara sobre a mesa"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

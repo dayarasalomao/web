@@ -55,7 +55,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp"
   alt: "Ilustração de calendário, garrafa de água e caderno de acompanhamento da rotina"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

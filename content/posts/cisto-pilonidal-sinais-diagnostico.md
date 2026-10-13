@@ -54,7 +54,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp"
   alt: "Ilustração de pessoa vestida com desconforto na região baixa das costas e diário de sintomas"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

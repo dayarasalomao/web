@@ -64,7 +64,7 @@ test('llms and robots expose the complete public catalogue and canonical sitemap
   expect(robots.status()).toBe(200)
   const llmsText = await llms.text()
   for (const path of paths) expect(llmsText).toContain(`${SITE}${path}`)
-  expect(llmsText).toContain('inteligência artificial')
+  expect(llmsText).toContain('ilustrações editoriais')
   expect(await robots.text()).toContain(`Sitemap: ${SITE}/sitemap.xml`)
 })
 

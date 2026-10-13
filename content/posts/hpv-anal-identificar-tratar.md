@@ -57,7 +57,7 @@ disclaimer: >-
 coverImage:
   src: "/assets/blog/capa-hpv-anal-identificar-tratar.webp"
   alt: "Ilustração de consultório fictício e pasta fechada com cadeado, representando sigilo na avaliação"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

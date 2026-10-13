@@ -36,7 +36,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp"
   alt: "Ilustração de consulta sobre cuidados de pele com toalha macia, tecido de algodão e ficha médica"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

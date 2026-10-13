@@ -37,7 +37,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp"
   alt: "Ilustração de calendário, diário de sintomas, copo de água e telefone para avaliação médica"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

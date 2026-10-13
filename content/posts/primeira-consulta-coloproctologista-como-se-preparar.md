@@ -58,7 +58,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp"
   alt: "Ilustração de ambiente acolhedor com cadeiras e caderno para uma primeira consulta"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

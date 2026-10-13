@@ -42,7 +42,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-alteracoes-habito-intestinal-quando-avaliar.webp"
   alt: "Ilustração de diário com símbolos da rotina intestinal, calendário e relógio"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---

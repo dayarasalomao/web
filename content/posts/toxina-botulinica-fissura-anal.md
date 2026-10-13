@@ -56,7 +56,7 @@ disclaimer: >-
 image:
   src: "/assets/blog/capa-toxina-botulinica-fissura-anal.webp"
   alt: "Ilustração de conversa médica e frasco genérico sem rótulo sobre bandeja de consulta"
-  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
   width: 1672
   height: 941
 ---
