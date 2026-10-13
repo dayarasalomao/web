@@ -1,0 +1,98 @@
+[
+  {
+    "route": "/blog",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/primeira-consulta-coloproctologista-como-se-preparar",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroida-tem-cura-ou-passa-sozinha",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroidectomia-laser-co2",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/sangramento-anal-dor-quando-procurar-coloproctologista",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/primeira-consulta-coloproctologista-como-se-preparar",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroida-tem-cura-ou-passa-sozinha",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroidectomia-laser-co2",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/sangramento-anal-dor-quando-procurar-coloproctologista",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  }
+]

@@ -1,5 +1,6 @@
 ---
 title: 'Cirurgia de hemorroidas: qual o cenário ideal para cada tecnologia'
+seoTitle: 'Cirurgia de hemorroidas: como escolher a técnica'
 metaDescription: >-
   Hemorroidectomia convencional, laser de diodo e laser de CO2 têm indicações
   diferentes. Veja o cenário ideal de cada uma e como decidir com sua cirurgiã.
@@ -48,13 +49,17 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A indicação da
   técnica depende de exame proctológico e avaliação individualizada.
+image:
+  src: "/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp"
+  alt: "Três colunas mostram equipamentos, instrumentos e exemplos esquemáticos de ação de eletrocautério, laser de diodo e laser de CO2."
+  caption: "Comparação ilustrativa de eletrocautério, laser de diodo e laser de CO2 na cirurgia proctológica."
+  width: 1600
+  height: 893
 ---
 
 *Nenhuma técnica de cirurgia de hemorroidas é melhor de forma absoluta: a escolha ideal equilibra o conforto no pós-operatório contra a durabilidade do resultado a longo prazo.*
 
 Antes de comparar as técnicas, vale saber [em que grau está a sua doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus) — é esse dado que mais restringe as opções.
-
-![Comparativo das tecnologias na cirurgia proctológica: eletrocautério, laser de diodo e laser de CO2, com o efeito de cada um no tecido](/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp)
 
 ## O que é a cirurgia convencional (hemorroidectomia)
 
@@ -75,6 +80,8 @@ Nessa técnica, o cirurgião usa um laser de diodo (geralmente com comprimento d
 ## E o laser de CO2?
 
 O laser de CO2 é utilizado com frequência para abordar hemorroidas externas e plicomas, podendo ser utilizado para técnica excisional de hemorroidas internas quando apropriado.
+
+![Três colunas mostram equipamentos, instrumentos e exemplos esquemáticos de ação de eletrocautério, laser de diodo e laser de CO2.](/assets/blog/comparativo-tecnologias-cirurgia-proctologica.webp)
 
 **Vantagens:** fornece maior precisão na ressecção, menor dor no pós-operatório, cicatrização acelerada e melhores resultados estéticos.
 

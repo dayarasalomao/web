@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/lib/blog'
+import Image from 'next/image'
 import { getTreatmentByRelatedBlogSlug } from '@/lib/treatments'
 import { LinkCard } from '@/components/ui/LinkCard'
 
@@ -13,6 +14,8 @@ function categoryFor(slug: string): string | null {
 
 interface BlogCardProps {
   post: BlogPost
+  priority?: boolean
+  sizes?: string
 }
 
 /**
@@ -20,7 +23,7 @@ interface BlogCardProps {
  * LinkCard. Its stretched title link preserves the card's concise accessible
  * name while the full surface remains clickable.
  */
-export function BlogCard({ post }: BlogCardProps) {
+export function BlogCard({ post, priority = false, sizes = '(max-width: 768px) 100vw, 50vw' }: BlogCardProps) {
   const category = categoryFor(post.slug)
 
   return (
@@ -30,6 +33,19 @@ export function BlogCard({ post }: BlogCardProps) {
       title={post.title}
       titleAs="h2"
       body={post.excerpt}
+      media={
+        <div className={`relative aspect-[16/9] w-full shrink-0 overflow-hidden ${post.cardImage ? 'bg-cream' : 'bg-beige/40'}`}>
+          <Image
+            src={post.cardImage?.src ?? '/core/lettering-blue.png'}
+            alt=""
+            fill
+            sizes={sizes}
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'auto'}
+            className={`object-contain ${post.cardImage ? '' : 'p-10'}`}
+          />
+        </div>
+      }
       ctaLabel="Ler artigo"
     />
   )

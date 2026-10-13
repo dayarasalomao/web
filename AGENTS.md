@@ -34,6 +34,7 @@ npm run dev    # next dev --turbopack
 npm run build  # production build
 npm run start  # production server
 npm run lint   # eslint src tests playwright.config.ts next.config.ts eslint.config.mjs
+npm run audit:seo # editorial graph, keyword ownership, and internal-link audit
 ```
 
 Linting uses direct ESLint invocation rather than `next lint`.
@@ -95,6 +96,7 @@ Additional public routes include the practitioner profile at [`src/app/sobre/pag
 Content is split across multiple places. This matters when editing.
 
 - [`src/constants.ts`](./src/constants.ts) contains shared business/contact data, SEO metadata, schema inputs, sitemap image list, and analytics flags.
+- All WhatsApp CTAs use `WHATSAPP_URL` with the shared, URL-encoded `WHATSAPP_MESSAGE` to identify contacts coming from the website.
 - Most on-page medical copy is hardcoded directly inside the section components.
 - [`docs/website_content.md`](./docs/website_content.md) is a reference document that mirrors much of the content, but the app does not import it at runtime.
 - [`public/llms.txt`](./public/llms.txt) is another manually maintained content surface for AI crawlers.
@@ -143,6 +145,8 @@ Do not copy those patterns into new work. Either use the existing CSS variables 
 SEO and machine-readable metadata are an important part of this repo.
 
 - [`src/app/layout.tsx`](./src/app/layout.tsx) defines the global `metadata` object and injects medical-business JSON-LD.
+- [`src/lib/structured-data.ts`](./src/lib/structured-data.ts) keeps the physician and Instituto clinic as separate, linked entities; do not mix their `sameAs` URLs.
+- [`src/lib/seo-map.ts`](./src/lib/seo-map.ts) assigns strategic searches to a single canonical page, and `npm run audit:seo` validates the editorial graph.
 - [`src/app/sitemap.ts`](./src/app/sitemap.ts) publishes entries for the homepage and privacy-policy page.
 - [`public/robots.txt`](./public/robots.txt) publishes crawler rules and a sitemap reference.
 - [`next.config.ts`](./next.config.ts) adds:
@@ -150,6 +154,16 @@ SEO and machine-readable metadata are an important part of this repo.
   - security headers including CSP, HSTS, `X-Frame-Options`, and related hardening
 
 If you change domain, images, doctor metadata, contact details, or privacy-policy behavior, review all of those files together.
+
+Blog frontmatter supports structured medical `sources` and an enriched primary `image` with intrinsic dimensions. Sources must be visible before they are emitted as `Article.citation`. Keep every Markdown image's real dimensions in [`src/lib/editorial-images.ts`](./src/lib/editorial-images.ts) so `next/image` can reserve its aspect ratio.
+
+Optional `coverImage` uses the same fields/validation as `image` and overrides only card/social/schema/sitemap media; `image` continues to describe the main body illustration. The selected image is `coverImage ?? image ?? first Markdown image`. The sitemap lists the selected cover and all Markdown body images, without duplicates per article. Generated editorial imagery is tracked in `docs/blog-generated-images-manifest.json`; keep AI provenance in the manifest, use neutral illustration captions, and obtain physician/editorial review before merge.
+
+Reviewed image alt/caption values are documented in `docs/blog-image-editorial-review.json`. Reuse a suitable client-provided educational figure when preferred; the EPSiT card intentionally shares the existing pilonidal comparison image. Preserve clinical caveats when editing image copy.
+
+Blog images are placed editorially in Markdown beside the matching explanation, before the final H2. Never stack figures or put them inside lists, tables, FAQ, sources, or CTA sections. Secondary image captions may use the Markdown title (`![alt](src "existing caption")`); preserve medical disclaimers. Blog cards use decorative, uncropped 16:9 media and a branded panel when no image exists.
+
+Blog search titles use optional `seoTitle` (fallback: `title`); `title` remains the editorial H1. Use `Campo Grande (MS)` for local page titles. Keep educational articles specific to their questions, and link the specialist-choice guide to the canonical Campo Grande location page. Supplied Word image mappings are documented in `docs/blog-images-word-cross-reference.md` and `docs/blog-images-word-manifest.json`. Clinical adaptations and illustration provenance still need physician review before merge.
 
 ## Analytics and Environment Variables
 

@@ -1,11 +1,12 @@
 ---
 title: 'Fístula Anal: O Que É, Sintomas e Como Tratar'
+seoTitle: 'Fístula anal: o que é, sintomas e tratamento'
 metaDescription: >-
   Entenda o que é a fístula anal, por que causa secreção e infecções recorrentes
   na região perianal e como o tratamento é individualizado para cada caso.
 slug: fistula-anal-o-que-e-sintomas
 publishDate: 2026-05-22T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: fístula anal
 secondaryKeywords:
   - sintomas de fístula anal
@@ -14,6 +15,12 @@ secondaryKeywords:
   - abscesso perianal recorrente
 targetAudience: patients
 intent: awareness
+image:
+  src: "/assets/blog/fistula-anal-etapas-formacao.webp"
+  alt: "Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal."
+  caption: "Esquema ilustrativo de uma possível evolução da infecção glandular até a fístula anal."
+  width: 1376
+  height: 768
 order: 17
 relatedPosts:
   - por-que-a-fistula-anal-aparece
@@ -48,11 +55,15 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de secreção, dor ou
   inflamação recorrente na região perianal, procure avaliação presencial.
+coverImage:
+  src: "/assets/blog/capa-fistula-anal-o-que-e-sintomas.webp"
+  alt: "Duas pessoas conversam diante de uma prancheta, com linhas curvas e uma lupa em primeiro plano."
+  caption: "Cena ilustrativa de uma conversa de avaliação; as linhas são simbólicas e não representam um trajeto de fístula."
+  width: 1672
+  height: 941
 ---
 
 *A frase mais comum na consulta é sempre a mesma: "tenho uma espinha que volta". Ela drena, melhora, some por um tempo e reaparece no mesmo lugar. Esse padrão de repetição é o que caracteriza a fístula anal.*
-
-![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 ## O que é a fístula anal
 
@@ -67,6 +78,8 @@ Dentro do canal anal existem pequenas glândulas que produzem um lubrificante na
 Às vezes uma dessas glândulas entope, por acúmulo de fezes ou muco. Bactérias se multiplicam no local e a infecção forma um abscesso — uma bolsa de pus dolorosa e inchada perto do ânus. Essa é a fase aguda, que costuma exigir drenagem cirúrgica imediata.
 
 Quando o abscesso é drenado, seja espontaneamente ou por cirurgia, o corpo tenta cicatrizar o trajeto por onde o pus saiu. Em parte dos casos esse trajeto não fecha completamente e vira um canal permanente, revestido por tecido de cicatrização. Essa é a fístula.
+
+![Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal.](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 Cerca de 80% das fístulas surgem exatamente assim — é a chamada origem criptoglandular, sem nenhuma doença de base associada. O passo a passo completo está no artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece).
 

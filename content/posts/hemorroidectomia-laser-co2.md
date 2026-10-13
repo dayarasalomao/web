@@ -1,12 +1,13 @@
 ---
 title: 'Hemorroidectomia com laser de CO2: o que muda quando o corte é feito a laser'
+seoTitle: 'Hemorroidectomia com laser de CO2: como funciona'
 metaDescription: >-
   A hemorroidectomia com laser de CO2 continua sendo uma cirurgia com cortes —
   o que muda é o instrumento. Entenda o efeito disso na dor, no sangramento e
   na cicatrização.
 slug: hemorroidectomia-laser-co2
 publishDate: 2026-03-12
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: hemorroidectomia laser CO2
 secondaryKeywords:
   - cirurgia de hemorroidas a laser
@@ -16,7 +17,14 @@ secondaryKeywords:
 targetAudience: patients
 intent: decision
 order: 1
+image:
+  src: "/assets/blog/laser-co2-instrumento.webp"
+  alt: "Mão enluvada segura um instrumento conectado a um braço articulado em uma cena cirúrgica ilustrada."
+  caption: "Instrumento em uma cena cirúrgica ilustrada; não é registro de um procedimento ou paciente da Dra. Dayara."
+  width: 1024
+  height: 559
 relatedPosts:
+  - primeiros-30-dias-hemorroidectomia-laser-co2
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - pos-operatorio-cirurgia-hemorroidas-o-que-esperar
   - eletrocauterio-laser-diodo-laser-co2-diferencas
@@ -52,15 +60,21 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A definição da
   técnica cirúrgica depende de avaliação presencial e individualizada.
+coverImage:
+  src: "/assets/blog/capa-hemorroidectomia-laser-co2.webp"
+  alt: "Instrumento médico genérico sobre uma bandeja, ao lado de uma prancheta sem texto legível."
+  caption: "Imagem ilustrativa de planejamento cirúrgico; o instrumento não identifica um modelo ou tecnologia específica."
+  width: 1672
+  height: 941
 ---
 
 *Existe uma confusão comum: "cirurgia a laser" virou um guarda-chuva para coisas bem diferentes. A hemorroidectomia com laser de CO2 não é a cirurgia "sem corte" — ela corta. A diferença está em com o quê.*
 
-![Comparação entre instrumentos cirúrgicos: eletrocautério, laser de diodo e laser de CO2](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp)
-
 ## O que o laser de CO2 faz no tecido
 
 O laser de CO2 usa um feixe de luz que é fortemente absorvido pela água presente no tecido. Isso faz com que ele vaporize — literalmente evapore — camadas finas de tecido com grande precisão, em vez de apenas coagular como faz o eletrocautério.
+
+![Mão enluvada segura um instrumento conectado a um braço articulado em uma cena cirúrgica ilustrada.](/assets/blog/laser-co2-instrumento.webp)
 
 Essa é a diferença física central, e ela tem consequências práticas:
 
@@ -76,6 +90,8 @@ Quando alguém diz "operei hemorroida a laser", pode estar falando de duas coisa
 * **Hemorroidectomia com laser de CO2:** é uma cirurgia excisional — o tecido é removido. O laser substitui o eletrocautério como instrumento de corte.
 
 São indicações diferentes, resultados diferentes e pós-operatórios diferentes. O artigo sobre [qual técnica cirúrgica escolher](/blog/hemorroidas-qual-tecnica-cirurgica-escolher) compara os cenários de cada uma.
+
+![Três cortes de tecido ilustram a aplicação de eletrocautério, fibra de laser de diodo e instrumento de laser de CO2.](/assets/blog/instrumentos-eletrocauterio-laser-diodo-co2.webp "Esquema comparativo de aplicação e efeitos térmicos de três instrumentos cirúrgicos.")
 
 ## Por que trocar o eletrocautério pelo laser
 

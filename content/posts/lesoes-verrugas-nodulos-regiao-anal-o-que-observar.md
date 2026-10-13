@@ -1,12 +1,13 @@
 ---
 title: 'Caroço, verruga ou ferida na região anal: como saber o que é'
+seoTitle: 'Caroço, verruga ou ferida anal: o que observar'
 metaDescription: >-
   Plicoma, verruga de HPV, hemorroida trombosada, abscesso, hidradenite: causas
   diferentes com aparência parecida. Veja o que distingue cada uma e quando a
   avaliação é urgente.
 slug: lesoes-verrugas-nodulos-regiao-anal-o-que-observar
 publishDate: 2026-03-27
-lastModified: 2026-09-04
+lastModified: 2026-10-13
 primaryKeyword: caroço na região anal
 secondaryKeywords:
   - verruga na região anal
@@ -57,11 +58,21 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Lesões, verrugas, nódulos,
   secreção, dor ou sangramento na região anal devem ser avaliados
   presencialmente.
+coverImage:
+  src: "/assets/blog/capa-lesoes-verrugas-nodulos-regiao-anal-o-que-observar.webp"
+  alt: "Lupa sobre três formas geométricas, caderno com perguntas e telefone com ícone de contato."
+  caption: "Ilustração sobre organizar dúvidas antes da consulta; as formas não representam lesões reais."
+  width: 1672
+  height: 941
+image:
+  src: "/assets/blog/plicoma-x-hpv-perianal.webp"
+  alt: "Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal."
+  caption: "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial."
+  width: 1600
+  height: 873
 ---
 
 *O problema de encontrar um caroço nessa região não é o caroço em si — é que meia dúzia de condições muito diferentes se parecem bastante, e algumas pedem conduta imediata enquanto outras não pedem nada.*
-
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 ## As possibilidades mais comuns
 
@@ -83,6 +94,8 @@ O **plicoma** é o oposto: na maioria das vezes não causa sintoma nenhum e não
 ## Plicoma ou HPV: a confusão mais comum
 
 Vale detalhar porque a conduta muda completamente.
+
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 * **Superfície:** plicoma é liso; verruga de HPV é irregular, granulada, tipo couve-flor.
 * **Número:** plicoma costuma ser único ou em pequeno número; HPV tende a aparecer em grupos.

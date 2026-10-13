@@ -1,11 +1,12 @@
 ---
 title: 'Cisto pilonidal com EPSiT e laser: por dentro, sem ferida aberta'
+seoTitle: 'Cisto pilonidal: tratamento com EPSiT e laser'
 metaDescription: >-
   Como o EPSiT e o laser de diodo tratam o cisto pilonidal por dentro do
   trajeto, e por que isso evita os meses de curativos da cirurgia convencional.
 slug: cisto-pilonidal-laser-epsit
 publishDate: 2026-03-24
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: cisto pilonidal laser EPSiT
 secondaryKeywords:
   - cirurgia de cisto pilonidal a laser
@@ -51,11 +52,15 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A técnica
   cirúrgica adequada depende de avaliação presencial e individualizada.
+image:
+  src: "/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp"
+  alt: "Dois quadros comparam a excisão convencional do cisto pilonidal e a introdução de uma fibra de laser."
+  caption: "Comparação ilustrativa entre excisão convencional e abordagem com fibra de laser. A figura não mostra o uso do vídeo no EPSiT."
+  width: 1600
+  height: 893
 ---
 
 *A pergunta que quase todo paciente com cisto pilonidal faz não é sobre a cirurgia. É sobre os curativos: quantos meses vou passar cuidando de uma ferida aberta nas costas? A resposta depende inteiramente da técnica escolhida.*
-
-![Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
 ## O que é o cisto pilonidal
 
@@ -85,6 +90,8 @@ Um microendoscópio entra pelo próprio orifício do cisto. Isso permite:
 * **Limpar todos os trajetos**, o que é decisivo para reduzir a chance de recidiva.
 
 Em seguida, uma fibra fina de laser de diodo é usada para selar e destruir o tecido doente por dentro — a técnica conhecida como SiLaC ou SiLaT. Não é preciso fazer um corte grande na pele.
+
+![Dois quadros comparam a excisão convencional do cisto pilonidal e a introdução de uma fibra de laser.](/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp)
 
 ## O que muda na prática
 

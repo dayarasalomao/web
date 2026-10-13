@@ -1,12 +1,13 @@
 ---
 title: 'Fístula anal com VAAFT e FiLaC: vídeo para mapear, laser para tratar'
+seoTitle: 'Fístula anal: tratamento com VAAFT e FiLaC'
 metaDescription: >-
   Como as técnicas VAAFT e FiLaC tratam a fístula anal por dentro do trajeto,
   por que a preservação do esfíncter é o ponto central e em quais casos elas
   são indicadas.
 slug: fistula-anal-laser-vaaft-filac
 publishDate: 2026-04-09
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: fístula anal laser VAAFT FiLaC
 secondaryKeywords:
   - tratamento de fístula anal a laser
@@ -48,17 +49,29 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A técnica
   cirúrgica adequada depende de avaliação presencial e individualizada.
+coverImage:
+  src: "/assets/blog/capa-fistula-anal-laser-vaaft-filac.webp"
+  alt: "Monitor com pontos ligados por uma linha, caderno fechado e instrumentos genéricos sobre uma bandeja."
+  caption: "Composição ilustrativa sobre planejamento com vídeo e laser; a tela não mostra um exame real."
+  width: 1672
+  height: 941
+image:
+  src: "/assets/blog/fistula-anal-etapas-formacao.webp"
+  alt: "Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal."
+  caption: "Esquema ilustrativo de uma possível evolução da infecção glandular até a fístula anal."
+  width: 1376
+  height: 768
 ---
 
 *O maior receio de quem tem fístula anal não é a cirurgia em si — é o que pode sobrar dela. Tratar uma fístula pode envolver cortar músculo, e músculo cortado nessa região significa risco de não segurar gases ou fezes. As técnicas com vídeo e laser existem para lidar com esse problema.*
-
-![Etapas de formação de uma fístula anal, da glândula infectada ao trajeto crônico](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 ## Por que a fístula não fecha sozinha
 
 A maioria das fístulas anais começa em uma infecção simples: uma pequena glândula dentro do canal anal entope, bactérias se multiplicam e forma-se um abscesso. Quando o pus sai — espontaneamente ou por drenagem cirúrgica — o corpo tenta cicatrizar o caminho por onde ele saiu.
 
 Em parte dos casos esse caminho não fecha. Ele vira um canal permanente, revestido por tecido de cicatrização, que passa a drenar cronicamente secreção, pus ou um pouco de sangue.
+
+![Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal.](/assets/blog/fistula-anal-etapas-formacao.webp)
 
 É exatamente esse revestimento que explica por que antibiótico não resolve: o trajeto está revestido por tecido cronicamente inflamado, que impede o fechamento espontâneo. O tratamento definitivo é cirúrgico. O artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece) detalha esse processo passo a passo.
 

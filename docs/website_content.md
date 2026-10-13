@@ -93,6 +93,7 @@ O catálogo completo permanece disponível na página de tratamentos.
 ### Contatos
 
 - **WhatsApp**: (67) 2180-3675
+- **Mensagem preenchida em todos os CTAs de WhatsApp**: "Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?"
 - **E-mail**: [dradayarasalomao@gmail.com](mailto:dradayarasalomao@gmail.com)
 
 Agende sua consulta para receber o melhor tratamento especializado

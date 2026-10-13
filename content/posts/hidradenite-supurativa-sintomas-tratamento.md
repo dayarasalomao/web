@@ -1,11 +1,12 @@
 ---
 title: 'Hidradenite Supurativa: Sintomas, Impacto e Tratamento'
+seoTitle: 'Hidradenite supurativa: sintomas e tratamento'
 metaDescription: >-
   Entenda o que é hidradenite supurativa, como ela pode afetar virilhas, períneo
   e região perianal, e quando procurar avaliação.
 slug: hidradenite-supurativa-sintomas-tratamento
 publishDate: 2026-05-13T00:00:00.000Z
-lastModified: 2026-05-17T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: hidradenite supurativa
 secondaryKeywords:
   - hidradenite perianal
@@ -32,6 +33,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Procure avaliação se você tem
   nódulos dolorosos, abscessos recorrentes, secreção, cicatrizes ou lesões
   próximas ao ânus, virilhas, períneo ou região genital.
+image:
+  src: "/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp"
+  alt: "Mãos de duas pessoas em conversa, com uma toalha dobrada, tecido de algodão e ficha sobre a mesa."
+  caption: "Composição ilustrativa sobre avaliação e cuidados de pele, sem representar lesões ou um tratamento específico."
+  width: 1672
+  height: 941
 ---
 
 *Nódulos dolorosos, abscessos e secreção recorrente em áreas de dobra podem indicar hidradenite supurativa, uma condição inflamatória que merece acompanhamento adequado.*
@@ -57,6 +64,8 @@ Quando essas lesões aparecem perto do ânus, é importante diferenciar hidraden
 ## Por que a avaliação é importante?
 
 O tratamento depende da fase e extensão da doença. Casos leves podem ter manejo clínico e cuidados locais. Casos com abscessos, túneis, cicatrizes ou muita recorrência podem precisar de exames, procedimentos ou acompanhamento conjunto com dermatologia.
+
+![Mãos de duas pessoas em conversa, com uma toalha dobrada, tecido de algodão e ficha sobre a mesa.](/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp)
 
 A avaliação também evita atrasos quando existe outra doença associada ou quando a lesão perianal precisa de abordagem específica.
 

@@ -1,11 +1,12 @@
 ---
 title: 'Síndrome do Intestino Irritável: Sintomas e Manejo'
+seoTitle: 'Síndrome do intestino irritável: sintomas e cuidados'
 metaDescription: >-
   Entenda sintomas da síndrome do intestino irritável, por que o diagnóstico
   exige excluir sinais de alerta e como o manejo é individualizado.
 slug: sindrome-intestino-irritavel-sintomas-manejo
 publishDate: 2026-05-09T00:00:00.000Z
-lastModified: 2026-05-17T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: síndrome do intestino irritável
 secondaryKeywords:
   - intestino irritável sintomas
@@ -34,6 +35,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Se você tem dor abdominal
   recorrente, alteração intestinal persistente, sangramento, perda de peso ou
   sintomas que atrapalham sua rotina, procure avaliação presencial.
+image:
+  src: "/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp"
+  alt: "Pessoa escreve em um diário com uma mão, enquanto a outra repousa sobre o abdome."
+  caption: "Ilustração sobre registrar a rotina e os sintomas para a conversa sobre funcionamento intestinal."
+  width: 1672
+  height: 941
 ---
 
 *Dor abdominal recorrente com alteração do hábito intestinal pode sugerir síndrome do intestino irritável, mas o primeiro passo é diferenciar esse quadro de doenças que precisam de outra conduta.*
@@ -66,6 +73,8 @@ Sangue nas fezes, perda de peso, febre, anemia, sintomas noturnos, início recen
 ## Como o manejo é feito?
 
 O tratamento busca reduzir sintomas e melhorar qualidade de vida, mas precisa ser personalizado. Pode envolver ajuste alimentar, regularidade do sono, atividade física, manejo de estresse, medicamentos específicos e tratamento de [constipação](/blog/constipacao-intestinal-quando-investigar) ou [diarreia](/blog/diarreia-cronica-causas-sinais-alerta) quando presentes.
+
+![Pessoa escreve em um diário com uma mão, enquanto a outra repousa sobre o abdome.](/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp)
 
 Em alguns casos, acompanhar o padrão dos sintomas em um diário ajuda a identificar gatilhos e evitar restrições alimentares desnecessárias.
 

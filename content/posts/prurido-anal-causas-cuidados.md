@@ -1,5 +1,6 @@
 ---
 title: 'Coceira anal (prurido anal): por que não passa e o que realmente ajuda'
+seoTitle: 'Coceira anal: causas, cuidados e quando investigar'
 metaDescription: >-
   Coceira anal persistente quase nunca é falta de higiene — muitas vezes é o
   contrário. Entenda as causas, o ciclo que mantém o sintoma, os sinais de
@@ -17,6 +18,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 9
+image:
+  src: "/assets/blog/prurido-anal-desconforto.webp"
+  alt: "Pessoa vestida mantém a mão na região glútea em uma cena ilustrativa de desconforto."
+  caption: "A coceira anal pode ter diferentes causas; a imagem não representa um diagnóstico."
+  width: 1024
+  height: 559
 relatedPosts:
   - lesoes-verrugas-nodulos-regiao-anal-o-que-observar
   - fissura-anal-causas-sintomas
@@ -60,6 +67,8 @@ disclaimer: >-
 ## Prurido anal e coceira anal são a mesma coisa
 
 Prurido anal é o nome clínico da coceira na pele ao redor do ânus. Pode ser leve e passageira, mas também pode se tornar persistente, incomodar à noite, piorar depois de evacuar ou gerar ardor pela própria irritação da pele.
+
+![Pessoa vestida mantém a mão na região glútea em uma cena ilustrativa de desconforto.](/assets/blog/prurido-anal-desconforto.webp)
 
 O ponto mais importante: **é um sintoma, não um diagnóstico**. Em alguns casos vem de hábitos locais. Em outros, é a manifestação de uma doença anorretal, de uma alteração de pele ou de uma infecção. Tratar sem saber qual dos casos é o seu costuma não funcionar.
 

@@ -25,6 +25,9 @@ function classify(href: string): ConversionEventName | null {
   ) {
     return CONVERSION_EVENTS.maps
   }
+  if (href.includes('institutodigestivo.com.br')) {
+    return CONVERSION_EVENTS.institution
+  }
   if (
     href.includes('instagram.com') ||
     href.includes('facebook.com') ||

@@ -9,6 +9,7 @@ import {
   CRM_FULL,
   RQE_FULL,
   SEO_DOCTOR_NAME,
+  SEO_LOCATION_WITH_STATE,
   WHATSAPP_URL,
 } from '@/constants'
 import {
@@ -24,7 +25,7 @@ import {
 } from '@/lib/seo'
 import { buildProfilePageGraph, serializeJsonLd } from '@/lib/structured-data'
 
-const ABOUT_TITLE = `Sobre a ${SEO_DOCTOR_NAME} | Formação e atuação`
+const ABOUT_TITLE = `${SEO_DOCTOR_NAME}: formação e atuação em ${SEO_LOCATION_WITH_STATE}`
 const ABOUT_DESCRIPTION = `${SEO_DOCTOR_NAME}: formação em Cirurgia Geral e Coloproctologia, ${CRM_FULL} e ${RQE_FULL}. Conheça sua trajetória e atuação profissional.`
 const ABOUT_URL = buildCanonical('/sobre')
 

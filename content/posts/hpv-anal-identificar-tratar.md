@@ -1,11 +1,12 @@
 ---
 title: 'HPV Anal: Como Identificar e Tratar'
+seoTitle: 'HPV anal: como identificar e tratar'
 metaDescription: >-
   Saiba como o HPV se manifesta na região anal, quais sintomas merecem atenção e
   por que o tratamento e o acompanhamento são individualizados.
 slug: hpv-anal-identificar-tratar
 publishDate: 2026-05-23T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: HPV anal
 secondaryKeywords:
   - verrugas anais
@@ -14,6 +15,12 @@ secondaryKeywords:
   - tratamento de HPV anal
 targetAudience: patients
 intent: awareness
+image:
+  src: "/assets/blog/plicoma-x-hpv-perianal.webp"
+  alt: "Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal."
+  caption: "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial."
+  width: 1600
+  height: 873
 order: 18
 relatedPosts:
   - plicoma-ou-hpv-perianal-como-diferenciar
@@ -47,11 +54,15 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de lesões, verrugas ou
   outras alterações na região anal, procure avaliação presencial.
+coverImage:
+  src: "/assets/blog/capa-hpv-anal-identificar-tratar.webp"
+  alt: "Duas poltronas em um consultório ilustrado, com uma pasta fechada por cadeado em primeiro plano."
+  caption: "Cena ilustrativa que representa privacidade e sigilo na conversa sobre sintomas e lesões."
+  width: 1672
+  height: 941
 ---
 
 *Encontrar uma lesão nova na região anal costuma gerar duas reações ao mesmo tempo: susto e vontade de não contar para ninguém. Vale saber que nem toda lesão ali é HPV — e que, quando é, o tratamento é simples e sigiloso.*
-
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 ## Como o HPV anal se manifesta
 
@@ -71,6 +82,8 @@ O vírus é transmitido principalmente por contato sexual.
 A confusão mais frequente é com o plicoma — uma simples sobra de pele, sequela de uma hemorroida antiga ou de uma fissura já cicatrizada.
 
 O plicoma é liso, tem a cor da pele normal, costuma ser único ou em pequeno número, não coça, não sangra e não cresce. Não tem nenhuma relação com vírus ou com infecção sexualmente transmissível.
+
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp)
 
 A distinção importa porque a conduta é completamente diferente — e porque a confusão gera um sofrimento desnecessário. O artigo sobre [como diferenciar plicoma de HPV perianal](/blog/plicoma-ou-hpv-perianal-como-diferenciar) detalha os sinais lado a lado, e o de [lesões, verrugas e nódulos na região anal](/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar) amplia para outras possibilidades.
 

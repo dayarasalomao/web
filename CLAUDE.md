@@ -6,7 +6,7 @@ Guidance for Claude Code when working in this repository.
 
 This repository contains the public website for Dra. Dayara Salomão, a coloproctologist in Campo Grande, Brazil. The website is a Portuguese medical marketing and education site with homepage sections, a practitioner profile, treatment pages, blog articles, SEO metadata, structured data, analytics, and a privacy policy route.
 
-> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `GOOGLE_MAPS_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` point to Campo Grande. Curitiba was removed from `src/lib/locations.ts`, and `/locais-de-atendimento/curitiba` returns 404; only truthful professional-history references remain. The external Doctoralia profile is not yet migrated, so `DOCTORALIA_URL` stays empty until a confirmed Campo Grande URL exists. The migration record lives in `.specs/features/campo-grande-seo-migration/context.md`.
+> **Campo Grande cutover prepared (2026-07-19):** The site now targets Campo Grande/MS (Instituto do Aparelho Digestivo), with the first attendance on 2026-08-05. `BUSINESS_ADDRESS`, `BUSINESS_GEO`, `CLINIC_GOOGLE_MAPS_URL`, `GOOGLE_BUSINESS_PROFILE_URL`, `SEO_LOCATION` and city mentions in `src/constants.ts` point to their respective Campo Grande entities. Curitiba was removed from `src/lib/locations.ts`, and `/locais-de-atendimento/curitiba` returns 404; only truthful professional-history references remain. The external Doctoralia profile is not yet migrated, so `DOCTORALIA_URL` stays empty until a confirmed Campo Grande URL exists. The migration record lives in `.specs/features/campo-grande-seo-migration/context.md`.
 
 ## Stack
 
@@ -24,6 +24,7 @@ npm run dev
 npm run build
 npm run lint
 npm run test:unit
+npm run audit:seo
 npm run e2e
 ```
 
@@ -41,7 +42,9 @@ src/app/sitemap.ts              Sitemap route
 src/components/                 Homepage sections and shared components
 src/constants.ts                Shared contact, SEO, schema, sitemap, analytics data
 src/lib/blog.ts                 Blog parsing and metadata helpers
+src/lib/editorial-images.ts     Intrinsic dimensions for Markdown images
 src/lib/profile.ts              Shared biography, qualifications, memberships
+src/lib/seo-map.ts              Strategic query-to-page ownership
 src/lib/treatments.ts           Treatment page data and mapping helpers
 src/lib/structured-data.ts      Schema.org JSON-LD builders
 ```
@@ -53,6 +56,7 @@ src/lib/structured-data.ts      Schema.org JSON-LD builders
 - Avoid diagnosis, guaranteed outcomes, or aggressive marketing language.
 - Preserve accessibility basics: semantic headings, meaningful alt text, keyboard access, focus states, and readable contrast.
 - Contact details, credentials, treatments, testimonials, and SEO language can appear in more than one place. Check `src/constants.ts`, the relevant component, `docs/website_content.md`, and `public/llms.txt` before changing them.
+- All WhatsApp CTAs use `WHATSAPP_URL` with the shared, URL-encoded `WHATSAPP_MESSAGE` to identify contacts coming from the website.
 
 ## Styling Notes
 
@@ -74,6 +78,16 @@ Use the existing tokens and utility classes instead of introducing new visual sy
 ## SEO And Metadata
 
 Global metadata is in `src/app/layout.tsx`; shared values live in `src/constants.ts`. Blog and treatment routes generate route-specific metadata and JSON-LD from `src/lib/seo.ts` and `src/lib/structured-data.ts`.
+
+Blog frontmatter may contain visible structured medical `sources` and an enriched primary `image`; keep their runtime validation in `src/lib/blog.ts` aligned with the renderer and schema builders. The physician's Google Business Profile and the clinic's Maps listing are separate entity URLs and must not be merged in `sameAs`. Run `npm run audit:seo` after changing slugs, keywords, relationships, or internal links.
+
+Optional `coverImage` uses the same fields/validation as `image` and overrides only card/social/schema/sitemap media; `image` continues to describe the main body illustration. The selected image is `coverImage ?? image ?? first Markdown image`. The sitemap lists the selected cover and all Markdown body images, without duplicates per article. Generated editorial imagery is tracked in `docs/blog-generated-images-manifest.json`; keep AI provenance in the manifest, use neutral illustration captions, and obtain physician/editorial review before merge.
+
+Reviewed image alt/caption values are documented in `docs/blog-image-editorial-review.json`. Reuse a suitable client-provided educational figure when preferred; the EPSiT card intentionally shares the existing pilonidal comparison image. Preserve clinical caveats when editing image copy.
+
+Blog images are placed editorially in Markdown beside the matching explanation, before the final H2. Never stack figures or put them inside lists, tables, FAQ, sources, or CTA sections. Secondary image captions may use the Markdown title (`![alt](src "existing caption")`); preserve medical disclaimers. Blog cards use decorative, uncropped 16:9 media and a branded panel when no image exists.
+
+Blog search titles use optional `seoTitle` (fallback: `title`); `title` remains the editorial H1. Use `Campo Grande (MS)` for local page titles. Keep educational articles specific to their questions, and link the specialist-choice guide to the canonical Campo Grande location page. Supplied Word image mappings are documented in `docs/blog-images-word-cross-reference.md` and `docs/blog-images-word-manifest.json`. Clinical adaptations and illustration provenance still need physician review before merge.
 
 If domain, image, doctor credentials, contact information, or treatment content changes, review:
 

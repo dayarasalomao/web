@@ -16,7 +16,10 @@ export const CONTACT_SOCIAL_MEDIA = {
 
 // WhatsApp Business da Dra. Dayara: (67) 2180-3675, atendido pela secretaria.
 export const WHATSAPP_NUMBER = '556721803675'
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
+// Shared by every WhatsApp CTA, including location pages.
+export const WHATSAPP_MESSAGE =
+  'Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?'
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
 export const BUSINESS_TELEPHONE_NUMBER = '(67) 3320-9500'
 // E.164 form for `tel:` links. Kept next to the display number so the two
@@ -44,21 +47,23 @@ export const BUSINESS_FOOTER_LOCATION = `${BUSINESS_CLINIC_NAME} - ${BUSINESS_AD
 export const SEO_DOCTOR_NAME = 'Dra. Dayara Salomão'
 export const SEO_SPECIALTY = 'Coloproctologista'
 export const SEO_LOCATION = BUSINESS_ADDRESS_LOCALITY
+export const SEO_LOCATION_WITH_STATE = `${SEO_LOCATION} (${BUSINESS_ADDRESS_REGION_CODE})`
 
-export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION}`
-export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION} no ${BUSINESS_CLINIC_NAME}. Avaliação e tratamentos para hemorroidas, fissura, fístula, HPV anal e cisto pilonidal.`
+export const SEO_TITLE = `${SEO_DOCTOR_NAME} | ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
+export const SEO_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION_WITH_STATE} no ${BUSINESS_CLINIC_NAME}. Avaliação e tratamentos para hemorroidas, fissura, fístula, HPV anal e cisto pilonidal.`
 export const SEO_KEYWORDS = `coloproctologista ${SEO_LOCATION.toLowerCase()}, proctologista ${SEO_LOCATION.toLowerCase()}, hemorroidas, fissura anal, fístula anal, tratamento laser, cirurgia minimamente invasiva, Dayara Salomão, ${BUSINESS_CLINIC_NAME}, HPV anal, cisto pilonidal, constipação, síndrome intestino irritável, ligadura elástica, VAAFT, FiLaC, EPSiT, laser de CO2`
 
-export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
-export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
+export const SEO_OG_DESCRIPTION = `Atendimento especializado em coloproctologia em ${SEO_LOCATION_WITH_STATE}, com foco em avaliação acolhedora e tratamentos minimamente invasivos com laser e tecnologias modernas no ${BUSINESS_CLINIC_NAME}.`
+export const SEO_TWITTER_DESCRIPTION = `Coloproctologista em ${SEO_LOCATION_WITH_STATE}. Atendimento no ${BUSINESS_CLINIC_NAME} para doenças anorretais e tratamentos minimamente invasivos.`
 
 export const SEO_IMAGE = '/assets/dayara-profissional-vermelho.webp'
-export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
+export const SEO_SOCIAL_IMAGE = '/opengraph-image'
+export const SEO_IMAGE_ALT = `${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
 
 export const TWITTER_HANDLE = '@dradayarasalomao'
 
-export const BLOG_DEFAULT_OG_IMAGE = SEO_IMAGE
-export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION}`
+export const BLOG_DEFAULT_OG_IMAGE = SEO_SOCIAL_IMAGE
+export const BLOG_DEFAULT_OG_IMAGE_ALT = `Blog da ${SEO_DOCTOR_NAME} - ${SEO_SPECIALTY} em ${SEO_LOCATION_WITH_STATE}`
 
 // =================================================================
 // PROFESSIONAL CREDENTIALS (Used in Physician JSON-LD + Footer)
@@ -80,7 +85,15 @@ export const CRM_COUNCIL_URL = 'https://crmms.org.br/'
 // footer and Physician `sameAs` during the transition.
 export const DOCTORALIA_URL = ''
 
-export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6'
+// The practitioner's own verified Google Business Profile. Keep this separate
+// from the clinic's map listing: they are two different entities in JSON-LD.
+export const GOOGLE_BUSINESS_PROFILE_URL = 'https://share.google/xtnb20zDzJn8N3B6G'
+
+// URL to set manually as the website field inside the Google Business Profile.
+// Canonicals deliberately remain clean; this URL exists only for attribution.
+export const GOOGLE_BUSINESS_PROFILE_WEBSITE_URL = `${SITE_URL}?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile`
+
+export const CLINIC_GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6'
 
 // =================================================================
 // BUSINESS INFORMATION (Used in JSON-LD Schema)
@@ -111,8 +124,6 @@ export const BUSINESS_GEO = {
 }
 
 export const BUSINESS_HOURS = 'Mo-Fr 09:00-18:00'
-export const BUSINESS_PAYMENT = 'Cash, Credit Card, Health Insurance'
-export const BUSINESS_CURRENCY = 'BRL'
 
 // =================================================================
 // PHYSICIAN DATA (Used in JSON-LD Schema)

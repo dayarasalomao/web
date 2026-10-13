@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { CallToActionCard } from '@/components/ui/CallToActionCard'
 import { MedicalSignature } from '@/components/ui/MedicalSignature'
-import { BLOG_DEFAULT_OG_IMAGE, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { BLOG_DEFAULT_OG_IMAGE, SEO_LOCATION_WITH_STATE, WHATSAPP_URL } from '@/constants'
 import { FAQ_GROUPS, FAQ_ITEMS } from '@/lib/faq'
 import { DEFAULT_ROBOTS, buildCanonical, buildOgMetadata, buildTwitterMetadata } from '@/lib/seo'
 import { buildBreadcrumbGraph, buildFaqGraph, serializeJsonLd } from '@/lib/structured-data'
 
-const FAQ_TITLE = `Perguntas frequentes — ${SEO_DOCTOR_NAME} | Coloproctologia`
+const FAQ_TITLE = `Consulta e tratamentos: dúvidas | ${SEO_LOCATION_WITH_STATE}`
 const FAQ_DESCRIPTION =
   'Respostas diretas sobre a consulta com a coloproctologista, sangramento, dor ao evacuar, prurido anal e cirurgias a laser para hemorroidas, fístula e cisto pilonidal.'
 

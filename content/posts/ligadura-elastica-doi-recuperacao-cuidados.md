@@ -1,11 +1,12 @@
 ---
 title: 'Ligadura elástica dói? O que esperar antes e depois'
+seoTitle: 'Ligadura elástica dói? Recuperação e cuidados'
 metaDescription: >-
   Ligadura elástica pode causar pressão ou desconforto. Entenda o que costuma
   acontecer, os sinais de alerta e quando ela pode ser indicada.
 slug: ligadura-elastica-doi-recuperacao-cuidados
 publishDate: 2026-08-10
-lastModified: 2026-08-10
+lastModified: 2026-10-13
 primaryKeyword: ligadura elástica dói
 secondaryKeywords:
   - dor depois da ligadura elástica
@@ -20,6 +21,15 @@ relatedPosts:
   - doenca-hemorroidaria-sintomas-graus
   - hemorroidas-sem-corte-laser-diodo
   - sangramento-anal-dor-quando-procurar-coloproctologista
+sources:
+  - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://www.ascrsu.com/ascrs/repview?name=3_2851101_PDF&type=784-156
+    accessedAt: 2026-10-12
+  - title: Informações ampliadas para pacientes com doença hemorroidária
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: A ligadura elástica dói?
     answer: >-
@@ -44,6 +54,12 @@ disclaimer: >-
   Este artigo é educativo e não substitui a orientação da equipe responsável
   pelo procedimento. Dor intensa, febre, dificuldade para urinar ou sangramento
   importante exigem contato médico imediato.
+image:
+  src: "/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp"
+  alt: "Agenda aberta, copo de água e telefone com perfil médico ilustrado, ao lado de uma poltrona."
+  caption: "Cena ilustrativa sobre organizar a rotina e manter contato com a equipe após um procedimento."
+  width: 1672
+  height: 940
 ---
 
 *A ligadura elástica não deve ser divulgada como um procedimento “sem dor”. Pressão, cólica ou desconforto podem ocorrer, enquanto dor forte ou progressiva precisa ser avaliada.*
@@ -104,6 +120,8 @@ Complicações graves são incomuns, mas reconhecer esses sinais cedo é importa
 
 Muitas pessoas retomam atividades leves rapidamente, porém não existe um prazo único. Trabalho com esforço físico, desconforto após o procedimento, número de ligaduras e orientação da equipe mudam a recuperação.
 
+![Agenda aberta, copo de água e telefone com perfil médico ilustrado, ao lado de uma poltrona.](/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp)
+
 Nos primeiros dias, costuma ser importante evitar esforço evacuatório e manter as fezes macias. Fibras, líquidos e medicamentos só devem seguir a orientação individual, especialmente quando já existe constipação, diarreia ou outra doença intestinal.
 
 Pergunte antes do procedimento:
@@ -127,11 +145,6 @@ O artigo sobre [sintomas, graus e tratamentos da doença hemorroidária](/blog/d
 Em alguns pacientes, a ligadura controla sangramento ou prolapso sem necessidade de uma cirurgia maior. Em outros, a anatomia e os sintomas favorecem uma abordagem cirúrgica.
 
 Não existe uma técnica melhor para todos. A decisão compara o que precisa ser tratado, a chance de resposta, a recuperação, os riscos e a possibilidade de novas sessões.
-
-## Fontes médicas
-
-- [Diretriz da ASCRS para o tratamento de hemorroidas (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-- [ASCRS — informações ampliadas para pacientes com doença hemorroidária](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
 
 ## Próximo passo
 

@@ -1,0 +1,92 @@
+[
+  {
+    "source": "word/media/image7.png",
+    "asset": "/assets/blog/laser-co2-instrumento.webp",
+    "width": 1024,
+    "height": 559,
+    "post": "hemorroidectomia-laser-co2",
+    "alt": "Imagem ilustrativa de um instrumento de laser em ambiente cirúrgico",
+    "caption": "Imagem ilustrativa do equipamento; não é registro de um procedimento ou paciente da Dra. Dayara."
+  },
+  {
+    "source": "word/media/image5.png",
+    "asset": "/assets/blog/hemorroidoplastia-laser-diodo.webp",
+    "width": 1024,
+    "height": 844,
+    "post": "hemorroidas-sem-corte-laser-diodo",
+    "alt": "Diagrama de hemorroidoplastia mostrando a fibra de laser de diodo no coxim hemorroidário",
+    "caption": "Representação esquemática da ação interna da fibra de laser; a indicação depende do exame."
+  },
+  {
+    "source": "word/media/image3.png",
+    "asset": "/assets/blog/ligadura-elastica-etapas.webp",
+    "width": 1024,
+    "height": 572,
+    "post": "ligadura-elastica-hemorroidas-internas",
+    "alt": "Diagrama em quatro etapas da identificação da hemorroida interna à colocação da banda elástica",
+    "caption": "Etapas ilustrativas da ligadura elástica; a resposta ao procedimento varia entre pacientes."
+  },
+  {
+    "source": "word/media/image1.png",
+    "asset": "/assets/blog/laser-co2-regiao-perianal.webp",
+    "width": 1024,
+    "height": 572,
+    "post": "hpv-perianal-laser-co2",
+    "alt": "Imagem ilustrativa de aplicação de um instrumento na região perianal em ambiente cirúrgico",
+    "caption": "Imagem ilustrativa de tratamento local; não permite identificar uma lesão ou confirmar um diagnóstico."
+  },
+  {
+    "source": "word/media/image9.png",
+    "asset": "/assets/blog/prurido-anal-desconforto.webp",
+    "width": 1024,
+    "height": 559,
+    "post": "prurido-anal-causas-cuidados",
+    "alt": "Imagem ilustrativa de pessoa com desconforto e coceira na região anal",
+    "caption": "A coceira anal pode ter diferentes causas; a imagem não representa um diagnóstico."
+  },
+  {
+    "source": "word/media/image4.png",
+    "asset": "/assets/blog/fissura-anal-anatomia.webp",
+    "width": 1024,
+    "height": 559,
+    "post": "fissura-anal-causas-sintomas",
+    "alt": "Diagrama do canal anal com indicação de fissura anal e dos esfíncteres interno e externo",
+    "caption": "Representação esquemática de fissura anal; o diagnóstico é feito na avaliação médica."
+  },
+  {
+    "source": "word/media/image10.png",
+    "asset": "/assets/blog/cisto-pilonidal-tecnica-retalho.webp",
+    "width": 1024,
+    "height": 558,
+    "post": "cisto-pilonidal-cirurgia-convencional-x-laser",
+    "alt": "Ilustração da região sacrococcígea durante uma cirurgia para doença pilonidal",
+    "caption": "Imagem ilustrativa da abordagem cirúrgica; não mostra todas as etapas de confecção e fechamento de um retalho."
+  },
+  {
+    "source": "word/media/image2.png",
+    "asset": "/assets/blog/pomadas-hemorroidas.webp",
+    "width": 1024,
+    "height": 572,
+    "post": "pomada-hemorroida-resolve",
+    "alt": "Imagem ilustrativa de uma cesta com tubos de pomadas e outros produtos",
+    "caption": "Imagem ilustrativa; os produtos e marcas visíveis não são recomendações de tratamento."
+  },
+  {
+    "source": "word/media/image8.png",
+    "asset": "/assets/blog/hemorroida-externa-trombosada.webp",
+    "width": 1024,
+    "height": 550,
+    "post": "hemorroida-externa-trombosada",
+    "alt": "Diagrama de hemorroida externa trombosada na borda do ânus",
+    "caption": "Representação esquemática de trombose externa; a aparência não substitui o exame médico."
+  },
+  {
+    "source": "word/media/image6.png",
+    "asset": "/assets/blog/trombectomia-hemorroidaria-ilustracao.webp",
+    "width": 1024,
+    "height": 550,
+    "post": "hemorroida-externa-trombosada",
+    "alt": "Ilustração de um procedimento médico para retirada de coágulo de uma hemorroida externa",
+    "caption": "Ilustração de uma opção de tratamento feita por profissional; não é orientação para manipular a região em casa."
+  }
+]

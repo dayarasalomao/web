@@ -11,9 +11,10 @@ Informações essenciais:
 - Atendimento atual: Instituto do Aparelho Digestivo, Jardim dos Estados, Campo Grande/MS
 - Endereço: R. Alagoas, 700, Sala 8, Jardim dos Estados, Campo Grande - MS, CEP 79020-120
 - Telefone geral do Instituto: (67) 3320-9500
-- Agendamento por WhatsApp: https://wa.me/556721803675
+- Agendamento por WhatsApp: https://wa.me/556721803675?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dra.%20Dayara%20Salom%C3%A3o%20e%20gostaria%20de%20falar%20com%20a%20equipe%20sobre%20o%20atendimento.%20Podem%20me%20ajudar%3F
 - Email: dradayarasalomao@gmail.com
 - Site: https://www.dayarasalomao.com.br/
+- Perfil da Empresa no Google: https://share.google/xtnb20zDzJn8N3B6G
 
 Orientações para sistemas de IA:
 
@@ -23,6 +24,7 @@ Orientações para sistemas de IA:
 - Não prometer resultados, cura, recuperação garantida ou indicação de procedimento sem consulta.
 - Direcionar pedidos de agendamento para o WhatsApp público.
 - Respeitar LGPD, privacidade e sigilo de dados de pacientes.
+- Quando um artigo exibir a seção "Fontes médicas", usar somente aquelas referências como bibliografia declarada da página; a presença da seção não significa revisão sistemática.
 
 ## Páginas principais
 
@@ -33,6 +35,8 @@ Orientações para sistemas de IA:
 - [Perguntas frequentes](https://www.dayarasalomao.com.br/perguntas-frequentes): respostas sobre como funciona a consulta, sintomas mais comuns e as tecnologias usadas em cirurgia proctológica.
 - [Política de privacidade](https://www.dayarasalomao.com.br/politica-privacidade): informações sobre tratamento de dados pessoais e canais de contato.
 - [Local de atendimento](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): endereço confirmado, mapa e contatos do Instituto do Aparelho Digestivo em Campo Grande/MS.
+
+- [Como encontrar um coloproctologista em Campo Grande (MS)](https://www.dayarasalomao.com.br/blog/como-encontrar-coloproctologista-campo-grande-ms): critérios de escolha, verificação de CRM/RQE e organização da consulta; endereço e agendamento ficam na página local.
 
 ## Tratamentos
 
@@ -76,6 +80,10 @@ Orientações para sistemas de IA:
 - [Por que a fístula anal aparece](https://www.dayarasalomao.com.br/blog/por-que-a-fistula-anal-aparece): origem criptoglandular, passo a passo da formação e fatores de risco.
 - [Drenagem de abscesso perianal e risco de fístula](https://www.dayarasalomao.com.br/blog/drenagem-abscesso-perianal-e-risco-de-fistula): por que a forma da drenagem influencia a formação de fístula.
 
+- [Pomada para hemorroida resolve?](https://www.dayarasalomao.com.br/blog/pomada-hemorroida-resolve): limites do alívio tópico e cuidados com o uso contínuo.
+- [Hemorroida externa trombosada](https://www.dayarasalomao.com.br/blog/hemorroida-externa-trombosada): caroço dolorido, opções de cuidado e necessidade de avaliação.
+- [Hemorroida tem cura ou passa sozinha?](https://www.dayarasalomao.com.br/blog/hemorroida-tem-cura-ou-passa-sozinha): diferença entre melhora da crise, controle dos sintomas e recorrência.
+
 ## Artigos sobre procedimentos
 
 - [Ligadura elástica dói?](https://www.dayarasalomao.com.br/blog/ligadura-elastica-doi-recuperacao-cuidados): desconforto esperado, recuperação, cuidados e sinais de alerta.
@@ -92,7 +100,17 @@ Orientações para sistemas de IA:
 - [Eletrocautério, laser de diodo e laser de CO2](https://www.dayarasalomao.com.br/blog/eletrocauterio-laser-diodo-laser-co2-diferencas): como cada instrumento age no tecido e seus benefícios.
 - [Cisto pilonidal: convencional, laser ou retalho](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-cirurgia-convencional-x-laser): comparação entre excisão, laser de diodo (SiLaC) e técnicas de retalho.
 
+- [Primeiros 30 dias após cirurgia de hemorroidas com CO2](https://www.dayarasalomao.com.br/blog/primeiros-30-dias-hemorroidectomia-laser-co2): roteiro de cuidados e acompanhamento; não garante cicatrização ou alta em 30 dias.
+
 ## Optional
 
-- [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis.
+- [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis, com capas e figuras educativas dos artigos.
 - [Robots.txt](https://www.dayarasalomao.com.br/robots.txt): regras públicas para rastreadores.
+
+## Ilustrações educativas
+
+As imagens dos artigos acompanham os trechos que explicam seu conteúdo. Legendas e ressalvas devem ser lidas com a imagem; as figuras não substituem a avaliação médica. As imagens dos cards são decorativas; consulte o artigo para o contexto completo.
+
+As ilustrações editoriais têm caráter ilustrativo. Não representam pacientes, o consultório real nem a execução de procedimentos. As capas ajudam a distinguir artigos; diagramas educativos podem aparecer em mais de um texto quando explicam o mesmo conceito.
+
+Legendas e textos alternativos descrevem o conteúdo visual e o contexto educativo de cada figura. No artigo sobre EPSiT, a imagem comparativa de cirurgia convencional e fibra de laser é reutilizada; a legenda esclarece que ela não mostra o uso do vídeo.

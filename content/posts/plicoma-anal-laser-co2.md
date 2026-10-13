@@ -1,12 +1,13 @@
 ---
 title: 'Remoção de plicoma anal com laser de CO2: como funciona e quando vale a pena'
+seoTitle: 'Plicoma anal: remoção com laser de CO2'
 metaDescription: >-
   Como o laser de CO2 remove o plicoma anal, por que ele reduz o risco de
   recidiva em comparação ao eletrocautério e em quais casos a remoção é
   realmente indicada.
 slug: plicoma-anal-laser-co2
 publishDate: 2026-04-15
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: plicoma anal laser CO2
 secondaryKeywords:
   - remoção de plicoma anal
@@ -49,15 +50,27 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A indicação de
   remoção e a escolha da técnica dependem de avaliação presencial.
+coverImage:
+  src: "/assets/blog/capa-plicoma-anal-laser-co2.webp"
+  alt: "Prancheta com silhueta ilustrada, lupa e instrumentos genéricos sobre uma bandeja."
+  caption: "Imagem ilustrativa de avaliação e planejamento; não mostra a retirada de um plicoma."
+  width: 1672
+  height: 941
+image:
+  src: "/assets/blog/plicoma-anal-ilustracao.webp"
+  alt: "Representação da região anal com uma prega de pele externa assinalada como plicoma."
+  caption: "Ilustração de uma prega de pele na borda anal, chamada plicoma; não permite identificar uma lesão sem exame."
+  width: 1600
+  height: 873
 ---
 
 *Quase todo plicoma anal pode simplesmente ser deixado em paz. A conversa útil não é sobre qual tecnologia é melhor, mas sobre se aquele plicoma precisa sair — e, quando precisa, por que a escolha do instrumento muda o resultado.*
 
-![Ilustração de plicoma anal, um excesso de pele benigno na região perianal](/assets/blog/plicoma-anal-ilustracao.webp)
-
 ## Antes da técnica: esse plicoma precisa sair?
 
 O plicoma anal é uma saliência de pele benigna ao redor do ânus. É macio, tem a cor da pele ao redor e costuma ter formato de dobra ou "orelhinha". É muito comum: estima-se que cerca de um terço das pessoas com problemas anais benignos, como hemorroidas ou fissuras, apresente algum plicoma.
+
+![Representação da região anal com uma prega de pele externa assinalada como plicoma.](/assets/blog/plicoma-anal-ilustracao.webp)
 
 Na maioria dos casos ele não causa sintoma nenhum. Quando não há inflamação, dor ou incômodo, a recomendação é deixá-lo em paz — não faz sentido transformar em problema algo que não incomoda.
 

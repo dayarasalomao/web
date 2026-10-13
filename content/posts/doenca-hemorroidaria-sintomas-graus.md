@@ -1,11 +1,12 @@
 ---
 title: 'Doença Hemorroidária: Sintomas, Graus e Formas de Tratamento'
+seoTitle: 'Hemorroidas: sintomas, graus e opções de tratamento'
 metaDescription: >-
   Entenda os sintomas das hemorroidas, a diferença entre hemorroidas internas e
   externas, os graus da doença e as opções de tratamento.
 slug: doenca-hemorroidaria-sintomas-graus
 publishDate: 2026-05-18T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: doença hemorroidária
 secondaryKeywords:
   - sintomas de hemorroida
@@ -16,12 +17,23 @@ targetAudience: patients
 intent: awareness
 order: 15
 relatedPosts:
+  - hemorroida-tem-cura-ou-passa-sozinha
+  - pomada-hemorroida-resolve
   - ligadura-elastica-doi-recuperacao-cuidados
   - ligadura-elastica-hemorroidas-internas
   - hemorroidas-sem-corte-laser-diodo
   - sangramento-anal-dor-quando-procurar-coloproctologista
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - hemorroida-ou-plicoma-como-diferenciar
+sources:
+  - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://www.ascrsu.com/ascrs/repview?name=3_2851101_PDF&type=784-156
+    accessedAt: 2026-10-12
+  - title: Informações ampliadas para pacientes com doença hemorroidária
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: Toda hemorroida causa dor?
     answer: >-
@@ -43,6 +55,12 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de sangramento, dor,
   prolapso ou outros sintomas anais persistentes, procure avaliação presencial.
+image:
+  src: "/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp"
+  alt: "Duas pessoas conversam diante de uma ficha ilustrada de avaliação, com círculos e uma lupa."
+  caption: "Ilustração de uma conversa sobre sintomas e classificação das hemorroidas; não substitui o exame."
+  width: 1672
+  height: 941
 ---
 
 *Muitas pessoas associam hemorroida a dor, mas a queixa mais comum costuma ser sangramento vermelho-vivo e indolor. Entender os sintomas e os graus da doença ajuda a buscar avaliação no momento certo.*
@@ -63,6 +81,8 @@ Existem dois tipos de hemorroida:
 ## Os graus das hemorroidas internas
 
 A classificação é feita pela avaliação clínica associada ao exame físico:
+
+![Duas pessoas conversam diante de uma ficha ilustrada de avaliação, com círculos e uma lupa.](/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp)
 
 * **Grau I:** apenas sangramento vermelho-vivo, sem prolapso pelo ânus.
 * **Grau II:** a hemorroida prolapsa ao evacuar, mas retorna espontaneamente para dentro do canal anal.
@@ -131,11 +151,6 @@ Uma comparação responsável considera:
 Procure atendimento se houver sangramento em grande quantidade, tontura ou fraqueza, dor forte com febre, inchaço progressivo, perda de peso sem explicação ou alteração persistente do hábito intestinal.
 
 Mesmo um sangramento pequeno e recorrente merece ser investigado, porque hemorroida é apenas uma das causas possíveis.
-
-## Fontes médicas
-
-* [Diretriz da ASCRS para o tratamento de hemorroidas (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-* [ASCRS — informações ampliadas para pacientes com doença hemorroidária](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
 
 ## Próximo passo
 

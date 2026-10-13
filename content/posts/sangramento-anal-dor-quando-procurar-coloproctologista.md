@@ -1,11 +1,12 @@
 ---
 title: 'Sangramento Anal ou Dor: Quando Procurar uma Coloproctologista'
+seoTitle: 'Sangramento anal ou dor: quando procurar avaliação'
 metaDescription: >-
   Entenda quando sangramento anal ou dor na região do ânus merece avaliação
   médica e por que é importante confirmar a causa antes de tratar.
 slug: sangramento-anal-dor-quando-procurar-coloproctologista
 publishDate: 2026-02-19T00:00:00.000Z
-lastModified: 2026-02-19T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: sangramento anal
 secondaryKeywords:
   - dor anal
@@ -14,6 +15,10 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 20
+relatedPosts:
+  - primeira-consulta-coloproctologista-como-se-preparar
+  - dor-ao-evacuar-quando-investigar
+  - doenca-hemorroidaria-sintomas-graus
 faqs:
   - question: Sangramento anal é sempre hemorroida?
     answer: >-
@@ -38,6 +43,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de sangramento, dor
   persistente, piora dos sintomas ou sinais de alerta, procure avaliação
   presencial.
+image:
+  src: "/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp"
+  alt: "Pessoa sentada segura o telefone com uma mão e mantém a outra apoiada no colo."
+  caption: "Cena ilustrativa sobre buscar orientação para sintomas anais; não representa uma consulta real."
+  width: 1671
+  height: 941
 ---
 
 *Sangramento anal e dor na região do ânus são sintomas que não devem ser tratados no automático: a causa precisa ser identificada para orientar a conduta correta.*
@@ -45,6 +56,8 @@ disclaimer: >-
 ## Por que sangramento anal precisa de atenção?
 
 Ver sangue no papel, no vaso sanitário ou misturado às fezes costuma gerar preocupação. Em muitos casos, o sangramento está relacionado a [fissuras](/blog/fissura-anal-causas-sintomas) ou [doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus), mas essa não deve ser uma conclusão sem avaliação.
+
+![Pessoa sentada segura o telefone com uma mão e mantém a outra apoiada no colo.](/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp)
 
 O aspecto do sangue também importa. Sangue vermelho vivo costuma sugerir origem mais baixa, como região anal ou reto. Já fezes muito escuras, pretas ou com aspecto de borra podem indicar sangramento em outra parte do aparelho digestivo e exigem avaliação rápida.
 

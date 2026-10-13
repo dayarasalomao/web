@@ -1,0 +1,82 @@
+[
+  {
+    "route": "/blog",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroidectomia-laser-co2",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hpv-perianal-laser-co2",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/cisto-pilonidal-cirurgia-convencional-x-laser",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroidectomia-laser-co2",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hpv-perianal-laser-co2",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  },
+  {
+    "route": "/blog/cisto-pilonidal-cirurgia-convencional-x-laser",
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "overflow": 0
+  }
+]

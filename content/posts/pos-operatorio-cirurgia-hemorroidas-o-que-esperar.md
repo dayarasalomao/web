@@ -1,11 +1,12 @@
 ---
 title: 'Pós-operatório de cirurgia de hemorroidas: o que esperar de cada técnica'
+seoTitle: 'Pós-operatório de hemorroidas: recuperação por técnica'
 metaDescription: >-
   Cirurgia convencional, laser de diodo e laser de CO2 têm pós-operatórios
   diferentes. Entenda dor, tempo de recuperação e o que conversar antes de operar.
 slug: pos-operatorio-cirurgia-hemorroidas-o-que-esperar
 publishDate: 2026-09-01
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: pós-operatório cirurgia de hemorroidas
 secondaryKeywords:
   - recuperação cirurgia de hemorroidas
@@ -14,9 +15,16 @@ secondaryKeywords:
   - quanto tempo de afastamento cirurgia de hemorroida
 targetAudience: patients
 intent: consideration
+image:
+  src: "/assets/blog/pos-operatorio-hemorroidas-comparativo.webp"
+  alt: "Quadro com fases do pós-operatório de cirurgia convencional, laser de diodo e laser de CO2, do primeiro dia ao longo prazo."
+  caption: "Comparação ilustrativa de fases do pós-operatório; não é um cronograma individual de recuperação."
+  width: 1376
+  height: 768
 featured: true
 order: 26
 relatedPosts:
+  - primeiros-30-dias-hemorroidectomia-laser-co2
   - hemorroidas-qual-tecnica-cirurgica-escolher
   - hemorroidectomia-laser-co2
   - hemorroidas-sem-corte-laser-diodo
@@ -51,8 +59,6 @@ disclaimer: >-
 ---
 
 *Antes de operar hemorroidas, a dúvida mais comum não é sobre a cirurgia em si, mas sobre o depois: quanto vai doer, quantos dias de afastamento e qual a chance de o problema voltar.*
-
-![Comparação do pós-operatório de cirurgia de hemorroidas no dia 1, na primeira semana, no primeiro mês e a longo prazo, entre cirurgia convencional, laser de diodo e laser de CO2](/assets/blog/pos-operatorio-hemorroidas-comparativo.webp)
 
 ## Por que a escolha da técnica importa
 
@@ -96,6 +102,8 @@ O que esperar no pós-operatório:
 ## Resumo comparativo
 
 De forma geral, os lasers (diodo e CO2) tendem a proporcionar uma recuperação mais rápida e menos dolorosa nos primeiros dias e semanas, com curativos mais simples e retorno mais rápido às atividades. Já a cirurgia convencional, apesar de um pós-operatório mais desconfortável, segue sendo a opção para hemorroidas muito volumosas e de quadro clínico arrastado por vários anos.
+
+![Quadro com fases do pós-operatório de cirurgia convencional, laser de diodo e laser de CO2, do primeiro dia ao longo prazo.](/assets/blog/pos-operatorio-hemorroidas-comparativo.webp)
 
 ## O que conversar com a sua cirurgiã antes da cirurgia
 

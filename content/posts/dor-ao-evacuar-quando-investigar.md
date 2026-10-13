@@ -1,11 +1,12 @@
 ---
 title: 'Dor ao Evacuar: O Que Pode Ser e Quando Investigar'
+seoTitle: 'Dor ao evacuar: causas e quando investigar'
 metaDescription: >-
   Saiba quais causas podem estar por trás da dor ao evacuar, quando o sintoma
   merece avaliação e como o diagnóstico orienta o tratamento.
 slug: dor-ao-evacuar-quando-investigar
 publishDate: 2026-03-04T00:00:00.000Z
-lastModified: 2026-03-04T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: dor ao evacuar
 secondaryKeywords:
   - dor anal ao evacuar
@@ -32,6 +33,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Dor intensa, recorrente ou
   acompanhada de sangramento, febre, secreção ou nódulo deve ser avaliada
   presencialmente.
+image:
+  src: "/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp"
+  alt: "Pessoa anota informações em um caderno, com a outra mão sobre o abdome e uma consulta representada ao fundo."
+  caption: "Ilustração sobre registrar quando a dor aparece e levar essas informações à avaliação médica."
+  width: 1672
+  height: 941
 ---
 
 *Dor ocasional pode acontecer em situações pontuais, mas dor ao evacuar que se repete, limita a rotina ou faz a pessoa evitar ir ao banheiro merece investigação.*
@@ -71,6 +78,8 @@ Fissuras recentes podem melhorar com ajuste intestinal, hidratação, fibras, ba
 ## Como é feita a avaliação?
 
 A consulta avalia o tipo de dor, tempo de evolução, presença de sangue, padrão das fezes, constipação, diarreia, uso de medicamentos e sintomas associados.
+
+![Pessoa anota informações em um caderno, com a outra mão sobre o abdome e uma consulta representada ao fundo.](/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp)
 
 O exame da região anal ajuda a identificar fissuras, hemorroidas, inflamações e outras alterações. A partir disso, a conduta pode envolver cuidados locais, ajuste intestinal, medicações ou procedimentos em casos selecionados.
 

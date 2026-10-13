@@ -1,11 +1,12 @@
 ---
 title: 'Ligadura elástica para hemorroidas internas: como funciona'
+seoTitle: 'Ligadura elástica para hemorroidas: como funciona'
 metaDescription: >-
   Entenda como funciona a ligadura elástica, para quais hemorroidas internas ela
   pode ser indicada, seus limites, cuidados e sinais de alerta.
 slug: ligadura-elastica-hemorroidas-internas
 publishDate: 2026-03-18
-lastModified: 2026-08-10
+lastModified: 2026-10-12
 primaryKeyword: como funciona ligadura elástica
 secondaryKeywords:
   - ligadura elástica hemorroidas
@@ -15,11 +16,26 @@ secondaryKeywords:
 targetAudience: patients
 intent: consideration
 order: 2
+image:
+  src: "/assets/blog/ligadura-elastica-etapas.webp"
+  alt: "Quatro quadros mostram hemorroida interna, posicionamento do instrumento, colocação da banda e segmento ligado."
+  caption: "Sequência ilustrativa da colocação da banda elástica; a resposta ao procedimento varia entre pacientes."
+  width: 1024
+  height: 572
 relatedPosts:
   - ligadura-elastica-doi-recuperacao-cuidados
   - doenca-hemorroidaria-sintomas-graus
   - hemorroidas-sem-corte-laser-diodo
   - sangramento-anal-dor-quando-procurar-coloproctologista
+sources:
+  - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://www.ascrsu.com/ascrs/repview?name=3_2851101_PDF&type=784-156
+    accessedAt: 2026-10-12
+  - title: Informações ampliadas para pacientes com doença hemorroidária
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: A ligadura elástica é feita com internação?
     answer: Em muitos casos, não. Trata-se de um procedimento ambulatorial, geralmente rápido e realizado com o paciente acordado.
@@ -36,6 +52,8 @@ faqs:
 O tratamento consiste na aplicação de um pequeno anel elástico na base da hemorroida interna. Esse anel interrompe o fluxo sanguíneo do segmento tratado, que diminui e se desprende nos dias seguintes. A cicatrização ajuda a fixar o tecido e a reduzir sangramento ou prolapso em casos adequados.
 
 O procedimento é feito através de um aparelho curto que permite visualizar o canal anal. O anel deve ficar acima da região mais sensível, mas ainda pode haver pressão, cólica ou desconforto após a aplicação.
+
+![Quatro quadros mostram hemorroida interna, posicionamento do instrumento, colocação da banda e segmento ligado.](/assets/blog/ligadura-elastica-etapas.webp)
 
 ## Para quais casos ela pode ser indicada?
 
@@ -79,8 +97,3 @@ A ligadura também não impede que novos sintomas apareçam no futuro. Cuidar da
 Antes de definir a ligadura, a avaliação deve confirmar que o sangramento ou prolapso realmente vem de hemorroidas internas e verificar se existe doença externa associada.
 
 Para entender como grau e anatomia mudam a decisão, leia o guia sobre [doença hemorroidária: sintomas, graus e tratamentos](/blog/doenca-hemorroidaria-sintomas-graus).
-
-## Fontes médicas
-
-* [Diretriz da ASCRS para o tratamento de hemorroidas (2024)](https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf)
-* [ASCRS — informações ampliadas para pacientes com doença hemorroidária](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)

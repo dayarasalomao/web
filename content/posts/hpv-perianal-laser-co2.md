@@ -1,12 +1,13 @@
 ---
 title: 'HPV perianal: como é o tratamento a laser de CO2'
+seoTitle: 'HPV perianal: tratamento com laser de CO2'
 metaDescription: >-
   Como o laser de CO2 vaporiza as verrugas perianais preservando o tecido
   saudável, como é feita a anestesia e por que o acompanhamento faz parte do
   tratamento.
 slug: hpv-perianal-laser-co2
 publishDate: 2026-04-22
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: HPV perianal laser CO2
 secondaryKeywords:
   - tratamento de verruga anal
@@ -16,6 +17,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: decision
 order: 8
+image:
+  src: "/assets/blog/laser-co2-regiao-perianal.webp"
+  alt: "Cena ilustrativa mostra a aplicação de um instrumento em uma pequena área de pele delimitada por um campo cirúrgico."
+  caption: "Cena ilustrativa de aplicação de um instrumento sobre a pele; não permite identificar uma lesão ou confirmar um diagnóstico."
+  width: 1024
+  height: 572
 relatedPosts:
   - hpv-anal-identificar-tratar
   - plicoma-ou-hpv-perianal-como-diferenciar
@@ -52,13 +59,13 @@ disclaimer: >-
 
 *Duas coisas costumam pesar mais do que o procedimento em si: a vergonha de mostrar a lesão e o medo de que ela volte. Vale falar das duas abertamente.*
 
-![Comparação visual entre plicoma anal e verruga de HPV perianal](/assets/blog/plicoma-x-hpv-perianal.webp)
-
 ## Antes de tratar: é mesmo HPV?
 
 O condiloma causado pelo HPV aparece como uma ou várias lesões de superfície irregular, "em couve-flor", às vezes ásperas ao toque. Podem crescer, se multiplicar, coçar e ocasionalmente sangrar levemente. O vírus é transmitido principalmente por contato sexual.
 
 Nem toda lesão perianal é HPV, e a confusão mais comum é com o plicoma — uma simples sobra de pele, lisa, da cor da pele normal, geralmente única ou em pequeno número, que não coça e não cresce.
+
+![Dois quadros ilustram uma dobra lisa de pele e lesões verrucosas, identificadas como plicoma e HPV perianal.](/assets/blog/plicoma-x-hpv-perianal.webp "Comparação ilustrativa entre plicoma e lesões verrucosas; diferenças visuais que não substituem a avaliação médica presencial.")
 
 A diferença importa porque a conduta é completamente diferente. O artigo sobre [como diferenciar plicoma de HPV perianal](/blog/plicoma-ou-hpv-perianal-como-diferenciar) detalha os sinais de cada um, e o de [lesões, verrugas e nódulos na região anal](/blog/lesoes-verrugas-nodulos-regiao-anal-o-que-observar) ajuda a saber o que observar.
 
@@ -79,6 +86,8 @@ Aplicado aos condilomas, isso significa:
 ## Como é feito na prática
 
 O procedimento é realizado com anestesia local ou sedação rápida, conforme a extensão das lesões.
+
+![Cena ilustrativa mostra a aplicação de um instrumento em uma pequena área de pele delimitada por um campo cirúrgico.](/assets/blog/laser-co2-regiao-perianal.webp)
 
 O planejamento considera a quantidade, o tamanho e a localização dos condilomas — lesões espalhadas ou em áreas mais delicadas exigem uma estratégia diferente de uma lesão única.
 

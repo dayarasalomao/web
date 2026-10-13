@@ -73,12 +73,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
           },
         ]),
-    ...posts.map((post) => ({
-      url: canonicalUrl(`/blog/${post.slug}`),
-      lastModified: post.lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })),
+    ...posts.map((post) => {
+      // Include the selected cover first, then every educational body image.
+      // Repeated figures share one URL so crawlers can reuse their cached file.
+      const imageSources = new Set([
+        ...(post.cardImage ? [post.cardImage.src] : []),
+        ...Array.from(post.content.matchAll(/!\[[^\]]*\]\(([^)\s]+)/g), ([, src]) => src),
+      ])
+
+      return {
+        url: canonicalUrl(`/blog/${post.slug}`),
+        lastModified: post.lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+        ...(imageSources.size ? { images: Array.from(imageSources, canonicalUrl) } : {}),
+      }
+    }),
     ...treatments.map((treatment) => ({
       url: canonicalUrl(`/tratamentos/${treatment.slug}`),
       lastModified: treatment.lastUpdated,

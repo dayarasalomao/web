@@ -10,7 +10,8 @@
 
 ## Frontmatter mínimo
 
-- `title`
+- `title` (H1 editorial)
+- `seoTitle` (opcional: título curto para busca, Open Graph e Twitter; fallback para `title`)
 - `metaDescription`
 - `slug`
 - `publishDate`
@@ -37,3 +38,7 @@
 - Validar se o post aponta para uma tecnologia ou condição realmente tratada no site.
 - Revisar data, ortografia, siglas médicas e consistência com `src/constants.ts`.
 - Rodar `npm run build` e, se possível, `npm run e2e`.
+
+## Títulos de busca e localização
+
+Use `Campo Grande (MS)` em títulos locais, perfil e tratamentos. Artigos informacionais mantêm a pergunta clínica específica em `seoTitle`, sem sufixo local automático. O guia de escolha do especialista é complementar à página local, que concentra a intenção de consulta/agendamento.

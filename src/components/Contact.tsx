@@ -5,7 +5,7 @@ import {
   BUSINESS_TELEPHONE_NUMBER,
   BUSINESS_TELEPHONE_HREF,
   CONTACT_EMAIL,
-  GOOGLE_MAPS_URL,
+  CLINIC_GOOGLE_MAPS_URL,
   WHATSAPP_URL,
 } from '@/constants'
 import Link from 'next/link'
@@ -171,9 +171,9 @@ export default function Contact() {
                     <span>E-mail</span>
                   </Link>
 
-                  {GOOGLE_MAPS_URL ? (
+                  {CLINIC_GOOGLE_MAPS_URL ? (
                     <Link
-                      href={GOOGLE_MAPS_URL}
+                      href={CLINIC_GOOGLE_MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       data-conversion="maps-contact"

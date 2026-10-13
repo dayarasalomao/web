@@ -1,12 +1,13 @@
 ---
 title: 'Cisto Pilonidal: Sinais, Diagnóstico e Tratamento'
+seoTitle: 'Cisto pilonidal: sinais, diagnóstico e tratamento'
 metaDescription: >-
   Entenda os sinais do cisto pilonidal na região do cóccix, como é feito o
   diagnóstico e quais são as opções de tratamento, das convencionais às
   minimamente invasivas.
 slug: cisto-pilonidal-sinais-diagnostico
 publishDate: 2026-05-25T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: cisto pilonidal
 secondaryKeywords:
   - sintomas de cisto pilonidal
@@ -50,6 +51,12 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de dor, inflamação ou
   secreção na região do cóccix, procure avaliação presencial.
+image:
+  src: "/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp"
+  alt: "Pessoa sentada mantém a mão na parte baixa das costas, ao lado de um diário de sintomas."
+  caption: "Cena ilustrativa de desconforto ao sentar, usada como apoio ao texto sobre cisto pilonidal."
+  width: 1672
+  height: 941
 ---
 
 *Dor, inflamação e secreção na região do cóccix são sinais característicos do cisto pilonidal. Reconhecer o padrão cedo evita o ciclo de crises repetidas que muitos pacientes carregam por anos antes de tratar.*
@@ -63,6 +70,8 @@ Ele pode causar episódios repetidos de inflamação, dor e drenagem de secreç�
 ## Sinais e diagnóstico
 
 Dor, inflamação e secreção na região do cóccix são sintomas muito característicos. Além disso, a presença de pequenos orifícios na pele, que chamamos de *pits*, reforça ainda mais a hipótese diagnóstica.
+
+![Pessoa sentada mantém a mão na parte baixa das costas, ao lado de um diário de sintomas.](/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp)
 
 O diagnóstico é feito pela avaliação clínica e pelo exame da região, que ajuda a diferenciar o cisto pilonidal de outras condições e a definir o melhor momento para o tratamento.
 

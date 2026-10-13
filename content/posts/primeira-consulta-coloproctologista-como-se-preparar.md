@@ -1,11 +1,12 @@
 ---
 title: 'Primeira consulta com coloproctologista: o que esperar'
+seoTitle: 'Primeira consulta com coloproctologista: como se preparar'
 metaDescription: >-
   Saiba como costuma funcionar a primeira consulta com coloproctologista, o que
   levar, como pode ser o exame e quando avisar sobre dor intensa.
 slug: primeira-consulta-coloproctologista-como-se-preparar
 publishDate: 2026-08-10
-lastModified: 2026-08-10
+lastModified: 2026-10-13
 primaryKeyword: primeira consulta com coloproctologista
 secondaryKeywords:
   - como se preparar para consulta com proctologista
@@ -16,10 +17,20 @@ targetAudience: patients
 intent: awareness
 featured: true
 relatedPosts:
+  - como-encontrar-coloproctologista-campo-grande-ms
   - sangramento-anal-dor-quando-procurar-coloproctologista
   - dor-ao-evacuar-quando-investigar
   - alteracoes-habito-intestinal-quando-avaliar
   - prurido-anal-causas-cuidados
+sources:
+  - title: Tratado de Coloproctologia — preparo e técnica do exame proctológico
+    organization: Sociedade Brasileira de Coloproctologia
+    url: https://sbcp.org.br/medico/publicacao/tratado-de-coloproctologia/
+    accessedAt: 2026-09-11
+  - title: Informações ampliadas para pacientes e descrição do exame
+    organization: American Society of Colon and Rectal Surgeons
+    url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
+    accessedAt: 2026-09-11
 faqs:
   - question: Preciso fazer algum preparo antes da consulta com coloproctologista?
     answer: >-
@@ -44,6 +55,12 @@ disclaimer: >-
   Este conteúdo é educativo e não substitui avaliação médica. Em caso de
   sangramento intenso, febre, desmaio ou piora rápida, procure atendimento de
   urgência.
+image:
+  src: "/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp"
+  alt: "Mesa de consultório ilustrado com caderno aberto, canetas e duas poltronas para conversa."
+  caption: "Cena ilustrativa de um espaço de conversa para a primeira consulta; não é o consultório real da médica."
+  width: 1672
+  height: 941
 ---
 
 *A primeira consulta começa por uma conversa cuidadosa. O exame, quando necessário, é explicado antes e adaptado à queixa e ao conforto de cada pessoa.*
@@ -55,6 +72,8 @@ Não existe uma sequência idêntica para todas as pessoas. Sintomas, histórico
 ## O que acontece no começo da consulta?
 
 A consulta costuma começar com perguntas sobre a queixa principal. Mais do que saber apenas “onde dói”, a médica precisa entender o contexto:
+
+![Mesa de consultório ilustrado com caderno aberto, canetas e duas poltronas para conversa.](/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp)
 
 - quando o sintoma começou e se está piorando
 - presença de sangue, secreção, coceira, nódulo ou prolapso
@@ -124,11 +143,6 @@ Se a dúvida começou por um sintoma específico, estas leituras podem ajudar a 
 Alguns sinais pedem avaliação mais rápida. Procure atendimento de urgência diante de sangramento em grande quantidade, desmaio ou fraqueza importante, febre com dor e inchaço na região anal, piora rápida do estado geral ou dor intensa que não permite as atividades habituais.
 
 Esses sinais não definem um diagnóstico sozinhos, mas precisam de avaliação sem demora.
-
-## Fontes médicas
-
-- [Sociedade Brasileira de Coloproctologia — Tratado de Coloproctologia, capítulo sobre preparo e técnica do exame proctológico](https://sbcp.org.br/medico/publicacao/tratado-de-coloproctologia/)
-- [ASCRS — informações ampliadas para pacientes com doença hemorroidária e descrição do exame](https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx)
 
 ## Próximo passo
 

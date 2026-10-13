@@ -1,11 +1,12 @@
 ---
 title: 'Hemorroida ou plicoma? Como diferenciar o caroço perto do ânus'
+seoTitle: 'Hemorroida ou plicoma? Como diferenciar o caroço anal'
 metaDescription: >-
   Caroço ou "pelinha" perto do ânus pode ser hemorroida ou plicoma. Veja as
   diferenças de dor, sangramento e aspecto, e quando procurar um médico.
 slug: hemorroida-ou-plicoma-como-diferenciar
 publishDate: 2026-09-01
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: diferença entre hemorroida e plicoma
 secondaryKeywords:
   - caroço perto do ânus
@@ -14,9 +15,16 @@ secondaryKeywords:
   - sangramento ao evacuar
 targetAudience: patients
 intent: awareness
+image:
+  src: "/assets/blog/hemorroida-x-plicoma-anal.webp"
+  alt: "Dois quadros comparam hemorroida, representada por tecido vascular aumentado, e plicoma, representado por uma dobra de pele."
+  caption: "Ilustração educativa que compara aumento do tecido hemorroidário e excesso de pele, chamado plicoma."
+  width: 1600
+  height: 893
 featured: true
 order: 33
 relatedPosts:
+  - hemorroida-externa-trombosada
   - plicoma-anal-causas-e-tratamento
   - doenca-hemorroidaria-sintomas-graus
   - sangramento-anal-dor-quando-procurar-coloproctologista
@@ -49,8 +57,6 @@ disclaimer: >-
 
 *Muitas pessoas notam um "caroço" ou uma "pelinha" perto do ânus e ficam em dúvida se é hemorroida ou plicoma — e a diferença muda bastante a conduta.*
 
-![Comparação anatômica entre hemorroida, definida como tecido vascular aumentado, e plicoma anal, definido como excesso ou dobra de pele](/assets/blog/hemorroida-x-plicoma-anal.webp)
-
 ## O que é hemorroida
 
 São veias inchadas na região do ânus. Podem ser:
@@ -68,6 +74,8 @@ São veias inchadas na região do ânus. Podem ser:
 * É basicamente uma "dobrinha" de pele, sem conteúdo de sangue ou veia inchada.
 
 ## Resumo prático
+
+![Dois quadros comparam hemorroida, representada por tecido vascular aumentado, e plicoma, representado por uma dobra de pele.](/assets/blog/hemorroida-x-plicoma-anal.webp)
 
 | Característica | Hemorroida | Plicoma |
 | --- | --- | --- |

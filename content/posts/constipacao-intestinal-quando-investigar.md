@@ -1,11 +1,12 @@
 ---
 title: 'Constipação Intestinal: Quando é Preciso Investigar'
+seoTitle: 'Intestino preso: quando investigar a constipação'
 metaDescription: >-
   Entenda quando o intestino preso merece avaliação médica, quais sinais de
   alerta observar e como a constipação pode ser investigada.
 slug: constipacao-intestinal-quando-investigar
 publishDate: 2026-05-02T00:00:00.000Z
-lastModified: 2026-05-17T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: constipação intestinal
 secondaryKeywords:
   - intestino preso
@@ -32,6 +33,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Procure avaliação se a constipação
   é persistente, se surgiu recentemente ou se vem acompanhada de sangramento,
   dor importante, perda de peso ou anemia.
+image:
+  src: "/assets/blog/capa-constipacao-intestinal-quando-investigar.webp"
+  alt: "Garrafa de água, pera, aveia e diário de hábitos, com uma representação decorativa do intestino ao fundo."
+  caption: "Ilustração de hábitos e registros que podem ser discutidos na avaliação do intestino preso."
+  width: 1672
+  height: 941
 ---
 
 *Intestino preso não é apenas "ir pouco ao banheiro": esforço, dor, fezes ressecadas e sensação de evacuação incompleta também podem indicar constipação.*
@@ -65,6 +72,8 @@ Esses sinais não significam necessariamente doença grave, mas indicam que a ca
 ## Como o tratamento é planejado?
 
 O tratamento costuma começar pela compreensão do padrão intestinal: formato das fezes, frequência, esforço, dieta, ingestão de líquidos, medicamentos e sintomas associados.
+
+![Garrafa de água, pera, aveia e diário de hábitos, com uma representação decorativa do intestino ao fundo.](/assets/blog/capa-constipacao-intestinal-quando-investigar.webp)
 
 As orientações podem incluir ajuste gradual de fibras, hidratação, rotina de evacuação, atividade física, manejo da dor anal e uso de medicamentos quando indicado. Em alguns casos, exames complementares ajudam a investigar causas específicas.
 

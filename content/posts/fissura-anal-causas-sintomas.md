@@ -1,12 +1,13 @@
 ---
 title: 'Fissura Anal: Causas, Sintomas e Opções de Tratamento'
+seoTitle: 'Fissura anal: causas, sintomas e tratamento'
 metaDescription: >-
   Saiba o que é a fissura anal, por que causa dor intensa ao evacuar, a
   diferença entre fissuras típicas e atípicas e quais são as opções de
   tratamento.
 slug: fissura-anal-causas-sintomas
 publishDate: 2026-05-20T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-12
 primaryKeyword: fissura anal
 secondaryKeywords:
   - dor anal ao evacuar
@@ -16,6 +17,12 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 16
+image:
+  src: "/assets/blog/fissura-anal-anatomia.webp"
+  alt: "Esquema do canal anal com a fissura assinalada na borda e a musculatura ao redor."
+  caption: "Ilustração anatômica de fissura anal; o diagnóstico é feito na avaliação médica."
+  width: 1024
+  height: 559
 relatedPosts:
   - toxina-botulinica-fissura-anal
   - dor-ao-evacuar-quando-investigar
@@ -56,6 +63,8 @@ disclaimer: >-
 ## O que é a fissura anal
 
 A fissura anal é um pequeno corte na mucosa da borda da região anal. A dor típica é em corte ou ardor, aparece ao evacuar e pode persistir por cerca de trinta minutos depois. Costuma vir acompanhada de sangramento discreto, geralmente vermelho-vivo.
+
+![Esquema do canal anal com a fissura assinalada na borda e a musculatura ao redor.](/assets/blog/fissura-anal-anatomia.webp)
 
 ## Por que ela não cicatriza sozinha
 
