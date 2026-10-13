@@ -6,7 +6,7 @@ metaDescription: >-
   acontecer, os sinais de alerta e quando ela pode ser indicada.
 slug: ligadura-elastica-doi-recuperacao-cuidados
 publishDate: 2026-08-10
-lastModified: 2026-08-10
+lastModified: 2026-10-12
 primaryKeyword: ligadura elástica dói
 secondaryKeywords:
   - dor depois da ligadura elástica
@@ -24,8 +24,8 @@ relatedPosts:
 sources:
   - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
     organization: American Society of Colon and Rectal Surgeons
-    url: https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf
-    accessedAt: 2026-09-11
+    url: https://www.ascrsu.com/ascrs/repview?name=3_2851101_PDF&type=784-156
+    accessedAt: 2026-10-12
   - title: Informações ampliadas para pacientes com doença hemorroidária
     organization: American Society of Colon and Rectal Surgeons
     url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx

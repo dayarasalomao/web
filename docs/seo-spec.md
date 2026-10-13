@@ -24,7 +24,7 @@
 - Canonical por página indexável
 - Open Graph e Twitter metadata para blog
 - Sitemap com índice do blog e entradas dinâmicas dos posts
-- JSON-LD global para organização, médica e website
+- JSON-LD global para médica (`Person` + `Physician`) e website; clínica vinculada com ID próprio
 - JSON-LD por post com artigo, breadcrumb e FAQ quando existir
 - JSON-LD `ProfilePage` em `/sobre`, conectado ao nó global da médica
 - JSON-LD do local ativo com endereço, coordenadas, horário e vínculo profissional
@@ -37,3 +37,9 @@
 
 - Atualizar `DOCTORALIA_URL` quando o perfil público for migrado para Campo Grande/CRM-MS
 - Confirmar se `@dradayarasalomao` continua sendo o handle correto para metadata social
+
+## Validação da revisão da PR #21
+
+- Os grafos global/local da médica declaram `Person` e `Physician` no mesmo ID. A tipagem pessoal torna `worksFor`, `workLocation` e formação compatíveis com o vocabulário; os perfis da clínica seguem separados.
+- A auditoria de entrada editorial usa os mesmos artigos relacionados renderizados (máximo de quatro), os links Markdown do corpo e os artigos efetivos das páginas de tratamento. Referências ocultas não contam.
+- A diretriz ASCRS de 2024 foi conferida em 12/10/2026 no [PDF oficial do portal ASCRS U](https://www.ascrsu.com/ascrs/repview?name=3_2851101_PDF&type=784-156), substituindo a URL antiga que retornava 404.

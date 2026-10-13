@@ -6,7 +6,7 @@ metaDescription: >-
   pode ser indicada, seus limites, cuidados e sinais de alerta.
 slug: ligadura-elastica-hemorroidas-internas
 publishDate: 2026-03-18
-lastModified: 2026-08-10
+lastModified: 2026-10-12
 primaryKeyword: como funciona ligadura elástica
 secondaryKeywords:
   - ligadura elástica hemorroidas
@@ -30,8 +30,8 @@ relatedPosts:
 sources:
   - title: Diretriz da ASCRS para o tratamento de hemorroidas (2024)
     organization: American Society of Colon and Rectal Surgeons
-    url: https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf
-    accessedAt: 2026-09-11
+    url: https://www.ascrsu.com/ascrs/repview?name=3_2851101_PDF&type=784-156
+    accessedAt: 2026-10-12
   - title: Informações ampliadas para pacientes com doença hemorroidária
     organization: American Society of Colon and Rectal Surgeons
     url: https://fascrs.org/Web/Web/Patients/Diseases-and-Conditions/A-Z/Hemorrhoids-Expanded-Information.aspx
