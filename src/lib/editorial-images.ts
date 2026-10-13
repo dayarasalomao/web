@@ -81,7 +81,6 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
   '/assets/blog/capa-fistula-anal-laser-vaaft-filac.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-toxina-botulinica-fissura-anal.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-lesoes-verrugas-nodulos-regiao-anal-o-que-observar.webp': { width: 1672, height: 941 },
-  '/assets/blog/capa-cisto-pilonidal-laser-epsit.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-hemorroidectomia-laser-co2.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-sangramento-anal-dor-quando-procurar-coloproctologista-v2.webp': { width: 1671, height: 941 },

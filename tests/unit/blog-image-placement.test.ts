@@ -115,7 +115,11 @@ it('preserves original editorial images while declared covers drive OG/Article U
   assert.equal(posts.length, baseline.length)
   for (const original of baseline.filter((post) => post.cardImage)) {
     const post = posts.find((post) => post.slug === original.slug)!
-    assert.deepEqual(post.image ?? extractFirstImage(post.content), original.cardImage)
+    const image = post.image ?? extractFirstImage(post.content)
+    const previous = original.cardImage as { src: string; width?: number; height?: number }
+    assert.equal(image?.src, previous.src)
+    if (previous.width) assert.equal(image?.width, previous.width)
+    if (previous.height) assert.equal(image?.height, previous.height)
   }
   for (const post of getAllPosts().filter((post) => post.cardImage)) {
     const imageUrl = `https://www.dayarasalomao.com.br${post.cardImage!.src}`

@@ -52,12 +52,12 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A técnica
   cirúrgica adequada depende de avaliação presencial e individualizada.
-coverImage:
-  src: "/assets/blog/capa-cisto-pilonidal-laser-epsit.webp"
-  alt: "Ilustração de planejamento com monitor de formas abstratas, caderno e instrumentos desligados"
-  caption: "Ilustração editorial; não representa paciente, consultório real ou procedimento médico."
-  width: 1672
-  height: 941
+image:
+  src: /assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp
+  alt: Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal
+  caption: Ilustração educativa das diferenças entre a excisão convencional e a abordagem minimamente invasiva com fibra de laser.
+  width: 1600
+  height: 893
 ---
 
 *A pergunta que quase todo paciente com cisto pilonidal faz não é sobre a cirurgia. É sobre os curativos: quantos meses vou passar cuidando de uma ferida aberta nas costas? A resposta depende inteiramente da técnica escolhida.*

@@ -1,0 +1,11 @@
+# Revisão editorial de imagens, alt e legendas
+
+Base: `5a275c9`. Pedido explícito: retirar a capa problemática de EPSiT e usar a imagem já compartilhada pela cliente e presente no artigo; revisar somente legendas e textos alternativos de todas as imagens. Títulos, resumos dos cards e texto clínico não fazem parte desta alteração.
+
+- I1: EPSiT usa `/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp` no corpo, card, OG/Twitter, Article e sitemap; capa gerada problemática retirada de public e manifests ativos. 40 artigos com imagem, 39 src distintos; única repetição de capa é o par EPSiT/comparação de cirurgia pilonidal, por escolha explícita do usuário.
+- I2: revisar visualmente as 42 imagens ativas (22 geradas +20 anteriores). Alt descreve o que aparece; legenda contextualiza o assunto e identifica ilustração quando necessário, sem mencionar IA publicamente ou atribuir pessoas/cenas reais à médica. Textos são pt-BR, claros e específicos, sem a legenda genérica repetida em todas as imagens.
+- I3: preservar literalmente as ressalvas clínicas existentes sobre diagnóstico, avaliação/indicação individual, paciente/procedimento real, marcas, variabilidade, retalho incompleto e não manipular a região em casa. Não acrescentar promessas de resultado. Prosa clínica, títulos, excerpts, FAQs, fontes, URLs e posições das figuras permanecem iguais à base. Conversão de legenda avulsa em título Markdown é permitida sem perder a ressalva.
+- I4: todas as 45 imagens de corpo têm legenda visível por image metadata ou título Markdown; caption/alt correspondem ao catálogo editorial por src. Todos os40 posts têm metadata da imagem de corpo para renderizar as legendas consistentemente. Arquivos, dimensões e hashes das imagens mantidas não mudam.
+- I5: OG/Twitter/schema e sitemap continuam coerentes com a capa selecionada;42 imagens de blog e60 rotas no sitemap, llms/robots/catalogue continuam íntegros. Lint, build, unit, audit e e2e aprovados; captura EPSiT + exemplos e Verifier independente com sensor.
+
+O catálogo de textos revisados em `docs/blog-image-editorial-review.json` define os valores editoriais esperados. Revisão técnica não presume aprovação médica/procedência antes do merge. Nenhuma nova imagem será gerada nesta revisão.

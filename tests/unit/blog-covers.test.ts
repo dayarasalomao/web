@@ -13,11 +13,16 @@ const manifest = JSON.parse(fs.readFileSync('docs/blog-generated-images-manifest
   slug: string; src: string; alt: string; caption: string; width: number; height: number; kind: string;
 }>
 
-it('gives all 40 articles a distinct card image (F2)', () => {
+it('gives every article an image and shares only the client pilonidal comparison (I1)', () => {
   const posts = getAllPosts()
   assert.equal(posts.length, 40)
   assert.equal(posts.filter((post) => post.cardImage).length, 40)
-  assert.equal(new Set(posts.map((post) => post.cardImage!.src)).size, 40)
+  assert.equal(new Set(posts.map((post) => post.cardImage!.src)).size, 39)
+  const groups = new Map<string, string[]>()
+  for (const post of posts) groups.set(post.cardImage!.src, [...(groups.get(post.cardImage!.src) ?? []), post.slug])
+  assert.deepEqual(Array.from(groups).filter(([, slugs]) => slugs.length > 1), [
+    ['/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp', ['cisto-pilonidal-cirurgia-convencional-x-laser', 'cisto-pilonidal-laser-epsit']],
+  ])
 })
 
 it('uses each declared generated image in cards, OG, Twitter and Article schema (F2/3)', () => {

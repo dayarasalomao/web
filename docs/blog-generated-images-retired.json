@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "cisto-pilonidal-laser-epsit",
+    "title": "Cisto pilonidal com EPSiT e laser: por dentro, sem ferida aberta",
+    "kind": "cover",
+    "oldCardImage": {
+      "src": "/assets/blog/cisto-pilonidal-convencional-x-laser-silac.webp",
+      "alt": "Comparação entre cirurgia convencional e laser SiLaC no tratamento do cisto pilonidal"
+    },
+    "subject": "Planejamento de tratamento videoassistido: monitor clínico com imagem geométrica abstrata em teal, instrumento fino genérico numa bandeja e caderno de planejamento; sem imagens internas inventadas ou cirurgia.",
+    "source": "/Users/diegovfeder/.codex/generated_images/01a13344-93e4-7b90-a428-efbf05f8bca6/exec-54a9fb1d-801b-49b1-b43b-e07b38baf8a6.png",
+    "src": "/assets/blog/capa-cisto-pilonidal-laser-epsit.webp",
+    "prompt": "Use case: illustration-story. Create one premium editorial illustration for a Brazilian coloproctology blog. Wide landscape 16:9 composition, ideally 1536x864. Quiet cream background #F4F3F2, warm beige #D7CBBF, deep teal #1D414C, small copper #A35442 accents. Refined tactile paper-cut / soft 3D illustration, clean shapes, nuanced soft shadows, restrained warm natural lighting. Main elements within the central 80% of the canvas, readable at card size. No text, letters, numbers, logos, watermarks, labels or branding. No photographic patients, medical claims, explicit anatomy, lesions or procedural instructions. Imagined educational scene, not a real clinic or medical device demonstration. Scene: Planejamento de tratamento videoassistido: monitor clínico com imagem geométrica abstrata em teal, instrumento fino genérico numa bandeja e caderno de planejamento; sem imagens internas inventadas ou cirurgia. IMPORTANTE: a tela deve ser totalmente creme com apenas três círculos geométricos teal e linhas curvas abstratas. Nenhuma imagem de ultrassom, endoscopia, radiografia, pele, carne, lesão, tecidos, órgãos ou exame clínico. Instrumento genérico desligado, sem luz ou feixe.",
+    "generationTool": "OpenAI image_gen (built-in)",
+    "generatedAt": "2026-10-13",
+    "reviewStatus": "retired-user-feedback",
+    "alt": "Ilustração de planejamento com monitor de formas abstratas, caderno e instrumentos desligados",
+    "caption": "Ilustração editorial; não representa paciente, consultório real ou procedimento médico.",
+    "width": 1672,
+    "height": 941,
+    "bytes": 73968,
+    "sha256": "06d7de4f19bc953eae18069278fdffcac67749f0d4d62677705ff9dec23e5432",
+    "retirementReason": "Usuário preferiu reaproveitar a figura existente fornecida pela cliente; capa tinha pose incoerente dos braços."
+  }
+]
