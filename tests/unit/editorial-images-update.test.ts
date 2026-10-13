@@ -35,6 +35,7 @@ describe('supplied illustrations (IMG-01/02)', () => {
     const src = '/assets/blog/cisto-pilonidal-tecnica-retalho.webp'
     assert.deepEqual(getEditorialImageDimensions(src), { width: 1024, height: 558 })
     const post = getPostBySlug('cisto-pilonidal-cirurgia-convencional-x-laser')
+    assert.ok(post)
     assert.ok(post?.content.includes(`](${src})`))
     assert.ok(post.content.includes('não mostra todas as etapas'))
   })
