@@ -16,7 +16,10 @@ export const CONTACT_SOCIAL_MEDIA = {
 
 // WhatsApp Business da Dra. Dayara: (67) 2180-3675, atendido pela secretaria.
 export const WHATSAPP_NUMBER = '556721803675'
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
+// Shared by every WhatsApp CTA, including location pages.
+export const WHATSAPP_MESSAGE =
+  'Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?'
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
 export const BUSINESS_TELEPHONE_NUMBER = '(67) 3320-9500'
 // E.164 form for `tel:` links. Kept next to the display number so the two

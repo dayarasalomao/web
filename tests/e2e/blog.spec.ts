@@ -81,8 +81,17 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
     /^index, follow/,
   )
   await expect(
-    page.locator('main a[href="https://wa.me/556721803675"]').first(),
+    page.locator('main [data-conversion="whatsapp-location-hero"]'),
   ).toBeVisible()
+  const whatsappHref = await page
+    .locator('main [data-conversion="whatsapp-location-hero"]')
+    .getAttribute('href')
+  const whatsappUrl = new URL(whatsappHref!)
+  expect(whatsappUrl.origin).toBe('https://wa.me')
+  expect(whatsappUrl.pathname).toBe('/556721803675')
+  expect(whatsappUrl.searchParams.get('text')).toBe(
+    'Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?',
+  )
   await expect(page.getByText('Sala 8').first()).toBeVisible()
   await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
   await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()

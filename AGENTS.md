@@ -96,6 +96,7 @@ Additional public routes include the practitioner profile at [`src/app/sobre/pag
 Content is split across multiple places. This matters when editing.
 
 - [`src/constants.ts`](./src/constants.ts) contains shared business/contact data, SEO metadata, schema inputs, sitemap image list, and analytics flags.
+- All WhatsApp CTAs use `WHATSAPP_URL` with the shared, URL-encoded `WHATSAPP_MESSAGE` to identify contacts coming from the website.
 - Most on-page medical copy is hardcoded directly inside the section components.
 - [`docs/website_content.md`](./docs/website_content.md) is a reference document that mirrors much of the content, but the app does not import it at runtime.
 - [`public/llms.txt`](./public/llms.txt) is another manually maintained content surface for AI crawlers.

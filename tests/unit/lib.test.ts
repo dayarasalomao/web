@@ -149,7 +149,13 @@ describe('practice locations', () => {
     assert.equal(campoGrande.address?.addressDetail, 'Sala 8')
     assert.equal(campoGrande.address?.postalCode, '79020-120')
     assert.equal(campoGrande.clinicPhone, '(67) 3320-9500')
-    assert.equal(campoGrande.whatsappUrl, 'https://wa.me/556721803675')
+    const whatsappUrl = new URL(campoGrande.whatsappUrl!)
+    assert.equal(whatsappUrl.origin, 'https://wa.me')
+    assert.equal(whatsappUrl.pathname, '/556721803675')
+    assert.equal(
+      whatsappUrl.searchParams.get('text'),
+      'Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?',
+    )
     assert.deepEqual(campoGrande.openingHours, {
       label: 'Segunda a sexta, das 9h às 18h',
       opens: '09:00',

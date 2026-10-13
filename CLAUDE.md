@@ -56,6 +56,7 @@ src/lib/structured-data.ts      Schema.org JSON-LD builders
 - Avoid diagnosis, guaranteed outcomes, or aggressive marketing language.
 - Preserve accessibility basics: semantic headings, meaningful alt text, keyboard access, focus states, and readable contrast.
 - Contact details, credentials, treatments, testimonials, and SEO language can appear in more than one place. Check `src/constants.ts`, the relevant component, `docs/website_content.md`, and `public/llms.txt` before changing them.
+- All WhatsApp CTAs use `WHATSAPP_URL` with the shared, URL-encoded `WHATSAPP_MESSAGE` to identify contacts coming from the website.
 
 ## Styling Notes
 
