@@ -9,12 +9,15 @@
 
 - AD-005 (2026-10-13): Imagens do blog são posicionadas editorialmente no Markdown; nenhuma após o último H2, por decisão explícita do usuário. Cards usam mídia decorativa 16:9 sem recorte (contain), com marca nos posts sem cardImage; preservar a resolução de imagens SEO.
 
+- AD-006 (2026-10-13): coverImage pode diferenciar cards/SEO sem trocar diagramas do corpo. Todas as figuras de corpo entram no sitemap. Por preferência explícita do usuário, legendas públicas novas são neutras, com procedência IA no manifest e revisão editorial.
+
 ## Handoff
 
-Feature: blog-image-placement. Branch: codex/seo-local-campo-grande.
-T1 7e63912, T2 726baff e T3 29071a0 concluídos.
-Lint, build (69 páginas), 126 unitários, 59 e2e e auditoria SEO 0/0 aprovados.
-Capturas desktop/375px e tabela editorial anexadas em .specs/features/blog-image-placement/.
-Verificação independente PASS: AC1–8, 2/2 mutações detectadas, zero lacunas.
-Nenhuma imagem após o último H2, conforme decisão explícita do usuário. Imagens SEO, alt, frontmatter e prosa clínica preservados.
-Próximo passo editorial: revisão clínica/procedência antes do merge, conforme CLAUDE.md. Nenhuma implementação pendente nesta feature.
+Feature: blog-final-release-qa. Branch: codex/seo-local-campo-grande, PR21.
+R1 932dcad, R2 d1a372c, R3 f0b890d e R4 c981623 concluídos.
+23 ilustrações geradas, 40 cards distintos, telefone v2 com pose corrigida e captions públicas neutras.
+Lint, build69, unit131, e2e65 no build local de produção e auditSEO0/0 aprovados.
+Sitemap:60 rotas indexáveis e43 imagens de blog; llms/robots/canonicals coerentes.
+Verificação independente PASS: F1–F5/F7 e artefato F6, três mutações detectadas, zero sobreviventes.
+Mensagem pt-BR salva em docs/client-updates/revisao-final-site-blog-2026-10-13.md para entrega ao usuário; não enviada à cliente.
+Próximo passo editorial: revisão da Dra. Dayara dos artigos, imagens/legendas e procedência antes de merge/publicação. Nenhuma implementação pendente.

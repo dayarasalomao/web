@@ -62,3 +62,7 @@ Caption das23 imagens novas agora: “Ilustração editorial; não representa pa
 Gate aprovado: lint0, unit131/131, build69, audit0/0 e e2e completo65/65 no build local de produção. Capturas atualizadas:14JPEGs,12combinações com overflow0; telefone desktop/mobile incluído.
 
 F7: blog-covers.test.ts:25 caption exata para23 entries e :27 URLv2 exata; blog-covers.spec.ts:4–16 carrega URLv2, caption exata e overflow0 em1280/375px; :29 proíbe menção à IA na legenda; imagem revisada visualmente, sem testar anatomia por assertions de software. As evidências F1–6 e regressões clínicas/SEO continuam aprovadas. Nenhum teste removido/ignorado. Independent Verifier reiniciará no diff final, pois a rodada anterior foi interrompida por esta correção solicitada.
+
+## Encerramento independente
+
+validation.md: PASS técnico final. Verifier repetiu lint/unit131/build69/SEO0-0 e e2e escopados6/6; confirmou preservação dos40 posts e pose do telefone v2. Três mutantes mortos (cover invertida, caption IA reintroduzida, imagem após últimoH2), zero sobreviventes. Mensagem F6 pronta para entrega ao usuário na resposta final. Revisão clínica/editorial permanece pendente antes do merge; nenhuma mensagem enviada à cliente nem publicação de produção.
