@@ -112,3 +112,5 @@ Orientações para sistemas de IA:
 As imagens dos artigos acompanham os trechos que explicam seu conteúdo. Legendas e ressalvas devem ser lidas com a imagem; as figuras não substituem a avaliação médica. As imagens dos cards são decorativas; consulte o artigo para o contexto completo.
 
 As ilustrações editoriais têm caráter ilustrativo. Não representam pacientes, o consultório real nem a execução de procedimentos. As capas ajudam a distinguir artigos; diagramas educativos podem aparecer em mais de um texto quando explicam o mesmo conceito.
+
+Legendas e textos alternativos descrevem o conteúdo visual e o contexto educativo de cada figura. No artigo sobre EPSiT, a imagem comparativa de cirurgia convencional e fibra de laser é reutilizada; a legenda esclarece que ela não mostra o uso do vídeo.

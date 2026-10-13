@@ -1,0 +1,50 @@
+[
+  {
+    "route": "/blog",
+    "width": 1440,
+    "height": 1000,
+    "overflow": 0
+  },
+  {
+    "route": "/blog/cisto-pilonidal-laser-epsit",
+    "width": 1440,
+    "height": 1000,
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroida-externa-trombosada",
+    "width": 1440,
+    "height": 1000,
+    "overflow": 0
+  },
+  {
+    "route": "/blog/primeira-consulta-coloproctologista-como-se-preparar",
+    "width": 1440,
+    "height": 1000,
+    "overflow": 0
+  },
+  {
+    "route": "/blog",
+    "width": 375,
+    "height": 812,
+    "overflow": 0
+  },
+  {
+    "route": "/blog/cisto-pilonidal-laser-epsit",
+    "width": 375,
+    "height": 812,
+    "overflow": 0
+  },
+  {
+    "route": "/blog/hemorroida-externa-trombosada",
+    "width": 375,
+    "height": 812,
+    "overflow": 0
+  },
+  {
+    "route": "/blog/primeira-consulta-coloproctologista-como-se-preparar",
+    "width": 375,
+    "height": 812,
+    "overflow": 0
+  }
+]

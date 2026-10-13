@@ -30,3 +30,13 @@ Gate aprovado: lint0, unit134/134, cinco e2e5/5 incluindo todas as45 figuras dos
 Mapeamento reverso: três unitários novos e o e2e global cobrem I2–4; testes existentes de captions foram atualizados ao novo texto por src. O teste de CO2 agora delimita a legenda à figura primária, pois a segunda figura também ganhou legenda. EPSiT comprova navegação do card e imagem de corpo e verifica OG/Twitter no documento completo (reload): dev/HMR pode manter temporariamente metadados da página anterior na navegação client. Nenhuma assertion de valor esperado foi relaxada; nenhum teste removido/ignorado. O preparo inicial em/tmp não encontrou gray-matter; corrigida resolução local e aplicação rerodada antes do gate aprovado.
 
 Refinamento final da revisão: o alt do comparativo nomeia explicitamente hemorroida e plicoma, conforme os rótulos da figura, em vez de depender só do termo técnico tecido hemorroidário. A legenda mantém seu caráter educativo. Unit134/134, lint0 e smoke de três casos, incluindo as45 figuras, aprovados após o ajuste.
+
+## E3 — QA integrado e materiais de revisão
+
+Gate final: lint0, build69, unit134/134, audit0/0 e e2e67/67 contra next start local3015. As45 figuras dos40 artigos são verificadas no navegador, com alt/caption/role/aria-label exatos por src. Catálogo dos42 arquivos e ressalvas preservadas; sitemap60 rotas/42 imagens, OG/Twitter/Article coerentes. A capa retirada retorna404 e não consta do sitemap.
+
+Documentos ativos/galeria/client draft atualizados para22 ilustrações geradas ativas16+6, reutilização da figura pilonidal e revisão de todos os textos. Procedência retirada registrada, sem reivindicar autoria/avaliação médica. README/CLAUDE/AGENTS/llms em sincronia. Oito capturas desktop/mobile e checks0 overflow em screenshots.md.
+
+I5: release-qa.spec.ts:39/46/53 URLs/imagens deduplicadas e por post, :63–68 llms/robots, :76/79/83/84/88 páginas/canonicals/OG/Twitter/Article. I1/I4: image-editorial-review.spec.ts:11–28 card/crawler/documento/capa ausente; :38–49 texto exato de cada uma das45 figuras. Dados e avisos I2/I3: image-editorial-review.test.ts:30–37 e :72/73. Nenhum teste removido/ignorado. Toda assertion nova corresponde ao contrato I1–5.
+
+O primeiro e2e completo detectou que o alt do comparativo hemorroida/plicoma podia nomear mais claramente as duas condições e que a legenda deveria identificar o caráter educativo. Refinada a redação, sem enfraquecer o teste anterior; build e suite completos repetidos e aprovados. Verifier independente será executado após este commit.
