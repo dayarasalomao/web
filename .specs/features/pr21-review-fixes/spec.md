@@ -1,6 +1,6 @@
 # Correções da revisão da PR #21
 
-Base: `356a7df`. Escopo autorizado em 2026-10-12: corrigir dois P2 e três referências quebradas. Preservar alterações locais de WhatsApp já existentes.
+Base da revisão: `356a7df`; base de implementação: `a068ecd`, incluindo a alteração concorrente de WhatsApp preservada. Escopo autorizado em 2026-10-12: corrigir dois P2 e três referências quebradas. Preservar alterações locais de WhatsApp já existentes.
 
 ## Critérios de aceite
 
