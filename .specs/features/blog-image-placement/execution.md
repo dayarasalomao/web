@@ -34,3 +34,11 @@ Decisão do usuário: aplicar literalmente nenhuma imagem após o último H2. At
 | AC7 — imagens escolhidas/OG/schema | blog-image-placement.test.ts:111 deepEqual baseline; :115/:118 equal URL | mesmas imagens de antes | Sim |
 
 Mapeamento reverso: asserts da matriz pertencem somente aos ACs indicados; :92 cobre a lead válida, blog.spec.ts:74/:81 cobre duas figuras separadas por H2. Nenhum teste antigo alterado, removido ou ignorado. Adequação conforme TESTING.md. Alterações editoriais de imagem e a sintaxe de legendas documentadas em README, CLAUDE, AGENTS e llms.
+
+## T3 — verificação integrada
+
+Todos os comandos solicitados aprovados: lint exit 0; build Next 16.2.10, 69 páginas; unitários 126/126; audit:seo 0 erros/0 alertas; e2e 59/59 (Chromium, 2 workers). Resultado AC8 e capturas anexadas em screenshots.md. Revisão React/Next: componentes continuam no servidor; sem novos hooks, estado, dependências ou busca de dados; importação direta de next/image; imagem decorativa, sizes por grid, espaço reservado e lazy loading. Uso de eager/fetchPriority segue a API de [next/image](https://nextjs.org/docs/app/api-reference/components/image).
+
+AC7: baseline de cardImage, OG e Article protegido em unitário; sitemap.ts e lib/blog.ts/seo.ts/structured-data.ts não foram alterados. E2e blog.spec.ts:581–607 preserva sitemap e imagens, e editorial-update.spec.ts mantém as verificações de metadados.
+
+Mapeamento reverso da evidência visual: todas as capturas cobrem AC5/6/8 e distribuição AC1; checks.json registra zero overflow para dez combinações página/viewport. Frontmatters/prosa/alt/disclaimers comparados contra a base com script somente de leitura, sem diferenças de significado. Nenhum gate enfraquecido ou teste antigo removido/ignorado. Verifier independente será executado após este commit.
