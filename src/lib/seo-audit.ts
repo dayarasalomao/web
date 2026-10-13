@@ -1,7 +1,7 @@
-import { getAllPosts } from './blog.ts'
+import { getAllPosts, getRelatedPosts, type BlogPost } from './blog.ts'
 import { getIndexableLocations } from './locations.ts'
 import { STRATEGIC_SEARCH_TARGETS } from './seo-map.ts'
-import { getAllTreatments } from './treatments.ts'
+import { getAllTreatments, getRelatedPostsForTreatment, type Treatment } from './treatments.ts'
 
 export type SeoAuditSeverity = 'error' | 'warning'
 
@@ -48,6 +48,33 @@ function markdownInternalLinks(content: string): string[] {
   return Array.from(content.matchAll(/(?<!!)\[[^\]]+\]\((\/[^)\s]+)(?:\s+"[^"]*")?\)/g), ([, href]) =>
     normalizedPath(href),
   )
+}
+
+/** Count destinations from the same related-post lists that the pages render. */
+export function auditEditorialInboundLinks(
+  posts: BlogPost[],
+  treatments: Treatment[],
+): SeoAuditIssue[] {
+  const linkedSlugs = new Set<string>()
+  for (const post of posts) {
+    for (const related of getRelatedPosts(post)) linkedSlugs.add(related.slug)
+    for (const href of markdownInternalLinks(post.content)) {
+      if (href.startsWith('/blog/')) {
+        const slug = href.slice('/blog/'.length)
+        if (slug !== post.slug) linkedSlugs.add(slug)
+      }
+    }
+  }
+  for (const treatment of treatments) {
+    for (const related of getRelatedPostsForTreatment(treatment)) linkedSlugs.add(related.slug)
+  }
+  return posts
+    .filter((post) => !linkedSlugs.has(post.slug))
+    .map((post) => ({
+      severity: 'warning',
+      code: 'weak-editorial-inbound',
+      message: `${post.slug} aparece no hub /blog, mas não recebe links de artigos ou tratamentos relacionados.`,
+    }))
 }
 
 export function runSeoContentAudit(): SeoAuditIssue[] {
@@ -103,26 +130,7 @@ export function runSeoContentAudit(): SeoAuditIssue[] {
     }
   }
 
-  const relatedPostInbound = new Map(posts.map((post) => [post.slug, 0]))
-  for (const post of posts) {
-    for (const relatedSlug of post.relatedPosts ?? []) {
-      relatedPostInbound.set(relatedSlug, (relatedPostInbound.get(relatedSlug) ?? 0) + 1)
-    }
-  }
-  for (const treatment of treatments) {
-    for (const relatedSlug of treatment.relatedBlogSlugs) {
-      relatedPostInbound.set(relatedSlug, (relatedPostInbound.get(relatedSlug) ?? 0) + 1)
-    }
-  }
-  for (const [slug, inbound] of relatedPostInbound) {
-    if (inbound === 0) {
-      issues.push({
-        severity: 'warning',
-        code: 'weak-editorial-inbound',
-        message: `${slug} aparece no hub /blog, mas não recebe links de artigos ou tratamentos relacionados.`,
-      })
-    }
-  }
+  issues.push(...auditEditorialInboundLinks(posts, treatments))
 
   for (const treatment of treatments) {
     if (treatment.relatedBlogSlugs.length === 0) {
