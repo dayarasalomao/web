@@ -7,7 +7,7 @@ metaDescription: >-
   realmente indicada.
 slug: plicoma-anal-laser-co2
 publishDate: 2026-04-15
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: plicoma anal laser CO2
 secondaryKeywords:
   - remoção de plicoma anal
@@ -50,6 +50,12 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A indicação de
   remoção e a escolha da técnica dependem de avaliação presencial.
+coverImage:
+  src: "/assets/blog/capa-plicoma-anal-laser-co2.webp"
+  alt: "Ilustração de ficha de planejamento, lupa e instrumento genérico sobre bandeja médica"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Quase todo plicoma anal pode simplesmente ser deixado em paz. A conversa útil não é sobre qual tecnologia é melhor, mas sobre se aquele plicoma precisa sair — e, quando precisa, por que a escolha do instrumento muda o resultado.*

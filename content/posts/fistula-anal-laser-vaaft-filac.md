@@ -7,7 +7,7 @@ metaDescription: >-
   são indicadas.
 slug: fistula-anal-laser-vaaft-filac
 publishDate: 2026-04-09
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: fístula anal laser VAAFT FiLaC
 secondaryKeywords:
   - tratamento de fístula anal a laser
@@ -49,6 +49,12 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A técnica
   cirúrgica adequada depende de avaliação presencial e individualizada.
+coverImage:
+  src: "/assets/blog/capa-fistula-anal-laser-vaaft-filac.webp"
+  alt: "Ilustração de monitor com gráfico abstrato, caderno fechado e instrumentos desligados para planejamento"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *O maior receio de quem tem fístula anal não é a cirurgia em si — é o que pode sobrar dela. Tratar uma fístula pode envolver cortar músculo, e músculo cortado nessa região significa risco de não segurar gases ou fezes. As técnicas com vídeo e laser existem para lidar com esse problema.*

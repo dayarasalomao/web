@@ -6,7 +6,7 @@ metaDescription: >-
   avaliação e quais sinais de alerta observar.
 slug: alteracoes-habito-intestinal-quando-avaliar
 publishDate: 2026-04-24T00:00:00.000Z
-lastModified: 2026-04-24T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: alteração do hábito intestinal
 secondaryKeywords:
   - mudança no funcionamento do intestino
@@ -39,6 +39,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Mudanças persistentes do hábito
   intestinal ou sintomas associados a sangramento, perda de peso, anemia ou dor
   importante devem ser avaliados presencialmente.
+image:
+  src: "/assets/blog/capa-alteracoes-habito-intestinal-quando-avaliar.webp"
+  alt: "Ilustração de diário com símbolos da rotina intestinal, calendário e relógio"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *O intestino pode mudar com rotina, alimentação e estresse, mas alterações persistentes ou associadas a sinais de alerta merecem avaliação médica.*
@@ -52,6 +58,8 @@ O número de evacuações considerado normal varia bastante, de três vezes ao d
 ## Mudanças comuns e passageiras
 
 Algumas alterações podem acontecer por fatores do dia a dia, como viagem, mudança alimentar, menor ingestão de água, estresse, ciclo menstrual, uso de medicamentos, infecções intestinais leves ou redução de atividade física.
+
+![Ilustração de diário com símbolos da rotina intestinal, calendário e relógio](/assets/blog/capa-alteracoes-habito-intestinal-quando-avaliar.webp)
 
 Quando o quadro é breve e melhora com a rotina, nem sempre indica doença. Mas persistência, recorrência ou sintomas associados mudam a conduta.
 

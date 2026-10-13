@@ -6,7 +6,7 @@ metaDescription: >-
   hábitos, dos procedimentos e o risco de recorrência.
 slug: hemorroida-tem-cura-ou-passa-sozinha
 publishDate: '2026-10-12'
-lastModified: '2026-10-12'
+lastModified: 2026-10-13
 primaryKeyword: hemorroida tem cura ou passa sozinha
 secondaryKeywords:
   - hemorroida some sozinha
@@ -52,6 +52,12 @@ faqs:
 disclaimer: >-
   Este conteúdo é informativo e não substitui avaliação médica presencial. Diagnóstico, indicação e
   recuperação dependem de cada caso.
+image:
+  src: "/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp"
+  alt: "Ilustração de calendário, garrafa de água e caderno de acompanhamento da rotina"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *A crise pode passar e, ainda assim, o sangramento ou o tecido que sai na evacuação voltar a incomodar. Melhorar de um episódio e tratar a doença são perguntas diferentes.*
@@ -79,6 +85,8 @@ A palavra “cura” não deve virar uma promessa de que nunca haverá outro epi
 ## Os hábitos continuam fazendo parte do cuidado
 
 Evitar esforço para evacuar e longos períodos no vaso, manter uma alimentação adequada e cuidar da consistência das fezes são medidas relevantes antes e depois de um procedimento.
+
+![Ilustração de calendário, garrafa de água e caderno de acompanhamento da rotina](/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp)
 
 Isso não significa atribuir culpa ao paciente por uma recorrência. Há vários fatores envolvidos, e sintomas que persistem merecem reavaliação. Se você depende continuamente de produtos tópicos, leia [o que a pomada para hemorroida pode e não pode fazer](/blog/pomada-hemorroida-resolve).
 

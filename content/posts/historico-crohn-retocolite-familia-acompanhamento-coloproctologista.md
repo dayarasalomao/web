@@ -6,7 +6,7 @@ metaDescription: >-
   indicam acompanhamento com coloproctologista.
 slug: historico-crohn-retocolite-familia-acompanhamento-coloproctologista
 publishDate: 2026-05-14T00:00:00.000Z
-lastModified: 2026-05-14T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: acompanhamento doença inflamatória intestinal
 secondaryKeywords:
   - doença de Crohn
@@ -34,6 +34,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Pessoas com sintomas persistentes,
   diagnóstico prévio de doença inflamatória intestinal ou histórico familiar
   relevante devem receber avaliação individualizada.
+image:
+  src: "/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp"
+  alt: "Ilustração de árvore familiar, calendário e estetoscópio para acompanhamento médico"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Doença de Crohn e retocolite ulcerativa exigem acompanhamento individualizado. Quem tem sintomas ou histórico familiar deve saber quando procurar avaliação.*
@@ -47,6 +53,8 @@ Os sintomas variam muito. Algumas pessoas têm diarreia, sangue nas fezes e dor 
 ## Histórico familiar aumenta a atenção?
 
 Ter familiares com doença de Crohn ou retocolite não significa que a pessoa terá a doença. Ainda assim, o histórico familiar é uma informação relevante, principalmente quando surgem sintomas persistentes ou recorrentes.
+
+![Ilustração de árvore familiar, calendário e estetoscópio para acompanhamento médico](/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp)
 
 Outros fatores podem aumentar a atenção clínica, como início de sintomas em idade jovem, tabagismo no caso da doença de Crohn, uso de medicamentos, infecções prévias e condições imunológicas. Esses fatores não fecham diagnóstico, mas ajudam a orientar a investigação.
 

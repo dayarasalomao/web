@@ -8,7 +8,7 @@ import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import type { Root, RootContent, Image, Heading } from 'mdast'
 import type { Node, Parent } from 'unist'
-import { getAllPosts } from '../../src/lib/blog.ts'
+import { getAllPosts, extractFirstImage } from '../../src/lib/blog.ts'
 import { buildPostMetadata } from '../../src/lib/seo.ts'
 import { buildBlogPostGraph } from '../../src/lib/structured-data.ts'
 
@@ -93,7 +93,10 @@ describe('blog image placement guardrails (AC1/2/3)', () => {
   })
 
   it('matches every figure to the section documented in the editorial spec (AC1)', () => {
-    const placements: Array<{ slug: string; src: string; section: string }> = JSON.parse(fs.readFileSync(`${specDir}/placement.json`, 'utf8'))
+    const placements: Array<{ slug: string; src: string; section: string }> = [
+      ...JSON.parse(fs.readFileSync(`${specDir}/placement.json`, 'utf8')),
+      ...JSON.parse(fs.readFileSync('.specs/features/blog-final-release-qa/placement.json', 'utf8')),
+    ]
     const actual = getAllPosts().flatMap((post) => {
       const root = parser.parse(post.content)
       return imagesIn(root).map(({ image }) => {
@@ -106,9 +109,14 @@ describe('blog image placement guardrails (AC1/2/3)', () => {
   })
 })
 
-it('preserves cardImage selection and its OG/Article image URLs (AC7)', () => {
-  const baseline = JSON.parse(fs.readFileSync(`${specDir}/image-baseline.json`, 'utf8'))
-  assert.deepEqual(getAllPosts().map(({ slug, cardImage }) => ({ slug, ...(cardImage ? { cardImage } : {}) })), baseline)
+it('preserves original editorial images while declared covers drive OG/Article URLs (AC7, F2/3)', () => {
+  const baseline = JSON.parse(fs.readFileSync(`${specDir}/image-baseline.json`, 'utf8')) as Array<{ slug: string; cardImage?: unknown }>
+  const posts = getAllPosts()
+  assert.equal(posts.length, baseline.length)
+  for (const original of baseline.filter((post) => post.cardImage)) {
+    const post = posts.find((post) => post.slug === original.slug)!
+    assert.deepEqual(post.image ?? extractFirstImage(post.content), original.cardImage)
+  }
   for (const post of getAllPosts().filter((post) => post.cardImage)) {
     const imageUrl = `https://www.dayarasalomao.com.br${post.cardImage!.src}`
     const images = buildPostMetadata(post).openGraph?.images as Array<{ url: string }>

@@ -1,7 +1,7 @@
 # Tarefas
 
 1. [x] R1 — Ilustrações editoriais: 23 assets, manifest/prompts, inspeção visual e teste de integridade. Gate: unitários de assets + lint; commit atômico.
-2. [ ] R2 — Integração de imagem/capa e SEO: lib/blog, structured-data, 23 frontmatters, 16 linhas Markdown, dimensões, testes ajustados/adicionados. Gate: unitários + lint + e2e relevantes; commit atômico. F1–3.
+2. [x] R2 — Integração de imagem/capa e SEO: lib/blog, structured-data, 23 frontmatters, 16 linhas Markdown, dimensões, testes ajustados/adicionados. Gate: unitários + lint + e2e relevantes; commit atômico. F1–3.
 3. [ ] R3 — Crawler coverage, documentação, mensagem cliente e QA final: llms/sitemap/robots/canonicals verificados, docs sincronizados, testes completos e smoke de produção/capturas. Gate: lint/build/unit/audit/e2e + smoke produção; commit atômico. F4–6.
 
 Depois do último commit: Verifier independente com spec, diff e sensor em scratch; persistir validation.md e STATE sem merge de produção.

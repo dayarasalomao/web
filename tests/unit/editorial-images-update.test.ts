@@ -48,8 +48,8 @@ it('uses intrinsic image dimensions in Open Graph instead of the social fallback
     const post = getPostBySlug(slug)
     assert.ok(post)
     const images = buildPostMetadata(post).openGraph?.images as Array<{ width: number; height: number }>
-    assert.equal(images[0].width, width)
-    assert.equal(images[0].height, height)
+    assert.equal(images[0].width, post.coverImage?.width ?? width)
+    assert.equal(images[0].height, post.coverImage?.height ?? height)
   }
 })
 

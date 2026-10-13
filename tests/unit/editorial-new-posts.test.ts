@@ -5,21 +5,21 @@ import { getStrategicTarget } from '../../src/lib/seo-map.ts'
 import { buildBlogPostGraph } from '../../src/lib/structured-data.ts'
 
 const NEW_POSTS = [
-  ['primeiros-30-dias-hemorroidectomia-laser-co2', 'Laser de CO2: os primeiros 30 dias após a cirurgia'],
-  ['pomada-hemorroida-resolve', 'Pomada para hemorroida resolve? Limites e cuidados'],
-  ['hemorroida-externa-trombosada', 'Hemorroida trombosada: caroço dolorido e tratamento'],
-  ['hemorroida-tem-cura-ou-passa-sozinha', 'Hemorroida tem cura ou passa sozinha?'],
-  ['como-encontrar-coloproctologista-campo-grande-ms', 'Como encontrar um coloproctologista em Campo Grande (MS)'],
+  ['primeiros-30-dias-hemorroidectomia-laser-co2', 'Laser de CO2: os primeiros 30 dias após a cirurgia', '2026-10-12'],
+  ['pomada-hemorroida-resolve', 'Pomada para hemorroida resolve? Limites e cuidados', '2026-10-12'],
+  ['hemorroida-externa-trombosada', 'Hemorroida trombosada: caroço dolorido e tratamento', '2026-10-12'],
+  ['hemorroida-tem-cura-ou-passa-sozinha', 'Hemorroida tem cura ou passa sozinha?', '2026-10-13'],
+  ['como-encontrar-coloproctologista-campo-grande-ms', 'Como encontrar um coloproctologista em Campo Grande (MS)', '2026-10-13'],
 ] as const
 
 describe('new patient guides (BLOG-01/LOCAL-01/GRAPH-01)', () => {
-  for (const [slug, seoTitle] of NEW_POSTS) {
+  for (const [slug, seoTitle, lastModified] of NEW_POSTS) {
     it(`prepares ${slug} with sources, FAQ and complementary links`, () => {
       const post = getPostBySlug(slug)
       assert.ok(post)
       assert.equal(post.seoTitle, seoTitle)
       assert.equal(post.publishDate, '2026-10-12')
-      assert.equal(post.lastModified, '2026-10-12')
+      assert.equal(post.lastModified, lastModified)
       assert.ok((post.sources?.length ?? 0) >= 1)
       assert.ok((post.faqs?.length ?? 0) >= 3)
       assert.ok(post.content.includes('](/locais-de-atendimento/campo-grande)'))

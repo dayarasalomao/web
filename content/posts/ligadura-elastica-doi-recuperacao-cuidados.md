@@ -6,7 +6,7 @@ metaDescription: >-
   acontecer, os sinais de alerta e quando ela pode ser indicada.
 slug: ligadura-elastica-doi-recuperacao-cuidados
 publishDate: 2026-08-10
-lastModified: 2026-10-12
+lastModified: 2026-10-13
 primaryKeyword: ligadura elástica dói
 secondaryKeywords:
   - dor depois da ligadura elástica
@@ -54,6 +54,12 @@ disclaimer: >-
   Este artigo é educativo e não substitui a orientação da equipe responsável
   pelo procedimento. Dor intensa, febre, dificuldade para urinar ou sangramento
   importante exigem contato médico imediato.
+image:
+  src: "/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp"
+  alt: "Ilustração de agenda, copo de água e telefone para contato com a equipe médica"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 940
 ---
 
 *A ligadura elástica não deve ser divulgada como um procedimento “sem dor”. Pressão, cólica ou desconforto podem ocorrer, enquanto dor forte ou progressiva precisa ser avaliada.*
@@ -113,6 +119,8 @@ Complicações graves são incomuns, mas reconhecer esses sinais cedo é importa
 ## Quanto tempo leva para voltar à rotina?
 
 Muitas pessoas retomam atividades leves rapidamente, porém não existe um prazo único. Trabalho com esforço físico, desconforto após o procedimento, número de ligaduras e orientação da equipe mudam a recuperação.
+
+![Ilustração de agenda, copo de água e telefone para contato com a equipe médica](/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp)
 
 Nos primeiros dias, costuma ser importante evitar esforço evacuatório e manter as fezes macias. Fibras, líquidos e medicamentos só devem seguir a orientação individual, especialmente quando já existe constipação, diarreia ou outra doença intestinal.
 

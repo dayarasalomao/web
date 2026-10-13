@@ -6,7 +6,7 @@ metaDescription: >-
   externas, os graus da doença e as opções de tratamento.
 slug: doenca-hemorroidaria-sintomas-graus
 publishDate: 2026-05-18T00:00:00.000Z
-lastModified: 2026-10-12
+lastModified: 2026-10-13
 primaryKeyword: doença hemorroidária
 secondaryKeywords:
   - sintomas de hemorroida
@@ -55,6 +55,12 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de sangramento, dor,
   prolapso ou outros sintomas anais persistentes, procure avaliação presencial.
+image:
+  src: "/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp"
+  alt: "Ilustração de conversa médica sobre uma ficha de classificação e avaliação de sintomas"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Muitas pessoas associam hemorroida a dor, mas a queixa mais comum costuma ser sangramento vermelho-vivo e indolor. Entender os sintomas e os graus da doença ajuda a buscar avaliação no momento certo.*
@@ -75,6 +81,8 @@ Existem dois tipos de hemorroida:
 ## Os graus das hemorroidas internas
 
 A classificação é feita pela avaliação clínica associada ao exame físico:
+
+![Ilustração de conversa médica sobre uma ficha de classificação e avaliação de sintomas](/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp)
 
 * **Grau I:** apenas sangramento vermelho-vivo, sem prolapso pelo ânus.
 * **Grau II:** a hemorroida prolapsa ao evacuar, mas retorna espontaneamente para dentro do canal anal.

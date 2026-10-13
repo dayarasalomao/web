@@ -7,7 +7,7 @@ metaDescription: >-
   na cicatrização.
 slug: hemorroidectomia-laser-co2
 publishDate: 2026-03-12
-lastModified: 2026-10-12
+lastModified: 2026-10-13
 primaryKeyword: hemorroidectomia laser CO2
 secondaryKeywords:
   - cirurgia de hemorroidas a laser
@@ -60,6 +60,12 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A definição da
   técnica cirúrgica depende de avaliação presencial e individualizada.
+coverImage:
+  src: "/assets/blog/capa-hemorroidectomia-laser-co2.webp"
+  alt: "Ilustração de prancheta de planejamento e instrumento médico genérico desligado sobre bandeja"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Existe uma confusão comum: "cirurgia a laser" virou um guarda-chuva para coisas bem diferentes. A hemorroidectomia com laser de CO2 não é a cirurgia "sem corte" — ela corta. A diferença está em com o quê.*

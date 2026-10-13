@@ -6,7 +6,7 @@ metaDescription: >-
   e organizar sua primeira consulta com privacidade.
 slug: como-encontrar-coloproctologista-campo-grande-ms
 publishDate: '2026-10-12'
-lastModified: '2026-10-12'
+lastModified: 2026-10-13
 primaryKeyword: como encontrar um coloproctologista em campo grande (ms)
 secondaryKeywords:
   - como escolher proctologista
@@ -50,6 +50,12 @@ faqs:
 disclaimer: >-
   Este conteúdo é informativo e não substitui avaliação médica presencial. Diagnóstico, indicação e
   recuperação dependem de cada caso.
+image:
+  src: "/assets/blog/capa-como-encontrar-coloproctologista-campo-grande-ms.webp"
+  alt: "Ilustração de tablet com perfil profissional, checklist e lupa para escolha de especialista"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Buscar “procto Campo Grande (MS)” é um primeiro passo. Conferir a especialidade, o local e como funciona a consulta ajuda a escolher com mais segurança e menos constrangimento.*
@@ -67,6 +73,8 @@ A diferença entre os termos pesquisados não exige escolher páginas ou profiss
 ## Como conferir CRM e RQE
 
 Use a [Busca por Médicos do Conselho Federal de Medicina](https://portal.cfm.org.br/busca-medicos/). É possível pesquisar por nome, UF ou número do CRM, além de filtros como município e especialidade.
+
+![Ilustração de tablet com perfil profissional, checklist e lupa para escolha de especialista](/assets/blog/capa-como-encontrar-coloproctologista-campo-grande-ms.webp)
 
 - Confira se o nome corresponde ao profissional procurado.
 - Verifique a inscrição e sua situação no estado onde ocorre o atendimento.

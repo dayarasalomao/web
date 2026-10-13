@@ -103,7 +103,7 @@ describe('blog content model', () => {
         fs.existsSync(path.join(process.cwd(), 'public', image.src.replace(/^\//, ''))),
         `${post.slug} references a missing image: ${image.src}`,
       )
-      assert.deepEqual(post.cardImage, image)
+      assert.deepEqual(post.cardImage, post.coverImage ?? image)
     }
   })
 

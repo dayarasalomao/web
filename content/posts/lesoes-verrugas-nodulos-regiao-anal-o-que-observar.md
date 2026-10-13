@@ -7,7 +7,7 @@ metaDescription: >-
   avaliação é urgente.
 slug: lesoes-verrugas-nodulos-regiao-anal-o-que-observar
 publishDate: 2026-03-27
-lastModified: 2026-09-04
+lastModified: 2026-10-13
 primaryKeyword: caroço na região anal
 secondaryKeywords:
   - verruga na região anal
@@ -58,6 +58,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Lesões, verrugas, nódulos,
   secreção, dor ou sangramento na região anal devem ser avaliados
   presencialmente.
+coverImage:
+  src: "/assets/blog/capa-lesoes-verrugas-nodulos-regiao-anal-o-que-observar.webp"
+  alt: "Ilustração de lupa sobre formas abstratas, caderno de perguntas e telefone para consulta"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *O problema de encontrar um caroço nessa região não é o caroço em si — é que meia dúzia de condições muito diferentes se parecem bastante, e algumas pedem conduta imediata enquanto outras não pedem nada.*

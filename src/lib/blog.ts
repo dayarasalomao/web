@@ -72,6 +72,7 @@ export interface BlogPostMeta {
   relatedPosts?: string[]
   disclaimer?: string
   image?: BlogCardImage
+  coverImage?: BlogCardImage
   sources?: MedicalSource[]
 }
 
@@ -177,8 +178,9 @@ function parsePostFile(slug: string, fullPath: string): BlogPost | null {
   const readingTime = calculateReadingTime(content)
   const excerpt = extractItalicHook(content)
   const image = normalizeEditorialImage(data.image, slug)
+  const coverImage = normalizeEditorialImage(data.coverImage, slug, 'coverImage')
   const sources = normalizeMedicalSources(data.sources, slug)
-  const cardImage = image ?? extractFirstImage(content)
+  const cardImage = coverImage ?? image ?? extractFirstImage(content)
 
   return {
     ...(data as BlogPostMeta),
@@ -189,15 +191,16 @@ function parsePostFile(slug: string, fullPath: string): BlogPost | null {
     excerpt,
     readingTime,
     image,
+    coverImage,
     sources,
     cardImage,
   }
 }
 
-function normalizeEditorialImage(value: unknown, slug: string): BlogCardImage | undefined {
+function normalizeEditorialImage(value: unknown, slug: string, field = 'image'): BlogCardImage | undefined {
   if (value === undefined || value === null) return undefined
   if (typeof value !== 'object' || Array.isArray(value)) {
-    throw new Error(`Post "${slug}" has invalid image frontmatter.`)
+    throw new Error(`Post "${slug}" has invalid ${field} frontmatter.`)
   }
 
   const image = value as Record<string, unknown>
@@ -209,7 +212,7 @@ function normalizeEditorialImage(value: unknown, slug: string): BlogCardImage | 
 
   if (!src || !alt || !Number.isInteger(width) || width <= 0 || !Number.isInteger(height) || height <= 0) {
     throw new Error(
-      `Post "${slug}" image requires src, alt, and positive integer width/height.`,
+      `Post "${slug}" ${field} requires src, alt, and positive integer width/height.`,
     )
   }
 

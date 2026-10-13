@@ -6,7 +6,7 @@ metaDescription: >-
   entenda quando o acompanhamento coloproctológico é importante.
 slug: doencas-inflamatorias-intestinais-crohn-retocolite
 publishDate: 2026-05-16T00:00:00.000Z
-lastModified: 2026-05-17T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: doenças inflamatórias intestinais
 secondaryKeywords:
   - doença de Crohn
@@ -32,6 +32,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Procure avaliação se você tem
   diarreia persistente, sangue nas fezes, perda de peso, anemia, dor abdominal
   recorrente ou sintomas anais como secreção, abscesso ou fístula.
+image:
+  src: "/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp"
+  alt: "Ilustração de pessoa vestida com a mão no abdome e caderno para avaliação de sintomas"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Diarreia persistente, sangue nas fezes, dor abdominal e perda de peso são sintomas que merecem atenção, especialmente quando há suspeita de doença de Crohn ou retocolite ulcerativa.*
@@ -45,6 +51,8 @@ Embora possam causar sintomas parecidos, Crohn e retocolite não são a mesma co
 ## Sinais que merecem investigação
 
 Alguns sintomas levantam suspeita de inflamação intestinal e devem ser avaliados:
+
+![Ilustração de pessoa vestida com a mão no abdome e caderno para avaliação de sintomas](/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp)
 
 * diarreia persistente ou recorrente;
 * sangue ou muco nas fezes;

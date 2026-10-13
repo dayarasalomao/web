@@ -6,7 +6,7 @@ metaDescription: >-
   por que o tratamento e o acompanhamento são individualizados.
 slug: hpv-anal-identificar-tratar
 publishDate: 2026-05-23T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: HPV anal
 secondaryKeywords:
   - verrugas anais
@@ -54,6 +54,12 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de lesões, verrugas ou
   outras alterações na região anal, procure avaliação presencial.
+coverImage:
+  src: "/assets/blog/capa-hpv-anal-identificar-tratar.webp"
+  alt: "Ilustração de consultório fictício e pasta fechada com cadeado, representando sigilo na avaliação"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Encontrar uma lesão nova na região anal costuma gerar duas reações ao mesmo tempo: susto e vontade de não contar para ninguém. Vale saber que nem toda lesão ali é HPV — e que, quando é, o tratamento é simples e sigiloso.*

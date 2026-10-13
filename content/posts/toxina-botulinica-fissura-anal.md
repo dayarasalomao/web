@@ -7,7 +7,7 @@ metaDescription: >-
   pensar em cirurgia.
 slug: toxina-botulinica-fissura-anal
 publishDate: 2026-03-30
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: toxina botulínica fissura anal
 secondaryKeywords:
   - botox para fissura anal
@@ -53,6 +53,12 @@ faqs:
 disclaimer: >-
   Este artigo é informativo e não substitui a consulta médica. A indicação da
   toxina botulínica depende de avaliação presencial e individualizada.
+image:
+  src: "/assets/blog/capa-toxina-botulinica-fissura-anal.webp"
+  alt: "Ilustração de conversa médica e frasco genérico sem rótulo sobre bandeja de consulta"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *A fissura anal é pequena, mas dói de forma desproporcional ao seu tamanho. O motivo é que ela cria um ciclo que se retroalimenta — e a toxina botulínica existe para quebrar exatamente esse ciclo.*
@@ -70,6 +76,8 @@ Se você ainda não tem certeza de que se trata de fissura, o artigo sobre [dor 
 ## O que a toxina botulínica faz
 
 A toxina botulínica relaxa a musculatura do esfíncter. Esse relaxamento:
+
+![Ilustração de conversa médica e frasco genérico sem rótulo sobre bandeja de consulta](/assets/blog/capa-toxina-botulinica-fissura-anal.webp)
 
 * **Reduz a dor quase de imediato**, porque interrompe o espasmo;
 * **Restaura o fluxo sanguíneo local**, o que devolve à região as condições de cicatrizar;

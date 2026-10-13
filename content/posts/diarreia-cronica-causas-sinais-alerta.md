@@ -6,7 +6,7 @@ metaDescription: >-
   exigem atenção e como a avaliação médica orienta o tratamento.
 slug: diarreia-cronica-causas-sinais-alerta
 publishDate: 2026-05-06T00:00:00.000Z
-lastModified: 2026-05-17T00:00:00.000Z
+lastModified: 2026-10-13
 primaryKeyword: diarreia crônica
 secondaryKeywords:
   - diarreia persistente
@@ -34,6 +34,12 @@ disclaimer: >-
   Este artigo não substitui consulta médica. Procure atendimento se a diarreia é
   persistente, recorrente ou associada a sangue, febre, perda de peso, anemia,
   dor importante ou sinais de desidratação.
+image:
+  src: "/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp"
+  alt: "Ilustração de calendário, diário de sintomas, copo de água e telefone para avaliação médica"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *Diarreia que persiste ou volta com frequência não deve ser tratada apenas como "algo que comi": ela pode ter várias causas e precisa ser analisada junto com o contexto clínico.*
@@ -69,6 +75,8 @@ Esses achados ajudam a decidir se são necessários exames laboratoriais, avalia
 ## Como a consulta ajuda?
 
 A consulta organiza a investigação. O médico avalia duração, padrão das fezes, alimentação, medicações, histórico familiar, sintomas fora do intestino e exames anteriores.
+
+![Ilustração de calendário, diário de sintomas, copo de água e telefone para avaliação médica](/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp)
 
 Dependendo do caso, o plano pode envolver hidratação, ajustes alimentares, exames complementares, tratamento de infecções, controle de inflamação ou acompanhamento de condições funcionais.
 

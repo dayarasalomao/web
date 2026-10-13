@@ -6,7 +6,7 @@ metaDescription: >-
   na região perianal e como o tratamento é individualizado para cada caso.
 slug: fistula-anal-o-que-e-sintomas
 publishDate: 2026-05-22T00:00:00.000Z
-lastModified: 2026-09-01
+lastModified: 2026-10-13
 primaryKeyword: fístula anal
 secondaryKeywords:
   - sintomas de fístula anal
@@ -55,6 +55,12 @@ faqs:
 disclaimer: >-
   Este artigo não substitui consulta médica. Em caso de secreção, dor ou
   inflamação recorrente na região perianal, procure avaliação presencial.
+coverImage:
+  src: "/assets/blog/capa-fistula-anal-o-que-e-sintomas.webp"
+  alt: "Ilustração de conversa médica, ficha de avaliação e caminhos abstratos sob uma lupa"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *A frase mais comum na consulta é sempre a mesma: "tenho uma espinha que volta". Ela drena, melhora, some por um tempo e reaparece no mesmo lugar. Esse padrão de repetição é o que caracteriza a fístula anal.*

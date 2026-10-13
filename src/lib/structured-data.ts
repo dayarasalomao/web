@@ -268,15 +268,16 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
   const postUrl = buildCanonical(`/blog/${post.slug}`)
   const pageId = `${postUrl}#webpage`
   const articleId = `${postUrl}#article`
-  const articleImage = post.image
+  const primaryImage = post.coverImage ?? post.image
+  const articleImage = primaryImage
     ? {
         '@type': 'ImageObject',
         '@id': `${postUrl}#primary-image`,
-        contentUrl: toAbsoluteUrl(post.image.src),
-        url: toAbsoluteUrl(post.image.src),
-        width: post.image.width,
-        height: post.image.height,
-        caption: post.image.caption ?? post.image.alt,
+        contentUrl: toAbsoluteUrl(primaryImage.src),
+        url: toAbsoluteUrl(primaryImage.src),
+        width: primaryImage.width,
+        height: primaryImage.height,
+        caption: primaryImage.caption ?? primaryImage.alt,
       }
     : toAbsoluteUrl(post.cardImage?.src || SEO_IMAGE)
   const breadcrumbItems: BreadcrumbItem[] = [
@@ -299,7 +300,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       about: {
         '@id': articleId,
       },
-      ...(post.image ? { primaryImageOfPage: { '@id': `${postUrl}#primary-image` } } : {}),
+      ...(primaryImage ? { primaryImageOfPage: { '@id': `${postUrl}#primary-image` } } : {}),
     } as Thing,
     {
       '@type': 'Article',

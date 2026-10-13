@@ -6,7 +6,7 @@ metaDescription: >-
   levar, como pode ser o exame e quando avisar sobre dor intensa.
 slug: primeira-consulta-coloproctologista-como-se-preparar
 publishDate: 2026-08-10
-lastModified: 2026-08-10
+lastModified: 2026-10-13
 primaryKeyword: primeira consulta com coloproctologista
 secondaryKeywords:
   - como se preparar para consulta com proctologista
@@ -55,6 +55,12 @@ disclaimer: >-
   Este conteúdo é educativo e não substitui avaliação médica. Em caso de
   sangramento intenso, febre, desmaio ou piora rápida, procure atendimento de
   urgência.
+image:
+  src: "/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp"
+  alt: "Ilustração de ambiente acolhedor com cadeiras e caderno para uma primeira consulta"
+  caption: "Ilustração editorial gerada com inteligência artificial; não representa paciente, consultório real ou procedimento médico."
+  width: 1672
+  height: 941
 ---
 
 *A primeira consulta começa por uma conversa cuidadosa. O exame, quando necessário, é explicado antes e adaptado à queixa e ao conforto de cada pessoa.*
@@ -66,6 +72,8 @@ Não existe uma sequência idêntica para todas as pessoas. Sintomas, histórico
 ## O que acontece no começo da consulta?
 
 A consulta costuma começar com perguntas sobre a queixa principal. Mais do que saber apenas “onde dói”, a médica precisa entender o contexto:
+
+![Ilustração de ambiente acolhedor com cadeiras e caderno para uma primeira consulta](/assets/blog/capa-primeira-consulta-coloproctologista-como-se-preparar.webp)
 
 - quando o sintoma começou e se está piorando
 - presença de sangue, secreção, coceira, nódulo ou prolapso
