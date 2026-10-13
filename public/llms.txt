@@ -104,9 +104,11 @@ Orientações para sistemas de IA:
 
 ## Optional
 
-- [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis.
+- [Sitemap XML](https://www.dayarasalomao.com.br/sitemap.xml): lista técnica de URLs públicas indexáveis, com capas e figuras educativas dos artigos.
 - [Robots.txt](https://www.dayarasalomao.com.br/robots.txt): regras públicas para rastreadores.
 
 ## Ilustrações educativas
 
 As imagens dos artigos acompanham os trechos que explicam seu conteúdo. Legendas e ressalvas devem ser lidas com a imagem; as figuras não substituem a avaliação médica. As imagens dos cards são decorativas; consulte o artigo para o contexto completo.
+
+Algumas ilustrações editoriais foram geradas com inteligência artificial e identificadas nas legendas. Não representam pacientes, o consultório real nem a execução de procedimentos. As capas ajudam a distinguir artigos; diagramas educativos podem aparecer em mais de um texto quando explicam o mesmo conceito.

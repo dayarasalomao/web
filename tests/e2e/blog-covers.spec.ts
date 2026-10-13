@@ -12,7 +12,7 @@ test('newly illustrated article renders its image and AI disclosure on mobile (F
   await expect(image).toHaveAttribute('width', String(post.image!.width))
   await expect(image).toHaveAttribute('height', String(post.image!.height))
   await expect(page.locator('[data-editorial-caption]')).toHaveText(post.image!.caption!)
-  expect(await image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true)
+  await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true)
   expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0)
 })
 

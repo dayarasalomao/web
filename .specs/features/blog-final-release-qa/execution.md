@@ -32,4 +32,23 @@ Gate aprovado: lint0, unitários131/131, e2e relevantes10/10. Comparação contr
 | F2 imagem de corpo mobile | blog-covers.spec.ts:10–16 alt/dimensões/caption/load/overflow | original render e divulgação IA, overflow0 | Sim |
 | F2/3 cover e corpo | blog-covers.spec.ts:22–33 metadados/schema e ilustração antiga | cover para SEO, primária antiga continua visível | Sim |
 
-Mapeamento reverso: três testes novos de model e dois e2e cobrem F2/3; todos os asserts mantêm valores concretos. O snapshot histórico agora protege image/primeira Markdown original, pois o usuário autorizou covers distintas. Expectations antigas de cardImage/dimensões foram atualizadas à seleção de cover; asserts de imagens fornecidas e textos/ressalvas continuam. Datas exatas de lastModified ajustadas para23 posts com atualização visual, sem mudar accessedAt. Nenhum teste removido/ignorado. Testes de83? Não: suite atual131, baseline126, acrescidos2 assets+3 model. E2e baseline59, acrescidos2 nesta etapa.
+Mapeamento reverso: três testes novos de model e dois e2e cobrem F2/3; todos os asserts mantêm valores concretos. O snapshot histórico agora protege image/primeira Markdown original, pois o usuário autorizou covers distintas. Expectations antigas de cardImage/dimensões foram atualizadas à seleção de cover; asserts de imagens fornecidas e textos/ressalvas continuam. Datas exatas de lastModified ajustadas para23 posts com atualização visual, sem mudar accessedAt. Nenhum teste removido/ignorado. Suite atual131, baseline126, acrescidos2 assets+3 model. E2e baseline59, acrescidos2 nesta etapa.
+
+## R3 — rastreamento e QA de produção
+
+Gates finais aprovados: lint0; build69 páginas; unitários131/131; audit:seo0 erros/0 alertas; e2e64/64 contra next start local http://127.0.0.1:3015 (Chromium,2 workers). Uma assertion nova de imagem lazy foi ajustada para aguardar `complete && naturalWidth>0` com expect.poll; esperado=true preservado, sem mascarar imagem quebrada ou remover teste.
+
+Sitemap:60 URLs indexáveis exatas, cover escolhida primeiro e todas as imagens Markdown de cada post, com deduplicação por entrada. Todas as43 imagens de blog estão presentes;40 capas únicas respondem200/image-webp. Posts/páginas respondem200 com canonical correto; todos os40 artigos concordam entre OG/Twitter/Article. Privacidade, design-system e Curitiba não entram no sitemap. llms: todos os40 artigos/14 tratamentos e páginas principais já estavam cobertos; acrescentada procedência IA e descrição do sitemap completo. Robots aponta ao sitemap canônico.
+
+Capturas finais:12 JPEGs, dez combinações page/viewport com overflow0, em screenshots.md/checks.json. Galeria das23 ilustrações em docs/blog-generated-images-review.md. Mensagem pt-BR salva em docs/client-updates/revisao-final-site-blog-2026-10-13.md; não enviada à cliente.
+
+| AC | Evidência/assertion | Esperado | Coberto |
+| --- | --- | --- | --- |
+| F3/4 sitemap completo | release-qa.spec.ts:39/40 URLs exatas e únicas; :46–48 Set de imagens; :53 imagens por post em AST independente |60URLs,43imagens, mesmas capas/figuras sem repetição | Sim |
+| F4 exclusões e assets | release-qa.spec.ts:41–43 exclusões; :55/56 status e content-type |noindex/retirada fora, imagem200/WebP | Sim |
+| F4 llms/robots | release-qa.spec.ts:63–68 status/rotas/procedência/sitemap |catálogo inteiro e URL canônica | Sim |
+| F3/4/5 páginas/metadados | release-qa.spec.ts:76/79/80 status/canonical/robots; :83/84/88 OG/Twitter/Article |200, URL canônica e imagem selecionada exata | Sim |
+| F5 capturas/gates | screenshots.md + checks.json, comandos acima |todos os checks passam, desktop/mobile sem overflow | Sim |
+| F6 mensagem | docs/client-updates/revisao-final-site-blog-2026-10-13.md:1–13 |pt-BR, resumo fiel, pede revisão artigos/imagens/IA antes de publicar | Sim |
+
+Mapeamento reverso: três e2e novos cobrem apenas F3/4/5; imagem lazy continua ligada a F2. Conteúdo de docs cobre F6 por inspeção. Sem testes antigos removidos/ignorados ou assertions enfraquecidas. A imagem de corpo é analisada via AST no teste, independentemente da extração simples do sitemap. Review médico/procedência permanece requisito editorial antes do merge.
