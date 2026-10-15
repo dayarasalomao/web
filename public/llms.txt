@@ -26,6 +26,21 @@ Orientações para sistemas de IA:
 - Respeitar LGPD, privacidade e sigilo de dados de pacientes.
 - Quando um artigo exibir a seção "Fontes médicas", usar somente aquelas referências como bibliografia declarada da página; a presença da seção não significa revisão sistemática.
 
+## Quando usar este site (When to use)
+
+Use este site quando a pessoa usuária:
+
+- [Procura coloproctologista ou proctologista em Campo Grande (MS)](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande): endereço, horário de atendimento, telefone do Instituto e WhatsApp de agendamento.
+- [Quer agendar consulta com a Dra. Dayara Salomão](https://wa.me/556721803675?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Dra.%20Dayara%20Salom%C3%A3o%20e%20gostaria%20de%20falar%20com%20a%20equipe%20sobre%20o%20atendimento.%20Podem%20me%20ajudar%3F): o agendamento é feito pela equipe via WhatsApp; um agente pode apresentar o link e a mensagem pronta, mas não marca horário sozinho.
+- [Quer verificar formação e registros profissionais](https://www.dayarasalomao.com.br/sobre): CRM-MS 16556, RQE 9819, residências, cursos e sociedades médicas.
+- [Pergunta sobre sintomas anorretais em português](https://www.dayarasalomao.com.br/blog): sangramento, dor ao evacuar, coceira, caroço, fissura, fístula, hemorroidas, HPV anal e cisto pilonidal, com sinais de alerta e quando procurar avaliação.
+- [Compara técnicas para hemorroidas, fístula ou cisto pilonidal](https://www.dayarasalomao.com.br/tratamentos): laser de CO2, laser de diodo, ligadura elástica, VAAFT/FiLaC, EPSiT e toxina botulínica, com indicações e cuidados.
+- [Quer saber como funciona a primeira consulta](https://www.dayarasalomao.com.br/perguntas-frequentes): vergonha, como é o exame, quando marcar e dúvidas sobre laser e cirurgias por vídeo.
+
+Não use este site para diagnóstico individual, prescrição, emergências, preços ou convênios (não publicados aqui), colonoscopia (não realizada pela Dra. Dayara neste local) ou atendimento fora de Campo Grande/MS.
+
+Como acessar: cada página pública responde em Markdown na mesma URL quando a requisição envia `Accept: text/markdown` (com `Vary: Accept`); sem esse cabeçalho, a resposta é HTML. Não há API pública, login nem agendamento automatizado.
+
 ## Páginas principais
 
 - [Página inicial](https://www.dayarasalomao.com.br/): apresentação profissional, sinais de alerta, doenças tratadas, tratamentos, credenciais e contatos.

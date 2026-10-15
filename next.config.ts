@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 85, 100],
   },
+  // The Markdown handler reads blog sources at request time (see src/proxy.ts).
+  outputFileTracingIncludes: {
+    '/api/markdown/[[...path]]': ['./content/posts/**/*.md'],
+  },
   async redirects() {
     return [
       {
@@ -34,6 +38,13 @@ const nextConfig: NextConfig = {
         destination: '/blog/prurido-anal-causas-cuidados',
         permanent: true,
       },
+      // Conventional trust-anchor paths that agents probe before recommending
+      // a business. They point at the existing Portuguese pages so canonicals
+      // stay unchanged; with a single location, its page is the contact page.
+      { source: '/about', destination: '/sobre', permanent: true },
+      { source: '/contact', destination: '/locais-de-atendimento/campo-grande', permanent: true },
+      { source: '/contato', destination: '/locais-de-atendimento/campo-grande', permanent: true },
+      { source: '/privacy', destination: '/politica-privacidade', permanent: true },
     ]
   },
   async headers() {

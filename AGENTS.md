@@ -49,6 +49,7 @@ src/
     sobre/                     # canonical practitioner profile route
     politica-privacidade/      # privacy policy route
     sitemap.ts                 # sitemap metadata route
+    api/markdown/              # Markdown representation of each page (via src/proxy.ts)
     globals.css                # CSS variables and shared utility classes
   components/
     Header.tsx
@@ -62,6 +63,7 @@ src/
     Contact.tsx
     Footer.tsx
   constants.ts                 # contact info, SEO strings, schema inputs, analytics flags
+  proxy.ts                     # Accept: text/markdown negotiation (see src/lib/markdown.ts)
 
 public/
   assets/                      # production photos used by the UI
