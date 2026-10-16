@@ -1,9 +1,12 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import {
-  MARKDOWN_NEGOTIATED_HEADER,
+  MARKDOWN_PATH_HEADER,
   MARKDOWN_ROUTE_PREFIX,
+  MARKDOWN_TOKEN_HEADER,
   appendVaryAccept,
+  getMarkdownRewriteToken,
   isNegotiablePath,
+  isNegotiableRequest,
   negotiateMediaType,
   normalizePathname,
 } from './lib/content-negotiation'
@@ -13,9 +16,14 @@ import {
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   if (!isNegotiablePath(pathname)) return NextResponse.next()
+  if (!isNegotiableRequest(request.method, request.headers)) return NextResponse.next()
 
   // RSC payloads and prefetches belong to the client router, not to agents.
-  if (request.headers.has('rsc') || request.headers.has('next-router-prefetch')) {
+  if (
+    request.headers.has('rsc') ||
+    request.headers.has('next-router-prefetch') ||
+    request.nextUrl.searchParams.has('_rsc')
+  ) {
     return NextResponse.next()
   }
 
@@ -27,7 +35,8 @@ export function proxy(request: NextRequest) {
     const normalized = normalizePathname(pathname)
     url.pathname = `${MARKDOWN_ROUTE_PREFIX}${normalized === '/' ? '' : normalized}`
     const headers = new Headers(request.headers)
-    headers.set(MARKDOWN_NEGOTIATED_HEADER, normalized)
+    headers.set(MARKDOWN_PATH_HEADER, normalized)
+    headers.set(MARKDOWN_TOKEN_HEADER, getMarkdownRewriteToken())
     const response = NextResponse.rewrite(url, { request: { headers } })
     response.headers.set('Vary', appendVaryAccept(response.headers.get('Vary')))
     return response

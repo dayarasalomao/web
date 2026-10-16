@@ -1,11 +1,13 @@
 import {
   MARKDOWN_CONTENT_TYPE,
-  MARKDOWN_NEGOTIATED_HEADER,
+  MARKDOWN_PATH_HEADER,
+  isTrustedMarkdownRewrite,
 } from '@/lib/content-negotiation'
 import { getMarkdownDocument, renderNotFoundMarkdown } from '@/lib/markdown'
 
 // Reached only through the rewrite in `src/proxy.ts`. The original pathname
-// travels in a request header so the handler never trusts its own URL.
+// travels in a request header next to a per-build token, so the handler never
+// trusts its own URL and direct or spoofed requests get a 404.
 export const dynamic = 'force-dynamic'
 
 function markdownResponse(body: string, status: number, extraHeaders: Record<string, string> = {}) {
@@ -21,10 +23,11 @@ function markdownResponse(body: string, status: number, extraHeaders: Record<str
 }
 
 export function GET(request: Request) {
-  const pathname = request.headers.get(MARKDOWN_NEGOTIATED_HEADER)
-  if (!pathname) {
+  const pathname = request.headers.get(MARKDOWN_PATH_HEADER)
+  if (!pathname || !isTrustedMarkdownRewrite(request.headers)) {
     return markdownResponse(renderNotFoundMarkdown(new URL(request.url).pathname), 404, {
       'Cache-Control': 'no-store',
+      'X-Robots-Tag': 'noindex',
     })
   }
 
@@ -32,6 +35,7 @@ export function GET(request: Request) {
   if (document.status === 404) {
     return markdownResponse(document.body, 404, {
       'Cache-Control': 'public, max-age=0, s-maxage=300',
+      'X-Robots-Tag': 'noindex',
     })
   }
 

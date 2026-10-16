@@ -4,8 +4,11 @@ import fs from 'node:fs'
 import path from 'node:path'
 import {
   HTML_ONLY_PATHS,
+  MARKDOWN_TOKEN_HEADER,
   appendVaryAccept,
   isNegotiablePath,
+  isNegotiableRequest,
+  isTrustedMarkdownRewrite,
   negotiateMediaType,
 } from '../../src/lib/content-negotiation.ts'
 import { getMarkdownDocument, getMarkdownPaths } from '../../src/lib/markdown.ts'
@@ -56,6 +59,30 @@ describe('Accept negotiation (acceptmarkdown.com test vectors)', () => {
     assert.ok(!isNegotiablePath('/llms.txt'))
     assert.ok(!isNegotiablePath('/_next/static/chunk.js'))
     assert.ok(!isNegotiablePath('/api/markdown'))
+  })
+
+  it('never negotiates Server Actions or non-read methods', () => {
+    assert.ok(isNegotiableRequest('GET', new Headers()))
+    assert.ok(isNegotiableRequest('HEAD', new Headers()))
+    assert.ok(!isNegotiableRequest('POST', new Headers({ Accept: 'text/x-component' })))
+    assert.ok(!isNegotiableRequest('GET', new Headers({ 'Next-Action': 'abc' })))
+    assert.ok(!isNegotiableRequest('OPTIONS', new Headers()))
+  })
+
+  it('trusts the Markdown helper only with the per-build rewrite token', () => {
+    const previous = process.env.MARKDOWN_REWRITE_TOKEN
+    try {
+      delete process.env.MARKDOWN_REWRITE_TOKEN
+      assert.ok(!isTrustedMarkdownRewrite(new Headers({ [MARKDOWN_TOKEN_HEADER]: '' })))
+
+      process.env.MARKDOWN_REWRITE_TOKEN = 'a'.repeat(48)
+      assert.ok(isTrustedMarkdownRewrite(new Headers({ [MARKDOWN_TOKEN_HEADER]: 'a'.repeat(48) })))
+      assert.ok(!isTrustedMarkdownRewrite(new Headers({ [MARKDOWN_TOKEN_HEADER]: 'spoofed' })))
+      assert.ok(!isTrustedMarkdownRewrite(new Headers()))
+    } finally {
+      if (previous === undefined) delete process.env.MARKDOWN_REWRITE_TOKEN
+      else process.env.MARKDOWN_REWRITE_TOKEN = previous
+    }
   })
 
   it('keeps every HTML-only path backed by a real app route', () => {
@@ -110,11 +137,32 @@ describe('Markdown representations', () => {
       assert.ok(document.body.length >= 20)
       assert.ok(document.body.includes('https://www.dayarasalomao.com.br/llms.txt'))
       assert.ok(document.body.includes('https://www.dayarasalomao.com.br/sitemap.xml'))
+      assert.match(document.body, /^# Página não encontrada \(404\)/)
     }
   })
 })
 
 describe('Trust anchors, schema and agent instructions', () => {
+  it('marks utility resources noindex without touching canonical pages', async () => {
+    const rules = (await nextConfig.headers?.()) ?? []
+    const robots = new Map(
+      rules.flatMap((rule) =>
+        rule.headers
+          .filter((header) => header.key.toLowerCase() === 'x-robots-tag')
+          .map((header) => [rule.source, header.value] as const),
+      ),
+    )
+    // A config rule here would also match rewritten Markdown of canonical URLs.
+    assert.ok(![...robots.keys()].some((source) => source.startsWith('/api')))
+    assert.equal(robots.get('/design-system'), 'noindex, nofollow')
+    assert.equal(robots.get('/politica-privacidade'), 'noindex')
+    for (const source of robots.keys()) {
+      assert.ok(!getMarkdownPaths().includes(source), `${source} is canonical content`)
+      assert.notEqual(source, '/:path*')
+    }
+    assert.ok(!robots.has('/opengraph-image'), 'social preview images must stay fetchable')
+  })
+
   it('redirects conventional trust-anchor paths to the existing Portuguese pages', async () => {
     const redirects = (await nextConfig.redirects?.()) ?? []
     const bySource = new Map(redirects.map((redirect) => [redirect.source, redirect]))

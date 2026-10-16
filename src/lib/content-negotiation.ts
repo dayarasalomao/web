@@ -14,10 +14,29 @@ export const MARKDOWN_CONTENT_TYPE = 'text/markdown; charset=utf-8'
 const PRODUCES = [HTML_MEDIA_TYPE, MARKDOWN_MEDIA_TYPE] as const
 export type ProducedMediaType = (typeof PRODUCES)[number]
 
-// Internal rewrite target for Markdown representations. Requests that did not
-// come through the proxy never carry the header below and get a 404.
+// Internal rewrite target for Markdown representations. The proxy forwards the
+// original pathname plus a per-build token (inlined from `next.config.ts`), so a
+// direct request to the helper is rejected even when it spoofs the path header.
 export const MARKDOWN_ROUTE_PREFIX = '/api/markdown'
-export const MARKDOWN_NEGOTIATED_HEADER = 'x-markdown-negotiated'
+export const MARKDOWN_PATH_HEADER = 'x-markdown-path'
+export const MARKDOWN_TOKEN_HEADER = 'x-markdown-rewrite-token'
+
+export function getMarkdownRewriteToken(): string {
+  return process.env.MARKDOWN_REWRITE_TOKEN ?? ''
+}
+
+export function isTrustedMarkdownRewrite(headers: Headers): boolean {
+  const token = getMarkdownRewriteToken()
+  return token.length >= 16 && headers.get(MARKDOWN_TOKEN_HEADER) === token
+}
+
+// Only safe, cacheable reads are negotiated. Server Actions (POST with a
+// `Next-Action` header and `Accept: text/x-component`) and any other method
+// pass straight through so negotiation can never turn them into a 406.
+export function isNegotiableRequest(method: string, headers: Headers): boolean {
+  if (method !== 'GET' && method !== 'HEAD') return false
+  return !headers.has('next-action')
+}
 
 // Real routes that only have an HTML (or binary) representation. The proxy
 // leaves them untouched instead of rewriting them to a Markdown 404.

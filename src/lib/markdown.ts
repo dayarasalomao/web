@@ -316,7 +316,6 @@ export function renderNotFoundMarkdown(pathname: string): string {
       `- [Blog](${buildCanonical('/blog')})`,
       `- [Tratamentos](${buildCanonical('/tratamentos')})`,
     ].join('\n'),
-    '_Page not found. See llms.txt or sitemap.xml for the list of available pages._',
   )
 }
 
