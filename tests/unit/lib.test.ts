@@ -295,7 +295,10 @@ describe('structured data', () => {
     const locationGraph = buildLocationGraph(location) as {
       '@graph': Array<Record<string, unknown>>
     }
-    const clinic = locationGraph['@graph'].find((node) => node['@type'] === 'MedicalClinic')
+    // TODO: drop this cast once graph nodes are typed with schema-dts.
+    const clinic = locationGraph['@graph'].find((node) =>
+      (node['@type'] as string[] | undefined)?.includes?.('MedicalClinic'),
+    )
     assert.ok(clinic)
     assert.equal(clinic['@id'], buildPracticeLocationId('campo-grande'))
     assert.ok((clinic.sameAs as string[]).includes(CLINIC_GOOGLE_MAPS_URL))

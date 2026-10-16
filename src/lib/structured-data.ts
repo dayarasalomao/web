@@ -19,12 +19,18 @@ import {
   SEO_DESCRIPTION,
   SEO_IMAGE,
   SITE_URL,
+  WHATSAPP_NUMBER,
+  WHATSAPP_URL,
 } from '../constants.ts'
 import type { BlogPost } from './blog.ts'
 import { buildCanonical } from './seo.ts'
 import { toSchemaDateTime } from './dates.ts'
 import type { Treatment } from './treatments.ts'
-import { getLocationsLandingPath, type PracticeLocation } from './locations.ts'
+import {
+  getIndexableLocations,
+  getLocationsLandingPath,
+  type PracticeLocation,
+} from './locations.ts'
 import { PROFESSIONAL_MEMBERSHIPS } from './profile.ts'
 
 export interface BreadcrumbItem {
@@ -127,10 +133,14 @@ export function buildGlobalGraph(): Record<string, unknown> {
   const physicianId = `${SITE_URL}#physician`
   const websiteId = `${SITE_URL}#website`
   const clinicId = buildPracticeLocationId('campo-grande')
+  const clinic = getIndexableLocations().find((location) => location.slug === 'campo-grande')
 
   return {
     '@context': 'https://schema.org',
     '@graph': [
+      // The practice location leads the graph so agents resolving "the
+      // organization" behind the site find its address and contact point.
+      ...(clinic ? [buildClinicNode(clinic)] : []),
       {
         '@type': ['Person', 'Physician'],
         '@id': physicianId,
@@ -142,6 +152,16 @@ export function buildGlobalGraph(): Record<string, unknown> {
         image: toAbsoluteUrl(SEO_IMAGE),
         telephone: BUSINESS_PHONE,
         email: BUSINESS_EMAIL,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'reservations',
+          name: 'Agendamento de consultas',
+          telephone: `+${WHATSAPP_NUMBER}`,
+          email: BUSINESS_EMAIL,
+          url: WHATSAPP_URL,
+          areaServed: 'BR',
+          availableLanguage: 'pt-BR',
+        },
         address: {
           '@type': 'PostalAddress',
           streetAddress: BUSINESS_ADDRESS.streetAddress,
@@ -406,58 +426,76 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
   }
 }
 
+/**
+ * Practice location as an organization with a postal address and a contact
+ * point. Shared by the global graph and the location page so both describe
+ * the same `@id` identically. `Organization` is listed explicitly next to
+ * the more specific type for consumers that only match the generic one.
+ */
+export function buildClinicNode(location: PracticeLocation): Record<string, unknown> {
+  const placeId = buildPracticeLocationId(location.slug)
+  const locationUrl = buildCanonical(`/locais-de-atendimento/${location.slug}`)
+  const telephone = location.phone ?? location.clinicPhone
+
+  return {
+    '@type': ['MedicalClinic', 'Organization'],
+    '@id': placeId,
+    name: location.name,
+    url: locationUrl,
+    image: toAbsoluteUrl(SEO_IMAGE),
+    medicalSpecialty: BUSINESS_SPECIALTY,
+    ...(telephone ? { telephone } : {}),
+    ...(location.address
+      ? {
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: [location.address.streetAddress, location.address.addressDetail]
+              .filter(Boolean)
+              .join(', '),
+            addressLocality: location.address.addressLocality,
+            addressRegion: location.address.addressRegion,
+            postalCode: location.address.postalCode,
+            addressCountry: location.address.addressCountry,
+          },
+        }
+      : {}),
+    ...(telephone
+      ? {
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer service',
+            ...(telephone ? { telephone } : {}),
+            url: locationUrl,
+            areaServed: 'BR',
+            availableLanguage: 'pt-BR',
+          },
+        }
+      : {}),
+    ...(location.geo
+      ? {
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: location.geo.latitude,
+            longitude: location.geo.longitude,
+          },
+        }
+      : {}),
+    sameAs: sanitizeSameAs([location.mapsUrl, location.websiteUrl, location.instagramUrl]),
+    ...(location.openingHours ? { openingHours: location.openingHours.schema } : {}),
+  }
+}
+
 export function buildLocationGraph(
   location: PracticeLocation,
 ): Record<string, unknown> | null {
   if (!location.address) return null
 
-  const locationUrl = buildCanonical(`/locais-de-atendimento/${location.slug}`)
   const placeId = buildPracticeLocationId(location.slug)
 
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'MedicalClinic',
-        '@id': placeId,
-        name: location.name,
-        url: locationUrl,
-        image: toAbsoluteUrl(SEO_IMAGE),
-        medicalSpecialty: BUSINESS_SPECIALTY,
-        ...(location.phone || location.clinicPhone
-          ? { telephone: location.phone ?? location.clinicPhone }
-          : {}),
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: [
-            location.address.streetAddress,
-            location.address.addressDetail,
-          ]
-            .filter(Boolean)
-            .join(', '),
-          addressLocality: location.address.addressLocality,
-          addressRegion: location.address.addressRegion,
-          postalCode: location.address.postalCode,
-          addressCountry: location.address.addressCountry,
-        },
-        ...(location.geo
-          ? {
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: location.geo.latitude,
-                longitude: location.geo.longitude,
-              },
-            }
-          : {}),
-        sameAs: sanitizeSameAs([
-          location.mapsUrl,
-          location.websiteUrl,
-          location.instagramUrl,
-        ]),
-        ...(location.openingHours
-          ? { openingHours: location.openingHours.schema }
-          : {}),
-      },
+      buildClinicNode(location),
       {
         '@type': ['Person', 'Physician'],
         '@id': `${SITE_URL}#physician`,

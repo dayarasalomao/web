@@ -225,7 +225,7 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   const pageGraph = await page
     .locator('script[type="application/ld+json"]')
     .allTextContents()
-  const activeGraph = pageGraph.find((graph) => graph.includes('"@type":"MedicalClinic"')) ?? ''
+  const activeGraph = pageGraph.find((graph) => graph.includes('"MedicalClinic"')) ?? ''
   expect(activeGraph).toContain('MedicalClinic')
   expect(activeGraph).toContain('PostalAddress')
   expect(activeGraph).toContain('GeoCoordinates')

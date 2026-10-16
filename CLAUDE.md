@@ -42,6 +42,9 @@ src/app/sitemap.ts              Sitemap route
 src/components/                 Homepage sections and shared components
 src/constants.ts                Shared contact, SEO, schema, sitemap, analytics data
 src/lib/blog.ts                 Blog parsing and metadata helpers
+src/lib/content-negotiation.ts  Accept parsing for Markdown negotiation
+src/lib/markdown.ts             Markdown representations served to AI agents
+src/proxy.ts                    Rewrites Accept: text/markdown requests
 src/lib/editorial-images.ts     Intrinsic dimensions for Markdown images
 src/lib/profile.ts              Shared biography, qualifications, memberships
 src/lib/seo-map.ts              Strategic query-to-page ownership
@@ -88,6 +91,10 @@ Reviewed image alt/caption values are documented in `docs/blog-image-editorial-r
 Blog images are placed editorially in Markdown beside the matching explanation, before the final H2. Never stack figures or put them inside lists, tables, FAQ, sources, or CTA sections. Secondary image captions may use the Markdown title (`![alt](src "existing caption")`); preserve medical disclaimers. Blog cards use decorative, uncropped 16:9 media and a branded panel when no image exists.
 
 Blog search titles use optional `seoTitle` (fallback: `title`); `title` remains the editorial H1. Use `Campo Grande (MS)` for local page titles. Keep educational articles specific to their questions, and link the specialist-choice guide to the canonical Campo Grande location page. Supplied Word image mappings are documented in `docs/blog-images-word-cross-reference.md` and `docs/blog-images-word-manifest.json`. Clinical adaptations and illustration provenance still need physician review before merge.
+
+## Agent Readiness
+
+Every public page negotiates `Accept: text/markdown` on the same URL (`src/proxy.ts` → `src/app/api/markdown`), with `Vary: Accept`, a Markdown 404 for unknown paths and 406 when neither HTML nor Markdown is acceptable. Markdown bodies are built in `src/lib/markdown.ts` from the same data as the HTML pages; never add facts there that the HTML does not publish. New HTML-only routes must be added to `HTML_ONLY_PATHS`. `/about`, `/contact` and `/privacy` redirect to the Portuguese pages. Run `tests/e2e/agent-readiness.spec.ts` against a production build when touching this, because Next overwrites `Vary` on HTML page responses.
 
 If domain, image, doctor credentials, contact information, or treatment content changes, review:
 

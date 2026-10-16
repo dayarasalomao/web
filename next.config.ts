@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto'
 import type { NextConfig } from 'next'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
@@ -8,8 +9,18 @@ const nextConfig: NextConfig = {
   // never hydrates, so every interactive element looks silently broken. The e2e
   // suite defaults to 127.0.0.1, so without this a reused dev server fails.
   allowedDevOrigins: ['127.0.0.1', 'localhost'],
+  // Inlined into both the proxy and the Markdown helper at build time so the
+  // helper can tell a real rewrite from a direct request with spoofed headers.
+  // A fresh value per build is fine: both bundles come from the same build.
+  env: {
+    MARKDOWN_REWRITE_TOKEN: process.env.MARKDOWN_REWRITE_TOKEN || randomBytes(24).toString('hex'),
+  },
   images: {
     qualities: [75, 85, 100],
+  },
+  // The Markdown handler reads blog sources at request time (see src/proxy.ts).
+  outputFileTracingIncludes: {
+    '/api/markdown/[[...path]]': ['./content/posts/**/*.md'],
   },
   async redirects() {
     return [
@@ -34,10 +45,24 @@ const nextConfig: NextConfig = {
         destination: '/blog/prurido-anal-causas-cuidados',
         permanent: true,
       },
+      // Conventional trust-anchor paths that agents probe before recommending
+      // a business. They point at the existing Portuguese pages so canonicals
+      // stay unchanged; with a single location, its page is the contact page.
+      { source: '/about', destination: '/sobre', permanent: true },
+      { source: '/contact', destination: '/locais-de-atendimento/campo-grande', permanent: true },
+      { source: '/contato', destination: '/locais-de-atendimento/campo-grande', permanent: true },
+      { source: '/privacy', destination: '/politica-privacidade', permanent: true },
     ]
   },
   async headers() {
     return [
+      // Utility pages stay out of search results without touching canonical
+      // pages, article images or social preview fetches. Deliberately no rule
+      // for `/api/:path*`: `next dev` matches config headers against the
+      // rewritten path, which would noindex the Markdown variant of canonical
+      // URLs. The Markdown helper sets noindex on its own 404s instead.
+      { source: '/design-system', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+      { source: '/politica-privacidade', headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
       {
         source: '/:path*',
         headers: [
