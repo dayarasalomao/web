@@ -81,7 +81,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             ) : null}
           </div>
 
-          <h1 className="mb-4 text-4xl font-semibold leading-tight text-teal lg:text-6xl">
+          <h1 className="mb-4 text-4xl font-semibold leading-tight text-teal [overflow-wrap:anywhere] hyphens-auto lg:text-6xl">
             {treatment.title}
           </h1>
 

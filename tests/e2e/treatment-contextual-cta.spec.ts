@@ -57,3 +57,15 @@ test.describe('treatment page booking path', () => {
     expect(message).not.toMatch(/laser|hemorr|fissura|f[ií]stula|hpv|cisto/i)
   })
 })
+
+test('long treatment titles fit the 390px viewport', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto(TREATMENT_PATH)
+
+  const heading = page.getByRole('heading', { level: 1 })
+  const { scrollWidth, clientWidth } = await heading.evaluate((h) => ({
+    scrollWidth: h.scrollWidth,
+    clientWidth: h.clientWidth,
+  }))
+  expect(scrollWidth).toBeLessThanOrEqual(clientWidth)
+})
