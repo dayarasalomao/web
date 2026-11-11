@@ -4,7 +4,8 @@ import { notFound } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BookingCard } from '@/components/ui/BookingCard'
 import { LocationCard } from '@/components/ui/LocationCard'
-import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME } from '@/constants'
+import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 import { buildTreatmentMetadata } from '@/lib/seo'
 import { buildTreatmentGraph, serializeJsonLd } from '@/lib/structured-data'
 import {
@@ -113,6 +114,23 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </time>
             </span>
           </div>
+
+          {/* On phones the sidebar booking card stacks below the whole main
+              column, several screens down. This keeps one labelled route to
+              the same WhatsApp destination next to the summary; desktop
+              already shows the sidebar card beside the content. */}
+          <div className="mt-6 lg:hidden">
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-conversion="whatsapp-treatment-intro"
+              className="btn btn-secondary w-full"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              Agendar avaliação pelo WhatsApp
+            </Link>
+          </div>
         </header>
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
@@ -197,6 +215,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
 
           <aside className="space-y-6">
             <BookingCard
+              eyebrow={treatment.shortTitle}
               title="Avalie seu caso com a Dra. Dayara"
               body="A indicação depende do diagnóstico, do exame físico e do seu histórico. Atendimento acolhedor, com explicação clara de cada etapa."
               conversionPrefix="treatment-page"
