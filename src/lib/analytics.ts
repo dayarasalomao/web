@@ -32,8 +32,27 @@ export interface ConversionEvent {
   placement: string
   /** Route the visitor converted from, e.g. `/blog/fissura-anal-causas-sintomas`. */
   pagePath: string
-  /** Destination the click resolved to. */
+  /** Destination the click resolved to (query and fragment are dropped). */
   destination: string
+}
+
+/**
+ * The destination as reported to analytics: scheme, host and path only.
+ *
+ * A WhatsApp link's query carries the prefilled message, and any link's
+ * query can carry campaign or personal data, so none of it leaves the
+ * browser in an event. `tel:` numbers are the practice's public phone.
+ */
+export function sanitizeDestination(href: string): string {
+  try {
+    const url = new URL(href)
+    if (url.protocol === 'http:' || url.protocol === 'https:') {
+      return `${url.origin}${url.pathname}`
+    }
+    return `${url.protocol}${url.pathname}`
+  } catch {
+    return href.split(/[?#]/)[0]
+  }
 }
 
 /**
@@ -49,7 +68,7 @@ export function trackConversion(
   const payload = {
     placement: event.placement,
     page_path: event.pagePath,
-    destination: event.destination,
+    destination: sanitizeDestination(event.destination),
   }
 
   try {
