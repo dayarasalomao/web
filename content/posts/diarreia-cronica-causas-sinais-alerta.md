@@ -6,7 +6,7 @@ metaDescription: >-
   exigem atenção e como a avaliação médica orienta o tratamento.
 slug: diarreia-cronica-causas-sinais-alerta
 publishDate: 2026-05-06T00:00:00.000Z
-lastModified: 2026-10-13
+lastModified: 2026-11-12
 primaryKeyword: diarreia crônica
 secondaryKeywords:
   - diarreia persistente
@@ -15,6 +15,15 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 11
+sources:
+  - title: Guidelines for the investigation of chronic diarrhoea in adults (3rd edition)
+    organization: British Society of Gastroenterology (BSG) — Gut 2018;67:1380–1399
+    url: https://doi.org/10.1136/gutjnl-2017-315909
+    accessedAt: '2026-09-10'
+  - title: 'ACG Clinical Guideline: Management of Irritable Bowel Syndrome'
+    organization: American College of Gastroenterology (ACG) — Am J Gastroenterol 2021;116:17–44
+    url: https://doi.org/10.14309/ajg.0000000000001036
+    accessedAt: '2026-09-10'
 faqs:
   - question: Toda diarreia prolongada é infecção?
     answer: >-
@@ -30,6 +39,20 @@ faqs:
       Evite restrições amplas sem orientação. Anotar sintomas e relação com
       alimentos pode ajudar, mas dietas muito restritivas podem atrapalhar a
       avaliação.
+  - question: A partir de quando a diarreia é considerada crônica?
+    answer: >-
+      Quando as fezes ficam amolecidas ou líquidas e mais frequentes por mais de
+      quatro semanas. Esse tempo sugere uma causa não infecciosa e justifica
+      investigação.
+  - question: Colonoscopia normal e a diarreia continua. E agora?
+    answer: >-
+      Algumas causas não aparecem a olho nu, como a colite microscópica, que só é
+      diagnosticada com biópsias do cólon. A diarreia por ácidos biliares também
+      tem exame próprio.
+  - question: Perder fezes sem querer é diarreia?
+    answer: >-
+      Não necessariamente. A incontinência fecal é muitas vezes confundida com
+      diarreia, mas é outro problema, com outra investigação e outro tratamento.
 disclaimer: >-
   Este artigo não substitui consulta médica. Procure atendimento se a diarreia é
   persistente, recorrente ou associada a sangue, febre, perda de peso, anemia,
@@ -46,9 +69,11 @@ image:
 
 ## O que é diarreia crônica?
 
-Diarreia crônica é a presença de evacuações líquidas ou muito pastosas por um período prolongado. Pode vir acompanhada de urgência para ir ao banheiro, cólicas, gases, muco, sensação de esvaziamento incompleto ou dificuldade para controlar a evacuação.
+Diarreia crônica é a presença de evacuações líquidas ou muito pastosas por mais de quatro semanas. Pode vir acompanhada de urgência para ir ao banheiro, cólicas, gases, muco, sensação de esvaziamento incompleto ou dificuldade para controlar a evacuação.
 
 Mais do que contar quantas vezes a pessoa evacua, é importante entender consistência das fezes, duração do quadro, sintomas associados e impacto na rotina.
+
+Também vale diferenciar diarreia de incontinência fecal, a perda de fezes sem querer. As duas são muitas vezes confundidas, mas têm investigação e tratamento diferentes.
 
 ## Possíveis causas
 
@@ -71,6 +96,8 @@ Alguns sinais indicam necessidade de avaliação com mais atenção:
 * diarreia persistente após viagem, antibióticos ou infecções.
 
 Esses achados ajudam a decidir se são necessários exames laboratoriais, avaliação das fezes, colonoscopia ou outros métodos.
+
+Os primeiros exames costumam ser de sangue, incluindo o de doença celíaca, e de fezes, como a calprotectina, que procura inflamação no intestino. Quando a colonoscopia é feita, biópsias podem ser necessárias mesmo com o intestino de aparência normal, porque algumas causas, como a colite microscópica, só aparecem no microscópio.
 
 ## Como a consulta ajuda?
 
