@@ -6,7 +6,7 @@ metaDescription: >-
   avaliação e quais sinais de alerta observar.
 slug: alteracoes-habito-intestinal-quando-avaliar
 publishDate: 2026-04-24T00:00:00.000Z
-lastModified: 2026-10-13
+lastModified: 2026-11-12
 primaryKeyword: alteração do hábito intestinal
 secondaryKeywords:
   - mudança no funcionamento do intestino
@@ -15,6 +15,15 @@ secondaryKeywords:
 targetAudience: patients
 intent: awareness
 order: 23
+sources:
+  - title: 'Colorectal Cancer: Screening — Final Recommendation Statement'
+    organization: US Preventive Services Task Force (USPSTF), 2021
+    url: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening
+    accessedAt: '2026-09-10'
+  - title: Guidelines for the investigation of chronic diarrhoea in adults (3rd edition)
+    organization: British Society of Gastroenterology (BSG) — Gut 2018;67:1380–1399
+    url: https://doi.org/10.1136/gutjnl-2017-315909
+    accessedAt: '2026-09-10'
 faqs:
   - question: Toda mudança no intestino é preocupante?
     answer: >-
@@ -35,6 +44,11 @@ faqs:
       Sim. Fezes pretas, muito escuras ou com aspecto de borra podem indicar
       sangramento em outra parte do aparelho digestivo e devem ser avaliadas com
       rapidez.
+  - question: Tenho menos de 45 anos. Posso esperar a idade do rastreamento?
+    answer: >-
+      Não, se você tem sintomas. As idades de rastreamento valem para pessoas sem
+      sintomas. Uma mudança persistente do intestino, ou sangramento, pede
+      avaliação em qualquer idade.
 disclaimer: >-
   Este artigo não substitui consulta médica. Mudanças persistentes do hábito
   intestinal ou sintomas associados a sangramento, perda de peso, anemia ou dor
@@ -88,7 +102,29 @@ As causas variam de alterações funcionais, como [síndrome do intestino irrit�
 
 A consulta ajuda a organizar os sintomas, identificar sinais de alerta e decidir se exames são necessários.
 
-Pessoas em idade de rastreamento para câncer colorretal, em geral a partir dos 50 anos para risco médio no Brasil, ou com histórico familiar relevante devem discutir prevenção e exames apropriados com o médico. O uso prolongado de laxantes ou antidiarreicos por conta própria também deve ser evitado.
+O uso prolongado de laxantes ou antidiarreicos por conta própria deve ser evitado, porque pode esconder a evolução dos sintomas.
+
+## Perda de fezes também conta
+
+Às vezes o que a pessoa chama de diarreia é, na verdade, **dificuldade para segurar as fezes** (incontinência fecal). A diretriz britânica sobre diarreia crônica destaca que essa confusão é comum. São problemas diferentes, com investigação diferente, por isso vale descrever com clareza o que está acontecendo na consulta.
+
+## Rastreamento e investigação são coisas diferentes
+
+Muita gente ouve que os exames para câncer colorretal "começam aos 45 ou 50 anos" e conclui que, abaixo dessa idade, pode esperar. Esse raciocínio vale para o **rastreamento**, que é feito em pessoas **sem sintomas**. Nos Estados Unidos, por exemplo, a força-tarefa de prevenção (USPSTF) recomenda o rastreamento a partir dos 45 anos em adultos de risco médio.
+
+Uma **mudança do hábito intestinal é um sintoma**. Quando ela aparece, a pessoa sai do caminho do rastreamento e entra no da **investigação**, que não depende de uma idade mínima e é guiada pelos sintomas.
+
+Histórico familiar de câncer colorretal, síndromes hereditárias e doença inflamatória intestinal também seguem caminhos próprios, que devem ser discutidos na consulta.
+
+## Como a investigação costuma começar
+
+A investigação é escolhida pela suspeita. Em linhas gerais:
+
+* **exames de sangue**, como hemograma, ferritina, marcadores de inflamação, função da tireoide e teste para doença celíaca, conforme o caso;
+* **exames de fezes**, como a calprotectina fecal, que procura inflamação no intestino, e a pesquisa de sangue oculto. Um resultado negativo de sangue oculto ajuda a priorizar, mas não exclui sozinho todas as causas;
+* **colonoscopia**, indicada quando há suspeita de lesão ou inflamação no intestino grosso. A diretriz britânica recomenda a colonoscopia para excluir câncer colorretal quando há **mudança do hábito intestinal, com ou sem sangramento**.
+
+Quando a colonoscopia é feita para investigar diarreia, as biópsias importam: algumas inflamações deixam o intestino com aparência normal e só aparecem na análise do tecido. Quando necessários, esses exames são solicitados como parte da investigação.
 
 ## Como se preparar para a consulta?
 
