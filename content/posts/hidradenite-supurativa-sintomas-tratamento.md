@@ -6,7 +6,7 @@ metaDescription: >-
   e região perianal, e quando procurar avaliação.
 slug: hidradenite-supurativa-sintomas-tratamento
 publishDate: 2026-05-13T00:00:00.000Z
-lastModified: 2026-10-13
+lastModified: 2026-11-12
 primaryKeyword: hidradenite supurativa
 secondaryKeywords:
   - hidradenite perianal
@@ -15,6 +15,11 @@ secondaryKeywords:
 targetAudience: patients
 intent: consideration
 order: 13
+sources:
+  - title: Hidradenitis Suppurativa Perineal and Perianal
+    organization: 'Luporini RL, et al. — Benign Anorectal Disorders: An Update (IntechOpen, 2022)'
+    url: https://doi.org/10.5772/intechopen.105632
+    accessedAt: '2026-09-10'
 faqs:
   - question: Hidradenite supurativa é falta de higiene?
     answer: >-
@@ -29,6 +34,16 @@ faqs:
     answer: >-
       Não. O tratamento depende da extensão, frequência das crises, presença de
       abscessos, trajetos, cicatrizes e resposta às medidas clínicas.
+  - question: Como saber se é hidradenite ou fístula anal?
+    answer: >-
+      Um dos pontos que ajudam é saber se o canal anal está envolvido. Na
+      hidradenite, os trajetos ficam na pele, sem chegar ao canal anal. Essa
+      distinção é feita no exame da região.
+  - question: Fumar ou estar acima do peso piora a hidradenite?
+    answer: >-
+      Tabagismo e obesidade estão associados à doença e podem agravar as
+      crises. Isso não é culpa de quem tem hidradenite, e o tratamento não
+      depende de resolver esses fatores primeiro.
 disclaimer: >-
   Este artigo não substitui consulta médica. Procure avaliação se você tem
   nódulos dolorosos, abscessos recorrentes, secreção, cicatrizes ou lesões
@@ -59,7 +74,9 @@ Os sinais mais comuns incluem:
 * túneis ou trajetos sob a pele;
 * dor, mau cheiro, desconforto e impacto na vida social ou sexual.
 
-Quando essas lesões aparecem perto do ânus, é importante diferenciar hidradenite de [fístula anal](/blog/fistula-anal-o-que-e-sintomas), abscessos anorretais, [doença de Crohn](/blog/doencas-inflamatorias-intestinais-crohn-retocolite) e outras condições.
+Quando essas lesões aparecem perto do ânus, é importante diferenciar hidradenite de [fístula anal](/blog/fistula-anal-o-que-e-sintomas), abscessos anorretais, cisto pilonidal, [doença de Crohn](/blog/doencas-inflamatorias-intestinais-crohn-retocolite) e outras condições.
+
+Um dos pontos que ajudam nessa diferença é saber se o canal anal está envolvido. Na hidradenite, os trajetos ficam na pele e não chegam ao canal anal. Na fístula, o trajeto começa dentro do canal.
 
 ## Por que a avaliação é importante?
 
