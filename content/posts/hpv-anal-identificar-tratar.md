@@ -1,9 +1,8 @@
 ---
 title: 'HPV Anal: Como Identificar e Tratar'
-seoTitle: 'HPV anal: como identificar e tratar'
+seoTitle: 'HPV anal: sinais, verrugas e como é o tratamento'
 metaDescription: >-
-  Saiba como o HPV se manifesta na região anal, quais sintomas merecem atenção e
-  por que o tratamento e o acompanhamento são individualizados.
+  HPV anal pode aparecer como verrugas ao redor do ânus, mas nem toda lesão é HPV. Veja os sinais que merecem atenção e como são tratamento e acompanhamento.
 slug: hpv-anal-identificar-tratar
 publishDate: 2026-05-23T00:00:00.000Z
 lastModified: 2026-10-13
