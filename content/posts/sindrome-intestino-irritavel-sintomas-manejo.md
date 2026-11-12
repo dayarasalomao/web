@@ -6,7 +6,7 @@ metaDescription: >-
   exames costumam ser necessários e o que as diretrizes indicam para o manejo.
 slug: sindrome-intestino-irritavel-sintomas-manejo
 publishDate: 2026-05-09T00:00:00.000Z
-lastModified: 2026-11-11
+lastModified: 2026-11-12
 primaryKeyword: síndrome do intestino irritável
 secondaryKeywords:
   - intestino irritável sintomas
@@ -42,10 +42,11 @@ faqs:
       dor, distensão, gatilhos alimentares e impacto na rotina.
   - question: Preciso fazer colonoscopia para saber se é intestino irritável?
     answer: >-
-      Não de rotina. As diretrizes não recomendam colonoscopia de rotina em
-      pessoas abaixo de 45 anos sem sinais de alerta. Quando há sangramento,
-      perda de peso, anemia, histórico familiar importante ou início dos
-      sintomas em idade mais avançada, a investigação muda.
+      Não de rotina. O American College of Gastroenterology (ACG) não recomenda
+      colonoscopia de rotina em pessoas abaixo de 45 anos sem sinais de alerta.
+      Quando há sangramento, perda de peso, anemia, histórico familiar
+      importante ou início dos sintomas em idade mais avançada, a investigação
+      muda.
   - question: Teste de intolerância alimentar por IgG ajuda?
     answer: >-
       Não. Dietas de exclusão guiadas por exames de IgG para alimentos não são
@@ -104,7 +105,7 @@ Pelos critérios de Roma IV, a dor abdominal aparece em média pelo menos um dia
 
 ### Exames que as diretrizes **não** recomendam de rotina
 
-* **colonoscopia** em pessoas com menos de 45 anos e sem sinais de alerta;
+* **colonoscopia** em pessoas com menos de 45 anos e sem sinais de alerta (recomendação do ACG);
 * pesquisa de micro-organismos nas fezes em todos os pacientes;
 * testes de alergia ou de "intolerância alimentar" sem uma suspeita concreta de alergia;
 * painéis de **IgG para alimentos**, usados para montar dietas de exclusão.
@@ -113,7 +114,7 @@ Para muita gente, essa é a parte mais surpreendente: mais exames não significa
 
 ## Sinais de alerta
 
-Alguns sinais mudam o caminho da investigação e pedem avaliação especializada:
+A orientação para pacientes da British Society of Gastroenterology (BSG) destaca estes sinais, que mudam o caminho da investigação e pedem avaliação especializada:
 
 * sangramento pelo ânus;
 * perda de peso sem explicação;
@@ -136,7 +137,7 @@ O manejo é individual e depende do padrão predominante. O que as diretrizes in
 
 A **dieta com baixo teor de FODMAPs** é considerada uma segunda etapa. Ela deve ser feita com acompanhamento de nutricionista e com reintrodução planejada dos alimentos, porque cortes longos e sem orientação empobrecem a alimentação sem necessidade.
 
-A **dieta sem glúten** não é recomendada para tratar a SII. Doença celíaca é outro diagnóstico, que precisa ser investigado antes.
+A **dieta sem glúten** não é recomendada pela BSG para tratar a SII. Doença celíaca é outro diagnóstico, que precisa ser investigado antes.
 
 ## Medicamentos e outras terapias
 
@@ -144,7 +145,7 @@ Há medicamentos para cada padrão, seja diarreia, constipação ou dor, e a esc
 
 Alguns pontos costumam gerar dúvida:
 
-* alguns antidepressivos são usados em **doses baixas** para reduzir a sensibilidade do intestino e a dor, não para tratar depressão;
+* alguns antidepressivos são usados em **doses baixas** para reduzir a sensibilidade do intestino e a dor, não para tratar depressão; a escolha e a dose ficam para a consulta;
 * sobre os **probióticos**, as diretrizes discordam: a BSG considera razoável um teste de até 12 semanas, suspendendo se não houver melhora, enquanto a ACG não os recomenda para os sintomas globais;
 * terapias psicológicas específicas para o intestino, como a terapia cognitivo-comportamental e a hipnoterapia dirigida ao intestino, também têm espaço, principalmente quando os sintomas persistem.
 
