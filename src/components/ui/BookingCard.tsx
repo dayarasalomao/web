@@ -7,6 +7,8 @@ import {
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 
 interface BookingCardProps {
+  /** Short context line above the title, e.g. the treatment being read. */
+  eyebrow?: string
   title: string
   body: string
   /** Distinguishes this card's conversions from other CTAs on the page. */
@@ -24,6 +26,7 @@ interface BookingCardProps {
  * sometimes still call.
  */
 export function BookingCard({
+  eyebrow,
   title,
   body,
   conversionPrefix,
@@ -33,6 +36,11 @@ export function BookingCard({
     <section
       className={`rounded-[1.5rem] bg-teal p-7 text-cream shadow-[0_20px_36px_-26px_rgba(29,65,76,0.45)] ${className}`}
     >
+      {eyebrow ? (
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-cream/80">
+          {eyebrow}
+        </p>
+      ) : null}
       <h2 className="font-serif text-2xl leading-tight text-white">{title}</h2>
       <p className="mt-3 text-[0.95rem] leading-relaxed text-cream/75">{body}</p>
 
@@ -44,7 +52,7 @@ export function BookingCard({
         className="btn btn-soft mt-6 w-full"
       >
         <WhatsAppIcon className="h-5 w-5" />
-        Agendar pelo WhatsApp
+        Agendar avaliação pelo WhatsApp
       </Link>
 
       <a
