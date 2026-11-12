@@ -28,7 +28,7 @@ export const OG_CONTENT_TYPE = 'image/png'
 
 /** Real photos of the doctor, by where they are used. */
 export const OG_PHOTOS = {
-  default: '/assets/day-clinica-pe.webp',
+  default: '/assets/dayara-frente-pose.webp',
   about: '/assets/dayara-profissional-vermelho.webp',
   treatment: '/assets/dayara-clinica.webp',
   location: '/assets/dayara-frente-pose.webp',
