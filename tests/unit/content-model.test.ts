@@ -13,6 +13,7 @@ import {
   getAllTreatmentSlugs,
   getFeaturedHomeTreatments,
   getTreatmentBySlug,
+  getTreatmentByRelatedBlogSlug,
   HOME_FEATURED_TREATMENT_SLUGS,
   DISEASE_TO_TREATMENT_SLUG,
   TREATMENT_CARD_TO_SLUG,
@@ -146,6 +147,17 @@ describe('treatment content model', () => {
           `treatment "${treatment.slug}" references missing post "${slug}"`,
         )
       }
+    }
+  })
+
+  it('posts whose title names a treatment lead to that treatment page', () => {
+    const expected: Array<[string, string]> = [
+      ['primeiros-30-dias-hemorroidectomia-laser-co2', 'hemorroidectomia-laser-co2'],
+      ['por-que-a-fistula-anal-aparece', 'fistula-anal-laser-vaaft-filac'],
+      ['cisto-pilonidal-cirurgia-convencional-x-laser', 'cisto-pilonidal-laser-epsit'],
+    ]
+    for (const [post, treatment] of expected) {
+      assert.equal(getTreatmentByRelatedBlogSlug(post)?.slug, treatment, post)
     }
   })
 
