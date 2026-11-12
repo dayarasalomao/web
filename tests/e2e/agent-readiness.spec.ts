@@ -68,6 +68,14 @@ test('missing pages return a Markdown 404 for agents and HTML for browsers', asy
   const html = await request.get('/__ora-404-probe-1g7sbpt9', { headers: { Accept: 'text/html' } })
   expect(html.status()).toBe(404)
   expect(html.headers()['content-type']).toContain('text/html')
+  const htmlBody = await html.text()
+  expect(htmlBody).toContain('Página não encontrada')
+  expect(htmlBody).toContain('Esse endereço não existe no site da Dra. Dayara Salomão')
+  expect(htmlBody).toContain('Ir para o início')
+  expect(htmlBody).toContain('Falar no WhatsApp')
+  expect(htmlBody).toContain('data-conversion="whatsapp-not-found"')
+  expect(htmlBody).toContain('Ver tratamentos')
+  expect(htmlBody).toContain('Ler o blog')
 })
 
 test('static files and HTML-only routes are not negotiated', async ({ request }) => {

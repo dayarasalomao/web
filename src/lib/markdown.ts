@@ -311,10 +311,11 @@ export function renderNotFoundMarkdown(pathname: string): string {
       'Para encontrar o conteúdo procurado:',
       '',
       `- [Página inicial](${SITE_URL})`,
+      `- [Tratamentos](${buildCanonical('/tratamentos')})`,
+      `- [Blog](${buildCanonical('/blog')})`,
+      `- [Agendamento por WhatsApp](${WHATSAPP_URL})`,
       `- [Guia para agentes de IA (llms.txt)](${LLMS_TXT_URL})`,
       `- [Mapa do site (sitemap.xml)](${SITEMAP_URL})`,
-      `- [Blog](${buildCanonical('/blog')})`,
-      `- [Tratamentos](${buildCanonical('/tratamentos')})`,
     ].join('\n'),
   )
 }

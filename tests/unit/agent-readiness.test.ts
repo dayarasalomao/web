@@ -137,6 +137,9 @@ describe('Markdown representations', () => {
       assert.ok(document.body.length >= 20)
       assert.ok(document.body.includes('https://www.dayarasalomao.com.br/llms.txt'))
       assert.ok(document.body.includes('https://www.dayarasalomao.com.br/sitemap.xml'))
+      assert.ok(document.body.includes('https://wa.me/556721803675'))
+      assert.ok(document.body.includes('/tratamentos'))
+      assert.ok(document.body.includes('/blog'))
       assert.match(document.body, /^# Página não encontrada \(404\)/)
     }
   })
