@@ -1,10 +1,8 @@
 ---
 title: 'Caroço, verruga ou ferida na região anal: como saber o que é'
-seoTitle: 'Caroço, verruga ou ferida anal: o que observar'
+seoTitle: 'Caroço ou verruga no ânus: o que pode ser e o que observar'
 metaDescription: >-
-  Plicoma, verruga de HPV, hemorroida trombosada, abscesso, hidradenite: causas
-  diferentes com aparência parecida. Veja o que distingue cada uma e quando a
-  avaliação é urgente.
+  Caroço ou verruga no ânus pode ser plicoma, HPV, hemorroida trombosada, abscesso ou hidradenite. Veja o que diferencia cada um e quando não adiar a consulta.
 slug: lesoes-verrugas-nodulos-regiao-anal-o-que-observar
 publishDate: 2026-03-27
 lastModified: 2026-10-13
