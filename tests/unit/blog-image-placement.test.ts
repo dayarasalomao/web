@@ -109,7 +109,7 @@ describe('blog image placement guardrails (AC1/2/3)', () => {
   })
 })
 
-it('preserves original editorial images while declared covers drive OG/Article URLs (AC7, F2/3)', () => {
+it('preserves original editorial images; previews are rendered per post and Article uses the shown figure (AC7, F2/3)', () => {
   const baseline = JSON.parse(fs.readFileSync(`${specDir}/image-baseline.json`, 'utf8')) as Array<{ slug: string; cardImage?: unknown }>
   const posts = getAllPosts()
   assert.equal(posts.length, baseline.length)
@@ -122,9 +122,9 @@ it('preserves original editorial images while declared covers drive OG/Article U
     if (previous.height) assert.equal(image?.height, previous.height)
   }
   for (const post of getAllPosts().filter((post) => post.cardImage)) {
-    const imageUrl = `https://www.dayarasalomao.com.br${post.cardImage!.src}`
+    const imageUrl = `https://www.dayarasalomao.com.br${(post.image ?? post.coverImage ?? post.cardImage)!.src}`
     const images = buildPostMetadata(post).openGraph?.images as Array<{ url: string }>
-    assert.equal(new URL(images[0].url, 'https://www.dayarasalomao.com.br').href, imageUrl)
+    assert.equal(images[0].url, `/blog/${post.slug}/opengraph-image`)
     const graph = buildBlogPostGraph(post) as { '@graph': Array<Record<string, unknown>> }
     const image = graph['@graph'].find((node) => node['@type'] === 'Article')?.image
     assert.equal(typeof image === 'string' ? image : (image as { contentUrl: string }).contentUrl, imageUrl)

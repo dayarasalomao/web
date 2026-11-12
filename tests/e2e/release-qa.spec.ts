@@ -80,12 +80,13 @@ test('all indexable routes return 200 with canonical metadata and coherent artic
     expect(meta(html, 'name', 'robots') ?? '').not.toContain('noindex')
     const post = posts.find((post) => path === `/blog/${post.slug}`)
     if (post) {
-      expect(meta(html, 'property', 'og:image'), post.slug).toBe(`${SITE}${post.cardImage!.src}`)
-      expect(meta(html, 'name', 'twitter:image'), post.slug).toBe(`${SITE}${post.cardImage!.src}`)
+      expect(meta(html, 'property', 'og:image'), post.slug).toBe(`${SITE}/blog/${post.slug}/opengraph-image`)
+      expect(meta(html, 'name', 'twitter:image'), post.slug).toBe(`${SITE}/blog/${post.slug}/opengraph-image`)
       const graph = Array.from(html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g), ([, json]) => JSON.parse(json))
         .flatMap((item) => item['@graph'] ?? [item])
       const articleImage = graph.find((item) => item['@type'] === 'Article')?.image
-      expect(typeof articleImage === 'string' ? articleImage : articleImage.contentUrl, post.slug).toBe(`${SITE}${post.cardImage!.src}`)
+      const shown = post.image ?? post.coverImage ?? post.cardImage
+      expect(typeof articleImage === 'string' ? articleImage : articleImage.contentUrl, post.slug).toBe(`${SITE}${shown!.src}`)
     }
   }
 })

@@ -12,7 +12,7 @@ import {
 import type { BlogPost } from './blog.ts'
 import type { Treatment } from './treatments.ts'
 import { toSchemaDateTime } from './dates.ts'
-import { getEditorialImageDimensions } from './editorial-images.ts'
+import { isTeachingFigure } from './og-figure.ts'
 
 export function buildCanonical(path: string): string {
   const normalizedBase = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL
@@ -82,11 +82,13 @@ export function buildTwitterMetadata(opts: TwitterOptions): NonNullable<Metadata
 export function buildPostMetadata(post: BlogPost): Metadata {
   const url = buildCanonical(`/blog/${post.slug}`)
   const title = post.seoTitle ?? post.title
-  const image = post.cardImage?.src ?? BLOG_DEFAULT_OG_IMAGE
-  const imageDimensions = post.cardImage?.width && post.cardImage?.height
-    ? { width: post.cardImage.width, height: post.cardImage.height }
-    : getEditorialImageDimensions(image)
-  const imageAlt = post.cardImage?.alt ?? `${post.title} — ${SEO_DOCTOR_NAME}`
+  // Rendered by app/blog/[slug]/opengraph-image.tsx from the figure the
+  // article shows (post.image), so previews match what the reader sees.
+  const image = `/blog/${post.slug}/opengraph-image`
+  const imageDimensions = { width: 1200, height: 630 }
+  const imageAlt = post.image && isTeachingFigure(post.image.src)
+    ? post.image.alt
+    : `${post.title} — ${SEO_DOCTOR_NAME}`
 
   return {
     title,
@@ -142,7 +144,7 @@ export function buildTreatmentMetadata(treatment: Treatment): Metadata {
       title: localizedTitle,
       description: localizedDescription,
       url,
-      image: BLOG_DEFAULT_OG_IMAGE,
+      image: `/tratamentos/${treatment.slug}/opengraph-image`,
       imageAlt,
       type: 'website',
       modifiedTime: treatment.lastUpdated,
@@ -150,7 +152,7 @@ export function buildTreatmentMetadata(treatment: Treatment): Metadata {
     twitter: buildTwitterMetadata({
       title: localizedTitle,
       description: localizedDescription,
-      image: BLOG_DEFAULT_OG_IMAGE,
+      image: `/tratamentos/${treatment.slug}/opengraph-image`,
     }),
     robots: DEFAULT_ROBOTS,
   }

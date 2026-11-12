@@ -96,9 +96,10 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
       title,
       description,
       url: canonical,
+      image: `/locais-de-atendimento/${location.slug}/opengraph-image`,
       imageAlt: `${SEO_DOCTOR_NAME} — atendimento em ${location.city}/${location.stateCode}`,
     }),
-    twitter: buildTwitterMetadata({ title, description }),
+    twitter: buildTwitterMetadata({ title, description, image: `/locais-de-atendimento/${location.slug}/opengraph-image` }),
   }
 }
 

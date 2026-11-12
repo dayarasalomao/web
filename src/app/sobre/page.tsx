@@ -37,11 +37,13 @@ export const metadata: Metadata = {
     title: ABOUT_TITLE,
     description: ABOUT_DESCRIPTION,
     url: ABOUT_URL,
+    image: '/sobre/opengraph-image',
     imageAlt: `Retrato profissional da ${SEO_DOCTOR_NAME}`,
   }),
   twitter: buildTwitterMetadata({
     title: ABOUT_TITLE,
     description: ABOUT_DESCRIPTION,
+    image: '/sobre/opengraph-image',
   }),
   robots: DEFAULT_ROBOTS,
 }
