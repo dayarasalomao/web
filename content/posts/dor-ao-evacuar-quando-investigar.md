@@ -1,17 +1,18 @@
 ---
 title: 'Dor ao Evacuar: O Que Pode Ser e Quando Investigar'
-seoTitle: 'Dor ao evacuar: causas e quando investigar'
+seoTitle: 'Dor ao evacuar: o que pode ser e quando investigar'
 metaDescription: >-
   Saiba quais causas podem estar por trás da dor ao evacuar, quando o sintoma
   merece avaliação e como o diagnóstico orienta o tratamento.
 slug: dor-ao-evacuar-quando-investigar
 publishDate: 2026-03-04T00:00:00.000Z
-lastModified: 2026-10-13
+lastModified: 2026-11-12
 primaryKeyword: dor ao evacuar
 secondaryKeywords:
   - dor anal ao evacuar
   - fissura anal
   - dor e sangramento ao evacuar
+  - dor ao defecar
 targetAudience: patients
 intent: awareness
 order: 21
@@ -45,11 +46,21 @@ image:
 
 ## O que pode causar dor ao evacuar?
 
-A dor ao evacuar pode ter diferentes causas. Uma das mais comuns é a [fissura anal](/blog/fissura-anal-causas-sintomas), uma pequena ferida na borda do ânus que costuma causar dor em corte, ardor e, às vezes, sangramento vivo.
+A dor ao evacuar (ou ao defecar) pode ter diferentes causas. Uma das mais comuns é a [fissura anal](/blog/fissura-anal-causas-sintomas), uma pequena ferida na borda do ânus que costuma causar dor em corte, ardor e, às vezes, sangramento vivo.
 
 Também podem estar envolvidos [doença hemorroidária](/blog/doenca-hemorroidaria-sintomas-graus), inflamações, abscessos, irritação da pele, diarreia frequente, constipação, trauma por fezes endurecidas ou outras alterações da região anal.
 
-Em situações menos comuns, dor e sangramento persistentes também podem exigir investigação para pólipos, tumores ou outras doenças do reto e do canal anal. Quando existe um caroço dolorido e arroxeado na borda do ânus, uma possibilidade é trombose hemorroidária. Nesses casos, não se deve tentar furar ou drenar em casa.
+Em situações menos comuns, dor e sangramento persistentes também podem exigir investigação para pólipos, tumores ou outras doenças do reto e do canal anal.
+
+## O tipo de dor dá pistas
+
+A forma como a dor aparece ajuda a orientar a consulta, mas não substitui o exame:
+
+* dor em corte ou ardor ao evacuar, às vezes com sangue vivo, lembra fissura;
+* caroço dolorido e arroxeado na borda do ânus pode ser [trombose hemorroidária](/blog/hemorroida-externa-trombosada);
+* dor latejante e contínua, com inchaço, calor local ou febre, pode indicar abscesso e pede avaliação rápida.
+
+Nos casos de caroço ou inchaço, não se deve tentar furar ou drenar em casa.
 
 ## O ciclo da dor e do intestino preso
 
