@@ -2,8 +2,8 @@
 title: 'Diarreia Crônica: Causas e Sinais de Alerta'
 seoTitle: 'Diarreia crônica: causas e sinais de alerta'
 metaDescription: >-
-  Diarreia há mais de 4 semanas: como é definida, quais exames costumam vir
-  primeiro, quando a colonoscopia entra e por que não confundir com incontinência.
+  Saiba quando a diarreia persistente precisa ser investigada, quais sintomas
+  exigem atenção e como a avaliação médica orienta o tratamento.
 slug: diarreia-cronica-causas-sinais-alerta
 publishDate: 2026-05-06T00:00:00.000Z
 lastModified: 2026-11-12
@@ -65,76 +65,50 @@ image:
   height: 941
 ---
 
-*Diarreia que dura mais de quatro semanas deixa de parecer uma virose e passa a merecer investigação. O caminho costuma começar com exames simples de sangue e de fezes, e a colonoscopia entra quando há motivo para ela.*
+*Diarreia que persiste ou volta com frequência não deve ser tratada apenas como "algo que comi": ela pode ter várias causas e precisa ser analisada junto com o contexto clínico.*
 
 ## O que é diarreia crônica?
 
-A diretriz da British Society of Gastroenterology (BSG) define a diarreia crônica como uma mudança persistente do padrão intestinal, com fezes **amolecidas ou líquidas** e evacuações **mais frequentes**, por **mais de quatro semanas**.
+Diarreia crônica é a presença de evacuações líquidas ou muito pastosas por mais de quatro semanas. Pode vir acompanhada de urgência para ir ao banheiro, cólicas, gases, muco, sensação de esvaziamento incompleto ou dificuldade para controlar a evacuação.
 
-Dois detalhes ajudam a entender essa definição:
+Mais do que contar quantas vezes a pessoa evacua, é importante entender consistência das fezes, duração do quadro, sintomas associados e impacto na rotina.
 
-* o que importa é a **consistência** das fezes, dos tipos 5 a 7 da escala de Bristol, e a frequência. Pesar as fezes não é recomendado como medida;
-* depois de quatro semanas, a chance de a causa ser uma infecção comum diminui, e outras causas passam a ser consideradas.
+Também vale diferenciar diarreia de incontinência fecal, a perda de fezes sem querer. As duas são muitas vezes confundidas, mas têm investigação e tratamento diferentes.
 
-## Diarreia ou incontinência?
+## Possíveis causas
 
-Um ponto que a própria diretriz destaca: muitas pessoas chamam de diarreia o que, na verdade, é **incontinência fecal**, ou seja, a perda de fezes sem conseguir segurar. São problemas diferentes, com investigação e tratamento diferentes.
+A diarreia persistente pode estar relacionada a infecções, intolerâncias alimentares, uso de medicamentos, alterações da absorção intestinal, [síndrome do intestino irritável](/blog/sindrome-intestino-irritavel-sintomas-manejo), [doença inflamatória intestinal](/blog/doencas-inflamatorias-intestinais-crohn-retocolite), doença celíaca, alterações biliares e outras condições.
 
-Se o que mais incomoda é a urgência ou a perda de fezes, vale dizer isso com clareza na consulta. É uma queixa que entra diretamente na avaliação coloproctológica.
+Por isso, nem sempre a solução é tomar antidiarreico ou restringir alimentos. O tratamento depende da causa provável ou confirmada.
 
-## Causas possíveis
+## Sinais de alerta
 
-A diarreia crônica pode vir de origens bem diferentes:
+Alguns sinais indicam necessidade de avaliação com mais atenção:
 
-* inflamação do intestino, como na [doença de Crohn e na retocolite](/blog/doencas-inflamatorias-intestinais-crohn-retocolite);
-* má absorção de nutrientes, como na doença celíaca e na intolerância à lactose;
-* alterações do funcionamento do intestino, como na [síndrome do intestino irritável](/blog/sindrome-intestino-irritavel-sintomas-manejo);
-* diarreia por ácidos biliares;
-* colite microscópica;
-* efeito de medicamentos;
-* lesões do intestino grosso, cuja investigação depende da idade e dos sintomas.
-
-A síndrome do intestino irritável com diarreia é comum e pode ser reconhecida pelo padrão dos sintomas depois de exames básicos. Não é preciso esgotar todos os exames para chegar a ela.
-
-## Sinais que pedem atenção
-
-Procure avaliação, sem esperar, se a diarreia vier junto com:
-
-* sangue ou muco nas fezes;
+* sangue nas fezes;
+* muco frequente;
 * febre;
-* perda de peso sem explicação;
+* perda de peso;
 * anemia;
 * dor abdominal importante;
-* sintomas que acordam à noite;
-* sinais de desidratação.
+* sintomas que acordam a pessoa à noite;
+* histórico familiar de doenças intestinais;
+* diarreia persistente após viagem, antibióticos ou infecções.
 
-**Mudança do hábito intestinal com sangramento** é uma indicação clara de colonoscopia para excluir câncer colorretal. A diretriz também considera aceitável um limiar mais baixo para a colonoscopia em pessoas mais velhas.
+Esses achados ajudam a decidir se são necessários exames laboratoriais, avaliação das fezes, colonoscopia ou outros métodos.
+
+Os primeiros exames costumam ser de sangue, incluindo o de doença celíaca, e de fezes, como a calprotectina, que procura inflamação no intestino. Quando a colonoscopia é feita, biópsias podem ser necessárias mesmo com o intestino de aparência normal, porque algumas causas, como a colite microscópica, só aparecem no microscópio.
 
 ## Como a consulta ajuda?
 
-A consulta organiza essa investigação para não pedir exames demais nem de menos. Ajuda chegar com algumas informações anotadas:
-
-* há quanto tempo a diarreia começou e como evoluiu;
-* quantas evacuações por dia e o aspecto das fezes;
-* se há urgência ou perda de fezes;
-* relação com alimentos, viagens ou medicamentos;
-* exames já feitos.
+A consulta organiza a investigação. O médico avalia duração, padrão das fezes, alimentação, medicações, histórico familiar, sintomas fora do intestino e exames anteriores.
 
 ![Calendário marcado, diário de sintomas, copo de água e telefone com contato médico ilustrado.](/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp)
 
-Evite cortar muitos alimentos por conta própria antes da avaliação: dietas restritivas podem confundir os exames e empobrecer a alimentação. O tratamento depende da causa encontrada e é definido a partir da investigação.
+Dependendo do caso, o plano pode envolver hidratação, ajustes alimentares, exames complementares, tratamento de infecções, controle de inflamação ou acompanhamento de condições funcionais.
 
-## Que exames costumam vir primeiro
+## O que observar antes da avaliação?
 
-Na avaliação inicial, a diretriz da BSG sugere:
+Anote há quanto tempo a diarreia começou, quantas vezes ocorre por dia, se há sangue ou muco, se acorda à noite, quais alimentos parecem piorar, medicamentos em uso e se houve viagem, infecção ou antibióticos recentes.
 
-* **exames de sangue:** hemograma (com ferritina se houver anemia), proteína C reativa, função da tireoide e teste para doença celíaca;
-* **exames de fezes:** pesquisa de *Clostridioides difficile* e de parasitas, **calprotectina fecal** (um marcador de inflamação intestinal) e, em alguns casos, pesquisa de sangue oculto.
-
-## Quando a colonoscopia entra
-
-A colonoscopia é indicada conforme a suspeita, a idade e os sinais de alerta. Em pessoas mais jovens, sem sangramento e com calprotectina normal, a diretriz procura **evitar** exames invasivos desnecessários. Diretrizes diferentes usam cortes de idade diferentes, por isso essa decisão é individual.
-
-Quando a colonoscopia é feita para investigar diarreia, as **biópsias** são parte importante do exame: a colite microscópica deixa o intestino com aparência normal e só aparece na análise do tecido.
-
-Outros exames são escolhidos pela suspeita, como endoscopia com biópsia para doença celíaca, exames específicos para diarreia por ácidos biliares e teste respiratório para intolerância à lactose.
+Essas informações ajudam a conduzir a investigação de forma mais objetiva.
