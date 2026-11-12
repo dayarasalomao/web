@@ -16,6 +16,7 @@ import {
   PROFESSIONAL_MEMBERSHIPS,
   PROFESSIONAL_PROFILE,
   PROFESSIONAL_QUALIFICATIONS,
+  PROFILE_LAST_UPDATED,
 } from '@/lib/profile'
 import {
   DEFAULT_ROBOTS,
@@ -52,7 +53,7 @@ export default function AboutPage() {
   const profileGraph = buildProfilePageGraph({
     title: ABOUT_TITLE,
     description: ABOUT_DESCRIPTION,
-    lastModified: '2026-08-10',
+    lastModified: PROFILE_LAST_UPDATED,
   })
 
   return (

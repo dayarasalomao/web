@@ -3,6 +3,8 @@ import { SITE_URL, SITEMAP_IMAGES } from '@/constants'
 import { getAllPosts } from '@/lib/blog'
 import { getAllTreatments } from '@/lib/treatments'
 import { getIndexableLocations } from '@/lib/locations'
+import { FAQ_LAST_UPDATED } from '@/lib/faq'
+import { PROFILE_LAST_UPDATED } from '@/lib/profile'
 
 const CANONICAL_SITE_URL = SITE_URL.endsWith('/') ? SITE_URL.slice(0, -1) : SITE_URL
 
@@ -38,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl('/sobre'),
-      lastModified: '2026-08-10',
+      lastModified: PROFILE_LAST_UPDATED,
       changeFrequency: 'yearly',
       priority: 0.7,
     },
@@ -56,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl('/perguntas-frequentes'),
-      lastModified: '2026-09-01',
+      lastModified: FAQ_LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
