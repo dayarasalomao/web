@@ -66,4 +66,12 @@ dividir sinais.
 5. A7, A8
 
 Ritmo de referência: 2–3 publicações por semana no mesmo cluster por ~3
-meses.
+meses. Esse ritmo depende da revisão clínica; não é um compromisso de
+publicação.
+
+## Estado em 12 de novembro de 2026
+
+A expansão de `sindrome-intestino-irritavel-sintomas-manejo` já está escrita
+e aguarda a revisão clínica. A ordem acima continua uma proposta: a Dra. Dayara
+ainda não a aceitou. Convênio e valores continuam de fora até a clínica
+confirmar.
