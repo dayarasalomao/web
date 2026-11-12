@@ -1,9 +1,8 @@
 ---
 title: 'Pós-operatório de cirurgia de hemorroidas: o que esperar de cada técnica'
-seoTitle: 'Pós-operatório de hemorroidas: recuperação por técnica'
+seoTitle: 'Cirurgia de hemorroida: dor, recuperação e afastamento'
 metaDescription: >-
-  Cirurgia convencional, laser de diodo e laser de CO2 têm pós-operatórios
-  diferentes. Entenda dor, tempo de recuperação e o que conversar antes de operar.
+  Quanto tempo de afastamento e de dor esperar após a cirurgia de hemorroida? Compare convencional, laser de diodo e laser de CO2 e veja o que perguntar antes.
 slug: pos-operatorio-cirurgia-hemorroidas-o-que-esperar
 publishDate: 2026-09-01
 lastModified: 2026-10-12
