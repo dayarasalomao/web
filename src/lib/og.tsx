@@ -37,6 +37,8 @@ export const OG_PHOTOS = {
 const COLORS = { background: '#F4F3F2', ink: '#16323B', accent: '#A35442', muted: '#52666B' }
 const PHOTO_WIDTH = 470
 const STRIP_HEIGHT = 86
+/** Inner text column. Satori only wraps a line when the text node has a width. */
+const TEXT_WIDTH = OG_SIZE.width - PHOTO_WIDTH - 72 - 64
 
 const readPublic = (publicPath: string) => fs.readFile(path.join(process.cwd(), 'public', publicPath))
 
@@ -70,16 +72,16 @@ export async function renderPhotoCard({
     (
       <div style={{ width: '100%', height: '100%', display: 'flex', background: COLORS.background, color: COLORS.ink, fontFamily: 'Arial, sans-serif' }}>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: OG_SIZE.width - PHOTO_WIDTH, padding: '0 64px 0 72px' }}>
-          <div style={{ display: 'flex', color: COLORS.accent, fontSize: 24, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase' }}>
+          <div style={{ display: 'flex', width: TEXT_WIDTH, color: COLORS.accent, fontSize: 24, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase' }}>
             {eyebrow}
           </div>
-          <div style={{ display: 'flex', marginTop: 26, fontFamily: 'Georgia, serif', fontSize: title.length > 60 ? 40 : title.length > 34 ? 50 : 62, fontWeight: 700, lineHeight: 1.08 }}>
+          <div style={{ display: 'flex', width: TEXT_WIDTH, marginTop: 26, fontFamily: 'Georgia, serif', fontSize: title.length > 80 ? 36 : title.length > 60 ? 40 : title.length > 34 ? 50 : 62, fontWeight: 700, lineHeight: 1.08 }}>
             {title}
           </div>
-          <div style={{ display: 'flex', marginTop: 18, fontSize: 30, fontWeight: 600, lineHeight: 1.25 }}>
+          <div style={{ display: 'flex', width: TEXT_WIDTH, marginTop: 18, fontSize: 30, fontWeight: 600, lineHeight: 1.25 }}>
             {isName ? subtitle : `${SEO_DOCTOR_NAME} · ${SEO_SPECIALTY}`}
           </div>
-          <div style={{ display: 'flex', marginTop: 30, color: COLORS.muted, fontSize: 19, lineHeight: 1.4 }}>
+          <div style={{ display: 'flex', width: TEXT_WIDTH, marginTop: 30, color: COLORS.muted, fontSize: 19, lineHeight: 1.4 }}>
             {BUSINESS_CLINIC_NAME} · {CRM_FULL} · {RQE_FULL}
           </div>
         </div>
