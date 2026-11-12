@@ -116,6 +116,7 @@ Como acessar: cada página pública responde em Markdown na mesma URL quando a r
 - [Cisto pilonidal: convencional, laser ou retalho](https://www.dayarasalomao.com.br/blog/cisto-pilonidal-cirurgia-convencional-x-laser): comparação entre excisão, laser de diodo (SiLaC) e técnicas de retalho.
 
 - [Primeiros 30 dias após cirurgia de hemorroidas com CO2](https://www.dayarasalomao.com.br/blog/primeiros-30-dias-hemorroidectomia-laser-co2): roteiro de cuidados e acompanhamento; não garante cicatrização ou alta em 30 dias.
+- [Afastamento e atestado após cirurgia de hemorroida](https://www.dayarasalomao.com.br/blog/cirurgia-hemorroida-afastamento-atestado): referências de retorno ao trabalho por técnica, fatores que mudam o prazo e quando voltar a dirigir e treinar; os dias de atestado são definidos pela médica caso a caso.
 
 ## Optional
 

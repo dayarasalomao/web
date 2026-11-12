@@ -15,10 +15,12 @@ const manifest = JSON.parse(fs.readFileSync('docs/blog-generated-images-manifest
 }>
 const reviewed = new Map((JSON.parse(fs.readFileSync('docs/blog-image-editorial-review.json', 'utf8')) as Array<{ src: string; alt: string; caption: string }>).map((image) => [image.src, image]))
 
-it('gives every article an image and shares only the client pilonidal comparison (I1)', () => {
-  const posts = getAllPosts()
+it('gives every reviewed article an image and shares only the client pilonidal comparison (I1)', () => {
+  const allPosts = getAllPosts()
+  assert.equal(allPosts.length, 41)
+  assert.deepEqual(allPosts.filter((post) => !post.cardImage).map((post) => post.slug), ['cirurgia-hemorroida-afastamento-atestado'])
+  const posts = allPosts.filter((post) => post.cardImage)
   assert.equal(posts.length, 40)
-  assert.equal(posts.filter((post) => post.cardImage).length, 40)
   assert.equal(new Set(posts.map((post) => post.cardImage!.src)).size, 39)
   const groups = new Map<string, string[]>()
   for (const post of posts) groups.set(post.cardImage!.src, [...(groups.get(post.cardImage!.src) ?? []), post.slug])
