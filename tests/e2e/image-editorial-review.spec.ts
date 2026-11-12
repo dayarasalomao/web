@@ -17,8 +17,10 @@ test('EPSiT card and metadata reuse the existing client illustration (I1)', asyn
   // the card's client navigation also renders the correct body illustration.
   await page.reload()
   await expect(page.locator('meta[property="og:image"]')).toHaveCount(1)
-  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', `https://www.dayarasalomao.com.br${src}`)
-  await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute('content', `https://www.dayarasalomao.com.br${src}`)
+  // The preview is rendered from this same illustration (see opengraph-image.tsx).
+  const preview = 'https://www.dayarasalomao.com.br/blog/cisto-pilonidal-laser-epsit/opengraph-image'
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', preview)
+  await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute('content', preview)
   await expect(page.locator('article img')).toHaveCount(1)
   await expect(page.locator('article img')).toHaveAttribute('src', new RegExp(encodeURIComponent(src)))
   await expect(page.locator('[data-editorial-caption]')).toContainText('fibra de laser')

@@ -7,6 +7,7 @@ import { execFileSync } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
 import { getAllPosts, getPostBySlug } from '../../src/lib/blog.ts'
 import { buildPostMetadata } from '../../src/lib/seo.ts'
+import { isTeachingFigure } from '../../src/lib/og-figure.ts'
 import { buildBlogPostGraph } from '../../src/lib/structured-data.ts'
 
 const manifest = JSON.parse(fs.readFileSync('docs/blog-generated-images-manifest.json', 'utf8')) as Array<{
@@ -26,7 +27,7 @@ it('gives every article an image and shares only the client pilonidal comparison
   ])
 })
 
-it('uses each declared generated image in cards, OG, Twitter and Article schema (F2/3)', () => {
+it('uses each declared generated image in cards; previews and Article schema use the figure the article shows (F2/3)', () => {
   for (const expected of manifest) {
     assert.equal(expected.caption, reviewed.get(expected.src)!.caption)
     assert.equal(expected.alt, reviewed.get(expected.src)!.alt)
@@ -37,23 +38,37 @@ it('uses each declared generated image in cards, OG, Twitter and Article schema 
     const image = { src: expected.src, alt: expected.alt, caption: expected.caption, width: expected.width, height: expected.height }
     assert.deepEqual(expected.kind === 'cover' ? post.coverImage : post.image, image)
     assert.deepEqual(post.cardImage, image)
+    // Social previews are rendered per post from the figure the article shows.
     const metadata = buildPostMetadata(post)
+    const preview = `/blog/${post.slug}/opengraph-image`
     const og = metadata.openGraph!.images as Array<{ url: string; width: number; height: number; alt: string }>
-    assert.deepEqual(og[0], { url: expected.src, width: expected.width, height: expected.height, alt: expected.alt })
-    assert.deepEqual(metadata.twitter!.images, [expected.src])
+    const previewAlt = post.image && isTeachingFigure(post.image.src) ? post.image.alt : `${post.title} — Dra. Dayara Salomão`
+    assert.deepEqual(og[0], { url: preview, width: 1200, height: 630, alt: previewAlt })
+    assert.deepEqual(metadata.twitter!.images, [preview])
+    // A cover is only for cards; the page's primary image is the one it renders.
+    const shown = post.image ?? image
     const graph = buildBlogPostGraph(post) as { '@graph': Array<Record<string, unknown>> }
     const article = graph['@graph'].find((node) => node['@type'] === 'Article')!
     const primary = article.image as Record<string, unknown>
-    assert.equal(primary.contentUrl, `https://www.dayarasalomao.com.br${expected.src}`)
-    assert.equal(primary.width, expected.width)
-    assert.equal(primary.height, expected.height)
-    assert.equal(primary.caption, expected.caption)
+    assert.equal(primary.contentUrl, `https://www.dayarasalomao.com.br${shown.src}`)
+    assert.equal(primary.width, shown.width)
+    assert.equal(primary.height, shown.height)
+    assert.equal(primary.caption, shown.caption ?? shown.alt)
     assert.equal(primary.creator, undefined)
     assert.equal(primary.copyrightHolder, undefined)
     const page = graph['@graph'].find((node) => node['@type'] === 'MedicalWebPage')!
     assert.deepEqual(page.primaryImageOfPage, { '@id': primary['@id'] })
     if (expected.kind === 'image') assert.ok(post.content.includes(`](${expected.src})`))
   }
+})
+
+it('previews posts with their teaching figure, and decorative covers with the doctor photo', () => {
+  assert.equal(isTeachingFigure('/assets/blog/hemorroida-x-plicoma-anal.webp'), true)
+  assert.equal(isTeachingFigure('/assets/blog/capa-hpv-anal-identificar-tratar.webp'), false)
+  const covered = getPostBySlug('como-encontrar-coloproctologista-campo-grande-ms')!
+  assert.match(covered.image!.src, /\/capa-/)
+  const og = buildPostMetadata(covered).openGraph!.images as Array<{ alt: string }>
+  assert.equal(og[0].alt, `${covered.title} — Dra. Dayara Salomão`)
 })
 
 it('rejects invalid cover frontmatter in an isolated post fixture (F2)', () => {

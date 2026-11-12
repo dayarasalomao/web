@@ -288,7 +288,8 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
   const postUrl = buildCanonical(`/blog/${post.slug}`)
   const pageId = `${postUrl}#webpage`
   const articleId = `${postUrl}#article`
-  const primaryImage = post.coverImage ?? post.image
+  // The figure the reader sees on the page; the cover is only used on cards.
+  const primaryImage = post.image ?? post.coverImage
   const articleImage = primaryImage
     ? {
         '@type': 'ImageObject',

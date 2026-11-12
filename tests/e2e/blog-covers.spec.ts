@@ -31,11 +31,15 @@ test('newly illustrated article renders its image and neutral illustration capti
   expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0)
 })
 
-test('distinct cover drives social metadata while original clinical illustrations remain visible (F2/3)', async ({ page }) => {
+test('social metadata and Article schema follow the clinical illustration the article shows, not the card cover (F2/3)', async ({ page, request }) => {
   const post = getPostBySlug('hemorroidectomia-laser-co2')!
   await page.goto(`/blog/${post.slug}`)
-  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', `https://www.dayarasalomao.com.br${post.coverImage!.src}`)
-  await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute('content', `https://www.dayarasalomao.com.br${post.coverImage!.src}`)
+  const preview = `https://www.dayarasalomao.com.br/blog/${post.slug}/opengraph-image`
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', preview)
+  await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute('content', preview)
+  const rendered = await request.get(`/blog/${post.slug}/opengraph-image`)
+  expect(rendered.status()).toBe(200)
+  expect(rendered.headers()['content-type']).toContain('image/png')
   const original = page.locator(`article img[src*="${encodeURIComponent(post.image!.src)}"]`)
   await expect(original).toBeVisible()
   await expect(original).toHaveAttribute('alt', post.image!.alt)
@@ -45,5 +49,5 @@ test('distinct cover drives social metadata while original clinical illustration
       .flatMap((script) => JSON.parse(script.textContent ?? '{}')['@graph'] ?? [])
     return nodes.find((node) => node['@type'] === 'Article')?.image
   })
-  expect(primary.contentUrl).toBe(`https://www.dayarasalomao.com.br${post.coverImage!.src}`)
+  expect(primary.contentUrl).toBe(`https://www.dayarasalomao.com.br${post.image!.src}`)
 })

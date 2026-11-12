@@ -42,14 +42,16 @@ describe('supplied illustrations (IMG-01/02)', () => {
 })
 
 // IMG-01: editorial social metadata must declare the real dimensions too.
-it('uses intrinsic image dimensions in Open Graph instead of the social fallback ratio', async () => {
+it('declares the rendered 1200×630 preview size in Open Graph', async () => {
   const { buildPostMetadata } = await import('../../src/lib/seo.ts')
   for (const [slug, , width, height] of EXISTING_IMAGE_TARGETS) {
     const post = getPostBySlug(slug)
     assert.ok(post)
     const images = buildPostMetadata(post).openGraph?.images as Array<{ width: number; height: number }>
-    assert.equal(images[0].width, post.coverImage?.width ?? width)
-    assert.equal(images[0].height, post.coverImage?.height ?? height)
+    // The figure (width × height) is fitted inside a 1200×630 rendered card.
+    assert.ok(width > 0 && height > 0)
+    assert.equal(images[0].width, 1200)
+    assert.equal(images[0].height, 630)
   }
 })
 
