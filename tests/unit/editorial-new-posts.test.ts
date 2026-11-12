@@ -8,7 +8,7 @@ const NEW_POSTS = [
   ['primeiros-30-dias-hemorroidectomia-laser-co2', 'Laser de CO2: os primeiros 30 dias após a cirurgia', '2026-10-12'],
   ['pomada-hemorroida-resolve', 'Pomada para hemorroida resolve? Limites e cuidados', '2026-10-12'],
   ['hemorroida-externa-trombosada', 'Hemorroida trombosada: caroço dolorido e tratamento', '2026-10-12'],
-  ['hemorroida-tem-cura-ou-passa-sozinha', 'Hemorroida tem cura ou passa sozinha?', '2026-10-13'],
+  ['hemorroida-tem-cura-ou-passa-sozinha', 'Hemorroida tem cura ou passa sozinha?', '2026-11-12'],
   ['como-encontrar-coloproctologista-campo-grande-ms', 'Como encontrar um coloproctologista em Campo Grande (MS)', '2026-10-13'],
 ] as const
 
