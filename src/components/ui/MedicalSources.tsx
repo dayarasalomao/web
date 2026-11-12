@@ -2,6 +2,8 @@ import type { MedicalSource } from '@/lib/blog'
 
 interface MedicalSourcesProps {
   sources: MedicalSource[]
+  /** Spacing from the previous block; stacked layouts pass an empty string. */
+  className?: string
 }
 
 const DATE_FORMATTER = new Intl.DateTimeFormat('pt-BR', {
@@ -15,11 +17,11 @@ function formatDate(value: string): string {
   return DATE_FORMATTER.format(new Date(`${value}T00:00:00Z`))
 }
 
-export function MedicalSources({ sources }: MedicalSourcesProps) {
+export function MedicalSources({ sources, className = 'mt-14' }: MedicalSourcesProps) {
   return (
     <section
       aria-labelledby="medical-sources-title"
-      className="mt-14 rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm lg:p-8"
+      className={`${className} rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm lg:p-8`}
     >
       <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-copper">
         Transparência editorial

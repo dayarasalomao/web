@@ -22,7 +22,7 @@ import {
   WHATSAPP_NUMBER,
   WHATSAPP_URL,
 } from '../constants.ts'
-import type { BlogPost } from './blog.ts'
+import type { BlogPost, MedicalSource } from './blog.ts'
 import { buildCanonical } from './seo.ts'
 import { toSchemaDateTime } from './dates.ts'
 import type { Treatment } from './treatments.ts'
@@ -339,22 +339,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       },
       image: articleImage,
       keywords: [post.primaryKeyword, ...post.secondaryKeywords],
-      ...(post.sources?.length
-        ? {
-            citation: post.sources.map((source) => ({
-              '@type': 'CreativeWork',
-              name: source.title,
-              url: source.url,
-              publisher: {
-                '@type': 'Organization',
-                name: source.organization,
-              },
-              ...(source.publishedAt
-                ? { datePublished: toSchemaDateTime(source.publishedAt) }
-                : {}),
-            })),
-          }
-        : {}),
+      ...(post.sources?.length ? { citation: buildCitations(post.sources) } : {}),
       mainEntityOfPage: {
         '@id': pageId,
       },
@@ -370,6 +355,19 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@graph': graph,
   }
+}
+
+function buildCitations(sources: MedicalSource[]): Thing[] {
+  return sources.map((source) => ({
+    '@type': 'CreativeWork',
+    name: source.title,
+    url: source.url,
+    publisher: {
+      '@type': 'Organization',
+      name: source.organization,
+    },
+    ...(source.publishedAt ? { datePublished: toSchemaDateTime(source.publishedAt) } : {}),
+  }) as Thing)
 }
 
 export function buildTreatmentGraph(treatment: Treatment): Record<string, unknown> {
@@ -391,6 +389,14 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       about: {
         '@id': procedureId,
       },
+      dateModified: toSchemaDateTime(treatment.lastUpdated),
+      ...(treatment.lastReviewed
+        ? {
+            lastReviewed: toSchemaDateTime(treatment.lastReviewed),
+            reviewedBy: { '@id': `${SITE_URL}#physician` },
+          }
+        : {}),
+      ...(treatment.sources?.length ? { citation: buildCitations(treatment.sources) } : {}),
     } as Thing,
     {
       '@type': 'MedicalProcedure',
@@ -400,7 +406,7 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       url: treatmentUrl,
       procedureType: treatment.shortTitle,
       bodyLocation: 'Região anal e perianal',
-      followup: treatment.carePath.join(' '),
+      followup: [...treatment.carePath, ...(treatment.recovery ?? [])].join(' '),
       indication: treatment.indications.join(' '),
       howPerformed: (treatment.howItWorks ?? treatment.overview).join(' '),
       mainEntityOfPage: {

@@ -1,4 +1,4 @@
-import type { BlogPost } from './blog.ts'
+import type { BlogPost, MedicalSource } from './blog.ts'
 import { getPostBySlug } from './blog.ts'
 
 export type TreatmentCategory = 'laser' | 'conservative' | 'innovative'
@@ -25,14 +25,22 @@ export interface Treatment {
   indications: string[]
   benefits: string[]
   carePath: string[]
+  /** What the recovery or follow-up looks like week by week, framed as averages. */
+  recovery?: string[]
+  /** When the treatment is not the right choice, its trade-offs and what it does not solve. */
+  limitations?: string[]
   faqs?: Array<{
     question: string
     answer: string
   }>
+  /** Rendered as a visible bibliography before being emitted as schema `citation`. */
+  sources?: MedicalSource[]
   relatedBlogSlugs: string[]
   mappedDiseaseNames: string[]
   keywords: string[]
   lastUpdated: string
+  /** Set only after Dra. Dayara has reviewed this version of the page. */
+  lastReviewed?: string
 }
 
 export const TREATMENTS: Treatment[] = [
