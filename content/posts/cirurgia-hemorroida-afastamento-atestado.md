@@ -4,6 +4,8 @@ seoTitle: 'Cirurgia de hemorroida: quantos dias de atestado?'
 metaDescription: >-
   Quantos dias de afastamento após cirurgia de hemorroida? Veja as referências por técnica, o que
   muda o prazo e quando voltar a dirigir, treinar e fazer esforço.
+socialDescription: >-
+  O afastamento após cirurgia de hemorroida varia conforme a técnica, o tipo de trabalho e a recuperação.
 slug: cirurgia-hemorroida-afastamento-atestado
 publishDate: '2026-11-12'
 lastModified: '2026-11-12'

@@ -7,7 +7,6 @@ import {
   BUSINESS_GEO,
   BUSINESS_NAME,
   BUSINESS_PHONE,
-  BUSINESS_SPECIALTY,
   CRM_COUNCIL_URL,
   CONTACT_SOCIAL_MEDIA,
   CRM_FULL,
@@ -147,7 +146,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
         name: PHYSICIAN_DATA.name,
         alternateName: BUSINESS_ALTERNATE_NAME,
         description: SEO_DESCRIPTION,
-        medicalSpecialty: BUSINESS_SPECIALTY,
+        jobTitle: PHYSICIAN_DATA.jobTitle,
         url: buildCanonical('/sobre'),
         image: toAbsoluteUrl(SEO_IMAGE),
         telephone: BUSINESS_PHONE,
@@ -201,7 +200,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
         },
         hasCredential: [
           {
-            '@type': 'EducationalOccupationalCredential',
+            '@type': 'Credential',
             credentialCategory: 'Registro Profissional',
             identifier: CRM_FULL,
             name: CRM_FULL,
@@ -213,7 +212,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
             },
           },
           {
-            '@type': 'EducationalOccupationalCredential',
+            '@type': 'Credential',
             credentialCategory: 'Qualificação de Especialista',
             identifier: RQE_FULL,
             name: RQE_FULL,
@@ -318,7 +317,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       isPartOf: {
         '@id': `${SITE_URL}#website`,
       },
-      about: {
+      mainEntity: {
         '@id': articleId,
       },
       ...(primaryImage ? { primaryImageOfPage: { '@id': `${postUrl}#primary-image` } } : {}),
@@ -386,13 +385,16 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       isPartOf: {
         '@id': `${SITE_URL}#website`,
       },
-      about: {
+      mainEntity: {
         '@id': procedureId,
+      },
+      author: {
+        '@id': `${SITE_URL}#physician`,
       },
       dateModified: toSchemaDateTime(treatment.lastUpdated),
       ...(treatment.lastReviewed
         ? {
-            lastReviewed: toSchemaDateTime(treatment.lastReviewed),
+            lastReviewed: treatment.lastReviewed,
             reviewedBy: { '@id': `${SITE_URL}#physician` },
           }
         : {}),
@@ -404,16 +406,10 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       name: treatment.title,
       description: treatment.summary,
       url: treatmentUrl,
-      procedureType: treatment.shortTitle,
-      bodyLocation: 'Região anal e perianal',
       followup: [...treatment.carePath, ...(treatment.recovery ?? [])].join(' '),
-      indication: treatment.indications.join(' '),
       howPerformed: (treatment.howItWorks ?? treatment.overview).join(' '),
       mainEntityOfPage: {
         '@id': pageId,
-      },
-      performer: {
-        '@id': `${SITE_URL}#physician`,
       },
     } as Thing,
     buildBreadcrumbGraph([
@@ -450,7 +446,6 @@ export function buildClinicNode(location: PracticeLocation): Record<string, unkn
     name: location.name,
     url: locationUrl,
     image: toAbsoluteUrl(SEO_IMAGE),
-    medicalSpecialty: BUSINESS_SPECIALTY,
     ...(telephone ? { telephone } : {}),
     ...(location.address
       ? {

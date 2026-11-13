@@ -59,6 +59,7 @@ export interface BlogPostMeta {
   title: string
   seoTitle?: string
   metaDescription: string
+  socialDescription?: string
   slug: string
   publishDate: string
   lastModified: string

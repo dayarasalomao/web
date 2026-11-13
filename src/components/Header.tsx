@@ -10,6 +10,7 @@ import {
   type NavItem,
 } from '@/lib/navigation'
 import { InfoCard } from '@/components/ui/InfoCard'
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 
 type HeaderMode = 'home' | 'subpage'
 
@@ -110,7 +111,7 @@ export default function Header({ mode = 'home' }: HeaderProps) {
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center gap-3">
             <div>
-              <p className="text-lg sm:text-xl font-serif font-bold text-gray-800">
+              <p className="text-base min-[360px]:text-lg sm:text-xl font-serif font-bold text-gray-800">
                 Dra. Dayara Salomão
               </p>
               <p
@@ -143,33 +144,44 @@ export default function Header({ mode = 'home' }: HeaderProps) {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            ref={menuButtonRef}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-navigation"
-          >
-            <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
-              <span
-                className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 origin-center ${
-                  isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
-                }`}
-              />
-              <span
-                className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 ${
-                  isMenuOpen ? 'opacity-0' : 'opacity-100'
-                }`}
-              />
-              <span
-                className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 origin-center ${
-                  isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
-                }`}
-              />
-            </div>
-          </button>
+          <div className="flex shrink-0 items-center gap-1 md:hidden">
+            <Link
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Agendar consulta pelo WhatsApp"
+              data-conversion="whatsapp-header-shortcut"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-teal text-white hover:bg-teal-deep"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+            </Link>
+            <button
+              ref={menuButtonRef}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                <span
+                  className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 origin-center ${
+                    isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                  }`}
+                />
+                <span
+                  className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-0' : 'opacity-100'
+                  }`}
+                />
+                <span
+                  className={`bg-gray-700 block h-0.5 w-6 rounded transition-all duration-300 origin-center ${
+                    isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
