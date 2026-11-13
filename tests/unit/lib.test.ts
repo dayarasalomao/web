@@ -284,6 +284,17 @@ describe('structured data', () => {
     assert.ok(!(physician.sameAs as string[]).includes(CLINIC_GOOGLE_MAPS_URL))
     assert.ok((physician.sameAs as string[]).every((url) => /^https:\/\//.test(url)))
     assert.equal(physician.openingHours, undefined)
+    assert.equal(physician.medicalSpecialty, undefined)
+    assert.deepEqual(physician.hasOccupation, {
+      '@type': 'Occupation',
+      name: 'Coloproctologista',
+      description: 'Coloproctologia, também chamada de proctologia.',
+    })
+    assert.deepEqual(physician.knowsAbout, ['Coloproctologia', 'Proctologia'])
+    assert.equal(
+      (physician.hoursAvailable as { opens?: string } | undefined)?.opens,
+      '09:00',
+    )
     assert.equal(physician.hasOfferCatalog, undefined)
     assert.deepEqual(physician.workLocation, {
       '@id': buildPracticeLocationId('campo-grande'),
@@ -301,6 +312,8 @@ describe('structured data', () => {
     )
     assert.ok(clinic)
     assert.equal(clinic['@id'], buildPracticeLocationId('campo-grande'))
+    assert.equal(clinic.openingHours, undefined)
+    assert.equal(clinic.medicalSpecialty, undefined)
     assert.ok((clinic.sameAs as string[]).includes(CLINIC_GOOGLE_MAPS_URL))
     assert.ok(!(clinic.sameAs as string[]).includes(GOOGLE_BUSINESS_PROFILE_URL))
     assert.ok((clinic.sameAs as string[]).every((url) => /^https:\/\//.test(url)))

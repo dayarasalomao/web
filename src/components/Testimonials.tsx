@@ -143,13 +143,8 @@ export default function Testimonials() {
           title="Opiniões de quem já passou por aqui"
           lead={
             <>
-              O que nossos pacientes falam sobre o{' '}
-              <span className="font-semibold text-copper">
-                cuidado humanizado
-              </span>{' '}
-              e{' '}
-              <span className="font-semibold text-teal">excelência técnica</span>{' '}
-              que oferecemos
+              Relatos de pacientes sobre o atendimento que receberam. Cada
+              experiência é individual e não prevê o resultado de outra pessoa.
             </>
           }
         />

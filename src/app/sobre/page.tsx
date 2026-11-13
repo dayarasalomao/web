@@ -114,10 +114,11 @@ export default function AboutPage() {
             Formação médica e atualização contínua
           </h2>
           <p className="mt-5 max-w-4xl text-base leading-relaxed text-gray-700 lg:text-lg">
-            A formação reúne base cirúrgica, especialização em coloproctologia e
-            aperfeiçoamento em técnicas minimamente invasivas e disfunções do assoalho
-            pélvico. A escolha de qualquer tratamento continua dependente do diagnóstico,
-            do exame e das particularidades de cada pessoa.
+            A lista separa graduação, residência médica, curso de aperfeiçoamento e
+            pós-graduação. Um item não substitui o outro. O registro de especialista
+            informado neste site é o {RQE_FULL}, ao lado do {CRM_FULL}. A escolha de
+            qualquer tratamento continua dependente do diagnóstico, do exame e das
+            particularidades de cada pessoa.
           </p>
 
           <ol className="mt-8 space-y-4">
@@ -128,7 +129,10 @@ export default function AboutPage() {
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <h3 className="text-xl font-semibold text-teal">{qualification.title}</h3>
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                      {qualification.kindLabel}
+                    </p>
+                    <h3 className="mt-1 text-xl font-semibold text-teal">{qualification.title}</h3>
                     <p className="mt-1 font-medium text-copper">{qualification.institution}</p>
                   </div>
                   <span className="w-fit rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold text-teal">

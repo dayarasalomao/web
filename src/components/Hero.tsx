@@ -1,4 +1,10 @@
-import { SEO_LOCATION_WITH_STATE, WHATSAPP_URL } from '@/constants'
+import {
+  BUSINESS_CLINIC_NAME,
+  CRM_FULL,
+  RQE_FULL,
+  SEO_LOCATION_WITH_STATE,
+  WHATSAPP_URL,
+} from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PROFESSIONAL_MEMBERSHIPS } from '@/lib/profile'
@@ -98,47 +104,32 @@ export default function Hero() {
               </h1>
 
               <p className="text-lg lg:text-xl text-gray-700 mb-8 leading-relaxed font-light">
-                Especialista em{' '}
-                <span
-                  className="font-semibold"
-                  style={{ color: 'var(--color-copper)' }}
-                >
-                  coloproctologia
-                </span>{' '}
-                oferecendo tratamento minimamente invasivo com{' '}
-                <span
-                  className="font-semibold"
-                  style={{ color: 'var(--color-copper)' }}
-                >
-                  laser e tecnologias avançadas
-                </span>{' '}
-                para doenças da região anal.
+                A coloproctologia — também chamada de proctologia — cuida das doenças do
+                cólon, do reto e da região anal. O atendimento é no {BUSINESS_CLINIC_NAME}.
               </p>
 
-              <p className="text-base lg:text-lg text-gray-600 mb-10 leading-relaxed">
-                Cuidado especializado com{' '}
-                <span
-                  className="font-medium"
-                  style={{ color: 'var(--color-teal)' }}
-                >
-                  excelência técnica
-                </span>
-                ,{' '}
-                <span
-                  className="font-medium"
-                  style={{ color: 'var(--color-teal)' }}
-                >
-                  empatia
-                </span>{' '}
-                e{' '}
-                <span
-                  className="font-medium"
-                  style={{ color: 'var(--color-teal)' }}
-                >
-                  acolhimento
-                </span>{' '}
-                para seu bem-estar.
+              <p className="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed">
+                A consulta começa pela avaliação. Procedimentos minimamente invasivos,
+                inclusive com laser, só entram na conversa quando o exame indica.
               </p>
+
+              <div
+                className="mb-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
+                aria-label="Registros profissionais"
+              >
+                <span className="rounded-full border border-copper/25 bg-copper/10 px-4 py-2 text-sm font-semibold text-copper">
+                  {CRM_FULL}
+                </span>
+                <span className="rounded-full border border-teal/20 bg-teal/10 px-4 py-2 text-sm font-semibold text-teal">
+                  {RQE_FULL}
+                </span>
+                <Link
+                  href="/sobre"
+                  className="text-sm font-semibold text-teal underline-offset-4 hover:underline"
+                >
+                  Ver formação
+                </Link>
+              </div>
 
               {/* Professional credentials */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-10">

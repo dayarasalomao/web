@@ -7,7 +7,7 @@ import {
   BUSINESS_GEO,
   BUSINESS_NAME,
   BUSINESS_PHONE,
-  BUSINESS_SPECIALTY,
+  BUSINESS_SPECIALTY_LABEL,
   CRM_COUNCIL_URL,
   CONTACT_SOCIAL_MEDIA,
   CRM_FULL,
@@ -18,6 +18,7 @@ import {
   RQE_FULL,
   SEO_DESCRIPTION,
   SEO_IMAGE,
+  SEO_SPECIALTY,
   SITE_URL,
   WHATSAPP_NUMBER,
   WHATSAPP_URL,
@@ -147,7 +148,14 @@ export function buildGlobalGraph(): Record<string, unknown> {
         name: PHYSICIAN_DATA.name,
         alternateName: BUSINESS_ALTERNATE_NAME,
         description: SEO_DESCRIPTION,
-        medicalSpecialty: BUSINESS_SPECIALTY,
+        // Coloproctologia is not a schema.org MedicalSpecialty member. Surgical
+        // and Gastroenterologic would name a different practice than the page.
+        hasOccupation: {
+          '@type': 'Occupation',
+          name: SEO_SPECIALTY,
+          description: `${BUSINESS_SPECIALTY_LABEL}, também chamada de proctologia.`,
+        },
+        knowsAbout: [BUSINESS_SPECIALTY_LABEL, 'Proctologia'],
         url: buildCanonical('/sobre'),
         image: toAbsoluteUrl(SEO_IMAGE),
         telephone: BUSINESS_PHONE,
@@ -199,6 +207,24 @@ export function buildGlobalGraph(): Record<string, unknown> {
           '@type': 'City',
           name: BUSINESS_ADDRESS.addressLocality,
         },
+        // These hours are the physician's, labeled on the location page.
+        // They are not the Instituto's opening hours.
+        ...(clinic?.openingHours
+          ? {
+              hoursAvailable: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                  'https://schema.org/Monday',
+                  'https://schema.org/Tuesday',
+                  'https://schema.org/Wednesday',
+                  'https://schema.org/Thursday',
+                  'https://schema.org/Friday',
+                ],
+                opens: clinic.openingHours.opens,
+                closes: clinic.openingHours.closes,
+              },
+            }
+          : {}),
         hasCredential: [
           {
             '@type': 'EducationalOccupationalCredential',
@@ -450,7 +476,6 @@ export function buildClinicNode(location: PracticeLocation): Record<string, unkn
     name: location.name,
     url: locationUrl,
     image: toAbsoluteUrl(SEO_IMAGE),
-    medicalSpecialty: BUSINESS_SPECIALTY,
     ...(telephone ? { telephone } : {}),
     ...(location.address
       ? {
@@ -488,7 +513,6 @@ export function buildClinicNode(location: PracticeLocation): Record<string, unkn
         }
       : {}),
     sameAs: sanitizeSameAs([location.mapsUrl, location.websiteUrl, location.instagramUrl]),
-    ...(location.openingHours ? { openingHours: location.openingHours.schema } : {}),
   }
 }
 
