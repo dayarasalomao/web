@@ -90,3 +90,25 @@ test('all indexable routes return 200 with canonical metadata and coherent artic
     }
   }
 })
+
+test('social cards and browser icons are noindex while their pages stay indexable', async ({ request }) => {
+  const post = getAllPosts()[0]
+  const treatment = getAllTreatments()[0]
+  const assets = [
+    '/opengraph-image',
+    '/sobre/opengraph-image',
+    `/blog/${post.slug}/opengraph-image`,
+    `/tratamentos/${treatment.slug}/opengraph-image`,
+    '/favicon.ico',
+    '/apple-icon.png',
+  ]
+  for (const asset of assets) {
+    const response = await request.get(asset)
+    expect(response.status(), asset).toBe(200)
+    expect(response.headers()['x-robots-tag'] ?? '', asset).toContain('noindex')
+  }
+  for (const page of ['/', `/blog/${post.slug}`, `/tratamentos/${treatment.slug}`]) {
+    const response = await request.get(page)
+    expect(response.headers()['x-robots-tag'] ?? '', page).not.toContain('noindex')
+  }
+})
