@@ -34,6 +34,7 @@ npm run dev    # next dev --turbopack
 npm run build  # production build
 npm run start  # production server
 npm run lint   # eslint src tests playwright.config.ts next.config.ts eslint.config.mjs
+npm run test:unit # node:test suites run through tsx
 npm run audit:seo # editorial graph, keyword ownership, and internal-link audit
 ```
 

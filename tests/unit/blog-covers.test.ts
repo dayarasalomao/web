@@ -75,7 +75,8 @@ it('rejects invalid cover frontmatter in an isolated post fixture (F2)', () => {
   const scratch = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-cover-validation-'))
   const valid = fs.readFileSync('content/posts/hemorroida-ou-plicoma-como-diferenciar.md', 'utf8')
     .replace('slug: hemorroida-ou-plicoma-como-diferenciar', 'slug: fixture')
-  const moduleUrl = pathToFileURL(path.resolve('src/lib/blog.ts')).href
+  const modulePath = path.resolve('src/lib/blog.ts')
+  const tsxLoaderUrl = pathToFileURL(path.resolve('node_modules/tsx/dist/loader.mjs')).href
   fs.mkdirSync(path.join(scratch, 'content/posts'), { recursive: true })
   const cases = [
     ['coverImage: invalid', 'Post "fixture" has invalid coverImage frontmatter.'],
@@ -84,8 +85,8 @@ it('rejects invalid cover frontmatter in an isolated post fixture (F2)', () => {
   try {
     for (const [frontmatter, message] of cases) {
       fs.writeFileSync(path.join(scratch, 'content/posts/fixture.md'), valid.replace('\n---\n', `\n${frontmatter}\n---\n`))
-      const output = execFileSync(process.execPath, ['--experimental-transform-types', '--no-warnings', '--input-type=module', '-e',
-        `import {getPostBySlug} from ${JSON.stringify(moduleUrl)};try {getPostBySlug('fixture');console.log('accepted')} catch(e) {console.log(e.message)}`,
+      const output = execFileSync(process.execPath, ['--import', tsxLoaderUrl, '--no-warnings', '-e',
+        `const {getPostBySlug} = require(${JSON.stringify(modulePath)});try {getPostBySlug('fixture');console.log('accepted')} catch(e) {console.log(e.message)}`,
       ], { cwd: scratch, encoding: 'utf8' }).trim()
       assert.equal(output, message)
     }
