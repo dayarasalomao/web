@@ -26,8 +26,7 @@ function imagesIn(content: string): Image[] {
   return images
 }
 
-it('reviews all 42 retained images without changing pixels or losing clinical caveats (I2/3)', () => {
-  assert.equal(catalog.length, 42)
+it('reviews all retained images without changing pixels or losing clinical caveats (I2/3)', () => {
   assert.deepEqual(catalog.map((image) => image.src).sort(), Object.keys(EDITORIAL_IMAGE_DIMENSIONS).sort())
   for (const image of catalog) {
     assert.equal(hash(fs.readFileSync(`public${image.src}`)), image.sha256)

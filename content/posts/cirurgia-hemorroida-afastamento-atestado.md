@@ -9,6 +9,12 @@ socialDescription: >-
 slug: cirurgia-hemorroida-afastamento-atestado
 publishDate: '2026-11-12'
 lastModified: '2026-11-12'
+coverImage:
+  src: /assets/blog/capa-cirurgia-hemorroida-afastamento-atestado.webp
+  alt: Poltrona azul-petróleo com uma manta clara ao lado de um calendário de mesa sem datas.
+  caption: Ilustração sobre o tempo de recuperação em casa e o planejamento da volta ao trabalho.
+  width: 1672
+  height: 941
 primaryKeyword: cirurgia de hemorroida quantos dias de atestado
 secondaryKeywords:
   - quantos dias de afastamento cirurgia de hemorroida
