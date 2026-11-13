@@ -11,6 +11,7 @@ import {
   serializeJsonLd,
 } from '../../src/lib/structured-data.ts'
 import { toSchemaDateTime } from '../../src/lib/dates.ts'
+import { buildPostMetadata } from '../../src/lib/seo.ts'
 import {
   calculateReadingTime,
   extractItalicHook,
@@ -314,6 +315,22 @@ describe('structured data', () => {
     assert.ok(article)
     assert.equal((article.citation as unknown[]).length, post.sources.length)
     assert.doesNotThrow(() => JSON.parse(serializeJsonLd(graph)))
+  })
+})
+
+describe('blog metadata', () => {
+  it('uses the short share description on social previews while retaining the search description', () => {
+    const post = getPostBySlug('cirurgia-hemorroida-afastamento-atestado')
+    assert.ok(post?.socialDescription)
+    assert.ok(post.socialDescription.length <= 125)
+    const metadata = buildPostMetadata(post)
+    assert.equal(metadata.description, post.metaDescription)
+    assert.equal(metadata.openGraph?.description, post.socialDescription)
+    assert.equal(metadata.twitter?.description, post.socialDescription)
+
+    const defaultMetadata = buildPostMetadata({ ...post, socialDescription: undefined })
+    assert.equal(defaultMetadata.openGraph?.description, post.metaDescription)
+    assert.equal(defaultMetadata.twitter?.description, post.metaDescription)
   })
 })
 

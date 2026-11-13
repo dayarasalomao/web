@@ -82,6 +82,7 @@ export function buildTwitterMetadata(opts: TwitterOptions): NonNullable<Metadata
 export function buildPostMetadata(post: BlogPost): Metadata {
   const url = buildCanonical(`/blog/${post.slug}`)
   const title = post.seoTitle ?? post.title
+  const socialDescription = post.socialDescription ?? post.metaDescription
   // Rendered by app/blog/[slug]/opengraph-image.tsx from the figure the
   // article shows (post.image), so previews match what the reader sees.
   const image = `/blog/${post.slug}/opengraph-image`
@@ -97,7 +98,7 @@ export function buildPostMetadata(post: BlogPost): Metadata {
     alternates: { canonical: url },
     openGraph: buildOgMetadata({
       title,
-      description: post.metaDescription,
+      description: socialDescription,
       url,
       image,
       imageAlt,
@@ -110,7 +111,7 @@ export function buildPostMetadata(post: BlogPost): Metadata {
     }),
     twitter: buildTwitterMetadata({
       title,
-      description: post.metaDescription,
+      description: socialDescription,
       image,
     }),
     robots: DEFAULT_ROBOTS,

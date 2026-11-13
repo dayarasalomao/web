@@ -47,16 +47,23 @@ describe('treatment depth fields', () => {
       },
       'MedicalWebPage',
     )
-    assert.ok(String(reviewed.lastReviewed).startsWith('2026-11-20'))
+    assert.equal(reviewed.lastReviewed, '2026-11-20')
     assert.deepEqual(reviewed.reviewedBy, { '@id': `${SITE_URL}#physician` })
     assert.equal((reviewed.citation as unknown[]).length, 1)
   })
 
-  it('adds recovery to the procedure follow-up', () => {
+  it('links the procedure to its authored page and keeps recovery in its follow-up', () => {
     const procedure = graphNode(
       { ...TREATMENTS[0], recovery: ['Retorno gradual às atividades.'] },
       'MedicalProcedure',
     )
     assert.match(String(procedure.followup), /Retorno gradual às atividades\.$/)
+    assert.equal(procedure.indication, undefined)
+    assert.equal(procedure.performer, undefined)
+    assert.equal(procedure.procedureType, undefined)
+
+    const page = graphNode(TREATMENTS[0], 'MedicalWebPage')
+    assert.deepEqual(page.mainEntity, { '@id': procedure['@id'] })
+    assert.deepEqual(page.author, { '@id': `${SITE_URL}#physician` })
   })
 })

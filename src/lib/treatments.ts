@@ -750,7 +750,7 @@ export const TREATMENTS: Treatment[] = [
         title:
           'The American Society of Colon and Rectal Surgeons Clinical Practice Guidelines for the Evaluation and Management of Chronic Constipation',
         organization: 'American Society of Colon and Rectal Surgeons (ASCRS) — Dis Colon Rectum 2024;67(10):1244–1257',
-        url: 'https://journals.lww.com/dcrjournal/fulltext/2024/10000/the_american_society_of_colon_and_rectal_surgeons.9.aspx',
+        url: 'https://ohsu.elsevierpure.com/en/publications/the-american-society-of-colon-and-rectal-surgeons-clinical-practi-5/',
         accessedAt: '2026-11-12',
       },
       {
@@ -1237,7 +1237,7 @@ export const TREATMENTS: Treatment[] = [
       {
         title: 'ECCO Guidelines on Therapeutics in Crohn’s Disease: Surgical Treatment',
         organization: 'European Crohn’s and Colitis Organisation (ECCO) — J Crohns Colitis 2024;18(10):1556–1582',
-        url: 'https://doi.org/10.1093/ecco-jcc/jjae089',
+        url: 'https://vbn.aau.dk/ws/files/726048807/Adamina_et_al._2024_._ECCO_Guidelines_on_Therapeutics_in_Crohn_s_Disease_-_Surgical_Treatment.pdf',
         accessedAt: '2026-11-12',
       },
       {
