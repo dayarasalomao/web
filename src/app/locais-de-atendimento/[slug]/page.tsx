@@ -398,7 +398,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <p className="mt-6 text-base leading-relaxed text-gray-700">
                 <strong className="text-teal">{location.name}</strong>
                 {location.address.neighborhood ? ` · ${location.address.neighborhood}` : ''}
-                {location.openingHours ? ` · ${location.openingHours.label}` : ''}
+                {location.openingHours
+                  ? ` · Horário da Dra. Dayara: ${location.openingHours.label}`
+                  : ''}
               </p>
             ) : null}
 
@@ -651,6 +653,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   {qualification.year}
                 </span>
                 <span className="min-w-0 flex-1">
+                  <span className="block text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-copper">
+                    {qualification.kindLabel}
+                  </span>
                   <span className="block text-[0.9375rem] font-semibold leading-snug text-teal">
                     {qualification.title}
                   </span>

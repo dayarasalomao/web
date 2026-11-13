@@ -7,18 +7,18 @@ import { InfoCard } from '@/components/ui/InfoCard'
 
 const CONTINUING_EDUCATION = [
   {
-    title: 'Excelência Acadêmica',
-    description: 'Formação em instituições reconhecidas',
+    title: 'Graduação e residências',
+    description: 'Medicina, cirurgia geral e coloproctologia',
     Icon: GraduationCap,
   },
   {
-    title: 'Especialização Avançada',
-    description: 'Técnicas minimamente invasivas',
+    title: 'Curso e pós-graduação',
+    description: 'Aperfeiçoamento distinto do RQE',
     Icon: Settings2,
   },
   {
-    title: 'Atualização Constante',
-    description: 'Revisão contínua de práticas e evidências',
+    title: 'Atualização contínua',
+    description: 'Revisão de práticas e evidências',
     Icon: TrendingUp,
   },
 ] as const
@@ -47,16 +47,8 @@ export default function CV() {
           title="Formação e Experiência"
           lead={
             <>
-              Uma trajetória de{' '}
-              <span className="font-semibold text-copper">
-                excelência acadêmica
-              </span>{' '}
-              e
-              <span className="font-semibold text-teal">
-                {' '}
-                especialização contínua
-              </span>{' '}
-              para sustentar um cuidado atualizado e responsável
+              Graduação, residências, curso de aperfeiçoamento e pós-graduação, cada
+              um com um papel diferente no cuidado.
             </>
           }
         />
@@ -97,9 +89,14 @@ export default function CV() {
                       <div className="flex items-start gap-3">
                         <div className="flex-1">
                           <div className="flex items-start justify-between gap-2 mb-1">
-                            <h3 className="font-sans text-base font-semibold text-teal">
-                              {qualification.title}
-                            </h3>
+                            <div>
+                              <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-copper">
+                                {qualification.kindLabel}
+                              </p>
+                              <h3 className="font-sans text-base font-semibold text-teal">
+                                {qualification.title}
+                              </h3>
+                            </div>
                             <span className="whitespace-nowrap rounded-full bg-teal/10 px-2 py-0.5 text-xs font-medium text-teal">
                               {qualification.year}
                             </span>

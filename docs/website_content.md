@@ -4,7 +4,7 @@ Referência no tratamento minimamente invasivo de doenças da região anal atrav
 
 ## Quem é
 
-Médica formada pela Pontifícia Universidade Católica do Paraná (PUCPR) em 2019, atualmente é especialista em coloproctologia, atuando em doenças da região anal com excelência técnica, empatia, acolhimento e tecnologia.
+Médica formada pela Pontifícia Universidade Católica do Paraná (PUCPR) em 2019 e especialista em coloproctologia. Atende doenças do cólon, do reto e da região anal. Procedimentos minimamente invasivos dependem da avaliação.
 
 ## Doenças que trato
 
@@ -78,11 +78,11 @@ O catálogo completo permanece disponível na página de tratamentos.
 
 ## Currículo
 
-- Médica pela PUC-PR formada em 2019
-- Residência médica em Cirurgia Geral pela Santa Casa de Curitiba em 2022
-- Residência médica em Coloproctologia pelo Hospital Mackenzie em 2024
-- Curso em Proctologia Minimamente Invasiva pelo IRCAD América Latina 2025
-- Pós-graduanda em Disfunções do Assoalho Pélvico (UNIFAL)
+- Graduação: Medicina pela PUC-PR em 2019
+- Residência médica: Cirurgia Geral pela Santa Casa de Curitiba em 2022
+- Residência médica: Coloproctologia pelo Hospital Mackenzie em 2024. O nome completo do hospital ainda precisa de confirmação.
+- Curso de aperfeiçoamento: Proctologia Minimamente Invasiva pelo IRCAD América Latina em 2025. Não é residência nem RQE.
+- Pós-graduação: Disfunções do Assoalho Pélvico (UNIFAL-MG), ano 2026. Não é residência nem RQE. A referência editorial anterior dizia “pós-graduanda”; a página do Instituto diz que ela possui a pós. Confirmar se está concluída ou em andamento antes de publicar um dos dois status.
 
 ## Local e Agendamento
 

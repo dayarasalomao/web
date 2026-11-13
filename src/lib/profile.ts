@@ -1,4 +1,6 @@
 export interface ProfessionalQualification {
+  /** Visible category. Residência, pós-graduação and a short course are not equivalent. */
+  kindLabel: string
   title: string
   institution: string
   year: string
@@ -7,34 +9,40 @@ export interface ProfessionalQualification {
 
 export const PROFESSIONAL_QUALIFICATIONS: ProfessionalQualification[] = [
   {
+    kindLabel: 'Graduação',
     title: 'Formação Médica',
     institution: 'Pontifícia Universidade Católica do Paraná (PUC-PR)',
     year: '2019',
-    description: 'Graduação em Medicina com formação sólida em ciências médicas',
+    description: 'Graduação em Medicina.',
   },
   {
+    kindLabel: 'Residência médica',
     title: 'Residência em Cirurgia Geral',
     institution: 'Santa Casa de Curitiba',
     year: '2022',
-    description: 'Especialização em procedimentos cirúrgicos com foco em técnicas avançadas',
+    description: 'Programa de residência médica em cirurgia geral.',
   },
   {
+    kindLabel: 'Residência médica',
     title: 'Residência em Coloproctologia',
     institution: 'Hospital Mackenzie',
     year: '2024',
-    description: 'Especialização completa em doenças do cólon, reto e ânus',
+    description: 'Programa de residência médica nas doenças do cólon, reto e ânus.',
   },
   {
+    kindLabel: 'Curso de aperfeiçoamento',
     title: 'Proctologia Minimamente Invasiva',
     institution: 'IRCAD América Latina',
     year: '2025',
-    description: 'Curso avançado em técnicas minimamente invasivas e cirurgia a laser',
+    description: 'Curso em técnicas minimamente invasivas e cirurgia a laser.',
   },
   {
+    kindLabel: 'Pós-graduação',
     title: 'Pós-graduação em Disfunções do Assoalho Pélvico',
-    institution: 'UNIFAL',
+    institution: 'UNIFAL-MG',
     year: '2026',
-    description: 'Especialização avançada em tratamentos do assoalho pélvico',
+    description:
+      'Pós-graduação em disfunções do assoalho pélvico. Não é residência médica nem o RQE.',
   },
 ]
 
@@ -44,7 +52,7 @@ export const PROFESSIONAL_MEMBERSHIPS = [
 ] as const
 
 /** Date of the last editorial change to `/sobre`; feeds its schema and the sitemap. */
-export const PROFILE_LAST_UPDATED = '2026-08-10'
+export const PROFILE_LAST_UPDATED = '2026-11-12'
 
 export const PROFESSIONAL_PROFILE = {
   shortIntroduction:

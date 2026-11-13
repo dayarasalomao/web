@@ -124,10 +124,9 @@ export default function Diseases() {
           title="Doenças que trato"
           lead={
             <>
-              Especialização em{' '}
-              <span className="font-semibold text-copper">coloproctologia</span>{' '}
-              com tratamentos modernos e minimamente invasivos para diversas
-              condições
+              Condições do cólon, do reto e da região anal acompanhadas em{' '}
+              <span className="font-semibold text-copper">coloproctologia</span>,
+              com a conduta definida depois da avaliação
             </>
           }
         />

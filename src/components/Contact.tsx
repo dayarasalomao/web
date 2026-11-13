@@ -145,9 +145,8 @@ export default function Contact() {
                         <CalendarCheck className="h-6 w-6 text-teal" strokeWidth={1.75} />
                       </span>
                     </span>
-                    Cuidado especializado com{' '}
-                    <span className="font-semibold text-copper">excelência técnica</span>{' '}
-                    e <span className="font-semibold text-teal">acolhimento humano</span>
+                    Fale com a equipe para receber orientações de agendamento. A
+                    indicação de exames e procedimentos fica para a consulta.
                   </>
                 }
               >

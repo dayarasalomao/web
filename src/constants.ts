@@ -101,6 +101,9 @@ export const CLINIC_GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6
 export const BUSINESS_NAME = SEO_DOCTOR_NAME
 export const BUSINESS_ALTERNATE_NAME = 'Dayara Salomão Coloproctologista'
 export const BUSINESS_DESCRIPTION = SEO_OG_DESCRIPTION
+// Public specialty name. schema.org/MedicalSpecialty has no coloproctology
+// value; do not send this string as medicalSpecialty.
+export const BUSINESS_SPECIALTY_LABEL = 'Coloproctologia'
 export const BUSINESS_PHONE = BUSINESS_TELEPHONE_NUMBER
 export const BUSINESS_EMAIL = CONTACT_EMAIL
 
@@ -129,7 +132,7 @@ export const BUSINESS_HOURS = 'Mo-Fr 09:00-18:00'
 // =================================================================
 export const PHYSICIAN_DATA = {
   name: 'Dayara Salomão',
-  jobTitle: 'Coloproctologista',
+  jobTitle: SEO_SPECIALTY,
   university: 'Pontifícia Universidade Católica do Paraná',
   clinic: BUSINESS_CLINIC_NAME,
 }
