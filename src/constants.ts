@@ -132,6 +132,7 @@ export const BUSINESS_HOURS = 'Mo-Fr 09:00-18:00'
 // =================================================================
 export const PHYSICIAN_DATA = {
   name: 'Dayara Salomão',
+  jobTitle: SEO_SPECIALTY,
   university: 'Pontifícia Universidade Católica do Paraná',
   clinic: BUSINESS_CLINIC_NAME,
 }

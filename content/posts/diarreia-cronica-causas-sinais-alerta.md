@@ -65,9 +65,11 @@ image:
   height: 941
 ---
 
-*Diarreia que persiste ou volta com frequência não deve ser tratada apenas como "algo que comi": ela pode ter várias causas e precisa ser analisada junto com o contexto clínico.*
+*Intolerâncias alimentares, medicamentos, infecções e doenças intestinais podem causar diarreia persistente. Sangue nas fezes, febre, perda de peso e dor abdominal importante são sinais de alerta.*
 
-## O que é diarreia crônica?
+## Quando a diarreia é crônica e quais sinais exigem atenção?
+
+Diarreia persistente pode ter causas como intolerâncias alimentares, medicamentos ou doenças intestinais. Procure avaliação se ela volta com frequência ou se aparece com sangue nas fezes, febre, perda de peso ou dor abdominal importante.
 
 Diarreia crônica é a presença de evacuações líquidas ou muito pastosas por mais de quatro semanas. Pode vir acompanhada de urgência para ir ao banheiro, cólicas, gases, muco, sensação de esvaziamento incompleto ou dificuldade para controlar a evacuação.
 

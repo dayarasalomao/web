@@ -30,7 +30,7 @@ Infecção na região anal pelo papilomavírus humano (HPV) tanto externa quanto
 
 ### Cisto Pilonidal
 
-É uma infecção na região sacral devido a uma coleção de pêlos embaixo da pele
+É uma infecção na região sacral devido a uma coleção de pelos embaixo da pele
 
 ### Constipação
 

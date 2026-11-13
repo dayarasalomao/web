@@ -18,7 +18,6 @@ import {
   RQE_FULL,
   SEO_DESCRIPTION,
   SEO_IMAGE,
-  SEO_SPECIALTY,
   SITE_URL,
   WHATSAPP_NUMBER,
   WHATSAPP_URL,
@@ -148,11 +147,12 @@ export function buildGlobalGraph(): Record<string, unknown> {
         name: PHYSICIAN_DATA.name,
         alternateName: BUSINESS_ALTERNATE_NAME,
         description: SEO_DESCRIPTION,
+        jobTitle: PHYSICIAN_DATA.jobTitle,
         // Coloproctologia is not a schema.org MedicalSpecialty member. Surgical
         // and Gastroenterologic would name a different practice than the page.
         hasOccupation: {
           '@type': 'Occupation',
-          name: SEO_SPECIALTY,
+          name: PHYSICIAN_DATA.jobTitle,
           description: `${BUSINESS_SPECIALTY_LABEL}, também chamada de proctologia.`,
         },
         knowsAbout: [BUSINESS_SPECIALTY_LABEL, 'Proctologia'],
@@ -211,7 +211,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
         // They are not the Instituto's opening hours.
         ...(clinic?.openingHours
           ? {
-              hoursAvailable: {
+              openingHoursSpecification: {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: [
                   'https://schema.org/Monday',
@@ -227,7 +227,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
           : {}),
         hasCredential: [
           {
-            '@type': 'EducationalOccupationalCredential',
+            '@type': 'Credential',
             credentialCategory: 'Registro Profissional',
             identifier: CRM_FULL,
             name: CRM_FULL,
@@ -239,7 +239,7 @@ export function buildGlobalGraph(): Record<string, unknown> {
             },
           },
           {
-            '@type': 'EducationalOccupationalCredential',
+            '@type': 'Credential',
             credentialCategory: 'Qualificação de Especialista',
             identifier: RQE_FULL,
             name: RQE_FULL,
@@ -344,7 +344,7 @@ export function buildBlogPostGraph(post: BlogPost): Record<string, unknown> {
       isPartOf: {
         '@id': `${SITE_URL}#website`,
       },
-      about: {
+      mainEntity: {
         '@id': articleId,
       },
       ...(primaryImage ? { primaryImageOfPage: { '@id': `${postUrl}#primary-image` } } : {}),
@@ -412,13 +412,16 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       isPartOf: {
         '@id': `${SITE_URL}#website`,
       },
-      about: {
+      mainEntity: {
         '@id': procedureId,
+      },
+      author: {
+        '@id': `${SITE_URL}#physician`,
       },
       dateModified: toSchemaDateTime(treatment.lastUpdated),
       ...(treatment.lastReviewed
         ? {
-            lastReviewed: toSchemaDateTime(treatment.lastReviewed),
+            lastReviewed: treatment.lastReviewed,
             reviewedBy: { '@id': `${SITE_URL}#physician` },
           }
         : {}),
@@ -430,16 +433,10 @@ export function buildTreatmentGraph(treatment: Treatment): Record<string, unknow
       name: treatment.title,
       description: treatment.summary,
       url: treatmentUrl,
-      procedureType: treatment.shortTitle,
-      bodyLocation: 'Região anal e perianal',
       followup: [...treatment.carePath, ...(treatment.recovery ?? [])].join(' '),
-      indication: treatment.indications.join(' '),
       howPerformed: (treatment.howItWorks ?? treatment.overview).join(' '),
       mainEntityOfPage: {
         '@id': pageId,
-      },
-      performer: {
-        '@id': `${SITE_URL}#physician`,
       },
     } as Thing,
     buildBreadcrumbGraph([

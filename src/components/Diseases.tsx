@@ -33,7 +33,7 @@ export default function Diseases() {
     {
       name: 'Cisto Pilonidal',
       description:
-        'É uma infecção na região sacral devido a uma coleção de pêlos embaixo da pele.',
+        'É uma infecção na região sacral devido a uma coleção de pelos embaixo da pele.',
     },
     {
       name: 'Constipação',

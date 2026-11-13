@@ -614,3 +614,27 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   const robotsTxt = await robotsResponse.text()
   expect(robotsTxt).toContain(`Sitemap: ${CANONICAL_WEBSITE_URL}/sitemap.xml`)
 })
+
+test('mobile WhatsApp floats and the comparison table scrolls by keyboard', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+
+  for (const path of ['/', '/tratamentos/tratamento-prurido-anal', '/blog/cirurgia-hemorroida-afastamento-atestado']) {
+    await page.goto(path)
+    const button = page.getByRole('link', { name: 'Agendar consulta pelo WhatsApp', exact: true })
+    await expect(button).toBeVisible()
+    await expect(button).toHaveAttribute('href', /^https:\/\/wa\.me\//)
+    await expect(button).toHaveCSS('position', 'fixed')
+  }
+
+  const table = page.getByRole('region', { name: 'Tabela comparativa com rolagem horizontal' })
+  await expect(page.getByText('Deslize a tabela para ver todas as colunas.')).toBeVisible()
+  await table.focus()
+  await page.keyboard.press('ArrowRight')
+  await expect.poll(() => table.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0)
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390)
+  await expect(page.locator('[data-conversion="whatsapp-floating"]')).toBeInViewport()
+
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await expect(page.locator('[data-conversion="whatsapp-floating"]')).toBeVisible()
+  await expect(page.getByText('Deslize a tabela para ver todas as colunas.')).toBeHidden()
+})

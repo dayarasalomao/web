@@ -67,7 +67,21 @@ image:
   height: 941
 ---
 
-*Intestino preso não é apenas "ir pouco ao banheiro": esforço, dor, fezes ressecadas e sensação de evacuação incompleta também podem indicar constipação.*
+*Intestino preso merece avaliação quando persiste, surge sem explicação clara ou vem acompanhado de sangue nas fezes, dor abdominal importante ou perda de peso.*
+
+## Quando investigar?
+
+Procure avaliação quando a constipação é persistente, recente sem explicação clara ou associada a:
+
+* sangue nas fezes;
+* dor abdominal importante;
+* perda de peso não intencional;
+* anemia;
+* mudança recente do padrão intestinal;
+* histórico familiar de câncer colorretal;
+* sensação de bloqueio ou necessidade de manobras para evacuar.
+
+Esses sinais não significam necessariamente doença grave, mas indicam que a causa precisa ser avaliada com cuidado.
 
 ## O que caracteriza constipação?
 
@@ -86,20 +100,6 @@ Também pode coexistir com [fissura anal](/blog/fissura-anal-causas-sintomas), [
 ## Quando o laxante não resolve
 
 Em parte das pessoas, o intestino funciona, mas a saída não: os músculos do assoalho pélvico não relaxam de forma coordenada na hora de evacuar. Esse distúrbio da evacuação pode não responder a laxantes, e a solução raramente é um laxante mais forte. Exames da função anorretal ajudam a esclarecer a causa e a orientar o tratamento, que nesse caso costuma envolver reabilitação do assoalho pélvico.
-
-## Quando investigar?
-
-Procure avaliação quando a constipação é persistente, recente sem explicação clara ou associada a:
-
-* sangue nas fezes;
-* dor abdominal importante;
-* perda de peso não intencional;
-* anemia;
-* mudança recente do padrão intestinal;
-* histórico familiar de câncer colorretal;
-* sensação de bloqueio ou necessidade de manobras para evacuar.
-
-Esses sinais não significam necessariamente doença grave, mas indicam que a causa precisa ser avaliada com cuidado.
 
 ## Como o tratamento é planejado?
 
