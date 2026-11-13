@@ -176,7 +176,7 @@ test('Server Action, RSC and binary requests bypass negotiation', async ({ reque
   const og = await request.get('/opengraph-image', { headers: { Accept: 'text/markdown' } })
   expect(og.status()).toBe(200)
   expect(og.headers()['content-type']).toBe('image/png')
-  expect(og.headers()['x-robots-tag']).toBeUndefined()
+  expect(og.headers()['x-robots-tag']).toBe('noindex')
 
   const icon = await request.get('/apple-icon.png', { headers: { Accept: 'text/markdown' } })
   expect(icon.headers()['content-type']).toBe('image/png')

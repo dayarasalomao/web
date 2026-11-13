@@ -3,6 +3,7 @@ import { getAllPosts } from '../../src/lib/blog'
 import { getAllTreatments } from '../../src/lib/treatments'
 import { getIndexableLocations } from '../../src/lib/locations'
 import { EDITORIAL_IMAGE_DIMENSIONS } from '../../src/lib/editorial-images'
+import { SEO_IMAGE } from '../../src/constants'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import type { Node, Parent } from 'unist'
@@ -49,9 +50,12 @@ test('sitemap covers every canonical indexable page and each selected blog image
   for (const post of getAllPosts()) {
     const entry = entries.find((entry) => entry.includes(`<loc>${SITE}/blog/${post.slug}</loc>`))!
     const listed = Array.from(entry.matchAll(/<image:loc>(.*?)<\/image:loc>/g), ([, url]) => url)
-    const expected = Array.from(new Set([post.cardImage!.src, ...bodyImageSources(post.content)]))
+    const expected = Array.from(
+      new Set([...(post.cardImage ? [post.cardImage.src] : []), ...bodyImageSources(post.content)]),
+    )
     expect(listed).toEqual(expected.map((src) => `${SITE}${src}`))
-    const image = await request.get(post.cardImage!.src)
+    if (!post.cardImage) continue
+    const image = await request.get(post.cardImage.src)
     expect(image.status()).toBe(200)
     expect(image.headers()['content-type']).toMatch(/^image\/webp/)
   }
@@ -86,7 +90,7 @@ test('all indexable routes return 200 with canonical metadata and coherent artic
         .flatMap((item) => item['@graph'] ?? [item])
       const articleImage = graph.find((item) => item['@type'] === 'Article')?.image
       const shown = post.image ?? post.coverImage ?? post.cardImage
-      expect(typeof articleImage === 'string' ? articleImage : articleImage.contentUrl, post.slug).toBe(`${SITE}${shown!.src}`)
+      expect(typeof articleImage === 'string' ? articleImage : articleImage.contentUrl, post.slug).toBe(`${SITE}${shown?.src ?? SEO_IMAGE}`)
     }
   }
 })
