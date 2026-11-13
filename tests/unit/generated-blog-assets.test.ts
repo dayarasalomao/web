@@ -9,12 +9,12 @@ const manifest = JSON.parse(fs.readFileSync('docs/blog-generated-images-manifest
   generationTool: string; prompt: string; kind: string;
 }>
 
-it('keeps 22 active generated assets after restoring the client EPSiT illustration (I1)', () => {
-  assert.equal(manifest.length, 22)
+it('keeps 23 distinct active generated blog images (I1)', () => {
+  assert.equal(manifest.length, 23)
   assert.equal(manifest.filter((image) => image.kind === 'image').length, 16)
-  assert.equal(manifest.filter((image) => image.kind === 'cover').length, 6)
-  assert.equal(new Set(manifest.map((image) => image.src)).size, 22)
-  assert.equal(new Set(manifest.map((image) => image.sha256)).size, 22)
+  assert.equal(manifest.filter((image) => image.kind === 'cover').length, 7)
+  assert.equal(new Set(manifest.map((image) => image.src)).size, manifest.length)
+  assert.equal(new Set(manifest.map((image) => image.sha256)).size, manifest.length)
 })
 
 it('keeps every generated image optimized, dimensioned and traceable to its prompt (F1)', async () => {

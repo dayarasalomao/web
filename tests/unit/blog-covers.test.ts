@@ -18,10 +18,9 @@ const reviewed = new Map((JSON.parse(fs.readFileSync('docs/blog-image-editorial-
 it('gives every reviewed article an image and shares only the client pilonidal comparison (I1)', () => {
   const allPosts = getAllPosts()
   assert.equal(allPosts.length, 41)
-  assert.deepEqual(allPosts.filter((post) => !post.cardImage).map((post) => post.slug), ['cirurgia-hemorroida-afastamento-atestado'])
+  assert.deepEqual(allPosts.filter((post) => !post.cardImage).map((post) => post.slug), [])
   const posts = allPosts.filter((post) => post.cardImage)
-  assert.equal(posts.length, 40)
-  assert.equal(new Set(posts.map((post) => post.cardImage!.src)).size, 39)
+  assert.equal(new Set(posts.map((post) => post.cardImage!.src)).size, 40)
   const groups = new Map<string, string[]>()
   for (const post of posts) groups.set(post.cardImage!.src, [...(groups.get(post.cardImage!.src) ?? []), post.slug])
   assert.deepEqual(Array.from(groups).filter(([, slugs]) => slugs.length > 1), [
