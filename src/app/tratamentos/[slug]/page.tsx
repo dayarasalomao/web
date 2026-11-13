@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { BookingCard } from '@/components/ui/BookingCard'
 import { LocationCard } from '@/components/ui/LocationCard'
+import { MedicalSources } from '@/components/ui/MedicalSources'
 import { CRM_FULL, RQE_FULL, SEO_DOCTOR_NAME, WHATSAPP_URL } from '@/constants'
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon'
 import { buildTreatmentMetadata } from '@/lib/seo'
@@ -113,6 +115,16 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
                 })}
               </time>
             </span>
+            {treatment.lastReviewed ? (
+              <span>
+                Revisão médica:{' '}
+                <time dateTime={treatment.lastReviewed}>
+                  {new Date(treatment.lastReviewed).toLocaleDateString('pt-BR', {
+                    timeZone: 'UTC',
+                  })}
+                </time>
+              </span>
+            ) : null}
           </div>
 
           {/* On phones the sidebar booking card stacks below the whole main
@@ -135,18 +147,35 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
           <div className="space-y-6">
-            <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-semibold text-teal">
-                Quando esse tratamento pode ser considerado
-              </h2>
-              <ul className="space-y-3 pl-5 text-base leading-relaxed text-gray-700">
-                {treatment.indications.map((item) => (
-                  <li key={item} className="list-disc">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </section>
+            <TreatmentSection title="Quando esse tratamento é indicado?">
+              <BulletList items={treatment.indications} />
+            </TreatmentSection>
+
+            {treatment.howItWorks?.length ? (
+              <TreatmentSection title="Como o tratamento é feito?">
+                <Paragraphs items={treatment.howItWorks} />
+              </TreatmentSection>
+            ) : null}
+
+            <TreatmentSection title="Como a conduta é definida?">
+              <Paragraphs items={treatment.overview} />
+            </TreatmentSection>
+
+            <TreatmentSection title="Diferenciais da abordagem">
+              <BulletList items={treatment.benefits} />
+            </TreatmentSection>
+
+            {treatment.recovery?.length ? (
+              <TreatmentSection title="Como é a recuperação?">
+                <Paragraphs items={treatment.recovery} />
+              </TreatmentSection>
+            ) : null}
+
+            {treatment.limitations?.length ? (
+              <TreatmentSection title="Quando esse tratamento não é a melhor opção?">
+                <BulletList items={treatment.limitations} />
+              </TreatmentSection>
+            ) : null}
 
             {treatment.faqs?.length ? (
               <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
@@ -177,40 +206,9 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               </section>
             ) : null}
 
-            {treatment.howItWorks?.length ? (
-              <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
-                <h2 className="mb-4 text-2xl font-semibold text-teal">
-                  Como o procedimento é feito
-                </h2>
-                <div className="space-y-4 text-base leading-relaxed text-gray-700">
-                  {treatment.howItWorks.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </section>
+            {treatment.sources?.length ? (
+              <MedicalSources sources={treatment.sources} className="" />
             ) : null}
-
-            <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-semibold text-teal">Como a conduta é planejada</h2>
-              <div className="space-y-4 text-base leading-relaxed text-gray-700">
-                {treatment.overview.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </section>
-
-            <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-semibold text-teal">
-                Diferenciais da abordagem
-              </h2>
-              <ul className="space-y-3 pl-5 text-base leading-relaxed text-gray-700">
-                {treatment.benefits.map((item) => (
-                  <li key={item} className="list-disc">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </section>
           </div>
 
           <aside className="space-y-6">
@@ -283,3 +281,28 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
     </main>
   )
 }
+
+const TreatmentSection = ({ title, children }: { title: string; children: ReactNode }) => (
+  <section className="rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+    <h2 className="mb-4 text-2xl font-semibold text-teal">{title}</h2>
+    {children}
+  </section>
+)
+
+const BulletList = ({ items }: { items: string[] }) => (
+  <ul className="space-y-3 pl-5 text-base leading-relaxed text-gray-700">
+    {items.map((item) => (
+      <li key={item} className="list-disc">
+        {item}
+      </li>
+    ))}
+  </ul>
+)
+
+const Paragraphs = ({ items }: { items: string[] }) => (
+  <div className="space-y-4 text-base leading-relaxed text-gray-700">
+    {items.map((paragraph) => (
+      <p key={paragraph}>{paragraph}</p>
+    ))}
+  </div>
+)

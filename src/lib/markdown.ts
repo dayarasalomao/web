@@ -22,7 +22,7 @@ import {
   SITE_URL,
   WHATSAPP_URL,
 } from '../constants.ts'
-import { getAllPosts, getPostBySlug, type BlogPost } from './blog.ts'
+import { getAllPosts, getPostBySlug, type BlogPost, type MedicalSource } from './blog.ts'
 import { FAQ_GROUPS } from './faq.ts'
 import { getIndexableLocations, getLocationBySlug, isLocationIndexable } from './locations.ts'
 import type { PracticeLocation } from './locations.ts'
@@ -192,16 +192,7 @@ function renderPost(post: BlogPost): string {
           .join('\n')
           .trim()
       : false,
-    post.sources?.length
-      ? [
-          '## Fontes médicas',
-          '',
-          ...post.sources.map(
-            (source) =>
-              `- [${source.title}](${source.url}) — ${source.organization}${source.publishedAt ? `, ${source.publishedAt}` : ''}`,
-          ),
-        ].join('\n')
-      : false,
+    post.sources?.length ? sourcesSection(post.sources) : false,
     post.disclaimer ? `> ${post.disclaimer}` : MEDICAL_NOTICE,
     contactSection(),
     siteFooter(),
@@ -224,18 +215,41 @@ function renderTreatmentIndex(): string {
   )
 }
 
+function sourcesSection(sources: readonly MedicalSource[]): string {
+  return [
+    '## Fontes médicas',
+    '',
+    ...sources.map(
+      (source) =>
+        `- [${source.title}](${source.url}) — ${source.organization}${source.publishedAt ? `, ${source.publishedAt}` : ''}`,
+    ),
+  ].join('\n')
+}
+
 function renderTreatment(treatment: Treatment): string {
   return join(
     `# ${treatment.title}`,
+    [
+      `- Autora: ${SEO_DOCTOR_NAME}, ${SEO_SPECIALTY} (${CRM_FULL}, ${RQE_FULL})`,
+      `- Atualizado em: ${treatment.lastUpdated}`,
+      ...(treatment.lastReviewed ? [`- Revisão médica: ${treatment.lastReviewed}`] : []),
+      `- URL: ${buildCanonical(`/tratamentos/${treatment.slug}`)}`,
+    ].join('\n'),
     treatment.summary,
     MEDICAL_NOTICE,
+    ['## Quando esse tratamento é indicado?', '', bulletList(treatment.indications)].join('\n'),
     treatment.howItWorks?.length
-      ? ['## Como funciona', '', treatment.howItWorks.join('\n\n')].join('\n')
+      ? ['## Como o tratamento é feito?', '', treatment.howItWorks.join('\n\n')].join('\n')
       : false,
-    ['## Visão geral', '', treatment.overview.join('\n\n')].join('\n'),
-    ['## Indicações', '', bulletList(treatment.indications)].join('\n'),
-    ['## Benefícios', '', bulletList(treatment.benefits)].join('\n'),
-    ['## Acompanhamento', '', treatment.carePath.join('\n\n')].join('\n'),
+    ['## Como a conduta é definida?', '', treatment.overview.join('\n\n')].join('\n'),
+    ['## Diferenciais da abordagem', '', bulletList(treatment.benefits)].join('\n'),
+    treatment.recovery?.length
+      ? ['## Como é a recuperação?', '', treatment.recovery.join('\n\n')].join('\n')
+      : false,
+    treatment.limitations?.length
+      ? ['## Quando esse tratamento não é a melhor opção?', '', bulletList(treatment.limitations)].join('\n')
+      : false,
+    ['## Avaliação e recuperação', '', treatment.carePath.join('\n\n')].join('\n'),
     treatment.faqs?.length
       ? [
           '## Perguntas frequentes',
@@ -245,6 +259,7 @@ function renderTreatment(treatment: Treatment): string {
           .join('\n')
           .trim()
       : false,
+    treatment.sources?.length ? sourcesSection(treatment.sources) : false,
     contactSection(),
     siteFooter(),
   )
