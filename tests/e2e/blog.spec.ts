@@ -615,18 +615,15 @@ test('sitemap and robots expose blog crawl signals', async ({ page }) => {
   expect(robotsTxt).toContain(`Sitemap: ${CANONICAL_WEBSITE_URL}/sitemap.xml`)
 })
 
-test('mobile booking stays in the header and the comparison table scrolls by keyboard', async ({ page }) => {
+test('mobile WhatsApp floats and the comparison table scrolls by keyboard', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
 
   for (const path of ['/', '/tratamentos/tratamento-prurido-anal', '/blog/cirurgia-hemorroida-afastamento-atestado']) {
     await page.goto(path)
-    const header = page.locator('header').first()
-    await expect(header.getByRole('link', { name: 'Agendar consulta pelo WhatsApp' })).toHaveAttribute('href', /^https:\/\/wa\.me\//)
-    await expect(page.locator('[data-conversion="whatsapp-floating"]')).toBeHidden()
-    await header.getByRole('button', { name: 'Abrir menu' }).click()
-    await expect(page.locator('#mobile-navigation')).toBeVisible()
-    await page.keyboard.press('Escape')
-    await expect(header.getByRole('button', { name: 'Abrir menu' })).toBeFocused()
+    const button = page.getByRole('link', { name: 'Agendar consulta pelo WhatsApp', exact: true })
+    await expect(button).toBeVisible()
+    await expect(button).toHaveAttribute('href', /^https:\/\/wa\.me\//)
+    await expect(button).toHaveCSS('position', 'fixed')
   }
 
   const table = page.getByRole('region', { name: 'Tabela comparativa com rolagem horizontal' })
@@ -635,8 +632,7 @@ test('mobile booking stays in the header and the comparison table scrolls by key
   await page.keyboard.press('ArrowRight')
   await expect.poll(() => table.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0)
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390)
-  const headerTop = await page.locator('header').first().evaluate((el) => el.getBoundingClientRect().top)
-  expect(headerTop).toBe(0)
+  await expect(page.locator('[data-conversion="whatsapp-floating"]')).toBeInViewport()
 
   await page.setViewportSize({ width: 1440, height: 900 })
   await expect(page.locator('[data-conversion="whatsapp-floating"]')).toBeVisible()
