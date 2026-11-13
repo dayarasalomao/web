@@ -72,6 +72,8 @@ publicação.
 ## Estado em 12 de novembro de 2026
 
 A expansão de `sindrome-intestino-irritavel-sintomas-manejo` já está escrita
-e aguarda a revisão clínica. A ordem acima continua uma proposta: a Dra. Dayara
+e aguarda a revisão clínica. O A1 (`cirurgia-hemorroida-afastamento-atestado`)
+tem pesquisa (`cirurgia-hemorroida-afastamento-atestado.research.md`) e rascunho
+em PR de rascunho, sem imagem, aguardando a revisão clínica da Dra. Dayara. A ordem acima continua uma proposta: a Dra. Dayara
 ainda não a aceitou. Convênio e valores continuam de fora até a clínica
 confirmar.

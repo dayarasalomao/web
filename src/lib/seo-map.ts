@@ -55,6 +55,11 @@ export const STRATEGIC_SEARCH_TARGETS: StrategicSearchTarget[] = [
     canonicalPath: '/blog/pos-operatorio-cirurgia-hemorroidas-o-que-esperar',
     intent: 'recovery',
   },
+  ...['cirurgia de hemorroida quantos dias de atestado', 'quantos dias de afastamento cirurgia de hemorroida'].map((query): StrategicSearchTarget => ({
+    query,
+    canonicalPath: '/blog/cirurgia-hemorroida-afastamento-atestado',
+    intent: 'recovery',
+  })),
 ]
 
 export function getStrategicTarget(query: string): StrategicSearchTarget | undefined {

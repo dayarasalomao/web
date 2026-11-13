@@ -11,7 +11,6 @@ secondaryKeywords:
   - recuperação cirurgia de hemorroidas
   - dor depois da cirurgia de hemorroida
   - hemorroidectomia convencional x laser
-  - quanto tempo de afastamento cirurgia de hemorroida
 targetAudience: patients
 intent: consideration
 image:
@@ -108,5 +107,5 @@ De forma geral, os lasers (diodo e CO2) tendem a proporcionar uma recuperação 
 
 * Qual o grau e o tamanho da hemorroida, já que isso influencia qual técnica é mais indicada.
 * Quais os riscos específicos de cada técnica no seu caso individual.
-* Expectativas realistas sobre tempo de afastamento do trabalho e retorno às atividades.
+* Expectativas realistas sobre [tempo de afastamento do trabalho e retorno às atividades](/blog/cirurgia-hemorroida-afastamento-atestado).
 * Sinais de alerta para procurar atendimento após a cirurgia, como sangramento intenso, dificuldade para urinar, febre ou dor que piora muito em vez de melhorar.
