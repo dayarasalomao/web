@@ -7,6 +7,9 @@ export interface FaqGroup {
   items: FaqEntry[]
 }
 
+/** Date of the last editorial change to `/perguntas-frequentes`; feeds the sitemap. */
+export const FAQ_LAST_UPDATED = '2026-09-01'
+
 // Grouped so the page reads as a guided path (chegar à consulta → entender os
 // sintomas → entender as tecnologias) instead of a flat wall of questions.
 export const FAQ_GROUPS: FaqGroup[] = [

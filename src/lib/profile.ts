@@ -43,6 +43,9 @@ export const PROFESSIONAL_MEMBERSHIPS = [
   'Sociedade Brasileira de Laser em Medicina e Cirurgia',
 ] as const
 
+/** Date of the last editorial change to `/sobre`; feeds its schema and the sitemap. */
+export const PROFILE_LAST_UPDATED = '2026-08-10'
+
 export const PROFESSIONAL_PROFILE = {
   shortIntroduction:
     'Médica formada em 2019 pela PUC-PR e especialista em coloproctologia, dedicada à avaliação e ao tratamento de doenças do cólon, reto e ânus.',
