@@ -109,8 +109,8 @@ export default function Hero() {
               </p>
 
               <p className="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed">
-                A consulta começa pela avaliação. Procedimentos minimamente invasivos,
-                inclusive com laser, só entram na conversa quando o exame indica.
+                A consulta começa pela avaliação. Quando há indicação, a Dra. Dayara
+                explica as opções de tratamento, incluindo técnicas minimamente invasivas.
               </p>
 
               <div

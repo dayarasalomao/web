@@ -12,8 +12,8 @@ const CONTINUING_EDUCATION = [
     Icon: GraduationCap,
   },
   {
-    title: 'Curso e pós-graduação',
-    description: 'Aperfeiçoamento distinto do RQE',
+    title: 'Curso de aperfeiçoamento',
+    description: 'Técnicas minimamente invasivas',
     Icon: Settings2,
   },
   {
@@ -47,8 +47,7 @@ export default function CV() {
           title="Formação e Experiência"
           lead={
             <>
-              Graduação, residências, curso de aperfeiçoamento e pós-graduação, cada
-              um com um papel diferente no cuidado.
+              Graduação em Medicina, residências médicas e curso de aperfeiçoamento.
             </>
           }
         />

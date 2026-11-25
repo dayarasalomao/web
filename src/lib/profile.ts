@@ -25,7 +25,7 @@ export const PROFESSIONAL_QUALIFICATIONS: ProfessionalQualification[] = [
   {
     kindLabel: 'Residência médica',
     title: 'Residência em Coloproctologia',
-    institution: 'Hospital Mackenzie',
+    institution: 'Hospital Universitário Evangélico Mackenzie',
     year: '2024',
     description: 'Programa de residência médica nas doenças do cólon, reto e ânus.',
   },
@@ -36,14 +36,6 @@ export const PROFESSIONAL_QUALIFICATIONS: ProfessionalQualification[] = [
     year: '2025',
     description: 'Curso em técnicas minimamente invasivas e cirurgia a laser.',
   },
-  {
-    kindLabel: 'Pós-graduação',
-    title: 'Pós-graduação em Disfunções do Assoalho Pélvico',
-    institution: 'UNIFAL-MG',
-    year: '2026',
-    description:
-      'Pós-graduação em disfunções do assoalho pélvico. Não é residência médica nem o RQE.',
-  },
 ]
 
 export const PROFESSIONAL_MEMBERSHIPS = [
@@ -51,8 +43,16 @@ export const PROFESSIONAL_MEMBERSHIPS = [
   'Sociedade Brasileira de Laser em Medicina e Cirurgia',
 ] as const
 
+export const PROFILE_PUBLICATION = {
+  title:
+    'Fístula anorretal recidivada: desfechos comparativos entre fistulotomia, retalho mucoso de avanço e fibrina rica em plaquetas injetável em estudo clínico prospectivo',
+  journal: 'Revista do Colégio Brasileiro de Cirurgiões',
+  year: '2026',
+  url: 'https://pubmed.ncbi.nlm.nih.gov/42961273/',
+} as const
+
 /** Date of the last editorial change to `/sobre`; feeds its schema and the sitemap. */
-export const PROFILE_LAST_UPDATED = '2026-11-12'
+export const PROFILE_LAST_UPDATED = '2026-11-25'
 
 export const PROFESSIONAL_PROFILE = {
   shortIntroduction:

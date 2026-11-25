@@ -23,7 +23,6 @@ import {
   BUSINESS_POSTAL_CODE,
   BUSINESS_GEO,
   BUSINESS_TELEPHONE_NUMBER,
-  BUSINESS_HOURS,
   WHATSAPP_URL,
   CLINIC_GOOGLE_MAPS_URL,
 } from '../constants.ts'
@@ -65,12 +64,6 @@ export interface PracticeLocation {
   mapsUrl?: string
   websiteUrl?: string
   instagramUrl?: string
-  openingHours?: {
-    label: string
-    opens: string
-    closes: string
-    schema: string
-  }
   roleDescription: string
   /**
    * Substantive prose about practising at this location. `roleDescription`
@@ -125,7 +118,7 @@ const CORE_BLOG_SLUGS: string[] = [
 export const LOCATIONS: PracticeLocation[] = [
   // ---------------------------------------------------------------
   // ACTIVE — Campo Grande/MS. Website cutover prepared 2026-07-19. Address,
-  // room, clinic phone, booking WhatsApp, weekday hours, geo and map
+  // room, clinic phone, booking WhatsApp, geo and map
   // are confirmed and derive from src/constants.ts.
   // ---------------------------------------------------------------
   {
@@ -153,12 +146,6 @@ export const LOCATIONS: PracticeLocation[] = [
     // TODO(campo-grande): record a dedicated doctor phone if one is provided.
     clinicPhone: BUSINESS_TELEPHONE_NUMBER,
     whatsappUrl: WHATSAPP_URL,
-    openingHours: {
-      label: 'Segunda a sexta, das 9h às 18h',
-      opens: '09:00',
-      closes: '18:00',
-      schema: BUSINESS_HOURS,
-    },
     mapsUrl: CLINIC_GOOGLE_MAPS_URL,
     websiteUrl: 'https://www.institutodigestivo.com.br/',
     instagramUrl: 'https://www.instagram.com/institutodigestivo/',
@@ -185,8 +172,8 @@ export const LOCATIONS: PracticeLocation[] = [
           'O WhatsApp de agendamento é o mesmo já utilizado no site. O telefone geral do Instituto do Aparelho Digestivo é (67) 3320-9500.',
       },
       {
-        question: 'Qual é o horário de atendimento em Campo Grande?',
-        answer: 'O atendimento da Dra. Dayara é de segunda a sexta, das 9h às 18h.',
+        question: 'Como consultar os horários de atendimento da Dra. Dayara?',
+        answer: 'Consulte os horários disponíveis pelo WhatsApp de agendamento.',
       },
       {
         question: 'Quais condições são atendidas em Campo Grande?',
@@ -196,7 +183,7 @@ export const LOCATIONS: PracticeLocation[] = [
     ],
     indexable: true,
     showAppointmentCta: true,
-    lastUpdated: '2026-09-01',
+    lastUpdated: '2026-11-25',
   },
 ]
 

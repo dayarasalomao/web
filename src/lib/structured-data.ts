@@ -6,7 +6,6 @@ import {
   BUSINESS_EMAIL,
   BUSINESS_GEO,
   BUSINESS_NAME,
-  BUSINESS_PHONE,
   BUSINESS_SPECIALTY_LABEL,
   CRM_COUNCIL_URL,
   CONTACT_SOCIAL_MEDIA,
@@ -158,7 +157,6 @@ export function buildGlobalGraph(): Record<string, unknown> {
         knowsAbout: [BUSINESS_SPECIALTY_LABEL, 'Proctologia'],
         url: buildCanonical('/sobre'),
         image: toAbsoluteUrl(SEO_IMAGE),
-        telephone: BUSINESS_PHONE,
         email: BUSINESS_EMAIL,
         contactPoint: {
           '@type': 'ContactPoint',
@@ -207,24 +205,6 @@ export function buildGlobalGraph(): Record<string, unknown> {
           '@type': 'City',
           name: BUSINESS_ADDRESS.addressLocality,
         },
-        // These hours are the physician's, labeled on the location page.
-        // They are not the Instituto's opening hours.
-        ...(clinic?.openingHours
-          ? {
-              openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: [
-                  'https://schema.org/Monday',
-                  'https://schema.org/Tuesday',
-                  'https://schema.org/Wednesday',
-                  'https://schema.org/Thursday',
-                  'https://schema.org/Friday',
-                ],
-                opens: clinic.openingHours.opens,
-                closes: clinic.openingHours.closes,
-              },
-            }
-          : {}),
         hasCredential: [
           {
             '@type': 'Credential',

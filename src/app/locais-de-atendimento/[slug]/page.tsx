@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import {
   BookOpen,
-  Clock,
   Globe,
   Info,
   MapPin,
@@ -124,10 +123,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const locationsLandingPath = getLocationsLandingPath()
   const breadcrumbItems = buildLocationBreadcrumbItems(location.city)
 
-  // Icon-led rows rather than a flat stack: address, hours and phone are
-  // three different kinds of fact and a patient scans for one of them.
-  // The label and its value stay inside one element so the strings the e2e
-  // suite asserts on remain contiguous.
   const addressBlock = location.address ? (
     <address className="not-italic">
       <ul className="space-y-4 text-base leading-relaxed text-gray-700">
@@ -151,17 +146,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
             </span>
           </span>
         </li>
-
-        {location.openingHours ? (
-          <li className="flex gap-3">
-            <Clock
-              className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-copper"
-              strokeWidth={1.5}
-              aria-hidden="true"
-            />
-            <span className="min-w-0">Horário da Dra. Dayara: {location.openingHours.label}</span>
-          </li>
-        ) : null}
 
         {location.phone || location.clinicPhone ? (
           <li className="flex gap-3">
@@ -398,9 +382,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <p className="mt-6 text-base leading-relaxed text-gray-700">
                 <strong className="text-teal">{location.name}</strong>
                 {location.address.neighborhood ? ` · ${location.address.neighborhood}` : ''}
-                {location.openingHours
-                  ? ` · Horário da Dra. Dayara: ${location.openingHours.label}`
-                  : ''}
               </p>
             ) : null}
 

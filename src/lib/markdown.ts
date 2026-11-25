@@ -30,6 +30,7 @@ import {
   PROFESSIONAL_MEMBERSHIPS,
   PROFESSIONAL_PROFILE,
   PROFESSIONAL_QUALIFICATIONS,
+  PROFILE_PUBLICATION,
 } from './profile.ts'
 import { PRIMARY_LOCATION_PATH } from './navigation.ts'
 import { buildCanonical } from './seo.ts'
@@ -155,6 +156,13 @@ function renderAbout(): string {
       ),
     ].join('\n'),
     ['## Sociedades médicas', '', bulletList(PROFESSIONAL_MEMBERSHIPS)].join('\n'),
+    [
+      '## Publicação científica',
+      '',
+      `Coautoria na ${PROFILE_PUBLICATION.journal} (${PROFILE_PUBLICATION.year}).`,
+      '',
+      `[${PROFILE_PUBLICATION.title} (PubMed)](${PROFILE_PUBLICATION.url})`,
+    ].join('\n'),
     contactSection(),
     siteFooter(),
   )
@@ -300,8 +308,6 @@ function renderLocation(location: PracticeLocation): string {
       ...[
         address &&
           `- Endereço: ${[address.streetAddress, address.addressDetail, address.neighborhood, `${address.addressLocality} - ${location.stateCode}`, `CEP ${address.postalCode}`].filter(Boolean).join(', ')}`,
-        location.openingHours &&
-          `- Horário da Dra. Dayara: ${location.openingHours.label}`,
         location.clinicPhone && `- Telefone geral do ${location.name}: ${location.clinicPhone}`,
         location.whatsappUrl && `- Agendamento por WhatsApp: ${location.whatsappUrl}`,
         `- E-mail: ${CONTACT_EMAIL}`,

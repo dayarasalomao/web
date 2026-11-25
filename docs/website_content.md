@@ -80,9 +80,9 @@ O catálogo completo permanece disponível na página de tratamentos.
 
 - Graduação: Medicina pela PUC-PR em 2019
 - Residência médica: Cirurgia Geral pela Santa Casa de Curitiba em 2022
-- Residência médica: Coloproctologia pelo Hospital Mackenzie em 2024. O nome completo do hospital ainda precisa de confirmação.
-- Curso de aperfeiçoamento: Proctologia Minimamente Invasiva pelo IRCAD América Latina em 2025. Não é residência nem RQE.
-- Pós-graduação: Disfunções do Assoalho Pélvico (UNIFAL-MG), ano 2026. Não é residência nem RQE. A referência editorial anterior dizia “pós-graduanda”; a página do Instituto diz que ela possui a pós. Confirmar se está concluída ou em andamento antes de publicar um dos dois status.
+- Residência médica: Coloproctologia pelo Hospital Universitário Evangélico Mackenzie em 2024
+- Curso de aperfeiçoamento: Proctologia Minimamente Invasiva pelo IRCAD América Latina em 2025
+- Coautoria em [estudo clínico sobre fístula anorretal recidivada](https://pubmed.ncbi.nlm.nih.gov/42961273/), publicado na Revista do Colégio Brasileiro de Cirurgiões em 2026
 
 ## Local e Agendamento
 
@@ -92,8 +92,9 @@ O catálogo completo permanece disponível na página de tratamentos.
 
 ### Contatos
 
-- **WhatsApp**: (67) 2180-3675
+- **Telefone geral do Instituto**: (67) 3320-9500
+- **WhatsApp de agendamento**: (67) 2180-3675
 - **Mensagem preenchida em todos os CTAs de WhatsApp**: "Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?"
 - **E-mail**: [dradayarasalomao@gmail.com](mailto:dradayarasalomao@gmail.com)
 
-Agende sua consulta para receber o melhor tratamento especializado
+Consulte os horários disponíveis pelo WhatsApp de agendamento.

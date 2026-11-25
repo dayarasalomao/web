@@ -292,7 +292,7 @@ export default function Testimonials() {
         <div className="text-center mt-16">
           <InfoCard surface="translucent" padding="spacious" className="mx-auto max-w-3xl">
             <h3 className="mb-4 font-sans text-2xl font-bold text-teal">
-              Atendimento Extraordinário
+              Relato sobre o atendimento
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
               &quot;Uma médica muito humana, que sabe confortar e acolher seus

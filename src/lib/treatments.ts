@@ -49,7 +49,7 @@ export const TREATMENTS: Treatment[] = [
     title: 'Hemorroidectomia com laser de CO2',
     shortTitle: 'Laser de CO2 para hemorroidas',
     homeCardTitle: 'Cirurgias de hemorroidas com laser de CO2',
-    homeCardDescription: 'Tecnologia avançada para tratamento minimamente invasivo',
+    homeCardDescription: 'Opção cirúrgica para casos selecionados de hemorroidas',
     category: 'laser',
     metaTitle: 'Hemorroidectomia com laser de CO2 | Dra. Dayara Salomão',
     metaDescription:

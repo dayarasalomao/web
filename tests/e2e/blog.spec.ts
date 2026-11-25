@@ -185,7 +185,11 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   )
   await expect(page.getByText('Sala 8').first()).toBeVisible()
   await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
-  await expect(page.getByText(/segunda a sexta, das 9h às 18h/i).first()).toBeVisible()
+  await page.getByText('Como consultar os horários de atendimento da Dra. Dayara?').click()
+  await expect(
+    page.getByText('Consulte os horários disponíveis pelo WhatsApp de agendamento.'),
+  ).toBeVisible()
+  await expect(page.getByText(/9h às 1[78]h/i)).toHaveCount(0)
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
 
   const breadcrumb = page.getByRole('navigation', { name: /breadcrumb/i })
@@ -452,6 +456,12 @@ test('about page exposes practitioner credentials, profile schema, and canonical
   expect(graph.join(' ')).toContain('ProfilePage')
   expect(graph.join(' ')).toContain(`${CANONICAL_WEBSITE_URL}/#physician`)
   expect(graph.join(' ')).not.toContain('/busca-medicos/profissionais')
+
+  await expect(page.getByText('Hospital Universitário Evangélico Mackenzie')).toBeVisible()
+  await expect(page.getByRole('link', { name: /fístula anorretal recidivada.*pubmed/i })).toHaveAttribute(
+    'href',
+    'https://pubmed.ncbi.nlm.nih.gov/42961273/',
+  )
 
   const heroCard = page.locator('article > header')
   const trajectorySection = page.locator('article > section').first()

@@ -32,7 +32,7 @@ export default function Contact() {
     {
       label: 'Telefone',
       value: BUSINESS_TELEPHONE_NUMBER,
-      detail: 'Agendamento de consultas',
+      detail: 'Telefone geral do Instituto',
       icon: Phone,
       href: BUSINESS_TELEPHONE_HREF,
       conversion: 'phone-contact',

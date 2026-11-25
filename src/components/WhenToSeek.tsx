@@ -167,7 +167,7 @@ export default function WhenToSeek() {
             ctaLabel="Agendar consulta agora"
             conversionSuffix="when-to-seek"
             items={[
-              { title: 'Diagnóstico precoce', description: 'Melhores resultados no tratamento' },
+              { title: 'Diagnóstico precoce', description: 'Entenda a causa dos sintomas' },
               { title: 'Tratamento preciso', description: 'Abordagem especializada e eficaz' },
               { title: 'Alívio dos sintomas', description: 'Retorno ao bem-estar e qualidade de vida' },
             ]}

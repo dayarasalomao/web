@@ -1,80 +1,33 @@
-# Auditoria de descoberta — Dra. Dayara Salomão
+# Perfil e descoberta da Dra. Dayara em Campo Grande
 
-Registro de 12 de novembro de 2026. Nada disto foi publicado em produção.
+Auditoria de 12 de novembro de 2026, atualizada em 25 de novembro de 2026.
 
-A ausência numa seleção de assistente não prova deficiência do site. O site já é encontrado. O problema verificável de identidade está na ficha do Instituto.
+## Confirmações da auditoria
 
-## Leitura principal
+- **Registro em Mato Grosso do Sul.** A busca do CFM por CRM 16556 e UF MS retornou Dayara Mussi Salomão, inscrição secundária regular, Coloproctologia com RQE 9819 e graduação em Medicina pela PUC-PR em 2019. O CFM também lista a inscrição no Paraná como regular. O resultado da consulta fica dentro do formulário. [Busca pública do CFM](https://portal.cfm.org.br/busca-medicos/)
+- **Residência em Coloproctologia.** O hospital publica o nome oficial, Hospital Universitário Evangélico Mackenzie, e lista a Dra. Dayara entre os classificados no concurso de residência de 2021/2022. A Doctoralia já atribui a residência a essa instituição de Curitiba. O resultado do concurso confirma a identificação do programa. O ano de conclusão de 2024 é o que já constava no currículo do site. [Resultado da seleção](https://hospital.mackenzie.br/fileadmin/ARQUIVOS/Public/100-hospital/huem/2022/Resultado_Concurso_de_Resid%C3%AAncia_M%C3%A9dica_2021_2022.pdf) · [Página do hospital](https://www.mackenzie.br/faculdades/curitiba/a-faculdade/infraestrutura/hospital-universitario-evangelico-mackenzie)
+- **Publicação científica.** Dayara Mussi Salomão é coautora de um estudo clínico prospectivo sobre fístula anorretal recidivada, publicado em 2026 na Revista do Colégio Brasileiro de Cirurgiões. [Registro no PubMed](https://pubmed.ncbi.nlm.nih.gov/42961273/)
+- **Ficha do Instituto.** A consulta no navegador confirmou que o cartão da Dra. Dayara ainda exibe “Ginecologia e Obstetrícia” e RQE 6348 junto com RQE 9819. O texto biográfico a descreve como proctologista, e o RQE 6348 também aparece no cartão da Dra. Tamires. A ficha da Dra. Dayara deve exibir **Dra. Dayara Salomão · Coloproctologia · CRM-MS 16556 · RQE 9819**. [Corpo clínico do Instituto](https://www.institutodigestivo.com.br/sobre-nos)
+- **Doctoralia.** O perfil lista o Instituto na Rua Alagoas, 700, em Campo Grande e ainda exibe CRM-PR 42596 e RQE 33908 no cabeçalho. O site mantém o link suspenso até o perfil identificar o atendimento em MS com os registros locais. [Perfil na Doctoralia](https://www.doctoralia.com.br/dayara-salomao/coloproctologista/campo-grande)
+- **Google e agenda.** O link de compartilhamento abre a ficha individual da médica. O perfil mostra segunda a sexta, das 9h às 17h. O site publicado informava 9h às 18h. O PR usa o link direto do Maps para a ficha da médica, com o mapa do Instituto reservado às rotas de chegada. A página local orienta o paciente a consultar disponibilidade pelo WhatsApp, e o JSON-LD deixa de publicar os horários em disputa. [Ficha da Dra. Dayara no Maps](https://www.google.com/maps/place/Dra.+Dayara+Salom%C3%A3o+%7C+Proctologista+em+Campo+Grande+%28MS%29/data=!4m2!3m1!1s0x0:0x188a033ef309b503)
+- **Pós-graduação.** O texto do Instituto trata o curso da UNIFAL-MG como concluído. A referência editorial anterior dizia “pós-graduanda”. A formação fica temporariamente fora da linha do tempo até a médica confirmar o status e o ano.
+- **Sociedades médicas.** A SBCP e a Sociedade Brasileira de Laser em Medicina e Cirurgia aparecem no site da médica e na ficha do Instituto. A auditoria não localizou uma ficha pública individual nas sociedades. O diretório da SBCP orienta associados que ainda não aparecem no mapa a atualizarem seus dados na área restrita. [Diretório da SBCP](https://sbcp.org.br/medico/encontre-um-coloproctologista/)
 
-A página do Instituto do Aparelho Digestivo (`https://www.institutodigestivo.com.br/sobre-nos`) publica, no cartão da Dra. Dayara, CRM/MS 16556 e em seguida “Ginecologia e Obstetrícia” com “RQE Nº: 6348 - RQE N: 9819”. O parágrafo seguinte a chama de cirurgiã proctologista, membro da SBCP e da SBLMC, com pós-graduação em Disfunções do Assoalho Pélvico pela UNIFAL-MG. O RQE 6348 também aparece no cartão da Dra. Tamires Richards de Andrade. O site da Dayara publica só CRM-MS 16556 e RQE 9819, como coloproctologista. Quem cruza as duas páginas pode atribuir ginecologia a ela ou descartar a coloproctologia.
+## Pauta de reunião
 
-## O que o site já faz bem
+1. **Agenda e recepção.** Quais dias e horários são de consulta, quais são da recepção e qual canal deve ser a primeira opção para marcar? Confirmar se o WhatsApp (67) 2180-3675 continua com a equipe e se o telefone geral (67) 3320-9500 também agenda diretamente com a Dra. Dayara. Confirmar quais procedimentos ela oferece em Campo Grande e quais exames ficam a cargo do Instituto. O site já informa que ela não realiza colonoscopia nesse local. [Página de Campo Grande](https://www.dayarasalomao.com.br/locais-de-atendimento/campo-grande)
+2. **Responsáveis pelos perfis.** Definir quem pode corrigir a ficha no site do Instituto, quem atualiza os registros de MS na Doctoralia e quem cuida do horário, telefone e link do site no Perfil da Empresa no Google. Enviar o texto corrigido do cartão ao responsável indicado. [Instituto](https://www.institutodigestivo.com.br/sobre-nos) · [Doctoralia](https://www.doctoralia.com.br/dayara-salomao/coloproctologista/campo-grande)
+3. **Currículo.** Confirmar se a pós da UNIFAL-MG foi concluída e em que data. Se segue em andamento, confirmar como identificá-la. Comprovantes de associações, certificados de formação e outras publicações podem ser enviados depois para enriquecer o perfil.
+4. **Resultado.** Combinar com a recepção um total semanal agregado de conversas vindas do site e consultas marcadas a partir delas. O texto padrão de WhatsApp já identifica a origem. Registrar a data de publicação das mudanças no site e de cada correção de perfil para contextualizar as comparações.
 
-- Home, `/sobre` e `/locais-de-atendimento/campo-grande` respondem 200 para Googlebot, Bingbot e OAI-SearchBot.
-- `index, follow`, canonical correto, CRM e RQE no HTML inicial, sem depender de JavaScript.
-- Sitemap publicado com 61 URLs, sem Curitiba. `/locais-de-atendimento/curitiba` responde 404.
-- `/about` responde 308 para `/sobre`. `/contact` e `/contato` vão para Campo Grande. `/privacy` vai para a política.
-- `robots.txt` libera `OAI-SearchBot` (busca do ChatGPT) e, à parte, `GPTBot` (treinamento). `Google-Extended` não está bloqueado, então o uso para treinamento do Gemini também segue o `User-agent: *`.
-- Nome, CRM-MS 16556, PUC-PR, Instituto, R. Alagoas 700 e telefone (67) 3320-9500 batem entre o site dela e a página do Instituto. O WhatsApp de agendamento do site é outro número: (67) 2180-3675. O Instituto usa 3320-9500 também no WhatsApp.
+## Publicação e medição
 
-O Google diz que AI Overviews e AI Mode usam os mesmos fundamentos de SEO. Não há otimização que garanta inclusão, e indexar não é garantido. Fonte: [AI features and your website](https://developers.google.com/search/docs/appearance/ai-features), atualizado em 10 dez 2025. No Search Console, esse tráfego entra no tipo Web, sem filtro separado.
+A versão revisada exibe CRM e RQE no topo da home, distingue graduação, residências e curso de aperfeiçoamento, registra a coautoria no perfil e distingue o WhatsApp de agendamento do telefone geral do Instituto. As correções nas fichas externas podem seguir em paralelo. Antes de publicar, revisar a prévia e os checks do GitHub. A confirmação da agenda e da pós permite acrescentar esses dados em uma atualização posterior.
 
-A OpenAI separa `OAI-SearchBot` (aparecer na busca do ChatGPT) de `GPTBot` (treinamento). Fonte: [Overview of OpenAI Crawlers](https://developers.openai.com/api/docs/bots). A Central de Ajuda pede permitir o OAI-SearchBot e os IPs publicados em [openai.com/searchbot.json](https://openai.com/searchbot.json).
+O Search Console da propriedade foi consultado em 25/11. O relatório Web registra os cliques, impressões e consultas locais. O relatório de recursos de IA também está disponível para a propriedade e registra impressões e páginas em recursos como AI Overviews e AI Mode. Os dados de IA também compõem o relatório de desempenho geral. Uma resposta observada no navegador apresentou registros do Paraná associados à consulta em Campo Grande e atribuiu exames do Instituto à médica. Esse exemplo evidencia a importância de alinhar as fichas e serve como registro pontual, sem representar uma taxa de erro. [Relatório de recursos de IA do Google](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)
 
-## Não verificado
+- **Visibilidade.** Comparar períodos de 28 dias no Search Console. Acompanhar consultas locais como “proctologista campo grande ms” e “coloproctologista campo grande ms”, cliques e impressões da home e da página de Campo Grande. A inspeção de `/sobre` já retornou “URL is on Google”.
+- **Contato.** Verificar no GA4 o recebimento de `whatsapp_click` e separar a origem do Perfil da Empresa pelo UTM documentado na [operação de SEO local](./seo-local-operacao.md). O evento mede o clique. Os números de conversas e consultas marcadas vêm da recepção.
+- **Acompanhamento.** Comparar os períodos completos, registrando mudanças em conteúdo, perfis e agenda. A comparação ajuda a ver a direção dos indicadores. Atribuir o impacto a um único PR exigiria isolar as demais mudanças.
 
-- Situação do CRM-MS 16556 e a especialidade do RQE 9819. A busca do CFM (`https://portal.cfm.org.br/busca-medicos/`) depende de JavaScript e reCAPTCHA. Não há URL estável do resultado. O site já aponta para o formulário.
-- Firewall da Vercel por IP. Um user-agent falso que recebe 200, a partir daqui, não prova que o IP real do robô passa. Como testar: logs do firewall da Vercel, inspeção de URL no Search Console e confronto do IP com `https://openai.com/searchbot.json`, `https://openai.com/gptbot.json` e as listas do Googlebot e do Bingbot.
-- Search Console e cliques. Não havia acesso nesta auditoria.
-- Diretório público da SBCP e da Sociedade Brasileira de Laser. As duas sociedades estão declaradas no site dela e no texto do Instituto. Não inventar link.
-- Nome completo do “Hospital Mackenzie”. Só o site dela traz a residência em coloproctologia.
-- Horário completo do Instituto no Google. O site deixa claro que segunda a sexta, 9h–18h, é o horário dela, não o da clínica.
-
-## Credenciais
-
-| Item | Fonte nesta auditoria | O que fazer |
-| --- | --- | --- |
-| Nome, CRM-MS 16556, PUC-PR, Instituto, Alagoas 700, (67) 3320-9500 | Site dela e página do Instituto | Manter. WhatsApp de agendamento continua (67) 2180-3675. |
-| Residência em Cirurgia Geral, Santa Casa de Curitiba, 2022 | Só o site dela | Pedir comprovante. |
-| Residência em Coloproctologia, Hospital Mackenzie, 2024 | Só o site dela | Pedir o nome completo do hospital. Não completar por dedução. |
-| Curso no IRCAD América Latina, 2025 | Só o site dela | Tratado como curso de aperfeiçoamento, não como RQE. |
-| Pós em assoalho pélvico, UNIFAL-MG, 2026 | Site dela; Instituto diz que ela possui a pós; a referência editorial antiga dizia “pós-graduanda” | Não publicar “concluída” nem “em andamento” até ela confirmar. |
-| SBCP e SBLMC | Site dela e texto do Instituto | Manter a declaração. Sem link até haver página pública. |
-| Ginecologia e RQE 6348 | Só a ficha do Instituto | Não publicar no site dela. Pedir correção ao Instituto. |
-| Docência, preceptoria, publicações | Não aparecem no material publicado | Não incluir sem documento. |
-
-## O que este branch muda, ainda sem publicar
-
-- Graduação, residência médica, curso de aperfeiçoamento e pós-graduação ficam com rótulos diferentes. A pós deixa de ser descrita como “especialização avançada”.
-- O hero mostra CRM-MS 16556, RQE 9819 e explica que coloproctologia também é chamada de proctologia.
-- Saíram formulações de “excelência” sem comprovação no hero, no currículo, no contato e na introdução dos depoimentos. Os depoimentos em si não foram reescritos.
-- O horário de segunda a sexta, 9h–18h, fica atribuído à Dra. Dayara na página de Campo Grande e no Markdown. No JSON-LD, esse horário vai para a médica (`hoursAvailable`), não para o Instituto.
-- `medicalSpecialty: Coloproctology` saiu. Esse valor não existe em `schema.org/MedicalSpecialty`. Cirurgia ou Gastroenterologia descreveriam outra prática. A especialidade visível ficou em `hasOccupation` (“Coloproctologista”) e `knowsAbout`.
-- A clínica deixa de ser marcada como se só fizesse coloproctologia.
-
-Texto da home:
-
-> A coloproctologia — também chamada de proctologia — cuida das doenças do cólon, do reto e da região anal. O atendimento é no Instituto do Aparelho Digestivo.
->
-> A consulta começa pela avaliação. Procedimentos minimamente invasivos, inclusive com laser, só entram na conversa quando o exame indica.
-
-Ainda restam, de propósito, trechos como “melhores resultados no tratamento”, “Atendimento Extraordinário” e “tecnologia avançada” em cards de tratamento. Não há documento que os sustente.
-
-Não foi criada página nova, texto oculto, avaliação inventada nem instrução para manipular assistentes.
-
-## Perguntas para a reunião
-
-- Resultado atual da busca do CFM para CRM-MS 16556, com a especialidade vinculada ao RQE 9819.
-- Nome completo do hospital da residência em coloproctologia.
-- A pós da UNIFAL-MG em 2026 está concluída ou em andamento?
-- Comprovantes e links públicos da SBCP e da Sociedade Brasileira de Laser em Medicina e Cirurgia.
-- Correção da ficha do Instituto, para retirar ginecologia e o RQE 6348.
-- URL estável do perfil no Google, no lugar de `share.google`, e o perfil de Campo Grande na Doctoralia, se existir.
-- Docência, preceptoria ou publicações somente com o documento correspondente.
-- Confirmar que segunda a sexta, 9h–18h, é o horário dela, e não o expediente do Instituto.
-
-## Como medir, quando retomar
-
-No Search Console, Desempenho, tipo Web. Esse total já inclui AI Overviews e AI Mode. Acompanhar consultas com coloproctologista, proctologista e Campo Grande, mais cliques e indexação de `/`, `/sobre` e `/locais-de-atendimento/campo-grande`. Os botões de WhatsApp já marcam conversão (`data-conversion`). Uma resposta isolada de assistente não é indicador de sucesso.
-
-Para o firewall: logs da Vercel, inspeção de URL no Search Console e comparação do IP com as listas publicadas da OpenAI, do Googlebot e do Bingbot.
+A auditoria de 12/11 observou respostas HTTP 200 para as páginas centrais com user-agents de Googlebot, Bingbot e OAI-SearchBot. Isso verifica a resposta aos cabeçalhos simulados. O tráfego de IPs reais dos robôs no firewall da Vercel e o recebimento do evento no GA4 ficaram pendentes.

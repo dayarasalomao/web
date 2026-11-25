@@ -157,12 +157,6 @@ describe('practice locations', () => {
       whatsappUrl.searchParams.get('text'),
       'Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?',
     )
-    assert.deepEqual(campoGrande.openingHours, {
-      label: 'Segunda a sexta, das 9h às 18h',
-      opens: '09:00',
-      closes: '18:00',
-      schema: 'Mo-Fr 09:00-18:00',
-    })
     // Confirmed coordinates from the clinic's own Google Maps listing.
     assert.deepEqual(campoGrande.geo, {
       latitude: -20.4530096,
@@ -183,7 +177,8 @@ describe('practice locations', () => {
       .join(' ')
     assert.match(faqText, /Sala 8/)
     assert.match(faqText, /\(67\) 3320-9500/)
-    assert.match(faqText, /9h às 18h/)
+    assert.match(faqText, /Consulte os horários disponíveis pelo WhatsApp de agendamento/)
+    assert.doesNotMatch(faqText, /9h às 1[78]h/)
   })
 
   it('getIndexableLocations returns exactly the one active location', () => {
@@ -284,6 +279,11 @@ describe('structured data', () => {
     assert.ok((physician.sameAs as string[]).includes(GOOGLE_BUSINESS_PROFILE_URL))
     assert.ok(!(physician.sameAs as string[]).includes(CLINIC_GOOGLE_MAPS_URL))
     assert.ok((physician.sameAs as string[]).every((url) => /^https:\/\//.test(url)))
+    assert.equal(physician.telephone, undefined)
+    assert.equal(
+      (physician.contactPoint as { telephone: string }).telephone,
+      '+556721803675',
+    )
     assert.equal(physician.openingHours, undefined)
     assert.equal(physician.medicalSpecialty, undefined)
     assert.deepEqual(physician.hasOccupation, {
@@ -292,10 +292,7 @@ describe('structured data', () => {
       description: 'Coloproctologia, também chamada de proctologia.',
     })
     assert.deepEqual(physician.knowsAbout, ['Coloproctologia', 'Proctologia'])
-    assert.equal(
-      (physician.openingHoursSpecification as { opens?: string } | undefined)?.opens,
-      '09:00',
-    )
+    assert.equal(physician.openingHoursSpecification, undefined)
     assert.equal(physician.hasOfferCatalog, undefined)
     assert.deepEqual(physician.workLocation, {
       '@id': buildPracticeLocationId('campo-grande'),
@@ -313,6 +310,7 @@ describe('structured data', () => {
     )
     assert.ok(clinic)
     assert.equal(clinic['@id'], buildPracticeLocationId('campo-grande'))
+    assert.equal(clinic.telephone, '(67) 3320-9500')
     assert.equal(clinic.openingHours, undefined)
     assert.equal(clinic.openingHoursSpecification, undefined)
     assert.equal(clinic.medicalSpecialty, undefined)
