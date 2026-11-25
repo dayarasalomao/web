@@ -62,6 +62,7 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
   '/assets/blog/pomadas-hemorroidas.webp': { width: 1024, height: 572 },
   '/assets/blog/hemorroida-externa-trombosada.webp': { width: 1024, height: 550 },
   '/assets/blog/trombectomia-hemorroidaria-ilustracao.webp': { width: 1024, height: 550 },
+  '/assets/blog/capa-cirurgia-hemorroida-afastamento-atestado.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-como-encontrar-coloproctologista-campo-grande-ms.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-hemorroida-tem-cura-ou-passa-sozinha.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-ligadura-elastica-doi-recuperacao-cuidados.webp': { width: 1672, height: 940 },

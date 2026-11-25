@@ -489,5 +489,26 @@
     "revisionReason": "Correção da pose e das mãos solicitada pelo usuário; URL v2 para evitar cache antigo.",
     "textReviewedAt": "2026-10-13",
     "textReviewType": "visual-editorial"
+  },
+  {
+    "slug": "cirurgia-hemorroida-afastamento-atestado",
+    "title": "Cirurgia de hemorroida: quantos dias de afastamento e de atestado?",
+    "kind": "cover",
+    "oldCardImage": null,
+    "subject": "Poltrona azul-petróleo, manta clara e calendário sem datas em um canto de casa iluminado pelo sol.",
+    "source": "/Users/diegovfeder/.codex/generated_images/01a1d2c5-4063-73d2-85bd-d86e7d0b3830/exec-b3c8bd84-b7f8-4bcb-bf40-53dcd4541f09.png",
+    "src": "/assets/blog/capa-cirurgia-hemorroida-afastamento-atestado.webp",
+    "prompt": "Use case: illustration-story. Generate one sophisticated wide horizontal 16:9 editorial illustration for the Brazilian coloproctology blog of Dra. Dayara Salomão, about time away from work after hemorrhoid surgery. Visual metaphor: making room for recovery at home. A single inviting curved low armchair upholstered in dark petrol teal #1D414C, a casually folded oatmeal throw on its arm, and a small round light oak side table with a discreet standing cream calendar with an unnumbered grid and a single muted copper marked square. A soft patch of morning sunlight from an unseen window cuts across a warm ivory plaster wall and limestone-colored floor, creating an intentional, elegant architectural composition. Eye-level three-quarter view, one clearly readable silhouette of the chair, table adjacent and calendar turned so grid is legible as a calendar. Keep all principal objects within the middle 75% of frame with natural breathing room. Calm warm cream #F4F3F2 and beige #D7CBBF with copper #A35442 accents. Art direction: refined tactile editorial illustration with layered matte paper, subtle watercolor grain and beautifully controlled dimensional shadow, with imperfect handmade details and quiet contemporary Brazilian interiors sensibility. Make it feel composed and expressive at card scale, with no clutter. Avoid any bags or purses, hourglasses, notebooks, plants, people, medical devices, anatomical imagery, lettering, digits, graphic overlays, logos, borders, captions. No screenshot or card layout; just the illustration.",
+    "generationTool": "OpenAI image_gen (built-in)",
+    "generatedAt": "2026-11-12",
+    "reviewStatus": "pending-physician-review",
+    "alt": "Poltrona azul-petróleo com uma manta clara ao lado de um calendário de mesa sem datas.",
+    "caption": "Ilustração sobre o tempo de recuperação em casa e o planejamento da volta ao trabalho.",
+    "width": 1672,
+    "height": 941,
+    "bytes": 176380,
+    "sha256": "b7752d0408c3b5dc62e51d0804680fda8efa4526cde4460f3a2049468dd017da",
+    "textReviewedAt": "2026-11-12",
+    "textReviewType": "visual-editorial"
   }
 ]
