@@ -73,7 +73,7 @@ Em parte dos casos esse caminho não fecha. Ele vira um canal permanente, revest
 
 ![Quatro quadros mostram infecção glandular, abscesso, persistência do trajeto e formação de fístula anal.](/assets/blog/fistula-anal-etapas-formacao.webp)
 
-É exatamente esse revestimento que explica por que antibiótico não resolve: o trajeto está revestido por tecido cronicamente inflamado, que impede o fechamento espontâneo. O tratamento definitivo é cirúrgico. O artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece) detalha esse processo passo a passo.
+É exatamente esse revestimento que explica por que antibiótico não resolve: o trajeto está revestido por tecido cronicamente inflamado, que impede o fechamento espontâneo. O tratamento definitivo é cirúrgico. O artigo sobre [por que a fístula anal aparece](/blog/por-que-a-fistula-anal-aparece) detalha esse processo passo a passo, e o texto [fístula anal fecha sozinha?](/blog/fistula-anal-fecha-sozinha) explica quando o trajeto continua aberto.
 
 ## O dilema real do tratamento
 

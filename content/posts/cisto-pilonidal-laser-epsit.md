@@ -12,7 +12,6 @@ secondaryKeywords:
   - cirurgia de cisto pilonidal a laser
   - SiLaC cisto pilonidal
   - cisto sacrococcígeo cirurgia
-  - cisto pilonidal recuperação
 targetAudience: patients
 intent: decision
 order: 3
@@ -99,7 +98,7 @@ Em seguida, uma fibra fina de laser de diodo é usada para selar e destruir o te
 * **Menor dor** no pós-operatório.
 * **Cicatrização mais rápida.**
 * **Melhor resultado estético**, com cicatriz pequena.
-* **Retorno mais rápido** às atividades do dia a dia e ao trabalho.
+* **Retorno mais rápido** às atividades do dia a dia e ao trabalho. Veja [quando voltar a sentar, trabalhar e treinar depois do laser](/blog/cisto-pilonidal-laser-recuperacao).
 * **Pode ser repetido** se necessário — algo que não é simples depois de uma excisão extensa.
 
 A indicação é boa tanto para doença pilonidal simples quanto para casos complexos que exigiriam ressecções extensas, e para pacientes que priorizam recuperação rápida, menor dor e melhor estética.

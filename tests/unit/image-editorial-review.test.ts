@@ -39,7 +39,7 @@ it('reviews all retained images without changing pixels or losing clinical cavea
 
 it('every body/cap image matches its reviewed text and all 45 body figures have captions (I2/4)', () => {
   const posts = getAllPosts()
-  assert.equal(posts.length, 41)
+  assert.equal(posts.length, 45)
   assert.equal(posts.filter((post) => post.image).length, 40)
   let figureCount = 0
   for (const post of posts) {

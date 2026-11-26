@@ -7,12 +7,12 @@
   {
     "slug": "cisto-pilonidal-cirurgia-convencional-x-laser",
     "proseSha256": "36cc19ddf495ba4f6d296303950800b8650f0e3437c413364c2fd1b3abe348f3",
-    "metadataSha256": "c0d74d9ff3fa68e5c823d8fe318fbb12cbe4574d5826dfd9803dfd82dd90336f"
+    "metadataSha256": "608b9db037c0ff4fe0d9c4411b1ee5c1f6d3cb89fe0f0d3a6115d239fe6c888e"
   },
   {
     "slug": "cisto-pilonidal-laser-epsit",
-    "proseSha256": "ceb988c6fedeb3867b312c6282c7343a98b818a9e64c83b45e9dbff7537c8ba7",
-    "metadataSha256": "a58a20d850bf6789b25100b72945ec5e1807f4c1844b105df643e0134d8693d2"
+    "proseSha256": "812cdbf1c7c1364d6a7205225d40d443bd65d2b60fa3edc6dd262a726ff95b88",
+    "metadataSha256": "5366383fe7f9d4602d3690bd675b77eddb08d0b4fe59d204acf2785a5827feee"
   },
   {
     "slug": "cisto-pilonidal-sinais-diagnostico",
@@ -66,7 +66,7 @@
   },
   {
     "slug": "fistula-anal-laser-vaaft-filac",
-    "proseSha256": "366197605f0fefb480ec425781d69c74558c4085c89b2d7e38986229803065e4",
+    "proseSha256": "25f07c5aff7405aaafca32913870154e93b0033012fda006a0933e299a6bd5be",
     "metadataSha256": "c22d3372d65df67f54de1acf5f019bf7d8a7e7784c89ab6ce1ba8b8108ba0dec"
   },
   {
@@ -121,7 +121,7 @@
   },
   {
     "slug": "hpv-perianal-laser-co2",
-    "proseSha256": "5fef87e3a355d3cc96c75e992913db43accabcae24915a1b9ca0c78c9a154cb4",
+    "proseSha256": "e8fc71acc547d3cc840e9f79529dfda84161addd11eeeae13706b593a5be527e",
     "metadataSha256": "1b09ae05d41bba771012494f8f457da25243b0998d5c6b28d278ecc1061e0b08"
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "slug": "pomada-hemorroida-resolve",
-    "proseSha256": "f213b2788feffc83c51b6851f62420f75c33b7e40010ac347892d99fdbfa69a5",
+    "proseSha256": "feb31386ea1de726b84b598ed950b267732c4dafd8a3a75b2ffee64af4bc6c98",
     "metadataSha256": "6d6c4bfbf87165ecc100649208311cdf300b6357befc030b6e6593d73eeb7d2d"
   },
   {

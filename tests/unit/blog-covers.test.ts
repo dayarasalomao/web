@@ -17,8 +17,8 @@ const reviewed = new Map((JSON.parse(fs.readFileSync('docs/blog-image-editorial-
 
 it('gives every reviewed article an image and shares only the client pilonidal comparison (I1)', () => {
   const allPosts = getAllPosts()
-  assert.equal(allPosts.length, 41)
-  assert.deepEqual(allPosts.filter((post) => !post.cardImage).map((post) => post.slug), [])
+  assert.equal(allPosts.length, 45)
+  assert.deepEqual(allPosts.filter((post) => !post.cardImage).map((post) => post.slug).sort(), ['cisto-pilonidal-laser-recuperacao', 'fistula-anal-fecha-sozinha', 'hemorroida-nao-melhora-quando-operar', 'verruga-anal-volta-depois-laser-co2'])
   const posts = allPosts.filter((post) => post.cardImage)
   assert.equal(new Set(posts.map((post) => post.cardImage!.src)).size, 40)
   const groups = new Map<string, string[]>()
