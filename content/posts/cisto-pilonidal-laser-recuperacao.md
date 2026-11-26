@@ -7,6 +7,12 @@ metaDescription: >-
 slug: cisto-pilonidal-laser-recuperacao
 publishDate: '2026-11-26'
 lastModified: '2026-11-26'
+coverImage:
+  src: /assets/blog/capa-cisto-pilonidal-laser-recuperacao.webp
+  alt: Cadeira azul-petróleo com almofada creme diante de uma mesa, com tapete de exercício e tênis ao lado.
+  caption: Ilustração sobre a volta gradual a sentar, trabalhar e treinar durante a recuperação.
+  width: 1672
+  height: 941
 primaryKeyword: cisto pilonidal laser recuperação
 secondaryKeywords:
   - cisto pilonidal recuperação

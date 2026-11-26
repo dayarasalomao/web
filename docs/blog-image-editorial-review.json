@@ -27,6 +27,15 @@
     "clinicalReviewStatus": "pending-physician-review"
   },
   {
+    "src": "/assets/blog/capa-cisto-pilonidal-laser-recuperacao.webp",
+    "alt": "Cadeira azul-petróleo com almofada creme diante de uma mesa, com tapete de exercício e tênis ao lado.",
+    "caption": "Ilustração sobre a volta gradual a sentar, trabalhar e treinar durante a recuperação.",
+    "preservedDisclaimer": null,
+    "sha256": "66dfbc000bf23b51aeb60f9ec496f33f06219b58ef8b2dab24e24099094ceaa7",
+    "reviewType": "visual-editorial",
+    "clinicalReviewStatus": "pending-physician-review"
+  },
+  {
     "src": "/assets/blog/capa-cisto-pilonidal-sinais-diagnostico.webp",
     "alt": "Pessoa sentada mantém a mão na parte baixa das costas, ao lado de um diário de sintomas.",
     "caption": "Cena ilustrativa de desconforto ao sentar, usada como apoio ao texto sobre cisto pilonidal.",
@@ -90,6 +99,15 @@
     "clinicalReviewStatus": "pending-physician-review"
   },
   {
+    "src": "/assets/blog/capa-fistula-anal-fecha-sozinha.webp",
+    "alt": "Camadas de papel em tons de bege atravessadas por um canal azul-petróleo coberto na superfície.",
+    "caption": "Ilustração abstrata de um trajeto que pode continuar aberto mesmo quando parece fechado.",
+    "preservedDisclaimer": null,
+    "sha256": "e181305c02d4d90d25e50a3962fff5e377b4a2e408d2f4777b47e53447d32ffd",
+    "reviewType": "visual-editorial",
+    "clinicalReviewStatus": "pending-physician-review"
+  },
+  {
     "src": "/assets/blog/capa-fistula-anal-laser-vaaft-filac.webp",
     "alt": "Monitor com pontos ligados por uma linha, caderno fechado e instrumentos genéricos sobre uma bandeja.",
     "caption": "Composição ilustrativa sobre planejamento com vídeo e laser; a tela não mostra um exame real.",
@@ -104,6 +122,15 @@
     "caption": "Cena ilustrativa de uma conversa de avaliação; as linhas são simbólicas e não representam um trajeto de fístula.",
     "preservedDisclaimer": null,
     "sha256": "7dbce74e5510a301de707c10c4001e50ae9ce44b807dd464d14f1ed710abadb0",
+    "reviewType": "visual-editorial",
+    "clinicalReviewStatus": "pending-physician-review"
+  },
+  {
+    "src": "/assets/blog/capa-hemorroida-nao-melhora-quando-operar.webp",
+    "alt": "Caminho de pedra clara que se divide em dois, com um pequeno banco azul-petróleo na bifurcação.",
+    "caption": "Ilustração sobre a decisão de avaliar outro tratamento quando os sintomas persistem.",
+    "preservedDisclaimer": null,
+    "sha256": "b92f962977e63a6146befff983828c0afeaba29bb9b4f0acd91b480c48c01985",
     "reviewType": "visual-editorial",
     "clinicalReviewStatus": "pending-physician-review"
   },
@@ -212,6 +239,15 @@
     "caption": "Cena ilustrativa de uma conversa sobre tratamento; o frasco não identifica um medicamento ou uma dose.",
     "preservedDisclaimer": null,
     "sha256": "33636743373c06fe095573de78095ffad6ee9985849f8cfa3041afc800866b20",
+    "reviewType": "visual-editorial",
+    "clinicalReviewStatus": "pending-physician-review"
+  },
+  {
+    "src": "/assets/blog/capa-verruga-anal-volta-depois-laser-co2.webp",
+    "alt": "Canteiro de terra arrumado com uma pequena pá e um regador azul-petróleo ao lado.",
+    "caption": "Ilustração sobre o acompanhamento contínuo depois do tratamento das lesões.",
+    "preservedDisclaimer": null,
+    "sha256": "a64f202c8e280d5c7df8c55e4ee91ce0ff104bf8bb1f3b96da3ea8b05127f3d2",
     "reviewType": "visual-editorial",
     "clinicalReviewStatus": "pending-physician-review"
   },

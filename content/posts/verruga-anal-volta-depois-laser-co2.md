@@ -7,6 +7,12 @@ metaDescription: >-
 slug: verruga-anal-volta-depois-laser-co2
 publishDate: '2026-11-26'
 lastModified: '2026-11-26'
+coverImage:
+  src: /assets/blog/capa-verruga-anal-volta-depois-laser-co2.webp
+  alt: Canteiro de terra arrumado com uma pequena pá e um regador azul-petróleo ao lado.
+  caption: Ilustração sobre o acompanhamento contínuo depois do tratamento das lesões.
+  width: 1672
+  height: 941
 primaryKeyword: verruga anal volta depois do laser
 secondaryKeywords:
   - verruga anal voltou

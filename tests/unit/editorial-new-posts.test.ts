@@ -109,6 +109,7 @@ describe('new patient guides (BLOG-01/LOCAL-01/GRAPH-01)', () => {
       assert.equal(post.seoTitle, seoTitle)
       assert.equal(post.publishDate, '2026-11-26')
       assert.equal(post.image, undefined)
+      assert.ok(post.coverImage)
       assert.ok((post.faqs?.length ?? 0) >= 4)
       assert.ok((post.sources?.length ?? 0) >= 3)
       for (const href of [...links, '/locais-de-atendimento/campo-grande']) {

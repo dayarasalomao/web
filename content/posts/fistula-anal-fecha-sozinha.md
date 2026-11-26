@@ -7,6 +7,12 @@ metaDescription: >-
 slug: fistula-anal-fecha-sozinha
 publishDate: '2026-11-26'
 lastModified: '2026-11-26'
+coverImage:
+  src: /assets/blog/capa-fistula-anal-fecha-sozinha.webp
+  alt: Camadas de papel em tons de bege atravessadas por um canal azul-petróleo coberto na superfície.
+  caption: Ilustração abstrata de um trajeto que pode continuar aberto mesmo quando parece fechado.
+  width: 1672
+  height: 941
 primaryKeyword: fístula anal fecha sozinha
 secondaryKeywords:
   - fístula anal tem cura sem cirurgia

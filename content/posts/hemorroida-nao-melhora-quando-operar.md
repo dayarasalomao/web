@@ -7,6 +7,12 @@ metaDescription: >-
 slug: hemorroida-nao-melhora-quando-operar
 publishDate: '2026-11-26'
 lastModified: '2026-11-26'
+coverImage:
+  src: /assets/blog/capa-hemorroida-nao-melhora-quando-operar.webp
+  alt: Caminho de pedra clara que se divide em dois, com um pequeno banco azul-petróleo na bifurcação.
+  caption: Ilustração sobre a decisão de avaliar outro tratamento quando os sintomas persistem.
+  width: 1672
+  height: 941
 primaryKeyword: hemorroida que não melhora
 secondaryKeywords:
   - quando operar hemorroida
