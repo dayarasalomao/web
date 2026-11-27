@@ -95,7 +95,7 @@ test('all indexable routes return 200 with canonical metadata and coherent artic
   }
 })
 
-test('social cards and browser icons are noindex while their pages stay indexable', async ({ request }) => {
+test('social cards are noindex while their pages stay indexable', async ({ request }) => {
   const post = getAllPosts()[0]
   const treatment = getAllTreatments()[0]
   const assets = [
@@ -103,8 +103,6 @@ test('social cards and browser icons are noindex while their pages stay indexabl
     '/sobre/opengraph-image',
     `/blog/${post.slug}/opengraph-image`,
     `/tratamentos/${treatment.slug}/opengraph-image`,
-    '/favicon.ico',
-    '/apple-icon.png',
   ]
   for (const asset of assets) {
     const response = await request.get(asset)
@@ -115,4 +113,16 @@ test('social cards and browser icons are noindex while their pages stay indexabl
     const response = await request.get(page)
     expect(response.headers()['x-robots-tag'] ?? '', page).not.toContain('noindex')
   }
+})
+
+// Google Search only shows a favicon it can crawl and index, and it wants one
+// that is a multiple of 48px square, linked from the homepage.
+test('favicons stay indexable and a 48px-multiple icon is linked from the homepage', async ({ request }) => {
+  for (const icon of ['/favicon.ico', '/icon.png', '/apple-icon.png']) {
+    const response = await request.get(icon)
+    expect(response.status(), icon).toBe(200)
+    expect(response.headers()['x-robots-tag'] ?? '', icon).not.toContain('noindex')
+  }
+  const html = await (await request.get('/')).text()
+  expect(html).toMatch(/<link rel="icon" href="\/icon\.png[^"]*" sizes="144x144" type="image\/png"/)
 })
