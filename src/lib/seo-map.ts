@@ -60,6 +60,26 @@ export const STRATEGIC_SEARCH_TARGETS: StrategicSearchTarget[] = [
     canonicalPath: '/blog/cirurgia-hemorroida-afastamento-atestado',
     intent: 'recovery',
   })),
+  ...['verruga anal volta depois do laser', 'verruga anal voltou'].map((query): StrategicSearchTarget => ({
+    query,
+    canonicalPath: '/blog/verruga-anal-volta-depois-laser-co2',
+    intent: 'recovery',
+  })),
+  ...['hemorroida que não melhora', 'quando operar hemorroida'].map((query): StrategicSearchTarget => ({
+    query,
+    canonicalPath: '/blog/hemorroida-nao-melhora-quando-operar',
+    intent: 'condition',
+  })),
+  {
+    query: 'fístula anal fecha sozinha',
+    canonicalPath: '/blog/fistula-anal-fecha-sozinha',
+    intent: 'condition',
+  },
+  ...['cisto pilonidal laser recuperação', 'cisto pilonidal recuperação'].map((query): StrategicSearchTarget => ({
+    query,
+    canonicalPath: '/blog/cisto-pilonidal-laser-recuperacao',
+    intent: 'recovery',
+  })),
 ]
 
 export function getStrategicTarget(query: string): StrategicSearchTarget | undefined {

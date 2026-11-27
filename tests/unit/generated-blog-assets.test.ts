@@ -9,10 +9,10 @@ const manifest = JSON.parse(fs.readFileSync('docs/blog-generated-images-manifest
   generationTool: string; prompt: string; kind: string;
 }>
 
-it('keeps 21 distinct active generated blog images (I1)', () => {
-  assert.equal(manifest.length, 21)
+it('keeps 25 distinct active generated blog images (I1)', () => {
+  assert.equal(manifest.length, 25)
   assert.equal(manifest.filter((image) => image.kind === 'image').length, 14)
-  assert.equal(manifest.filter((image) => image.kind === 'cover').length, 7)
+  assert.equal(manifest.filter((image) => image.kind === 'cover').length, 11)
   assert.equal(new Set(manifest.map((image) => image.src)).size, manifest.length)
   assert.equal(new Set(manifest.map((image) => image.sha256)).size, manifest.length)
 })

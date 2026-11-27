@@ -93,6 +93,38 @@ describe('new patient guides (BLOG-01/LOCAL-01/GRAPH-01)', () => {
     assert.equal((article?.citation as unknown[]).length, post.sources?.length)
   })
 
+  for (const [slug, seoTitle, treatment, query, links] of [
+    ['verruga-anal-volta-depois-laser-co2', 'Verruga anal volta depois do laser de CO2?', 'hpv-perianal-laser-co2', 'verruga anal volta depois do laser',
+      ['/tratamentos/hpv-perianal-laser-co2', '/blog/hpv-anal-identificar-tratar', '/blog/hpv-perianal-laser-co2']],
+    ['hemorroida-nao-melhora-quando-operar', 'Hemorroida que não melhora: quando operar?', 'hemorroidas-sem-corte-laser-diodo', 'quando operar hemorroida',
+      ['/tratamentos/hemorroidas-sem-corte-laser-diodo', '/tratamentos/hemorroidectomia-laser-co2', '/blog/pomada-hemorroida-resolve', '/blog/hemorroidas-qual-tecnica-cirurgica-escolher']],
+    ['fistula-anal-fecha-sozinha', 'Fístula anal fecha sozinha? Quando tratar', 'fistula-anal-laser-vaaft-filac', 'fístula anal fecha sozinha',
+      ['/tratamentos/fistula-anal-laser-vaaft-filac', '/blog/drenagem-abscesso-perianal-e-risco-de-fistula', '/blog/fistula-anal-laser-vaaft-filac']],
+    ['cisto-pilonidal-laser-recuperacao', 'Cisto pilonidal a laser: recuperação e retorno', 'cisto-pilonidal-laser-epsit', 'cisto pilonidal recuperação',
+      ['/tratamentos/cisto-pilonidal-laser-epsit', '/blog/cisto-pilonidal-cirurgia-convencional-x-laser', '/blog/cisto-pilonidal-sinais-diagnostico']],
+  ] as const) {
+    it(`prepares the November draft ${slug} without overlapping its cluster`, () => {
+      const post = getPostBySlug(slug)
+      assert.ok(post)
+      assert.equal(post.seoTitle, seoTitle)
+      assert.equal(post.publishDate, '2026-11-26')
+      assert.equal(post.image, undefined)
+      assert.ok(post.coverImage)
+      assert.ok((post.faqs?.length ?? 0) >= 4)
+      assert.ok((post.sources?.length ?? 0) >= 3)
+      for (const href of [...links, '/locais-de-atendimento/campo-grande']) {
+        assert.ok(post.content.includes(`](${href})`), `missing link: ${href}`)
+      }
+      assert.doesNotMatch(post.content, /\[Nome do médico\]|garante a cura|melhor saída/i)
+      assert.ok(getTreatmentBySlug(treatment)?.relatedBlogSlugs.includes(slug), treatment)
+      assert.equal(getStrategicTarget(query)?.canonicalPath, `/blog/${slug}`)
+      const owners = getAllPosts().filter((other) => other.primaryKeyword === post.primaryKeyword || other.secondaryKeywords.includes(query))
+      assert.deepEqual(owners.map((other) => other.slug), [slug])
+      const linkedFrom = getAllPosts().filter((other) => other.slug !== slug && other.content.includes(`](/blog/${slug})`))
+      assert.ok(linkedFrom.length >= 1, `no inbound link to ${slug}`)
+    })
+  }
+
   it('consolidates the supplied sem-corte topic on the existing route', () => {
     const post = getPostBySlug('hemorroidas-sem-corte-laser-diodo')
     assert.ok(post?.content.includes('## O que esperar nas semanas seguintes'))

@@ -11,7 +11,6 @@ primaryKeyword: cirurgia cisto pilonidal convencional x laser
 secondaryKeywords:
   - cisto pilonidal a laser SiLaC
   - cirurgia de cisto sacrococcígeo
-  - recuperação cisto pilonidal
   - técnica de retalho cisto pilonidal
 targetAudience: patients
 intent: consideration

@@ -100,7 +100,7 @@ A escolha considera se a doença é interna, externa ou mista, o grau e o impact
 
 Quando há indicação cirúrgica, podem ser discutidas a [hemorroidoplastia com laser de diodo](/tratamentos/hemorroidas-sem-corte-laser-diodo) ou a [hemorroidectomia com laser de CO2](/tratamentos/hemorroidectomia-laser-co2), conforme a anatomia. Esses métodos não são intercambiáveis nem necessários para todos.
 
-O artigo sobre [como escolher a técnica de cirurgia de hemorroidas](/blog/hemorroidas-qual-tecnica-cirurgica-escolher) ajuda a organizar a conversa sobre benefícios, limites e recuperação.
+Se os sintomas não melhoram, veja [os sinais de que pode ser hora de avaliar a cirurgia](/blog/hemorroida-nao-melhora-quando-operar). O artigo sobre [como escolher a técnica de cirurgia de hemorroidas](/blog/hemorroidas-qual-tecnica-cirurgica-escolher) ajuda a organizar a conversa sobre benefícios, limites e recuperação.
 
 ## Como sair do ciclo de crises
 

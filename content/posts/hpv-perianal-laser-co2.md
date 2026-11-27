@@ -95,7 +95,7 @@ O planejamento considera a quantidade, o tamanho e a localização dos condiloma
 
 Este é o ponto mais importante do tratamento, e o mais frequentemente subestimado.
 
-Lesões por HPV podem recidivar mesmo após uma boa resposta inicial. Tratar o que está visível hoje não elimina o vírus — por isso o acompanhamento preventivo contínuo faz parte do tratamento, e não é um extra.
+Lesões por HPV podem recidivar mesmo após uma boa resposta inicial. Tratar o que está visível hoje não elimina o vírus — por isso o acompanhamento preventivo contínuo faz parte do tratamento, e não é um extra. Veja [por que a verruga anal pode voltar depois do laser de CO2 e o que ajuda a reduzir o risco](/blog/verruga-anal-volta-depois-laser-co2).
 
 Na prática, as consultas de retorno servem para identificar e tratar precocemente qualquer lesão nova, quando ela ainda é pequena e o tratamento é mais simples.
 

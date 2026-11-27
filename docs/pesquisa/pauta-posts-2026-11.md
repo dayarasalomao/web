@@ -77,3 +77,12 @@ tem pesquisa (`cirurgia-hemorroida-afastamento-atestado.research.md`) e rascunho
 em PR de rascunho, sem imagem, aguardando a revisão clínica da Dra. Dayara. A ordem acima continua uma proposta: a Dra. Dayara
 ainda não a aceitou. Convênio e valores continuam de fora até a clínica
 confirmar.
+
+## Estado em 26 de novembro de 2026
+
+A Dra. Dayara enviou quatro textos próprios, fora da ordem acima. Eles foram
+conferidos contra as fontes (`<slug>.research.md`), adaptados ao padrão do blog
+e entraram como rascunho, sem imagem, aguardando a revisão clínica dela:
+`verruga-anal-volta-depois-laser-co2`, `hemorroida-nao-melhora-quando-operar`,
+`fistula-anal-fecha-sozinha` e `cisto-pilonidal-laser-recuperacao`. Cada nota de
+pesquisa lista o que foi alterado em relação ao texto original.
