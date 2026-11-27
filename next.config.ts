@@ -82,14 +82,13 @@ const nextConfig: NextConfig = {
       // URLs. The Markdown helper sets noindex on its own 404s instead.
       { source: '/design-system', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
       { source: '/politica-privacidade', headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
-      // Generated social cards and browser icons are fetched by crawlers but
-      // are not search results. Social scrapers ignore X-Robots-Tag, so link
-      // previews keep working; article images live under /assets and stay
-      // indexable.
-      ...['/:path*/opengraph-image', '/favicon.ico', '/apple-icon.png'].map((source) => ({
-        source,
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
-      })),
+      // Generated social cards are fetched by crawlers but are not search
+      // results. Social scrapers ignore X-Robots-Tag, so link previews keep
+      // working; article images live under /assets and stay indexable.
+      // Never add favicon.ico, icon.png or apple-icon.png here: Google Search
+      // needs to index the favicon file (Googlebot-Image) to show it next to
+      // our results, and a noindex on it silently drops the icon from the SERP.
+      { source: '/:path*/opengraph-image', headers: [{ key: 'X-Robots-Tag', value: 'noindex' }] },
       {
         source: '/:path*',
         headers: [
