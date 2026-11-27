@@ -116,32 +116,6 @@
     "reviewStatus": "pending-physician-review"
   },
   {
-    "slug": "doencas-inflamatorias-intestinais-crohn-retocolite",
-    "title": "Doenças Inflamatórias Intestinais: Quando Suspeitar de Crohn ou Retocolite",
-    "kind": "image",
-    "oldCardImage": null,
-    "subject": "Investigação de inflamação intestinal: torso adulto estilizado inteiramente vestido segurando suavemente o abdome, caderno de sintomas e lupa em mesa próxima; nenhuma anatomia interna ou resultado diagnóstico.",
-    "source": "/Users/diegovfeder/.codex/generated_images/01a13344-93e4-7b90-a428-efbf05f8bca6/exec-51016b37-319d-4ce5-a4c3-c54394076c95.png",
-    "src": "/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp",
-    "prompt": "Use case: illustration-story. Create one premium editorial illustration for a Brazilian coloproctology blog. Wide landscape 16:9 composition, ideally 1536x864. Quiet cream background #F4F3F2, warm beige #D7CBBF, deep teal #1D414C, small copper #A35442 accents. Refined tactile paper-cut / soft 3D illustration, clean shapes, nuanced soft shadows, restrained warm natural lighting. Main elements within the central 80% of the canvas, readable at card size. No text, letters, numbers, logos, watermarks, labels or branding. No photographic patients, medical claims, explicit anatomy, lesions or procedural instructions. Imagined educational scene, not a real clinic or medical device demonstration. Scene: Investigação de inflamação intestinal: torso adulto estilizado inteiramente vestido segurando suavemente o abdome, caderno de sintomas e lupa em mesa próxima; nenhuma anatomia interna ou resultado diagnóstico.",
-    "generationTool": "OpenAI image_gen (built-in)",
-    "generatedAt": "2026-10-13",
-    "reviewStatus": "pending-physician-review"
-  },
-  {
-    "slug": "historico-crohn-retocolite-familia-acompanhamento-coloproctologista",
-    "title": "Histórico de Crohn, Retocolite ou Casos na Família: Quando Fazer Acompanhamento com Coloproctologista",
-    "kind": "image",
-    "oldCardImage": null,
-    "subject": "Histórico familiar e acompanhamento: árvore familiar abstrata com pequenos retratos geométricos conectados e uma agenda médica; sem texto, sem genética determinística, sem parentes identificáveis.",
-    "source": "/Users/diegovfeder/.codex/generated_images/01a13344-93e4-7b90-a428-efbf05f8bca6/exec-92aec359-65e1-4fe1-8850-0643d2ed7585.png",
-    "src": "/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp",
-    "prompt": "Use case: illustration-story. Create one premium editorial illustration for a Brazilian coloproctology blog. Wide landscape 16:9 composition, ideally 1536x864. Quiet cream background #F4F3F2, warm beige #D7CBBF, deep teal #1D414C, small copper #A35442 accents. Refined tactile paper-cut / soft 3D illustration, clean shapes, nuanced soft shadows, restrained warm natural lighting. Main elements within the central 80% of the canvas, readable at card size. No text, letters, numbers, logos, watermarks, labels or branding. No photographic patients, medical claims, explicit anatomy, lesions or procedural instructions. Imagined educational scene, not a real clinic or medical device demonstration. Scene: Histórico familiar e acompanhamento: árvore familiar abstrata com pequenos retratos geométricos conectados e uma agenda médica; sem texto, sem genética determinística, sem parentes identificáveis.",
-    "generationTool": "OpenAI image_gen (built-in)",
-    "generatedAt": "2026-10-13",
-    "reviewStatus": "pending-physician-review"
-  },
-  {
     "slug": "hidradenite-supurativa-sintomas-tratamento",
     "title": "Hidradenite Supurativa: Sintomas, Impacto e Tratamento",
     "kind": "image",

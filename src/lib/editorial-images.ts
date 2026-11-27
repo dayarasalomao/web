@@ -71,8 +71,6 @@ export const EDITORIAL_IMAGE_DIMENSIONS = {
   '/assets/blog/capa-hpv-anal-identificar-tratar.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-fistula-anal-o-que-e-sintomas.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-doenca-hemorroidaria-sintomas-graus.webp': { width: 1672, height: 941 },
-  '/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp': { width: 1672, height: 941 },
-  '/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-hidradenite-supurativa-sintomas-tratamento.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-sindrome-intestino-irritavel-sintomas-manejo.webp': { width: 1672, height: 941 },
   '/assets/blog/capa-diarreia-cronica-causas-sinais-alerta.webp': { width: 1672, height: 941 },

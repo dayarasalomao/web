@@ -54,11 +54,6 @@ export default function Diseases() {
       description:
         'É uma doença inflamatória crônica da pele que cursa com nódulos dolorosos, abscessos e fístulas em áreas como virilhas, região genital e axilas.',
     },
-    {
-      name: 'Doenças Inflamatórias Intestinais',
-      description:
-        'Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cursam com inflamações específicas do intestino.',
-    },
   ]
 
   /**
@@ -124,10 +119,9 @@ export default function Diseases() {
           title="Doenças que trato"
           lead={
             <>
-              Especialização em{' '}
-              <span className="font-semibold text-copper">coloproctologia</span>{' '}
-              com tratamentos modernos e minimamente invasivos para diversas
-              condições
+              Condições do cólon, do reto e da região anal acompanhadas em{' '}
+              <span className="font-semibold text-copper">coloproctologia</span>,
+              com a conduta definida depois da avaliação
             </>
           }
         />

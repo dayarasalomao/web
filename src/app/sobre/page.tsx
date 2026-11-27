@@ -17,6 +17,7 @@ import {
   PROFESSIONAL_PROFILE,
   PROFESSIONAL_QUALIFICATIONS,
   PROFILE_LAST_UPDATED,
+  PROFILE_PUBLICATION,
 } from '@/lib/profile'
 import {
   DEFAULT_ROBOTS,
@@ -114,10 +115,9 @@ export default function AboutPage() {
             Formação médica e atualização contínua
           </h2>
           <p className="mt-5 max-w-4xl text-base leading-relaxed text-gray-700 lg:text-lg">
-            A formação reúne base cirúrgica, especialização em coloproctologia e
-            aperfeiçoamento em técnicas minimamente invasivas e disfunções do assoalho
-            pélvico. A escolha de qualquer tratamento continua dependente do diagnóstico,
-            do exame e das particularidades de cada pessoa.
+            A formação reúne graduação em Medicina, residências médicas, curso de
+            aperfeiçoamento e pós-graduação. O {RQE_FULL} identifica o registro de especialista em
+            Coloproctologia em Mato Grosso do Sul.
           </p>
 
           <ol className="mt-8 space-y-4">
@@ -128,7 +128,10 @@ export default function AboutPage() {
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <h3 className="text-xl font-semibold text-teal">{qualification.title}</h3>
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-copper">
+                      {qualification.kindLabel}
+                    </p>
+                    <h3 className="mt-1 text-xl font-semibold text-teal">{qualification.title}</h3>
                     <p className="mt-1 font-medium text-copper">{qualification.institution}</p>
                   </div>
                   <span className="w-fit rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold text-teal">
@@ -163,8 +166,8 @@ export default function AboutPage() {
             </p>
             <h2 className="mt-3 text-2xl font-semibold text-white">Campo Grande/MS</h2>
             <p className="mt-4 leading-relaxed text-white/85">
-              Consultas no {BUSINESS_CLINIC_NAME}, com informações de endereço, horário,
-              mapa e agendamento reunidas na página do local.
+              Consultas no {BUSINESS_CLINIC_NAME}. Veja o endereço, o mapa e as opções
+              de agendamento na página do local.
             </p>
             <Link
               href="/locais-de-atendimento/campo-grande"
@@ -173,6 +176,19 @@ export default function AboutPage() {
               Ver local de atendimento →
             </Link>
           </div>
+        </section>
+
+        <section className="mt-14 rounded-[2rem] border border-beige bg-white/95 p-6 shadow-sm">
+          <h2 className="text-2xl font-semibold text-teal">Publicação científica</h2>
+          <p className="mt-4 leading-relaxed text-gray-700">
+            Coautoria na {PROFILE_PUBLICATION.journal} ({PROFILE_PUBLICATION.year}).
+          </p>
+          <a
+            href={PROFILE_PUBLICATION.url}
+            className="mt-2 inline-block font-semibold text-teal underline underline-offset-4"
+          >
+            {PROFILE_PUBLICATION.title} (PubMed)
+          </a>
         </section>
 
         <blockquote className="mt-14 rounded-[2rem] border-l-4 border-copper bg-white/95 p-7 text-lg italic leading-relaxed text-gray-700 shadow-sm">

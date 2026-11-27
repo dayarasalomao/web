@@ -124,10 +124,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const locationsLandingPath = getLocationsLandingPath()
   const breadcrumbItems = buildLocationBreadcrumbItems(location.city)
 
-  // Icon-led rows rather than a flat stack: address, hours and phone are
-  // three different kinds of fact and a patient scans for one of them.
-  // The label and its value stay inside one element so the strings the e2e
-  // suite asserts on remain contiguous.
   const addressBlock = location.address ? (
     <address className="not-italic">
       <ul className="space-y-4 text-base leading-relaxed text-gray-700">
@@ -323,7 +319,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 ))}
               </ul>
               <p className="mt-5 text-sm leading-relaxed text-gray-600">
-                A colonoscopia não será realizada pela {SEO_DOCTOR_NAME} nesse local.
+                A {SEO_DOCTOR_NAME} ainda não realiza colonoscopia em Campo Grande.
               </p>
             </section>
           </div>
@@ -398,7 +394,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <p className="mt-6 text-base leading-relaxed text-gray-700">
                 <strong className="text-teal">{location.name}</strong>
                 {location.address.neighborhood ? ` · ${location.address.neighborhood}` : ''}
-                {location.openingHours ? ` · ${location.openingHours.label}` : ''}
+                {location.openingHours
+                  ? ` · Horário da Dra. Dayara: ${location.openingHours.label}`
+                  : ''}
               </p>
             ) : null}
 
@@ -651,6 +649,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   {qualification.year}
                 </span>
                 <span className="min-w-0 flex-1">
+                  <span className="block text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-copper">
+                    {qualification.kindLabel}
+                  </span>
                   <span className="block text-[0.9375rem] font-semibold leading-snug text-teal">
                     {qualification.title}
                   </span>

@@ -21,7 +21,7 @@
   },
   {
     "slug": "como-encontrar-coloproctologista-campo-grande-ms",
-    "proseSha256": "02026ef146a4cf5198e78d66ef23f43a0cfe638a7765a198b8ffec7bff8c979f",
+    "proseSha256": "ebd64efd7234a9b6c617d19c882bfc44d1158651889d63676345bfa5aef9bbf3",
     "metadataSha256": "09916f20ead301492d40cc62fb20e9d792986678c86479e2c7f91c6afd92513f"
   },
   {
@@ -31,18 +31,13 @@
   },
   {
     "slug": "diarreia-cronica-causas-sinais-alerta",
-    "proseSha256": "1b9509c306a5d056e6fe3b9ea8e2c3edd62f578d1227ca47ef1f09375ca3eed5",
+    "proseSha256": "d76b2a7bf4072f8d4e438d41afdbaee8bab04a8640087ae02ae4579ce69ee05b",
     "metadataSha256": "0eb0c1ca54dbe8c34297852e001f4c0e36c396dc983be9ac097907300379bdef"
   },
   {
     "slug": "doenca-hemorroidaria-sintomas-graus",
     "proseSha256": "2f86d7ca8099e813b2040d36b39450b4a1248f37a648fa17dd311b7da63344a7",
     "metadataSha256": "45ecd6c0787c204b48641c55429c04ff951b2657a1234ff62bbd68803ead259c"
-  },
-  {
-    "slug": "doencas-inflamatorias-intestinais-crohn-retocolite",
-    "proseSha256": "100a3527c4188862d0d1c8c00fa19cca8881b07e168057575b4330bd3b92a1e5",
-    "metadataSha256": "20070ca9758b31a811425b700efb898d666478a07747613830b61cb4bb2e2ffd"
   },
   {
     "slug": "dor-ao-evacuar-quando-investigar",
@@ -61,7 +56,7 @@
   },
   {
     "slug": "fissura-anal-causas-sintomas",
-    "proseSha256": "95c6baaee4a6abfadd9e0078c48e77472d8245a79ff6e82b23209b564d97a698",
+    "proseSha256": "816715237aaf4af5316c355e9a57039deeee5f67f514b888c0a102af42c515b0",
     "metadataSha256": "88e62d16410ef4a29e27446bcccc5202c29ab3a2cc961c888ce29d5bce48577d"
   },
   {
@@ -71,7 +66,7 @@
   },
   {
     "slug": "fistula-anal-o-que-e-sintomas",
-    "proseSha256": "b9dc91d2ff7e4d5f9f505c671d1221c913c0fe3152badefb2b4c0180a8065955",
+    "proseSha256": "830adf2d720885b999bb2887c9f0d082d63061ad03f9f157601ebc8291da7872",
     "metadataSha256": "cbd2eaf6149f004d95707fcbfc44cb5b80bc5ec3ef8c0b23a8dfece93b356f91"
   },
   {
@@ -106,13 +101,8 @@
   },
   {
     "slug": "hidradenite-supurativa-sintomas-tratamento",
-    "proseSha256": "8fee693a144907527a5e0357f162ac82aa2b4c182c537f296f40449ae4e3a4b5",
+    "proseSha256": "f2ba949d49de9f36a17e947aa5b233ab13d163944fd71ba4277a73f63838c9c0",
     "metadataSha256": "fa3b5e99e4f50354e5892969c5964af817d09c06930cf423f15b3ac4464cd45e"
-  },
-  {
-    "slug": "historico-crohn-retocolite-familia-acompanhamento-coloproctologista",
-    "proseSha256": "1beeed562031bdecc50da78d8d2d5d35a54862cce4345c72cdc3da67aad86ec8",
-    "metadataSha256": "de472be8224c24695768c5b61e43f27300c39dacbb3cc0b732868487cd6e6e17"
   },
   {
     "slug": "hpv-anal-identificar-tratar",
@@ -162,7 +152,7 @@
   {
     "slug": "por-que-a-fistula-anal-aparece",
     "proseSha256": "ecf3ca18b92122e4f79e4bcc73907d377ea0e1bd556a9a89ee5be2bb29e283ff",
-    "metadataSha256": "ed5a26dc91c576ae0661c49dc0791fc5ac7315376049799129a949234095ce59"
+    "metadataSha256": "036ff509bd19d089bde10abb6c5917b2fc7ecb36294c27af193789f2314be97e"
   },
   {
     "slug": "pos-operatorio-cirurgia-hemorroidas-o-que-esperar",
@@ -171,7 +161,7 @@
   },
   {
     "slug": "primeira-consulta-coloproctologista-como-se-preparar",
-    "proseSha256": "0e7d72b2c75a2051df190aea7dd41b76c401b8cbe3b97848e9ac75db611e610e",
+    "proseSha256": "dde3f9c0c9ed675e4458bcb482920262b418bbfd7b266e61447dfe5f4ab5cbbd",
     "metadataSha256": "4cf09f5c6dc53d2f62aeeca17d27d58833898b40d4d65802920b4fef8c157820"
   },
   {

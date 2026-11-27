@@ -87,7 +87,7 @@ Cerca de 80% das fístulas surgem exatamente assim — é a chamada origem cript
 
 Alguns fatores aumentam a chance de um abscesso evoluir para fístula, ou de a fístula ser mais complicada:
 
-* **Doença inflamatória intestinal**, especialmente a [doença de Crohn](/blog/doencas-inflamatorias-intestinais-crohn-retocolite), na qual a inflamação crônica do intestino pode levar diretamente à formação de fístulas, mesmo sem uma infecção glandular clássica.
+* **Doença inflamatória intestinal**, especialmente a doença de Crohn, na qual a inflamação crônica do intestino pode levar diretamente à formação de fístulas, mesmo sem uma infecção glandular clássica.
 * **Sexo feminino e idade entre 41 e 60 anos**, que aumentam discretamente o risco após um abscesso.
 * **Diabetes e tabagismo**, que agregam risco.
 * Causas mais raras, como traumas, infecções sexualmente transmissíveis e radioterapia prévia na região pélvica.
