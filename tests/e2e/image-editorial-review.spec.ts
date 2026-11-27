@@ -48,5 +48,5 @@ test('each article renders all reviewed image descriptions and captions (I2/4)',
       count++
     }
   }
-  expect(count).toBe(45)
+  expect(count).toBe(43)
 })

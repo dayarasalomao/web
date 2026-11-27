@@ -37,10 +37,10 @@ it('reviews all retained images without changing pixels or losing clinical cavea
   }
 })
 
-it('every body/cap image matches its reviewed text and all 45 body figures have captions (I2/4)', () => {
+it('every body/cap image matches its reviewed text and all 43 body figures have captions (I2/4)', () => {
   const posts = getAllPosts()
-  assert.equal(posts.length, 45)
-  assert.equal(posts.filter((post) => post.image).length, 40)
+  assert.equal(posts.length, 43)
+  assert.equal(posts.filter((post) => post.image).length, 38)
   let figureCount = 0
   for (const post of posts) {
     for (const metadata of [post.image, post.coverImage].filter((image) => image !== undefined)) {
@@ -55,7 +55,7 @@ it('every body/cap image matches its reviewed text and all 45 body figures have 
       figureCount++
     }
   }
-  assert.equal(figureCount, 45)
+  assert.equal(figureCount, 43)
 })
 
 it('keeps clinical prose, headings, summaries, sources and FAQs byte-equivalent after normalization (I3)', () => {

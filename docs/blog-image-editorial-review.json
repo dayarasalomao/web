@@ -81,15 +81,6 @@
     "clinicalReviewStatus": "pending-physician-review"
   },
   {
-    "src": "/assets/blog/capa-doencas-inflamatorias-intestinais-crohn-retocolite.webp",
-    "alt": "Pessoa com as mãos sobre o abdome, ao lado de um caderno ilustrado e uma lupa.",
-    "caption": "Cena ilustrativa de desconforto abdominal, usada como apoio ao texto sobre investigação de sintomas intestinais.",
-    "preservedDisclaimer": null,
-    "sha256": "ad8d4dc0cf19687c8268fb3b8d3356fd38790e3dcb77f58b6a9a95e74a4384a6",
-    "reviewType": "visual-editorial",
-    "clinicalReviewStatus": "pending-physician-review"
-  },
-  {
     "src": "/assets/blog/capa-dor-ao-evacuar-quando-investigar.webp",
     "alt": "Pessoa anota informações em um caderno, com a outra mão sobre o abdome e uma consulta representada ao fundo.",
     "caption": "Ilustração sobre registrar quando a dor aparece e levar essas informações à avaliação médica.",
@@ -158,15 +149,6 @@
     "caption": "Composição ilustrativa sobre avaliação e cuidados de pele, sem representar lesões ou um tratamento específico.",
     "preservedDisclaimer": null,
     "sha256": "10d79d61a910192c36e468a214d8f8850b538b74f0ed91b58c0c9271cc549910",
-    "reviewType": "visual-editorial",
-    "clinicalReviewStatus": "pending-physician-review"
-  },
-  {
-    "src": "/assets/blog/capa-historico-crohn-retocolite-familia-acompanhamento-coloproctologista.webp",
-    "alt": "Árvore familiar ilustrada com retratos, ao lado de um calendário e um estetoscópio.",
-    "caption": "Ilustração sobre conversar a respeito do histórico familiar e organizar o acompanhamento médico.",
-    "preservedDisclaimer": null,
-    "sha256": "fe8c523c1ab86d12b1dd83f049e5f2310e67bd9d2e382a2abb87b5d297ad5e22",
     "reviewType": "visual-editorial",
     "clinicalReviewStatus": "pending-physician-review"
   },

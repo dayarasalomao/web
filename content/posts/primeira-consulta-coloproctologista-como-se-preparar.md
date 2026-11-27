@@ -123,7 +123,7 @@ Não. O exame proctológico avalia a região anal e a porção final do reto. A 
 
 Nem todo sangramento ou desconforto anal exige colonoscopia. A indicação considera idade, sintomas, histórico familiar, exames anteriores e sinais de alerta. Quando ela for necessária, a consulta serve para explicar o motivo e orientar o próximo passo.
 
-Na página do [atendimento da Dra. Dayara em Campo Grande](/locais-de-atendimento/campo-grande), o site deixa claro que a colonoscopia não é realizada por ela nesse local.
+Na página do [atendimento da Dra. Dayara em Campo Grande](/locais-de-atendimento/campo-grande), o site deixa claro que ela ainda não realiza colonoscopia em Campo Grande.
 
 ## Como falar sobre sintomas que causam vergonha?
 

@@ -20,7 +20,6 @@ relatedPosts:
   - drenagem-abscesso-perianal-e-risco-de-fistula
   - fistula-anal-o-que-e-sintomas
   - fistula-anal-laser-vaaft-filac
-  - doencas-inflamatorias-intestinais-crohn-retocolite
 faqs:
   - question: Fístula anal fecha sozinha com antibiótico?
     answer: >-

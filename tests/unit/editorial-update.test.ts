@@ -20,7 +20,7 @@ describe('editorial title update', () => {
       assert.equal(metadata.alternates?.canonical, `https://www.dayarasalomao.com.br/tratamentos/${treatment.slug}`)
       return metadata.title
     })
-    assert.equal(new Set(titles).size, 14)
+    assert.equal(new Set(titles).size, 13)
   })
 
   it('uses concise unique search titles without changing editorial headings (SEO-02)', () => {

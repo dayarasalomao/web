@@ -80,14 +80,13 @@ export const CFM_MEDICAL_SEARCH_URL = 'https://portal.cfm.org.br/busca-medicos/'
 export const CRM_COUNCIL_URL = 'https://crmms.org.br/'
 
 // TODO(campo-grande): restore this link only after the Doctoralia profile
-// has been migrated to Campo Grande/CRM-MS and its final public URL is
-// confirmed. Leaving it empty keeps the old Curitiba profile out of the
-// footer and Physician `sameAs` during the transition.
+// shows CRM-MS and its local RQE. It already lists Campo Grande, but
+// still displays the Paraná credentials.
 export const DOCTORALIA_URL = ''
 
 // The practitioner's own verified Google Business Profile. Keep this separate
 // from the clinic's map listing: they are two different entities in JSON-LD.
-export const GOOGLE_BUSINESS_PROFILE_URL = 'https://share.google/xtnb20zDzJn8N3B6G'
+export const GOOGLE_BUSINESS_PROFILE_URL = 'https://www.google.com/maps/place/Dra.+Dayara+Salom%C3%A3o+%7C+Proctologista+em+Campo+Grande+(MS)/data=!4m2!3m1!1s0x0:0x188a033ef309b503'
 
 // URL to set manually as the website field inside the Google Business Profile.
 // Canonicals deliberately remain clean; this URL exists only for attribution.
@@ -101,7 +100,9 @@ export const CLINIC_GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/c8dqJpaqs1wb8Cnm6
 export const BUSINESS_NAME = SEO_DOCTOR_NAME
 export const BUSINESS_ALTERNATE_NAME = 'Dayara Salomão Coloproctologista'
 export const BUSINESS_DESCRIPTION = SEO_OG_DESCRIPTION
-export const BUSINESS_PHONE = BUSINESS_TELEPHONE_NUMBER
+// Public specialty name. schema.org/MedicalSpecialty has no coloproctology
+// value; do not send this string as medicalSpecialty.
+export const BUSINESS_SPECIALTY_LABEL = 'Coloproctologia'
 export const BUSINESS_EMAIL = CONTACT_EMAIL
 
 // =================================================================
@@ -122,14 +123,16 @@ export const BUSINESS_GEO = {
   longitude: -54.5956825,
 }
 
-export const BUSINESS_HOURS = 'Mo-Fr 09:00-18:00'
+// Physician's own consulting hours at the Instituto, aligned with her Google
+// Business Profile (confirmed with the doctor on 2026-11-26).
+export const BUSINESS_HOURS = 'Mo-Fr 09:00-17:00'
 
 // =================================================================
 // PHYSICIAN DATA (Used in JSON-LD Schema)
 // =================================================================
 export const PHYSICIAN_DATA = {
   name: 'Dayara Salomão',
-  jobTitle: 'Coloproctologista',
+  jobTitle: SEO_SPECIALTY,
   university: 'Pontifícia Universidade Católica do Paraná',
   clinic: BUSINESS_CLINIC_NAME,
 }
@@ -151,7 +154,6 @@ export const MEDICAL_PROCEDURES = [
   'Avaliação de diarreia crônica',
   'Tratamento da síndrome do intestino irritável',
   'Tratamento de hidradenite supurativa',
-  'Acompanhamento de doenças inflamatórias intestinais',
 ]
 
 // =================================================================

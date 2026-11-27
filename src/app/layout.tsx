@@ -15,7 +15,6 @@ import {
   SEO_LOCATION,
   SEO_SPECIALTY,
   BUSINESS_NAME,
-  BUSINESS_PHONE,
   BUSINESS_EMAIL,
   BUSINESS_ADDRESS,
   TWITTER_HANDLE,
@@ -82,7 +81,6 @@ export const metadata: Metadata = {
   },
   other: {
     'contact:email': BUSINESS_EMAIL,
-    'contact:phone_number': BUSINESS_PHONE,
     'contact:postal_address': `${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, ${BUSINESS_ADDRESS.addressRegion}`,
     'business:contact_data:locality': BUSINESS_ADDRESS.addressLocality,
     'business:contact_data:region': BUSINESS_ADDRESS.addressRegion,

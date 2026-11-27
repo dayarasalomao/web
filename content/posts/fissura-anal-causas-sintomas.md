@@ -80,7 +80,7 @@ Os dois ciclos se reforçam. É por isso que "esperar passar" costuma agravar a 
 
 A fissura típica pode ser causada por esforço evacuatório associado à [constipação intestinal](/blog/constipacao-intestinal-quando-investigar), mas também pode surgir após episódios de [diarreia](/blog/diarreia-cronica-causas-sinais-alerta). Não é incomum encontrar pacientes que, depois de um quadro de gastroenterite, passam a apresentar dor anal por uma fissura.
 
-Já as fissuras **atípicas** podem estar relacionadas a outras condições, como causas infecciosas e [doenças inflamatórias intestinais](/blog/doencas-inflamatorias-intestinais-crohn-retocolite). Elas costumam ter localização, aspecto ou evolução diferentes do esperado.
+Já as fissuras **atípicas** podem estar relacionadas a outras condições, como causas infecciosas e doenças inflamatórias intestinais. Elas costumam ter localização, aspecto ou evolução diferentes do esperado.
 
 Essa diferença não é acadêmica: ela muda o tratamento por completo. A fissura típica é tratada localmente; a atípica exige tratar a causa de base.
 

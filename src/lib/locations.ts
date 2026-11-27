@@ -101,7 +101,6 @@ const CORE_SERVICES: string[] = [
   'Prurido anal',
   'Constipação intestinal',
   'Síndrome do intestino irritável',
-  'Doenças inflamatórias intestinais',
 ]
 
 const CORE_TREATMENT_SLUGS: string[] = [
@@ -154,9 +153,9 @@ export const LOCATIONS: PracticeLocation[] = [
     clinicPhone: BUSINESS_TELEPHONE_NUMBER,
     whatsappUrl: WHATSAPP_URL,
     openingHours: {
-      label: 'Segunda a sexta, das 9h às 18h',
+      label: 'Segunda a sexta, das 9h às 17h',
       opens: '09:00',
-      closes: '18:00',
+      closes: '17:00',
       schema: BUSINESS_HOURS,
     },
     mapsUrl: CLINIC_GOOGLE_MAPS_URL,
@@ -168,7 +167,7 @@ export const LOCATIONS: PracticeLocation[] = [
       'A coloproctologia cuida das doenças do intestino grosso, do reto e da região anal. Procuram a especialidade pessoas que convivem com sangramento ao evacuar, dor anal, coceira que não passa, um caroço na região ou alguma mudança no hábito intestinal.',
       'A consulta começa por uma conversa sem pressa. O exame físico só é feito quando é necessário, com privacidade e no seu ritmo. Sentir vergonha é comum nesse tipo de consulta, e isso não deveria custar o diagnóstico a ninguém.',
       'Boa parte dos casos se resolve com medidas clínicas, sem cirurgia. Quando existe indicação cirúrgica, a escolha da técnica considera o grau da doença e as suas prioridades quanto a dor e tempo de afastamento. Laser e videocirurgia estão entre as opções disponíveis.',
-      'A colonoscopia não é realizada pela Dra. Dayara neste local. Se o seu caso exigir o exame, a orientação de onde fazê-lo faz parte da consulta.',
+      'A Dra. Dayara ainda não realiza colonoscopia em Campo Grande. Se o seu caso exigir o exame, a orientação de onde fazê-lo faz parte da consulta.',
     ],
     services: CORE_SERVICES,
     relatedTreatmentSlugs: CORE_TREATMENT_SLUGS,
@@ -186,17 +185,23 @@ export const LOCATIONS: PracticeLocation[] = [
       },
       {
         question: 'Qual é o horário de atendimento em Campo Grande?',
-        answer: 'O atendimento da Dra. Dayara é de segunda a sexta, das 9h às 18h.',
+        answer:
+          'O atendimento da Dra. Dayara é de segunda a sexta, das 9h às 17h. Os horários disponíveis para consulta são confirmados pelo WhatsApp de agendamento.',
+      },
+      {
+        question: 'A Dra. Dayara faz colonoscopia em Campo Grande?',
+        answer:
+          'Ainda não. Por enquanto, a colonoscopia não é realizada pela Dra. Dayara em Campo Grande. Se o exame for indicado, a orientação de onde fazê-lo faz parte da consulta.',
       },
       {
         question: 'Quais condições são atendidas em Campo Grande?',
         answer:
-          'Consultas e tratamentos em coloproctologia, como doença hemorroidária, fissura anal, fístula anal, cisto pilonidal e HPV perianal, com avaliação individual de cada caso. A colonoscopia não é realizada pela Dra. Dayara nesse local.',
+          'Consultas e tratamentos em coloproctologia, como doença hemorroidária, fissura anal, fístula anal, cisto pilonidal e HPV perianal, com avaliação individual de cada caso.',
       },
     ],
     indexable: true,
     showAppointmentCta: true,
-    lastUpdated: '2026-09-01',
+    lastUpdated: '2026-11-25',
   },
 ]
 

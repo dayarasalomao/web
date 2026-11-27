@@ -21,13 +21,6 @@ export default function WhenToSeek() {
       blogSlug: 'sangramento-anal-dor-quando-procurar-coloproctologista',
     },
     {
-      title: 'Histórico de doenças inflamatórias intestinais',
-      description:
-        'Se você tem Crohn, retocolite ulcerativa ou histórico familiar',
-      urgency: 'medium',
-      blogSlug: 'historico-crohn-retocolite-familia-acompanhamento-coloproctologista',
-    },
-    {
       title: 'Lesões, verrugas ou nódulos na região do ânus',
       description: 'Qualquer alteração visual ou palpável na área perianal',
 
@@ -167,7 +160,7 @@ export default function WhenToSeek() {
             ctaLabel="Agendar consulta agora"
             conversionSuffix="when-to-seek"
             items={[
-              { title: 'Diagnóstico precoce', description: 'Melhores resultados no tratamento' },
+              { title: 'Diagnóstico precoce', description: 'Entenda a causa dos sintomas' },
               { title: 'Tratamento preciso', description: 'Abordagem especializada e eficaz' },
               { title: 'Alívio dos sintomas', description: 'Retorno ao bem-estar e qualidade de vida' },
             ]}

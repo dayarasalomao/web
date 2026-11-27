@@ -30,6 +30,7 @@ import {
   PROFESSIONAL_MEMBERSHIPS,
   PROFESSIONAL_PROFILE,
   PROFESSIONAL_QUALIFICATIONS,
+  PROFILE_PUBLICATION,
 } from './profile.ts'
 import { PRIMARY_LOCATION_PATH } from './navigation.ts'
 import { buildCanonical } from './seo.ts'
@@ -103,6 +104,8 @@ function renderHome(): string {
       '',
       PROFESSIONAL_PROFILE.shortIntroduction,
       '',
+      'A coloproctologia — também chamada de proctologia — cuida das doenças do cólon, do reto e da região anal.',
+      '',
       PROFESSIONAL_PROFILE.approach,
       '',
       `- Registro profissional: ${CRM_FULL}, ${RQE_FULL}`,
@@ -148,10 +151,18 @@ function renderAbout(): string {
       '## Formação médica e atualização contínua',
       '',
       ...PROFESSIONAL_QUALIFICATIONS.map(
-        (item) => `- **${item.title}** — ${item.institution} (${item.year}). ${item.description}.`,
+        (item) =>
+          `- **${item.kindLabel}: ${item.title}** — ${item.institution} (${item.year}). ${item.description}`,
       ),
     ].join('\n'),
     ['## Sociedades médicas', '', bulletList(PROFESSIONAL_MEMBERSHIPS)].join('\n'),
+    [
+      '## Publicação científica',
+      '',
+      `Coautoria na ${PROFILE_PUBLICATION.journal} (${PROFILE_PUBLICATION.year}).`,
+      '',
+      `[${PROFILE_PUBLICATION.title} (PubMed)](${PROFILE_PUBLICATION.url})`,
+    ].join('\n'),
     contactSection(),
     siteFooter(),
   )
@@ -297,7 +308,8 @@ function renderLocation(location: PracticeLocation): string {
       ...[
         address &&
           `- Endereço: ${[address.streetAddress, address.addressDetail, address.neighborhood, `${address.addressLocality} - ${location.stateCode}`, `CEP ${address.postalCode}`].filter(Boolean).join(', ')}`,
-        location.openingHours && `- Horário: ${location.openingHours.label}`,
+        location.openingHours &&
+          `- Horário da Dra. Dayara: ${location.openingHours.label}`,
         location.clinicPhone && `- Telefone geral do ${location.name}: ${location.clinicPhone}`,
         location.whatsappUrl && `- Agendamento por WhatsApp: ${location.whatsappUrl}`,
         `- E-mail: ${CONTACT_EMAIL}`,
