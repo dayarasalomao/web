@@ -53,10 +53,10 @@ faqs:
     answer: >-
       Uma fístula que persiste tende a continuar causando secreção e novas infecções. Quanto antes a
       avaliação, mais opções de tratamento costumam estar disponíveis.
-  - question: Fístula na doença de Crohn pode ser tratada com laser?
+  - question: Como o médico descobre o caminho da fístula?
     answer: >-
-      Depende. Nesses casos, o tratamento combina medicação e cirurgia, com acompanhamento conjunto do
-      gastroenterologista e do coloproctologista.
+      A avaliação começa pelo exame clínico. Quando necessário, ressonância ou ultrassom ajudam a
+      mapear o trajeto e a definir a técnica mais adequada.
   - question: Se o furinho fechou na pele, a fístula sarou?
     answer: >-
       Nem sempre. O orifício pode fechar na pele enquanto o trajeto por dentro continua ativo, e a
