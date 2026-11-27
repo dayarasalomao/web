@@ -308,6 +308,8 @@ function renderLocation(location: PracticeLocation): string {
       ...[
         address &&
           `- Endereço: ${[address.streetAddress, address.addressDetail, address.neighborhood, `${address.addressLocality} - ${location.stateCode}`, `CEP ${address.postalCode}`].filter(Boolean).join(', ')}`,
+        location.openingHours &&
+          `- Horário da Dra. Dayara: ${location.openingHours.label}`,
         location.clinicPhone && `- Telefone geral do ${location.name}: ${location.clinicPhone}`,
         location.whatsappUrl && `- Agendamento por WhatsApp: ${location.whatsappUrl}`,
         `- E-mail: ${CONTACT_EMAIL}`,

@@ -48,10 +48,6 @@ Aumento da frequência evacuatória e fezes líquidas
 
 É uma doença inflamatória crônica da pele que cursa com nódulos dolorosos, abscessos e fístulas em áreas como virilhas, região genital e axilas
 
-### Doenças Inflamatórias Intestinais
-
-Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cursam com inflamações específicas do intestino.
-
 ## Tratamentos em destaque
 
 - Cirurgias de hemorroidas com laser de CO2
@@ -82,6 +78,7 @@ O catálogo completo permanece disponível na página de tratamentos.
 - Residência médica: Cirurgia Geral pela Santa Casa de Curitiba em 2022
 - Residência médica: Coloproctologia pelo Hospital Universitário Evangélico Mackenzie em 2024
 - Curso de aperfeiçoamento: Proctologia Minimamente Invasiva pelo IRCAD América Latina em 2025
+- Pós-graduação: Disfunções do Assoalho Pélvico pela UNIFAL-MG, concluída em janeiro de 2026. Não é residência nem RQE.
 - Coautoria em [estudo clínico sobre fístula anorretal recidivada](https://pubmed.ncbi.nlm.nih.gov/42961273/), publicado na Revista do Colégio Brasileiro de Cirurgiões em 2026
 
 ## Local e Agendamento
@@ -96,5 +93,8 @@ O catálogo completo permanece disponível na página de tratamentos.
 - **WhatsApp de agendamento**: (67) 2180-3675
 - **Mensagem preenchida em todos os CTAs de WhatsApp**: "Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?"
 - **E-mail**: [dradayarasalomao@gmail.com](mailto:dradayarasalomao@gmail.com)
+
+- **Horário da Dra. Dayara**: segunda a sexta, das 9h às 17h (mesmo horário do Perfil da Empresa no Google)
+- **Colonoscopia**: a Dra. Dayara ainda não realiza o exame em Campo Grande
 
 Consulte os horários disponíveis pelo WhatsApp de agendamento.

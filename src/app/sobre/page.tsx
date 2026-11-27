@@ -115,8 +115,8 @@ export default function AboutPage() {
             Formação médica e atualização contínua
           </h2>
           <p className="mt-5 max-w-4xl text-base leading-relaxed text-gray-700 lg:text-lg">
-            A formação reúne graduação em Medicina, residências médicas e curso de
-            aperfeiçoamento. O {RQE_FULL} identifica o registro de especialista em
+            A formação reúne graduação em Medicina, residências médicas, curso de
+            aperfeiçoamento e pós-graduação. O {RQE_FULL} identifica o registro de especialista em
             Coloproctologia em Mato Grosso do Sul.
           </p>
 

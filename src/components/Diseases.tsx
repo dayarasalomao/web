@@ -54,11 +54,6 @@ export default function Diseases() {
       description:
         'É uma doença inflamatória crônica da pele que cursa com nódulos dolorosos, abscessos e fístulas em áreas como virilhas, região genital e axilas.',
     },
-    {
-      name: 'Doenças Inflamatórias Intestinais',
-      description:
-        'Retocolite Ulcerativa e Doença de Crohn, que são doenças imunomediadas que cursam com inflamações específicas do intestino.',
-    },
   ]
 
   /**

@@ -699,7 +699,7 @@ export const TREATMENTS: Treatment[] = [
     carePath: [
       'A consulta levanta frequência evacuatória, formato das fezes, dieta, ingestão de líquidos, medicamentos em uso e sintomas associados.',
       'O seguimento ajusta as medidas iniciais e avalia resposta, evitando dependência de laxantes sem orientação.',
-      'A colonoscopia não é realizada pela Dra. Dayara neste local. Se o seu caso exigir o exame, a orientação de onde fazê-lo faz parte da consulta.',
+      'A Dra. Dayara ainda não realiza colonoscopia em Campo Grande. Se o seu caso exigir o exame, a orientação de onde fazê-lo faz parte da consulta.',
     ],
     recovery: [
       'Mudanças de alimentação e de rotina podem mostrar efeito em poucos dias, mas às vezes levam algumas semanas. Nos estudos com fibra e com laxantes, a resposta costuma ser avaliada depois de cerca de quatro semanas, um intervalo razoável para o primeiro retorno. São médias de estudos e variam de pessoa para pessoa.',
@@ -791,8 +791,8 @@ export const TREATMENTS: Treatment[] = [
     howItWorks: [
       'A avaliação começa por confirmar do que se trata. Pelas diretrizes, diarreia crônica é a mudança persistente para fezes amolecidas ou líquidas, com aumento da frequência, por mais de quatro semanas. Na consulta também se verifica se a queixa é, na verdade, perda de fezes sem querer, problema que tem outro caminho de tratamento.',
       'Os primeiros exames costumam ser de sangue e de fezes, escolhidos conforme o caso: hemograma, investigação de doença celíaca, função da tireoide e marcadores de inflamação; nas fezes, pesquisa de infecções e de inflamação intestinal. Esses resultados, somados à idade, aos sinais de alerta e ao histórico familiar, definem se é preciso ir além.',
-      'Quando os achados apontam para inflamação, sangramento ou outra causa no intestino grosso, o passo seguinte pode ser a colonoscopia com biópsias, inclusive de áreas de aparência normal. A colonoscopia não é realizada pela Dra. Dayara neste local; quando indicada, a orientação de onde fazê-la faz parte da consulta.',
-      'Com a causa identificada, o tratamento é dirigido a ela: revisão de um medicamento que provoca diarreia, ajuste alimentar em uma intolerância confirmada, tratamento de uma infecção, controle de uma doença inflamatória ou manejo de um quadro funcional. Quando a queixa principal é o escape de fezes, entram medidas para firmar as fezes, treino do hábito intestinal e, em casos selecionados, exames da função anorretal e biofeedback.',
+      'Quando os achados apontam para inflamação, sangramento ou outra causa no intestino grosso, o passo seguinte pode ser a colonoscopia com biópsias, inclusive de áreas de aparência normal. A Dra. Dayara ainda não realiza colonoscopia em Campo Grande; quando o exame é indicado, a orientação de onde fazê-la faz parte da consulta.',
+      'Com a causa identificada, o tratamento é dirigido a ela: revisão de um medicamento que provoca diarreia, ajuste alimentar em uma intolerância confirmada, tratamento de uma infecção, encaminhamento ao especialista que acompanha uma doença inflamatória ou manejo de um quadro funcional. Quando a queixa principal é o escape de fezes, entram medidas para firmar as fezes, treino do hábito intestinal e, em casos selecionados, exames da função anorretal e biofeedback.',
     ],
     overview: [
       'Diarreia crônica é a presença de fezes líquidas ou pastosas por período prolongado, muitas vezes associada a urgência, cólicas, gases, muco ou perda de controle.',
@@ -825,7 +825,7 @@ export const TREATMENTS: Treatment[] = [
       'Sangue nas fezes, perda de peso, anemia, febre, sintomas que acordam à noite ou início recente em pessoa mais velha exigem investigação, e não apenas medidas para controlar o sintoma.',
       'Algumas causas, como a colite microscópica e a diarreia por ácidos biliares, dependem de exames específicos, feitos em serviços de referência.',
       'Antidiarreicos podem aliviar o sintoma, mas não tratam a causa e não substituem a investigação quando há sinais de alerta.',
-      'Doenças como a doença celíaca e as doenças inflamatórias intestinais exigem acompanhamento contínuo, muitas vezes conduzido em conjunto com a gastroenterologia.',
+      'Doenças como a doença celíaca e as doenças inflamatórias intestinais exigem acompanhamento contínuo, conduzido pela gastroenterologia.',
       'Diarreia com desidratação, febre alta, sangramento volumoso ou fraqueza importante precisa de atendimento de urgência, e não de consulta agendada.',
     ],
     faqs: [
@@ -1141,126 +1141,6 @@ export const TREATMENTS: Treatment[] = [
     ],
     lastUpdated: '2026-11-12',
   },
-  {
-    slug: 'acompanhamento-doencas-inflamatorias-intestinais',
-    title: 'Acompanhamento de doenças inflamatórias intestinais',
-    shortTitle: 'Doenças inflamatórias intestinais',
-    homeCardTitle: 'Acompanhamento de doenças inflamatórias intestinais',
-    homeCardDescription: 'Cuidado para retocolite ulcerativa e doença de Crohn',
-    category: 'conservative',
-    metaTitle: 'Doenças inflamatórias intestinais: acompanhamento | Dra. Dayara Salomão',
-    metaDescription:
-      'Acompanhamento de retocolite ulcerativa e doença de Crohn com avaliação coloproctológica, sinais de alerta e cuidado individualizado.',
-    summary:
-      'Acompanhamento para pacientes com suspeita ou diagnóstico de retocolite ulcerativa e doença de Crohn, com atenção a sintomas intestinais, doença perianal e seguimento seguro.',
-    howItWorks: [
-      'As doenças inflamatórias intestinais são cuidadas em equipe. O tratamento medicamentoso de longo prazo, que controla a inflamação e mantém a doença em remissão, é conduzido pela gastroenterologia. A coloproctologia participa da avaliação dos sintomas no reto e no ânus, do tratamento das complicações perianais e das decisões cirúrgicas.',
-      'Quando ainda não há diagnóstico, a consulta organiza o caminho. A confirmação depende de colonoscopia com biópsias de vários segmentos, incluindo o íleo e o reto, que mostram o tipo e a extensão da inflamação. A colonoscopia não é realizada pela Dra. Dayara neste local; quando indicada, a orientação de onde fazê-la faz parte da consulta.',
-      'Na doença de Crohn com fístula ou abscesso perianal, o primeiro passo é controlar a infecção. Abscessos precisam de drenagem, e fístulas complexas costumam receber um sedenho, fio colocado no trajeto para mantê-lo drenando, antes ou junto do tratamento medicamentoso. Fístulas simples e sem sintomas podem não precisar de tratamento específico, e cirurgias locais são planejadas, de preferência, com a inflamação intestinal controlada.',
-      'Ao longo do acompanhamento, exames de sangue, de fezes, de imagem e endoscópicos avaliam a atividade da doença. Pessoas com inflamação extensa do intestino grosso têm risco maior de câncer colorretal e precisam de vigilância com colonoscopia, em intervalos definidos pela equipe.',
-    ],
-    overview: [
-      'As doenças inflamatórias intestinais incluem principalmente retocolite ulcerativa e doença de Crohn. Elas podem causar diarreia, sangue nas fezes, dor abdominal, perda de peso, anemia e manifestações fora do intestino.',
-      'As duas doenças têm comportamentos diferentes. Na retocolite, a inflamação começa no reto e se estende de forma contínua pelo intestino grosso, atingindo a camada interna da parede. Na doença de Crohn, ela pode surgir em qualquer parte do tubo digestivo, de forma salteada, atravessa toda a espessura da parede e pode acometer a região perianal.',
-      'Na coloproctologia, o acompanhamento é especialmente importante quando há sintomas no reto e ânus, doença perianal, fístulas, abscessos ou necessidade de avaliação cirúrgica em situações específicas.',
-      'A conduta depende do tipo de doença, da extensão, da atividade inflamatória, das complicações e dos tratamentos já usados. Por isso, decisões sobre cirurgia ou procedimentos anais são tomadas em conjunto com a gastroenterologia.',
-    ],
-    indications: [
-      'Suspeita ou diagnóstico de retocolite ulcerativa ou doença de Crohn.',
-      'Diarreia com sangue, muco, dor abdominal, anemia, perda de peso ou sintomas persistentes.',
-      'Fístulas, abscessos, fissuras complexas ou dor perianal em pacientes com doença inflamatória intestinal.',
-      'Necessidade de opinião sobre cirurgia ou sobre lesões anais em quem já trata a doença com a gastroenterologia.',
-    ],
-    benefits: [
-      'Avaliação coloproctológica dos sintomas intestinais e perianais.',
-      'Identificação de sinais que exigem investigação, exames ou acompanhamento conjunto.',
-      'Planejamento das condutas anais em sintonia com o tratamento intestinal conduzido pela gastroenterologia.',
-      'Planejamento de cuidado com foco em segurança, controle de sintomas e prevenção de complicações.',
-    ],
-    carePath: [
-      'A consulta revisa sintomas, exames anteriores, colonoscopias, biópsias, medicamentos e histórico de crises.',
-      'O acompanhamento pode ser feito em conjunto com gastroenterologia, especialmente quando há necessidade de terapia medicamentosa de longo prazo ou controle de atividade inflamatória.',
-      'Dor anal intensa, febre, inchaço ou saída de pus perto do ânus podem indicar abscesso e precisam de avaliação rápida.',
-    ],
-    recovery: [
-      'As doenças inflamatórias intestinais alternam períodos de atividade e de remissão, e o acompanhamento é contínuo. A frequência dos retornos depende da atividade da doença, dos medicamentos em uso e das complicações.',
-      'Na doença perianal, o seguimento acompanha a cicatrização depois da drenagem de um abscesso ou da colocação de um sedenho. Pela diretriz europeia, a retirada do sedenho pode ser considerada depois de boa resposta ao tratamento medicamentoso, e o momento varia bastante de um caso para outro.',
-      'Mesmo em remissão, o acompanhamento continua, porque a doença pode voltar a ficar ativa. A cicatrização da mucosa, observada nos exames, é um dos objetivos do tratamento, e a vigilância do câncer colorretal segue o calendário definido para cada caso.',
-    ],
-    limitations: [
-      'O acompanhamento coloproctológico não substitui o tratamento medicamentoso da doença, que é conduzido pela gastroenterologia.',
-      'Na doença de Crohn, o sedenho usado sozinho e por tempo indefinido não é recomendado como tratamento da fístula perianal, exceto como medida paliativa, e sedenhos que cortam o músculo são evitados pelo risco de incontinência.',
-      'Cirurgia não cura a doença de Crohn: a inflamação pode voltar em outros segmentos, e o acompanhamento continua depois de qualquer procedimento.',
-      'Febre alta, vômitos persistentes, dor abdominal forte ou barriga muito distendida podem indicar crise grave ou complicação e exigem atendimento de urgência.',
-      'Anti-inflamatórios comuns podem agravar as manifestações da doença de Crohn e não devem ser usados sem orientação.',
-    ],
-    faqs: [
-      {
-        question: 'Doença de Crohn e retocolite têm cura?',
-        answer:
-          'Não há cura definitiva. O protocolo do Ministério da Saúde descreve a doença de Crohn como uma condição que alterna crises e remissões, e o tratamento busca controlar a inflamação e manter a remissão. Na retocolite, o curso também costuma alternar atividade e calmaria, com acompanhamento de longo prazo.',
-      },
-      {
-        question: 'Quem trata doença inflamatória intestinal: gastroenterologista ou coloproctologista?',
-        answer:
-          'Os dois, em papéis diferentes. A gastroenterologia conduz o tratamento medicamentoso de longo prazo. A coloproctologia avalia os sintomas no reto e no ânus, trata fístulas e abscessos perianais e participa das decisões cirúrgicas.',
-      },
-      {
-        question: 'A Dra. Dayara faz colonoscopia?',
-        answer:
-          'Não neste local. A colonoscopia com biópsias é necessária para confirmar o diagnóstico e acompanhar a doença, e a orientação de onde realizá-la faz parte da consulta.',
-      },
-      {
-        question: 'O que é sedenho na fístula perianal?',
-        answer:
-          'É um fio flexível passado pelo trajeto da fístula para mantê-lo aberto e drenando, o que ajuda a controlar a infecção. Na doença de Crohn, costuma ser usado antes ou junto do tratamento medicamentoso, e o momento de retirá-lo é definido conforme a resposta.',
-      },
-      {
-        question: 'Quem tem doença inflamatória intestinal precisa de colonoscopia de controle?',
-        answer:
-          'Muitas pessoas, sim. Além de avaliar a atividade da doença, a colonoscopia é usada na vigilância do câncer colorretal, indicada sobretudo quando a inflamação atinge boa parte do intestino grosso, onde o risco é maior. O intervalo entre os exames é definido pela equipe conforme a extensão, o tempo de doença e outros fatores.',
-      },
-      {
-        question: 'Fumar piora a doença de Crohn?',
-        answer:
-          'O tabagismo é um fator de risco associado à doença de Crohn, e o protocolo do Ministério da Saúde orienta que pessoas com a doença que fumam recebam apoio para parar. Essa orientação faz parte do tratamento, mas o cuidado não depende de a pessoa já ter parado.',
-      },
-    ],
-    sources: [
-      {
-        title:
-          'British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults',
-        organization: 'British Society of Gastroenterology (BSG) — Gut 2019;68(Suppl 3):s1–s106',
-        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6872448/',
-        accessedAt: '2026-11-12',
-      },
-      {
-        title: 'ECCO Guidelines on Therapeutics in Crohn’s Disease: Surgical Treatment',
-        organization: 'European Crohn’s and Colitis Organisation (ECCO) — J Crohns Colitis 2024;18(10):1556–1582',
-        url: 'https://vbn.aau.dk/ws/files/726048807/Adamina_et_al._2024_._ECCO_Guidelines_on_Therapeutics_in_Crohn_s_Disease_-_Surgical_Treatment.pdf',
-        accessedAt: '2026-11-12',
-      },
-      {
-        title: 'Protocolo Clínico e Diretrizes Terapêuticas da Doença de Crohn',
-        organization: 'Ministério da Saúde — Portaria Conjunta SAES/SCTIE nº 51, de 18 de maio de 2026',
-        url: 'https://www.gov.br/saude/pt-br/assuntos/pcdt/d/pcdt-doenca-de-crohn.pdf',
-        accessedAt: '2026-11-12',
-      },
-    ],
-    relatedBlogSlugs: [
-      'doencas-inflamatorias-intestinais-crohn-retocolite',
-      'alteracoes-habito-intestinal-quando-avaliar',
-      'historico-crohn-retocolite-familia-acompanhamento-coloproctologista',
-      'fistula-anal-o-que-e-sintomas',
-    ],
-    mappedDiseaseNames: ['Doenças Inflamatórias Intestinais'],
-    keywords: [
-      'doenças inflamatórias intestinais',
-      'retocolite ulcerativa',
-      'doença de Crohn acompanhamento',
-    ],
-    lastUpdated: '2026-11-12',
-  },
 ]
 
 const treatmentsBySlug = new Map(TREATMENTS.map((treatment) => [treatment.slug, treatment]))
@@ -1294,8 +1174,6 @@ export const DISEASE_TO_TREATMENT_SLUG: Record<string, string> = {
   'Diarreia Crônica': 'avaliacao-diarreia-cronica',
   'Síndrome do Intestino Irritável': 'tratamento-sindrome-intestino-irritavel',
   'Hidradenite Supurativa': 'tratamento-hidradenite-supurativa',
-  'Doenças Inflamatórias Intestinais':
-    'acompanhamento-doencas-inflamatorias-intestinais',
 }
 
 export function getAllTreatments(): Treatment[] {

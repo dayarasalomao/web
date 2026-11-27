@@ -205,6 +205,24 @@ export function buildGlobalGraph(): Record<string, unknown> {
           '@type': 'City',
           name: BUSINESS_ADDRESS.addressLocality,
         },
+        // These hours are the physician's, labeled on the location page.
+        // They are not the Instituto's opening hours.
+        ...(clinic?.openingHours
+          ? {
+              openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                  'https://schema.org/Monday',
+                  'https://schema.org/Tuesday',
+                  'https://schema.org/Wednesday',
+                  'https://schema.org/Thursday',
+                  'https://schema.org/Friday',
+                ],
+                opens: clinic.openingHours.opens,
+                closes: clinic.openingHours.closes,
+              },
+            }
+          : {}),
         hasCredential: [
           {
             '@type': 'Credential',

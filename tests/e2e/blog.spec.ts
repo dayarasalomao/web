@@ -185,11 +185,9 @@ test('active Campo Grande page emits confirmed NAP, schema, map, and Instituto l
   )
   await expect(page.getByText('Sala 8').first()).toBeVisible()
   await expect(page.getByText(/telefone geral do instituto: \(67\) 3320-9500/i).first()).toBeVisible()
-  await page.getByText('Como consultar os horários de atendimento da Dra. Dayara?').click()
-  await expect(
-    page.getByText('Consulte os horários disponíveis pelo WhatsApp de agendamento.'),
-  ).toBeVisible()
-  await expect(page.getByText(/9h às 1[78]h/i)).toHaveCount(0)
+  await expect(page.getByText(/segunda a sexta, das 9h às 17h/i).first()).toBeVisible()
+  await expect(page.getByText(/9h às 18h/i)).toHaveCount(0)
+  await expect(page.getByText(/ainda não realiza colonoscopia em Campo Grande/i).first()).toBeVisible()
   await expect(page.getByText(/rua goiás|\(41\) 3123-6550/i)).toHaveCount(0)
 
   const breadcrumb = page.getByRole('navigation', { name: /breadcrumb/i })

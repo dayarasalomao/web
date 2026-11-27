@@ -45,6 +45,25 @@ const nextConfig: NextConfig = {
         destination: '/blog/prurido-anal-causas-cuidados',
         permanent: true,
       },
+      // Retired 2026-11-26: the doctor does not follow inflammatory bowel
+      // disease (Crohn, ulcerative colitis) and asked for the topic to leave
+      // the site. 301 to the nearest hub keeps any inbound link useful
+      // without promising care she does not provide.
+      {
+        source: '/tratamentos/acompanhamento-doencas-inflamatorias-intestinais',
+        destination: '/tratamentos',
+        permanent: true,
+      },
+      {
+        source: '/blog/doencas-inflamatorias-intestinais-crohn-retocolite',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/historico-crohn-retocolite-familia-acompanhamento-coloproctologista',
+        destination: '/blog',
+        permanent: true,
+      },
       // Conventional trust-anchor paths that agents probe before recommending
       // a business. They point at the existing Portuguese pages so canonicals
       // stay unchanged; with a single location, its page is the contact page.

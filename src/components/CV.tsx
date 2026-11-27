@@ -12,8 +12,8 @@ const CONTINUING_EDUCATION = [
     Icon: GraduationCap,
   },
   {
-    title: 'Curso de aperfeiçoamento',
-    description: 'Técnicas minimamente invasivas',
+    title: 'Curso e pós-graduação',
+    description: 'Técnicas minimamente invasivas e assoalho pélvico',
     Icon: Settings2,
   },
   {
@@ -47,7 +47,8 @@ export default function CV() {
           title="Formação e Experiência"
           lead={
             <>
-              Graduação em Medicina, residências médicas e curso de aperfeiçoamento.
+              Graduação em Medicina, residências médicas, curso de aperfeiçoamento e
+              pós-graduação.
             </>
           }
         />

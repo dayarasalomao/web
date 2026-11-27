@@ -36,6 +36,14 @@ export const PROFESSIONAL_QUALIFICATIONS: ProfessionalQualification[] = [
     year: '2025',
     description: 'Curso em técnicas minimamente invasivas e cirurgia a laser.',
   },
+  {
+    kindLabel: 'Pós-graduação',
+    title: 'Pós-graduação em Disfunções do Assoalho Pélvico',
+    institution: 'UNIFAL-MG',
+    year: '2026',
+    description:
+      'Pós-graduação concluída em janeiro de 2026. Não é residência médica nem o RQE.',
+  },
 ]
 
 export const PROFESSIONAL_MEMBERSHIPS = [
@@ -52,7 +60,7 @@ export const PROFILE_PUBLICATION = {
 } as const
 
 /** Date of the last editorial change to `/sobre`; feeds its schema and the sitemap. */
-export const PROFILE_LAST_UPDATED = '2026-11-25'
+export const PROFILE_LAST_UPDATED = '2026-11-26'
 
 export const PROFESSIONAL_PROFILE = {
   shortIntroduction:

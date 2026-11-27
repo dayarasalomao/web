@@ -123,6 +123,10 @@ export const BUSINESS_GEO = {
   longitude: -54.5956825,
 }
 
+// Physician's own consulting hours at the Instituto, aligned with her Google
+// Business Profile (confirmed with the doctor on 2026-11-26).
+export const BUSINESS_HOURS = 'Mo-Fr 09:00-17:00'
+
 // =================================================================
 // PHYSICIAN DATA (Used in JSON-LD Schema)
 // =================================================================
@@ -150,7 +154,6 @@ export const MEDICAL_PROCEDURES = [
   'Avaliação de diarreia crônica',
   'Tratamento da síndrome do intestino irritável',
   'Tratamento de hidradenite supurativa',
-  'Acompanhamento de doenças inflamatórias intestinais',
 ]
 
 // =================================================================

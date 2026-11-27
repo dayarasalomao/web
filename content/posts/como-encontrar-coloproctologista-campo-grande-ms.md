@@ -109,4 +109,4 @@ O atendimento ocorre no **Instituto do Aparelho Digestivo**, na **R. Alagoas, 70
 
 A [página local](/locais-de-atendimento/campo-grande) reúne mapa e canais de contato, com o WhatsApp da secretaria separado do telefone geral do Instituto. Confirme com a equipe a disponibilidade, valores e eventuais convênios; não deduza essas condições por um resultado de busca.
 
-A colonoscopia não é realizada pela Dra. Dayara nesse local. Se o exame for indicado, a orientação de onde realizá-lo faz parte da consulta. Ao agendar, informe sua dúvida principal para receber as instruções adequadas.
+A Dra. Dayara ainda não realiza colonoscopia em Campo Grande. Se o exame for indicado, a orientação de onde realizá-lo faz parte da consulta. Ao agendar, informe sua dúvida principal para receber as instruções adequadas.

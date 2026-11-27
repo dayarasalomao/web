@@ -157,6 +157,13 @@ describe('practice locations', () => {
       whatsappUrl.searchParams.get('text'),
       'Olá! Vim pelo site da Dra. Dayara Salomão e gostaria de falar com a equipe sobre o atendimento. Podem me ajudar?',
     )
+    // Same hours as the physician's Google Business Profile.
+    assert.deepEqual(campoGrande.openingHours, {
+      label: 'Segunda a sexta, das 9h às 17h',
+      opens: '09:00',
+      closes: '17:00',
+      schema: 'Mo-Fr 09:00-17:00',
+    })
     // Confirmed coordinates from the clinic's own Google Maps listing.
     assert.deepEqual(campoGrande.geo, {
       latitude: -20.4530096,
@@ -177,8 +184,9 @@ describe('practice locations', () => {
       .join(' ')
     assert.match(faqText, /Sala 8/)
     assert.match(faqText, /\(67\) 3320-9500/)
-    assert.match(faqText, /Consulte os horários disponíveis pelo WhatsApp de agendamento/)
-    assert.doesNotMatch(faqText, /9h às 1[78]h/)
+    assert.match(faqText, /segunda a sexta, das 9h às 17h/)
+    assert.doesNotMatch(faqText, /9h às 18h/)
+    assert.match(faqText, /ainda não é realizada|Ainda não/)
   })
 
   it('getIndexableLocations returns exactly the one active location', () => {
@@ -292,7 +300,10 @@ describe('structured data', () => {
       description: 'Coloproctologia, também chamada de proctologia.',
     })
     assert.deepEqual(physician.knowsAbout, ['Coloproctologia', 'Proctologia'])
-    assert.equal(physician.openingHoursSpecification, undefined)
+    assert.equal(
+      (physician.openingHoursSpecification as { closes?: string } | undefined)?.closes,
+      '17:00',
+    )
     assert.equal(physician.hasOfferCatalog, undefined)
     assert.deepEqual(physician.workLocation, {
       '@id': buildPracticeLocationId('campo-grande'),
